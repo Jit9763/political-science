@@ -32,14 +32,14 @@
 <body>
     <div class="bg-animation"></div>
     <div class="container" style="position: relative;">
-        <a href="index.html" class="nav-back">← मुख्य पृष्ठ पर वापस जाएं</a>
+        <!-- Floating Home Button -->
+        <a href="index.html" class="floating-home-btn" style="position: fixed; bottom: 30px; left: 30px; z-index: 1000; background: #1e293b; color: white; padding: 15px 25px; border-radius: 50px; text-decoration: none; font-weight: bold; box-shadow: 0 10px 20px rgba(0,0,0,0.3); border: 2px solid #3b82f6;">🏠 Home (मुख्य पृष्ठ)</a>
         
-        <!-- Floating Copy Button -->
-        <button id="floatingCopyBtn" class="floating-copy-btn" onclick="copyEntireContent()">
-            📋 कॉपी करें (डॉग्स में पेस्ट के लिए)
-        </button>
-
         <div id="notes-content" class="page-container">
+            <!-- Copy Button Static at the Top (Scrolls away) -->
+            <button id="floatingCopyBtn" class="premium-copy-btn" onclick="copyEntireContent()" style="width: 100%; margin-bottom: 30px; background: #3b82f6; color: white; padding: 20px; border: none; border-radius: 12px; font-size: 1.5rem; font-weight: bold; cursor: pointer; box-shadow: 0 4px 6px rgba(0,0,0,0.1); border: 1px solid #1e40af;">
+                📋 कॉपी करें (डॉग्स में पेस्ट के लिए)
+            </button>
             <div class="loading">नोट्स लोड हो रहे हैं... (50 पन्ने)</div>
         </div>
     </div>
