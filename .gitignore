@@ -1,0 +1,11 @@
+node_modules/
+__pycache__/
+*.pyc
+.env
+.DS_Store
+# Keep scripts locally, don't host them
+*.py
+create_pol_sci_docs.gs
+# Temporary files
+/tmp/
+.gemini/
