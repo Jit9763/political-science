@@ -49,6 +49,7 @@ function renderChapters(data) {
       <h3 class="chapter-title">${chapter.title}</h3>
       <div class="chapter-actions" style="display:flex; gap:10px; flex-direction: column; margin-top:20px; position:relative; z-index:10;">
         <button class="btn-primary" onclick="window.open('notes_html_view.html?id=${chapter.id}', '_blank')">🌍 संपूर्ण नोट्स देखें (Premium HTML)</button>
+        ${chapter.id === 2 ? `<button class="btn-secondary" onclick="window.open('copy_master_ch2_with_images.html', '_blank')">🖼️ Draft with Images (Chapter 2)</button>` : ''}
         <!-- <button class="btn-secondary" onclick="window.open('notes_view.html?id=${chapter.id}', '_blank')">📝 Google Docs (Editable)</button> -->
       </div>
     `;

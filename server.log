@@ -1,0 +1,7 @@
+127.0.0.1 - - [05/Apr/2026 02:37:13] "GET /copy_master_ch2_with_images.html HTTP/1.1" 200 -
+127.0.0.1 - - [05/Apr/2026 02:37:46] "GET /index.html HTTP/1.1" 200 -
+127.0.0.1 - - [05/Apr/2026 02:38:28] "GET /js/main.js HTTP/1.1" 200 -
+127.0.0.1 - - [05/Apr/2026 02:40:23] "GET /copy_master_ch2_with_images.html HTTP/1.1" 200 -
+127.0.0.1 - - [05/Apr/2026 02:40:23] "GET /images/ch2/page_7_img_2.png HTTP/1.1" 200 -
+127.0.0.1 - - [05/Apr/2026 02:40:23] "GET /images/ch2/page_4_img_1.png HTTP/1.1" 200 -
+127.0.0.1 - - [05/Apr/2026 02:40:23] "GET /images/ch2/page_12_img_1.png HTTP/1.1" 200 -
