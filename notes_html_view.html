@@ -38,7 +38,7 @@
         <div class="page-container">
             <!-- Copy Button Fixed at the Top (Always visible/stable) -->
             <button id="floatingCopyBtn" class="premium-copy-btn" onclick="copyEntireContent()" style="width: 100%; margin-bottom: 30px; background: #3b82f6; color: white; padding: 20px; border: none; border-radius: 12px; font-size: 1.5rem; font-weight: bold; cursor: pointer; box-shadow: 0 4px 6px rgba(0,0,0,0.1); border: 1px solid #1e40af;">
-                📋 कॉपी करें (डॉग्स में पेस्ट के लिए)
+                📋
             </button>
 
             <div id="notes-content">
@@ -71,11 +71,11 @@
                 const item = new ClipboardItem({ 'text/html': blob });
                 await navigator.clipboard.write([item]);
                 
-                btn.innerText = '✅ कॉपी हो गया! डॉग्स में पेस्ट करें';
+                btn.innerText = '✅';
                 btn.style.background = '#059669';
                 
                 setTimeout(() => {
-                    btn.innerText = '📋 कॉपी करें (डॉग्स में पेस्ट के लिए)';
+                    btn.innerText = '📋';
                     btn.style.background = 'var(--accent-color)';
                 }, 3000);
             } catch (err) {
