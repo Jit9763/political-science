@@ -12,17 +12,17 @@
         #status { margin-top: 20px; font-weight: 900; color: #059669; font-size: 18pt; display: none; }
         
         /* Premium Layout Styles (High Contrast for Projector) */
-        .bio-box { background-color: #ffffff; border: 5px solid #000000; border-radius: 12px; padding: 25px; margin: 30px 0; display: flex; gap: 20px; align-items: center; color: #000000; font-weight: 900; }
+        .bio-box { background-color: #ffffff; border: 7px solid #000000; border-radius: 12px; padding: 25px; margin: 30px 0; display: flex; gap: 20px; align-items: center; color: #000000; font-weight: 900; }
         .bio-img-container { flex: 0 0 130px; text-align: center; }
-        .bio-img { width: 120px; height: auto; border: 5px solid #000000; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.2); }
+        .bio-img { width: 120px; height: auto; border: 7px solid #000000; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.2); }
         .bio-text { flex: 1; color: #000000; font-weight: 900; }
         
-        .illustration-box { background-color: #ffffff; border: 5px solid #000000; border-radius: 12px; padding: 20px; margin: 40px 0; text-align: center; }
-        .illustration-img { max-width: 85%; height: auto; border: 5px solid #000000; border-radius: 8px; box-shadow: 0 6px 12px rgba(0,0,0,0.2); }
+        .illustration-box { background-color: #ffffff; border: 7px solid #000000; border-radius: 12px; padding: 20px; margin: 40px 0; text-align: center; }
+        .illustration-img { max-width: 85%; height: auto; border: 7px solid #000000; border-radius: 8px; box-shadow: 0 6px 12px rgba(0,0,0,0.2); }
         .illustration-explanation { font-size: 18pt; color: #000000; font-weight: 900; text-align: left; background-color: #f8fafc; padding: 20px; border-radius: 8px; margin-top: 15px; border-left: 12px solid #000000; line-height: 1.8; }
         
         /* Gallery Layout Styles */
-        .gallery-box { background-color: #f8fafc; border: 4px solid #e2e8f0; border-radius: 12px; padding: 25px; margin: 45px 0; }
+        .gallery-box { background-color: #f8fafc; border: 6px solid #e2e8f0; border-radius: 12px; padding: 25px; margin: 45px 0; }
         .gallery-title { font-size: 20pt; font-weight: 900; color: #1e3a8a; margin-bottom: 20px; border-bottom: 3px solid #cbd5e1; padding-bottom: 10px; }
         .gallery-grid { display: flex; flex-wrap: wrap; gap: 15px; justify-content: center; margin-bottom: 20px; }
         .gallery-item { background: white; border: 3px solid #cbd5e1; border-radius: 8px; padding: 10px; text-align: center; width: 150px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
@@ -35,6 +35,17 @@
             .illustration-img { max-width: 100%; }
             .gallery-item { width: 45%; }
         }
+    
+        /* Extra Heavy Text Thickness */
+        p, li, h1, h2, h3, h4, b, strong {
+            font-weight: 900 !important;
+            -webkit-text-stroke: 0.5px currentColor;
+        }
+        .bio-box { border-width: 6px !important; }
+        .illustration-box { border-width: 6px !important; }
+        .illustration-img { border-width: 8px !important; }
+        .illustration-explanation { border-left-width: 16px !important; }
+        
     </style>
 </head>
 <body>
@@ -48,7 +59,7 @@
     <p id="status">✅ Copied Successfully! Now go to your Google Doc and Press Ctrl+V</p>
 
     <div class="preview" id="contentToCopy">
-        <div style="font-family: 'Arial', verdana, sans-serif; font-size: 21pt; line-height: 2.0; color: #000000; font-weight: 900; padding: 20px;">
+        <div style="font-family: 'Arial', verdana, sans-serif; font-size: 21pt; line-height: 2.0; color: #000000; font-weight: 900; -webkit-text-stroke: 0.6px #000000; padding: 20px;">
             
             <!-- BIG HERO HEADER -->
             <h1 style="text-align: center; color: #1e3a8a; font-size: 40pt; font-weight: 900; border-bottom: 5px solid #3b82f6; padding-bottom: 30px; margin-bottom: 40px;">
@@ -57,7 +68,7 @@
             </h1>
 
             <!-- SECTION 1: 1980 के दशक के आखिर के पाँच मुख्य बदलाव -->
-            <div style="background-color: #eff6ff; padding: 40px; border-radius: 12px; margin-bottom: 40px; border: 4px solid #93c5fd;">
+            <div style="background-color: #eff6ff; padding: 40px; border-radius: 12px; margin-bottom: 40px; border: 6px solid #93c5fd;">
                 <h2 style="color: #1e40af; font-size: 32pt; font-weight: 900; margin-top: 0;">1. 1980 के दशक के आखिर के पाँच मुख्य बदलाव (पृष्ठभूमि)</h2>
                 <p>प्रिय विद्यार्थियों, 1980 के दशक के अंतिम वर्षों में भारत ने कई बड़े राजनीतिक, आर्थिक और सामाजिक बदलाव देखे। इन बदलावों ने आगामी दशकों की भारतीय राजनीति को एक नया आकार दिया। मुख्य रूप से निम्नलिखित पाँच बड़े बदलाव हुए:</p>
                 
@@ -107,10 +118,10 @@
                 </div>
             </div>
 
-            <br><hr style="border: 4px solid #e2e8f0;"><br>
+            <br><hr style="border: 6px solid #e2e8f0;"><br>
 
             <!-- SECTION 2: गठबंधन का दौर (1989 से 1998) -->
-            <div style="background-color: #f7fee7; padding: 40px; border-radius: 12px; margin-bottom: 40px; border: 4px solid #84cc16;">
+            <div style="background-color: #f7fee7; padding: 40px; border-radius: 12px; margin-bottom: 40px; border: 6px solid #84cc16;">
                 <h1 style="color: #4d7c0f; font-size: 34pt; margin-top: 0; border-bottom: 4px solid #84cc16; padding-bottom: 10px;">
                     2. गठबंधन का दौर (Era of Coalition - 1989 से 1998)
                 </h1>
@@ -185,10 +196,10 @@
                 </div>
             </div>
 
-            <br><hr style="border: 4px solid #e2e8f0;"><br>
+            <br><hr style="border: 6px solid #e2e8f0;"><br>
 
             <!-- SECTION 3: अन्य पिछड़े वर्ग (OBC) का राजनीतिक उदय और मंडल आयोग -->
-            <div style="background-color: #fff7ed; padding: 40px; border-radius: 12px; margin-bottom: 40px; border: 4px solid #fed7aa;">
+            <div style="background-color: #fff7ed; padding: 40px; border-radius: 12px; margin-bottom: 40px; border: 6px solid #fed7aa;">
                 <h1 style="color: #c2410c; font-size: 34pt; margin-top: 0; border-bottom: 4px solid #ea580c; padding-bottom: 10px;">
                     3. मंडल आयोग और अन्य पिछड़े वर्ग (OBC) का राजनीतिक उदय
                 </h1>
@@ -254,10 +265,10 @@
                 </div>
             </div>
 
-            <br><hr style="border: 4px solid #e2e8f0;"><br>
+            <br><hr style="border: 6px solid #e2e8f0;"><br>
 
             <!-- SECTION 4: सांप्रदायिकता, धर्मनिरपेक्षता और अयोध्या विवाद -->
-            <div style="background-color: #fff7ed; padding: 40px; border-radius: 12px; margin-bottom: 40px; border: 4px solid #ffedd5;">
+            <div style="background-color: #fff7ed; padding: 40px; border-radius: 12px; margin-bottom: 40px; border: 6px solid #ffedd5;">
                 <h1 style="color: #c2410c; font-size: 34pt; margin-top: 0; border-bottom: 4px solid #ea580c; padding-bottom: 10px;">
                     4. सांप्रदायिकता, धर्मनिरपेक्षता और अयोध्या विवाद
                 </h1>
@@ -273,10 +284,10 @@
                 </ul>
             </div>
 
-            <br><hr style="border: 4px solid #e2e8f0;"><br>
+            <br><hr style="border: 6px solid #e2e8f0;"><br>
 
             <!-- SECTION 5: नई आर्थिक नीति - 1991 (New Economic Policy) -->
-            <div style="background-color: #ecfdf5; padding: 40px; border-radius: 12px; margin-bottom: 40px; border: 4px solid #a7f3d0;">
+            <div style="background-color: #ecfdf5; padding: 40px; border-radius: 12px; margin-bottom: 40px; border: 6px solid #a7f3d0;">
                 <h1 style="color: #047857; font-size: 34pt; margin-top: 0; border-bottom: 4px solid #059669; padding-bottom: 10px;">
                     5. नई आर्थिक नीति - 1991 (New Economic Policy)
                 </h1>
@@ -311,10 +322,10 @@
                 </div>
             </div>
 
-            <br><hr style="border: 4px solid #e2e8f0;"><br>
+            <br><hr style="border: 6px solid #e2e8f0;"><br>
 
             <!-- SECTION 6: गठबंधन राजनीति (NDA/UPA) और एक नई सर्वसम्मति का उदय -->
-            <div style="background-color: #f5f3ff; padding: 40px; border-radius: 12px; margin-bottom: 40px; border: 4px solid #ddd6fe;">
+            <div style="background-color: #f5f3ff; padding: 40px; border-radius: 12px; margin-bottom: 40px; border: 6px solid #ddd6fe;">
                 <h1 style="color: #5b21b6; font-size: 34pt; margin-top: 0; border-bottom: 4px solid #7c3aed; padding-bottom: 10px;">
                     6. गठबंधन राजनीति (NDA/UPA) और एक नई सर्वसम्मति का उदय
                 </h1>
@@ -453,7 +464,7 @@
                 </div>
 
                 <!-- SECTION 7: Mega Q&A Bank -->
-            <div style="background-color: #fff1f2; padding: 40px; border-radius: 12px; margin-bottom: 40px; border: 4px solid #fecaca;">
+            <div style="background-color: #fff1f2; padding: 40px; border-radius: 12px; margin-bottom: 40px; border: 6px solid #fecaca;">
                 <h1 style="color: #9f1239; font-size: 34pt; margin-top: 0; border-bottom: 4px solid #fda4af; padding-bottom: 10px;">
                     भाग 7: मेगा प्रश्न बैंक (Board Exam Special Q&A)
                 </h1>
@@ -518,7 +529,7 @@
             </div>
 
             <!-- SECTION 8: Revision Guru Mantra -->
-            <div style="background-color: #dcfce7; padding: 40px; border-radius: 12px; margin-top: 40px; border: 4px solid #4ade80;">
+            <div style="background-color: #dcfce7; padding: 40px; border-radius: 12px; margin-top: 40px; border: 6px solid #4ade80;">
                 <h2 style="color: #14532d; font-size: 34pt; font-weight: 900; text-align: center; margin-top: 0;">अध्याय 15 का 'गुरुमंत्र' (Master Revision Summary)</h2>
                 <ul style="font-size: 21pt; line-height: 2.2; font-weight: 900; color: #166534; text-align: left; max-width: 800px; margin: 0 auto;">
                     <li>1. 1989 के चुनाव ने कांग्रेस के एकाधिकार का अंत कर बहु-दलीय गठबंधन के दौर (NDA/UPA) की शुरुआत की।</li>
@@ -531,7 +542,7 @@
             </div>
 
             <!-- SECTION 9: मतदान प्रक्रिया: वोट कैसे डालें? (Voting Process) -->
-            <div style="background-color: #eff6ff; padding: 40px; border-radius: 12px; margin-top: 50px; border: 4px solid #93c5fd;">
+            <div style="background-color: #eff6ff; padding: 40px; border-radius: 12px; margin-top: 50px; border: 6px solid #93c5fd;">
                 <h2 style="color: #1e40af; font-size: 32pt; font-weight: 900; margin-top: 0; text-align: center;">🗳️ मतदान प्रक्रिया: वोट कैसे डालें? (How to Cast a Vote)</h2>
                 <p>स्वतंत्र और निष्पक्ष चुनाव (Free and Fair Elections) हमारे लोकतंत्र की सबसे बड़ी ताकत हैं। भारत का प्रत्येक नागरिक जो 18 वर्ष या उससे अधिक आयु का है, उसे मतदान का अधिकार प्राप्त है। मतदान केंद्रों पर यह प्रक्रिया किस प्रकार संपन्न होती है, इसे पुस्तक में दिए गए निम्नलिखित चार्ट के माध्यम से समझाया गया है:</p>
 
