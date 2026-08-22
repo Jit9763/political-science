@@ -17,7 +17,7 @@
             padding: 0 20px 40px !important;
         }
         .page-container {
-            width: var(--container-width, 900px) !important;
+            width: var(--container-width, 1400px) !important;
             max-width: none !important;
             margin: 40px auto;
             background: white;
@@ -25,8 +25,9 @@
             padding: 60px;
             border-radius: 20px;
             box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+            text-align: justify;
         }
-        @media (max-width: 900px) {
+        @media (max-width: 1400px) {
             .page-container {
                 width: 100% !important;
                 max-width: 100% !important;
@@ -167,7 +168,7 @@
     </div>
 
     <script>
-        let containerWidth = 900; // default width in pixels
+        let containerWidth = 1400; // default width in pixels
 
         function adjustWidth(amount) {
             containerWidth += amount;
