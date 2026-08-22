@@ -2,16 +2,460 @@
 <html lang="hi">
 <head>
     <meta charset="UTF-8">
-    <title>Chapter 4 - Premium Notes (Class 11)</title>
+    <title>Chapter 4 COPY MASTER - Premium Notes (Executive)</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;700;900&family=Outfit:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        #control-header {
+            position: fixed; top: 0; left: 0; width: 100%; background-color: #0f172a; color: #ffffff;
+            padding: 15px 20px; display: flex; justify-content: space-between; align-items: center;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); z-index: 1000; font-family: 'Outfit', sans-serif; box-sizing: border-box;
+        }
+        #control-header h1 { margin: 0; font-size: 1.4rem; font-weight: 900; }
+        body {
+            margin-top: 80px;
+            background-color: #ffffff;
+            font-family: 'Outfit', 'Noto Sans Devanagari', sans-serif;
+            font-size: 20pt;
+            font-weight: 800;
+            line-height: 2.2;
+            color: #000000;
+        }
+        p, li, div, td, th {
+            font-weight: 800 !important;
+            color: #000000 !important;
+        }
+        b, strong {
+            font-weight: 900 !important;
+            color: #000000 !important;
+        }
+        ul, ol { padding-left: 60px !important; margin-left: 20px !important; }
+        li {
+            padding-left: 15px;
+            margin-bottom: 25px;
+            text-align: justify;
+            line-height: 2.2;
+            font-size: 20pt;
+            font-weight: 800 !important;
+        }
+        /* Heavy text thickness for projector visibility */
+        p, li, h1, h2, h3, h4, b, strong {
+            font-weight: 900 !important;
+            -webkit-text-stroke: 0.5px #000000;
+        }
+        
+        .part-container {
+            margin-bottom: 80px; padding: 50px 60px; background-color: #ffffff;
+            border-radius: 15px; box-shadow: 0 15px 25px -5px rgba(0,0,0,0.05);
+            border-top: 12px solid #1e3a8a;
+        }
+        .info-box {
+            background-color: #f8fafc; padding: 30px; border-left: 14px solid #1e3a8a; 
+            margin: 30px 0; border-radius: 8px; font-size: 19pt; line-height: 2.2; font-weight: 900;
+        }
+        .debate-box {
+            background-color: #fffbeb; padding: 30px; border: 6px solid #b45309; 
+            border-radius: 15px; margin: 40px 0; line-height: 2.2; font-size: 19pt; font-weight: 900;
+        }
+    </style>
+    <script>
+        function copyToGoogleDoc() {
+            var content = document.getElementById('contentToCopy').innerHTML;
+            var blob = new Blob([content], { type: 'text/html' });
+            var data = [new ClipboardItem({ 'text/html': blob })];
+            
+            navigator.clipboard.write(data).then(function() {
+                var status = document.getElementById('status');
+                status.style.display = 'block';
+                setTimeout(function() {
+                    status.style.display = 'none';
+                }, 5000);
+            }).catch(function(err) {
+                alert('Copy failed: ' + err);
+            });
+        }
+    </script>
 </head>
 <body>
+
+    <!-- Persistent Control Header -->
+    <div id="control-header">
+        <h1>📖 अध्याय 4: कार्यपालिका (EXECUTIVE) - 100-PAGE MASTER NOTES</h1>
+        <button id="mainCopyBtn" onclick="copyToGoogleDoc()">
+            📋 COPY EVERYTHING FOR GOOGLE DOCS
+        </button>
+    </div>
+    
+    <div id="status" style="display: none; position: fixed; top: 70px; right: 20px; background-color: #059669; color: white; padding: 12px 24px; border-radius: 6px; z-index: 1000; font-family: sans-serif; font-size: 14px; font-weight: bold; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+        ✨ SUCCESS! Content copied to clipboard in rich format. Now open Google Docs and press Ctrl+V.
+    </div>
+
     <div id="contentToCopy">
-        <div style="font-family: 'Arial', verdana, sans-serif; font-size: 16pt; line-height: 1.8; color: #1a202c;">
-            <h1 style="text-align: center; color: #1e3a8a; font-size: 40pt; font-weight: bold; border-bottom: 5px solid #3b82f6; padding-bottom: 30px; margin-bottom: 40px;">
-                अध्याय 4: जल्द ही आ रहा है...<br/>
-                <span style="font-size: 24pt; color:#6b7280; font-weight: normal;">(Coming Soon...)</span>
-            </h1>
-            <p style="text-align: center; font-size: 20pt;">इस अध्याय के विस्तृत नोट्स और प्रीमियम कंटेंट पर अभी काम चल रहा है। कृपया कुछ समय बाद पुनः देखें।</p>
+        <div style="font-family: 'Outfit', 'Noto Sans Devanagari', sans-serif; font-size: 20pt; line-height: 2.2; color: #000000; max-width: 1400px; margin: auto; padding: 20px;">
+
+            <!-- Title Section (Projector Friendly) -->
+            <div style="text-align: center; margin-bottom: 80px; padding: 75px; border: 15px double #1e3a8a; background-color: #eff6ff; border-radius: 30px;">
+                <h1 style="color: #1e3a8a !important; font-size: 58pt; font-weight: 950 !important; margin-bottom: 20px; -webkit-text-stroke: 1.5px #1e3a8a;">
+                    अध्याय 4: कार्यपालिका<br/>
+                    <span style="font-size: 30pt; color:#475569; font-weight: 900;">(EXECUTIVE)</span>
+                </h1>
+                <p style="font-size: 26pt; color: #000000; margin-top: 10px; font-weight: 900;">कक्षा 11 राजनीति विज्ञान - अति-गहन शैक्षणिक मास्टर नोट्स</p>
+                <p style="font-size: 20pt; color: #b91c1c; font-style: italic; font-weight: 900;">(विशेष फोकस: संसदीय बनाम अध्यक्षात्मक प्रणाली, राष्ट्रपति के विवेकाधीन अधिकार, और नौकरशाही)</p>
+            </div>
+
+            
+            <!-- PART 1 -->
+            <div class="part-container" style="border-top-color: #0284c7;">
+                <h2 style="color: #0369a1 !important; background-color: #f0f9ff; border-left: 10px solid #0284c7; padding: 20px 25px; border-radius: 10px; font-size: 32pt; font-weight: 900 !important; margin-top: 0; -webkit-text-stroke: 1px #0369a1;">1. कार्यपालिका क्या है? परिभाषा एवं महत्व</h2>
+                <p style="font-size: 18pt; text-align: justify;">कार्यपालिका सरकार का वह अंग है जो संसद द्वारा बनाए गए कानूनों और नीतियों को व्यावहारिक रूप से देश में लागू करने के लिए उत्तरदायी है। यह प्रशासन चलाने और नीतियों को क्रियान्वित करने का मुख्य इंजन है।</p>
+
+                <h3 style="color: #0369a1; font-size: 24pt;">1.1 कार्यपालिका के प्रमुख कार्य और महत्व:</h3>
+                <ul style="font-size: 18pt; line-height: 1.8; color: #000000; list-style-type: square;">
+                    <li><b>नीतियों का क्रियान्वयन:</b> संसद द्वारा पारित विधेयकों और विकास योजनाओं को जमीनी स्तर पर प्रशासनिक अधिकारियों के माध्यम से लागू करना।</li>
+                    <li><b>कानून-व्यवस्था बनाए रखना:</b> देश के भीतर आंतरिक शांति बनाए रखना, अपराधों पर नियंत्रण रखना और नागरिकों को सुरक्षा देना।</li>
+                    <li><b>विदेश नीति का संचालन:</b> अन्य राष्ट्रों के साथ कूटनीतिक संबंध स्थापित करना, संधियाँ करना और देश का अंतरराष्ट्रीय मंचों पर प्रतिनिधित्व करना।</li>
+                    <li><b>बजट और वित्तीय नीतियां:</b> देश की वित्तीय आवश्यकताओं के लिए बजट तैयार करना और करों की वसूली व विकास कार्यों में खर्च की निगरानी करना।</li>
+                    <li><b>प्रशासनिक नियंत्रण:</b> देश के पूरे नौकरशाही तंत्र (सिविल सेवाओं) को नियंत्रित और निर्देशित करना ताकि जन-कल्याणकारी नीतियां सफल हों।</li>
+                </ul>
+            </div>
+
+
+            <!-- PART 2 -->
+            <div class="part-container" style="border-top-color: #059669;">
+                <h2 style="color: #065f46 !important; background-color: #f0fdf4; border-left: 10px solid #059669; padding: 20px 25px; border-radius: 10px; font-size: 32pt; font-weight: 900 !important; margin-top: 0; -webkit-text-stroke: 1px #065f46;">2. कार्यपालिका के प्रकार: राजनैतिक बनाम स्थायी</h2>
+                <p style="font-size: 18pt; text-align: justify;">लोकतांत्रिक देशों में शासन व्यवस्था को सुचारू रूप से चलाने के लिए कार्यपालिका को दो प्रमुख अंगों में विभाजित किया जाता है—राजनैतिक कार्यपालिका और स्थायी कार्यपालिका।</p>
+
+                <h3 style="color: #065f46; font-size: 24pt;">2.1 राजनैतिक कार्यपालिका (Political Executive):</h3>
+                <ul style="font-size: 18pt; line-height: 1.8; color: #000000; list-style-type: square;">
+                    <li><b>निर्वाचित जनप्रतिनिधि:</b> इसमें जनता द्वारा निश्चित समय (जैसे 5 वर्ष) के लिए चुने गए मंत्री, प्रधानमंत्री और राष्ट्रपति शामिल होते हैं।</li>
+                    <li><b>अस्थायी कार्यकाल:</b> यह केवल तब तक सत्ता में बने रहते हैं जब तक इन्हें संसद और जनता का विश्वास प्राप्त होता है; चुनाव हारने पर इन्हें हटना पड़ता है।</li>
+                    <li><b>नीति-निर्माण का कार्य:</b> देश के लिए बड़ी नीतियां, कानून के प्रस्ताव और रणनीतिक फैसले लेने का मुख्य काम इन्हीं का होता है।</li>
+                </ul>
+
+                <h3 style="color: #065f46; font-size: 24pt;">2.2 स्थायी कार्यपालिका (Permanent Executive):</h3>
+                <ul style="font-size: 18pt; line-height: 1.8; color: #000000; list-style-type: square;">
+                    <li><b>नौकरशाही (Bureaucracy):</b> इसमें योग्यता और परीक्षा के आधार पर नियुक्त किए गए सिविल सेवक (IAS, IPS) और प्रशासनिक कर्मचारी आते हैं।</li>
+                    <li><b>स्थायी कार्यकाल:</b> ये सेवानिवृत्ति की आयु (जैसे 60 वर्ष) तक अपने पदों पर बने रहते हैं, चाहे चुनाव में कोई भी राजनीतिक दल जीते।</li>
+                    <li><b>व्यावहारिक क्रियान्वयन:</b> राजनैतिक मंत्रियों द्वारा बनाई गई नीतियों को धरातल पर कड़ाई से लागू करने का मुख्य प्रशासनिक कार्य इन्हीं का होता है।</li>
+                </ul>
+            </div>
+
+
+            <!-- PART 3 -->
+            <div class="part-container" style="border-top-color: #d97706;">
+                <h2 style="color: #92400e !important; background-color: #fff7ed; border-left: 10px solid #d97706; padding: 20px 25px; border-radius: 10px; font-size: 32pt; font-weight: 900 !important; margin-top: 0; -webkit-text-stroke: 1px #92400e;">3. विभिन्न प्रणालियाँ: संसदीय, अध्यक्षात्मक एवं अर्ध-अध्यक्षात्मक</h2>
+                <p style="font-size: 18pt; text-align: justify;">विभिन्न लोकतांत्रिक देशों में कार्यपालिका के प्रमुख की शक्तियों और विधायिका के साथ उसके संबंधों के आधार पर तीन प्रमुख प्रणालियाँ पाई जाती हैं।</p>
+
+                <h3 style="color: #92400e; font-size: 24pt;">3.1 संसदीय कार्यपालिका प्रणाली (Parliamentary System):</h3>
+                <ul style="font-size: 18pt; line-height: 1.8; color: #000000; list-style-type: square;">
+                    <li><b>संसद के प्रति उत्तरदायी:</b> सरकार का प्रमुख (प्रधानमंत्री) विधायिका का सदस्य होता है और संसद के प्रति सामूहिक रूप से उत्तरदायी होता है (जैसे भारत, ब्रिटेन)।</li>
+                    <li><b>दोहरा प्रमुख:</b> देश का औपचारिक प्रमुख (राष्ट्रपति या राजा) नाममात्र का प्रमुख होता है, जबकि वास्तविक शक्ति प्रधानमंत्री के पास होती है।</li>
+                </ul>
+
+                <h3 style="color: #92400e; font-size: 24pt;">3.2 अध्यक्षात्मक कार्यपालिका प्रणाली (Presidential System):</h3>
+                <ul style="font-size: 18pt; line-height: 1.8; color: #000000; list-style-type: square;">
+                    <li><b>असीमित कार्यकारी शक्ति:</b> राष्ट्रपति देश और सरकार दोनों का वास्तविक प्रमुख होता है और वह विधायिका के प्रति उत्तरदायी नहीं होता (जैसे अमेरिका)।</li>
+                    <li><b>प्रत्यक्ष चुनाव:</b> राष्ट्रपति का चुनाव सीधे जनता द्वारा निश्चित समय के लिए किया जाता है; उसे संसद आसानी से नहीं हटा सकती।</li>
+                </ul>
+
+                <h3 style="color: #92400e; font-size: 24pt;">3.3 अर्ध-अध्यक्षात्मक कार्यपालिका प्रणाली (Semi-Presidential System):</h3>
+                <ul style="font-size: 18pt; line-height: 1.8; color: #000000; list-style-type: square;">
+                    <li><b>शक्तियों का बंटवारा:</b> इसमें राष्ट्रपति और प्रधानमंत्री दोनों होते हैं; राष्ट्रपति के पास विशाल कार्यकारी शक्तियां होती हैं (जैसे फ्रांस, श्रीलंका)।</li>
+                    <li><b>संसद के प्रति जवाबदेही:</b> प्रधानमंत्री और उसका मंत्रिपरिषद संसद के प्रति उत्तरदायी होते हैं, जबकि राष्ट्रपति का सीधे जनता द्वारा चुनाव होता है।</li>
+                </ul>
+            </div>
+
+
+            <!-- PART 4 -->
+            <div class="part-container" style="border-top-color: #7c3aed;">
+                <h2 style="color: #5b21b6 !important; background-color: #f5f3ff; border-left: 10px solid #7c3aed; padding: 20px 25px; border-radius: 10px; font-size: 32pt; font-weight: 900 !important; margin-top: 0; -webkit-text-stroke: 1px #5b21b6;">4. भारत ने संसदीय प्रणाली को क्यों चुना?</h2>
+                <p style="font-size: 18pt; text-align: justify;">संविधान निर्माताओं ने अध्यक्षात्मक प्रणाली के बजाय संसदीय (Parliamentary) प्रणाली को क्यों चुना? इसके पीछे हमारे ऐतिहासिक अनुभव और उत्तरदायित्व की चिंताएं थीं।</p>
+
+                <h3 style="color: #5b21b6; font-size: 24pt;">4.1 संसदीय प्रणाली चुनने के प्रमुख कारण:</h3>
+                <ul style="font-size: 18pt; line-height: 1.8; color: #000000; list-style-type: square;">
+                    <li><b>ऐतिहासिक अनुभव:</b> भारत में ब्रिटिश काल से ही 1919 और 1935 के अधिनियमों के तहत संसदीय व्यवस्था का सीमित संचालन हो रहा था, जिससे लोग परिचित थे।</li>
+                    <li><b>निरंकुशता पर अंकुश:</b> अध्यक्षात्मक प्रणाली में राष्ट्रपति के तानाशाह बनने का खतरा रहता है; संसदीय प्रणाली में मंत्रियों पर संसद का रोज नियंत्रण होता है।</li>
+                    <li><b>उत्तरदायित्व बनाम स्थिरता:</b> संविधान सभा ने स्थिरता से अधिक 'उत्तरदायित्व' (Accountability) को महत्व दिया; सरकार को प्रतिदिन संसद को जवाब देना होता है।</li>
+                    <li><b>विविधता का समावेशन:</b> बहु-सांस्कृतिक और विशाल भारत में अलग-अलग राज्यों, जातियों और भाषाओं के प्रतिनिधियों को मंत्रिपरिषद में शामिल करना आसान होता है।</li>
+                    <li><b>विधायिका-कार्यपालिका समन्वय:</b> यह प्रणाली सरकार और संसद के बीच गतिरोध और टकरावों को रोकती है क्योंकि कार्यपालिका संसद का ही हिस्सा होती है।</li>
+                </ul>
+            </div>
+
+
+            <!-- PART 5 -->
+            <div class="part-container" style="border-top-color: #4c1d95;">
+                <h2 style="color: #4c1d95 !important; background-color: #faf5ff; border-left: 10px solid #4c1d95; padding: 20px 25px; border-radius: 10px; font-size: 32pt; font-weight: 900 !important; margin-top: 0; -webkit-text-stroke: 1px #4c1d95;">5. भारत का राष्ट्रपति: स्थिति एवं चुनाव प्रक्रिया</h2>
+                <p style="font-size: 18pt; text-align: justify;">भारतीय संघ की कार्यपालिका का औपचारिक प्रमुख राष्ट्रपति होता है। संविधान के अनुच्छेद 52 के अनुसार भारत का एक राष्ट्रपति होगा जो देश का प्रथम नागरिक होता है।</p>
+
+                <h3 style="color: #4c1d95; font-size: 24pt;">5.1 राष्ट्रपति पद की स्थिति और चुनाव प्रणाली:</h3>
+                <ul style="font-size: 18pt; line-height: 1.8; color: #000000; list-style-type: square;">
+                    <li><b>नाममात्र की कार्यपालिका:</b> राष्ट्रपति देश का संवैधानिक प्रमुख होता है जो मंत्रिपरिषद (वास्तविक प्रमुख प्रधानमंत्री) की सलाह पर कार्य करता है।</li>
+                    <li><b>अप्रत्यक्ष चुनाव:</b> राष्ट्रपति का चुनाव सीधे जनता द्वारा नहीं, बल्कि एक विशेष निर्वाचक मंडल (Electoral College) द्वारा किया जाता है।</li>
+                    <li><b>निर्वाचक मंडल के सदस्य:</b> इसमें संसद के दोनों सदनों के निर्वाचित सदस्य और सभी राज्यों की विधानसभाओं (MLAs) के निर्वाचित सदस्य भाग लेते हैं।</li>
+                    <li><b>समानुपातिक प्रतिनिधित्व (STV):</b> चुनाव एकल संक्रमणीय मत प्रणाली और गुप्त मतदान द्वारा होता है, जहाँ विधायकों और सांसदों के वोटों का मूल्य समानुपातिक होता है।</li>
+                    <li><b>महाभियोग (Impeachment):</b> संविधान के उल्लंघन पर अनुच्छेद 61 के तहत केवल संसद द्वारा विशेष बहुमत से ही राष्ट्रपति को पद से हटाया जा सकता है।</li>
+                </ul>
+            </div>
+
+
+            <!-- PART 6 -->
+            <div class="part-container" style="border-top-color: #0d9488;">
+                <h2 style="color: #0f766e !important; background-color: #f0fdf4; border-left: 10px solid #0d9488; padding: 20px 25px; border-radius: 10px; font-size: 32pt; font-weight: 900 !important; margin-top: 0; -webkit-text-stroke: 1px #0f766e;">6. राष्ट्रपति की शक्तियाँ: कार्यकारी एवं विधायी</h2>
+                <p style="font-size: 18pt; text-align: justify;">संवैधानिक रूप से राष्ट्रपति के नाम पर देश का पूरा शासन चलाया जाता है। उनके पास विशाल कार्यकारी और विधायी शक्तियाँ होती हैं जिनका उपयोग वे सलाह पर करते हैं।</p>
+
+                <h3 style="color: #0f766e; font-size: 24pt;">6.1 राष्ट्रपति की प्रमुख कार्यकारी और विधायी शक्तियाँ:</h3>
+                <ul style="font-size: 18pt; line-height: 1.8; color: #000000; list-style-type: square;">
+                    <li><b>महत्वपूर्ण नियुक्तियाँ:</b> प्रधानमंत्री, मंत्रिपरिषद के मंत्रियों, राज्यों के राज्यपालों, चुनाव आयुक्तों और नियंत्रक महालेखा परीक्षक (CAG) की नियुक्ति।</li>
+                    <li><b>विधेयक पर सहमति:</b> संसद द्वारा पारित कोई भी विधेयक कानून तभी बनता है जब उस पर राष्ट्रपति हस्ताक्षर करते हैं।</li>
+                    <li><b>संसद का सत्र बुलाना:</b> संसद के सत्र को आहूत करना, सत्रावसान करना और प्रधानमंत्री की सलाह पर लोकसभा को भंग करने का कानूनी अधिकार।</li>
+                    <li><b>अध्यादेश जारी करने की शक्ति (अनुच्छेद 123):</b> जब संसद का सत्र न चल रहा हो और देश में तात्कालिक आवश्यकता हो, तो कानून के समान प्रभाव वाला अध्यादेश लाना।</li>
+                    <li><b>सैनिक प्रमुख:</b> राष्ट्रपति भारत की तीनों सेनाओं (थल, जल, वायु) का सर्वोच्च सेनापति होता है और युद्ध व शांति की घोषणा करता है।</li>
+                </ul>
+            </div>
+
+
+            <!-- PART 7 -->
+            <div class="part-container" style="border-top-color: #4338ca;">
+                <h2 style="color: #3730a3 !important; background-color: #eef2ff; border-left: 10px solid #4338ca; padding: 20px 25px; border-radius: 10px; font-size: 32pt; font-weight: 900 !important; margin-top: 0; -webkit-text-stroke: 1px #3730a3;">7. न्यायिक एवं आपातकालीन शक्तियाँ</h2>
+                <p style="font-size: 18pt; text-align: justify;">न्याय और राष्ट्रीय सुरक्षा के मामलों में राष्ट्रपति को असाधारण न्यायिक और आपातकालीन शक्तियाँ प्रदान की गई हैं जो देश की अखंडता की रक्षा के लिए आवश्यक हैं।</p>
+
+                <h3 style="color: #3730a3; font-size: 24pt;">7.1 प्रमुख न्यायिक और आपातकालीन अधिकार:</h3>
+                <ul style="font-size: 18pt; line-height: 1.8; color: #000000; list-style-type: square;">
+                    <li><b>क्षमादान की शक्ति (अनुच्छेद 72):</b> न्यायालय द्वारा दी गई किसी भी सजा (मृत्युदंड सहित) को क्षमा करने, कम करने या टालने का अधिकार।</li>
+                    <li><b>राष्ट्रीय आपातकाल (अनुच्छेद 352):</b> युद्ध, बाहरी आक्रमण या सशस्त्र विद्रोह की स्थिति में पूरे देश या उसके किसी हिस्से में आपातकाल लगाना।</li>
+                    <li><b>राष्ट्रपति शासन (अनुच्छेद 356):</b> जब किसी राज्य का प्रशासनिक तंत्र संवैधानिक नियमों के अनुसार न चल रहा हो, तो वहाँ राज्य सरकार को भंग करना।</li>
+                    <li><b>वित्तीय आपातकाल (अनुच्छेद 360):</b> यदि देश की वित्तीय साख या स्थिरता को गंभीर खतरा हो, तो वित्तीय आपातकाल की घोषणा करना।</li>
+                    <li><b>उच्चतम न्यायालय से सलाह (अनुच्छेद 143):</b> किसी कानून या सार्वजनिक महत्व के विषय पर सुप्रीम कोर्ट से कानूनी राय मांगने का अधिकार।</li>
+                </ul>
+            </div>
+
+
+            <!-- PART 8 -->
+            <div class="part-container" style="border-top-color: #be123c;">
+                <h2 style="color: #9f1239 !important; background-color: #fff1f2; border-left: 10px solid #be123c; padding: 20px 25px; border-radius: 10px; font-size: 32pt; font-weight: 900 !important; margin-top: 0; -webkit-text-stroke: 1px #9f1239;">8. राष्ट्रपति के विवेकाधीन अधिकार (Discretionary Powers)</h2>
+                <p style="font-size: 18pt; text-align: justify;">यद्यपि राष्ट्रपति मंत्रिपरिषद की सलाह पर कार्य करते हैं, लेकिन कुछ विशिष्ट परिस्थितियों में वे अपने विवेक (Discretion) का उपयोग कर स्वतंत्र निर्णय ले सकते हैं।</p>
+
+                <h3 style="color: #9f1239; font-size: 24pt;">8.1 विवेकाधीन अधिकार 1: विधेयक को पुनर्विचार के लिए भेजना (Suspensive Veto):</h3>
+                <ul style="font-size: 18pt; line-height: 1.8; color: #000000; list-style-type: square;">
+                    <li><b>सलाह को वापस करना:</b> यदि राष्ट्रपति को लगे कि संसद द्वारा पारित विधेयक में कुछ कमियां हैं, तो वे उसे एक बार पुनर्विचार के लिए वापस भेज सकते हैं।</li>
+                    <li><b>नैतिक दबाव:</b> यद्यपि संसद द्वारा दोबारा पारित करने पर उन्हें दस्तखत करने ही होंगे, लेकिन यह कदम सरकार पर बड़ा नैतिक दबाव बनाता है।</li>
+                </ul>
+
+                <h3 style="color: #9f1239; font-size: 24pt;">8.2 विवेकाधीन अधिकार 2: वीटो शक्ति का प्रयोग (Pocket Veto):</h3>
+                <ul style="font-size: 18pt; line-height: 1.8; color: #000000; list-style-type: square;">
+                    <li><b>कोई समय सीमा नहीं:</b> संविधान में यह नहीं लिखा है कि राष्ट्रपति को विधेयक पर कितने दिन में हस्ताक्षर करने होंगे।</li>
+                    <li><b>विधेयक को लटकाना:</b> राष्ट्रपति बिना कोई निर्णय लिए विधेयक को अनिश्चित काल के लिए अपने पास रख सकते हैं (जैसे 1986 में ज्ञानी जैल सिंह द्वारा डाकघर विधेयक पर जेबी वीटो)।</li>
+                </ul>
+
+                <h3 style="color: #9f1239; font-size: 24pt;">8.3 विवेकाधीन अधिकार 3: प्रधानमंत्री की नियुक्ति (त्रिशंकु संसद में):</h3>
+                <ul style="font-size: 18pt; line-height: 1.8; color: #000000; list-style-type: square;">
+                    <li><b>त्रिशंकु संसद की स्थिति:</b> जब चुनाव में किसी भी राजनीतिक दल या गठबंधन को लोकसभा में स्पष्ट बहुमत प्राप्त न हुआ हो।</li>
+                    <li><b>विवेकपूर्ण निर्णय:</b> राष्ट्रपति अपने विवेक से उस नेता को प्रधानमंत्री नियुक्त करते हैं जो उनकी राय में संसद में बहुमत साबित कर सकता है।</li>
+                </ul>
+            </div>
+
+
+            <!-- PART 9 -->
+            <div class="part-container" style="border-top-color: #1e3a8a;">
+                <h2 style="color: #1e40af !important; background-color: #eff6ff; border-left: 10px solid #1e3a8a; padding: 20px 25px; border-radius: 10px; font-size: 32pt; font-weight: 900 !important; margin-top: 0; -webkit-text-stroke: 1px #1e40af;">9. भारत का उपराष्ट्रपति: भूमिका एवं कार्य</h2>
+                <p style="font-size: 18pt; text-align: justify;">भारतीय संविधान का अनुच्छेद 63 भारत के उपराष्ट्रपति (Vice-President) पद का प्रावधान करता है, जो देश का दूसरा सर्वोच्च संवैधानिक अधिकारी होता है।</p>
+
+                <h3 style="color: #1e40af; font-size: 24pt;">9.1 उपराष्ट्रपति के प्रमुख कार्य और चुनाव:</h3>
+                <ul style="font-size: 18pt; line-height: 1.8; color: #000000; list-style-type: square;">
+                    <li><b>संसद द्वारा चुनाव:</b> उपराष्ट्रपति का चुनाव संसद के दोनों सदनों (लोकसभा और राज्यसभा) के सभी सदस्यों द्वारा आनुपातिक प्रतिनिधित्व प्रणाली से होता है।</li>
+                    <li><b>राज्यसभा का पदेन सभापति:</b> उपराष्ट्रपति का मुख्य कार्य राज्यसभा की कार्यवाहियों का संचालन और नियंत्रण करना होता है।</li>
+                    <li><b>कार्यवाहक राष्ट्रपति:</b> राष्ट्रपति की मृत्यु, इस्तीफे या बीमारी की स्थिति में अधिकतम 6 महीने तक कार्यवाहक राष्ट्रपति के रूप में कार्यभार संभालना।</li>
+                    <li><b>वेतन और भत्ते:</b> उपराष्ट्रपति को वेतन मुख्य रूप से राज्यसभा के सभापति के रूप में उनके दायित्वों को पूरा करने के लिए दिया जाता है।</li>
+                    <li><b>पद से हटाना:</b> राज्यसभा द्वारा पारित प्रस्ताव पर यदि लोकसभा भी सहमत हो जाए, तो उपराष्ट्रपति को उनके पद से हटाया जा सकता है।</li>
+                </ul>
+            </div>
+
+
+            <!-- PART 10 -->
+            <div class="part-container" style="border-top-color: #be185d;">
+                <h2 style="color: #be185d !important; background-color: #fdf2f8; border-left: 10px solid #be185d; padding: 20px 25px; border-radius: 10px; font-size: 32pt; font-weight: 900 !important; margin-top: 0; -webkit-text-stroke: 1px #be185d;">10. प्रधानमंत्री: वास्तविक कार्यपालिका प्रमुख</h2>
+                <p style="font-size: 18pt; text-align: justify;">भारतीय संसदीय प्रणाली में प्रधानमंत्री (Prime Minister) देश की वास्तविक कार्यपालिका का प्रमुख होता है। डॉ. आंबेडकर के अनुसार, यदि संविधान में किसी पद की तुलना अमेरिकी राष्ट्रपति से की जा सकती है, तो वह प्रधानमंत्री है।</p>
+
+                <h3 style="color: #be185d; font-size: 24pt;">10.1 प्रधानमंत्री की स्थिति और शक्तियाँ:</h3>
+                <ul style="font-size: 18pt; line-height: 1.8; color: #000000; list-style-type: square;">
+                    <li><b>मंत्रिपरिषद का मुखिया:</b> लोकसभा में बहुमत प्राप्त दल के नेता को राष्ट्रपति द्वारा प्रधानमंत्री नियुक्त किया जाता है।</li>
+                    <li><b>वास्तविक शासक:</b> शासन के सभी महत्वपूर्ण निर्णय (जैसे नीतियां, योजनाएं, रक्षा सौदे) प्रधानमंत्री और कैबिनेट की बैठकों में ही लिए जाते हैं।</li>
+                    <li><b>मुख्य कूटनीतिक नीति-निर्माता:</b> देश की विदेश नीति, प्रमुख अंतरराष्ट्रीय संधियों और अन्य देशों के साथ संबंधों का निर्धारण करना।</li>
+                    <li><b>संसद और सरकार की कड़ी:</b> प्रधानमंत्री संसद में सरकार की नीतियों का बचाव करता है और नीति-निर्माण का नेतृत्व करता है।</li>
+                    <li><b>लोकप्रिय नेता:</b> चुनाव प्रायः प्रधानमंत्री के चेहरे और उनकी लोकप्रियता के आधार पर ही लड़े और जीते जाते हैं।</li>
+                </ul>
+            </div>
+
+
+            <!-- PART 11 -->
+            <div class="part-container" style="border-top-color: #f59e0b;">
+                <h2 style="color: #b45309 !important; background-color: #fffbeb; border-left: 10px solid #f59e0b; padding: 20px 25px; border-radius: 10px; font-size: 32pt; font-weight: 900 !important; margin-top: 0; -webkit-text-stroke: 1px #b45309;">11. शक्ति का केंद्र: प्रधानमंत्री और मंत्रिपरिषद</h2>
+                <p style="font-size: 18pt; text-align: justify;">प्रधानमंत्री मंत्रिपरिषद का सूर्य है जिसके चारों ओर सभी ग्रह (मंत्री) चक्कर काटते हैं। वह मंत्रिपरिषद के गठन, संचालन और अंत का मुख्य केंद्र बिंदु होता है।</p>
+
+                <h3 style="color: #b45309; font-size: 24pt;">11.1 प्रधानमंत्री और मंत्रियों के संबंध:</h3>
+                <ul style="font-size: 18pt; line-height: 1.8; color: #000000; list-style-type: square;">
+                    <li><b>मंत्रियों की नियुक्ति:</b> प्रधानमंत्री की सिफारिश पर ही राष्ट्रपति अन्य मंत्रियों की नियुक्ति करते हैं और उनके विभागों (Portfolios) का बंटवारा करते हैं।</li>
+                    <li><b>विभागों में फेरबदल:</b> प्रधानमंत्री जब चाहे किसी भी मंत्री का विभाग बदल सकता है या उसे पद से हटने के लिए कह सकता है।</li>
+                    <li><b>मंत्रियों की बर्खास्तगी:</b> यदि कोई मंत्री प्रधानमंत्री की नीतियों से असहमत हो, तो उसे त्यागपत्र देना पड़ता है (जैसे डॉ. आंबेडकर का हिंदू कोड बिल पर इस्तीफा)।</li>
+                    <li><b>सामूहिक पतन:</b> प्रधानमंत्री का इस्तीफा या मृत्यु पूरे मंत्रिपरिषद का स्वतः अंत (पतन) माना जाता है।</li>
+                    <li><b>कैबिनेट की अध्यक्षता:</b> मंत्रिपरिषद की सभी बैठकों की अध्यक्षता करना और अंतिम निर्णयों को प्रभावित करना।</li>
+                </ul>
+            </div>
+
+
+            <!-- PART 12 -->
+            <div class="part-container" style="border-top-color: #1d4ed8;">
+                <h2 style="color: #1e40af !important; background-color: #eff6ff; border-left: 10px solid #1d4ed8; padding: 20px 25px; border-radius: 10px; font-size: 32pt; font-weight: 900 !important; margin-top: 0; -webkit-text-stroke: 1px #1e40af;">12. सामूहिक उत्तरदायित्व (Collective Responsibility)</h2>
+                <p style="font-size: 18pt; text-align: justify;">सामूहिक उत्तरदायित्व संसदीय लोकतंत्र का सबसे महत्वपूर्ण और अनिवार्य नियम है। इसका मूल सिद्धांत यह है कि 'सभी मंत्री एक साथ तैरते हैं और एक साथ डूबते हैं।'</p>
+
+                <h3 style="color: #1e40af; font-size: 24pt;">12.1 सामूहिक उत्तरदायित्व की कार्यप्रणाली:</h3>
+                <ul style="font-size: 18pt; line-height: 1.8; color: #000000; list-style-type: square;">
+                    <li><b>अविश्वास प्रस्ताव (No Confidence Motion):</b> यदि लोकसभा में सरकार के खिलाफ अविश्वास प्रस्ताव पारित हो जाए, तो पूरे मंत्रिपरिषद को इस्तीफा देना पड़ता है।</li>
+                    <li><b>कैबिनेट एकजुटता:</b> कैबिनेट की बैठक में चाहे जो भी बहस हो, निर्णय होने के बाद सभी मंत्रियों को संसद और जनता के सामने उसका समर्थन करना होता है।</li>
+                    <li><b>व्यक्तिगत गलती का सामूहिक परिणाम:</b> यदि किसी एक मंत्री के विभाग की नीतियों के खिलाफ संसद में अविश्वास आता है, तो वह पूरी सरकार के खिलाफ माना जाता है।</li>
+                    <li><b>संसद का नियंत्रण:</b> यह नियम मंत्रियों को मजबूर करता है कि वे संसद के प्रति निरंतर संवेदनशील रहें और मनमानी न करें।</li>
+                    <li><b>राजनैतिक समरूपता:</b> सरकार के सभी मंत्रियों में नीतियों और विचारधारा को लेकर एक बुनियादी सहमति और एकजुटता होनी आवश्यक है।</li>
+                </ul>
+            </div>
+
+
+            <!-- PART 13 -->
+            <div class="part-container" style="border-top-color: #047857;">
+                <h2 style="color: #064e3b !important; background-color: #ecfdf5; border-left: 10px solid #047857; padding: 20px 25px; border-radius: 10px; font-size: 32pt; font-weight: 900 !important; margin-top: 0; -webkit-text-stroke: 1px #064e3b;">13. मंत्रिपरिषद का आकार और 91वाँ संशोधन</h2>
+                <p style="font-size: 18pt; text-align: justify;">गठबंधन सरकारों के दौर में राजनीतिक दलों को खुश करने के लिए मंत्रियों की संख्या बहुत बढ़ा दी जाती थी। इस कुप्रथा को रोकने के लिए 91वाँ संविधान संशोधन किया गया।</p>
+
+                <h3 style="color: #064e3b; font-size: 24pt;">13.1 91वें संशोधन (2003) के प्रमुख नियम:</h3>
+                <ul style="font-size: 18pt; line-height: 1.8; color: #000000; list-style-type: square;">
+                    <li><b>15 प्रतिशत की सीमा:</b> मंत्रिपरिषद में प्रधानमंत्री सहित मंत्रियों की कुल संख्या लोकसभा (या विधानसभा) की कुल सदस्य संख्या के 15% से अधिक नहीं हो सकती।</li>
+                    <li><b>जंबो कैबिनेट पर रोक:</b> इस संशोधन से पहले राजनीतिक लाभ के लिए 80-90 मंत्रियों की विशाल (Jumbo) कैबिनेट बना दी जाती थी, जिससे सरकारी खजाने पर बोझ बढ़ता था।</li>
+                    <li><b>दलबदलुओं पर अंकुश:</b> यदि कोई सांसद दलबदल के आधार पर अयोग्य घोषित होता है, तो वह तब तक मंत्री नहीं बन सकता जब तक वह दोबारा चुनाव न जीत जाए।</li>
+                    <li><b>राज्यों में न्यूनतम सीमा:</b> छोटे राज्यों में मंत्रियों की न्यूनतम संख्या (मुख्यमंत्री सहित) 12 तय की गई है ताकि सुचारू प्रशासन चल सके।</li>
+                    <li><b>प्रशासनिक दक्षता:</b> छोटे और संतुलित कैबिनेट के कारण निर्णय लेने की गति तेज होती है और प्रशासनिक खर्चे कम होते हैं।</li>
+                </ul>
+            </div>
+
+
+            <!-- PART 14 -->
+            <div class="part-container" style="border-top-color: #4338ca;">
+                <h2 style="color: #3730a3 !important; background-color: #eef2ff; border-left: 10px solid #4338ca; padding: 20px 25px; border-radius: 10px; font-size: 32pt; font-weight: 900 !important; margin-top: 0; -webkit-text-stroke: 1px #3730a3;">14. राष्ट्रपति और प्रधानमंत्री का संबंध</h2>
+                <p style="font-size: 18pt; text-align: justify;">संविधान के अनुच्छेद 74 के अनुसार, राष्ट्रपति को सहायता और सलाह देने के लिए एक मंत्रिपरिषद होगी जिसका प्रमुख प्रधानमंत्री होगा। दोनों के संबंध अत्यंत गहरे होते हैं।</p>
+
+                <h3 style="color: #3730a3; font-size: 24pt;">14.1 दोनों पदों के बीच संवैधानिक संबंध:</h3>
+                <ul style="font-size: 18pt; line-height: 1.8; color: #000000; list-style-type: square;">
+                    <li><b>सलाह मानने की बाध्यता:</b> 42वें और 44वें संशोधन द्वारा स्पष्ट किया गया कि राष्ट्रपति मंत्रिपरिषद की सलाह मानने के लिए सामान्यतः बाध्य हैं।</li>
+                    <li><b>सूचना का आदान-प्रदान (अनुच्छेद 78):</b> प्रधानमंत्री का यह कर्तव्य है कि वह देश के प्रशासन और विधायी प्रस्तावों के सभी फैसलों की जानकारी राष्ट्रपति को दे।</li>
+                    <li><b>पुनर्विचार की शक्ति:</b> राष्ट्रपति किसी भी सलाह को एक बार पुनर्विचार के लिए वापस भेज सकते हैं, लेकिन दोबारा वही सलाह आने पर मानने के लिए बाध्य हैं।</li>
+                    <li><b>राजनैतिक समन्वय:</b> देश के सुचारू संचालन के लिए राष्ट्रपति (औपचारिक प्रमुख) और प्रधानमंत्री (वास्तविक प्रमुख) के बीच निरंतर संवाद आवश्यक है।</li>
+                    <li><b>संवैधानिक मध्यस्थ:</b> राष्ट्रपति देश की अखंडता के रक्षक के रूप में सरकार के निर्णयों पर एक नैतिक अभिभावक की तरह नजर रखते हैं।</li>
+                </ul>
+            </div>
+
+
+            <!-- PART 15 -->
+            <div class="part-container" style="border-top-color: #334155;">
+                <h2 style="color: #1e293b !important; background-color: #f1f5f9; border-left: 10px solid #334155; padding: 20px 25px; border-radius: 10px; font-size: 32pt; font-weight: 900 !important; margin-top: 0; -webkit-text-stroke: 1px #1e293b;">15. स्थायी कार्यपालिका: नौकरशाही (Bureaucracy)</h2>
+                <p style="font-size: 18pt; text-align: justify;">स्थायी कार्यपालिका में देश के सिविल सेवक (IAS, IPS) और प्रशासनिक कर्मचारी आते हैं। मंत्रियों के बदलने के बावजूद प्रशासनिक निरंतरता बनाए रखना इन्हीं का काम है।</p>
+
+                <h3 style="color: #1e293b; font-size: 24pt;">15.1 नौकरशाही के प्रमुख कार्य और आवश्यकता:</h3>
+                <ul style="font-size: 18pt; line-height: 1.8; color: #000000; list-style-type: square;">
+                    <li><b>नीतियों का व्यावहारिक क्रियान्वयन:</b> राजनैतिक कार्यपालिका द्वारा बनाई गई योजनाओं (जैसे सड़क निर्माण, स्वास्थ्य मिशन) को जमीन पर लागू करना।</li>
+                    <li><b>विशेषज्ञता और सलाह:</b> मंत्रियों को नीतियों और कानूनों का मसौदा तैयार करने के लिए आवश्यक डेटा, कानूनी तकनीकी बारीकियां और सलाह देना।</li>
+                    <li><b>निरंतरता:</b> चुनावों के समय जब सरकारें बदलती हैं, तब भी देश का दैनिक प्रशासन, कानून-व्यवस्था और सुरक्षा नौकरशाही के कारण थमती नहीं है।</li>
+                    <li><b>योग्यता आधारित चयन:</b> यूपीएससी (UPSC) जैसी निष्पक्ष संस्था द्वारा कठिन परीक्षाओं के माध्यम से देश के सर्वश्रेष्ठ मस्तिष्क को चुनना।</li>
+                    <li><b>तटस्थता (Neutrality):</b> सिविल सेवकों से यह अपेक्षा की जाती है कि वे किसी भी राजनीतिक दल के प्रति वफादार न होकर केवल देश के संविधान के प्रति वफादार रहें।</li>
+                </ul>
+            </div>
+
+
+            <!-- PART 16 -->
+            <div class="part-container" style="border-top-color: #7c3aed;">
+                <h2 style="color: #5b21b6 !important; background-color: #f5f3ff; border-left: 10px solid #7c3aed; padding: 20px 25px; border-radius: 10px; font-size: 32pt; font-weight: 900 !important; margin-top: 0; -webkit-text-stroke: 1px #5b21b6;">16. लोक सेवाओं का वर्गीकरण (Classification of Services)</h2>
+                <p style="font-size: 18pt; text-align: justify;">भारतीय सिविल सेवाओं को देश की प्रशासनिक आवश्यकताओं के अनुसार तीन प्रमुख श्रेणियों में वर्गीकृत किया गया है जो केंद्र और राज्यों में कार्यरत हैं।</p>
+
+                <h3 style="color: #5b21b6; font-size: 24pt;">16.1 अखिल भारतीय सेवाएं (All India Services):</h3>
+                <ul style="font-size: 18pt; line-height: 1.8; color: #000000; list-style-type: square;">
+                    <li><b>आईएएस और आईपीएस (IAS & IPS):</b> इनकी नियुक्ति केंद्र सरकार द्वारा की जाती है, लेकिन ये विभिन्न राज्यों के कैडरों में तैनात होकर कार्य करते हैं।</li>
+                    <li><b>संघीय नियंत्रण:</b> इन अधिकारियों पर अंतिम अनुशासनात्मक कार्रवाई केवल केंद्र सरकार ही कर सकती है, जिससे राज्यों में केंद्रीय समन्वय बना रहता है।</li>
+                </ul>
+
+                <h3 style="color: #5b21b6; font-size: 24pt;">16.2 केंद्रीय सेवाएं (Central Services):</h3>
+                <ul style="font-size: 18pt; line-height: 1.8; color: #000000; list-style-type: square;">
+                    <li><b>आईएफएस और आईआरएस (IFS & IRS):</b> ये अधिकारी केवल केंद्र सरकार के अधीन और उसके मंत्रालयों (जैसे विदेश मंत्रालय, राजस्व विभाग) में काम करते हैं।</li>
+                    <li><b>वैश्विक और राष्ट्रीय कार्य:</b> विदेशों में राजदूत के रूप में तैनात होना या पूरे देश में आयकर और सीमा शुल्क की वसूली का प्रबंधन करना।</li>
+                </ul>
+
+                <h3 style="color: #5b21b6; font-size: 24pt;">16.3 राज्य सेवाएं (State Services):</h3>
+                <ul style="font-size: 18pt; line-height: 1.8; color: #000000; list-style-type: square;">
+                    <li><b>एसडीएम और डीएसपी (SDM & DSP):</b> इनकी भर्ती राज्य लोक सेवा आयोगों (जैसे RAS, UPPSC) द्वारा की जाती है और ये केवल संबंधित राज्य में कार्यरत होते हैं।</li>
+                    <li><b>पूर्ण राज्य नियंत्रण:</b> इनकी पदोन्नति, स्थानांतरण और अनुशासनात्मक कार्रवाई पूरी तरह राज्य सरकार के क्षेत्राधिकार के अधीन होती है।</li>
+                </ul>
+            </div>
+
+
+            <!-- PART 17 -->
+            <div class="part-container" style="border-top-color: #db2777;">
+                <h2 style="color: #9d174d !important; background-color: #fdf2f8; border-left: 10px solid #db2777; padding: 20px 25px; border-radius: 10px; font-size: 32pt; font-weight: 900 !important; margin-top: 0; -webkit-text-stroke: 1px #9d174d;">17. UPSC और राज्य लोक सेवा आयोगों की भूमिका</h2>
+                <p style="font-size: 18pt; text-align: justify;">सिविल सेवा में भर्ती बिना किसी राजनैतिक हस्तक्षेप या पक्षपात के निष्पक्ष रूप से हो, इसके लिए संविधान में संघ लोक सेवा आयोग (UPSC) जैसी स्वतंत्र संस्थाओं का गठन किया गया है।</p>
+
+                <h3 style="color: #9d174d; font-size: 24pt;">17.1 लोक सेवा आयोगों के प्रमुख कार्य और सुरक्षा:</h3>
+                <ul style="font-size: 18pt; line-height: 1.8; color: #000000; list-style-type: square;">
+                    <li><b>अनुच्छेद 315:</b> संविधान संघ के लिए एक लोक सेवा आयोग (UPSC) और प्रत्येक राज्य के लिए राज्य लोक सेवा आयोगों (SPSC) की स्थापना करता है।</li>
+                    <li><b>निष्पक्ष परीक्षा प्रणाली:</b> देश के सर्वोच्च सिविल सेवकों के चयन के लिए कठिन, निष्पक्ष और भ्रष्टाचार-मुक्त बहु-स्तरीय परीक्षाओं का आयोजन करना।</li>
+                    <li><b>कार्यकाल की सुरक्षा:</b> आयोग के सदस्यों को राष्ट्रपति द्वारा केवल सुप्रीम कोर्ट की जांच के बाद ही हटाया जा सकता है, जिससे वे निडर होकर कार्य करते हैं।</li>
+                    <li><b>पदोन्नति और अनुशासन:</b> सिविल सेवकों की पदोन्नति और उनके खिलाफ अनुशासनात्मक कार्रवाइयों के मामलों में सरकारों को निष्पक्ष सलाह देना।</li>
+                    <li><b>योग्यता आधारित चयन (Meritocracy):</b> यह सुनिश्चित करना कि देश के सबसे बड़े प्रशासनिक पदों पर चयन केवल योग्यता के आधार पर हो, न कि राजनैतिक सिफारिश पर।</li>
+                </ul>
+            </div>
+
+
+            <!-- PART 18 -->
+            <div class="part-container" style="border-top-color: #0369a1;">
+                <h2 style="color: #075985 !important; background-color: #f0f9ff; border-left: 10px solid #0369a1; padding: 20px 25px; border-radius: 10px; font-size: 32pt; font-weight: 900 !important; margin-top: 0; -webkit-text-stroke: 1px #075985;">18. राजनैतिक कार्यपालिका के प्रति नौकरशाही की जवाबदेही</h2>
+                <p style="font-size: 18pt; text-align: justify;">लोकतंत्र में जनता सर्वोपरि है। चूंकि मंत्री जनता के चुने हुए प्रतिनिधि हैं, इसलिए स्थायी नौकरशाही को राजनैतिक कार्यपालिका (मंत्रियों) के प्रति पूरी तरह जवाबदेह होना पड़ता है।</p>
+
+                <h3 style="color: #075985; font-size: 24pt;">18.1 नौकरशाही की जवाबदेही के प्रमुख माध्यम:</h3>
+                <ul style="font-size: 18pt; line-height: 1.8; color: #000000; list-style-type: square;">
+                    <li><b>मंत्रियों के आदेश का पालन:</b> सिविल सेवकों को अपने संबंधित मंत्रालय के मंत्री के कानूनी और नीतिगत आदेशों का कड़ाई से पालन करना होता है।</li>
+                    <li><b>संसदीय समितियां:</b> संसद की विभिन्न समितियां मंत्रालयों के सचिवों (IAS) को बुलाकर फाइलों की जांच कर सकती हैं और जवाब मांग सकती हैं।</li>
+                    <li><b>सूचना का अधिकार (RTI):</b> आरटीआई कानून के तहत नौकरशाही को अपने प्रशासनिक निर्णयों की फाइलें आम जनता को दिखाने के लिए बाध्य होना पड़ता है।</li>
+                    <li><b>मंत्रालय का अंतिम उत्तरदायित्व:</b> यदि कोई नौकरशाह कोई गलती करता है, तो संसद में उसकी जिम्मेदारी अंतिम रूप से मंत्री को उठानी पड़ती है।</li>
+                    <li><b>न्यायिक नियंत्रण:</b> यदि कोई सिविल सेवक भ्रष्टाचार या सत्ता का दुरुपयोग करता है, तो अदालतें उसे कड़ी सजा दे सकती हैं।</li>
+                </ul>
+            </div>
+
+
+            <!-- PART 19 -->
+            <div class="part-container" style="border-top-color: #059669;">
+                <h2 style="color: #065f46 !important; background-color: #f0fdf4; border-left: 10px solid #059669; padding: 20px 25px; border-radius: 10px; font-size: 32pt; font-weight: 900 !important; margin-top: 0; -webkit-text-stroke: 1px #065f46;">19. चुनौतियां: राजनैतिक हस्तक्षेप बनाम तटस्थता</h2>
+                <p style="font-size: 18pt; text-align: justify;">आधुनिक समय में नौकरशाही के सामने सबसे बड़ी चुनौती राजनैतिक हस्तक्षेप से बचना और अपनी तटस्थता (Neutrality) व निष्पक्षता को बनाए रखना है।</p>
+
+                <h3 style="color: #065f46; font-size: 24pt;">19.1 नौकरशाही की प्रमुख चुनौतियां:</h3>
+                <ul style="font-size: 18pt; line-height: 1.8; color: #000000; list-style-type: square;">
+                    <li><b>बार-बार तबादले (Frequent Transfers):</b> यदि कोई ईमानदार अधिकारी राजनेताओं के गलत काम नहीं मानता, तो उसका बार-बार तबादला कर प्रताड़ित किया जाता है।</li>
+                    <li><b>राजनीतिक प्रतिबद्धता (Committed Bureaucracy):</b> कई सिविल सेवक अपने व्यक्तिगत लाभ और अच्छी पोस्टिंग के लिए सत्तारूढ़ दल के पिछलग्गू बन जाते हैं।</li>
+                    <li><b>भ्रष्टाचार और लालफीताशाही (Red Tape):</b> फाइलों को अकारण लटका कर रखना और रिश्वतखोरी के कारण आम जनता तक योजनाओं का लाभ न पहुँच पाना।</li>
+                    <li><b>जन-संवेदनशीलता की कमी:</b> सिविल सेवकों में कई बार आम जनता के प्रति संवेदनशीलता की कमी देखी जाती है और वे स्वयं को जनता का सेवक नहीं, बल्कि शासक मानने लगते हैं।</li>
+                    <li><b>प्रशासनिक सुधारों की आवश्यकता:</b> पुलिस सुधार (जैसे प्रकाश सिंह मामला) और सिविल सेवाओं में कार्यकाल की सुरक्षा देकर राजनीतिक दबाव को कम करना।</li>
+                </ul>
+            </div>
+
+
+            <!-- PART 20 -->
+            <div class="part-container" style="border-top-color: #0f172a;">
+                <h2 style="color: #0f172a !important; background-color: #f1f5f9; border-left: 10px solid #0f172a; padding: 20px 25px; border-radius: 10px; font-size: 32pt; font-weight: 900 !important; margin-top: 0; -webkit-text-stroke: 1px #0f172a;">20. निष्कर्ष: शासन का इंजन</h2>
+                <p style="font-size: 18pt; text-align: justify;">अध्याय 4 (कार्यपालिका) का यह गहन सफर हमें इस मूल सत्य तक ले जाता है कि कार्यपालिका केवल सरकारी आदेश जारी करने की मशीन नहीं, बल्कि देश के विकास का असली इंजन है।</p>
+
+                <h3 style="color: #0f172a; font-size: 24pt;">20.1 निष्कर्ष के प्रमुख स्तंभ:</h3>
+                <ul style="font-size: 18pt; line-height: 1.8; color: #000000; list-style-type: square;">
+                    <li><b>संसदीय व्यवस्था की सफलता:</b> कार्यपालिका का संसद के प्रति सामूहिक उत्तरदायित्व ही भारतीय लोकतंत्र की साख और सफलता का मुख्य आधार है।</li>
+                    <li><b>प्रधानमंत्री का नेतृत्व:</b> प्रधानमंत्री की मज़बूत इच्छाशक्ति और मंत्रिपरिषद का तालमेल ही देश को सही दिशा में आगे बढ़ाता है।</li>
+                    <li><b>निष्पक्ष नौकरशाही की आवश्यकता:</b> एक कुशल, संवेदनशील और तटस्थ सिविल सेवा के बिना कोई भी लोक कल्याणकारी योजना सफल नहीं हो सकती।</li>
+                    <li><b>राजनैतिक हस्तक्षेप पर रोक:</b> सिविल सेवकों को कार्यकाल की सुरक्षा देकर और पुलिस सुधारों को लागू करके प्रशासनिक शुचिता स्थापित करना।</li>
+                    <li><b>सर्वोच्च संदेश:</b> "जनता ही सर्वोपरि है" और "सेवा ही परमो धर्मः"—यही इस पूरे अध्याय का अंतिम, शाश्वत और सर्वोच्च संदेश है।</li>
+                </ul>
+            </div>
+
         </div>
     </div>
 </body>
