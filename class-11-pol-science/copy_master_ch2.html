@@ -2,16 +2,448 @@
 <html lang="hi">
 <head>
     <meta charset="UTF-8">
-    <title>Chapter 2 - Premium Notes (Class 11)</title>
+    <title>Chapter 2 COPY MASTER - Premium Notes (Rights in the Constitution)</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;700;900&family=Outfit:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        #control-header {
+            position: fixed; top: 0; left: 0; width: 100%; background-color: #0f172a; color: #ffffff;
+            padding: 15px 20px; display: flex; justify-content: space-between; align-items: center;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); z-index: 1000; font-family: 'Outfit', sans-serif; box-sizing: border-box;
+        }
+        #control-header h1 { margin: 0; font-size: 1.4rem; font-weight: 900; }
+        body {
+            margin-top: 80px;
+            background-color: #ffffff;
+            font-family: 'Outfit', 'Noto Sans Devanagari', sans-serif;
+            font-size: 20pt;
+            font-weight: 800;
+            line-height: 2.2;
+            color: #000000;
+        }
+        p, li, div, td, th {
+            font-weight: 800 !important;
+            color: #000000 !important;
+        }
+        b, strong {
+            font-weight: 900 !important;
+            color: #000000 !important;
+        }
+        ul, ol { padding-left: 60px !important; margin-left: 20px !important; }
+        li {
+            padding-left: 15px;
+            margin-bottom: 25px;
+            text-align: justify;
+            line-height: 2.2;
+            font-size: 20pt;
+            font-weight: 800 !important;
+        }
+        /* Heavy text thickness for projector visibility */
+        p, li, h1, h2, h3, h4, b, strong {
+            font-weight: 900 !important;
+            -webkit-text-stroke: 0.5px #000000;
+        }
+        
+        .part-container {
+            margin-bottom: 80px; padding: 50px 60px; background-color: #ffffff;
+            border-radius: 15px; box-shadow: 0 15px 25px -5px rgba(0,0,0,0.05);
+            border-top: 12px solid #1e3a8a;
+        }
+        .info-box {
+            background-color: #f8fafc; padding: 30px; border-left: 14px solid #1e3a8a; 
+            margin: 30px 0; border-radius: 8px; font-size: 19pt; line-height: 2.2; font-weight: 900;
+        }
+        .debate-box {
+            background-color: #fffbeb; padding: 30px; border: 6px solid #b45309; 
+            border-radius: 15px; margin: 40px 0; line-height: 2.2; font-size: 19pt; font-weight: 900;
+        }
+    </style>
+    <script>
+        function copyToGoogleDoc() {
+            var content = document.getElementById('contentToCopy').innerHTML;
+            var blob = new Blob([content], { type: 'text/html' });
+            var data = [new ClipboardItem({ 'text/html': blob })];
+            
+            navigator.clipboard.write(data).then(function() {
+                var status = document.getElementById('status');
+                status.style.display = 'block';
+                setTimeout(function() {
+                    status.style.display = 'none';
+                }, 5000);
+            }).catch(function(err) {
+                alert('Copy failed: ' + err);
+            });
+        }
+    </script>
 </head>
 <body>
+
+    <!-- Persistent Control Header -->
+    <div id="control-header">
+        <h1>📖 अध्याय 2: भारतीय संविधान में अधिकार (RIGHTS IN THE CONSTITUTION) - 100-PAGE MASTER NOTES</h1>
+        <button id="mainCopyBtn" onclick="copyToGoogleDoc()">
+            📋 COPY EVERYTHING FOR GOOGLE DOCS
+        </button>
+    </div>
+    
+    <div id="status" style="display: none; position: fixed; top: 70px; right: 20px; background-color: #059669; color: white; padding: 12px 24px; border-radius: 6px; z-index: 1000; font-family: sans-serif; font-size: 14px; font-weight: bold; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+        ✨ SUCCESS! Content copied to clipboard in rich format. Now open Google Docs and press Ctrl+V.
+    </div>
+
     <div id="contentToCopy">
-        <div style="font-family: 'Arial', verdana, sans-serif; font-size: 16pt; line-height: 1.8; color: #1a202c;">
-            <h1 style="text-align: center; color: #1e3a8a; font-size: 40pt; font-weight: bold; border-bottom: 5px solid #3b82f6; padding-bottom: 30px; margin-bottom: 40px;">
-                अध्याय 2: जल्द ही आ रहा है...<br/>
-                <span style="font-size: 24pt; color:#6b7280; font-weight: normal;">(Coming Soon...)</span>
-            </h1>
-            <p style="text-align: center; font-size: 20pt;">इस अध्याय के विस्तृत नोट्स और प्रीमियम कंटेंट पर अभी काम चल रहा है। कृपया कुछ समय बाद पुनः देखें।</p>
+        <div style="font-family: 'Outfit', 'Noto Sans Devanagari', sans-serif; font-size: 20pt; line-height: 2.2; color: #000000; max-width: 1400px; margin: auto; padding: 20px;">
+
+            <!-- Title Section (Projector Friendly) -->
+            <div style="text-align: center; margin-bottom: 80px; padding: 75px; border: 15px double #1e3a8a; background-color: #eff6ff; border-radius: 30px;">
+                <h1 style="color: #1e3a8a !important; font-size: 58pt; font-weight: 950 !important; margin-bottom: 20px; -webkit-text-stroke: 1.5px #1e3a8a;">
+                    अध्याय 2: भारतीय संविधान में अधिकार<br/>
+                    <span style="font-size: 30pt; color:#475569; font-weight: 900;">(RIGHTS IN THE INDIAN CONSTITUTION)</span>
+                </h1>
+                <p style="font-size: 26pt; color: #000000; margin-top: 10px; font-weight: 900;">कक्षा 11 राजनीति विज्ञान - अति-गहन शैक्षणिक मास्टर नोट्स</p>
+                <p style="font-size: 20pt; color: #b91c1c; font-style: italic; font-weight: 900;">(विशेष फोकस: मौलिक अधिकार, नीति निदेशक तत्व, अनुच्छेद 32, और सुप्रीम कोर्ट की पांच रिटें)</p>
+            </div>
+
+            
+            <!-- PART 1 -->
+            <div class="part-container" style="border-top-color: #0284c7;">
+                <h2 style="color: #0369a1 !important; background-color: #f0f9ff; border-left: 10px solid #0284c7; padding: 20px 25px; border-radius: 10px; font-size: 32pt; font-weight: 900 !important; margin-top: 0; -webkit-text-stroke: 1px #0369a1;">1. अधिकार और आवश्यकता: एक परिचय</h2>
+                <p style="font-size: 18pt; text-align: justify;">अधिकार समाज और राज्य द्वारा स्वीकृत वे दावे हैं जो व्यक्ति के सर्वांगीण विकास, आत्म-सम्मान और एक गरिमापूर्ण जीवन जीने के लिए अत्यंत आवश्यक हैं। इनके बिना एक स्वतंत्र लोकतांत्रिक समाज की कल्पना असंभव है।</p>
+
+                <h3 style="color: #0369a1; font-size: 24pt;">1.1 अधिकारों की आवश्यकता और महत्ता:</h3>
+                <ul style="font-size: 18pt; line-height: 1.8; color: #000000; list-style-type: square;">
+                    <li><b>व्यक्तित्व का विकास:</b> अधिकार नागरिकों को अपनी मानसिक, नैतिक और भौतिक क्षमताओं को विकसित करने के लिए स्वतंत्र वातावरण देते हैं।</li>
+                    <li><b>मानवीय गरिमा:</b> अधिकार यह सुनिश्चित करते हैं कि किसी भी व्यक्ति का उसकी जाति, धर्म, लिंग या वर्ग के आधार पर शोषण न हो और वह सम्मान से जी सके।</li>
+                    <li><b>लोकतांत्रिक भागीदारी:</b> मतदान करना, संगठन बनाना और विचार व्यक्त करना जैसे राजनैतिक अधिकार ही सच्चे लोकतंत्र को मज़बूत बनाते हैं।</li>
+                    <li><b>राज्य की सत्ता पर अंकुश:</b> अधिकार सरकार को निरंकुश होने से रोकते हैं और पुलिस प्रशासन की मनमानी से नागरिकों की सुरक्षा करते हैं।</li>
+                    <li><b>समानता का धरातल:</b> अधिकार समाज के कमजोर, पिछड़े और वंचित वर्गों को बराबरी का कानूनी संरक्षण देकर सामाजिक न्याय की आधारशिला रखते हैं।</li>
+                </ul>
+            </div>
+
+
+            <!-- PART 2 -->
+            <div class="part-container" style="border-top-color: #059669;">
+                <h2 style="color: #065f46 !important; background-color: #f0fdf4; border-left: 10px solid #059669; padding: 20px 25px; border-radius: 10px; font-size: 32pt; font-weight: 900 !important; margin-top: 0; -webkit-text-stroke: 1px #065f46;">2. अधिकारों का घोषणापत्र (Bill of Rights)</h2>
+                <p style="font-size: 18pt; text-align: justify;">अधिकारों का घोषणापत्र वह संवैधानिक दस्तावेज है जो नागरिकों के अधिकारों को सूचीबद्ध करता है और सरकार को उनका उल्लंघन करने से कानूनी रूप से प्रतिबंधित करता है।</p>
+
+                <h3 style="color: #065f46; font-size: 24pt;">2.1 घोषणापत्र का महत्व और कार्यप्रणाली:</h3>
+                <ul style="font-size: 18pt; line-height: 1.8; color: #000000; list-style-type: square;">
+                    <li><b>संवैधानिक सर्वोच्चता:</b> यह अधिकारों को सामान्य कानूनों से ऊपर उठाकर संविधान का हिस्सा बनाता है, जिससे सरकार इन्हें मनमाने ढंग से नहीं बदल सकती।</li>
+                    <li><b>न्यायपालिका की शक्ति:</b> यह न्यायालयों को यह अधिकार देता है कि वे मौलिक अधिकारों का हनन करने वाले किसी भी सरकारी कानून या आदेश को रद्द घोषित कर सकें।</li>
+                    <li><b>सरकार पर नियंत्रण:</b> यह स्पष्ट रेखा खींचता है कि सरकार की नीतियां किस सीमा तक नागरिकों की निजी आजादी में हस्तक्षेप कर सकती हैं।</li>
+                    <li><b>ऐतिहासिक विरासत:</b> 1789 की फ्रांसीसी क्रांति के मानवाधिकार घोषणापत्र और अमेरिकी संविधान के 'बिल ऑफ राइट्स' ने आधुनिक अधिकारों के घोषणापत्र की नींव रखी।</li>
+                    <li><b>नागरिकों का सुरक्षा कवच:</b> यह देश के निर्धनतम और कमजोर नागरिक को भी राज्य की दमनकारी शक्ति के खिलाफ एक मजबूत सुरक्षा कवच प्रदान करता है।</li>
+                </ul>
+            </div>
+
+
+            <!-- PART 3 -->
+            <div class="part-container" style="border-top-color: #d97706;">
+                <h2 style="color: #92400e !important; background-color: #fff7ed; border-left: 10px solid #d97706; padding: 20px 25px; border-radius: 10px; font-size: 32pt; font-weight: 900 !important; margin-top: 0; -webkit-text-stroke: 1px #92400e;">3. अधिकारों की महत्ता: लोकतंत्र की रीढ़</h2>
+                <p style="font-size: 18pt; text-align: justify;">अधिकार और लोकतंत्र एक ही सिक्के के दो पहलू हैं। बिना अधिकारों के लोकतंत्र केवल एक मुखौटा बनकर रह जाता है; अधिकार ही लोकतांत्रिक व्यवस्था के वास्तविक रक्षक हैं।</p>
+
+                <h3 style="color: #92400e; font-size: 24pt;">3.1 अधिकारों की लोकतांत्रिक महत्ता:</h3>
+                <ul style="font-size: 18pt; line-height: 1.8; color: #000000; list-style-type: square;">
+                    <li><b>स्वतंत्र जनमत:</b> विचार और अभिव्यक्ति की स्वतंत्रता (अनुच्छेद 19) के बिना नागरिक निर्भीक होकर जनमत का निर्माण नहीं कर सकते।</li>
+                    <li><b>अल्पसंख्यकों की सुरक्षा:</b> अधिकार यह सुनिश्चित करते हैं कि बहुसंख्यक वर्ग का लोकतंत्र केवल अल्पसंख्यकों के अधिकारों को कुचलने का माध्यम न बने।</li>
+                    <li><b>सच्ची राजनैतिक समानता:</b> 'एक व्यक्ति, एक वोट' का मूल्य समान होना और सभी नागरिकों को समान रूप से चुनाव में खड़े होने की छूट होना।</li>
+                    <li><b>शांतिपूर्ण आंदोलन का अधिकार:</b> नागरिकों को सरकार की जन-विरोधी नीतियों के खिलाफ रैलियां करने और असहमति व्यक्त करने का हक देना।</li>
+                    <li><b>लोक कल्याण की गारंटी:</b> अधिकार राज्य को मजबूर करते हैं कि वह केवल पूंजीपतियों के हित में नहीं, बल्कि हाशिए पर खड़े निर्धनतम नागरिक के कल्याण की नीतियां बनाए।</li>
+                </ul>
+            </div>
+
+
+            <!-- PART 4 -->
+            <div class="part-container" style="border-top-color: #7c3aed;">
+                <h2 style="color: #5b21b6 !important; background-color: #f5f3ff; border-left: 10px solid #7c3aed; padding: 20px 25px; border-radius: 10px; font-size: 32pt; font-weight: 900 !important; margin-top: 0; -webkit-text-stroke: 1px #5b21b6;">4. भारतीय संविधान में अधिकारों का वर्गीकरण</h2>
+                <p style="font-size: 18pt; text-align: justify;">भारतीय संविधान के भाग 3 में मौलिक अधिकारों को उनकी प्रकृति और उद्देश्यों के आधार पर वर्गीकृत किया गया है जो राज्य की शक्ति पर कड़े प्रतिबंध लगाते हैं।</p>
+
+                <h3 style="color: #5b21b6; font-size: 24pt;">4.1 छह मौलिक अधिकार (Six Fundamental Rights):</h3>
+                <ul style="font-size: 18pt; line-height: 1.8; color: #000000; list-style-type: square;">
+                    <li><b>समानता और स्वतंत्रता का अधिकार:</b> अनुच्छेद 14-18 समानता की स्थापना करते हैं और अनुच्छेद 19-22 व्यक्तिगत और राजनैतिक स्वतंत्रता की गारंटी देते हैं।</li>
+                    <li><b>शोषण के विरुद्ध और धार्मिक स्वतंत्रता:</b> अनुच्छेद 23-24 बाल श्रम व मानव तस्करी पर रोक लगाते हैं और अनुच्छेद 25-28 अंतःकरण की स्वतंत्रता देते हैं।</li>
+                    <li><b>सांस्कृतिक अधिकार और संवैधानिक उपचार:</b> अनुच्छेद 29-30 अल्पसंख्यकों की भाषा-संस्कृति की रक्षा करते हैं और अनुच्छेद 32 मौलिक अधिकारों के संरक्षण के लिए सर्वोच्च न्यायालय को रिट जारी करने की शक्ति देता है।</li>
+                </ul>
+
+                <h3 style="color: #5b21b6; font-size: 24pt;">4.2 मौलिक अधिकारों की प्रकृति:</h3>
+                <ul style="font-size: 18pt; line-height: 1.8; color: #000000; list-style-type: square;">
+                    <li><b>वाद-योग्य (Justiciable):</b> मौलिक अधिकारों के हनन होने पर सीधे सर्वोच्च न्यायालय या उच्च न्यायालय की शरण ली जा सकती है।</li>
+                    <li><b>असीमित नहीं (Reasonable Restrictions):</b> राष्ट्रीय सुरक्षा, अखंडता और लोक-व्यवस्था के हित में राज्य इन अधिकारों पर तार्किक प्रतिबंध लगा सकता है।</li>
+                    <li><b>निलंबन की व्यवस्था:</b> राष्ट्रीय आपातकाल (अनुच्छेद 352) के दौरान अनुच्छेद 20 और 21 को छोड़कर बाकी सभी मौलिक अधिकारों को अस्थायी रूप से निलंबित किया जा सकता है।</li>
+                </ul>
+            </div>
+
+
+            <!-- PART 5 -->
+            <div class="part-container" style="border-top-color: #4c1d95;">
+                <h2 style="color: #4c1d95 !important; background-color: #faf5ff; border-left: 10px solid #4c1d95; padding: 20px 25px; border-radius: 10px; font-size: 32pt; font-weight: 900 !important; margin-top: 0; -webkit-text-stroke: 1px #4c1d95;">5. समानता का अधिकार (अनुच्छेद 14-18): न्याय की प्रथम सीढ़ी</h2>
+                <p style="font-size: 18pt; text-align: justify;">समानता का अधिकार भारतीय लोकतंत्र का प्रवेश द्वार है। यह समाज में सदियों से चली आ रही आर्थिक-सामाजिक विषमताओं और विशेषाधिकारों को समाप्त करने का महासंकल्प है।</p>
+
+                <h3 style="color: #4c1d95; font-size: 24pt;">5.1 समानता के अधिकार के प्रमुख पहलू:</h3>
+                <ul style="font-size: 18pt; line-height: 1.8; color: #000000; list-style-type: square;">
+                    <li><b>कानून के समक्ष समानता (अनुच्छेद 14):</b> राज्य के कानून की दृष्टि में प्रधानमंत्री से लेकर एक साधारण श्रमिक तक सभी नागरिक पूरी तरह समान हैं।</li>
+                    <li><b>समान कानूनी संरक्षण (Equal Protection of Laws):</b> राज्य विभिन्न परिस्थितियों वाले लोगों के लिए न्यायसंगत नीतियां (जैसे सकारात्मक भेदभाव) बना सकता है।</li>
+                    <li><b>भेदभाव का पूर्ण निषेध (अनुच्छेद 15):</b> धर्म, मूलवंश, जाति, लिंग या जन्मस्थान के आधार पर किसी भी नागरिक से होटलों, कुओं, सड़कों या दुकानों पर भेदभाव नहीं किया जा सकता।</li>
+                    <li><b>अवसरों की समानता (अनुच्छेद 16):</b> सरकारी नौकरियों में सभी नागरिकों को समान अवसर मिलना और पिछड़े वर्गों को प्रतिनिधित्व देने के लिए आरक्षण का प्रावधान होना।</li>
+                    <li><b>उपाधियों का अंत (अनुच्छेद 18):</b> ब्रिटिश काल की 'राय बहादुर' या 'सर' जैसी सामंतवादी उपाधियों को समाप्त कर नागरिकों के समान दर्जे की स्थापना करना।</li>
+                </ul>
+            </div>
+
+
+            <!-- PART 6 -->
+            <div class="part-container" style="border-top-color: #0d9488;">
+                <h2 style="color: #0f766e !important; background-color: #f0fdf4; border-left: 10px solid #0d9488; padding: 20px 25px; border-radius: 10px; font-size: 32pt; font-weight: 900 !important; margin-top: 0; -webkit-text-stroke: 1px #0f766e;">6. अस्पृश्यता का अंत (अनुच्छेद 17): एक सामाजिक क्रांति</h2>
+                <p style="font-size: 18pt; text-align: justify;">अस्पृश्यता (छुआछूत) का अंत केवल एक कानूनी प्रावधान नहीं है, बल्कि यह हिंदू समाज के भीतर सदियों से शोषित दलितों को मानवीय गरिमा दिलाने वाली एक महान सामाजिक क्रांति है।</p>
+
+                <h3 style="color: #0f766e; font-size: 24pt;">6.1 अस्पृश्यता उन्मूलन के प्रमुख प्रभाव:</h3>
+                <ul style="font-size: 18pt; line-height: 1.8; color: #000000; list-style-type: square;">
+                    <li><b>पूर्ण प्रतिबंध:</b> छुआछूत का किसी भी रूप में आचरण पूरी तरह प्रतिबंधित है और इसका उल्लंघन करने पर कड़े दंड की व्यवस्था है।</li>
+                    <li><b>धार्मिक-सामाजिक स्थलों पर प्रवेश:</b> अब दलितों को मंदिरों, सार्वजनिक जलाशयों, कुओं और घाटों पर जाने से कोई भी सामाजिक शक्ति नहीं रोक सकती।</li>
+                    <li><b>नागरिक अधिकार संरक्षण अधिनियम 1955:</b> इस संवैधानिक अनुच्छेद को धरातल पर कड़ाई से लागू करने के लिए संसद द्वारा बनाया गया विशेष अधिनियम।</li>
+                    <li><b>मानवीय गरिमा की बहाली:</b> डॉ. आंबेडकर के समतावादी विचारों के अनुरूप शोषित जातियों के आत्म-सम्मान और बराबरी की पूर्ण गारंटी देना।</li>
+                    <li><b>सांप्रदायिक भाईचारे का विकास:</b> छुआछूत जैसी अमानवीय प्रथा का अंत कर राष्ट्र के सभी नागरिकों में आपसी प्रेम और भाईचारे की भावना मज़बूत करना।</li>
+                </ul>
+            </div>
+
+
+            <!-- PART 7 -->
+            <div class="part-container" style="border-top-color: #4338ca;">
+                <h2 style="color: #3730a3 !important; background-color: #eef2ff; border-left: 10px solid #4338ca; padding: 20px 25px; border-radius: 10px; font-size: 32pt; font-weight: 900 !important; margin-top: 0; -webkit-text-stroke: 1px #3730a3;">7. स्वतंत्रता का अधिकार (अनुच्छेद 19-22): अधिकारों का गुच्छा</h2>
+                <p style="font-size: 18pt; text-align: justify;">स्वतंत्रता का अधिकार नागरिकों को एक स्वतंत्र लोकतांत्रिक समाज में सक्रिय जीवन जीने और व्यक्तिगत व्यक्तित्व के विकास का सर्वोच्च अवसर प्रदान करता है।</p>
+
+                <h3 style="color: #3730a3; font-size: 24pt;">7.1 छह लोकतांत्रिक स्वतंत्रताएँ (अनुच्छेद 19):</h3>
+                <ul style="font-size: 18pt; line-height: 1.8; color: #000000; list-style-type: square;">
+                    <li><b>भाषण और संगठन:</b> नागरिकों को भाषण देने, विचार व्यक्त करने, शांतिपूर्ण बिना हथियारों के एकत्र होने, और संघ या सहकारी समितियां बनाने का अधिकार।</li>
+                    <li><b>घूमने और बसने की स्वतंत्रता:</b> भारत की भौगोलिक सीमा के भीतर स्वतंत्र रूप से भ्रमण करने और किसी भी राज्य में निवास करने या बसने की आज़ादी।</li>
+                    <li><b>व्यवसाय की स्वतंत्रता:</b> अपनी पसंद का कोई भी पेशा, व्यापार, व्यवसाय या उद्योग करने की पूर्ण कानूनी स्वतंत्रता होना।</li>
+                </ul>
+
+                <h3 style="color: #3730a3; font-size: 24pt;">7.2 व्यक्तिगत स्वतंत्रता की कानूनी गारंटी:</h3>
+                <ul style="font-size: 18pt; line-height: 1.8; color: #000000; list-style-type: square;">
+                    <li><b>अपराधों के लिए दोषसिद्धि से संरक्षण:</b> अनुच्छेद 20 के तहत दोहरे दंड से मुक्ति, आत्म-अभिशंसन पर रोक और पूर्वव्यापी कानूनों से नागरिकों की सुरक्षा।</li>
+                    <li><b>प्राण और दैहिक स्वतंत्रता (अनुच्छेद 21):</b> कानून द्वारा स्थापित प्रक्रिया के बिना किसी भी व्यक्ति का जीवन या व्यक्तिगत आजादी नहीं छीनी जा सकती।</li>
+                    <li><b>गिरफ्तारी से संरक्षण (अनुच्छेद 22):</b> गिरफ्तार व्यक्ति को 24 घंटे के भीतर न्यायाधीश के समक्ष पेश करना और अपनी पसंद के वकील से सलाह लेने का अधिकार।</li>
+                </ul>
+            </div>
+
+
+            <!-- PART 8 -->
+            <div class="part-container" style="border-top-color: #be123c;">
+                <h2 style="color: #9f1239 !important; background-color: #fff1f2; border-left: 10px solid #be123c; padding: 20px 25px; border-radius: 10px; font-size: 32pt; font-weight: 900 !important; margin-top: 0; -webkit-text-stroke: 1px #9f1239;">8. अभिव्यक्ति की स्वतंत्रता: तर्क और सीमाएं</h2>
+                <p style="font-size: 18pt; text-align: justify;">भाषण और अभिव्यक्ति की स्वतंत्रता (Freedom of Speech) लोकतंत्र की आत्मा है। परंतु यह स्वतंत्रता असीमित नहीं हो सकती; इस पर तार्किक सीमाओं का होना भी उतना ही आवश्यक है।</p>
+
+                <h3 style="color: #9f1239; font-size: 24pt;">8.1 अभिव्यक्ति की स्वतंत्रता के प्रमुख पहलू:</h3>
+                <ul style="font-size: 18pt; line-height: 1.8; color: #000000; list-style-type: square;">
+                    <li><b>लोकतांत्रिक स्तंभ:</b> प्रेस की आज़ादी, स्वतंत्र पत्रकारिता और सरकार की जन-विरोधी नीतियों की खुलकर आलोचना करने का अधिकार।</li>
+                    <li><b>सृजनात्मक विकास:</b> अपनी कला, लेखन, फिल्मों और साहित्य के माध्यम से समाज की कुरीतियों पर प्रहार करने की बौद्धिक स्वतंत्रता।</li>
+                    <li><b>तार्किक सीमाएं (अनुच्छेद 19(2)):</b> देश की संप्रभुता, अखंडता, विदेशी राज्यों के साथ मैत्रीपूर्ण संबंध, और लोक-व्यवस्था के हित में सीमाओं का निर्धारण।</li>
+                    <li><b>मानहानि और न्यायालय की अवमानना:</b> किसी अन्य व्यक्ति के स्वाभिमान को ठेस पहुँचाने (मानहानि) या न्यायालय के आदेशों का मखौल उड़ाने पर रोक।</li>
+                    <li><b>अहिंसा का नियम:</b> अभिव्यक्ति की स्वतंत्रता के नाम पर हिंसा भड़काने, घृणा फैलाने (Hate Speech) या दंगों को उकसाने की कोई छूट न होना।</li>
+                </ul>
+            </div>
+
+
+            <!-- PART 9 -->
+            <div class="part-container" style="border-top-color: #1e3a8a;">
+                <h2 style="color: #1e40af !important; background-color: #eff6ff; border-left: 10px solid #1e3a8a; padding: 20px 25px; border-radius: 10px; font-size: 32pt; font-weight: 900 !important; margin-top: 0; -webkit-text-stroke: 1px #1e40af;">9. अपराधियों और अभियुक्तों के अधिकार (अनुच्छेद 20 और 22)</h2>
+                <p style="font-size: 18pt; text-align: justify;">संविधान केवल निरपराधों की ही नहीं, बल्कि पुलिस की ज्यादतियों से बचाने के लिए अपराधियों और अभियुक्तों (Accused) को भी कड़े कानूनी सुरक्षा कवच प्रदान करता है।</p>
+
+                <h3 style="color: #1e40af; font-size: 24pt;">9.1 अभियुक्तों के कानूनी संरक्षण (अनुच्छेद 20):</h3>
+                <ul style="font-size: 18pt; line-height: 1.8; color: #000000; list-style-type: square;">
+                    <li><b>पूर्वव्यापी कानून से संरक्षण (No Ex-post Facto Law):</b> किसी व्यक्ति को केवल उसी कानून के उल्लंघन के लिए सजा दी जा सकती है जो अपराध करते समय लागू था।</li>
+                    <li><b>दोहरे दंड से मुक्ति (Double Jeopardy):</b> किसी भी व्यक्ति को एक ही अपराध के लिए एक से अधिक बार मुकदमा चलाकर दंडित नहीं किया जा सकता।</li>
+                    <li><b>आत्म-अभिशंसन से संरक्षण (Self-Incrimination):</b> किसी भी आरोपी को अपने ही खिलाफ गवाही देने या बयान देने के लिए मजबूर नहीं किया जा सकता।</li>
+                </ul>
+
+                <h3 style="color: #1e40af; font-size: 24pt;">9.2 निवारक निरोध (Preventive Detention - अनुच्छेद 22):</h3>
+                <ul style="font-size: 18pt; line-height: 1.8; color: #000000; list-style-type: square;">
+                    <li><b>अपराध से पूर्व नजरबंदी:</b> यदि राज्य को लगे कि कोई व्यक्ति देश की सुरक्षा या लोक-व्यवस्था को बड़ा खतरा पहुँचा सकता है, तो उसे अपराध करने से पहले ही गिरफ्तार करना।</li>
+                    <li><b>तीन महीने की समय सीमा:</b> निवारक निरोध के तहत किसी व्यक्ति को सलाहकार बोर्ड की मंजूरी के बिना अधिकतम तीन महीने तक ही हिरासत में रखा जा सकता है।</li>
+                    <li><b>दुरुपयोग की आशंका:</b> आलोचकों का मानना है कि कई बार पुलिस और सरकार इसका उपयोग राजनैतिक विरोधियों की आवाज दबाने के लिए करते हैं, जिस पर न्यायिक अंकुश आवश्यक है।</li>
+                </ul>
+            </div>
+
+
+            <!-- PART 10 -->
+            <div class="part-container" style="border-top-color: #be185d;">
+                <h2 style="color: #be185d !important; background-color: #fdf2f8; border-left: 10px solid #be185d; padding: 20px 25px; border-radius: 10px; font-size: 32pt; font-weight: 900 !important; margin-top: 0; -webkit-text-stroke: 1px #be185d;">10. जीवन और व्यक्तिगत स्वतंत्रता का अधिकार (अनुच्छेद 21)</h2>
+                <p style="font-size: 18pt; text-align: justify;">अनुच्छेद 21 भारतीय संविधान का सबसे जीवंत और विस्तृत अनुच्छेद है। न्यायपालिका ने इसके दायरे को बढ़ाकर नागरिकों के जीवन की गुणवत्ता को असाधारण रूप से मज़बूत किया है।</p>
+
+                <h3 style="color: #be185d; font-size: 24pt;">10.1 अनुच्छेद 21 के प्रमुख विस्तृत आयाम:</h3>
+                <ul style="font-size: 18pt; line-height: 1.8; color: #000000; list-style-type: square;">
+                    <li><b>केवल सांस लेना जीवन नहीं:</b> मेनका गांधी बनाम भारत संघ (1978) मामले के बाद कोर्ट ने माना कि जीवन का अर्थ पशुवत अस्तित्व नहीं, बल्कि 'मानवीय गरिमा के साथ जीना' है।</li>
+                    <li><b>निजता का अधिकार (Right to Privacy):</b> पुट्टास्वामी फैसले (2017) के तहत निजता को अनुच्छेद 21 के तहत जीवन के अधिकार का अभिन्न हिस्सा घोषित करना।</li>
+                    <li><b>शिक्षा का अधिकार (अनुच्छेद 21A):</b> 86वें संशोधन 2002 द्वारा 6 से 14 वर्ष के बच्चों के लिए मुफ्त और अनिवार्य प्राथमिक शिक्षा पाना मौलिक अधिकार घोषित हुआ।</li>
+                    <li><b>पर्यावरण और स्वास्थ्य सुरक्षा:</b> प्रदूषण-मुक्त जल, स्वच्छ वायु और त्वरित चिकित्सा सहायता पाने के अधिकार को अनुच्छेद 21 का हिस्सा मानना।</li>
+                    <li><b>कानूनी सहायता का अधिकार:</b> निर्धन नागरिकों को राज्य के खर्च पर मुफ्त कानूनी वकील और त्वरित न्याय पाने की संवैधानिक सुरक्षा देना।</li>
+                </ul>
+            </div>
+
+
+            <!-- PART 11 -->
+            <div class="part-container" style="border-top-color: #f59e0b;">
+                <h2 style="color: #b45309 !important; background-color: #fffbeb; border-left: 10px solid #f59e0b; padding: 20px 25px; border-radius: 10px; font-size: 32pt; font-weight: 900 !important; margin-top: 0; -webkit-text-stroke: 1px #b45309;">11. शोषण के विरुद्ध अधिकार (अनुच्छेद 23-24)</h2>
+                <p style="font-size: 18pt; text-align: justify;">यह अधिकार समाज के निर्धनतम, अनाथ बच्चों और बंधुआ मजदूरों को सामंतवादी व आर्थिक दमनकारी व्यवस्था के शोषण से मुक्त कराने का सर्वोच्च वैधानिक साधन है।</p>
+
+                <h3 style="color: #b45309; font-size: 24pt;">11.1 शोषण के विरुद्ध अधिकार के प्रमुख स्तंभ:</h3>
+                <ul style="font-size: 18pt; line-height: 1.8; color: #000000; list-style-type: square;">
+                    <li><b>मानव तस्करी पर रोक (अनुच्छेद 23):</b> महिलाओं, बच्चों या पुरुषों की खरीद-बिक्री (Human Trafficking) और देह व्यापार जैसी प्रथाओं को प्रतिबंधित करना।</li>
+                    <li><b>बेगार और बंधुआ मजदूरी निषेध:</b> बिना वेतन दिए जबरन काम कराना (बेगार) या कर्ज के बदले पीढ़ी-दर-पीढ़ी काम कराने (बंधुआ मजदूरी) का पूर्ण अंत।</li>
+                    <li><b>बाल श्रम पर प्रतिबंध (अनुच्छेद 24):</b> 14 वर्ष से कम उम्र के बच्चों को कारखानों, खानों या अन्य किसी खतरनाक काम में लगाने पर पूर्ण कानूनी रोक।</li>
+                    <li><b>बाल अधिकारों की रक्षा:</b> बच्चों को मजदूरी से बचाकर उनके लिए स्कूल जाने और सामान्य बाल्यकाल का आनंद लेने के अधिकारों को सुरक्षित करना।</li>
+                    <li><b>कड़े कानूनी प्रावधान:</b> बाल श्रम निषेध कानून और मानव तस्करी विरोधी अधिनियमों के माध्यम से दोषियों के लिए कड़ी सजा का प्रावधान करना।</li>
+                </ul>
+            </div>
+
+
+            <!-- PART 12 -->
+            <div class="part-container" style="border-top-color: #1d4ed8;">
+                <h2 style="color: #1e40af !important; background-color: #eff6ff; border-left: 10px solid #1d4ed8; padding: 20px 25px; border-radius: 10px; font-size: 32pt; font-weight: 900 !important; margin-top: 0; -webkit-text-stroke: 1px #1e40af;">12. धार्मिक स्वतंत्रता का अधिकार (अनुच्छेद 25-28)</h2>
+                <p style="font-size: 18pt; text-align: justify;">यह अधिकार भारत की बहु-धार्मिक विविधता की रक्षा करता है और धर्मनिरपेक्ष राज्य के आदर्श के तहत सभी नागरिकों को अंतःकरण की पूर्ण स्वतंत्रता देता है।</p>
+
+                <h3 style="color: #1e40af; font-size: 24pt;">12.1 धार्मिक स्वतंत्रता के प्रमुख पहलू:</h3>
+                <ul style="font-size: 18pt; line-height: 1.8; color: #000000; list-style-type: square;">
+                    <li><b>अंतःकरण की स्वतंत्रता (अनुच्छेद 25):</b> किसी भी व्यक्ति को अपनी पसंद के धर्म को मानने, उसकी पूजा करने और उसका शांतिपूर्ण प्रचार करने की आज़ादी।</li>
+                    <li><b>धार्मिक मामलों का प्रबंधन (अनुच्छेद 26):</b> धार्मिक संस्थाएं स्थापित करने, ट्रस्ट बनाने और अपनी चल-अचल संपत्ति का प्रबंधन करने की स्वतंत्रता।</li>
+                    <li><b>धार्मिक करों का निषेध (अनुच्छेद 27):</b> राज्य अपने नागरिकों पर किसी भी विशेष धर्म के प्रचार के लिए अनिवार्य टैक्स या कर नहीं लगा सकता।</li>
+                    <li><b>धार्मिक शिक्षा पर रोक (अनुच्छेद 28):</b> सरकारी बजट से चलने वाले किसी भी शैक्षणिक संस्थान में किसी भी प्रकार की अनिवार्य धार्मिक प्रार्थना या शिक्षा पर रोक।</li>
+                    <li><b>तार्किक सीमाएं:</b> धार्मिक स्वतंत्रता असीमित नहीं है; राज्य स्वास्थ्य, सदाचार, लोक-व्यवस्था और सामाजिक सुधारों के लिए इसमें कानूनन हस्तक्षेप कर सकता है।</li>
+                </ul>
+            </div>
+
+
+            <!-- PART 13 -->
+            <div class="part-container" style="border-top-color: #047857;">
+                <h2 style="color: #064e3b !important; background-color: #ecfdf5; border-left: 10px solid #047857; padding: 20px 25px; border-radius: 10px; font-size: 32pt; font-weight: 900 !important; margin-top: 0; -webkit-text-stroke: 1px #064e3b;">13. सांस्कृतिक एवं शैक्षिक अधिकार (अनुच्छेद 29-30)</h2>
+                <p style="font-size: 18pt; text-align: justify;">सांस्कृतिक और शैक्षिक अधिकार देश के भाषाई, सांस्कृतिक और धार्मिक अल्पसंख्यकों को अपनी विशिष्ट पहचान, भाषा और अस्मिता की रक्षा करने की पूर्ण संवैधानिक गारंटी देते हैं।</p>
+
+                <h3 style="color: #064e3b; font-size: 24pt;">13.1 अल्पसंख्यक अधिकारों के प्रमुख आयाम:</h3>
+                <ul style="font-size: 18pt; line-height: 1.8; color: #000000; list-style-type: square;">
+                    <li><b>भाषा और लिपि का संरक्षण (अनुच्छेद 29):</b> भारत के किसी भी हिस्से में रहने वाले नागरिकों के समूह को अपनी विशिष्ट भाषा, लिपि या संस्कृति को बनाए रखने का हक।</li>
+                    <li><b>भेदभाव-मुक्त प्रवेश:</b> राज्य द्वारा सहायता प्राप्त किसी भी स्कूल या कॉलेज में किसी भी छात्र को केवल उसकी जाति, धर्म या भाषा के आधार पर प्रवेश से न रोकना।</li>
+                    <li><b>शैक्षणिक संस्थाएं चलाने का अधिकार (अनुच्छेद 30):</b> सभी धार्मिक और भाषाई अल्पसंख्यकों को अपनी पसंद के स्कूल, कॉलेज और यूनिवर्सिटी स्थापित करने की आजादी।</li>
+                    <li><b>भेदभाव-मुक्त सरकारी सहायता:</b> शैक्षणिक संस्थानों को सरकारी वित्तीय अनुदान देते समय राज्य उनके अल्पसंख्यक होने के आधार पर कोई भेदभाव नहीं करेगा।</li>
+                    <li><b>आंबेडकर का दृष्टिकोण:</b> बहु-सांस्कृतिक भारत की अखंडता के लिए अल्पसंख्यकों में सुरक्षा और आदर की भावना पैदा करना अनिवार्य है, जिसे यह अनुच्छेद सुनिश्चित करता है।</li>
+                </ul>
+            </div>
+
+
+            <!-- PART 14 -->
+            <div class="part-container" style="border-top-color: #4338ca;">
+                <h2 style="color: #3730a3 !important; background-color: #eef2ff; border-left: 10px solid #4338ca; padding: 20px 25px; border-radius: 10px; font-size: 32pt; font-weight: 900 !important; margin-top: 0; -webkit-text-stroke: 1px #3730a3;">14. संवैधानिक उपचारों का अधिकार: अधिकारों का रक्षक</h2>
+                <p style="font-size: 18pt; text-align: justify;">यदि अधिकारों की रक्षा के लिए कोई कड़ा सुरक्षा तंत्र न हो, तो वे केवल कागजी घोषणा बनकर रह जाते हैं। अनुच्छेद 32 इसी सुरक्षा तंत्र की गारंटी देता है।</p>
+
+                <h3 style="color: #3730a3; font-size: 24pt;">14.1 संवैधानिक उपचारों के प्रमुख रक्षक पहलू:</h3>
+                <ul style="font-size: 18pt; line-height: 1.8; color: #000000; list-style-type: square;">
+                    <li><b>सीधे कोर्ट जाने का अधिकार:</b> मौलिक अधिकारों के उल्लंघन की स्थिति में प्रत्येक नागरिक को सीधे सुप्रीम कोर्ट या हाई कोर्ट में याचिका दायर करने का हक।</li>
+                    <li><b>कानूनों को रद्द करने की शक्ति:</b> न्यायालयों के पास यह अधिकार है कि वे मौलिक अधिकारों का हनन करने वाले किसी भी सरकारी फैसले को अवैध घोषित कर दें।</li>
+                    <li><b>सकारात्मक कदम:</b> अदालतों द्वारा सरकार और पुलिस को आदेश देना कि वे पीड़ित नागरिकों को उनका अधिकार तुरंत वापस दिलाएं।</li>
+                    <li><b>हाशिए के लोगों के लिए सुरक्षा:</b> कोई भी गरीब या अशिक्षित नागरिक भी जनहित याचिका (PIL) के माध्यम से मुफ़्त कानूनी सहायता प्राप्त कर सकता है।</li>
+                    <li><b>अधिकारों की प्रभावशीलता:</b> यह अनुच्छेद अधिकारों को केवल इच्छाओं की सूची नहीं बनाता, बल्कि उन्हें एक बाध्यकारी कानूनी वास्तविकता प्रदान करता है।</li>
+                </ul>
+            </div>
+
+
+            <!-- PART 15 -->
+            <div class="part-container" style="border-top-color: #334155;">
+                <h2 style="color: #1e293b !important; background-color: #f1f5f9; border-left: 10px solid #334155; padding: 20px 25px; border-radius: 10px; font-size: 32pt; font-weight: 900 !important; margin-top: 0; -webkit-text-stroke: 1px #1e293b;">15. संविधान का "हृदय और आत्मा" (अनुच्छेद 32): विश्लेषण</h2>
+                <p style="font-size: 18pt; text-align: justify;">डॉ. बी.आर. आंबेडकर ने अनुच्छेद 32 को पूरे संविधान का 'हृदय और आत्मा' (Heart and Soul) कहा था। इसके बिना संविधान का पूरा ढांचा निष्प्राण हो जाता है।</p>
+
+                <h3 style="color: #1e293b; font-size: 24pt;">15.1 आंबेडकर के दृष्टिकोण का गहन विश्लेषण:</h3>
+                <ul style="font-size: 18pt; line-height: 1.8; color: #000000; list-style-type: square;">
+                    <li><b>अधिकारों का प्राण:</b> कोई भी अधिकार तब तक जीवित नहीं रह सकता जब तक उसे लागू कराने वाली कानूनी शक्ति न हो। अनुच्छेद 32 बाकी सभी अधिकारों को प्राण देता है।</li>
+                    <li><b>संवैधानिक मर्यादा:</b> यह अनुच्छेद संसद या कार्यपालिका को यह ताकत नहीं देता कि वे आपातकाल के अलावा सामान्य दिनों में अदालतों की इस शक्ति को सीमित कर सकें।</li>
+                    <li><b>लोकतांत्रिक गारंटी:</b> यह देश के सबसे निर्धन, शोषित और पिछड़े व्यक्ति को भी देश की सबसे बड़ी न्यायिक अदालत (सर्वोच्च न्यायालय) के सामने खड़े होने का हौसला देता है।</li>
+                    <li><b>न्यायपालिका की स्वतंत्रता:</b> यह न्यायपालिका को कार्यपालिका के दबाव से मुक्त रखकर संविधान की सर्वोच्च संरक्षक संस्था के रूप में स्थापित करता है।</li>
+                    <li><b>अंतिम निष्कर्ष:</b> अनुच्छेद 32 ही वह सर्वोच्च कसौटी है जो यह साबित करती है कि भारतीय संविधान एक जीवंत और कल्याणकारी लोकतांत्रिक मार्गदर्शिका है।</li>
+                </ul>
+            </div>
+
+
+            <!-- PART 16 -->
+            <div class="part-container" style="border-top-color: #7c3aed;">
+                <h2 style="color: #5b21b6 !important; background-color: #f5f3ff; border-left: 10px solid #7c3aed; padding: 20px 25px; border-radius: 10px; font-size: 32pt; font-weight: 900 !important; margin-top: 0; -webkit-text-stroke: 1px #5b21b6;">16. पांच प्रकार की रिट (Writs): आज़ादी के पहरेदार</h2>
+                <p style="font-size: 18pt; text-align: justify;">मौलिक अधिकारों को लागू करने के लिए सर्वोच्च न्यायालय (अनुच्छेद 32) और उच्च न्यायालय (अनुच्छेद 226) पांच प्रकार की विशेष रिट (Writs) जारी करते हैं।</p>
+
+                <h3 style="color: #5b21b6; font-size: 24pt;">16.1 पांच रिटों के प्रमुख कार्य और अर्थ:</h3>
+                <ul style="font-size: 18pt; line-height: 1.8; color: #000000; list-style-type: square;">
+                    <li><b>बंदी प्रत्यक्षीकरण (Habeas Corpus):</b> गैर-कानूनी रूप से गिरफ्तार व्यक्ति को 24 घंटे के भीतर कोर्ट में पेश करने और रिहा करने का पुलिस को सख्त आदेश।</li>
+                    <li><b>परमादेश (Mandamus):</b> किसी सरकारी अधिकारी या संस्था को उसके कानूनी कर्तव्यों का ईमानदारी से पालन करने का कोर्ट द्वारा दिया गया निर्देश।</li>
+                    <li><b>प्रतिषेध (Prohibition):</b> उच्च न्यायालय द्वारा निचली अदालतों को अपने अधिकार क्षेत्र से बाहर जाकर किसी मुकदमे की सुनवाई करने से रोकना।</li>
+                    <li><b>उत्प्रेषण (Certiorari):</b> किसी निचली अदालत में लंबित पड़े मुकदमे के दस्तावेजों को समीक्षा के लिए अपने पास ऊपर मंगाने का निर्देश।</li>
+                    <li><b>अधिकार पृच्छा (Quo Warranto):</b> किसी व्यक्ति को अवैध रूप से कोई सरकारी पद धारण करने से रोकना और योग्यता का प्रमाण मांगना।</li>
+                </ul>
+            </div>
+
+
+            <!-- PART 17 -->
+            <div class="part-container" style="border-top-color: #db2777;">
+                <h2 style="color: #9d174d !important; background-color: #fdf2f8; border-left: 10px solid #db2777; padding: 20px 25px; border-radius: 10px; font-size: 32pt; font-weight: 900 !important; margin-top: 0; -webkit-text-stroke: 1px #9d174d;">17. राज्य के नीति निर्देशक तत्व (DPSP): भविष्य का मार्ग</h2>
+                <p style="font-size: 18pt; text-align: justify;">संविधान के भाग 4 में अनुच्छेद 36 से 51 तक राज्य के नीति निर्देशक तत्व (DPSP) दिए गए हैं। ये वे नीतिगत मार्गदर्शक हैं जो भारत को एक वास्तविक लोक कल्याणकारी राज्य बनाते हैं।</p>
+
+                <h3 style="color: #9d174d; font-size: 24pt;">17.1 नीति निदेशक तत्वों के प्रमुख लक्ष्य और विचार:</h3>
+                <ul style="font-size: 18pt; line-height: 1.8; color: #000000; list-style-type: square;">
+                    <li><b>लोक कल्याणकारी राज्य:</b> समाज में आर्थिक-सामाजिक न्याय स्थापित करना, अमीरी-गरीबी की खाई को कम करना, और लोक-स्वास्थ्य का स्तर सुधारना।</li>
+                    <li><b>गैर-वाद योग्य (Non-Justiciable):</b> इनके उल्लंघन पर अदालतों में मुकदमा नहीं चलाया जा सकता; ये सरकारों की आर्थिक क्षमता पर निर्भर करते हैं।</li>
+                    <li><b>महत्वपूर्ण नीतियां:</b> कुटीर उद्योगों को बढ़ावा, समान कार्य के लिए समान वेतन, मुफ़्त कानूनी सहायता, और पर्यावरण की रक्षा का संकल्प।</li>
+                    <li><b>गांधीवादी विचार:</b> ग्राम पंचायतों का गठन, नशीली दवाओं पर रोक, और दुधारू पशुओं के संरक्षण जैसे गांधीवादी मूल्यों को शामिल करना।</li>
+                    <li><b>भविष्य की नीतियां:</b> सरकारों को मजबूर करना कि वे चुनाव जीतने के लिए नहीं, बल्कि देश के स्थायी विकास और कल्याण के लिए नीतियां बनाएं।</li>
+                </ul>
+            </div>
+
+
+            <!-- PART 18 -->
+            <div class="part-container" style="border-top-color: #0369a1;">
+                <h2 style="color: #075985 !important; background-color: #f0f9ff; border-left: 10px solid #0369a1; padding: 20px 25px; border-radius: 10px; font-size: 32pt; font-weight: 900 !important; margin-top: 0; -webkit-text-stroke: 1px #075985;">18. संघर्ष और समन्वय: मौलिक अधिकार बनाम DPSP</h2>
+                <p style="font-size: 18pt; text-align: justify;">मौलिक अधिकार (भाग 3) और नीति निदेशक तत्व (भाग 4) के बीच का संबंध कभी संघर्ष का तो कभी परस्पर समन्वय का रहा है। दोनों का संतुलित होना अनिवार्य है।</p>
+
+                <h3 style="color: #075985; font-size: 24pt;">18.1 दोनों के बीच संघर्ष के प्रमुख मुद्दे:</h3>
+                <ul style="font-size: 18pt; line-height: 1.8; color: #000000; list-style-type: square;">
+                    <li><b>संपत्ति का अधिकार विवाद:</b> जब सरकार ने भूमि सुधार कानूनों (DPSP) को लागू करने के लिए अमीरों की जमीनें बांटी, तो संपत्ति के मौलिक अधिकार (अनुच्छेद 31) के हनन का विवाद उठा।</li>
+                    <li><b>संसद बनाम न्यायपालिका:</b> संसद ने संशोधनों द्वारा DPSP को मौलिक अधिकारों पर प्राथमिकता देने की कोशिश की, जिसका न्यायपालिका ने कड़ा विरोध किया।</li>
+                    <li><b>संवैधानिक संतुलन:</b> संपत्ति के अधिकार को मौलिक अधिकारों की सूची से हटाकर (44वें संशोधन 1978 द्वारा) केवल कानूनी अधिकार (अनुच्छेद 300A) बनाना।</li>
+                </ul>
+
+                <h3 style="color: #075985; font-size: 24pt;">18.2 न्यायपालिका द्वारा समन्वय का दृष्टिकोण:</h3>
+                <ul style="font-size: 18pt; line-height: 1.8; color: #000000; list-style-type: square;">
+                    <li><b>पूरक संबंध:</b> मिनर्वा मिल्स मामले (1980) में सुप्रीम कोर्ट ने माना कि भाग 3 और भाग 4 एक-दूसरे के विरोधी नहीं, बल्कि एक रथ के दो पहिए हैं।</li>
+                    <li><b>सच्चा सामाजिक न्याय:</b> व्यक्तिगत आजादी (मौलिक अधिकार) और सामाजिक कल्याण (DPSP) के बीच की संतुलित पटरी पर ही भारत का लोकतंत्र दौड़ सकता है।</li>
+                    <li><b>रचनात्मक व्याख्या:</b> आज न्यायालय DPSP को लागू करने वाले किसी भी सरकारी कानून को मौलिक अधिकारों का उल्लंघन मानकर आसानी से रद्द नहीं करते।</li>
+                </ul>
+            </div>
+
+
+            <!-- PART 19 -->
+            <div class="part-container" style="border-top-color: #059669;">
+                <h2 style="color: #065f46 !important; background-color: #f0fdf4; border-left: 10px solid #059669; padding: 20px 25px; border-radius: 10px; font-size: 32pt; font-weight: 900 !important; margin-top: 0; -webkit-text-stroke: 1px #065f46;">19. मौलिक कर्तव्य (Article 51A): नागरिक की जिम्मेदारी</h2>
+                <p style="font-size: 18pt; text-align: justify;">अधिकार और कर्तव्य परस्पर जुड़े हैं। संविधान संशोधन द्वारा नागरिकों के लिए 11 मौलिक कर्तव्य जोड़े गए हैं जो देश के प्रति उनकी जिम्मेदारियों को याद दिलाते हैं।</p>
+
+                <h3 style="color: #065f46; font-size: 24pt;">19.1 मौलिक कर्तव्यों के प्रमुख पहलू:</h3>
+                <ul style="font-size: 18pt; line-height: 1.8; color: #000000; list-style-type: square;">
+                    <li><b>संवैधानिक संशोधन:</b> 42वें संशोधन 1976 द्वारा सरदार स्वर्ण सिंह समिति की सिफारिशों पर भाग 4A के तहत अनुच्छेद 51A में कर्तव्य जोड़े गए।</li>
+                    <li><b>प्रमुख कर्तव्य:</b> संविधान और राष्ट्रीय ध्वज का सम्मान, देश की रक्षा करना, वैज्ञानिक दृष्टिकोण विकसित करना, और सार्वजनिक संपत्ति को नुकसान न पहुँचाना।</li>
+                    <li><b>पर्यावरण संरक्षण:</b> वनों, नदियों, झीलों और वन्यजीवों की रक्षा करना तथा प्रकृति के प्रति संवेगात्मक दयाभाव रखना।</li>
+                    <li><b>गैर-बाध्यकारी प्रकृति:</b> कर्तव्यों के उल्लंघन पर सीधे जेल की सजा नहीं हो सकती, जब तक कि उस संबंध में संसद ने कोई विशिष्ट कानून न बनाया हो।</li>
+                    <li><b>सजग नागरिकता:</b> अधिकार जताने के साथ-साथ अपनी जिम्मेदारियों का पालन करना ही एक सभ्य और जागरूक नागरिक की पहचान है।</li>
+                </ul>
+            </div>
+
+
+            <!-- PART 20 -->
+            <div class="part-container" style="border-top-color: #0f172a;">
+                <h2 style="color: #0f172a !important; background-color: #f1f5f9; border-left: 10px solid #0f172a; padding: 20px 25px; border-radius: 10px; font-size: 32pt; font-weight: 900 !important; margin-top: 0; -webkit-text-stroke: 1px #0f172a;">20. निष्कर्ष: अधिकारों का एक जीवंत किला</h2>
+                <p style="font-size: 18pt; text-align: justify;">अध्याय 2 (भारतीय संविधान में अधिकार) का यह गहन सफर हमें इस मूल सत्य तक ले जाता है कि अधिकार केवल कागज पर लिखे शब्द नहीं, बल्कि हमारे लोकतंत्र के जीवित प्रहरी हैं।</p>
+
+                <h3 style="color: #0f172a; font-size: 24pt;">20.1 निष्कर्ष के प्रमुख स्तंभ:</h3>
+                <ul style="font-size: 18pt; line-height: 1.8; color: #000000; list-style-type: square;">
+                    <li><b>व्यक्तिगत और सामाजिक विकास:</b> मौलिक अधिकार जहाँ नागरिक की स्वतंत्रता की रक्षा करते हैं, वहीं नीति निदेशक तत्व समाज में समानता लाते हैं।</li>
+                    <li><b>संविधान की सर्वोच्चता:</b> अनुच्छेद 32 के तहत न्यायपालिका की सक्रियता ही इन अधिकारों की असली सुरक्षा और लोकतंत्र की गारंटी है।</li>
+                    <li><b>जागरूक नागरिकता:</b> अधिकारों का सर्वोत्तम रक्षक नागरिकों का जागरूक होना और अपने कर्तव्यों का ईमानदारी से पालन करना है।</li>
+                    <li><b>सतत विकास का पथ:</b> निजता के अधिकार, शिक्षा और पर्यावरण सुरक्षा जैसे नए आयामों के जुड़ने से हमारे अधिकार निरंतर समृद्ध हो रहे हैं।</li>
+                    <li><b>सर्वोच्च संदेश:</b> "अधिकार विहीन समाज दास्ता है" और "संविधान की रक्षा ही राष्ट्र की रक्षा है"—यही इस पूरे अध्याय का अंतिम और सर्वोच्च संदेश है।</li>
+                </ul>
+            </div>
+
         </div>
     </div>
 </body>
