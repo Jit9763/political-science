@@ -7,49 +7,61 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;700;900&family=Outfit:wght@400;700;900&display=swap" rel="stylesheet">
     <style>
-        body { font-family: 'Outfit', 'Noto Sans Devanagari', sans-serif; background-color: #f1f5f9; margin: 0; padding: 20px; text-align: center; }
-        .header { background: #1e293b; color: white; padding: 20px; border-radius: 10px; margin-bottom: 30px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
-        .copy-btn { background-color: #2563eb; color: white; padding: 20px 40px; font-size: 24pt; border: none; border-radius: 50px; cursor: pointer; font-weight: 900; transition: all 0.3s; box-shadow: 0 10px 20px rgba(37, 99, 235, 0.4); }
-        .copy-btn:hover { background-color: #1d4ed8; transform: scale(1.05); }
-        .preview { background: white; padding: 40px; border-radius: 15px; margin-top: 30px; text-align: left; max-width: 1000px; margin-left: auto; margin-right: auto; border: 3px solid #e2e8f0; }
-        #status { margin-top: 20px; font-weight: 900; color: #059669; font-size: 24pt; display: none; }
-        
-        .part-container {
-            background-color: #ffffff;
-            border: 5px solid #e2e8f0;
-            border-radius: 12px;
-            padding: 30px;
-            margin-bottom: 50px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        #control-header {
+            position: fixed; top: 0; left: 0; width: 100%; background-color: #0f172a; color: #ffffff;
+            padding: 15px 20px; display: flex; justify-content: space-between; align-items: center;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); z-index: 1000; font-family: 'Outfit', sans-serif; box-sizing: border-box;
         }
-        
-        /* Extra Heavy Text Thickness for Projector */
-        p, li, h1, h2, h3, h4, b, strong {
+        #control-header h1 { margin: 0; font-size: 1.4rem; font-weight: 900; }
+        body {
+            margin-top: 80px;
+            background-color: #ffffff;
+            font-family: 'Outfit', 'Noto Sans Devanagari', sans-serif;
+            font-size: 20pt;
+            font-weight: 800;
+            line-height: 2.2;
+            color: #000000;
+        }
+        p, li, div, td, th {
             font-weight: 800 !important;
+            color: #000000 !important;
+        }
+        b, strong {
+            font-weight: 900 !important;
+            color: #000000 !important;
+        }
+        ul, ol { padding-left: 60px !important; margin-left: 20px !important; }
+        li {
+            padding-left: 15px;
+            margin-bottom: 25px;
+            text-align: justify;
+            line-height: 2.2;
+            font-size: 20pt;
+            font-weight: 800 !important;
+        }
+        /* Heavy text thickness for projector visibility */
+        p, li, h1, h2, h3, h4, b, strong {
+            font-weight: 900 !important;
             -webkit-text-stroke: 0.5px #000000;
         }
         
+        .part-container {
+            margin-bottom: 80px; padding: 50px 60px; background-color: #ffffff;
+            border-radius: 15px; box-shadow: 0 15px 25px -5px rgba(0,0,0,0.05);
+            border-top: 12px solid #1e3a8a;
+        }
+        .info-box {
+            background-color: #f8fafc; padding: 30px; border-left: 14px solid #1e3a8a; 
+            margin: 30px 0; border-radius: 8px; font-size: 19pt; line-height: 2.2; font-weight: 900;
+        }
         .debate-box {
-            background-color: #f8fafc;
-            border-left: 10px solid #64748b;
-            padding: 20px;
-            border-radius: 8px;
-            margin: 30px 0;
+            background-color: #fffbeb; padding: 30px; border: 6px solid #b45309; 
+            border-radius: 15px; margin: 40px 0; line-height: 2.2; font-size: 19pt; font-weight: 900;
         }
     </style>
     <script>
         function copyToGoogleDoc() {
             var content = document.getElementById('contentToCopy').innerHTML;
-            
-            // Convert relative image paths to Absolute URLs for Docs compatibility
-            var tempDiv = document.createElement('div');
-            tempDiv.innerHTML = content;
-            var images = tempDiv.getElementsByTagName('img');
-            for (var i = 0; i < images.length; i++) {
-                images[i].src = images[i].src;
-            }
-            content = tempDiv.innerHTML;
-
             var blob = new Blob([content], { type: 'text/html' });
             var data = [new ClipboardItem({ 'text/html': blob })];
             
@@ -67,57 +79,69 @@
 </head>
 <body>
 
-    <div class="header">
-        <h1>🚀 Chapter 14 (Full-Proof Copy Master - Social Justice)</h1>
-        <p>100% Google Docs Compatible with Images (Localhost-Sync)</p>
+    <!-- Persistent Control Header -->
+    <div id="control-header">
+        <h1>📖 अध्याय 14: सामाजिक न्याय (SOCIAL JUSTICE) - 100-PAGE MASTER NOTES</h1>
+        <button id="mainCopyBtn" onclick="copyToGoogleDoc()">
+            📋 COPY EVERYTHING FOR GOOGLE DOCS
+        </button>
+    </div>
+    
+    <div id="status">
+        ✨ SUCCESS! Content copied to clipboard in rich format. Now open Google Docs and press Ctrl+V.
     </div>
 
-    <button id="mainCopyBtn" class="copy-btn" onclick="copyToGoogleDoc()">📋 COPY EVERYTHING FOR GOOGLE DOCS</button>
-    <p id="status">✅ Copied Successfully! Now go to your Google Doc and Press Ctrl+V</p>
+    <div id="contentToCopy">
+        <div style="font-family: 'Outfit', 'Noto Sans Devanagari', sans-serif; font-size: 20pt; line-height: 2.2; color: #000000; max-width: 1400px; margin: auto; padding: 20px;">
 
-    <div class="preview" id="contentToCopy">
-        <div style="font-family: 'Outfit', 'Noto Sans Devanagari', sans-serif; font-size: 32pt; line-height: 2.0; color: #000000; font-weight: 800; -webkit-text-stroke: 0.5px #000000; text-shadow: 0 0 1px #000; padding: 20px;">
-            
-            <h1 style="color: #1e3a8a; font-size: 50pt; font-weight: 900; border-bottom: 5px solid #1e3a8a; padding-bottom: 15px; margin-top: 0; text-align: center;">अध्याय 14: सामाजिक न्याय (Social Justice)</h1>
+            <!-- Title Section (Projector Friendly) -->
+            <div style="text-align: center; margin-bottom: 80px; padding: 75px; border: 15px double #1e3a8a; background-color: #eff6ff; border-radius: 30px;">
+                <h1 style="color: #1e3a8a !important; font-size: 58pt; font-weight: 950 !important; margin-bottom: 20px; -webkit-text-stroke: 1.5px #1e3a8a;">
+                    अध्याय 14: सामाजिक न्याय<br/>
+                    <span style="font-size: 30pt; color:#475569; font-weight: 900;">(SOCIAL JUSTICE)</span>
+                </h1>
+                <p style="font-size: 26pt; color: #000000; margin-top: 10px; font-weight: 900;">कक्षा 11 राजनीति विज्ञान - अति-गहन शैक्षणिक मास्टर नोट्स</p>
+                <p style="font-size: 20pt; color: #b91c1c; font-style: italic; font-weight: 900;">(विशेष फोकस: रॉल्स का न्याय सिद्धांत, मुक्त बाजार बनाम राज्य, और लैंगिक न्याय)</p>
+            </div>
 
             
             <!-- PART 1 -->
-            <div class="part-container" style="border-top: 10px solid #0284c7;">
+            <div class="part-container" style="border-top-color: #0284c7;">
                 <h2 style="color: #0369a1 !important; background-color: #f0f9ff; border-left: 10px solid #0284c7; padding: 20px 25px; border-radius: 10px; font-size: 32pt; font-weight: 900 !important; margin-top: 0; -webkit-text-stroke: 1px #0369a1;">1. सामाजिक न्याय का अर्थ और विचार</h2>
                 <p style="font-size: 18pt; text-align: justify;">सामाजिक न्याय वह आदर्श सामाजिक व्यवस्था है जिसमें समाज के सभी सदस्यों को समान मूल्य दिया जाता है और जाति, धर्म, नस्ल या लिंग के आधार पर कोई भेदभाव नहीं होता।</p>
 
                 <h3 style="color: #0369a1; font-size: 24pt;">1.1 सामाजिक न्याय की प्रमुख विशेषताएं:</h3>
-                <ul style="font-size: 18pt; line-height: 1.8; color: #000000; list-style-type: disc;">
+                <ul style="font-size: 18pt; line-height: 1.8; color: #000000; list-style-type: square;">
                     <li><b>मानवीय गरिमा का सम्मान:</b> प्रत्येक व्यक्ति को मनुष्य होने के नाते समाज में आदर और गरिमापूर्ण जीवन जीने का मूल अधिकार प्राप्त होना चाहिए।</li>
                     <li><b>अवसरों की समानता:</b> समाज के सभी वर्गों, विशेषकर वंचित और पिछड़े समुदायों को शिक्षा, आजीविका और उन्नति के समान अवसर मिलने चाहिए।</li>
                     <li><b>कृत्रिम भेदभाव का अंत:</b> जन्म, जाति, नस्ल, धर्म और लिंग जैसी जन्मजात असमानताओं पर आधारित विशेषाधिकारों का पूर्ण अंत होना।</li>
-                    <li><b>मूलभूत आवश्यकताओं की पूर्ति:</b> न्यायपूर्ण समाज में प्रत्येक नागरिक को भोजन, शुद्ध पेयजल, आवास, बुनियादी शिक्षा और स्वास्थ्य की गारंटी होनी चाहिए।</li>
+                    <li><b>बुनियादी आवश्यकताओं की पूर्ति:</b> न्यायपूर्ण समाज में प्रत्येक नागरिक को भोजन, शुद्ध पेयजल, आवास, बुनियादी शिक्षा और स्वास्थ्य की गारंटी होनी चाहिए।</li>
                     <li><b>कमजोर वर्गों का संरक्षण:</b> समाज के सबसे वंचित, गरीब और शारीरिक रूप से अक्षम लोगों को विशेष संरक्षण और सहायता प्रदान करना।</li>
                 </ul>
             </div>
 
 
             <!-- PART 2 -->
-            <div class="part-container" style="border-top: 10px solid #059669;">
+            <div class="part-container" style="border-top-color: #059669;">
                 <h2 style="color: #065f46 !important; background-color: #f0fdf4; border-left: 10px solid #059669; padding: 20px 25px; border-radius: 10px; font-size: 32pt; font-weight: 900 !important; margin-top: 0; -webkit-text-stroke: 1px #065f46;">2. न्याय के तीन प्रमुख सिद्धांत</h2>
                 <p style="font-size: 18pt; text-align: justify;">राजनीतिक सिद्धांतों के अनुसार, किसी भी स्थिति में न्यायपूर्ण होने के लिए इन तीन सिद्धांतों का संतुलन अनिवार्य है:</p>
 
                 <h3 style="color: #065f46; font-size: 24pt;">2.1 समानों के साथ समान व्यवहार (Equality of Treatment):</h3>
-                <ul style="font-size: 18pt; line-height: 1.8; color: #000000; list-style-type: disc;">
+                <ul style="font-size: 18pt; line-height: 1.8; color: #000000; list-style-type: square;">
                     <li><b>भेदभाव-मुक्त अधिकार:</b> सभी नागरिकों को बिना किसी भेदभाव के समान नागरिक, राजनैतिक और कानूनी अधिकार (जैसे मताधिकार, कानून के समक्ष समानता) प्रदान करना।</li>
                     <li><b>योग्यता का आदर:</b> यदि दो व्यक्ति समान कार्य कर रहे हैं, तो उनके लिंग, जाति या धर्म के आधार पर वेतन या सम्मान में कोई अंतर नहीं किया जाना चाहिए।</li>
                     <li><b>निष्पक्ष दृष्टिकोण:</b> राज्य की दृष्टि में सभी नागरिकों को समान दर्जा मिलना चाहिए और किसी विशेष वर्ग के लिए कोई अनुचित विशेषाधिकार नहीं होने चाहिए।</li>
                 </ul>
 
                 <h3 style="color: #065f46; font-size: 24pt;">2.2 समानुपातिक न्याय (Proportional Justice):</h3>
-                <ul style="font-size: 18pt; line-height: 1.8; color: #000000; list-style-type: disc;">
+                <ul style="font-size: 18pt; line-height: 1.8; color: #000000; list-style-type: square;">
                     <li><b>मेहनत और कौशल का पुरस्कार:</b> न्याय का अर्थ केवल समान व्यवहार नहीं है; यदि कोई व्यक्ति अधिक श्रम, जोखिम या विशेष कौशल का कार्य करता है, तो उसे अधिक पुरस्कार मिलना न्यायसंगत है।</li>
                     <li><b>समान मापदंड:</b> परीक्षा में कठिन परिश्रम करने वाले छात्र को अनुत्तीर्ण छात्र की तुलना में अधिक अंक मिलना समानुपातिक न्याय का सबसे सटीक उदाहरण है।</li>
                     <li><b>संतुलन का नियम:</b> समाज में योगदान और प्रयास के अनुपात में पुरस्कारों और संसाधनों का वितरण करना ताकि उत्पादकता और प्रेरणा बनी रहे।</li>
                 </ul>
 
                 <h3 style="color: #065f46; font-size: 24pt;">2.3 विशेष आवश्यकताओं का सिद्धांत (Recognition of Special Needs):</h3>
-                <ul style="font-size: 18pt; line-height: 1.8; color: #000000; list-style-type: disc;">
+                <ul style="font-size: 18pt; line-height: 1.8; color: #000000; list-style-type: square;">
                     <li><b>दिव्यांग और वृद्धों के लिए विशेष प्रावधान:</b> शारीरिक रूप से अक्षम लोगों, वृद्धों या गंभीर बीमारियों से पीड़ित लोगों को समाज की मुख्यधारा में लाने के लिए अतिरिक्त रियायतें देना।</li>
                     <li><b>ऐतिहासिक क्षतिपूर्ति:</b> जो समुदाय सदियों से सामाजिक रूप से प्रताड़ित रहे हैं, उन्हें समान धरातल प्रदान करने के लिए सकारात्मक कदम (जैसे आरक्षण) उठाना।</li>
                     <li><b>असमानों के साथ विशेष व्यवहार:</b> यदि समाज में जन्मजात या शारीरिक असमानताएँ हैं, तो उनके साथ बिल्कुल वैसा ही व्यवहार करना जैसा स्वस्थ/सक्षम लोगों के साथ होता है, वास्तव में अन्याय होगा।</li>
@@ -126,13 +150,13 @@
 
 
             <!-- PART 3 -->
-            <div class="part-container" style="border-top: 10px solid #d97706;">
+            <div class="part-container" style="border-top-color: #d97706;">
                 <h2 style="color: #92400e !important; background-color: #fff7ed; border-left: 10px solid #d97706; padding: 20px 25px; border-radius: 10px; font-size: 32pt; font-weight: 900 !important; margin-top: 0; -webkit-text-stroke: 1px #92400e;">3. न्यायपूर्ण वितरण (Just Distribution) का विचार</h2>
-                <p style="font-size: 18pt; text-align: justify;">संसाधनों और अवसरों का न्यायपूर्ण वितरण समाज में शांति और स्थिरता बनाए रखने का सबसे बड़ा आधार है। राज्य को यह सुनिश्चित करना होता है कि विकास का लाभ सभी नागरिकों तक निष्पक्ष रूप से पहुँचे।</p>
+                <p style="font-size: 18pt; text-align: justify;">संसाधनाें और अवसरों का न्यायपूर्ण वितरण समाज में शांति और स्थिरता बनाए रखने का सबसे बड़ा आधार है। राज्य को यह सुनिश्चित करना होता है कि विकास का लाभ सभी नागरिकों तक निष्पक्ष रूप से पहुँचे।</p>
 
                 <h3 style="color: #92400e; font-size: 24pt;">3.1 न्यायपूर्ण वितरण के प्रमुख आधार:</h3>
-                <ul style="font-size: 18pt; line-height: 1.8; color: #000000; list-style-type: disc;">
-                    <li><b>अमीरी और गरीबी के अंतर को पाटना:</b> समाज में धन के अत्यधिक संकेंद्रण को रोकना ताकि आर्थिक विषमता अराजकता का कारण न बने।</li>
+                <ul style="font-size: 18pt; line-height: 1.8; color: #000000; list-style-type: square;">
+                    <li><b>अमीरी और गरीबी के अंतर को पाटना:</b> समाज में धन के अत्यधिक संकेंद्रीयण को रोकना ताकि आर्थिक विषमता अराजकता का कारण न बने।</li>
                     <li><b>बुनियादी अधिकारों की गारंटी:</b> समाज के निर्धनतम नागरिक के लिए भी न्यूनतम जीवन स्तर सुनिश्चित करना (जैसे आवास, अनाज और स्वास्थ्य सुरक्षा)।</li>
                     <li><b>अवसरों का विकेंद्रीकरण:</b> शिक्षा और रोजगार के अवसरों को कुछ मुट्ठी भर लोगों तक सीमित रखने के बजाय पूरे समाज में फैलाना।</li>
                     <li><b>प्राकृतिक संसाधनों पर जन-स्वामित्व:</b> जल, जंगल, जमीन और खनिजों जैसे राष्ट्रीय संसाधनों का उपयोग जनहित में और पारदर्शी नीतियों के तहत करना।</li>
@@ -142,12 +166,12 @@
 
 
             <!-- PART 4 -->
-            <div class="part-container" style="border-top: 10px solid #7c3aed;">
+            <div class="part-container" style="border-top-color: #7c3aed;">
                 <h2 style="color: #5b21b6 !important; background-color: #f5f3ff; border-left: 10px solid #7c3aed; padding: 20px 25px; border-radius: 10px; font-size: 32pt; font-weight: 900 !important; margin-top: 0; -webkit-text-stroke: 1px #5b21b6;">4. जॉन रॉल्स का न्याय का सिद्धांत (Theory of Justice)</h2>
                 <p style="font-size: 18pt; text-align: justify;">प्रसिद्ध अमेरिकी दार्शनिक जॉन रॉल्स ने निष्पक्षता और न्याय की व्याख्या करने के लिए एक क्रांतिकारी बौद्धिक अवधारणा दी, जिसे 'अज्ञानता का आवरण' (Veil of Ignorance) कहा जाता है।</p>
 
                 <h3 style="color: #5b21b6; font-size: 24pt;">4.1 अज्ञानता का आवरण (Veil of Ignorance) के मुख्य लाभ:</h3>
-                <ul style="font-size: 18pt; line-height: 1.8; color: #000000; list-style-type: disc;">
+                <ul style="font-size: 18pt; line-height: 1.8; color: #000000; list-style-type: square;">
                     <li><b>निष्पक्ष नियमों का निर्माण:</b> यदि हमें यह न पता हो कि समाज में हमारी वास्तविक स्थिति (गरीब, अमीर, ऊँची या नीची जाति) क्या होगी, तो हम ऐसे नियम बनाएंगे जो सबके लिए सुरक्षित हों।</li>
                     <li><b>अंतिम पायदान के व्यक्ति की चिंता:</b> अज्ञानता के आवरण के तहत तर्कशील मनुष्य सबसे खराब स्थिति की कल्पना करता है और उसी के अनुसार न्यूनतम कल्याण की नीतियां बनाता है।</li>
                     <li><b>तार्किक निष्पक्षता (Rational Fairness):</b> यह सिद्धांत यह साबित करता है कि न्याय केवल परोपकार की भावना नहीं, बल्कि एक तार्किक और बुद्धिसम्मत आवश्यकता है।</li>
@@ -158,12 +182,12 @@
 
 
             <!-- PART 5 -->
-            <div class="part-container" style="border-top: 10px solid #4c1d95;">
-                <h2 style="color: #4c1d95 !important; background-color: #faf5ff; border-left: 10px solid #4c1d95; padding: 20px 25px; border-radius: 10px; font-size: 32pt; font-weight: 900 !important; margin-top: 0; -webkit-text-stroke: 1px #4c1d95;">5. न्यायपूर्ण समाज की स्थापना के मार्ग</h2>
+            <div class="part-container" style="border-top-color: #4c1d95;">
+                <h2 style="color: #4c1d95 !important; background-color: #faf5ff; border-left: 10px solid #4c1d95; padding: 20px 25px; border-radius: 10px; font-size: 32pt; font-weight: 900 !important; margin-top: 0; -webkit-text-stroke: 1px #4c1d95;">5. हमें समानता क्यों चाहिए? नैतिक और राजनैतिक आधार</h2>
                 <p style="font-size: 18pt; text-align: justify;">एक न्यायपूर्ण और शोषण-मुक्त समाज का निर्माण केवल इच्छाओं से नहीं, बल्कि ठोस व्यावहारिक और राजनैतिक कदमों से संभव होता है।</p>
 
                 <h3 style="color: #4c1d95; font-size: 24pt;">5.1 प्रमुख नैतिक व व्यावहारिक मार्ग:</h3>
-                <ul style="font-size: 18pt; line-height: 1.8; color: #000000; list-style-type: disc;">
+                <ul style="font-size: 18pt; line-height: 1.8; color: #000000; list-style-type: square;">
                     <li><b>संवैधानिक और कानूनी सुधार:</b> ऐसे कड़े कानून बनाना जो शोषण, बंधुआ मजदूरी, बाल श्रम और सामाजिक छुआछूत को पूरी तरह समाप्त कर सकें।</li>
                     <li><b>शिक्षा का सार्वभौमीकरण:</b> देश के कोने-कोने में गुणवत्तापूर्ण और मुफ़्त बुनियादी शिक्षा पहुँचाना ताकि हर बच्चा समान धरातल से शुरुआत कर सके।</li>
                     <li><b>आर्थिक पुनर्वितरण:</b> प्रगतिशील कर प्रणाली लागू करना ताकि अमीरों पर टैक्स लगाकर गरीबों के लिए सामाजिक सुरक्षा तंत्र मज़बूत किया जा सके।</li>
@@ -174,28 +198,28 @@
 
 
             <!-- PART 6 -->
-            <div class="part-container" style="border-top: 10px solid #0d9488;">
-                <h2 style="color: #0f766e !important; background-color: #f0fdfa; border-left: 10px solid #0d9488; padding: 20px 25px; border-radius: 10px; font-size: 32pt; font-weight: 900 !important; margin-top: 0; -webkit-text-stroke: 1px #0f766e;">6. संसाधनों का वितरण और सरकार की भूमिका</h2>
+            <div class="part-container" style="border-top-color: #0d9488;">
+                <h2 style="color: #0f766e !important; background-color: #f0fdf4; border-left: 10px solid #0d9488; padding: 20px 25px; border-radius: 10px; font-size: 32pt; font-weight: 900 !important; margin-top: 0; -webkit-text-stroke: 1px #0f766e;">6. संसाधनों का वितरण और सरकार की भूमिका</h2>
                 <p style="font-size: 18pt; text-align: justify;">संसाधनों का वितरण समाज की स्थिरता की कुंजी है। सरकार अपने विभिन्न माध्यमों और प्रशासनिक तंत्र के द्वारा समाज में संसाधनों का उचित आवंटन सुनिश्चित करती है।</p>
 
                 <h3 style="color: #0f766e; font-size: 24pt;">6.1 वितरण के प्रमुख माध्यम:</h3>
-                <ul style="font-size: 18pt; line-height: 1.8; color: #000000; list-style-type: disc;">
+                <ul style="font-size: 18pt; line-height: 1.8; color: #000000; list-style-type: square;">
                     <li><b>सार्वजनिक वितरण प्रणाली (PDS):</b> गरीबों को अत्यधिक रियायती दरों पर राशन (गेहूँ, चावल, तेल) उपलब्ध कराकर खाद्य सुरक्षा प्रदान करना।</li>
                     <li><b>मुफ़्त स्वास्थ्य और चिकित्सा सुविधाएँ:</b> सरकारी अस्पतालों के माध्यम से समाज के निर्धन वर्ग को गंभीर बीमारियों के मुफ्त इलाज और दवाओं की व्यवस्था करना।</li>
                     <li><b>भूमि सुधार कानून (Land Reforms):</b> जागीरदारी प्रथा का अंत कर भूमिहीन किसानों में कृषि भूमि का न्यायसंगत वितरण करना।</li>
-                    <li><b>बुनियादी ढांचा विकास (Infrastructure):</b> पिछड़े और ग्रामीण क्षेत्रों में बिजली, सड़क, पक्के मकान और इंटरनेट कनेक्टिविटी पहुँचाना।</li>
+                    <li><b>बुनियादी ढांचे का विकास:</b> पिछड़े और ग्रामीण क्षेत्रों में बिजली, सड़क, पक्के मकान और इंटरनेट कनेक्टिविटी पहुँचाना।</li>
                     <li><b>वित्तीय सहायता और पेंशन:</b> वृद्धों, विधवाओं और दिव्यांगों को नियमित मासिक वित्तीय सहायता देकर उनके आत्म-सम्मान की रक्षा करना।</li>
                 </ul>
             </div>
 
 
             <!-- PART 7 -->
-            <div class="part-container" style="border-top: 10px solid #4338ca;">
+            <div class="part-container" style="border-top-color: #4338ca;">
                 <h2 style="color: #3730a3 !important; background-color: #eef2ff; border-left: 10px solid #4338ca; padding: 20px 25px; border-radius: 10px; font-size: 32pt; font-weight: 900 !important; margin-top: 0; -webkit-text-stroke: 1px #3730a3;">7. न्याय बनाम दान (Justice vs Charity)</h2>
                 <p style="font-size: 18pt; text-align: justify;">न्याय और दान के बीच एक स्पष्ट रेखा खींचना आवश्यक है। न्याय एक 'अधिकार' है, जबकि दान एक 'स्वैच्छिक कार्य' है।</p>
 
                 <h3 style="color: #3730a3; font-size: 24pt;">7.1 न्याय और दान में मूलभूत अंतर:</h3>
-                <ul style="font-size: 18pt; line-height: 1.8; color: #000000; list-style-type: disc;">
+                <ul style="font-size: 18pt; line-height: 1.8; color: #000000; list-style-type: square;">
                     <li><b>अधिकार बनाम उपकार:</b> न्याय पाना नागरिक का संवैधानिक अधिकार है, जबकि दान किसी व्यक्ति की दया या उपकार की भावना पर निर्भर होता है।</li>
                     <li><b>समानता और स्वाभिमान:</b> न्याय पाने वाले व्यक्ति का स्वाभिमान सुरक्षित रहता है क्योंकि वह अपना हक पाता है; दान लेने वाला व्यक्ति स्वयं को हीन महसूस करता है।</li>
                     <li><b>स्थायित्व और संस्थागत ढांचा:</b> न्याय कानूनों और संस्थाओं के माध्यम से स्थायी होता है; दान अस्थायी, अनियमित और दाता की मर्जी पर निर्भर होता है।</li>
@@ -206,13 +230,13 @@
 
 
             <!-- PART 8 -->
-            <div class="part-container" style="border-top: 10px solid #be123c;">
+            <div class="part-container" style="border-top-color: #be123c;">
                 <h2 style="color: #9f1239 !important; background-color: #fff1f2; border-left: 10px solid #be123c; padding: 20px 25px; border-radius: 10px; font-size: 32pt; font-weight: 900 !important; margin-top: 0; -webkit-text-stroke: 1px #9f1239;">8. मुक्त बाजार बनाम राज्य का हस्तक्षेप (Free Market vs State)</h2>
                 <p style="font-size: 18pt; text-align: justify;">न्याय की प्राप्ति के लिए बाजार की भूमिका पर विचारकों में गहरा मतभेद है। यह बहस आधुनिक राजनीति का केंद्र है।</p>
 
                 <h3 style="color: #9f1239; font-size: 24pt;">8.1 मुक्त बाजार समर्थकों का तर्क (Liberals):</h3>
                 <ul style="font-size: 18pt; line-height: 1.8; color: #000000; list-style-type: square;">
-                    <li><b>योग्यता का पुरस्कार (Reward for Merit):</b> बाजार उस व्यक्ति को अधिक लाभ देता है जो अधिक कुशल, परिश्रमी और रचनात्मक होता है, जिससे नवप्रवर्तन को बढ़ावा मिलता है।</li>
+                    <li><b>योग्यता का पुरस्कार (Reward for Merit):</b> बाजार उस व्यक्ति को अधिक लाभ देता है जो अधिक कुशल, परिश्रमक और रचनात्मक होता है, जिससे विकास को गति मिलती है।</li>
                     <li><b>व्यक्तिगत स्वतंत्रता:</b> यह नागरिकों को अपनी पसंद के व्यवसाय, क्रय-विक्रय और निवेश की पूर्ण स्वायत्तता प्रदान करता है।</li>
                     <li><b>सक्षम प्रतिस्पर्द्धा:</b> प्रतिस्पर्द्धा के कारण उपभोक्ताओं को बेहतर गुणवत्ता की वस्तुएं और सेवाएं सस्ती दरों पर प्राप्त होती हैं।</li>
                 </ul>
@@ -227,12 +251,12 @@
 
 
             <!-- PART 9 -->
-            <div class="part-container" style="border-top: 10px solid #1e3a8a;">
+            <div class="part-container" style="border-top-color: #1e3a8a;">
                 <h2 style="color: #1e40af !important; background-color: #eff6ff; border-left: 10px solid #1e3a8a; padding: 20px 25px; border-radius: 10px; font-size: 32pt; font-weight: 900 !important; margin-top: 0; -webkit-text-stroke: 1px #1e40af;">9. भारतीय संदर्भ में सामाजिक न्याय और आरक्षण</h2>
                 <p style="font-size: 18pt; text-align: justify;">भारत में सामाजिक न्याय का अर्थ ऐतिहासिक जातिगत भेदभाव और सामाजिक दमन के उन्मूलन से गहरा जुड़ा है। भारतीय संविधान इस असमानता को पाटने के लिए सकारात्मक कार्रवाई का उपयोग करता है।</p>
 
                 <h3 style="color: #1e40af; font-size: 24pt;">9.1 आरक्षण का संवैधानिक और नैतिक आधार:</h3>
-                <ul style="font-size: 18pt; line-height: 1.8; color: #000000; list-style-type: disc;">
+                <ul style="font-size: 18pt; line-height: 1.8; color: #000000; list-style-type: square;">
                     <li><b>सकारात्मक भेदभाव (Positive Discrimination):</b> पिछड़े और शोषित वर्गों (SC/ST/OBC) को मुख्यधारा में लाने के लिए उन्हें प्रवेश और नौकरियों में विशेष छूट देना।</li>
                     <li><b>ऐतिहासिक क्षतिपूर्ति (Compensatory Justice):</b> उन जातियों को विशेष अधिकार देना जिनका सदियों से सामाजिक शोषण हुआ और जिन्हें शिक्षा से वंचित रखा गया।</li>
                     <li><b>प्रशासनिक प्रतिनिधित्व:</b> देश की नीति-निर्माण और प्रशासन के महत्वपूर्ण पदों पर सभी सामाजिक वर्गों की पर्याप्त हिस्सेदारी सुनिश्चित करना।</li>
@@ -243,7 +267,7 @@
 
 
             <!-- PART 10 -->
-            <div class="part-container" style="border-top: 10px solid #be185d;">
+            <div class="part-container" style="border-top-color: #be185d;">
                 <h2 style="color: #be185d !important; background-color: #fdf2f8; border-left: 10px solid #be185d; padding: 20px 25px; border-radius: 10px; font-size: 32pt; font-weight: 900 !important; margin-top: 0; -webkit-text-stroke: 1px #be185d;">10. न्याय और मानवाधिकार (Human Rights)</h2>
                 <p style="font-size: 18pt; text-align: justify;">सामाजिक न्याय की रक्षा के बिना मानवाधिकार केवल कागजी आदर्श बनकर रह जाते हैं। न्याय ही वह शक्ति है जो अधिकारों को धरातल पर संभव बनाती है।</p>
 
@@ -259,12 +283,12 @@
 
 
             <!-- PART 11 -->
-            <div class="part-container" style="border-top: 10px solid #f59e0b;">
+            <div class="part-container" style="border-top-color: #f59e0b;">
                 <h2 style="color: #b45309 !important; background-color: #fffbeb; border-left: 10px solid #f59e0b; padding: 20px 25px; border-radius: 10px; font-size: 32pt; font-weight: 900 !important; margin-top: 0; -webkit-text-stroke: 1px #b45309;">11. अंतरराष्ट्रीय न्याय (International Justice)—राष्ट्रों के बीच असमानता</h2>
                 <p style="font-size: 18pt; text-align: justify;">जिस प्रकार एक देश के भीतर सामाजिक न्याय आवश्यक है, उसी प्रकार वैश्विक स्तर पर भी विभिन्न अमीर और गरीब देशों के बीच संसाधनों का संतुलित और न्यायपूर्ण संबंध होना जरूरी है।</p>
 
                 <h3 style="color: #b45309; font-size: 24pt;">11.1 वैश्विक विषमता के प्रमुख आयाम:</h3>
-                <ul style="font-size: 18pt; line-height: 1.8; color: #000000; list-style-type: disc;">
+                <ul style="font-size: 18pt; line-height: 1.8; color: #000000; list-style-type: square;">
                     <li><b>संसाधनों का असमान वितरण:</b> दुनिया के 20% अमीर देश पृथ्वी के 80% प्राकृतिक संसाधनों और तकनीक पर नियंत्रण रखते हैं, जिससे गरीब देश पिछड़ रहे हैं।</li>
                     <li><b>ऋण का जाल (Debt Trap):</b> विकासशील और गरीब देशों को अंतरराष्ट्रीय वित्तीय संस्थाओं (जैसे IMF, World Bank) द्वारा दी जाने वाली सहायता कड़ी शर्तों से बंधी होती है।</li>
                     <li><b>पर्यावरणीय हनन का शिकार:</b> कार्बन उत्सर्जन का अधिकांश हिस्सा विकसित देश करते हैं, लेकिन जलवायु परिवर्तन का सबसे बुरा प्रभाव गरीब विकासशील देशों पर पड़ता है।</li>
@@ -275,12 +299,12 @@
 
 
             <!-- PART 12 -->
-            <div class="part-container" style="border-top: 10px solid #1d4ed8;">
+            <div class="part-container" style="border-top-color: #1d4ed8;">
                 <h2 style="color: #1e40af !important; background-color: #eff6ff; border-left: 10px solid #1d4ed8; padding: 20px 25px; border-radius: 10px; font-size: 32pt; font-weight: 900 !important; margin-top: 0; -webkit-text-stroke: 1px #1e40af;">12. पर्यावरणीय न्याय (Environmental Justice)</h2>
                 <p style="font-size: 18pt; text-align: justify;">पर्यावरणीय न्याय यह सुनिश्चित करता है कि पर्यावरण के विनाश और प्रदूषण का नुकसान किसी एक गरीब या कमजोर वर्ग को न भुगतना पड़े, और प्राकृतिक संसाधनों का दोहन सतत रूप से हो।</p>
 
                 <h3 style="color: #1e40af; font-size: 24pt;">12.1 पर्यावरणीय न्याय के प्रमुख सिद्धांत:</h3>
-                <ul style="font-size: 18pt; line-height: 1.8; color: #000000; list-style-type: disc;">
+                <ul style="font-size: 18pt; line-height: 1.8; color: #000000; list-style-type: square;">
                     <li><b>असंतुलित प्रदूषण का विरोध:</b> औद्योगिक कचरे और विषैले कारखानों को हमेशा गरीब और उपेक्षित बस्तियों के निकट स्थापित करने की प्रवृत्ति पर रोक लगाना।</li>
                     <li><b>सतत विकास (Sustainable Development):</b> प्रकृति का इस प्रकार उपयोग करना कि वर्तमान पीढ़ी की आवश्यकताओं की पूर्ति के साथ भविष्य की पीढ़ियों का हक न छीने।</li>
                     <li><b>विस्थापितों का पुनर्वास:</b> बाँधों, खानों या बड़ी परियोजनाओं के कारण विस्थापित होने वाले आदिवासियों को उचित मुआवजा और सम्मानजनक पुनर्वास देना।</li>
@@ -291,7 +315,7 @@
 
 
             <!-- PART 13 -->
-            <div class="part-container" style="border-top: 10px solid #047857;">
+            <div class="part-container" style="border-top-color: #047857;">
                 <h2 style="color: #064e3b !important; background-color: #ecfdf5; border-left: 10px solid #047857; padding: 20px 25px; border-radius: 10px; font-size: 32pt; font-weight: 900 !important; margin-top: 0; -webkit-text-stroke: 1px #064e3b;">13. प्रक्रियात्मक बनाम तात्विक न्याय (Procedural vs Substantive Justice)</h2>
                 <p style="font-size: 18pt; text-align: justify;">न्याय की व्याख्या करने के दो प्रमुख दृष्टिकोण हैं, जिनके बीच का संतुलन ही एक वास्तविक कल्याणकारी राज्य का आधार बनता है।</p>
 
@@ -312,12 +336,12 @@
 
 
             <!-- PART 14 -->
-            <div class="part-container" style="border-top: 10px solid #4338ca;">
+            <div class="part-container" style="border-top-color: #4338ca;">
                 <h2 style="color: #3730a3 !important; background-color: #eef2ff; border-left: 10px solid #4338ca; padding: 20px 25px; border-radius: 10px; font-size: 32pt; font-weight: 900 !important; margin-top: 0; -webkit-text-stroke: 1px #3730a3;">14. 'न्यूनतम आवश्यकताएं' (Minimum Needs) और न्याय</h2>
                 <p style="font-size: 18pt; text-align: justify;">न्याय की सबसे बुनियादी व्यावहारिक शुरुआत प्रत्येक नागरिक की 'न्यूनतम आवश्यकताओं' की पूर्ति से होती है। इसके बिना कोई भी लोकतांत्रिक स्वतंत्रता अधूरी है।</p>
 
                 <h3 style="color: #3730a3; font-size: 24pt;">14.1 बुनियादी आवश्यकताओं की सूची:</h3>
-                <ul style="font-size: 18pt; line-height: 1.8; color: #000000; list-style-type: disc;">
+                <ul style="font-size: 18pt; line-height: 1.8; color: #000000; list-style-type: square;">
                     <li><b>पोषण और भोजन:</b> समाज के अंतिम व्यक्ति तक भुखमरी और कुपोषण को मिटाने के लिए खाद्यान्न की उपलब्धता सुनिश्चित करना।</li>
                     <li><b>स्वच्छ पेयजल:</b> दूषित जल से होने वाली बीमारियों से रक्षा के लिए हर घर तक शुद्ध पेयजल की पाइपलाइन पहुंचाना।</li>
                     <li><b>प्राथमिक स्वास्थ्य सुरक्षा:</b> मुफ़्त दवाएं, उपचार और बुनियादी स्वास्थ्य केंद्रों की हर गाँव और कस्बे में स्थापना करना।</li>
@@ -328,12 +352,12 @@
 
 
             <!-- PART 15 -->
-            <div class="part-container" style="border-top: 10px solid #334155;">
+            <div class="part-container" style="border-top-color: #334155;">
                 <h2 style="color: #1e293b !important; background-color: #f1f5f9; border-left: 10px solid #334155; padding: 20px 25px; border-radius: 10px; font-size: 32pt; font-weight: 900 !important; margin-top: 0; -webkit-text-stroke: 1px #1e293b;">15. सामाजिक न्याय और लोकतंत्र का अंतर्संबंध</h2>
                 <p style="font-size: 18pt; text-align: justify;">लोकतंत्र और सामाजिक न्याय एक ही सिक्के के दो पहलू हैं। लोकतंत्र के बिना सामाजिक न्याय पाना असंभव है, और सामाजिक न्याय के बिना लोकतंत्र केवल धनवानों का मुखौटा बनकर रह जाता है।</p>
 
                 <h3 style="color: #1e293b; font-size: 24pt;">15.1 लोकतंत्र न्याय को कैसे मजबूत करता है?</h3>
-                <ul style="font-size: 18pt; line-height: 1.8; color: #000000; list-style-type: disc;">
+                <ul style="font-size: 18pt; line-height: 1.8; color: #000000; list-style-type: square;">
                     <li><b>वोट की ताकत:</b> 'एक व्यक्ति-एक वोट' का सिद्धांत राजा और रंक दोनों को राजनैतिक रूप से एक समान पायदान पर खड़ा कर देता है।</li>
                     <li><b>सरकार की जवाबदेही:</b> लोकतांत्रिक व्यवस्था में सरकार को नियमित रूप से जनता के पास जाना होता है, जिससे वह गरीबों की उपेक्षा नहीं कर सकती।</li>
                     <li><b>शांतिपूर्ण आंदोलन का अधिकार:</b> शोषित वर्गों को अपनी मांगों के समर्थन में रैलियाँ, प्रदर्शन और शांतिपूर्ण हड़ताल करने की स्वतंत्रता मिलती है।</li>
@@ -344,12 +368,12 @@
 
 
             <!-- PART 16 -->
-            <div class="part-container" style="border-top: 10px solid #7c3aed;">
+            <div class="part-container" style="border-top-color: #7c3aed;">
                 <h2 style="color: #5b21b6 !important; background-color: #f5f3ff; border-left: 10px solid #7c3aed; padding: 20px 25px; border-radius: 10px; font-size: 32pt; font-weight: 900 !important; margin-top: 0; -webkit-text-stroke: 1px #5b21b6;">16. निजीकरण के दौर में सामाजिक न्याय—चुनौतियां और अवसर</h2>
                 <p style="font-size: 18pt; text-align: justify;">1990 के दशक के बाद शुरू हुए वैश्वीकरण और निजीकरण के नए दौर ने सामाजिक न्याय के सामने कई नई आर्थिक चुनौतियां खड़ी कर दी हैं जिनका समाधान खोजना जरूरी है।</p>
 
                 <h3 style="color: #5b21b6; font-size: 24pt;">16.1 प्रमुख चिंताएँ और चुनौतियाँ:</h3>
-                <ul style="font-size: 18pt; line-height: 1.8; color: #000000; list-style-type: disc;">
+                <ul style="font-size: 18pt; line-height: 1.8; color: #000000; list-style-type: square;">
                     <li><b>आरक्षण का दायरा सीमित होना:</b> निजी क्षेत्र के बढ़ने से सरकारी नौकरियां कम हो रही हैं, जिससे पारंपरिक आरक्षण नीतियों का प्रभाव कम हो रहा है।</li>
                     <li><b>शिक्षा और स्वास्थ्य का बाजारीकरण:</b> कॉर्पोरेट अस्पतालों और महंगे निजी स्कूलों के कारण गरीबों के लिए अच्छी शिक्षा और इलाज एक सपना बन गया है।</li>
                     <li><b>बढ़ती आर्थिक विषमता:</b> संपत्ति का संकेंद्रण कुछ बड़े घरानों तक सीमित होने से समाज में अमीर और गरीब के बीच की दूरी खतरनाक स्तर पर पहुँच गई है।</li>
@@ -360,28 +384,28 @@
 
 
             <!-- PART 17 -->
-            <div class="part-container" style="border-top: 10px solid #db2777;">
+            <div class="part-container" style="border-top-color: #db2777;">
                 <h2 style="color: #9d174d !important; background-color: #fdf2f8; border-left: 10px solid #db2777; padding: 20px 25px; border-radius: 10px; font-size: 32pt; font-weight: 900 !important; margin-top: 0; -webkit-text-stroke: 1px #9d174d;">17. सामाजिक न्याय और राष्ट्रीय पहचान (National Identity)</h2>
                 <p style="font-size: 18pt; text-align: justify;">एक राष्ट्र के रूप में भारत की एकता तभी अखंड रह सकती है जब देश का प्रत्येक नागरिक स्वयं को इस राष्ट्र का हिस्सा महसूस करे और उसके साथ कोई अन्याय न हो।</p>
 
                 <h3 style="color: #9d174d; font-size: 24pt;">17.1 न्याय और राष्ट्रीय एकता का संबंध:</h3>
-                <ul style="font-size: 18pt; line-height: 1.8; color: #000000; list-style-type: disc;">
-                    <li><b>विद्रोह और असंतोष पर रोक:</b> जब किसी क्षेत्र या वर्ग को लगता है कि संसाधनों के वितरण में उसके साथ पक्षपात हो रहा है, तो अलगाववाद और गृहयुद्ध का खतरा बढ़ता है।</li>
+                <ul style="font-size: 18pt; line-height: 1.8; color: #000000; list-style-type: square;">
+                    <li><b>विद्रोह और असंतोष पर रोक:</b> जब किसी क्षेत्र या वर्ग को लगता है कि संसाधनों के वितरण में उसके साथ पक्षपात हो रहा है, तो अलगाववाद और संघर्ष का खतरा बढ़ता है।</li>
                     <li><b>साझा राष्ट्रीय संकल्प:</b> सामाजिक न्याय प्रत्येक नागरिक में राष्ट्र के प्रति निष्ठा और जिम्मेदारी की भावना को जगाता है।</li>
                     <li><b>विविधता का एकीकरण:</b> बहुसांस्कृतिक समाज में सभी धर्मों, भाषाओं और जातियों को समान सम्मान देकर ही भाईचारे (Fraternity) की भावना स्थापित की जा सकती है।</li>
                     <li><b>संवैधानिक मर्यादा:</b> देश की एकता का सबसे मजबूत धागा संविधान की प्रस्तावना में निहित 'सामाजिक, आर्थिक और राजनैतिक न्याय' का साझा संकल्प है।</li>
-                    <li><b>हाशिए के वर्ग का देशप्रेम:</b> जब कोई दबा-कुचला नागरिक महसूस करता है कि कानून और राज्य उसकी रक्षा करते हैं, तो राष्ट्र के प्रति उसकी आस्था स्वतः मज़बूत हो जाती品质।</li>
+                    <li><b>हाशिए के वर्ग का देशप्रेम:</b> जब कोई दबा-कुचला नागरिक महसूस करता है कि कानून और राज्य उसकी रक्षा करते हैं, तो राष्ट्र के प्रति उसकी आस्था स्वतः मज़बूत हो जाती है।</li>
                 </ul>
             </div>
 
 
             <!-- PART 18 -->
-            <div class="part-container" style="border-top: 10px solid #0369a1;">
+            <div class="part-container" style="border-top-color: #0369a1;">
                 <h2 style="color: #075985 !important; background-color: #f0f9ff; border-left: 10px solid #0369a1; padding: 20px 25px; border-radius: 10px; font-size: 32pt; font-weight: 900 !important; margin-top: 0; -webkit-text-stroke: 1px #075985;">18. लिंग (Gender) और सामाजिक न्याय—एक अदृश्य असमानता</h2>
                 <p style="font-size: 18pt; text-align: justify;">लैंगिक असमानता समाज की सबसे पुरानी और व्यापक असमानताओं में से एक है। महिलाओं को सामाजिक-आर्थिक रूप से पुरुषों के समकक्ष लाना सामाजिक न्याय का सबसे महत्वपूर्ण लक्ष्य है।</p>
 
                 <h3 style="color: #075985; font-size: 24pt;">18.1 लैंगिक न्याय के प्रमुख आयाम:</h3>
-                <ul style="font-size: 18pt; line-height: 1.8; color: #000000; list-style-type: disc;">
+                <ul style="font-size: 18pt; line-height: 1.8; color: #000000; list-style-type: square;">
                     <li><b>श्रम का असमान विभाजन:</b> महिलाओं के घरेलू कार्यों को आर्थिक रूप से अदृश्य और अनुत्पादक मानने की रूढ़िवादी सोच को बदलना।</li>
                     <li><b>समान कार्य के लिए समान वेतन:</b> कार्यस्थलों पर महिलाओं के प्रति होने वाले आर्थिक भेदभाव को रोकना और समान काम के लिए पुरुषों के बराबर वेतन दिलाना।</li>
                     <li><b>संपत्ति पर कानूनी अधिकार:</b> महिलाओं को पिता और पति की संपत्ति में समान कानूनी अधिकार सुनिश्चित करना ताकि वे आर्थिक रूप से आत्मनिर्भर बन सकें।</li>
@@ -392,12 +416,12 @@
 
 
             <!-- PART 19 -->
-            <div class="part-container" style="border-top: 10px solid #059669;">
+            <div class="part-container" style="border-top-color: #059669;">
                 <h2 style="color: #065f46 !important; background-color: #f0fdf4; border-left: 10px solid #059669; padding: 20px 25px; border-radius: 10px; font-size: 32pt; font-weight: 900 !important; margin-top: 0; -webkit-text-stroke: 1px #065f46;">19. सामाजिक न्याय सुनिश्चित करने में न्यायपालिका की भूमिका</h2>
                 <p style="font-size: 18pt; text-align: justify;">न्यायपालिका देश के संविधान की संरक्षक है। जब कार्यपालिका और विधायिका सामाजिक न्याय स्थापित करने में शिथिल पड़ती हैं, तब अदालतें सक्रिय हस्तक्षेप करती हैं।</p>
 
                 <h3 style="color: #065f46; font-size: 24pt;">19.1 जनहित याचिका (PIL) का महत्व:</h3>
-                <ul style="font-size: 18pt; line-height: 1.8; color: #000000; list-style-type: disc;">
+                <ul style="font-size: 18pt; line-height: 1.8; color: #000000; list-style-type: square;">
                     <li><b>कमज़ोरों की आवाज़:</b> पीआईएल के माध्यम से समाज का कोई भी प्रबुद्ध नागरिक गरीबों, बंधुआ मजदूरों या जेल के कैदियों की ओर से न्याय की गुहार लगा सकता है।</li>
                     <li><b>कार्यस्थलों पर सुरक्षा के निर्देश:</b> विशाखा गाइडलाइंस जैसे ऐतिहासिक फैसलों के माध्यम से कार्यस्थलों पर महिलाओं की सुरक्षा का खाका तैयार करना।</li>
                     <li><b>पर्यावरणीय सुरक्षा और जनहित:</b> फैक्ट्रियों के प्रदूषण को रोकने और स्वच्छ हवा व पानी के अधिकार को जीवन के अधिकार (अनुच्छेद 21) का हिस्सा मानना।</li>
@@ -408,12 +432,12 @@
 
 
             <!-- PART 20 -->
-            <div class="part-container" style="border-top: 10px solid #0f172a; background-color: #0f172a; color: #ffffff; padding: 40px; border-radius: 12px; margin-bottom: 50px; border: 5px double #334155;">
-                <h2 style="color: #ffffff !important; border-bottom: 3px solid #475569; padding-bottom: 20px; font-size: 32pt; font-weight: 900 !important; margin-top: 0; text-align: center;">20. निष्कर्ष: न्याय—एक मानवीय और नैतिक संकल्प</h2>
+            <div class="part-container" style="border-top-color: #0f172a; background-color: #0f172a; color: #ffffff; padding: 50px; border-radius: 15px; margin-bottom: 80px; border: 5px double #334155;">
+                <h2 style="color: #ffffff !important; border-bottom: 2px solid #475569; padding-bottom: 20px; font-size: 32pt; font-weight: 900 !important; margin-top: 0; text-align: center;">20. निष्कर्ष: न्याय—एक मानवीय और नैतिक संकल्प</h2>
                 <p style="font-size: 18pt; text-align: justify; color: #cbd5e1;">अध्याय 14 (सामाजिक न्याय) का यह गहन सफर हमें इस मूल सत्य तक ले जाता है कि 'न्याय' केवल अदालतों या सरकारी कानूनों में नहीं, बल्कि हमारी सामाजिक अंतरात्मा में होना चाहिए।</p>
 
                 <h3 style="color: #38bdf8; font-size: 24pt;">20.1 निष्कर्ष के प्रमुख स्तंभ:</h3>
-                <ul style="font-size: 18pt; line-height: 1.8; color: #cbd5e1; list-style-type: disc;">
+                <ul style="font-size: 18pt; line-height: 1.8; color: #cbd5e1; list-style-type: square;">
                     <li><b>नैतिक संवेदनशीलता:</b> न्यायपूर्ण समाज की अंतिम कसौटी यह है कि हम दूसरों के दुख, अलगाव और अभाव को अपना समझें और अन्याय को कहीं भी स्वीकार न करें।</li>
                     <li><b>रॉल्स का अज्ञानता का आवरण:</b> यह सिद्धांत हमें एक निष्पक्ष, करुणामयी और पूर्वाग्रह-मुक्त नागरिक बनने के लिए निरंतर प्रेरित करता है।</li>
                     <li><b>न्याय, स्वतंत्रता और समानता का संगम:</b> ये तीनों मूल्य एक-दूसरे के पूरक हैं। बिना सामाजिक न्याय के स्वतंत्रता और समानता दोनों अर्थहीन परिकल्पनाएँ हैं।</li>
