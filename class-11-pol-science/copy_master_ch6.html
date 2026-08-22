@@ -2,16 +2,448 @@
 <html lang="hi">
 <head>
     <meta charset="UTF-8">
-    <title>Chapter 6 - Premium Notes (Class 11)</title>
+    <title>Chapter 6 COPY MASTER - Premium Notes (Judiciary)</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;700;900&family=Outfit:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        #control-header {
+            position: fixed; top: 0; left: 0; width: 100%; background-color: #0f172a; color: #ffffff;
+            padding: 15px 20px; display: flex; justify-content: space-between; align-items: center;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); z-index: 1000; font-family: 'Outfit', sans-serif; box-sizing: border-box;
+        }
+        #control-header h1 { margin: 0; font-size: 1.4rem; font-weight: 900; }
+        body {
+            margin-top: 80px;
+            background-color: #ffffff;
+            font-family: 'Outfit', 'Noto Sans Devanagari', sans-serif;
+            font-size: 20pt;
+            font-weight: 800;
+            line-height: 2.2;
+            color: #000000;
+        }
+        p, li, div, td, th {
+            font-weight: 800 !important;
+            color: #000000 !important;
+        }
+        b, strong {
+            font-weight: 900 !important;
+            color: #000000 !important;
+        }
+        ul, ol { padding-left: 60px !important; margin-left: 20px !important; }
+        li {
+            padding-left: 15px;
+            margin-bottom: 25px;
+            text-align: justify;
+            line-height: 2.2;
+            font-size: 20pt;
+            font-weight: 800 !important;
+        }
+        /* Heavy text thickness for projector visibility */
+        p, li, h1, h2, h3, h4, b, strong {
+            font-weight: 900 !important;
+            -webkit-text-stroke: 0.5px #000000;
+        }
+        
+        .part-container {
+            margin-bottom: 80px; padding: 50px 60px; background-color: #ffffff;
+            border-radius: 15px; box-shadow: 0 15px 25px -5px rgba(0,0,0,0.05);
+            border-top: 12px solid #1e3a8a;
+        }
+        .info-box {
+            background-color: #f8fafc; padding: 30px; border-left: 14px solid #1e3a8a; 
+            margin: 30px 0; border-radius: 8px; font-size: 19pt; line-height: 2.2; font-weight: 900;
+        }
+        .debate-box {
+            background-color: #fffbeb; padding: 30px; border: 6px solid #b45309; 
+            border-radius: 15px; margin: 40px 0; line-height: 2.2; font-size: 19pt; font-weight: 900;
+        }
+    </style>
+    <script>
+        function copyToGoogleDoc() {
+            var content = document.getElementById('contentToCopy').innerHTML;
+            var blob = new Blob([content], { type: 'text/html' });
+            var data = [new ClipboardItem({ 'text/html': blob })];
+            
+            navigator.clipboard.write(data).then(function() {
+                var status = document.getElementById('status');
+                status.style.display = 'block';
+                setTimeout(function() {
+                    status.style.display = 'none';
+                }, 5000);
+            }).catch(function(err) {
+                alert('Copy failed: ' + err);
+            });
+        }
+    </script>
 </head>
 <body>
+
+    <!-- Persistent Control Header -->
+    <div id="control-header">
+        <h1>📖 अध्याय 6: न्यायपालिका (JUDICIARY) - 100-PAGE MASTER NOTES</h1>
+        <button id="mainCopyBtn" onclick="copyToGoogleDoc()">
+            📋 COPY EVERYTHING FOR GOOGLE DOCS
+        </button>
+    </div>
+    
+    <div id="status" style="display: none; position: fixed; top: 70px; right: 20px; background-color: #059669; color: white; padding: 12px 24px; border-radius: 6px; z-index: 1000; font-family: sans-serif; font-size: 14px; font-weight: bold; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+        ✨ SUCCESS! Content copied to clipboard in rich format. Now open Google Docs and press Ctrl+V.
+    </div>
+
     <div id="contentToCopy">
-        <div style="font-family: 'Arial', verdana, sans-serif; font-size: 16pt; line-height: 1.8; color: #1a202c;">
-            <h1 style="text-align: center; color: #1e3a8a; font-size: 40pt; font-weight: bold; border-bottom: 5px solid #3b82f6; padding-bottom: 30px; margin-bottom: 40px;">
-                अध्याय 6: जल्द ही आ रहा है...<br/>
-                <span style="font-size: 24pt; color:#6b7280; font-weight: normal;">(Coming Soon...)</span>
-            </h1>
-            <p style="text-align: center; font-size: 20pt;">इस अध्याय के विस्तृत नोट्स और प्रीमियम कंटेंट पर अभी काम चल रहा है। कृपया कुछ समय बाद पुनः देखें।</p>
+        <div style="font-family: 'Outfit', 'Noto Sans Devanagari', sans-serif; font-size: 20pt; line-height: 2.2; color: #000000; max-width: 1400px; margin: auto; padding: 20px;">
+
+            <!-- Title Section (Projector Friendly) -->
+            <div style="text-align: center; margin-bottom: 80px; padding: 75px; border: 15px double #1e3a8a; background-color: #eff6ff; border-radius: 30px;">
+                <h1 style="color: #1e3a8a !important; font-size: 58pt; font-weight: 950 !important; margin-bottom: 20px; -webkit-text-stroke: 1.5px #1e3a8a;">
+                    अध्याय 6: न्यायपालिका<br/>
+                    <span style="font-size: 30pt; color:#475569; font-weight: 900;">(JUDICIARY)</span>
+                </h1>
+                <p style="font-size: 26pt; color: #000000; margin-top: 10px; font-weight: 900;">कक्षा 11 राजनीति विज्ञान - अति-गहन शैक्षणिक मास्टर नोट्स</p>
+                <p style="font-size: 20pt; color: #b91c1c; font-style: italic; font-weight: 900;">(विशेष फोकस: स्वतंत्र न्यायपालिका, केशवानंद भारती केस, मूल संरचना सिद्धांत, कॉलेजियम, और PIL)</p>
+            </div>
+
+            
+            <!-- PART 1 -->
+            <div class="part-container" style="border-top-color: #0284c7;">
+                <h2 style="color: #0369a1 !important; background-color: #f0f9ff; border-left: 10px solid #0284c7; padding: 20px 25px; border-radius: 10px; font-size: 32pt; font-weight: 900 !important; margin-top: 0; -webkit-text-stroke: 1px #0369a1;">1. हमें स्वतंत्र न्यायपालिका की आवश्यकता क्यों है?</h2>
+                <p style="font-size: 18pt; text-align: justify;">स्वतंत्र न्यायपालिका किसी भी लोकतंत्र की रीढ़ है। यह कार्यपालिका और विधायिका के प्रभाव से सर्वथा मुक्त रहकर संविधान की सर्वोच्चता और नागरिकों के अधिकारों की रक्षा करती है।</p>
+
+                <h3 style="color: #0369a1; font-size: 24pt;">1.1 न्यायपालिका की स्वतंत्रता और आवश्यकता:</h3>
+                <ul style="font-size: 18pt; line-height: 1.8; color: #000000; list-style-type: square;">
+                    <li><b>संविधान की रक्षा:</b> न्यायपालिका संविधान की अंतिम व्याख्याकार है; यह विधायिका या कार्यपालिका को संविधान का उल्लंघन करने से रोकती है।</li>
+                    <li><b>मौलिक अधिकारों का संरक्षण:</b> नागरिकों के मौलिक अधिकारों का हनन होने पर अदालतों द्वारा तुरंत सुरक्षा प्रदान करना।</li>
+                    <li><b>निष्पक्ष विवाद निपटारा:</b> केंद्र-राज्यों, दो राज्यों, या नागरिकों और सरकार के बीच उठने वाले कानूनी विवादों का पूर्ण निष्पक्षता से न्याय करना।</li>
+                    <li><b>दबाव-मुक्त निर्णय:</b> न्यायाधीशों को बिना किसी राजनैतिक दबाव, धमकी या प्रलोभन के कानून के अनुसार निर्भीक होकर न्याय करने की आज़ादी देना।</li>
+                    <li><b>कानून का शासन (Rule of Law):</b> देश में यह स्थापित करना कि कानून से ऊपर कोई नहीं है, चाहे वह अमीर हो, गरीब हो या शक्तिशाली राजनेता।</li>
+                </ul>
+            </div>
+
+
+            <!-- PART 2 -->
+            <div class="part-container" style="border-top-color: #059669;">
+                <h2 style="color: #065f46 !important; background-color: #f0fdf4; border-left: 10px solid #059669; padding: 20px 25px; border-radius: 10px; font-size: 32pt; font-weight: 900 !important; margin-top: 0; -webkit-text-stroke: 1px #065f46;">2. भारत में न्यायपालिका की संरचना: पिरामिड मॉडल</h2>
+                <p style="font-size: 18pt; text-align: justify;">भारतीय न्यायपालिका की संरचना एक एकीकृत (Integrated) और पिरामिड के समान है, जिसमें शीर्ष पर भारत का सर्वोच्च न्यायालय और आधार में अधीनस्थ न्यायालय आते हैं।</p>
+
+                <h3 style="color: #065f46; font-size: 24pt;">2.1 पिरामिड संरचना के प्रमुख स्तर:</h3>
+                <ul style="font-size: 18pt; line-height: 1.8; color: #000000; list-style-type: square;">
+                    <li><b>सर्वोच्च न्यायालय (Supreme Court):</b> पिरामिड के शीर्ष पर स्थित देश की सबसे बड़ी अदालत, जिसके फैसले देश की सभी अदालतों पर बाध्यकारी होते हैं।</li>
+                    <li><b>उच्च न्यायालय (High Courts):</b> राज्य स्तर पर सर्वोच्च न्यायिक संस्थाएं जो अपने राज्य के अधीन आने वाली सभी अदालतों की निगरानी करती हैं।</li>
+                    <li><b>जिला न्यायालय (District Courts):</b> जिला स्तर पर मुकदमों की सुनवाई करने वाले न्यायालय जो दीवानी (Civil) और फौजदारी (Criminal) मामलों का फैसला करते हैं।</li>
+                    <li><b>अधीनस्थ न्यायालय (Subordinate Courts):</b> सबसे निचले स्तर पर स्थित सिविल जज और मजिस्ट्रेट कोर्ट जहाँ जनता सीधे अपने मुकदमों को लेकर पहुँचती है।</li>
+                    <li><b>एकीकृत प्रणाली:</b> निचले न्यायालयों के फैसलों के खिलाफ उच्च न्यायालयों और अंततः सर्वोच्च न्यायालय में अपील करने की एक जुड़ी हुई व्यवस्था।</li>
+                </ul>
+            </div>
+
+
+            <!-- PART 3 -->
+            <div class="part-container" style="border-top-color: #d97706;">
+                <h2 style="color: #92400e !important; background-color: #fff7ed; border-left: 10px solid #d97706; padding: 20px 25px; border-radius: 10px; font-size: 32pt; font-weight: 900 !important; margin-top: 0; -webkit-text-stroke: 1px #92400e;">3. सर्वोच्च न्यायालय का अधिकार क्षेत्र: प्रारंभिक बनाम अपीलीय</h2>
+                <p style="font-size: 18pt; text-align: justify;">भारत के सर्वोच्च न्यायालय के पास असाधारण और विस्तृत अधिकार क्षेत्र हैं जो इसे विश्व के सबसे शक्तिशाली न्यायालयों में से एक बनाते हैं।</p>
+
+                <h3 style="color: #92400e; font-size: 24pt;">3.1 प्रारंभिक क्षेत्राधिकार (Original Jurisdiction - अनुच्छेद 131):</h3>
+                <ul style="font-size: 18pt; line-height: 1.8; color: #000000; list-style-type: square;">
+                    <li><b>सीधे सुनवाई की शक्ति:</b> वे मुकदमे जिन्हें भारत की किसी अन्य अदालत में नहीं, बल्कि केवल सीधे सुप्रीम कोर्ट में ही शुरू किया जा सकता है।</li>
+                    <li><b>संघीय विवाद:</b> भारत सरकार और एक या एक से अधिक राज्यों के बीच विवाद, अथवा दो या दो से अधिक राज्यों के बीच आपसी कानूनी विवाद।</li>
+                    <li><b>मौलिक अधिकारों का हनन:</b> किसी भी नागरिक के मौलिक अधिकारों का हनन होने पर सीधे सुप्रीम कोर्ट द्वारा मामले की प्रारंभिक सुनवाई करना।</li>
+                </ul>
+
+                <h3 style="color: #92400e; font-size: 24pt;">3.2 अपीलीय क्षेत्राधिकार (Appellate Jurisdiction - अनुच्छेद 132-136):</h3>
+                <ul style="font-size: 18pt; line-height: 1.8; color: #000000; list-style-type: square;">
+                    <li><b>अंतिम अपीलीय अदालत:</b> उच्च न्यायालयों के फैसलों के खिलाफ दीवानी, फौजदारी और संवैधानिक मामलों में अपील सुनने का सर्वोच्च अधिकार।</li>
+                    <li><b>संविधान की व्याख्या का प्रश्न:</b> जब किसी मुकदमे में संविधान की व्याख्या से जुड़ा कोई गंभीर कानूनी प्रश्न शामिल हो, तो उसकी अंतिम अपील सुनना।</li>
+                    <li><b>विशेष अनुमति याचिका (SLP - अनुच्छेद 136):</b> देश के किसी भी न्यायाधिकरण या कोर्ट के फैसले के खिलाफ अपील सुनने का विशेष विवेकाधीन अधिकार।</li>
+                </ul>
+            </div>
+
+
+            <!-- PART 4 -->
+            <div class="part-container" style="border-top-color: #7c3aed;">
+                <h2 style="color: #5b21b6 !important; background-color: #f5f3ff; border-left: 10px solid #7c3aed; padding: 20px 25px; border-radius: 10px; font-size: 32pt; font-weight: 900 !important; margin-top: 0; -webkit-text-stroke: 1px #5b21b6;">4. सलाहकारी एवं रिट क्षेत्राधिकार</h2>
+                <p style="font-size: 18pt; text-align: justify;">सुप्रीम कोर्ट को देश में संवैधानिक मर्यादा बनाए रखने के लिए राष्ट्रपति को कानूनी राय देने और अधिकारों की रक्षा के लिए रिट जारी करने की विशेष शक्तियां हैं।</p>
+
+                <h3 style="color: #5b21b6; font-size: 24pt;">4.1 सलाहकारी क्षेत्राधिकार (Advisory Jurisdiction - अनुच्छेद 143):</h3>
+                <ul style="font-size: 18pt; line-height: 1.8; color: #000000; list-style-type: square;">
+                    <li><b>राष्ट्रपति द्वारा परामर्श:</b> यदि राष्ट्रपति को लगे कि कोई ऐसा तथ्य या कानून का प्रश्न उठा है जो सार्वजनिक महत्व का है, तो वे सुप्रीम कोर्ट से राय मांग सकते हैं।</li>
+                    <li><b>राय देने की स्वतंत्रता:</b> सुप्रीम कोर्ट राय देने के लिए बाध्य नहीं है (जैसे बाबरी मस्जिद मामले पर राय देने से इंकार किया)।</li>
+                    <li><b>बाध्यकारी न होना:</b> सुप्रीम कोर्ट द्वारा दी गई राय को मानने के लिए देश का राष्ट्रपति कानूनी रूप से बाध्य नहीं है।</li>
+                </ul>
+
+                <h3 style="color: #5b21b6; font-size: 24pt;">4.2 रिट क्षेत्राधिकार (Writ Jurisdiction - अनुच्छेद 32):</h3>
+                <ul style="font-size: 18pt; line-height: 1.8; color: #000000; list-style-type: square;">
+                    <li><b>अधिकारों का रक्षक:</b> किसी नागरिक के अधिकारों के हनन पर सुप्रीम कोर्ट को पांच प्रकार की विशेष रिटें जारी करने की शक्ति।</li>
+                    <li><b>पांच प्रकार की रिटें:</b> बंदी प्रत्यक्षीकरण, परमादेश, प्रतिषेध, उत्प्रेषण और अधिकार पृच्छा के माध्यम से त्वरित राहत प्रदान करना।</li>
+                    <li><b>अनुच्छेद 226:</b> सुप्रीम कोर्ट के समान ही उच्च न्यायालयों (High Courts) को भी अपने राज्यों के भीतर रिट जारी करने का अधिकार है।</li>
+                </ul>
+            </div>
+
+
+            <!-- PART 5 -->
+            <div class="part-container" style="border-top-color: #4c1d95;">
+                <h2 style="color: #4c1d95 !important; background-color: #faf5ff; border-left: 10px solid #4c1d95; padding: 20px 25px; border-radius: 10px; font-size: 32pt; font-weight: 900 !important; margin-top: 0; -webkit-text-stroke: 1px #4c1d95;">5. न्यायिक सक्रियता (Judicial Activism) एवं PIL</h2>
+                <p style="font-size: 18pt; text-align: justify;">1980 के दशक के बाद भारतीय न्यायपालिका में 'न्यायिक सक्रियता' (Judicial Activism) और जनहित याचिका (Public Interest Litigation - PIL) के उदय ने न्याय की अवधारणा को बदल दिया।</p>
+
+                <h3 style="color: #4c1d95; font-size: 24pt;">5.1 PIL और न्यायिक सक्रियता के प्रमुख आयाम:</h3>
+                <ul style="font-size: 18pt; line-height: 1.8; color: #000000; list-style-type: square;">
+                    <li><b>पीआईएल (PIL) का सिद्धांत:</b> अब पीड़ित व्यक्ति के स्थान पर समाज का कोई भी जागरूक नागरिक कमजोर और वंचित लोगों के न्याय के लिए कोर्ट में याचिका दायर कर सकता है।</li>
+                    <li><b>अदालत की स्वतः संज्ञान शक्ति (Suo Motu):</b> समाचार पत्रों की रिपोर्टों या साधारण पोस्टकार्ड को भी याचिका मानकर अदालतों द्वारा सीधे कानूनी जांच शुरू करना।</li>
+                    <li><b>न्यायमूर्ति पी.एन. भगवती:</b> भारत में पीआईएल की अवधारणा को लोकप्रिय बनाने में जस्टिस पी.एन. भगवती और जस्टिस वी.आर. कृष्ण अय्यर की ऐतिहासिक भूमिका।</li>
+                    <li><b>न्याय का लोकतंत्रीकरण:</b> इसके कारण कोर्ट केवल अमीरों की जागीर न रहकर, देश के सबसे निर्धन, बंधुआ मजदूरों और जेल में बंद कैदियों के लिए भी न्याय का साधन बनी।</li>
+                    <li><b>कार्यपालिका को निर्देश:</b> प्रदूषण नियंत्रण, पर्यावरण सुरक्षा और बच्चों के अधिकारों को लेकर अदालतों द्वारा सरकारों को सीधे कड़े प्रशासनिक आदेश देना।</li>
+                </ul>
+            </div>
+
+
+            <!-- PART 6 -->
+            <div class="part-container" style="border-top-color: #0d9488;">
+                <h2 style="color: #0f766e !important; background-color: #f0fdf4; border-left: 10px solid #0d9488; padding: 20px 25px; border-radius: 10px; font-size: 32pt; font-weight: 900 !important; margin-top: 0; -webkit-text-stroke: 1px #0f766e;">6. न्यायिक सक्रियता के सकारात्मक एवं नकारात्मक प्रभाव</h2>
+                <p style="font-size: 18pt; text-align: justify;">न्यायिक सक्रियता ने भारतीय लोकतंत्र को मज़बूत किया है, लेकिन साथ ही इसके कारण शक्तियों के पृथक्करण के सिद्धांत के उल्लंघन की चिंताएं भी उठी हैं।</p>
+
+                <h3 style="color: #0f766e; font-size: 24pt;">6.1 न्यायिक सक्रियता के सकारात्मक प्रभाव (Pros):</h3>
+                <ul style="font-size: 18pt; line-height: 1.8; color: #000000; list-style-type: square;">
+                    <li><b>कार्यपालिका की सुस्ती पर प्रहार:</b> जब सरकार या पुलिस अपने प्रशासनिक कर्तव्यों में लापरवाही करती है, तो कोर्ट उसे सुधारने के लिए मजबूर करता है।</li>
+                    <li><b>मानवाधिकारों की सुरक्षा:</b> कैदियों की प्रताड़ना, बाल श्रम और महिलाओं के खिलाफ हिंसा जैसे गंभीर मुद्दों पर कोर्ट ने तुरंत कड़े नियम बनाए।</li>
+                    <li><b>पर्यावरण और जन-कल्याण:</b> वायु प्रदूषण, नदियों की सफाई और अवैध निर्माणों को रोकने में न्यायपालिका की सक्रियता से बड़ी राहत मिली।</li>
+                </ul>
+
+                <h3 style="color: #0f766e; font-size: 24pt;">6.2 न्यायिक सक्रियता के नकारात्मक प्रभाव (Cons):</h3>
+                <ul style="font-size: 18pt; line-height: 1.8; color: #000000; list-style-type: square;">
+                    <li><b>न्यायिक अतिक्रमण (Judicial Overreach):</b> कई बार कोर्ट ऐसे नीतिगत फैसले लेने लगता है जो वास्तव में निर्वाचित सरकार (कार्यपालिका) के काम हैं।</li>
+                    <li><b>मुकदमों का बढ़ता बोझ:</b> पहले से ही करोड़ों मुकदमे लंबित होने के बावजूद, पीआईएल की बाढ़ के कारण अदालतों का कीमती समय व्यर्थ होना।</li>
+                    <li><b>लोकतांत्रिक संतुलन पर खतरा:</b> यदि न्यायपालिका हर प्रशासनिक काम (जैसे सड़क निर्माण या स्कूल फीस) खुद तय करेगी, तो कार्यपालिका की प्रासंगिकता कम होगी।</li>
+                </ul>
+            </div>
+
+
+            <!-- PART 7 -->
+            <div class="part-container" style="border-top-color: #4338ca;">
+                <h2 style="color: #3730a3 !important; background-color: #eef2ff; border-left: 10px solid #4338ca; padding: 20px 25px; border-radius: 10px; font-size: 32pt; font-weight: 900 !important; margin-top: 0; -webkit-text-stroke: 1px #3730a3;">7. न्यायपालिका और अधिकार: संविधान का सुरक्षा कवच</h2>
+                <p style="font-size: 18pt; text-align: justify;">संविधान ने न्यायपालिका को नागरिकों के अधिकारों का मुख्य संरक्षक बनाया है। अधिकार तब तक अर्थहीन हैं जब तक उन्हें लागू कराने वाली मजबूत अदालतें न हों।</p>
+
+                <h3 style="color: #3730a3; font-size: 24pt;">7.1 अधिकारों की सुरक्षा में न्यायपालिका की भूमिका:</h3>
+                <ul style="font-size: 18pt; line-height: 1.8; color: #000000; list-style-type: square;">
+                    <li><b>अनुच्छेद 13 (असंगत कानूनों पर रोक):</b> न्यायपालिका ऐसे किसी भी कानून को शून्य/रद्द कर सकती है जो नागरिकों के मौलिक अधिकारों का उल्लंघन करता हो।</li>
+                    <li><b>न्यायिक समीक्षा (Judicial Review):</b> संसद और राज्यों की विधानसभाओं द्वारा बनाए गए हर कानून की संवैधानिक वैधता की जांच करने का पूर्ण अधिकार।</li>
+                    <li><b>अधिकारों का विस्तार:</b> जीवन के अधिकार (अनुच्छेद 21) के दायरे में निजता, शिक्षा, स्वच्छ पर्यावरण और मुफ्त कानूनी सहायता को शामिल कर अधिकारों को समृद्ध करना।</li>
+                    <li><b>रिटों के माध्यम से त्वरित राहत:</b> बंदी प्रत्यक्षीकरण और परमादेश जैसी रिटों द्वारा पुलिस प्रशासन की ज्यादतियों से आम नागरिकों की तुरंत रक्षा करना।</li>
+                    <li><b>नागरिकों का अंतिम भरोसा:</b> जब कार्यपालिका और पुलिस नागरिकों के उत्पीड़न पर उतारू हो, तो कोर्ट अंतिम शरणदाता के रूप में न्याय की गारंटी देता है।</li>
+                </ul>
+            </div>
+
+
+            <!-- PART 8 -->
+            <div class="part-container" style="border-top-color: #be123c;">
+                <h2 style="color: #9f1239 !important; background-color: #fff1f2; border-left: 10px solid #be123c; padding: 20px 25px; border-radius: 10px; font-size: 32pt; font-weight: 900 !important; margin-top: 0; -webkit-text-stroke: 1px #9f1239;">8. न्यायपालिका और संसद: शक्ति संघर्ष (Article 368)</h2>
+                <p style="font-size: 18pt; text-align: justify;">भारतीय संवैधानिक इतिहास में संसद (विधायिका) और न्यायपालिका के बीच शक्तियों के दायरे को लेकर एक लंबा और तीव्र राजनैतिक-कानूनी संघर्ष देखने को मिला है।</p>
+
+                <h3 style="color: #9f1239; font-size: 24pt;">8.1 संसद और न्यायपालिका के बीच संघर्ष के प्रमुख आयाम:</h3>
+                <ul style="font-size: 18pt; line-height: 1.8; color: #000000; list-style-type: square;">
+                    <li><b>संशोधन की शक्ति बनाम समीक्षा:</b> संसद का मानना था कि उसे अनुच्छेद 368 के तहत संविधान के किसी भी हिस्से (मौलिक अधिकारों सहित) को बदलने का असीमित हक है।</li>
+                    <li><b>न्यायपालिका की आपत्ति:</b> कोर्ट का मत था कि संसद को संशोधन की शक्ति है, लेकिन वह संविधान की मूल मर्यादाओं और नागरिकों की बुनियादी आजादी को खत्म नहीं कर सकती।</li>
+                    <li><b>संपत्ति का अधिकार विवाद:</b> जब जमींदारी उन्मूलन और भूमि सुधार कानूनों को कोर्ट ने संपत्ति के मौलिक अधिकार के उल्लंघन के आधार पर रद्द किया, तो संसद ने संविधान संशोधन किए।</li>
+                    <li><b>गोलकनाथ मामला (1967):</b> कोर्ट ने ऐतिहासिक निर्णय दिया कि संसद मौलिक अधिकारों को कम या समाप्त करने के लिए कोई भी संशोधन नहीं कर सकती।</li>
+                    <li><b>संविधान संशोधनों की बाढ़:</b> सरकार द्वारा अदालतों के फैसलों को निष्प्रभावी करने के लिए 24वें और 25वें संविधान संशोधन पारित करना।</li>
+                </ul>
+            </div>
+
+
+            <!-- PART 9 -->
+            <div class="part-container" style="border-top-color: #1e3a8a;">
+                <h2 style="color: #1e40af !important; background-color: #eff6ff; border-left: 10px solid #1e3a8a; padding: 20px 25px; border-radius: 10px; font-size: 32pt; font-weight: 900 !important; margin-top: 0; -webkit-text-stroke: 1px #1e40af;">9. मूल संरचना का सिद्धांत (Kesavananda Bharati Case)</h2>
+                <p style="font-size: 18pt; text-align: justify;">1973 का केशवानंद भारती बनाम केरल राज्य मामला भारतीय न्यायिक इतिहास का सबसे ऐतिहासिक मील का पत्थर है, जिसने 'मूल संरचना' (Basic Structure) के सिद्धांत को जन्म दिया।</p>
+
+                <h3 style="color: #1e40af; font-size: 24pt;">9.1 मूल संरचना सिद्धांत के प्रमुख पहलू:</h3>
+                <ul style="font-size: 18pt; line-height: 1.8; color: #000000; list-style-type: square;">
+                    <li><b>संसद की शक्तियों पर सीमा:</b> कोर्ट ने माना कि संसद संविधान में संशोधन तो कर सकती है, लेकिन वह उसके बुनियादी ढांचे (Basic Structure) को नष्ट नहीं कर सकती।</li>
+                    <li><b>बुनियादी ढांचे में क्या शामिल है:</b> लोकतंत्र, धर्मनिरपेक्षता, संघीय व्यवस्था, न्यायपालिका की स्वतंत्रता, कानून का शासन, और संसदीय प्रणाली।</li>
+                    <li><b>संसदीय संप्रभुता पर न्यायिक अंकुश:</b> यह सिद्धांत संसद को एक सीमा के भीतर बांधता है और उसे तानाशाही संशोधन करने से पूरी तरह कानूनी रूप से रोकता है।</li>
+                    <li><b>लचीलेपन और स्थिरता का संतुलन:</b> इसके कारण हमारा संविधान समय के साथ बदलने के लिए लचीला भी रहा और अपनी मूल लोकतांत्रिक आत्मा को खोने से बचा भी रहा।</li>
+                    <li><b>न्यायपालिका की सर्वोच्चता:</b> कोई संशोधन मूल संरचना का उल्लंघन करता है या नहीं, इसका अंतिम निर्णय लेने का अधिकार कोर्ट ने अपने पास सुरक्षित रखा।</li>
+                </ul>
+            </div>
+
+
+            <!-- PART 10 -->
+            <div class="part-container" style="border-top-color: #be185d;">
+                <h2 style="color: #be185d !important; background-color: #fdf2f8; border-left: 10px solid #be185d; padding: 20px 25px; border-radius: 10px; font-size: 32pt; font-weight: 900 !important; margin-top: 0; -webkit-text-stroke: 1px #be185d;">10. न्यायाधीशों की नियुक्ति: कॉलेजियम बनाम NJAC</h2>
+                <p style="font-size: 18pt; text-align: justify;">उच्च न्यायपालिका में न्यायाधीशों की नियुक्ति की प्रक्रिया हमेशा से विवाद का विषय रही है। निष्पक्ष नियुक्ति ही न्यायपालिका की स्वतंत्रता की पहली सीढ़ी है।</p>
+
+                <h3 style="color: #be185d; font-size: 24pt;">10.1 न्यायाधीशों की नियुक्ति के प्रमुख पहलू:</h3>
+                <ul style="font-size: 18pt; line-height: 1.8; color: #000000; list-style-type: square;">
+                    <li><b>कॉलेजियम प्रणाली (Collegium System):</b> इसमें भारत के मुख्य न्यायाधीश (CJI) और चार वरिष्ठतम न्यायाधीशों का समूह नए जजों की नियुक्ति की सिफारिश सरकार को भेजता है।</li>
+                    <li><b>स्वयं की नियुक्ति:</b> आलोचक इसे 'जजों द्वारा जजों की नियुक्ति' कहते हैं, जिसमें पारदर्शिता और जवाबदेही की कमी का आरोप लगाया जाता है।</li>
+                    <li><b>NJAC कानून (99वाँ संशोधन):</b> सरकार ने नियुक्ति में पारदर्शिता लाने के लिए राष्ट्रीय न्यायिक नियुक्ति आयोग (NJAC) का गठन किया, जिसमें कानून मंत्री भी सदस्य थे।</li>
+                    <li><b>संशोधन को रद्द करना:</b> 2015 में सुप्रीम कोर्ट ने NJAC को न्यायपालिका की स्वतंत्रता में हस्तक्षेप मानकर असंवैधानिक घोषित कर पूरी तरह रद्द कर दिया।</li>
+                    <li><b>संवैधानिक प्रावधान:</b> अनुच्छेद 124 के तहत राष्ट्रपति सुप्रीम कोर्ट और हाई कोर्ट के जजों की नियुक्ति CJI के साथ अनिवार्य परामर्श के बाद करते हैं।</li>
+                </ul>
+            </div>
+
+
+            <!-- PART 11 -->
+            <div class="part-container" style="border-top-color: #f59e0b;">
+                <h2 style="color: #b45309 !important; background-color: #fffbeb; border-left: 10px solid #f59e0b; padding: 20px 25px; border-radius: 10px; font-size: 32pt; font-weight: 900 !important; margin-top: 0; -webkit-text-stroke: 1px #b45309;">11. न्यायाधीशों को हटाना: महाभियोग की प्रक्रिया</h2>
+                <p style="font-size: 18pt; text-align: justify;">न्यायाधीशों को राजनीतिक द्वेष के कारण आसानी से न हटाया जा सके, इसके लिए संविधान में अत्यंत कठिन और जटिल महाभियोग (Impeachment) जैसी प्रक्रिया दी गई है।</p>
+
+                <h3 style="color: #b45309; font-size: 24pt;">11.1 न्यायाधीशों को पद से हटाने के प्रमुख नियम:</h3>
+                <ul style="font-size: 18pt; line-height: 1.8; color: #000000; list-style-type: square;">
+                    <li><b>हटाने के आधार:</b> केवल दो ही आधारों पर जजों को हटाया जा सकता है—'साबित कदाचार' (Proven Misbehaviour) या 'अक्षमता' (Incapacity)।</li>
+                    <li><b>संसद का विशेष बहुमत:</b> प्रस्ताव को संसद के दोनों सदनों में अलग-अलग कुल सदस्य संख्या के बहुमत और उपस्थित व मतदान करने वालों के दो-तिहाई (2/3) बहुमत से पास होना चाहिए।</li>
+                    <li><b>जांच समिति का गठन:</b> आरोपों की जांच के लिए तीन सदस्यीय न्यायिक समिति बनती है जिसमें सुप्रीम कोर्ट के जज और कानूनविद शामिल होते हैं।</li>
+                    <li><b>अत्यंत कठिन प्रक्रिया:</b> भारतीय इतिहास में आज तक किसी भी जज को महाभियोग की प्रक्रिया द्वारा पूरी तरह पद से नहीं हटाया जा सका है।</li>
+                    <li><b>जस्टिस वी. रामास्वामी (1993):</b> इनके खिलाफ पहला महाभियोग प्रस्ताव लाया गया था, लेकिन लोकसभा में वोटिंग के समय कांग्रेस के अनुपस्थित रहने से प्रस्ताव गिर गया था।</li>
+                </ul>
+            </div>
+
+
+            <!-- PART 12 -->
+            <div class="part-container" style="border-top-color: #1d4ed8;">
+                <h2 style="color: #1e40af !important; background-color: #eff6ff; border-left: 10px solid #1d4ed8; padding: 20px 25px; border-radius: 10px; font-size: 32pt; font-weight: 900 !important; margin-top: 0; -webkit-text-stroke: 1px #1e40af;">12. उच्च न्यायालय (High Courts): संरचना एवं शक्तियाँ</h2>
+                <p style="font-size: 18pt; text-align: justify;">संविधान के अनुच्छेद 214 के अनुसार प्रत्येक राज्य के लिए एक उच्च न्यायालय (High Court) होगा, जो राज्य स्तर पर सर्वोच्च न्यायिक अपील और अधिकार क्षेत्र की संस्था है।</p>
+
+                <h3 style="color: #1e40af; font-size: 24pt;">12.1 उच्च न्यायालयों की प्रमुख शक्तियाँ:</h3>
+                <ul style="font-size: 18pt; line-height: 1.8; color: #000000; list-style-type: square;">
+                    <li><b>रिट जारी करने की शक्ति (अनुच्छेद 226):</b> मौलिक अधिकारों और अन्य सामान्य कानूनी अधिकारों की रक्षा के लिए भी रिट जारी करने का अधिकार।</li>
+                    <li><b>अपीलीय क्षेत्राधिकार:</b> अपने राज्य के अधीन आने वाले जिला न्यायालयों के फैसलों के खिलाफ दीवानी और फौजदारी अपीलों की सुनवाई करना।</li>
+                    <li><b>प्रशासनिक नियंत्रण:</b> राज्य के सभी जिला और सत्र न्यायालयों के कामकाज की निगरानी, नियंत्रण और उनके लिए नियम बनाने की शक्ति।</li>
+                    <li><b>अभिलेख न्यायालय (Court of Record - अनुच्छेद 215):</b> इसके फैसले भविष्य के मुकदमों के लिए कानूनी संदर्भ (नजीर) बनते हैं और अवमानना पर सजा देने की शक्ति होती है।</li>
+                    <li><b>न्यायाधीशों की नियुक्ति:</b> सुप्रीम कोर्ट के कॉलेजियम की सलाह पर राष्ट्रपति द्वारा उच्च न्यायालयों के जजों की नियुक्ति की जाती है।</li>
+                </ul>
+            </div>
+
+
+            <!-- PART 13 -->
+            <div class="part-container" style="border-top-color: #047857;">
+                <h2 style="color: #064e3b !important; background-color: #ecfdf5; border-left: 10px solid #047857; padding: 20px 25px; border-radius: 10px; font-size: 32pt; font-weight: 900 !important; margin-top: 0; -webkit-text-stroke: 1px #064e3b;">13. अधीनस्थ न्यायालय: ज़िला एवं सत्र न्यायालय</h2>
+                <p style="font-size: 18pt; text-align: justify;">अधीनस्थ न्यायालय भारतीय न्यायिक पिरामिड का आधार हैं। आम जनता का न्यायपालिका के साथ पहला सामना और सबसे अधिक सरोकार इन्हीं अदालतों से होता है।</p>
+
+                <h3 style="color: #064e3b; font-size: 24pt;">13.1 अधीनस्थ अदालतों के प्रमुख कार्य और संरचना:</h3>
+                <ul style="font-size: 18pt; line-height: 1.8; color: #000000; list-style-type: square;">
+                    <li><b>जिला न्यायाधीश (District Judge):</b> जिला स्तर पर दीवानी (Civil - संपत्ति, व्यापार, विवाह) मुकदमों की सुनवाई करने वाला सर्वोच्च न्यायाधीश।</li>
+                    <li><b>सत्र न्यायाधीश (Sessions Judge):</b> जिला स्तर पर फौजदारी (Criminal - हत्या, डकैती, चोरी) मुकदमों की सुनवाई और मौत की सजा देने की शक्ति रखने वाला न्यायाधीश।</li>
+                    <li><b>मजिस्ट्रेट कोर्ट:</b> छोटे आपराधिक मामलों की सुनवाई करने वाले प्रथम और द्वितीय श्रेणी के न्यायिक मजिस्ट्रेटों के कोर्ट।</li>
+                    <li><b>नियुक्ति:</b> जिला जजों की नियुक्ति राज्यपाल द्वारा राज्य के उच्च न्यायालय (High Court) के साथ परामर्श के बाद की जाती है।</li>
+                    <li><b>जनता का न्याय से संपर्क:</b> इन अदालतों की कार्यप्रणाली में तेजी लाना अत्यंत आवश्यक है क्योंकि देश के 90% से अधिक मुकदमे यहीं लंबित पड़े हैं।</li>
+                </ul>
+            </div>
+
+
+            <!-- PART 14 -->
+            <div class="part-container" style="border-top-color: #4338ca;">
+                <h2 style="color: #3730a3 !important; background-color: #eef2ff; border-left: 10px solid #4338ca; padding: 20px 25px; border-radius: 10px; font-size: 32pt; font-weight: 900 !important; margin-top: 0; -webkit-text-stroke: 1px #3730a3;">14. लोक अदालत और वैकल्पिक विवाद समाधान (ADR)</h2>
+                <p style="font-size: 18pt; text-align: justify;">नियमित अदालतों में मुकदमों की भारी भीड़ और खर्च से बचने के लिए वैकल्पिक विवाद समाधान (Alternative Dispute Resolution) और लोक अदालतों का गठन किया गया है।</p>
+
+                <h3 style="color: #3730a3; font-size: 24pt;">14.1 लोक अदालत और ADR के प्रमुख पहलू:</h3>
+                <ul style="font-size: 18pt; line-height: 1.8; color: #000000; list-style-type: square;">
+                    <li><b>आपसी समझौते से न्याय:</b> लोक अदालतों में कानूनी औपचारिकताओं के बिना, दोनों पक्षों को आमने-सामने बिठाकर आपसी समझौते (Compromise) से विवाद निपटाया जाता है।</li>
+                    <li><b>कोई कोर्ट फीस नहीं:</b> लोक अदालत में मुकदमा दाखिल करने की कोई फीस नहीं होती और यदि मामला सुलझ जाए तो पुरानी कोर्ट फीस भी वापस मिल जाती है।</li>
+                    <li><b>फैसले की अंतिमता:</b> लोक अदालत के फैसले को सिविल कोर्ट की डिक्री के बराबर मान्यता प्राप्त है और इसके खिलाफ आगे कोई अपील नहीं की जा सकती।</li>
+                    <li><b>शीघ्र और सस्ता न्याय:</b> मोटर दुर्घटना दावों, पारिवारिक विवादों, बिजली बिलों और छोटे बैंक ऋण मामलों का एक ही दिन में त्वरित निपटारा।</li>
+                    <li><b>मध्यस्थता और सुलह (Mediation):</b> अदालतों के बाहर आर्बिट्रेशन और मेडिएशन के माध्यम से व्यावसायिक विवादों को सुलझाकर अदालतों का बोझ कम करना।</li>
+                </ul>
+            </div>
+
+
+            <!-- PART 15 -->
+            <div class="part-container" style="border-top-color: #334155;">
+                <h2 style="color: #1e293b !important; background-color: #f1f5f9; border-left: 10px solid #334155; padding: 20px 25px; border-radius: 10px; font-size: 32pt; font-weight: 900 !important; margin-top: 0; -webkit-text-stroke: 1px #1e293b;">15. न्यायिक पुनरावलोकन (Judicial Review)</h2>
+                <p style="font-size: 18pt; text-align: justify;">न्यायिक पुनरावलोकन (Judicial Review) न्यायपालिका की वह सर्वोच्च शक्ति है जिसके तहत वह विधायिका द्वारा बनाए गए किसी भी कानून या कार्यपालिका के आदेश की संवैधानिक वैधता की जांच कर सकती है।</p>
+
+                <h3 style="color: #1e293b; font-size: 24pt;">15.1 न्यायिक पुनरावलोकन के प्रमुख आधार:</h3>
+                <ul style="font-size: 18pt; line-height: 1.8; color: #000000; list-style-type: square;">
+                    <li><b>संविधान की सर्वोच्चता:</b> यदि संसद ऐसा कोई कानून बनाती है जो संविधान की किसी धारा का उल्लंघन करता है, तो कोर्ट उसे असंवैधानिक घोषित कर रद्द कर देता है।</li>
+                    <li><b>लिखित संविधान की आवश्यकता:</b> संघीय ढांचे में केंद्र और राज्यों के बीच शक्तियों के बंटवारे को सुरक्षित रखने के लिए न्यायिक समीक्षा अनिवार्य है।</li>
+                    <li><b>नागरिक स्वतंत्रता की रक्षा:</b> कार्यपालिका की पुलिस या प्रशासनिक अधिकारियों को मनमाने ढंग से नागरिकों की आजादी छीनने से रोकना।</li>
+                    <li><b>सुप्रीम कोर्ट की विशेष शक्ति:</b> अनुच्छेद 13, 32, 131-136, और 226 मिलकर न्यायपालिका को न्यायिक पुनरावलोकन की मज़बूत संवैधानिक शक्ति देते हैं।</li>
+                    <li><b>शक्ति संतुलन:</b> यह सिद्धांत विधायिका, कार्यपालिका और न्यायपालिका के बीच शक्तियों का एक सुंदर और लोकतांत्रिक संतुलन बनाए रखता है।</li>
+                </ul>
+            </div>
+
+
+            <!-- PART 16 -->
+            <div class="part-container" style="border-top-color: #7c3aed;">
+                <h2 style="color: #5b21b6 !important; background-color: #f5f3ff; border-left: 10px solid #7c3aed; padding: 20px 25px; border-radius: 10px; font-size: 32pt; font-weight: 900 !important; margin-top: 0; -webkit-text-stroke: 1px #5b21b6;">16. न्यायालय की अवमानना (Contempt of Court)</h2>
+                <p style="font-size: 18pt; text-align: justify;">न्यायालय के आदेशों की साख और न्यायपालिका के सम्मान को सुरक्षित रखने के लिए संविधान ने अदालतों को 'अवमानना' पर दंड देने की विशेष शक्ति प्रदान की है।</p>
+
+                <h3 style="color: #5b21b6; font-size: 24pt;">16.1 न्यायालय की अवमानना के प्रमुख प्रकार और नियम:</h3>
+                <ul style="font-size: 18pt; line-height: 1.8; color: #000000; list-style-type: square;">
+                    <li><b>दीवानी अवमानना (Civil Contempt):</b> न्यायालय के किसी आदेश, डिक्री, निर्देश या रिट का जानबूझकर उल्लंघन करना या उसका पालन न करना।</li>
+                    <li><b>फौजदारी अवमानना (Criminal Contempt):</b> कोर्ट के प्रति जनता में अविश्वास पैदा करना, न्यायाधीशों के चरित्र पर कीचड़ उछालना या मुकदमों की निष्पक्ष सुनवाई में बाधा डालना।</li>
+                    <li><b>सजा का प्रावधान:</b> अवमानना साबित होने पर कोर्ट दोषी को जेल भेजने या भारी जुर्माना लगाने का कड़ा आदेश दे सकता है।</li>
+                    <li><b>न्यायपालिका की गरिमा की रक्षा:</b> यह शक्ति यह सुनिश्चित करती है कि कोई भी बाहुबली, नेता या प्रशासनिक अधिकारी कोर्ट के फैसलों का मखौल न उड़ा सके।</li>
+                    <li><b>तार्किक आलोचना की छूट:</b> फैसलों की तार्किक और मर्यादित आलोचना करना अवमानना के दायरे में नहीं आता; केवल न्यायाधीशों की निष्पक्षता पर झूठे लांछन लगाना प्रतिबंधित है।</li>
+                </ul>
+            </div>
+
+
+            <!-- PART 17 -->
+            <div class="part-container" style="border-top-color: #db2777;">
+                <h2 style="color: #9d174d !important; background-color: #fdf2f8; border-left: 10px solid #db2777; padding: 20px 25px; border-radius: 10px; font-size: 32pt; font-weight: 900 !important; margin-top: 0; -webkit-text-stroke: 1px #9d174d;">17. न्यायपालिका की चुनौतियां: मुकदमों का अंबार</h2>
+                <p style="font-size: 18pt; text-align: justify;">यद्यपि हमारी न्यायपालिका बहुत शक्तिशाली है, लेकिन वर्तमान में वह मुकदमों के भारी बोझ और बुनियादी सुविधाओं की कमी के कारण गंभीर संकट से गुजर रही है।</p>
+
+                <h3 style="color: #9d174d; font-size: 24pt;">17.1 न्यायपालिका की प्रमुख चुनौतियां और सुधार:</h3>
+                <ul style="font-size: 18pt; line-height: 1.8; color: #000000; list-style-type: square;">
+                    <li><b>करोड़ों लंबित मुकदमे (Backlog of Cases):</b> देश की अदालतों में वर्तमान में 4 करोड़ से अधिक मुकदमे लंबित हैं जिससे 'न्याय में देरी न्याय से वंचित करना' (Justice delayed is justice denied) की स्थिति है।</li>
+                    <li><b>न्यायाधीशों की भारी कमी:</b> प्रति 10 लाख आबादी पर न्यायाधीशों की संख्या बेहद कम होना और अदालतों में जजों के खाली पदों को समय पर न भरना।</li>
+                    <li><b>अत्यंत खर्चीली न्याय प्रणाली:</b> वकीलों की भारी फीस और अदालतों की लंबी कागजी प्रक्रियाओं के कारण गरीब नागरिकों के लिए न्याय पाना असंभव होना।</li>
+                    <li><b>तकनीकी और बुनियादी ढांचे का अभाव:</b> निचली अदालतों में भवनों, कंप्यूटरों, वीडियो कॉन्फ्रेंसिंग सुविधाओं और सहायक कर्मचारियों की भारी कमी होना।</li>
+                    <li><b>अखिल भारतीय न्यायिक सेवा (AIJS) की वकालत:</b> यूपीएससी की तर्ज पर अखिल भारतीय परीक्षा आयोजित कर प्रतिभाशाली युवाओं को सीधे जिला न्यायाधीशों के रूप में चुनना।</li>
+                </ul>
+            </div>
+
+
+            <!-- PART 18 -->
+            <div class="part-container" style="border-top-color: #0369a1;">
+                <h2 style="color: #075985 !important; background-color: #f0f9ff; border-left: 10px solid #0369a1; padding: 20px 25px; border-radius: 10px; font-size: 32pt; font-weight: 900 !important; margin-top: 0; -webkit-text-stroke: 1px #075985;">18. कार्यपालिका और न्यायपालिका के संबंध</h2>
+                <p style="font-size: 18pt; text-align: justify;">संविधान निर्माताओं ने कार्यपालिका और न्यायपालिका के बीच शक्तियों के संतुलन और परस्पर आदर का एक सुंदर लोकतांत्रिक ढांचा तैयार किया है।</p>
+
+                <h3 style="color: #075985; font-size: 24pt;">18.1 संघर्ष और सहयोग के प्रमुख क्षेत्र:</h3>
+                <ul style="font-size: 18pt; line-height: 1.8; color: #000000; list-style-type: square;">
+                    <li><b>नियुक्ति और स्थानांतरण:</b> जजों की नियुक्ति में कॉलेजियम की सिफारिशों पर सरकार की देरी के कारण दोनों के बीच अक्सर तनातनी बनी रहती है।</li>
+                    <li><b>सरकारी नीतियों पर न्यायिक रोक:</b> जब कोर्ट सरकार के बड़े नीतिगत फैसलों (जैसे नोटबंदी या नियुक्तियों) पर सवाल उठाता है, तो तनाव बढ़ता है।</li>
+                    <li><b>सहयोग:</b> आपातकाल या राष्ट्रीय सुरक्षा के मुद्दों पर न्यायपालिका अक्सर कार्यपालिका के फैसलों और संप्रभुता का आदर करती है।</li>
+                </ul>
+
+                <h3 style="color: #075985; font-size: 24pt;">18.2 शक्ति पृथक्करण का संतुलन (Separation of Powers):</h3>
+                <ul style="font-size: 18pt; line-height: 1.8; color: #000000; list-style-type: square;">
+                    <li><b>अनुच्छेद 50:</b> राज्य लोक सेवाओं में न्यायपालिका को कार्यपालिका से पूरी तरह अलग रखने का प्रयास करेगा जो न्याय की निष्पक्षता की गारंटी है।</li>
+                    <li><b>सदन में चर्चा पर रोक (अनुच्छेद 121):</b> जजों के आचरण पर संसद में कोई चर्चा नहीं हो सकती, सिवाय उनके खिलाफ महाभियोग के प्रस्ताव के।</li>
+                    <li><b>न्यायिक आचरण की गरिमा:</b> न्यायाधीशों से भी यह अपेक्षा की जाती है कि वे राजनेताओं की तरह बयानबाजी न करें और केवल अपने फैसलों के माध्यम से ही बोलें।</li>
+                </ul>
+            </div>
+
+
+            <!-- PART 19 -->
+            <div class="part-container" style="border-top-color: #059669;">
+                <h2 style="color: #065f46 !important; background-color: #f0fdf4; border-left: 10px solid #059669; padding: 20px 25px; border-radius: 10px; font-size: 32pt; font-weight: 900 !important; margin-top: 0; -webkit-text-stroke: 1px #065f46;">19. भारत के मुख्य न्यायाधीश (CJI) की भूमिका</h2>
+                <p style="font-size: 18pt; text-align: justify;">भारत का मुख्य न्यायाधीश (Chief Justice of India) देश की न्यायिक व्यवस्था का सर्वोच्च प्रशासनिक और न्यायिक प्रमुख होता है जिसे 'मास्टर ऑफ रोस्टर' भी कहा जाता है।</p>
+
+                <h3 style="color: #065f46; font-size: 24pt;">19.1 CJI की प्रमुख शक्तियाँ और कार्य:</h3>
+                <ul style="font-size: 18pt; line-height: 1.8; color: #000000; list-style-type: square;">
+                    <li><b>मास्टर ऑफ रोस्टर (Master of Roster):</b> सुप्रीम कोर्ट में मुकदमों की सुनवाई के लिए बेंचों (पीठों) का गठन करना और उन्हें मुकदमों का आवंटन करना।</li>
+                    <li><b>कॉलेजियम के अध्यक्ष:</b> न्यायाधीशों की नियुक्ति और उनके स्थानांतरण की सिफारिशें भेजने वाले कॉलेजियम का सर्वोच्च नेतृत्व करना।</li>
+                    <li><b>शपथ दिलाना:</b> भारत के राष्ट्रपति की अनुपस्थिति में उन्हें शपथ दिलाना, और स्वयं राष्ट्रपति द्वारा CJI को पद की शपथ दिलाई जाती है।</li>
+                    <li><b>प्रशासनिक प्रमुख:</b> देश के सभी उच्च न्यायालयों और अधीनस्थ न्यायालयों के प्रशासनिक सुधारों के लिए निर्देश जारी करना।</li>
+                    <li><b>कार्यवाहक राष्ट्रपति:</b> राष्ट्रपति और उपराष्ट्रपति दोनों के पद खाली होने पर देश के राष्ट्रपति के रूप में कार्यभार संभालना (जैसे 1969 में जस्टिस हिदायतुल्ला)।</li>
+                </ul>
+            </div>
+
+
+            <!-- PART 20 -->
+            <div class="part-container" style="border-top-color: #0f172a;">
+                <h2 style="color: #0f172a !important; background-color: #f1f5f9; border-left: 10px solid #0f172a; padding: 20px 25px; border-radius: 10px; font-size: 32pt; font-weight: 900 !important; margin-top: 0; -webkit-text-stroke: 1px #0f172a;">20. निष्कर्ष: लोकतंत्र का प्रहरी</h2>
+                <p style="font-size: 18pt; text-align: justify;">अध्याय 6 (न्यायपालिका) का यह गहन सफर हमें इस मूल सत्य तक ले जाता है कि न्यायपालिका केवल अदालती फैसले देने वाली संस्था नहीं, बल्कि हमारे संविधान की सजग प्रहरी है।</p>
+
+                <h3 style="color: #0f172a; font-size: 24pt;">20.1 निष्कर्ष के प्रमुख स्तंभ:</h3>
+                <ul style="font-size: 18pt; line-height: 1.8; color: #000000; list-style-type: square;">
+                    <li><b>स्वतंत्रता की महत्ता:</b> न्यायपालिका की स्वतंत्रता ही देश में कानून के शासन और मौलिक अधिकारों की रक्षा की असली गारंटी है।</li>
+                    <li><b>मूल संरचना का ऐतिहासिक योगदान:</b> केशवानंद भारती केस द्वारा स्थापित मूल संरचना का सिद्धांत हमारे लोकतंत्र का सबसे बड़ा सुरक्षा कवच है।</li>
+                    <li><b>लंबित मुकदमों का संकट:</b> जजों की संख्या बढ़ाकर, तकनीकी का उपयोग करके और लोक अदालतों से मुकदमों के बोझ को तुरंत कम करना।</li>
+                    <li><b>न्यायिक मर्यादा का पालन:</b> सक्रियता और अतिक्रमण के बीच की महीन रेखा का आदर करना ताकि शक्ति पृथक्करण का संतुलन न बिगड़े।</li>
+                    <li><b>सर्वोच्च संदेश:</b> "न्याय ही धर्म है" और "सत्यमेव जयते"—यही इस पूरे अध्याय का अंतिम, शाश्वत और सर्वोच्च संदेश है।</li>
+                </ul>
+            </div>
+
         </div>
     </div>
 </body>
