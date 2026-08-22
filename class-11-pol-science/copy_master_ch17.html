@@ -2,16 +2,448 @@
 <html lang="hi">
 <head>
     <meta charset="UTF-8">
-    <title>Chapter 17 - Premium Notes (Class 11)</title>
+    <title>Chapter 17 COPY MASTER - Premium Notes (Nationalism)</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;700;900&family=Outfit:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        #control-header {
+            position: fixed; top: 0; left: 0; width: 100%; background-color: #0f172a; color: #ffffff;
+            padding: 15px 20px; display: flex; justify-content: space-between; align-items: center;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); z-index: 1000; font-family: 'Outfit', sans-serif; box-sizing: border-box;
+        }
+        #control-header h1 { margin: 0; font-size: 1.4rem; font-weight: 900; }
+        body {
+            margin-top: 80px;
+            background-color: #ffffff;
+            font-family: 'Outfit', 'Noto Sans Devanagari', sans-serif;
+            font-size: 20pt;
+            font-weight: 800;
+            line-height: 2.2;
+            color: #000000;
+        }
+        p, li, div, td, th {
+            font-weight: 800 !important;
+            color: #000000 !important;
+        }
+        b, strong {
+            font-weight: 900 !important;
+            color: #000000 !important;
+        }
+        ul, ol { padding-left: 60px !important; margin-left: 20px !important; }
+        li {
+            padding-left: 15px;
+            margin-bottom: 25px;
+            text-align: justify;
+            line-height: 2.2;
+            font-size: 20pt;
+            font-weight: 800 !important;
+        }
+        /* Heavy text thickness for projector visibility */
+        p, li, h1, h2, h3, h4, b, strong {
+            font-weight: 900 !important;
+            -webkit-text-stroke: 0.5px #000000;
+        }
+        
+        .part-container {
+            margin-bottom: 80px; padding: 50px 60px; background-color: #ffffff;
+            border-radius: 15px; box-shadow: 0 15px 25px -5px rgba(0,0,0,0.05);
+            border-top: 12px solid #1e3a8a;
+        }
+        .info-box {
+            background-color: #f8fafc; padding: 30px; border-left: 14px solid #1e3a8a; 
+            margin: 30px 0; border-radius: 8px; font-size: 19pt; line-height: 2.2; font-weight: 900;
+        }
+        .debate-box {
+            background-color: #fffbeb; padding: 30px; border: 6px solid #b45309; 
+            border-radius: 15px; margin: 40px 0; line-height: 2.2; font-size: 19pt; font-weight: 900;
+        }
+    </style>
+    <script>
+        function copyToGoogleDoc() {
+            var content = document.getElementById('contentToCopy').innerHTML;
+            var blob = new Blob([content], { type: 'text/html' });
+            var data = [new ClipboardItem({ 'text/html': blob })];
+            
+            navigator.clipboard.write(data).then(function() {
+                var status = document.getElementById('status');
+                status.style.display = 'block';
+                setTimeout(function() {
+                    status.style.display = 'none';
+                }, 5000);
+            }).catch(function(err) {
+                alert('Copy failed: ' + err);
+            });
+        }
+    </script>
 </head>
 <body>
+
+    <!-- Persistent Control Header -->
+    <div id="control-header">
+        <h1>📖 अध्याय 17: राष्ट्रवाद (NATIONALISM) - 100-PAGE MASTER NOTES</h1>
+        <button id="mainCopyBtn" onclick="copyToGoogleDoc()">
+            📋 COPY EVERYTHING FOR GOOGLE DOCS
+        </button>
+    </div>
+    
+    <div id="status" style="display: none; position: fixed; top: 70px; right: 20px; background-color: #059669; color: white; padding: 12px 24px; border-radius: 6px; z-index: 1000; font-family: sans-serif; font-size: 14px; font-weight: bold; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+        ✨ SUCCESS! Content copied to clipboard in rich format. Now open Google Docs and press Ctrl+V.
+    </div>
+
     <div id="contentToCopy">
-        <div style="font-family: 'Arial', verdana, sans-serif; font-size: 16pt; line-height: 1.8; color: #1a202c;">
-            <h1 style="text-align: center; color: #1e3a8a; font-size: 40pt; font-weight: bold; border-bottom: 5px solid #3b82f6; padding-bottom: 30px; margin-bottom: 40px;">
-                अध्याय 17: जल्द ही आ रहा है...<br/>
-                <span style="font-size: 24pt; color:#6b7280; font-weight: normal;">(Coming Soon...)</span>
-            </h1>
-            <p style="text-align: center; font-size: 20pt;">इस अध्याय के विस्तृत नोट्स और प्रीमियम कंटेंट पर अभी काम चल रहा है। कृपया कुछ समय बाद पुनः देखें।</p>
+        <div style="font-family: 'Outfit', 'Noto Sans Devanagari', sans-serif; font-size: 20pt; line-height: 2.2; color: #000000; max-width: 1400px; margin: auto; padding: 20px;">
+
+            <!-- Title Section (Projector Friendly) -->
+            <div style="text-align: center; margin-bottom: 80px; padding: 75px; border: 15px double #1e3a8a; background-color: #eff6ff; border-radius: 30px;">
+                <h1 style="color: #1e3a8a !important; font-size: 58pt; font-weight: 950 !important; margin-bottom: 20px; -webkit-text-stroke: 1.5px #1e3a8a;">
+                    अध्याय 17: राष्ट्रवाद<br/>
+                    <span style="font-size: 30pt; color:#475569; font-weight: 900;">(NATIONALISM)</span>
+                </h1>
+                <p style="font-size: 26pt; color: #000000; margin-top: 10px; font-weight: 900;">कक्षा 11 राजनीति विज्ञान - अति-गहन शैक्षणिक मास्टर नोट्स</p>
+                <p style="font-size: 20pt; color: #b91c1c; font-style: italic; font-weight: 900;">(विशेष फोकस: राष्ट्र के तत्व, आत्मनिर्णय का अधिकार, बहुलवाद, और रवींद्रनाथ टैगोर के विचार)</p>
+            </div>
+
+            
+            <!-- PART 1 -->
+            <div class="part-container" style="border-top-color: #0284c7;">
+                <h2 style="color: #0369a1 !important; background-color: #f0f9ff; border-left: 10px solid #0284c7; padding: 20px 25px; border-radius: 10px; font-size: 32pt; font-weight: 900 !important; margin-top: 0; -webkit-text-stroke: 1px #0369a1;">1. राष्ट्रवाद का अर्थ और स्वरूप</h2>
+                <p style="font-size: 18pt; text-align: justify;">राष्ट्रवाद सामूहिक पहचान और देशप्रेम की वह राजनैतिक-नैतिक भावना है जो किसी भौगोलिक क्षेत्र में रहने वाले लोगों को एक साझा राष्ट्र के रूप में जोड़ती है। यह आधुनिक विश्व की सबसे प्रभावशाली राजनैतिक शक्ति है।</p>
+
+                <h3 style="color: #0369a1; font-size: 24pt;">1.1 राष्ट्रवाद की प्रमुख विशेषताएं:</h3>
+                <ul style="font-size: 18pt; line-height: 1.8; color: #000000; list-style-type: square;">
+                    <li><b>सामूहिक पहचान:</b> यह अलग-अलग धर्मों, जातियों और बोलियों के लोगों को एक साझा राष्ट्रीय पहचान (जैसे 'भारतीय') प्रदान करता है।</li>
+                    <li><b>राजनैतिक संकल्प:</b> इसके तहत एक भूभाग के नागरिक अपने लिए एक स्वतंत्र, संप्रभु और स्वायत्त राज्य की स्थापना की इच्छा रखते हैं।</li>
+                    <li><b>देशप्रेम और निष्ठा:</b> राष्ट्र के प्रति अगाध प्रेम और व्यक्तिगत हितों से ऊपर उठकर राष्ट्रीय एकता की रक्षा करने का साझा नैतिक संकल्प।</li>
+                    <li><b>साझा इतिहास और संस्कृति:</b> अपने राष्ट्र के इतिहास, राष्ट्रीय नायकों और ऐतिहासिक विरासतों के प्रति गौरव की भावना होना।</li>
+                    <li><b>प्रेरक शक्ति:</b> यह स्वतंत्रता आंदोलनों, औपनिवेशिक दमन के विरोध और राष्ट्रीय विकास के लिए ऊर्जा का प्रमुख स्रोत रहा है।</li>
+                </ul>
+            </div>
+
+
+            <!-- PART 2 -->
+            <div class="part-container" style="border-top-color: #059669;">
+                <h2 style="color: #065f46 !important; background-color: #f0fdf4; border-left: 10px solid #059669; padding: 20px 25px; border-radius: 10px; font-size: 32pt; font-weight: 900 !important; margin-top: 0; -webkit-text-stroke: 1px #065f46;">2. राष्ट्र के प्रमुख तत्व (Elements of a Nation)</h2>
+                <p style="font-size: 18pt; text-align: justify;">एक समूह को 'राष्ट्र' कहलाने के लिए किन प्रमुख तत्वों की आवश्यकता होती है?</p>
+
+                <h3 style="color: #065f46; font-size: 24pt;">2.1 भौगोलिक और ऐतिहासिक तत्व (Territorial and Historical Elements):</h3>
+                <ul style="font-size: 18pt; line-height: 1.8; color: #000000; list-style-type: square;">
+                    <li><b>साझा मातृभूमि:</b> एक निश्चित भौगोलिक क्षेत्र (जैसे 'भारत माता') जिसके साथ लोगों का गहरा संवेगात्मक और ऐतिहासिक जुड़ाव होता है।</li>
+                    <li><b>साझा इतिहास (Shared History):</b> एक साथ झेली गई कठिनाइयों, संघर्षों (जैसे स्वतंत्रता संग्राम) और ऐतिहासिक जीतों की साझा यादें।</li>
+                    <li><b>सच्चा राष्ट्रवाद:</b> इतिहास का कोई काल्पनिक निर्माण न होना, बल्कि इतिहास में सामूहिक रूप से जिए गए अनुभवों पर आधारित होना।</li>
+                </ul>
+
+                <h3 style="color: #065f46; font-size: 24pt;">2.2 सांस्कृतिक और राजनैतिक तत्व (Cultural and Political Elements):</h3>
+                <ul style="font-size: 18pt; line-height: 1.8; color: #000000; list-style-type: square;">
+                    <li><b>राजनैतिक आदर्श:</b> लोकतंत्र, स्वतंत्रता और समानता जैसे साझा राजनैतिक मूल्यों और संविधान के प्रति सामूहिक निष्ठा होना।</li>
+                    <li><b>साझा भविष्य की कल्पना (Shared Future):</b> एक साथ मिलकर एक बेहतर, विकसित और न्यायपूर्ण समाज बनाने की सामूहिक इच्छा।</li>
+                    <li><b>सांस्कृतिक जुड़ाव:</b> अलग-अलग संस्कृतियों और बोलियों के होते हुए भी आपस में भाईचारे और भावनात्मक एकता का धागा मज़बूत होना।</li>
+                </ul>
+            </div>
+
+
+            <!-- PART 3 -->
+            <div class="part-container" style="border-top-color: #d97706;">
+                <h2 style="color: #92400e !important; background-color: #fff7ed; border-left: 10px solid #d97706; padding: 20px 25px; border-radius: 10px; font-size: 32pt; font-weight: 900 !important; margin-top: 0; -webkit-text-stroke: 1px #92400e;">3. आत्मनिर्णय का अधिकार (National Self-Determination)</h2>
+                <p style="font-size: 18pt; text-align: justify;">राष्ट्रीय आत्मनिर्णय का अधिकार यह मांग करता है कि प्रत्येक राष्ट्र को अपनी शासन व्यवस्था चुनने और अपना स्वतंत्र राज्य स्थापित करने का सर्वोच्च अधिकार होना चाहिए।</p>
+
+                <h3 style="color: #92400e; font-size: 24pt;">3.1 आत्मनिर्णय के अधिकार के प्रमुख पहलू:</h3>
+                <ul style="font-size: 18pt; line-height: 1.8; color: #000000; list-style-type: square;">
+                    <li><b>साम्राज्यवाद का विरोध:</b> औपनिवेशिक दासता और विदेशी शासन से मुक्ति पाकर पूर्ण संप्रभुता स्थापित करने की तार्किक मांग।</li>
+                    <li><b>राजनैतिक स्वायत्तता:</b> अपने राष्ट्र की नीतियों, विकास के मॉडलों और कानूनों का निर्माण स्वयं करने की पूर्ण स्वतंत्रता मिलना।</li>
+                    <li><b>अंतरराष्ट्रीय मान्यता:</b> संयुक्त राष्ट्र (UN) के चार्टर में प्रत्येक राष्ट्र के आत्मनिर्णय के अधिकार को बुनियादी मानवाधिकार माना गया है।</li>
+                    <li><b>आंतरिक विभाजन का खतरा:</b> यदि किसी देश के भीतर हर भाषाई या जातीय समूह अलग राज्य की मांग करेगा, तो राष्ट्रों का विखंडन और युद्ध शुरू हो जाएंगे।</li>
+                    <li><b>सह-अस्तित्व की आवश्यकता:</b> आत्मनिर्णय की मांग को अलगाववाद में बदलने के बजाय एक ही देश के भीतर स्वायत्तता और संघवाद के द्वारा हल करना बेहतर है।</li>
+                </ul>
+            </div>
+
+
+            <!-- PART 4 -->
+            <div class="part-container" style="border-top-color: #7c3aed;">
+                <h2 style="color: #5b21b6 !important; background-color: #f5f3ff; border-left: 10px solid #7c3aed; padding: 20px 25px; border-radius: 10px; font-size: 32pt; font-weight: 900 !important; margin-top: 0; -webkit-text-stroke: 1px #5b21b6;">4. राष्ट्रवाद और बहुलवाद (Nationalism and Pluralism)</h2>
+                <p style="font-size: 18pt; text-align: justify;">एक स्वस्थ और लोकतांत्रिक राष्ट्रवाद वह है जो विविधता और बहुलवाद (Pluralism) का सम्मान करता है, न कि उसे दबाने का प्रयास करता है।</p>
+
+                <h3 style="color: #5b21b6; font-size: 24pt;">4.1 बहुलतावादी राष्ट्रवाद के प्रमुख सिद्धांत:</h3>
+                <ul style="font-size: 18pt; line-height: 1.8; color: #000000; list-style-type: square;">
+                    <li><b>विविधता का आदर:</b> राष्ट्र को किसी एक धर्म या भाषा के सांचे में ढालने के बजाय बहु-भाषाई और बहु-सांस्कृतिक ताने-बाने को बढ़ावा देना।</li>
+                    <li><b>धर्मनिरपेक्षता का आदर्श:</b> राज्य द्वारा सभी धर्मों को समान संरक्षण देना ताकि कोई भी अल्पसंख्यक वर्ग स्वयं को पराया न समझे।</li>
+                    <li><b>संवैधानिक सुरक्षा कवच:</b> अल्पसंख्यक समुदायों की संस्कृति, भाषा और शैक्षणिक संस्थानों की रक्षा के लिए विशेष कानूनी प्रावधान (जैसे भारतीय संविधान का अनुच्छेद 29 व 30)।</li>
+                    <li><b>समावेशी पहचान:</b> राष्ट्रीय पहचान को इतना व्यापक बनाना कि उसमें देश के सुदूर इलाकों में रहने वाले आदिवासियों और स्थानीय लोगों की पहचान भी शामिल हो सके।</li>
+                    <li><b>एकता बनाम एकरूपता:</b> यह समझना कि राष्ट्रीय एकता (Unity) थोपी गई एकरूपता (Uniformity) से नहीं, बल्कि आपसी आदर और संवाद से मज़बूत होती है।</li>
+                </ul>
+            </div>
+
+
+            <!-- PART 5 -->
+            <div class="part-container" style="border-top-color: #4c1d95;">
+                <h2 style="color: #4c1d95 !important; background-color: #faf5ff; border-left: 10px solid #4c1d95; padding: 20px 25px; border-radius: 10px; font-size: 32pt; font-weight: 900 !important; margin-top: 0; -webkit-text-stroke: 1px #4c1d95;">5. राष्ट्रवाद की सीमाएं और खतरे</h2>
+                <p style="font-size: 18pt; text-align: justify;">राष्ट्रवाद जहाँ देश को जोड़ता है, वहीं यदि यह संकीर्ण और आक्रामक रूप ले ले, तो यह भारी तबाही, युद्ध और सामाजिक विभाजन का कारण बन सकता है।</p>
+
+                <h3 style="color: #4c1d95; font-size: 24pt;">5.1 संकीर्ण राष्ट्रवाद (Jingoism/Chauvinism):</h3>
+                <ul style="font-size: 18pt; line-height: 1.8; color: #000000; list-style-type: square;">
+                    <li><b>आक्रामक देशप्रेम:</b> अपने राष्ट्र को सर्वश्रेष्ठ मानकर अन्य देशों या संस्कृतियों के प्रति घृणा, युद्ध और नफरत का माहौल पैदा करना।</li>
+                    <li><b>अल्पसंख्यकों का दमन:</b> बहुसंख्यक आबादी के राष्ट्रवाद के नाम पर देश के भीतर रह रहे धार्मिक या भाषाई अल्पसंख्यकों को देशद्रोही घोषित करना।</li>
+                    <li><b>साम्राज्यवादी विस्तार:</b> इतिहास में जर्मनी के नाजीवाद और इटली के फासीवाद जैसे आक्रामक राष्ट्रवाद ने द्वितीय विश्व युद्ध को जन्म दिया।</li>
+                </ul>
+
+                <h3 style="color: #4c1d95; font-size: 24pt;">5.2 आंतरिक विभाजन और अलगाववाद:</h3>
+                <ul style="font-size: 18pt; line-height: 1.8; color: #000000; list-style-type: square;">
+                    <li><b>गृहयुद्ध का खतरा:</b> जब राष्ट्रवाद का आधार संकीर्ण जातीयता हो जाता है, तो देश के भीतर गृहयुद्ध और विखंडन शुरू हो जाता है (जैसे यूगोस्लाविया का विघटन)।</li>
+                    <li><b>कट्टरवाद को बढ़ावा:</b> यह तर्क और असहमति की आवाजों को दबाता है; सरकार की नीतियों का विरोध करने वाले नागरिकों को राष्ट्र-विरोधी ठहराया जाने लगता है।</li>
+                    <li><b>वैश्विक शांति के लिए चुनौती:</b> राष्ट्रों के बीच आपसी अविश्वास, हथियारों की होड़ और सीमाओं पर तनाव बढ़ाने में संकीर्ण राष्ट्रवाद सबसे आगे रहता है।</li>
+                </ul>
+            </div>
+
+
+            <!-- PART 6 -->
+            <div class="part-container" style="border-top-color: #0d9488;">
+                <h2 style="color: #0f766e !important; background-color: #f0fdf4; border-left: 10px solid #0d9488; padding: 20px 25px; border-radius: 10px; font-size: 32pt; font-weight: 900 !important; margin-top: 0; -webkit-text-stroke: 1px #0f766e;">6. राष्ट्र और राज्य में अंतर (Nation vs State)</h2>
+                <p style="font-size: 18pt; text-align: justify;">राजनीति विज्ञान में राष्ट्र (Nation) और राज्य (State) दो भिन्न अवधारणाएँ हैं, जिन्हें अक्सर एक समझ लिया जाता है। दोनों का अंतर स्पष्ट होना आवश्यक है।</p>
+
+                <h3 style="color: #0f766e; font-size: 24pt;">6.1 राष्ट्र और राज्य में मूलभूत अंतर:</h3>
+                <ul style="font-size: 18pt; line-height: 1.8; color: #000000; list-style-type: square;">
+                    <li><b>भावनात्मक बनाम वैधानिक:</b> राष्ट्र एक सांस्कृतिक-मनोवैज्ञानिक भावना है, जबकि राज्य एक कानूनी और राजनैतिक संगठन है।</li>
+                    <li><b>चार अनिवार्य तत्व:</b> राज्य के लिए जनसंख्या, निश्चित भूभाग, सरकार और 'संप्रभुता' अनिवार्य हैं; राष्ट्र के लिए संप्रभुता के बिना भी साझा पहचान हो सकती है।</li>
+                    <li><b>सीमाओं की भिन्नता:</b> एक राज्य के भीतर कई राष्ट्र (जैसे पूर्व सोवियत संघ) हो सकते हैं, और एक राष्ट्र कई राज्यों में विभाजित (जैसे विभाजन से पूर्व जर्मन लोग) हो सकता है।</li>
+                    <li><b>बाध्यकारी शक्ति:</b> राज्य के पास कानून लागू करने और दंड देने की भौतिक बाध्यकारी शक्ति होती है; राष्ट्र केवल नैतिक और भावनात्मक धागे से जुड़ा होता है।</li>
+                    <li><b>राष्ट्र-राज्य (Nation-State) का आदर्श:</b> आधुनिक युग का आदर्श वह व्यवस्था है जहाँ राज्य की कानूनी सीमाएं और राष्ट्र की सांस्कृतिक सीमाएं एक हो जाती हैं।</li>
+                </ul>
+            </div>
+
+
+            <!-- PART 7 -->
+            <div class="part-container" style="border-top-color: #4338ca;">
+                <h2 style="color: #3730a3 !important; background-color: #eef2ff; border-left: 10px solid #4338ca; padding: 20px 25px; border-radius: 10px; font-size: 32pt; font-weight: 900 !important; margin-top: 0; -webkit-text-stroke: 1px #3730a3;">7. राष्ट्रवाद और साम्राज्यवाद (Nationalism and Imperialism)</h2>
+                <p style="font-size: 18pt; text-align: justify;">राष्ट्रवाद जहाँ एक ओर एशिया और अफ्रीका के देशों में औपनिवेशिक दमन के खिलाफ मुक्ति का साधन बना, वहीं यूरोप में यह साम्राज्यवाद के औचित्य का आधार भी बन गया था।</p>
+
+                <h3 style="color: #3730a3; font-size: 24pt;">7.1 राष्ट्रवाद और साम्राज्यवाद का द्वंद्व:</h3>
+                <ul style="font-size: 18pt; line-height: 1.8; color: #000000; list-style-type: square;">
+                    <li><b>औपनिवेशिक मुक्ति आंदोलन:</b> भारत, वियतनाम और अफ्रीकी देशों में राष्ट्रवाद ने औपनिवेशिक गुलामी के खिलाफ जनता को एकजुट कर आजाद कराया।</li>
+                    <li><b>यूरोपीय साम्राज्यवादी होड़:</b> 19वीं सदी के अंत में ब्रिटेन, फ्रांस और जर्मनी में राष्ट्रवाद ने 'राष्ट्रीय गौरव' के नाम पर अन्य देशों पर कब्जा करने की होड़ शुरू की।</li>
+                    <li><b>संसाधनों का दोहन:</b> साम्राज्यवादी राष्ट्रवाद ने पिछड़े देशों को सभ्य बनाने के मुखौटे के पीछे उनके प्राकृतिक संसाधनों और श्रम का क्रूर दोहन किया।</li>
+                    <li><b>रंगभेद और श्रेष्ठता का अहंकार:</b> साम्राज्यवाद ने नस्लीय श्रेष्ठता (White Man's Burden) को बढ़ावा दिया, जिसे राष्ट्रवाद के नाम पर सही ठहराया गया।</li>
+                    <li><b>अंतरराष्ट्रीय विरोध:</b> आज का आधुनिक राष्ट्रवाद प्रत्येक राष्ट्र की संप्रभुता का आदर करता है और किसी भी साम्राज्यवादी दखल का विरोध करता है।</li>
+                </ul>
+            </div>
+
+
+            <!-- PART 8 -->
+            <div class="part-container" style="border-top-color: #be123c;">
+                <h2 style="color: #9f1239 !important; background-color: #fff1f2; border-left: 10px solid #be123c; padding: 20px 25px; border-radius: 10px; font-size: 32pt; font-weight: 900 !important; margin-top: 0; -webkit-text-stroke: 1px #9f1239;">8. रवींद्रनाथ टैगोर का राष्ट्रवाद पर दृष्टिकोण</h2>
+                <p style="font-size: 18pt; text-align: justify;">भारत के महान कवि और विचारक रवींद्रनाथ टैगोर ने पश्चिमी आक्रामक राष्ट्रवाद की कड़ी आलोचना की थी और इसके स्थान पर मानवतावाद का समर्थन किया था।</p>
+
+                <h3 style="color: #9f1239; font-size: 24pt;">8.1 टैगोर के विचारों के प्रमुख स्तंभ:</h3>
+                <ul style="font-size: 18pt; line-height: 1.8; color: #000000; list-style-type: square;">
+                    <li><b>पश्चिमी राष्ट्रवाद की यांत्रिक प्रकृति:</b> टैगोर के अनुसार, पश्चिमी राष्ट्रवाद मुनाफाखोरी, शक्ति संचय और क्रूरता पर आधारित एक हिंसक मशीन की तरह है।</li>
+                    <li><b>मानवता राष्ट्र से ऊपर:</b> उनका प्रसिद्ध कथन था—"मैं मानवता को देश से ऊपर रखता हूँ।" राष्ट्रवाद को कभी भी मनुष्य की नैतिक चेतना पर हावी नहीं होना चाहिए।</li>
+                    <li><b>विश्व-बंधुत्व (Universalism):</b> संकीर्ण सीमाओं से मुक्त होकर पूरे विश्व को एक परिवार (वसुधैव कुटुंबकम्) मानने के आदर्श का समर्थन करना।</li>
+                    <li><b>सांस्कृतिक समन्वय का समर्थन:</b> भारत की शक्ति विविध संस्कृतियों के मेलजोल में है; इसे किसी एक आक्रामक राजनैतिक सांचे में ढालना अनुचित होगा।</li>
+                    <li><b>चेतावनी:</b> उन्होंने चेतावनी दी थी कि जब राष्ट्र की पूजा ईश्वर की तरह की जाने लगती है, तो मनुष्य अपनी नैतिक संवेदनशीलता खो बैठता है।</li>
+                </ul>
+            </div>
+
+
+            <!-- PART 9 -->
+            <div class="part-container" style="border-top-color: #1e3a8a;">
+                <h2 style="color: #1e40af !important; background-color: #eff6ff; border-left: 10px solid #1e3a8a; padding: 20px 25px; border-radius: 10px; font-size: 32pt; font-weight: 900 !important; margin-top: 0; -webkit-text-stroke: 1px #1e40af;">9. भारतीय राष्ट्रवाद का उदय और विकास</h2>
+                <p style="font-size: 18pt; text-align: justify;">भारतीय राष्ट्रवाद का उदय किसी एक धर्म या जाति से नहीं, बल्कि ब्रिटिश औपनिवेशिक शोषण के खिलाफ सभी भारतीयों के साझा ऐतिहासिक संघर्ष से हुआ है।</p>
+
+                <h3 style="color: #1e40af; font-size: 24pt;">9.1 ब्रिटिश विरोधी स्वतंत्रता संग्राम (Anti-Colonial Struggle):</h3>
+                <ul style="font-size: 18pt; line-height: 1.8; color: #000000; list-style-type: square;">
+                    <li><b>साझा शत्रु के खिलाफ एकता:</b> राजा-महाराजाओं, किसानों, मजदूरों और बुद्धिजीवियों को ब्रिटिश ईस्ट इंडिया कंपनी और ब्रिटिश शासन के आर्थिक शोषण के खिलाफ एकजुट करना।</li>
+                    <li><b>1857 की क्रांति से प्रेरणा:</b> प्रथम स्वतंत्रता संग्राम ने देशवासियों में पहली बार एक साझा राजनैतिक चेतना और बलिदान की भावना को जगाया।</li>
+                    <li><b>विविधता का एकीकरण:</b> देश के कोने-कोने में गांधीवादी आंदोलनों (जैसे असहयोग और भारत छोड़ो) द्वारा करोड़ों आम लोगों को राष्ट्रीय आंदोलन से जोड़ना।</li>
+                </ul>
+
+                <h3 style="color: #1e40af; font-size: 24pt;">9.2 नेहरूवादी और गांधीवादी राष्ट्रवाद (Secular and Inclusive Nationalism):</h3>
+                <ul style="font-size: 18pt; line-height: 1.8; color: #000000; list-style-type: square;">
+                    <li><b>समावेशी राष्ट्रवाद:</b> भारत किसी एक धर्म या संप्रदाय का देश नहीं है, बल्कि यहाँ रहने वाले सभी लोगों का समान अधिकार है।</li>
+                    <li><b>अनेकता में एकता (Unity in Diversity):</b> भारत की सांस्कृतिक और धार्मिक विविधता को कमजोरी मानने के बजाय देश की साझा शक्ति और विरासत मानना।</li>
+                    <li><b>संवैधानिक ढांचा:</b> संविधान की प्रस्तावना और मूल अधिकारों के माध्यम से प्रत्येक नागरिक को जाति-धर्म से ऊपर उठकर समान राजनैतिक दर्जा देना।</li>
+                </ul>
+            </div>
+
+
+            <!-- PART 10 -->
+            <div class="part-container" style="border-top-color: #be185d;">
+                <h2 style="color: #be185d !important; background-color: #fdf2f8; border-left: 10px solid #be185d; padding: 20px 25px; border-radius: 10px; font-size: 32pt; font-weight: 900 !important; margin-top: 0; -webkit-text-stroke: 1px #be185d;">10. राष्ट्रवाद और वैश्विक सुरक्षा (Nationalism and Global Security)</h2>
+                <p style="font-size: 18pt; text-align: justify;">राष्ट्रवाद जहाँ आंतरिक सुरक्षा और स्थिरता का आधार है, वहीं यदि यह आक्रामक रूप ले ले, तो यह अंतरराष्ट्रीय शांति और सुरक्षा के लिए गंभीर खतरा बन सकता है।</p>
+
+                <h3 style="color: #be185d; font-size: 24pt;">10.1 वैश्विक सुरक्षा पर राष्ट्रवाद का प्रभाव:</h3>
+                <ul style="font-size: 18pt; line-height: 1.8; color: #000000; list-style-type: square;">
+                    <li><b>सीमा विवाद और तनाव:</b> अपने देश की सीमाओं के विस्तार या वर्चस्व की चाह में पड़ोसी देशों के साथ निरंतर सैन्य संघर्ष और युद्ध का होना।</li>
+                    <li><b>हथियारों की विनाशकारी होड़:</b> 'राष्ट्रीय सुरक्षा' के नाम पर परमाणु हथियारों और रक्षा बजट में अत्यधिक बढ़ोतरी करना, जिससे जन-कल्याण का बजट कम होता है।</li>
+                    <li><b>अंतरराष्ट्रीय संस्थाओं की उपेक्षा:</b> अपने राष्ट्रहित को सर्वोपरि मानकर संयुक्त राष्ट्र (UN) जैसी वैश्विक संस्थाओं के शांति समझौतों और पर्यावरण संधियों का उल्लंघन करना।</li>
+                    <li><b>नस्लीय और जातीय संहार:</b> राष्ट्र के नाम पर देश के भीतर ही किसी विशिष्ट नस्ल या समुदाय का दमन करना (जैसे रवांडा या बाल्कन संकट)।</li>
+                    <li><b>शांतिपूर्ण सह-अस्तित्व की आवश्यकता:</b> यह समझना कि प्रत्येक राष्ट्र की सुरक्षा दूसरे राष्ट्र की स्थिरता से जुड़ी है; वैश्विक शांति के बिना कोई भी देश सुरक्षित नहीं रह सकता।</li>
+                </ul>
+            </div>
+
+
+            <!-- PART 11 -->
+            <div class="part-container" style="border-top-color: #f59e0b;">
+                <h2 style="color: #b45309 !important; background-color: #fffbeb; border-left: 10px solid #f59e0b; padding: 20px 25px; border-radius: 10px; font-size: 32pt; font-weight: 900 !important; margin-top: 0; -webkit-text-stroke: 1px #b45309;">11. बहुसांस्कृतिक समाज में राष्ट्रवाद की चुनौतियां</h2>
+                <p style="font-size: 18pt; text-align: justify;">एक ऐसे समाज में जहाँ विभिन्न धार्मिक, भाषाई और जातीय समूह साथ रहते हैं, वहाँ एक साझा और निष्पक्ष राष्ट्रवाद का निर्माण करना अत्यंत चुनौतीपूर्ण होता है।</p>
+
+                <h3 style="color: #b45309; font-size: 24pt;">11.1 बहुसांस्कृतिक समाज की प्रमुख चुनौतियां:</h3>
+                <ul style="font-size: 18pt; line-height: 1.8; color: #000000; list-style-type: square;">
+                    <li><b>भाषाई विवाद:</b> किसी एक भाषा को पूरे देश पर थोपने की कोशिश करने से क्षेत्रीय असंतोष और विरोध आंदोलनों का जन्म होना।</li>
+                    <li><b>बहुसंख्यकवादी राष्ट्रवाद:</b> बहुसंख्यक वर्ग की धार्मिक और सांस्कृतिक प्रथाओं को ही 'राष्ट्रीय पहचान' मानकर थोपना, जिससे अल्पसंख्यक अलग-थलग पड़ जाते हैं।</li>
+                    <li><b>क्षेत्रीय विकास में असमानता:</b> देश के कुछ राज्यों का अत्यधिक विकास होना और अन्य का पिछड़ जाना, जिससे अलगाववादी प्रवृत्तियों को बढ़ावा मिलता है।</li>
+                    <li><b>सांस्कृतिक स्वायत्तता की मांग:</b> आदिवासी और स्थानीय समुदायों द्वारा अपनी जल, जंगल और जमीन की रक्षा के लिए विशेष अधिकारों की मांग करना।</li>
+                    <li><b>संघीय ढांचा (Federalism):</b> शक्तियों का केंद्र और राज्यों के बीच उचित बंटवारा करना ही बहुसांस्कृतिक समाज में राष्ट्रवाद को मजबूत रखने का एकमात्र लोकतांत्रिक उपाय है।</li>
+                </ul>
+            </div>
+
+
+            <!-- PART 12 -->
+            <div class="part-container" style="border-top-color: #1d4ed8;">
+                <h2 style="color: #1e40af !important; background-color: #eff6ff; border-left: 10px solid #1d4ed8; padding: 20px 25px; border-radius: 10px; font-size: 32pt; font-weight: 900 !important; margin-top: 0; -webkit-text-stroke: 1px #1e40af;">12. आर्थिक राष्ट्रवाद (Economic Nationalism)—संरक्षणवाद बनाम मुक्त व्यापार</h2>
+                <p style="font-size: 18pt; text-align: justify;">आर्थिक राष्ट्रवाद वह नीति है जिसके तहत कोई देश अपने घरेलू उद्योगों, कृषि और रोजगार की रक्षा के लिए विदेशी सामानों पर कड़े प्रतिबंध या टैक्स लगाता है।</p>
+
+                <h3 style="color: #1e40af; font-size: 24pt;">12.1 आर्थिक राष्ट्रवाद के प्रमुख पहलू:</h3>
+                <ul style="font-size: 18pt; line-height: 1.8; color: #000000; list-style-type: square;">
+                    <li><b>घरेलू उद्योगों का संरक्षण (Protectionism):</b> विदेशी आयात पर भारी टैक्स लगाकर अपने देश के छोटे व्यापारियों और उद्योगों को प्रतिस्पर्द्धा से बचाना।</li>
+                    <li><b>आत्मनिर्भरता का संकल्प:</b> महत्वपूर्ण तकनीकों, रक्षा उपकरणों और खाद्यान्न के क्षेत्र में विदेशी देशों पर निर्भरता को कम करना (जैसे 'मेक इन इंडिया')।</li>
+                    <li><b>संसाधनों पर राष्ट्रीय नियंत्रण:</b> जल, खनिजों और बुनियादी ढांचे को विदेशी कॉर्पोरेट कंपनियों के नियंत्रण में जाने से रोकना।</li>
+                    <li><b>मुक्त व्यापार से संघर्ष:</b> आर्थिक संरक्षणवाद के कारण वैश्विक व्यापार समझौतों (WTO) में गतिरोध पैदा होना और आर्थिक युद्ध (Trade War) छिड़ना।</li>
+                    <li><b>संतुलित विकास:</b> विदेशी निवेश का स्वागत करना, लेकिन यह सुनिश्चित करना कि उससे देश के नागरिकों के रोजगार और पर्यावरण को नुकसान न पहुँचे।</li>
+                </ul>
+            </div>
+
+
+            <!-- PART 13 -->
+            <div class="part-container" style="border-top-color: #047857;">
+                <h2 style="color: #064e3b !important; background-color: #ecfdf5; border-left: 10px solid #047857; padding: 20px 25px; border-radius: 10px; font-size: 32pt; font-weight: 900 !important; margin-top: 0; -webkit-text-stroke: 1px #064e3b;">13. भूमंडलीकरण के युग में राष्ट्रवाद (Refined Analysis)</h2>
+                <p style="font-size: 18pt; text-align: justify;">भूमंडलीकरण ने इंटरनेट, बहुराष्ट्रीय कंपनियों और प्रवासियों के प्रवाह द्वारा राष्ट्रों के पारंपरिक स्वरूप और सीमाओं को गंभीर रूप से हिला दिया है।</p>
+
+                <h3 style="color: #064e3b; font-size: 24pt;">13.1 भूमंडलीकरण के कारण राष्ट्रवाद का ह्रास (तर्क):</h3>
+                <ul style="font-size: 18pt; line-height: 1.8; color: #000000; list-style-type: square;">
+                    <li><b>संप्रभुता का बंटवारा:</b> यूरोपीय संघ (EU) जैसी बहुराष्ट्रीय संस्थाओं और WTO के कारण देशों की नीतियां बनाने की संप्रभु शक्ति कमजोर होना।</li>
+                    <li><b>सांस्कृतिक वैश्विकरण:</b> पश्चिमी संगीत, भोजन (Fast Food) और फिल्मों के कारण स्थानीय संस्कृतियों और भाषाओं की विशिष्टता का कम होना।</li>
+                    <li><b>वैश्विक नागरिकता का उदय:</b> वैश्विक चुनौतियों (जलवायु परिवर्तन, वैश्विक व्यापार) के कारण लोगों में राष्ट्रीय सीमा से परे सोचने की आदत बनना।</li>
+                </ul>
+
+                <h3 style="color: #064e3b; font-size: 24pt;">13.2 राष्ट्रवाद का पुनरुत्थान (तर्क):</h3>
+                <ul style="font-size: 18pt; line-height: 1.8; color: #000000; list-style-type: square;">
+                    <li><b>स्थानीय पहचान की रक्षा:</b> अपनी भाषा, परंपरा और नौकरियों को विदेशी प्रवासियों और कॉर्पोरेट कंपनियों से बचाने के लिए राष्ट्रवाद का तीव्र उभार।</li>
+                    <li><b>दक्षिणपंथी आंदोलनों की वृद्धि:</b> अमेरिका (America First), यूरोप और एशिया में प्रवासियों को रोकने और सीमाओं को कड़ा करने के जनमत का मज़बूत होना।</li>
+                    <li><b>संकट में राष्ट्रीय राज्य की शरण:</b> वैश्विक महामारी या आर्थिक मंदी के समय बहुराष्ट्रीय संस्थाएं नहीं, बल्कि केवल राष्ट्रीय सरकारें ही नागरिकों की रक्षा करती हैं।</li>
+                </ul>
+            </div>
+
+
+            <!-- PART 14 -->
+            <div class="part-container" style="border-top-color: #4338ca;">
+                <h2 style="color: #3730a3 !important; background-color: #eef2ff; border-left: 10px solid #4338ca; padding: 20px 25px; border-radius: 10px; font-size: 32pt; font-weight: 900 !important; margin-top: 0; -webkit-text-stroke: 1px #3730a3;">14. राष्ट्रवाद और नागरिकता (Nationalism and Citizenship)</h2>
+                <p style="font-size: 18pt; text-align: justify;">राष्ट्रवाद और नागरिकता का गहरा संबंध है। राष्ट्रवाद व्यक्ति को अपने देश के प्रति संवेगात्मक रूप से जोड़ता है, जबकि नागरिकता उसे कानूनी दर्जा देती है।</p>
+
+                <h3 style="color: #3730a3; font-size: 24pt;">14.1 नागरिकता और राष्ट्रवाद का संबंध:</h3>
+                <ul style="font-size: 18pt; line-height: 1.8; color: #000000; list-style-type: square;">
+                    <li><b>कानूनी अधिकार और भावना:</b> नागरिकता किसी देश के संविधान द्वारा दी गई कानूनी स्थिति है; राष्ट्रवाद उस स्थिति को देशप्रेम और वफादारी से भरता है।</li>
+                    <li><b>कर्तव्यों का नैतिक आधार:</b> कर चुकाना, पर्यावरण की रक्षा करना और कानूनों का पालन करना नागरिक केवल डर से नहीं, बल्कि राष्ट्रीय भावना के कारण करता है।</li>
+                    <li><b>समान सदस्यता:</b> राष्ट्रवाद के आदर्शों के अनुरूप नागरिकता सभी नागरिकों को बिना किसी वर्ग-भेद के समान अधिकार देने की वकालत करती है।</li>
+                    <li><b>समावेशी नागरिकता:</b> संकीर्ण राष्ट्रवाद जब नागरिकता को संकुचित करता है, तो बहुसांस्कृतिक लोकतांत्रिक ढांचा खतरे में पड़ जाता है।</li>
+                    <li><b>देशभक्ति और जिम्मेदारी:</b> एक सच्चा नागरिक राष्ट्रवाद को अंध-भक्ति नहीं मानता, बल्कि देश की कमियों को दूर करने और सामाजिक न्याय स्थापित करने का संकल्प लेता है।</li>
+                </ul>
+            </div>
+
+
+            <!-- PART 15 -->
+            <div class="part-container" style="border-top-color: #334155;">
+                <h2 style="color: #1e293b !important; background-color: #f1f5f9; border-left: 10px solid #334155; padding: 20px 25px; border-radius: 10px; font-size: 32pt; font-weight: 900 !important; margin-top: 0; -webkit-text-stroke: 1px #1e293b;">15. राष्ट्रवाद और मानव कल्याण (Nationalism and Human Welfare)</h2>
+                <p style="font-size: 18pt; text-align: justify;">राष्ट्रवाद का अंतिम लक्ष्य केवल शक्ति का संचय करना नहीं होना चाहिए, बल्कि अपने देश के प्रत्येक नागरिक का जीवन स्तर सुधारना और मानव कल्याण सुनिश्चित करना होना चाहिए।</p>
+
+                <h3 style="color: #1e293b; font-size: 24pt;">15.1 मानव कल्याण में राष्ट्रवाद की भूमिका:</h3>
+                <ul style="font-size: 18pt; line-height: 1.8; color: #000000; list-style-type: square;">
+                    <li><b>बुनियादी विकास:</b> राष्ट्रीय भावना से प्रेरित होकर शिक्षा, स्वास्थ्य, पक्की सड़कों और पेयजल की व्यवस्था को गाँव-गाँव तक पहुँचाना।</li>
+                    <li><b>गरीबी उन्मूलन:</b> लोक कल्याणकारी योजनाओं द्वारा अमीरों पर टैक्स लगाकर गरीबों को रियायती अनाज, पक्के मकान और आजीविका की सुरक्षा देना।</li>
+                    <li><b>हाशिए के वर्ग का उत्थान:</b> अनुसूचित जातियों, जनजातियों और महिलाओं को समाज की मुख्यधारा में लाकर वास्तविक रूप से सशक्त बनाना।</li>
+                    <li><b>परोपकारी राष्ट्रवाद:</b> दूसरे गरीब और संकटग्रस्त देशों (जैसे अकाल या युद्ध के समय) को मानवीय और चिकित्सकीय सहायता भेजना।</li>
+                    <li><b>सच्ची देशभक्ति:</b> देशभक्ति का अर्थ केवल सीमा पर लड़ना नहीं है; समाज में फैले भ्रष्टाचार, भुखमरी और अशिक्षा को मिटाना भी राष्ट्रवाद का अहम हिस्सा है।</li>
+                </ul>
+            </div>
+
+
+            <!-- PART 16 -->
+            <div class="part-container" style="border-top-color: #7c3aed;">
+                <h2 style="color: #5b21b6 !important; background-color: #f5f3ff; border-left: 10px solid #7c3aed; padding: 20px 25px; border-radius: 10px; font-size: 32pt; font-weight: 900 !important; margin-top: 0; -webkit-text-stroke: 1px #5b21b6;">16. धर्मनिरपेक्षता और राष्ट्रवाद (Secularism and Nationalism)</h2>
+                <p style="font-size: 18pt; text-align: justify;">भारत जैसे विशाल और बहु-धार्मिक देश में धर्मनिरपेक्षता (Secularism) और राष्ट्रवाद का आपस में अटूट संबंध है। इसके बिना राष्ट्रीय अखंडता को बनाए रखना असंभव है।</p>
+
+                <h3 style="color: #5b21b6; font-size: 24pt;">16.1 धर्मनिरपेक्ष राष्ट्रवाद के प्रमुख सिद्धांत:</h3>
+                <ul style="font-size: 18pt; line-height: 1.8; color: #000000; list-style-type: square;">
+                    <li><b>सभी धर्मों का समान सम्मान:</b> राज्य का अपना कोई राजधर्म न होना और प्रत्येक नागरिक को अपनी पसंद के धर्म को मानने की पूर्ण स्वतंत्रता होना।</li>
+                    <li><b>धार्मिक विभाजन पर रोक:</b> राष्ट्रवाद के नाम पर सांप्रदायिक नफरत, दंगों और सामाजिक दूरियों को फैलाने वाली शक्तियों का कड़ा कानूनी विरोध करना।</li>
+                    <li><b>समान नागरिक अधिकार:</b> किसी भी नागरिक को उसके धार्मिक विश्वास के कारण सरकारी नौकरी, शिक्षा या राजनैतिक प्रतिनिधित्व से वंचित न करना।</li>
+                    <li><b>साझा राष्ट्रीय त्योहार:</b> स्वतंत्रता दिवस, गणतंत्र दिवस और गांधी जयंती जैसे राष्ट्रीय पर्वों को सामूहिक रूप से मनाकर साझा चेतना मज़बूत करना।</li>
+                    <li><b>सहिष्णुता (Tolerance) का विकास:</b> विभिन्न धार्मिक समुदायों के बीच आपसी संवाद, मेलजोल और समझदारी की संस्कृति को बढ़ावा देना।</li>
+                </ul>
+            </div>
+
+
+            <!-- PART 17 -->
+            <div class="part-container" style="border-top-color: #db2777;">
+                <h2 style="color: #9d174d !important; background-color: #fdf2f8; border-left: 10px solid #db2777; padding: 20px 25px; border-radius: 10px; font-size: 32pt; font-weight: 900 !important; margin-top: 0; -webkit-text-stroke: 1px #9d174d;">17. पर्यावरणीय राष्ट्रवाद (Eco-Nationalism)</h2>
+                <p style="font-size: 18pt; text-align: justify;">पर्यावरणीय राष्ट्रवाद वह आधुनिक विचार है जो देश की मिट्टी, नदियों, जंगलों और जैव विविधता की रक्षा करने को सच्ची देशभक्ति और राष्ट्रीय कर्तव्य मानता है।</p>
+
+                <h3 style="color: #9d174d; font-size: 24pt;">17.1 पर्यावरणीय राष्ट्रवाद के प्रमुख पहलू:</h3>
+                <ul style="font-size: 18pt; line-height: 1.8; color: #000000; list-style-type: square;">
+                    <li><b>प्राकृतिक संपदा की रक्षा:</b> हिमालय के जंगलों, गंगा-यमुना जैसी पवित्र नदियों और वन्यजीवों को औद्योगिक प्रदूषण और विनाश से बचाना।</li>
+                    <li><b>जलवायु परिवर्तन के खिलाफ जंग:</b> देश में नवीकरणीय ऊर्जा (सौर और पवन ऊर्जा) को बढ़ावा देना और कार्बन उत्सर्जन में कमी लाना।</li>
+                    <li><b>स्वदेशी आंदोलन और पर्यावरण:</b> स्थानीय स्तर पर निर्मित जैविक उत्पादों का उपयोग करना और एकल-उपयोग प्लास्टिक का पूर्ण बहिष्कार करना।</li>
+                    <li><b>पर्यावरणीय आंदोलनों का समर्थन:</b> चिपको आंदोलन या नर्मदा बचाओ आंदोलन जैसे जन-आंदोलनों को देश की मिट्टी बचाने का देशभक्तिपूर्ण कार्य मानना।</li>
+                    <li><b>पर्यावरण साक्षरता:</b> स्कूलों और कॉलेजों के माध्यम से बच्चों में प्रकृति के प्रति आदर और सजग पर्यावरणीय नागरिकता की भावना भरना।</li>
+                </ul>
+            </div>
+
+
+            <!-- PART 18 -->
+            <div class="part-container" style="border-top-color: #0369a1;">
+                <h2 style="color: #075985 !important; background-color: #f0f9ff; border-left: 10px solid #0369a1; padding: 20px 25px; border-radius: 10px; font-size: 32pt; font-weight: 900 !important; margin-top: 0; -webkit-text-stroke: 1px #075985;">18. लिंग (Gender) और राष्ट्रवाद—नारीवादी दृष्टिकोण</h2>
+                <p style="font-size: 18pt; text-align: justify;">नारीवादी विचारकों ने पारंपरिक राष्ट्रवाद की आलोचना करते हुए यह तर्क दिया है कि राष्ट्रीय प्रतीकों और बहसों में महिलाओं की भूमिका को अक्सर हाशिए पर रखा गया है।</p>
+
+                <h3 style="color: #075985; font-size: 24pt;">18.1 लैंगिक राष्ट्रवाद के प्रमुख आयाम:</h3>
+                <ul style="font-size: 18pt; line-height: 1.8; color: #000000; list-style-type: square;">
+                    <li><b>भारत माता का रूपक:</b> राष्ट्र की कल्पना 'माता' (भारत माता) के रूप में करना, लेकिन वास्तविक महिलाओं को सामाजिक-आर्थिक अधिकारों से वंचित रखना।</li>
+                    <li><b>स्वतंत्रता आंदोलन में योगदान:</b> सरोजिनी नायडू, अरुणा आसफ अली और झांसी की रानी जैसी वीरांगनाओं के योगदान को इतिहास में समान स्थान दिलाना।</li>
+                    <li><b>पितृसत्तात्मक सोच की चुनौती:</b> राष्ट्रवाद के नाम पर महिलाओं की व्यक्तिगत स्वतंत्रता, पहनावे या आचरण पर रूढ़िवादी सामाजिक पाबंदियां लगाने का विरोध।</li>
+                    <li><b>राजनैतिक प्रतिनिधित्व:</b> नीति-निर्माण और संसद के महत्वपूर्ण पदों पर महिलाओं के लिए 33% आरक्षण देकर उनका राजनैतिक सशक्तिकरण करना।</li>
+                    <li><b>समान अधिकार:</b> यह मानना कि जब तक देश की आधी आबादी (महिलाएं) सुरक्षित और स्वतंत्र नहीं होगी, तब तक राष्ट्रीय गौरव अधूरा है।</li>
+                </ul>
+            </div>
+
+
+            <!-- PART 19 -->
+            <div class="part-container" style="border-top-color: #059669;">
+                <h2 style="color: #065f46 !important; background-color: #f0fdf4; border-left: 10px solid #059669; padding: 20px 25px; border-radius: 10px; font-size: 32pt; font-weight: 900 !important; margin-top: 0; -webkit-text-stroke: 1px #065f46;">19. तकनीक, सोशल मीडिया और डिजिटल राष्ट्रवाद</h2>
+                <p style="font-size: 18pt; text-align: justify;">आज सोशल मीडिया और डिजिटल संचार के युग में राष्ट्रवाद एक नए रूप में उभर रहा है जिसे 'डिजिटल राष्ट्रवाद' (Digital Nationalism) कहा जाता है।</p>
+
+                <h3 style="color: #065f46; font-size: 24pt;">19.1 डिजिटल राष्ट्रवाद के लाभ और चुनौतियाँ:</h3>
+                <ul style="font-size: 18pt; line-height: 1.8; color: #000000; list-style-type: square;">
+                    <li><b>तीव्र राष्ट्रीय संवाद:</b> राष्ट्रीय संकटों (जैसे अकाल या युद्ध) के समय सोशल मीडिया द्वारा देशवासियों में एकजुटता और सहायता जुटाना आसान होना।</li>
+                    <li><b>अंतरराष्ट्रीय स्तर पर प्रचार:</b> वैश्विक मंचों पर भारत की संस्कृति, उपलब्धियों (जैसे अंतरिक्ष मिशन) और इतिहास का गौरवशाली प्रचार करना।</li>
+                    <li><b>ऑनलाइन ट्रोलिंग और नफरत:</b> देशभक्ति के नाम पर असहमति रखने वाले साथी नागरिकों को ऑनलाइन प्रताड़ित (Troll) करना और नफरत फैलाना।</li>
+                    <li><b>फेक न्यूज का खतरा:</b> राष्ट्रीय सुरक्षा के नाम पर झूठी खबरें (Fake News) फैलाना जिससे सांप्रदायिक या राजनैतिक तनाव उत्पन्न होता है।</li>
+                    <li><b>जागरूक डिजिटल व्यवहार:</b> नागरिकों को डिजिटल साक्षर बनाना ताकि वे ऑनलाइन माध्यमों का उपयोग रचनात्मकता और देशहित में करें, न कि नफरत फैलाने के लिए।</li>
+                </ul>
+            </div>
+
+
+            <!-- PART 20 -->
+            <div class="part-container" style="border-top-color: #0f172a;">
+                <h2 style="color: #0f172a !important; background-color: #f1f5f9; border-left: 10px solid #0f172a; padding: 20px 25px; border-radius: 10px; font-size: 32pt; font-weight: 900 !important; margin-top: 0; -webkit-text-stroke: 1px #0f172a;">20. निष्कर्ष: राष्ट्रवाद—एक मानवीय और नैतिक संकल्प</h2>
+                <p style="font-size: 18pt; text-align: justify;">अध्याय 17 (राष्ट्रवाद) का यह गहन सफर हमें इस मूल सत्य तक ले जाता है कि राष्ट्रवाद कोई संकीर्ण दीवार नहीं, बल्कि पूरे समाज को एकजुट करने का एक पवित्र संकल्प है।</p>
+
+                <h3 style="color: #0f172a; font-size: 24pt;">20.1 निष्कर्ष के प्रमुख स्तंभ:</h3>
+                <ul style="font-size: 18pt; line-height: 1.8; color: #000000; list-style-type: square;">
+                    <li><b>समावेशी देशप्रेम:</b> सच्चा राष्ट्रवाद वही है जो किसी से नफरत नहीं करता, बल्कि अपने देश के प्रत्येक नागरिक से प्रेम करता है और उसका आदर करता है।</li>
+                    <li><b>टैगोर का मानवतावाद:</b> टैगोर का यह संदेश हमें संकीर्ण और आक्रामक राष्ट्रवाद के खतरों से हमेशा सचेत रहने की प्रेरणा देता है।</li>
+                    <li><b>समानता और न्याय का आधार:</b> जब तक देश के अंतिम पायदान पर खड़े निर्धनतम नागरिक को सामाजिक न्याय नहीं मिलता, तब तक राष्ट्रीय गौरव अधूरा है।</li>
+                    <li><b>पर्यावरणीय संरक्षण:</b> देश की मिट्टी, नदियों और जंगलों की रक्षा करना ही 21वीं सदी के देशभक्त नागरिक का सबसे बड़ा संकल्प है।</li>
+                    <li><b>सर्वोच्च संदेश:</b> "अनेकता में एकता" और "वसुधैव कुटुंबकम्"—यही इस पूरे अध्याय का सर्वोच्च, शाश्वत और अंतिम संदेश है।</li>
+                </ul>
+            </div>
+
         </div>
     </div>
 </body>
