@@ -6,8 +6,14 @@
     <title>प्रश्न-उत्तर - प्रीमियम HTML व्यू</title>
     <link rel="stylesheet" href="css/styles.css">
     <style>
+        body {
+            overflow-x: auto !important;
+        }
         .container {
-            max-width: 100% !important;
+            max-width: none !important;
+            width: fit-content !important;
+            min-width: 100% !important;
+            margin: 0 auto !important;
             padding: 0 20px 40px !important;
         }
         :root {
@@ -15,14 +21,20 @@
             --qa-accent-dark: #7c3aed;
         }
         .page-container {
-            width: 95%;
-            max-width: var(--container-width, 1400px); /* Still capped for readability but much wider */
+            width: var(--container-width, 1400px) !important;
+            max-width: none !important;
             margin: 40px auto;
             background: white;
             color: #1a202c;
             padding: 40px;
             border-radius: 20px;
             box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+        }
+        @media (max-width: 1400px) {
+            .page-container {
+                width: 95% !important;
+                max-width: 100% !important;
+            }
         }
         .loading {
             text-align: center;

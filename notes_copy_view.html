@@ -6,18 +6,31 @@
     <title>नोट्स (छात्र कॉपी संस्करण)</title>
     <link rel="stylesheet" href="css/styles.css">
     <style>
+        body {
+            overflow-x: auto !important;
+        }
         .container {
-            max-width: 100% !important;
+            max-width: none !important;
+            width: fit-content !important;
+            min-width: 100% !important;
+            margin: 0 auto !important;
             padding: 0 20px 40px !important;
         }
         .page-container {
-            max-width: var(--container-width, 900px);
+            width: var(--container-width, 900px) !important;
+            max-width: none !important;
             margin: 15px auto;
             background: white;
             color: #1a202c;
             padding: 25px;
             border-radius: 12px;
             box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+        }
+        @media (max-width: 900px) {
+            .page-container {
+                width: 100% !important;
+                max-width: 100% !important;
+            }
         }
         .nav-back {
             margin-bottom: 20px;
