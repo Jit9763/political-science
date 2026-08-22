@@ -63,6 +63,8 @@
         .adjustable-text {
             font-size: calc(var(--orig-size) + var(--size-offset, 0px)) !important;
             font-weight: calc(var(--orig-weight) + var(--weight-offset, 0)) !important;
+            -webkit-text-stroke-width: calc(var(--orig-stroke, 0px) + var(--stroke-offset, 0px)) !important;
+            -webkit-text-stroke-color: #000000 !important;
         }
 
         .btn-copy.success {
@@ -136,11 +138,12 @@
     <script>
         let sizeOffset = 0;
         let weightOffset = 0;
+        let strokeOffset = 0;
 
         function adjustFontSize(amount) {
             sizeOffset += amount;
-            if (sizeOffset < -8) sizeOffset = -8;
-            if (sizeOffset > 24) sizeOffset = 24;
+            if (sizeOffset < -12) sizeOffset = -12;
+            if (sizeOffset > 30) sizeOffset = 30;
             const container = document.getElementById('qa-content');
             if (container) {
                 container.style.setProperty('--size-offset', sizeOffset + 'px');
@@ -151,9 +154,15 @@
             weightOffset += amount;
             if (weightOffset < -300) weightOffset = -300;
             if (weightOffset > 500) weightOffset = 500;
+            
+            strokeOffset += (amount / 100) * 0.3;
+            if (strokeOffset < -1.2) strokeOffset = -1.2;
+            if (strokeOffset > 2.4) strokeOffset = 2.4;
+            
             const container = document.getElementById('qa-content');
             if (container) {
                 container.style.setProperty('--weight-offset', weightOffset);
+                container.style.setProperty('--stroke-offset', strokeOffset + 'px');
             }
         }
 
@@ -168,6 +177,7 @@
                 const style = window.getComputedStyle(el);
                 const fontSize = style.fontSize;
                 const fontWeight = style.fontWeight;
+                const strokeWidth = style.webkitTextStrokeWidth;
                 
                 if (fontSize) {
                     el.style.setProperty('--orig-size', fontSize);
@@ -177,6 +187,9 @@
                     if (fontWeight === 'normal') weightVal = '400';
                     else if (fontWeight === 'bold') weightVal = '700';
                     el.style.setProperty('--orig-weight', weightVal);
+                }
+                if (strokeWidth && strokeWidth !== '0px' && strokeWidth !== '') {
+                    el.style.setProperty('--orig-stroke', strokeWidth);
                 }
                 el.classList.add('adjustable-text');
             });
@@ -193,6 +206,7 @@
             adjustableElements.forEach(el => {
                 const origSize = el.style.getPropertyValue('--orig-size');
                 const origWeight = el.style.getPropertyValue('--orig-weight');
+                const origStroke = el.style.getPropertyValue('--orig-stroke');
                 if (origSize) {
                     el.style.fontSize = origSize;
                 } else {
@@ -203,8 +217,15 @@
                 } else {
                     el.style.removeProperty('font-weight');
                 }
+                if (origStroke) {
+                    el.style.webkitTextStrokeWidth = origStroke;
+                } else {
+                    el.style.removeProperty('-webkit-text-stroke-width');
+                    el.style.removeProperty('-webkit-text-stroke-color');
+                }
                 el.style.removeProperty('--orig-size');
                 el.style.removeProperty('--orig-weight');
+                el.style.removeProperty('--orig-stroke');
                 el.classList.remove('adjustable-text');
             });
 
