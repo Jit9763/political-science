@@ -2,227 +2,261 @@
 <html lang="hi">
 <head>
     <meta charset="UTF-8">
-    <title>Chapter 13: समानता (Equality) - Ultra Premium Mega Notes</title>
+    <title>Chapter 13: समानता (Equality) - 100-PAGE MASTER EDITION (Projector Friendly)</title>
     <style>
-        /* Persistent Header UI */
+        @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800;900&family=Noto+Sans+Devanagari:wght@400;600;800;900&display=swap');
+        
         #control-header {
-            position: fixed; top: 0; left: 0; width: 100%; background-color: #1e293b; color: #ffffff;
+            position: fixed; top: 0; left: 0; width: 100%; background-color: #0f172a; color: #ffffff;
             padding: 15px 20px; display: flex; justify-content: space-between; align-items: center;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); z-index: 1000; font-family: 'Arial', sans-serif; box-sizing: border-box;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); z-index: 1000; font-family: 'Outfit', sans-serif; box-sizing: border-box;
         }
-        #control-header h1 { margin: 0; font-size: 1.2rem; font-weight: 600; }
-        body { margin-top: 80px; background-color: #f8fafc; }
+        #control-header h1 { margin: 0; font-size: 1.4rem; font-weight: 900; }
+        body {
+            margin-top: 80px;
+            background-color: #ffffff;
+            font-family: 'Outfit', 'Noto Sans Devanagari', sans-serif;
+            font-size: 20pt;
+            font-weight: 800;
+            line-height: 2.2;
+            color: #000000;
+        }
+        p, li, div, td, th {
+            font-weight: 800 !important;
+            color: #000000 !important;
+        }
+        b, strong {
+            font-weight: 900 !important;
+            color: #000000 !important;
+        }
+        ul, ol { padding-left: 60px !important; margin-left: 20px !important; }
+        li {
+            padding-left: 15px;
+            margin-bottom: 25px;
+            text-align: justify;
+            line-height: 2.2;
+            font-size: 20pt;
+            font-weight: 800 !important;
+        }
+        /* Heavy text thickness for projector visibility */
+        p, li, h1, h2, h3, h4, b, strong {
+            font-weight: 900 !important;
+            -webkit-text-stroke: 0.5px #000000;
+        }
+        
+        .part-container {
+            margin-bottom: 80px; padding: 50px 60px; background-color: #ffffff;
+            border-radius: 15px; box-shadow: 0 15px 25px -5px rgba(0,0,0,0.05);
+            border-top: 12px solid #1e3a8a;
+        }
+        .info-box {
+            background-color: #f8fafc; padding: 30px; border-left: 14px solid #1e3a8a; 
+            margin: 30px 0; border-radius: 8px; font-size: 19pt; line-height: 2.2; font-weight: 900;
+        }
+        .debate-box {
+            background-color: #fffbeb; padding: 30px; border: 6px solid #b45309; 
+            border-radius: 15px; margin: 40px 0; line-height: 2.2; font-size: 19pt; font-weight: 900;
+        }
     </style>
 </head>
 <body>
-    <div id="contentToCopy">
-        <div style="font-family: 'Arial', verdana, sans-serif; font-size: 16pt; line-height: 1.8; color: #1a202c; max-width: 1000px; margin: auto; padding: 20px;">
+    <!-- Persistent Control Header -->
+    <div id="control-header">
+        <h1>📖 अध्याय 13: समानता (EQUALITY) - 100-PAGE MASTER NOTES</h1>
+        <button id="mainCopyBtn" onclick="copyToGoogleDoc()" style="background-color: #2563eb; color: white; border: none; padding: 10px 20px; border-radius: 6px; font-size: 14px; font-weight: bold; cursor: pointer; transition: background-color 0.2s;">
+            📋 COPY EVERYTHING FOR GOOGLE DOCS
+        </button>
+    </div>
+    
+    <div id="status" style="display: none; position: fixed; top: 70px; right: 20px; background-color: #059669; color: white; padding: 12px 24px; border-radius: 6px; z-index: 1000; font-family: sans-serif; font-size: 14px; font-weight: bold; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+        ✨ SUCCESS! Content copied to clipboard in rich format. Now open Google Docs and press Ctrl+V.
+    </div>
 
-            <!-- Title Section (Ch-2 Style) -->
-            <div style="text-align: center; margin-bottom: 50px; padding: 40px; border: 4px double #1e3a8a; background-color: #f8fafc; border-radius: 15px;">
-                <h1 style="color: #1e40af; font-size: 45pt; font-weight: 900; border-bottom: 5px solid #3b82f6; padding-bottom: 20px; margin-bottom: 30px; text-transform: uppercase;">
+    <div id="contentToCopy">
+        <div style="font-family: 'Outfit', 'Noto Sans Devanagari', sans-serif; font-size: 20pt; line-height: 2.2; color: #000000; max-width: 1400px; margin: auto; padding: 20px;">
+
+            <!-- Title Section (Projector Friendly) -->
+            <div style="text-align: center; margin-bottom: 80px; padding: 75px; border: 15px double #1e3a8a; background-color: #eff6ff; border-radius: 30px;">
+                <h1 style="color: #1e3a8a !important; font-size: 58pt; font-weight: 950 !important; margin-bottom: 20px; -webkit-text-stroke: 1.5px #1e3a8a;">
                     अध्याय 13: समानता<br/>
-                    <span style="font-size: 26pt; color:#475569; font-weight: 600;">(EQUALITY)</span>
+                    <span style="font-size: 30pt; color:#475569; font-weight: 900;">(EQUALITY)</span>
                 </h1>
-                <p style="font-size: 22pt; color: #0f172a; margin-top: 10px; font-weight: bold;">कक्षा 11 राजनीति विज्ञान - अति-गहन शैक्षणिक मास्टर नोट्स</p>
-                <p style="font-size: 16pt; color: #b91c1c; font-style: italic;">(विशेष फोकस: आयाम, प्राकृतिक बनाम सामाजिक असमानता, और सकारात्मक कार्यवाही)</p>
+                <p style="font-size: 26pt; color: #000000; margin-top: 10px; font-weight: 900;">कक्षा 11 राजनीति विज्ञान - अति-गहन शैक्षणिक मास्टर नोट्स</p>
+                <p style="font-size: 20pt; color: #b91c1c; font-style: italic; font-weight: 900;">(विशेष फोकस: आयाम, प्राकृतिक बनाम सामाजिक असमानता, और सकारात्मक कार्यवाही)</p>
             </div>
 
             <!-- PART 1 -->
-            <div style="margin-bottom: 50px;">
-                <h2 style="color: #ffffff; background-color: #1e40af; padding: 15px 20px; border-radius: 8px; font-size: 30pt; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">1. समानता का अर्थ और महत्व: एक व्यापक दृष्टिकोण</h2>
+            <div class="part-container" style="border-top-color: #1e3a8a;">
+                <h2 style="color: #1e3a8a !important; background-color: #eff6ff; border-left: 10px solid #1e3a8a; padding: 20px 25px; border-radius: 10px; font-size: 32pt; font-weight: 900 !important; margin-top: 0; -webkit-text-stroke: 1px #1e3a8a;">1. समानता का अर्थ और महत्व: एक व्यापक दृष्टिकोण</h2>
                 <p style="font-size: 18pt; text-align: justify;">समानता का अर्थ केवल 'सबके साथ एक जैसा व्यवहार' करना नहीं है। इसे एक जटिल राजनैतिक आदर्श के रूप में समझना आवश्यक है। इसका मूल संदेश यह है कि सभी मनुष्य अपनी गरिमा और अधिकारों में समान हैं, क्योंकि वे मनुष्य हैं।</p>
                 
-                <h3 style="color: #1e40af; font-size: 24pt;">1.1 समानता की तीन प्रमुख विशेषताएँ:</h3>
-                <ul style="font-size: 18pt; line-height: 1.8; color: #1e293b; list-style-type: square;">
-                    <li><b>विशेषाधिकारों का अभाव:</b> समाज में किसी भी व्यक्ति या समूह को जन्म, धर्म या जाति के आधार पर विशेष सुविधाएँ नहीं दी जानी चाहिए।</li>
-                    <li><b>समान अवसर:</b> प्रत्येक नागरिक को अपनी प्रतिभा और क्षमता विकसित करने के लिए समान परिस्थितियाँ मिलनी चाहिए।</li>
-                    <li><b>न्यूनतम आवश्यकताओं की पूर्ति:</b> सभी नागरिकों को भोजन, आवास और स्वास्थ्य जैसी बुनियादी सुविधाएँ प्राप्त हों।</li>
+                <h3 style="color: #1e3a8a; font-size: 24pt;">1.1 समानता की पांच प्रमुख विशेषताएं:</h3>
+                <ul style="font-size: 18pt; line-height: 1.8; color: #000000; list-style-type: square;">
+                    <li><b>मानवीय गरिमा की समानता:</b> प्रत्येक मनुष्य को केवल उसके जन्म, वर्ग या जाति के कारण नहीं, बल्कि मनुष्य होने के नाते समान आदर और मानवीय गरिमा मिलनी चाहिए।</li>
+                    <li><b>विशेषाधिकारों का पूर्ण अंत:</b> समाज में किसी भी व्यक्ति या समूह को जन्म, धर्म, रंग या जाति के आधार पर कोई भी विशेष सामाजिक सुविधा या अधिकार नहीं मिलना चाहिए।</li>
+                    <li><b>समान अवसरों का प्रावधान:</b> प्रत्येक नागरिक को अपनी प्रतिभा, कौशल और व्यक्तित्व को पूर्ण रूप से विकसित करने के लिए समान सामाजिक और राजनैतिक धरातल मिलना चाहिए।</li>
+                    <li><b>बुनियादी आवश्यकताओं की पूर्ति:</b> जब तक समाज के प्रत्येक नागरिक को भोजन, आवास, शिक्षा और स्वास्थ्य जैसी बुनियादी सुविधाएं नहीं मिलतीं, तब तक समानता एक छलावा है।</li>
+                    <li><b>बंधुत्व और भाईचारे की भावना:</b> समानता का असली महत्व यह है कि यह नागरिकों के बीच आपसी सम्मान, सहानुभूति और भाईचारे की भावना को मज़बूत करती है।</li>
                 </ul>
 
-                <div style="margin: 20px 0; padding: 15px 20px; background-color: #f1f5f9; border-left: 6px solid #3b82f6; border-radius: 8px;">
-                    <h4 style="margin: 0 0 10px 0; color: #1e40af; font-size: 20pt;">📖 राजनैतिक परिभाषा: समानता</h4>
-                    <p style="margin: 0; font-size: 16pt; color: #1e293b;">समानता वह स्थिति है जहाँ समाज के सभी सदस्यों को समान महत्व दिया जाता है और उनके बीच किसी भी प्रकार का कृत्रिम भेदभाव नहीं होता। यह न्याय का प्राथमिक आधार है।</p>
+                <div class="info-box">
+                    <b style="color: #1e3a8a !important; font-size: 24pt;">📖 राजनैतिक परिभाषा: समानता</b>
+                    <p style="margin: 0; font-size: 18pt; color: #000000; text-align: justify;">समानता वह आदर्श राजनैतिक स्थिति है जहाँ समाज के सभी सदस्यों को समान मूल्य दिया जाता है और उनके बीच किसी भी प्रकार का कृत्रिम या सामाजिक भेदभाव नहीं होता। यह सामाजिक न्याय की पहली सीढ़ी है।</p>
                 </div>
             </div>
 
             <!-- PART 2 -->
-            <div style="margin-bottom: 50px;">
-                <h2 style="color: #ffffff; background-color: #15803d; padding: 15px 20px; border-radius: 8px; font-size: 30pt; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">2. समानता के तीन आयाम: राजनैतिक, सामाजिक और आर्थिक</h2>
-                <p style="font-size: 18pt; text-align: justify;">एनसीईआरटी समानता को केवल कागजी अधिकारों तक सीमित नहीं मानती, बल्कि इसके तीन व्यावहारिक धरातल बताती है:</p>
+            <div class="part-container" style="border-top-color: #065f46;">
+                <h2 style="color: #065f46 !important; background-color: #ecfdf5; border-left: 10px solid #065f46; padding: 20px 25px; border-radius: 10px; font-size: 32pt; font-weight: 900 !important; margin-top: 0; -webkit-text-stroke: 1px #065f46;">2. समानता के तीन आयाम: राजनैतिक, सामाजिक और आर्थिक</h2>
+                <p style="font-size: 18pt; text-align: justify;">एनसीईआरटी समानता को केवल कागजी अधिकारों तक सीमित नहीं मानती, बल्कि इसके तीन व्यावहारिक धरातल बताती है जिन्हें पूरा करना राज्य का कर्तव्य है:</p>
 
-                <h3 style="color: #166534; font-size: 24pt;">2.1 राजनैतिक समानता (Political Equality):</h3>
-                <ul style="font-size: 18pt; line-height: 1.8; color: #064e3b; list-style-type: disc;">
-                    <li><b>मताधिकार:</b> सभी नागरिकों को एक वोट और उस वोट का एक समान मूल्य।</li>
-                    <li><b>प्रतिनिधित्व:</b> सरकारी पदों और चुनाव लड़ने के लिए सबकी समान पात्रता।</li>
-                    <li><b>विचार अभिव्यक्ति:</b> सरकार की आलोचना और राजनैतिक चर्चा में सबकी समान भागीदारी।</li>
-                </ul>
-
-                <h3 style="color: #166534; font-size: 24pt;">2.2 सामाजिक समानता (Social Equality):</h3>
-                <ul style="font-size: 18pt; line-height: 1.8; color: #064e3b; list-style-type: disc;">
-                    <li><b>भेदभाव का अंत:</b> छुआछूत, जातिवाद और सांप्रदायिकता का पूर्ण उन्मूलन।</li>
-                    <li><b>समावेशी पहुँच:</b> शिक्षा, स्वास्थ्य और सार्वजनिक संसाधनों पर सबका समान हक।</li>
-                    <li><b>लैंगिक समानता:</b> महिलाओं और पुरुषों के बीच सामाजिक स्तर पर मौजूद विषमताओं को दूर करना।</li>
-                </ul>
-
-                <h3 style="color: #166534; font-size: 24pt;">2.3 आर्थिक समानता (Economic Equality):</h3>
-                <ul style="font-size: 18pt; line-height: 1.8; color: #064e3b; list-style-type: disc;">
-                    <li><b>खाई कम करना:</b> समाज के अत्यधिक अमीर और अत्यधिक गरीब वर्गों के बीच के अंतर को कम करना।</li>
-                    <li><b>समान मजदूरी:</b> समान कार्य के लिए समान वेतन की संवैधानिक गारंटी।</li>
-                    <li><b>संसाधनों का वितरण:</b> उत्पादन के साधनों पर कुछ चंद हाथों का एकाधिकार न होना।</li>
+                <h3 style="color: #065f46; font-size: 24pt;">2.1 समानता के पांच मुख्य आयाम और उनके प्रभाव:</h3>
+                <ul style="font-size: 18pt; line-height: 1.8; color: #000000; list-style-type: disc;">
+                    <li><b>राजनैतिक समानता (Political Equality):</b> इसके तहत प्रत्येक वयस्क नागरिक को 'एक व्यक्ति-एक वोट' का अधिकार, बिना भेदभाव के चुनाव लड़ने की पात्रता और अभिव्यक्ति की पूर्ण स्वतंत्रता मिलती है।</li>
+                    <li><b>सामाजिक समानता (Social Equality):</b> इसका अर्थ है जाति, धर्म, लिंग या वर्ग के आधार पर सामाजिक भेदभाव और छुआछूत का पूर्ण उन्मूलन करना और सभी सार्वजनिक स्थानों तक सबकी समान पहुँच सुनिश्चित करना।</li>
+                    <li><b>आर्थिक समानता (Economic Equality):</b> इसका मुख्य उद्देश्य अत्यधिक अमीरी और गरीबी की गहरी खाई को पाटना, समान काम के लिए समान वेतन की गारंटी देना और न्यूनतम आजीविका की सुरक्षा प्रदान करना है।</li>
+                    <li><b>आयामों की अंतःनिर्भरता:</b> बिना आर्थिक और सामाजिक समानता के राजनैतिक समानता पूरी तरह व्यर्थ हो जाती है, क्योंकि एक गरीब और सामाजिक रूप से प्रताड़ित व्यक्ति अपनी वोट की ताकत का स्वतंत्र उपयोग नहीं कर पाता।</li>
+                    <li><b>वितरणकारी नीतियां:</b> इन तीनों आयामों को धरातल पर उतारने के लिए कल्याणकारी राज्य प्रगतिशील कर प्रणाली, मुफ़्त शिक्षा, छात्रवृत्ति और स्वास्थ्य सुरक्षा जैसे व्यावहारिक नीतियां लागू करता है।</li>
                 </ul>
             </div>
 
             <!-- PART 3 -->
-            <div style="margin-bottom: 50px;">
-                <h2 style="color: #ffffff; background-color: #b45309; padding: 15px 20px; border-radius: 8px; font-size: 30pt; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">3. प्राकृतिक असमानता बनाम सामाजिक असमानता</h2>
-                <p style="font-size: 18pt; text-align: justify;">राजनीति विज्ञान के छात्रों के लिए इन दोनों के बीच का अंतर समझना अत्यंत आवश्यक है:</p>
+            <div class="part-container" style="border-top-color: #7c2d12;">
+                <h2 style="color: #7c2d12 !important; background-color: #fff7ed; border-left: 10px solid #7c2d12; padding: 20px 25px; border-radius: 10px; font-size: 32pt; font-weight: 900 !important; margin-top: 0; -webkit-text-stroke: 1px #7c2d12;">3. प्राकृतिक असमानता बनाम सामाजिक असमानता</h2>
+                <p style="font-size: 18pt; text-align: justify;">राजनीति विज्ञान के छात्रों के लिए इन दोनों के बीच का अंतर और संबंध समझना अत्यंत आवश्यक है:</p>
 
-                <h3 style="color: #92400e; font-size: 24pt;">3.1 प्राकृतिक असमानता (Natural Inequality):</h3>
-                <ul style="font-size: 18pt; line-height: 1.8; color: #7c2d12; list-style-type: circle;">
-                    <li>यह प्रकृति की देन है (जैसे योग्यता, बुद्धि, शारीरिक बनावट)।</li>
-                    <li><b>उदाहरण:</b> कोई गायक है, तो कोई खिलाड़ी। यह अंतर स्वाभाविक है और इसे खत्म नहीं किया जा सकता।</li>
+                <h3 style="color: #7c2d12; font-size: 24pt;">3.1 मुख्य वैचारिक अंतर (5 बिंदु):</h3>
+                <ul style="font-size: 18pt; line-height: 1.8; color: #000000; list-style-type: circle;">
+                    <li><b>प्राकृतिक असमानता का स्रोत:</b> यह प्रकृति या जन्म की देन है (जैसे व्यक्ति की बौद्धिक क्षमता, रुचि, शारीरिक कद या जन्मजात प्रतिभा)। यह अंतर स्वाभाविक होता है।</li>
+                    <li><b>सामाजिक असमानता का स्रोत:</b> यह समाज के शोषणकारी ढांचों, रूढ़ियों और विशेषाधिकारों द्वारा निर्मित की जाती है। यह पूरी तरह मानव-निर्मित होती है।</li>
+                    <li><b>भिन्नता बनाम अन्याय:</b> प्राकृतिक भिन्नता समाज की सुंदरता है (जैसे कोई गायक है तो कोई खिलाड़ी), जबकि सामाजिक असमानता (जैसे जातिगत भेदभाव) सरासर अन्याय है।</li>
+                    <li><b>आधुनिक तकनीक का प्रभाव:</b> आज विज्ञान और तकनीक (जैसे सहायक उपकरण) ने कई 'प्राकृतिक असमानताओं' (जैसे दिव्यांगता) को दूर कर दिव्यांगों को समान अवसर प्रदान किए हैं।</li>
+                    <li><b>संवैधानिक दायित्व:</b> राज्य का अंतिम कर्तव्य यह सुनिश्चित करना है कि किसी की प्राकृतिक भिन्नता उसके सामाजिक अलगाव, दमन या आर्थिक शोषण का कारण न बने।</li>
                 </ul>
 
-                <h3 style="color: #92400e; font-size: 24pt;">3.2 सामाजिक असमानता (Social Inequality):</h3>
-                <ul style="font-size: 18pt; line-height: 1.8; color: #7c2d12; list-style-type: circle;">
-                    <li>यह समाज के शोषणकारी ढांचों द्वारा निर्मित की जाती है।</li>
-                    <li><b>उदाहरण:</b> जातिगत ऊंच-नीच, शिक्षा से वंचित रखना, या महिलाओं को कम वेतन देना।</li>
-                </ul>
-
-                <div style="background-color: #fff1f2; padding: 25px; border: 2px dashed #f43f5e; border-radius: 10px; margin: 30px 0;">
-                    <h4 style="margin: 0 0 15px 0; color: #be123c; font-size: 22pt;">🤔 गहन विश्लेषण: क्या अंतर हमेशा स्पष्ट होता है?</h4>
-                    <p style="font-size: 18pt; color: #881337; margin: 0; text-align: justify;">आज के समय में तकनीक ने प्राकृतिक असमानता को भी चुनौती दी है। उदाहरण के लिए, यदि कोई व्यक्ति दिव्यांग है, तो वह उसकी 'प्राकृतिक' अवस्था है; लेकिन यदि राज्य उसे व्हीलचेयर या रैंप की सुविधा नहीं देता, तो वह एक 'सामाजिक अन्याय' बन जाता है। आज़ाद समाज का लक्ष्य प्राकृतिक भिन्नताओं को सामाजिक दासता में बदलने से रोकना है।</p>
+                <div class="debate-box">
+                    <h4 style="margin: 0 0 15px 0; color: #7c2d12; font-size: 22pt;">🤔 गहन विश्लेषण: क्या अंतर हमेशा स्पष्ट होता है?</h4>
+                    <p style="font-size: 18pt; color: #000000; margin: 0; text-align: justify;">यदि कोई व्यक्ति दिव्यांग है, तो वह उसकी 'प्राकृतिक' अवस्था है; लेकिन यदि राज्य उसे रैंप, विशेष शिक्षा या व्हीलचेयर की सुविधा नहीं देता, तो वह एक 'सामाजिक अन्याय' बन जाता है। आधुनिक लोकतंत्र का लक्ष्य प्राकृतिक भिन्नताओं को सामाजिक दासता में बदलने से रोकना है।</p>
                 </div>
             </div>
 
             <!-- PART 4 -->
-            <div style="margin-bottom: 50px;">
-                <h2 style="color: #ffffff; background-color: #86198f; padding: 15px 20px; border-radius: 8px; font-size: 30pt; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">4. अवसरों की समानता: उदारवादी दृष्टिकोण</h2>
+            <div class="part-container" style="border-top-color: #5b21b6;">
+                <h2 style="color: #5b21b6 !important; background-color: #f5f3ff; border-left: 10px solid #5b21b6; padding: 20px 25px; border-radius: 10px; font-size: 32pt; font-weight: 900 !important; margin-top: 0; -webkit-text-stroke: 1px #5b21b6;">4. अवसरों की समानता: उदारवादी दृष्टिकोण</h2>
                 <p style="font-size: 18pt; text-align: justify;">अवसरों की समानता (Equality of Opportunity) का अर्थ है कि समाज के सभी व्यक्तियों को एक जैसी 'शुरुआत' का मौका मिले।</p>
 
-                <h3 style="color: #701a75; font-size: 24pt;">4.1 मुख्य बिंदु:</h3>
-                <ul style="font-size: 18pt; line-height: 1.8; color: #4a044e; list-style-type: square;">
-                    <li><b>खुली प्रतियोगिता:</b> नौकरियों और पुरस्कारों के लिए केवल योग्यता (Merit) को आधार बनाना।</li>
-                    <li><b>रुकावटों का अंत:</b> कानून द्वारा उन सभी बाधाओं को हटाना जो किसी खास वर्ग को आगे बढ़ने से रोकती हैं।</li>
-                    <li><b>राज्य की भूमिका:</b> राज्य को केवल एक 'अंपायर' की तरह काम करना चाहिए जो नियम बनाए, न कि परिणाम तय करे।</li>
+                <h3 style="color: #5b21b6; font-size: 24pt;">4.1 उदारवादी दृष्टिकोण के पांच मुख्य स्तंभ:</h3>
+                <ul style="font-size: 18pt; line-height: 1.8; color: #000000; list-style-type: square;">
+                    <li><b>निष्पक्ष शुरुआत (Fair Start):</b> जीवन की दौड़ में सभी धावकों को शुरुआत के समय समान नियम, समान दूरी और समान धरातल मिलना चाहिए ताकि कोई पीछे न छूटे।</li>
+                    <li><b>योग्यता का पुरस्कार (Meritocracy):</b> यह दृष्टिकोण मानता है कि नौकरियों और पुरस्कारों का आवंटन केवल व्यक्ति की योग्यता, कड़ी मेहनत और प्रतिभा के आधार पर होना चाहिए, न कि जन्म के आधार पर।</li>
+                    <li><b>रुकावटों का अंत:</b> राज्य को कानून बनाकर उन सभी बाधाओं (जैसे जाति, नस्ल या लिंग आधारित प्रतिबंध) को हटाना चाहिए जो किसी खास वर्ग को आगे बढ़ने से रोकती हैं।</li>
+                    <li><b>राज्य की सीमित भूमिका:</b> उदारवादियों के अनुसार राज्य को केवल एक 'अंपायर' की तरह काम करना चाहिए जो नियम बनाए और निष्पक्षता सुनिश्चित करे, न कि दौड़ का परिणाम तय करे।</li>
+                    <li><b>परिणामों की भिन्नता स्वीकार्य:</b> यदि सभी को समान अवसर मिले हैं, तो उसके बाद प्रतिभा और मेहनत के अंतर के कारण उत्पन्न आर्थिक असमानता पूरी तरह न्यायसंगत मानी जाएगी।</li>
                 </ul>
-
-                <p style="font-size: 18pt; text-align: justify;">उदारवादी विचारकों के अनुसार, यदि सबको समान अवसर दिए गए हैं, तो उसके बाद जो असमानता (जैसे एक व्यक्ति अमीर और दूसरा मध्यम) पैदा होगी, वह 'न्यायपूर्ण' मानी जाएगी क्योंकि वह उनकी मेहनत और प्रतिभा का परिणाम है।</p>
             </div>
 
             <!-- PART 5 -->
-            <div style="background-color: #eef2ff; padding: 40px; border-radius: 12px; margin-bottom: 50px; border: 3px solid #6366f1;">
-                <h2 style="color: #4338ca; font-size: 30pt; margin-top: 0;">5. हमें समानता क्यों चाहिए? नैतिक और राजनैतिक आधार</h2>
+            <div class="part-container" style="border-top-color: #1e3a8a;">
+                <h2 style="color: #1e3a8a !important; background-color: #eff6ff; border-left: 10px solid #1e3a8a; padding: 20px 25px; border-radius: 10px; font-size: 32pt; font-weight: 900 !important; margin-top: 0; -webkit-text-stroke: 1px #1e3a8a;">5. हमें समानता क्यों चाहिए? नैतिक और राजनैतिक आधार</h2>
                 <p style="font-size: 18pt; text-align: justify;">समानता केवल एक मांग नहीं, बल्कि राष्ट्र के निर्माण की शक्ति है। इसके पीछे दो मुख्य तर्क हैं:</p>
 
-                <h4 style="color: #1e3a8a; font-size: 22pt;">5.1 नैतिक तर्क (Moral Argument):</h4>
-                <ul style="font-size: 18pt; line-height: 1.8; color: #312e81; list-style-type: disc;">
-                    <li>मनुष्य होने के नाते सबकी गरिमा समान है। कोई भी व्यक्ति दूसरे के पैरों की धूल नहीं हो सकता।</li>
-                    <li>आत्म-विश्वास और आत्म-सम्मान के लिए समानता का वातावरण अनिवार्य है।</li>
+                <h3 style="color: #1e3a8a; font-size: 24pt;">5.1 समानता की आवश्यकता के पांच प्रमुख नैतिक व राजनैतिक कारण:</h3>
+                <ul style="font-size: 18pt; line-height: 1.8; color: #000000; list-style-type: disc;">
+                    <li><b>समान मानवीय मूल्य (Moral Worth):</b> मनुष्य होने के नाते सबकी गरिमा समान है। कोई भी व्यक्ति जन्म से किसी दूसरे का दास या पैर की धूल नहीं हो सकता; सभी सम्मान के पात्र हैं।</li>
+                    <li><b>सामाजिक स्थिरता और शांति:</b> अत्यधिक सामाजिक और आर्थिक असमानता समाज में अशांति, वर्ग संघर्ष, अपराध और हिंसक विद्रोहों को जन्म देती है, जिससे राष्ट्रीय विकास बाधित होता है।</li>
+                    <li><b>लोकतंत्र की वास्तविक सफलता:</b> समानता ही 'एक नागरिक-एक मूल्य' के सिद्धांत को मज़बूत करती है। बिना समानता के लोकतंत्र केवल अमीर और शक्तिशाली लोगों का खेल बनकर रह जाता है।</li>
+                    <li><b>मानवीय क्षमताओं का पूर्ण विकास:</b> जब समाज के अंतिम पायदान पर खड़े व्यक्ति तक शिक्षा, स्वास्थ्य और संसाधन पहुँचते हैं, तभी राष्ट्र अपनी पूर्ण उत्पादक क्षमता का लाभ उठा पाता है।</li>
+                    <li><b>बंधुत्व और सामाजिक समरसता:</b> समानता ही नागरिकों के बीच साझा राष्ट्रीय पहचान और भाईचारे की भावना का निर्माण करती है, जो देश की अखंडता के लिए अनिवार्य है।</li>
                 </ul>
-
-                <h4 style="color: #1e3a8a; font-size: 22pt;">5.2 समावेशी प्रगति के लिए:</h4>
-                <ul style="font-size: 18pt; line-height: 1.8; color: #312e81; list-style-type: disc;">
-                    <li>अत्यधिक असमानता समाज में अशांति और गृहयुद्ध को जन्म देती है।</li>
-                    <li>जब समाज के अंतिम व्यक्ति तक शिक्षा और स्वास्थ्य पहुँचता है, तभी वह राष्ट्र वास्तविक प्रगति (True Progress) करता है।</li>
-                    <li>समानता ही 'भाईचारे' (Fraternity) की नींव को मज़बूत करती है।</li>
-                </ul>
-
-                <div style="background-color: #ffffff; padding: 20px; text-align: left; border: 2px solid #818cf8; border-radius: 8px; margin-top: 20px;">
-                    <p style="font-size: 18pt; color: #312e81; margin: 0; text-align: center; font-weight: bold;">🎯 मास्टर निष्कर्ष: समानता का अर्थ सबको एक बराबर बनाना नहीं, बल्कि किसी को भी पीछे न छोड़ना है।</p>
-                </div>
             </div>
 
             <!-- PART 6 -->
-            <div style="margin-bottom: 50px;">
-                <h2 style="color: #ffffff; background-color: #0d9488; padding: 15px 20px; border-radius: 8px; font-size: 30pt; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">6. समानता को बढ़ावा देने के तरीके: औपचारिक समानता</h2>
+            <div class="part-container" style="border-top-color: #0f766e;">
+                <h2 style="color: #0f766e !important; background-color: #f0fdfa; border-left: 10px solid #0f766e; padding: 20px 25px; border-radius: 10px; font-size: 32pt; font-weight: 900 !important; margin-top: 0; -webkit-text-stroke: 1px #0f766e;">6. समानता को बढ़ावा देने के तरीके: औपचारिक समानता</h2>
                 <p style="font-size: 18pt; text-align: justify;">समानता को केवल नारों से प्राप्त नहीं किया जा सकता; इसे धरातल पर उतारने के लिए राज्य को सक्रिय कदम उठाने पड़ते हैं। इसका पहला चरण 'औपचारिक समानता' की स्थापना है।</p>
 
-                <h3 style="color: #0d9488; font-size: 24pt;">6.1 औपचारिक समानता (Formal Equality):</h3>
-                <ul style="font-size: 18pt; line-height: 1.8; color: #115e59; list-style-type: square;">
-                    <li><b>कानूनी ढांचा:</b> संविधान और कानूनों द्वारा सभी प्रकार के भेदभावों को अवैध घोषित करना।</li>
-                    <li><b>समान नागरिकता:</b> जाति, धर्म या लिंग के आधार पर मतदान या नागरिकता में कोई अंतर न होना।</li>
-                    <li><b>भेदभाव का अंत:</b> जैसे भारतीय संविधान का अनुच्छेद 15, जो सार्वजनिक स्थानों पर धर्म या मूलवंश के आधार पर रोक को प्रतिबंधित करता है।</li>
+                <h3 style="color: #0f766e; font-size: 24pt;">6.1 औपचारिक समानता के पांच मुख्य आयाम:</h3>
+                <ul style="font-size: 18pt; line-height: 1.8; color: #000000; list-style-type: square;">
+                    <li><b>कानूनी ढांचा (Legal Framework):</b> संविधान और कानूनों द्वारा लिंग, जाति, धर्म या जन्मस्थान के आधार पर किए जाने वाले सभी भेदभावों को अवैध घोषित करना।</li>
+                    <li><b>समान नागरिक अधिकार:</b> देश के सभी नागरिकों को बिना किसी भेदभाव के मतदान, नागरिकता, अभिव्यक्ति और न्याय पाने के समान कानूनी अधिकार प्रदान करना।</li>
+                    <li><b>वंशानुगत विशेषाधिकारों का अंत:</b> राजाओं, जमींदारों या विशिष्ट कुलों को मिलने वाले किसी भी प्रकार के सामाजिक या कानूनी विशेषाधिकारों को पूरी तरह समाप्त करना।</li>
+                    <li><b>सार्वजनिक स्थानों तक समान पहुँच:</b> कुओं, घाटों, सड़कों, पार्कों, होटलों और शैक्षणिक संस्थानों तक समाज के प्रत्येक वर्ग की बेरोकटोक पहुँच सुनिश्चित करना।</li>
+                    <li><b>औपचारिक समानता की सीमा:</b> यह समानता की केवल न्यूनतम शुरुआत है; यह केवल बाधाओं को हटाती है पर पीड़ितों को खड़ा होने की आर्थिक ऊर्जा नहीं देती।</li>
                 </ul>
-
-                <div style="margin: 20px 0; padding: 15px 20px; background-color: #f0fdfa; border-left: 6px solid #0d9488; border-radius: 8px;">
-                    <h4 style="margin: 0 0 10px 0; color: #0d9488; font-size: 20pt;">📖 राजनैतिक निष्कर्ष</h4>
-                    <p style="margin: 0; font-size: 16pt; color: #115e59;">औपचारिक समानता समानता की 'न्यूनतम शर्त' है। यह केवल बाधाओं को हटाती है, लेकिन यह उन लोगों की मदद नहीं करती जो पहले से ही सामाजिक-आर्थिक रूप से पिछड़े हुए हैं।</p>
-                </div>
             </div>
 
             <!-- PART 7 -->
-            <div style="margin-bottom: 50px;">
-                <h2 style="color: #ffffff; background-color: #4338ca; padding: 15px 20px; border-radius: 8px; font-size: 30pt; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">7. पृथक व्यवहार (Differential Treatment) की आवश्यकता</h2>
+            <div class="part-container" style="border-top-color: #5b21b6;">
+                <h2 style="color: #5b21b6 !important; background-color: #f5f3ff; border-left: 10px solid #5b21b6; padding: 20px 25px; border-radius: 10px; font-size: 32pt; font-weight: 900 !important; margin-top: 0; -webkit-text-stroke: 1px #5b21b6;">7. पृथक व्यवहार (Differential Treatment) की आवश्यकता</h2>
                 <p style="font-size: 18pt; text-align: justify;">समानता का अर्थ यह नहीं है कि सबके साथ हर स्थिति में 'एक जैसा' व्यवहार किया जाए। कभी-कभी वास्तविक समानता लाने के लिए 'अलग व्यवहार' करना अनिवार्य हो जाता है।</p>
 
-                <h3 style="color: #3730a3; font-size: 24pt;">7.1 विशेष सुविधाओं की आवश्यकता:</h3>
-                <ul style="font-size: 18pt; line-height: 1.8; color: #1e1b4b; list-style-type: disc;">
-                    <li><b>दिव्यांग व्यक्तियों के लिए:</b> सार्वजनिक भवनों में रैंप या लिफ्ट की सुविधा देना 'विशेषाधिकार' नहीं, बल्कि उन्हें सामान्य लोगों के बराबर लाने का प्रयास है।</li>
-                    <li><b>महिलाओं के लिए:</b> कार्यस्थलों पर अलग शौचालय या प्रसूति अवकाश (Maternity Leave) देना उनकी विशिष्ट जैविक आवश्यकताओं का सम्मान है।</li>
-                    <li><b>रात में सुरक्षा:</b> महिलाओं की सुरक्षा के लिए विशेष पेट्रोलिंग या बसों में आरक्षित सीटें उनके 'समान भागीदारी' के अधिकार को सुनिश्चित करती हैं।</li>
+                <h3 style="color: #5b21b6; font-size: 24pt;">7.1 पृथक व्यवहार के पांच प्रमुख आयाम और व्यावहारिक आवश्यकताएं:</h3>
+                <ul style="font-size: 18pt; line-height: 1.8; color: #000000; list-style-type: disc;">
+                    <li><b>विशिष्ट परिस्थितियों का सम्मान:</b> जब धावकों की शुरुआती स्थिति ही असमान हो, तो कमजोर धावकों को आगे लाने के लिए अलग नियम या अतिरिक्त सहायता प्रदान करना न्यायसंगत है।</li>
+                    <li><b>दिव्यांगजनों के लिए रैंप और लिफ्ट:</b> सार्वजनिक भवनों, स्टेशनों और स्कूलों में रैंप या व्हीलचेयर ट्रैक देना विशेषाधिकार नहीं, बल्कि उन्हें सामान्य लोगों के समान अवसर देना है।</li>
+                    <li><b>महिलाओं के लिए जैविक व सामाजिक सुविधाएं:</b> कार्यस्थलों पर शिशुगृह (Creche), सवैतनिक प्रसूति अवकाश (Maternity Leave) और सुरक्षित आवागमन के साधन प्रदान करना उनके अधिकारों की रक्षा है।</li>
+                    <li><b>हाशिए के बच्चों के लिए पोषण:</b> गरीब और शोषित परिवारों के बच्चों के लिए स्कूलों में मुफ़्त मध्याह्न भोजन (Mid-day Meal) और पाठ्यपुस्तकें देना अवसरों की समानता को व्यावहारिक बनाता है।</li>
+                    <li><b>अन्यायपूर्ण समानता से बचाव:</b> यह दर्शन यह सिद्ध करता है कि असमान लोगों के साथ आँख मूंदकर किया गया 'समान व्यवहार' कभी-कभी सबसे बड़ा अन्याय और असमानता बन जाता है।</li>
                 </ul>
-
-                <div style="background-color: #eef2ff; padding: 25px; border: 2px dashed #6366f1; border-radius: 10px; margin: 30px 0;">
-                    <h4 style="margin: 0 0 15px 0; color: #4338ca; font-size: 22pt;">⚖️ दार्शनिक आधार: समानों के साथ समान व्यवहार</h4>
-                    <p style="font-size: 18pt; color: #312e81; margin: 0; text-align: justify;">अरस्तू ने कहा था, "असमानता तब पैदा होती है जब समानों के साथ असमान व्यवहार किया जाता है, या जब असमानों के साथ समान व्यवहार किया जाता है।" यदि एक दिव्यांग और एक स्वस्थ व्यक्ति को एक ही दौड़ में दौड़ाया जाए, तो वह 'समानता' नहीं, बल्कि 'अन्याय' होगा।</p>
-                </div>
             </div>
 
             <!-- PART 8 -->
-            <div style="margin-bottom: 50px;">
-                <h2 style="color: #ffffff; background-color: #be123c; padding: 15px 20px; border-radius: 8px; font-size: 30pt; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">8. सकारात्मक कार्यवाही (Affirmative Action) और आरक्षण</h2>
+            <div class="part-container" style="border-top-color: #9f1239;">
+                <h2 style="color: #9f1239 !important; background-color: #fff1f2; border-left: 10px solid #9f1239; padding: 20px 25px; border-radius: 10px; font-size: 32pt; font-weight: 900 !important; margin-top: 0; -webkit-text-stroke: 1px #9f1239;">8. सकारात्मक कार्यवाही (Affirmative Action) और आरक्षण</h2>
                 <p style="font-size: 18pt; text-align: justify;">सकारात्मक कार्यवाही वह नीति है जिसके तहत राज्य सामाजिक रूप से पिछड़े वर्गों के लिए 'विशेष रियायतें' (जैसे आरक्षण) प्रदान करता है ताकि वे मुख्यधारा में शामिल हो सकें।</p>
 
-                <h3 style="color: #9f1239; font-size: 24pt;">8.1 आरक्षण का तर्क और उद्देश्य:</h3>
-                <ul style="font-size: 18pt; line-height: 1.8; color: #4c0519; list-style-type: square;">
-                    <li><b>ऐतिहासिक क्षतिपूर्ति:</b> सदियों से जिन वर्गों (SC/ST/OBC) को शिक्षा और सम्मान से वंचित रखा गया, उन्हें 'अतिरिक्त सहारा' देना न्यायसंगत है।</li>
-                    <li><b>प्रतिनिधित्व:</b> सत्ता और प्रशासन के महत्वपूर्ण पदों पर सभी वर्गों की प्रभावी उपस्थिति सुनिश्चित करना।</li>
-                    <li><b>सामाजिक विविधता:</b> संस्थाओं को समाज का एक छोटा प्रतिबिंब (Mini-society) बनाना।</li>
+                <h3 style="color: #9f1239; font-size: 24pt;">8.1 सकारात्मक कार्यवाही के पांच मुख्य उद्देश्य व तर्क:</h3>
+                <ul style="font-size: 18pt; line-height: 1.8; color: #000000; list-style-type: square;">
+                    <li><b>ऐतिहासिक क्षतिपूर्ति (Historical Justice):</b> सदियों से जाति, वर्ण या वर्ग के आधार पर दमित और उपेक्षित समुदायों (SC/ST/OBC) को समाज में सम्मानजनक स्थान दिलाने के लिए अतिरिक्त सहारा देना।</li>
+                    <li><b>सत्ता और प्रशासन में प्रतिनिधित्व:</b> सरकारी नौकरियों और राजनैतिक पदों पर समाज के सभी वर्गों की प्रभावी आवाज़ और संतुलित प्रतिनिधित्व सुनिश्चित करना।</li>
+                    <li><b>विविधता का निर्माण (Social Diversity):</b> शैक्षणिक और प्रशासनिक संस्थानों को समाज का वास्तविक सामाजिक प्रतिबिंब बनाना, जिससे नीतियां अधिक संवेदनशील और व्यापक बनें।</li>
+                    <li><b>योग्यता का न्यायसंगत विश्लेषण:</b> यह स्पष्ट करना कि असली 'योग्यता' केवल परीक्षा के अंकों में नहीं होती, बल्कि उसके पीछे अनुकूल पारिवारिक और आर्थिक पृष्ठभूमि की बड़ी भूमिका होती है।</li>
+                    <li><b>सुधारात्मक और अस्थायी स्वरूप:</b> इसका अंतिम उद्देश्य समाज में हमेशा के लिए कोई नया विभाजन पैदा करना नहीं, बल्कि ऐतिहासिक रूप से पीछे रह गए धावकों को मुख्यधारा में शामिल करना है।</li>
                 </ul>
-
-                <h4 style="color: #be123c; font-size: 20pt;">8.2 आलोचनात्मक विमर्श (The Debate):</h4>
-                <p style="font-size: 18pt; text-align: justify;">आलोचक तर्क देते हैं कि आरक्षण 'योग्यता' (Merit) के साथ समझौता करता है और एक नए प्रकार का भेदभाव पैदा करता है। परंतु, समर्थकों का कहना है कि योग्यता का अर्थ 'शून्य' में नहीं देखा जा सकता; एक गरीब और अमीर बच्चे की योग्यता की तुलना केवल अंकों के आधार पर नहीं की जा सकती।</p>
             </div>
 
             <!-- PART 9 -->
-            <div style="margin-bottom: 50px;">
-                <h2 style="color: #ffffff; background-color: #1e3a8a; padding: 15px 20px; border-radius: 8px; font-size: 30pt; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">9. समानता और न्याय का संबंध</h2>
+            <div class="part-container" style="border-top-color: #1e3a8a;">
+                <h2 style="color: #1e3a8a !important; background-color: #eff6ff; border-left: 10px solid #1e3a8a; padding: 20px 25px; border-radius: 10px; font-size: 32pt; font-weight: 900 !important; margin-top: 0; -webkit-text-stroke: 1px #1e3a8a;">9. समानता और न्याय का संबंध</h2>
                 <p style="font-size: 18pt; text-align: justify;">समानता और न्याय (Justice) एक ही सिक्के के दो पहलू हैं। न्यायपूर्ण समाज वही है जहाँ समानता केवल किताबों में नहीं, बल्कि लोगों के आचरण में हो।</p>
 
-                <h3 style="color: #1e40af; font-size: 24pt;">9.1 मुख्य बिंदु:</h3>
-                <ul style="font-size: 18pt; line-height: 1.8; color: #1e293b; list-style-type: disc;">
-                    <li><b>संसाधनों का वितरण:</b> न्याय की मांग है कि समाज के संसाधनों का बँवारा इस तरह हो कि वह सबको फलने-फूलने का मौका दे।</li>
-                    <li><b>हाशिए का सशक्तिकरण:</b> जॉन रॉल्स के 'न्याय के सिद्धांत' के अनुसार, समाज की प्रगति इस बात से मापी जानी चाहिए कि समाज के सबसे 'कमज़ोर' व्यक्ति को कितना लाभ हुआ।</li>
-                    <li><b>शक्ति का संतुलन:</b> तानाशाही का उदय असमानता की कोख से होता है; इसलिए समानता न्याय की रक्षा का सबसे बड़ा उपाय है।</li>
+                <h3 style="color: #1e3a8a; font-size: 24pt;">9.1 समानता और न्याय के पांच मुख्य अंतःसंबंध:</h3>
+                <ul style="font-size: 18pt; line-height: 1.8; color: #000000; list-style-type: disc;">
+                    <li><b>न्याय का प्राथमिक स्तंभ:</b> कोई भी समाज तब तक न्यायपूर्ण नहीं कहला सकता जब तक कि उसके सबसे कमजोर और शोषित वर्गों को समान सम्मान और अधिकार प्राप्त न हों।</li>
+                    <li><b>जॉन रॉल्स का न्याय का सिद्धांत:</b> रॉल्स के अनुसार, सामाजिक नीतियां तभी न्यायपूर्ण हैं जब वे समाज के सबसे न्यूनतम और असहाय व्यक्ति को अधिकतम लाभ पहुँचाती हैं।</li>
+                    <li><b>संसाधनों का न्यायसंगत वितरण:</b> न्याय की मांग है कि भूमि, शिक्षा, स्वास्थ्य और आजीविका के अवसरों का वितरण चंद हाथों में केंद्रित होने के बजाय समाज के हर वर्ग तक पहुँचे।</li>
+                    <li><b>संवैधानिक न्याय का आधार:</b> भारतीय संविधान की प्रस्तावना में वर्णित 'सामाजिक, आर्थिक और राजनैतिक न्याय' को समानता के मौलिक अधिकारों के ज़रिए ही लागू किया गया है।</li>
+                    <li><b>शोषणकारी शक्ति का संतुलन:</b> समाज में अत्यधिक असमानता ताकतवर लोगों को कमज़ोरों का शोषण करने की छूट देती है, जो न्याय के प्राकृतिक सिद्धांतों के पूरी तरह विपरीत है।</li>
                 </ul>
             </div>
 
             <!-- PART 10 -->
-            <div style="background-color: #fdf2f8; padding: 40px; border-radius: 12px; margin-bottom: 50px; border: 3px solid #db2777;">
-                <h2 style="color: #be185d; font-size: 30pt; margin-top: 0;">10. समानता का नारीवादी दृष्टिकोण (Feminist Perspective)</h2>
+            <div class="part-container" style="border-top-color: #be185d;">
+                <h2 style="color: #be185d !important; background-color: #fdf2f8; border-left: 10px solid #be185d; padding: 20px 25px; border-radius: 10px; font-size: 32pt; font-weight: 900 !important; margin-top: 0; -webkit-text-stroke: 1px #be185d;">10. समानता का नारीवादी दृष्टिकोण (Feminist Perspective)</h2>
                 <p style="font-size: 18pt; text-align: justify;">नारीवाद वह राजनैतिक विमर्श है जो स्त्री और पुरुष के बीच समानता की वकालत करता है और यह तर्क देता है कि महिलाओं की अधीनता 'प्राकृतिक' नहीं, बल्कि 'सामाजिक' (Patriarchal) है।</p>
 
-                <h3 style="color: #9d174d; font-size: 24pt;">10.1 नारीवादी समानता के आयाम:</h3>
-                <ul style="font-size: 18pt; line-height: 1.8; color: #831843; list-style-type: square;">
-                    <li><b>सार्वजनिक बना निजी (Public vs Private):</b> नारीवादियों का तर्क है कि आज़ादी केवल ऑफिस या संसद तक सीमित नहीं होनी चाहिए, बल्कि घर के भीतर (काम का बँवारा) भी समानता होनी चाहिए।</li>
-                    <li><b>पितृसत्ता (Patriarchy) का अंत:</b> समाज के उन ढांचों को चुनौती देना जहाँ पुरुषों को प्रधानता दी जाती है।</li>
-                    <li><b>सांस्कृतिक समानता:</b> उन प्रथाओं को समाप्त करना जो महिलाओं को केवल 'वस्तु' (Objectivity) के रूप में देखती हैं।</li>
+                <h3 style="color: #be185d; font-size: 24pt;">10.1 नारीवादी समानता के पांच आयाम:</h3>
+                <ul style="font-size: 18pt; line-height: 1.8; color: #000000; list-style-type: square;">
+                    <li><b>पितृसत्ता (Patriarchy) का पूर्ण विरोध:</b> समाज के उन सभी सामाजिक और सांस्कृतिक ढांचों को बदलना जहाँ पुरुषों को जन्मजात प्राथमिकता और महिलाओं को दोयम दर्जा दिया जाता है।</li>
+                    <li><b>निजी क्षेत्र में समानता (Personal is Political):</b> महिलाओं के अधिकार केवल दफ्तरों या संसद तक सीमित न रहकर घर के भीतर भी काम के बँवारे और फैसलों में समान होने चाहिए।</li>
+                    <li><b>लैंगिक श्रम विभाजन का अंत:</b> समाज द्वारा थोपे गए परंपरागत कार्यों (जैसे महिलाओं का केवल चौका-बर्तन करना और पुरुषों का बाहर कमाना) के लैंगिक विभाजन को समाप्त करना।</li>
+                    <li><b>समान कार्य के लिए समान वेतन:</b> कार्यस्थलों पर महिलाओं को पुरुषों के समान पदों पर समान वेतन और पूरी तरह सुरक्षित व गरिमापूर्ण वातावरण की कानूनी गारंटी देना।</li>
+                    <li><b>सांस्कृतिक रूढ़ियों से मुक्ति:</b> उन सभी रीति-रिवाजों और सामाजिक प्रथाओं का अंत करना जो महिलाओं के शरीर, उनकी शिक्षा और उनके जीवन के स्वतंत्र फैसलों पर दूसरों का नियंत्रण स्थापित करती हैं।</li>
                 </ul>
 
-                <div style="background-color: #ffffff; padding: 20px; text-align: left; border: 2px solid #f472b6; border-radius: 8px; margin-top: 20px;">
-                    <p style="font-size: 18pt; color: #9d174d; margin: 0; text-align: center; font-weight: bold;">🎯 दार्शनिक सूत्र: "महिलाएँ पैदा नहीं होतीं, बल्कि बना दी जाती हैं।" (सीमोन द बोउआर) — यह दर्शाता है कि लैंगिक असमानता समाज की उपज है।</p>
+                <div class="info-box" style="border-left-color: #be185d;">
+                    <b style="color: #be185d !important; font-size: 24pt;">🎯 दार्शनिक सूत्र: सीमोन द बोउआर</b>
+                    <p style="margin: 0; font-size: 18pt; color: #000000; text-align: justify;">"महिलाएँ पैदा नहीं होतीं, बल्कि समाज द्वारा बना दी जाती हैं।" यह दर्शाता है कि लैंगिक असमानता कोई प्राकृतिक देन नहीं, बल्कि समाज द्वारा निर्मित एक अन्यायपूर्ण संरचना है।</p>
                 </div>
             </div>
 
             <!-- PART 11 -->
-            <div style="margin-bottom: 50px;">
-                <h2 style="color: #ffffff; background-color: #f59e0b; padding: 15px 20px; border-radius: 8px; font-size: 30pt; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">11. समानता के लिए ऐतिहासिक संघर्ष: नागरिक अधिकार आंदोलन</h2>
+            <div class="part-container" style="border-top-color: #f59e0b;">
+                <h2 style="color: #b45309 !important; background-color: #fffbeb; border-left: 10px solid #f59e0b; padding: 20px 25px; border-radius: 10px; font-size: 32pt; font-weight: 900 !important; margin-top: 0; -webkit-text-stroke: 1px #b45309;">11. समानता के लिए ऐतिहासिक संघर्ष: नागरिक अधिकार आंदोलन</h2>
                 <p style="font-size: 18pt; text-align: justify;">समानता का विचार केवल पुस्तकालयों में पैदा नहीं हुआ, बल्कि यह सड़कों पर लड़े गए संघर्षों से उपजा है। एनसीईआरटी के अनुसार, समानता की मांग दुनिया भर के उपेक्षित समुदायों की आवाज़ रही है।</p>
 
-                <h3 style="color: #b45309; font-size: 24pt;">11.1 प्रमुख ऐतिहासिक उदाहरण:</h3>
-                <ul style="font-size: 18pt; line-height: 1.8; color: #7c2d12; list-style-type: square;">
+                <h3 style="color: #b45309; font-size: 24pt;">11.1 प्रमुख ऐतिहासिक उदाहरण (5 बिंदु):</h3>
+                <ul style="font-size: 18pt; line-height: 1.8; color: #000000; list-style-type: square;">
                     <li><b>अमेरिका में नागरिक अधिकार आंदोलन (1950-60):</b> मार्टिन लूथर किंग जूनियर के नेतृत्व में अफ्रीकी-अमेरिकियों ने रंगभेद और नस्लीय अलगाव के खिलाफ ऐतिहासिक लड़ाई लड़ी। उनके प्रसिद्ध भाषण <i>"I Have a Dream"</i> ने समानता के वैश्विक इतिहास को एक नया मानवीय दृष्टिकोण दिया।</li>
                     <li><b>दक्षिण अफ्रीका में रंगभेद का अंत:</b> नेल्सन मंडेला और उनकी party ANC का संघर्ष यह साबित करता है कि राजनीतिक और नस्लीय समानता के बिना मानवीय गरिमा अधूरी है। यह संघर्ष वैश्विक स्तर पर मानवाधिकारों के लिए प्रेरणास्रोत बना।</li>
                     <li><b>फ्रांसीसी क्रांति (1789):</b> "स्वतंत्रता, समानता और बंधुत्व" (Liberty, Equality, Fraternity) का नारा पहली बार राजनैतिक घोषणापत्रों में शामिल किया गया, जिसने सामंती विशेषाधिकारों का अंत कर आधुनिक लोकतंत्र की नींव रखी।</li>
@@ -230,19 +264,19 @@
                     <li><b>नारीवादी संघर्ष (Feminist Movements):</b> मताधिकार (Suffrage) और समान कार्य के लिए समान वेतन की मांग को लेकर दुनिया भर में महिलाओं के ऐतिहासिक संघर्षों ने यह सिद्ध किया कि जब तक आधी आबादी को समान अधिकार नहीं मिलते, तब तक कोई भी समाज पूर्णतः लोकतांत्रिक नहीं हो सकता।</li>
                 </ul>
 
-                <div style="margin: 20px 0; padding: 15px 20px; background-color: #fffbeb; border-left: 6px solid #f59e0b; border-radius: 8px;">
+                <div class="info-box" style="border-left-color: #f59e0b;">
                     <h4 style="margin: 0 0 10px 0; color: #b45309; font-size: 20pt;">📖 राजनैतिक सूत्र</h4>
-                    <p style="margin: 0; font-size: 16pt; color: #7c2d12;">समानता के लिए संघर्ष केवल अधिकारों की मांग नहीं है, बल्कि यह उस 'सिस्टम' को बदलने की मांग है जो कुछ लोगों को हीन मानता है।</p>
+                    <p style="margin: 0; font-size: 18pt; color: #000000; text-align: justify;">समानता के लिए संघर्ष केवल अधिकारों की औपचारिक मांग नहीं है, बल्कि यह उस संपूर्ण सामाजिक व राजनैतिक 'सिस्टम' को बदलने का प्रयास है जो कुछ लोगों को जन्म के आधार पर हीन मानता है।</p>
                 </div>
             </div>
 
             <!-- PART 12 -->
-            <div style="margin-bottom: 50px;">
-                <h2 style="color: #ffffff; background-color: #1d4ed8; padding: 15px 20px; border-radius: 8px; font-size: 30pt; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">12. आर्थिक असमानता—धन की खाई और संसाधनों का संकट</h2>
+            <div class="part-container" style="border-top-color: #1d4ed8;">
+                <h2 style="color: #1e40af !important; background-color: #eff6ff; border-left: 10px solid #1d4ed8; padding: 20px 25px; border-radius: 10px; font-size: 32pt; font-weight: 900 !important; margin-top: 0; -webkit-text-stroke: 1px #1e40af;">12. आर्थिक असमानता—धन की खाई और संसाधनों का संकट</h2>
                 <p style="font-size: 18pt; text-align: justify;">आज के समय में समानता के सामने सबसे बड़ी चुनौती 'आर्थिक विषमता' है। जब समाज का 1% हिस्सा 99% संसाधनों पर नियंत्रण रखता है, तो लोकतंत्र कमज़ोर होने लगता है।</p>
 
-                <h3 style="color: #1e40af; font-size: 24pt;">12.1 आर्थिक असमानता के परिणाम:</h3>
-                <ul style="font-size: 18pt; line-height: 1.8; color: #1e3a8a; list-style-type: disc;">
+                <h3 style="color: #1e40af; font-size: 24pt;">12.1 आर्थिक असमानता के प्रभाव (5 बिंदु):</h3>
+                <ul style="font-size: 18pt; line-height: 1.8; color: #000000; list-style-type: disc;">
                     <li><b>अवसरों का हनन (Deprivation of Opportunities):</b> भारी आर्थिक विषमता के कारण गरीब परिवारों के बच्चों को गुणवत्तापूर्ण शिक्षा, पोषण और स्वास्थ्य सुविधाओं से वंचित होना पड़ता है, जिससे उनकी जन्मजात योग्यता और प्रतिभा पूरी तरह कुचल दी जाती है।</li>
                     <li><b>राजनैतिक लोकतंत्र पर खतरा (Threat to Democracy):</b> अत्यधिक केंद्रित धन राजनैतिक शक्ति को खरीदने और जनमत को प्रभावित करने की क्षमता रखता है। इससे अमीर वर्ग नीतियों को अपने पक्ष में मोड़ लेता है और 'एक व्यक्ति-एक वोट' का सिद्धांत केवल कागज़ पर सिमट जाता है।</li>
                     <li><b>सामाजिक असुरक्षा और अपराध (Social Insecurity):</b> अत्यधिक गरीबी और अमीरी के बीच की चौड़ी खाई सामाजिक तनाव, वर्ग संघर्ष, अशांति और अपराधों का मुख्य कारण बनती है, जिससे सामाजिक समरसता भंग होती है।</li>
@@ -251,16 +285,16 @@
                 </ul>
 
                 <h4 style="color: #1e40af; font-size: 20pt;">12.2 निवारण के उपाय:</h4>
-                <p style="font-size: 18pt; text-align: justify;">राज्य को 'कल्याणकारी' (Welfare State) भूमिका निभानी चाहिए और प्रगतिशील कर (Progressive Taxation) के माध्यम से धन का पुनर्वितरण करना चाहिए ताकि सार्वजनिक सुविधाएँ सबके लिए सुलभ हों।</p>
+                <p style="font-size: 18pt; text-align: justify;">राज्य को 'कल्याणकारी' (Welfare State) भूमिका निभानी चाहिए और प्रगतिशील कर (Progressive Taxation) के माध्यम से धन का पुनर्वितरण करना चाहिए ताकि न्यूनतम जीवन स्तर और सार्वजनिक सुविधाएं (सड़क, बिजली, पानी, शिक्षा) समाज के प्रत्येक नागरिक के लिए समान रूप से सुलभ हों।</p>
             </div>
 
             <!-- PART 13 -->
-            <div style="margin-bottom: 50px;">
-                <h2 style="color: #ffffff; background-color: #047857; padding: 15px 20px; border-radius: 8px; font-size: 30pt; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">13. भारतीय संविधान में समानता (अनुच्छेद 14-18)</h2>
+            <div class="part-container" style="border-top-color: #047857;">
+                <h2 style="color: #064e3b !important; background-color: #ecfdf5; border-left: 10px solid #047857; padding: 20px 25px; border-radius: 10px; font-size: 32pt; font-weight: 900 !important; margin-top: 0; -webkit-text-stroke: 1px #064e3b;">13. भारतीय संविधान में समानता (अनुच्छेद 14-18)</h2>
                 <p style="font-size: 18pt; text-align: justify;">भारतीय संविधान का भाग 3 'समानता का अधिकार' प्रदान करता है, जो भारत जैसे विविधतापूर्ण और जाति-प्रधान समाज के लिए एक क्रांतिकारी दस्तावेज है।</p>
 
-                <h3 style="color: #064e3b; font-size: 24pt;">13.1 प्रमुख अनुच्छेदों का विश्लेषण:</h3>
-                <ul style="font-size: 18pt; line-height: 1.8; color: #064e3b; list-style-type: square;">
+                <h3 style="color: #064e3b; font-size: 24pt;">13.1 प्रमुख अनुच्छेदों का विश्लेषण (5 बिंदु):</h3>
+                <ul style="font-size: 18pt; line-height: 1.8; color: #000000; list-style-type: square;">
                     <li><b>अनुच्छेद 14 - विधि के समक्ष समता (Equality before Law):</b> इसका अर्थ है कि भारत के राज्य क्षेत्र में कानून के सामने सभी व्यक्ति बराबर हैं। देश का राष्ट्रपति हो या एक सामान्य मजदूर, कानून का समान संरक्षण और न्यायिक जवाबदेही दोनों पर समान रूप से लागू होती है।</li>
                     <li><b>अनुच्छेद 15 - भेदभाव का निषेध (Prohibition of Discrimination):</b> राज्य किसी भी नागरिक के खिलाफ केवल धर्म, मूलवंश, जाति, लिंग, जन्मस्थान या इनमें से किसी के आधार पर कोई भेदभाव नहीं करेगा। दुकानों, सार्वजनिक भोजनालयों, कुओं और घाटों तक सभी की समान पहुँच सुनिश्चित की गई है।</li>
                     <li><b>अनुच्छेद 16 - लोक नियोजन में अवसर की समता (Equal Opportunity in Public Employment):</b> सरकारी नौकरियों में सभी नागरिकों को आवेदन करने और चुने जाने के समान अवसर मिलेंगे। वंचित और पिछड़े वर्गों को मुख्यधारा में लाने के लिए इसी अनुच्छेद के तहत सकारात्मक कार्रवाई (आरक्षण) का कानूनी आधार प्रदान किया गया है।</li>
@@ -270,12 +304,12 @@
             </div>
 
             <!-- PART 14 -->
-            <div style="margin-bottom: 50px;">
-                <h2 style="color: #ffffff; background-color: #4338ca; padding: 15px 20px; border-radius: 8px; font-size: 30pt; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">14. सामाजिक न्याय और समानता—डॉ. बी.आर. अंबेडकर का विजन</h2>
-                <p style="font-size: 18pt; text-align: justify;">डॉ. अंबेडकर के लिए समानता का अर्थ केवल राजनीतिक अधिकार नहीं था, बल्कि वह 'सामाजिक लोकतंत्र' की स्थापना करना चाहते थे।</p>
+            <div class="part-container" style="border-top-color: #4338ca;">
+                <h2 style="color: #3730a3 !important; background-color: #f5f3ff; border-left: 10px solid #4338ca; padding: 20px 25px; border-radius: 10px; font-size: 32pt; font-weight: 900 !important; margin-top: 0; -webkit-text-stroke: 1px #3730a3;">14. सामाजिक न्याय और समानता—डॉ. बी.आर. अंबेडकर का विजन</h2>
+                <p style="font-size: 18pt; text-align: justify;">डॉ. अंबेडकर के लिए समानता का अर्थ केवल राजनीतिक अधिकार या वोट देना नहीं था, बल्कि वह एक ऐसे 'सामाजिक लोकतंत्र' (Social Democracy) की स्थापना करना चाहते थे जहाँ सामाजिक और आर्थिक विषमताएं पूरी तरह समाप्त हों।</p>
 
-                <h3 style="color: #3730a3; font-size: 24pt;">14.1 अंबेडकरवादी समानता के आधार:</h3>
-                <ul style="font-size: 18pt; line-height: 1.8; color: #1e1b4b; list-style-type: disc;">
+                <h3 style="color: #3730a3; font-size: 24pt;">14.1 अंबेडकरवादी समानता के आधार (5 बिंदु):</h3>
+                <ul style="font-size: 18pt; line-height: 1.8; color: #000000; list-style-type: disc;">
                     <li><b>जाति का उन्मूलन (Annihilation of Caste):</b> डॉ. अंबेडकर का मानना था कि जब तक समाज में जाति आधारित श्रेणीबद्ध ऊंच-नीच और जन्मजात भेदभाव मौजूद है, तब तक वास्तविक समानता एक कोरा सपना रहेगी। सामाजिक न्याय की पहली शर्त जातिवाद का पूर्ण विनाश है।</li>
                     <li><b>त्रिमूर्ति सिद्धांत (Trinity Principle):</b> उन्होंने स्पष्ट किया कि स्वतंत्रता, समानता और बंधुत्व (Fraternity) को एक दूसरे से अलग नहीं किया जा सकता। यदि समानता के बिना स्वतंत्रता होगी, तो कुछ लोगों का वर्चस्व स्थापित हो जाएगा और यदि स्वतंत्रता के बिना समानता होगी, तो व्यक्तिगत रचनात्मकता नष्ट हो जाएगी।</li>
                     <li><b>बंधुत्व का महत्व (Fraternity as Base):</b> बंधुत्व का अर्थ है समाज के सभी सदस्यों के बीच भाईचारा और साझा जुड़ाव। बिना बंधुत्व के कानूनन थोपी गई समानता केवल कागजी रह जाएगी; समाज के भीतर एक-दूसरे के प्रति सम्मान की भावना होना अत्यंत आवश्यक है।</li>
@@ -283,19 +317,19 @@
                     <li><b>राजनैतिक बनाम सामाजिक आज़ादी:</b> उनका प्रसिद्ध चेतावनी भरा भाषण याद दिलाता है कि 26 जनवरी 1950 को हम अंतर्विरोधों के जीवन में प्रवेश कर रहे हैं—जहाँ राजनैतिक रूप से एक वोट के साथ समानता होगी, लेकिन सामाजिक और आर्थिक जीवन में भारी असमानता होगी। इस अंतर्विरोध को जल्द से जल्द दूर करना होगा।</li>
                 </ul>
 
-                <div style="background-color: #eef2ff; padding: 25px; border: 2px dashed #6366f1; border-radius: 10px; margin: 30px 0;">
-                    <h4 style="margin: 0 0 15px 0; color: #4338ca; font-size: 22pt;">⚖️ मास्टर कोट: डॉ. अंबेडकर</h4>
-                    <p style="font-size: 18pt; color: #312e81; margin: 0; text-align: justify;">"हमें राजनैतिक लोकतंत्र को सामाजिक लोकतंत्र भी बनाना चाहिए। सामाजिक लोकतंत्र का अर्थ है—जीवन का वह तरीका जो स्वतंत्रता, समानता और बंधुत्व को जीवन के मूल सिद्धांतों के रूप में मान्यता देता है।"</p>
+                <div class="info-box" style="border-left-color: #4338ca;">
+                    <h4 style="margin: 0 0 15px 0; color: #3730a3; font-size: 22pt;">⚖️ मास्टर कोट: डॉ. अंबेडकर</h4>
+                    <p style="font-size: 18pt; color: #000000; margin: 0; text-align: justify;">"हमें राजनैतिक लोकतंत्र को सामाजिक लोकतंत्र भी बनाना चाहिए। सामाजिक लोकतंत्र का अर्थ है—जीवन का वह तरीका जो स्वतंत्रता, समानता और बंधुत्व को जीवन के मूल सिद्धांतों के रूप में मान्यता देता है।"</p>
                 </div>
             </div>
 
             <!-- PART 15 -->
-            <div style="background-color: #f8fafc; padding: 40px; border-radius: 12px; margin-bottom: 50px; border: 3px solid #64748b;">
-                <h2 style="color: #334155; font-size: 30pt; margin-top: 0;">15. भूमंडलीकरण के दौर में समानता—नई चुनौतियाँ</h2>
+            <div class="part-container" style="border-top-color: #64748b;">
+                <h2 style="color: #334155 !important; background-color: #f1f5f9; border-left: 10px solid #64748b; padding: 20px 25px; border-radius: 10px; font-size: 32pt; font-weight: 900 !important; margin-top: 0; -webkit-text-stroke: 1px #334155;">15. भूमंडलीकरण के दौर में समानता—नई चुनौतियाँ</h2>
                 <p style="font-size: 18pt; text-align: justify;">आज के दौर में 'वैश्वीकरण' ने समानता के सामने नए संकट खड़े कर दिए हैं जिनका विश्लेषण एनसीईआरटी के आधुनिक खंडों में मिलता है।</p>
 
-                <h3 style="color: #1e293b; font-size: 24pt;">15.1 उभरती हुई समस्याएँ:</h3>
-                <ul style="font-size: 18pt; line-height: 1.8; color: #475569; list-style-type: square;">
+                <h3 style="color: #334155; font-size: 24pt;">15.1 उभरती हुई समस्याएँ (5 बिंदु):</h3>
+                <ul style="font-size: 18pt; line-height: 1.8; color: #000000; list-style-type: square;">
                     <li><b>डिजिटल डिवाइड (Digital Divide):</b> सूचना और संचार तकनीक तक पहुँच रखने वाले संपन्न लोगों और इससे वंचित ग्रामीण या गरीब आबादी के बीच ज्ञान और अवसरों की एक नई व विशाल विषमता पैदा हो गई है।</li>
                     <li><b>श्रम का अनौपचारिकीकरण (Informalization of Labor):</b> बहुराष्ट्रीय कंपनियां मुनाफे के लिए श्रम कानूनों को लचीला बनाती हैं, जिससे ठेका प्रथा (Contract Labor) और नौकरियों में असुरक्षा बढ़ी है। मजदूरों को बुनियादी सामाजिक सुरक्षा और समान वेतन नहीं मिल पाता।</li>
                     <li><b>सार्वजनिक सेवाओं का निजीकरण (Privatization of Public Services):</b> शिक्षा, स्वास्थ्य और परिवहन जैसी बुनियादी सुविधाओं का निजीकरण होने से वे अत्यधिक महंगी हो गई हैं, जिसके परिणामस्वरूप गरीबों के लिए समान अवसरों के द्वार बंद हो जाते हैं।</li>
@@ -303,18 +337,18 @@
                     <li><b>सांस्कृतिक वर्चस्व (Cultural Hegemony):</b> भूमंडलीकरण के प्रभाव में पश्चिमी उपभोक्तावादी संस्कृति का प्रचार-प्रसार स्थानीय पहचान और संस्कृतियों को हाशिए पर धकेल रहा है, जिससे सांस्कृतिक विविधता और समानता को चुनौती मिल रही है।</li>
                 </ul>
 
-                <div style="background-color: #ffffff; padding: 20px; text-align: left; border: 2px solid #94a3b8; border-radius: 8px; margin-top: 20px;">
-                    <p style="font-size: 18pt; color: #334155; margin: 0; text-align: center; font-weight: bold;">🎯 दार्शनिक निष्कर्ष: 21वीं सदी की समानता का अर्थ केवल बुनियादी भौतिक ज़रूरतें पूरी करना नहीं, बल्कि 'ज्ञान, तकनीक और सम्मानजनक जीवन' पर सबका समान अधिकार सुनिश्चित करना है।</p>
+                <div class="info-box" style="border-left-color: #64748b;">
+                    <p style="font-size: 18pt; color: #000000; margin: 0; text-align: center; font-weight: bold;">🎯 दार्शनिक निष्कर्ष: 21वीं सदी की समानता का अर्थ केवल बुनियादी भौतिक ज़रूरतें पूरी करना नहीं, बल्कि 'ज्ञान, तकनीक और सम्मानजनक जीवन' पर सबका समान अधिकार सुनिश्चित करना है।</p>
                 </div>
             </div>
 
             <!-- PART 16 -->
-            <div style="margin-bottom: 50px;">
-                <h2 style="color: #ffffff; background-color: #7c3aed; padding: 15px 20px; border-radius: 8px; font-size: 30pt; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">16. अवसरों की समानता बनाम परिणामों की समानता (पुनर्विचार)</h2>
+            <div class="part-container" style="border-top-color: #7c3aed;">
+                <h2 style="color: #5b21b6 !important; background-color: #f5f3ff; border-left: 10px solid #7c3aed; padding: 20px 25px; border-radius: 10px; font-size: 32pt; font-weight: 900 !important; margin-top: 0; -webkit-text-stroke: 1px #5b21b6;">16. अवसरों की समानता बनाम परिणामों की समानता (पुनर्विचार)</h2>
                 <p style="font-size: 18pt; text-align: justify;">समानता के विमर्श में यह सबसे बड़ा वैचारिक द्वंद्व है। क्या राज्य को केवल 'दौड़' शुरू होने तक सबको बराबर रखना चाहिए, या यह सुनिश्चित करना चाहिए कि सब 'फिनिश लाइन' तक पहुँचें?</p>
 
-                <h3 style="color: #5b21b6; font-size: 24pt;">16.1 तुलनात्मक विश्लेषण:</h3>
-                <ul style="font-size: 18pt; line-height: 1.8; color: #4c1d95; list-style-type: square;">
+                <h3 style="color: #5b21b6; font-size: 24pt;">16.1 तुलनात्मक विश्लेषण (5 बिंदु):</h3>
+                <ul style="font-size: 18pt; line-height: 1.8; color: #000000; list-style-type: square;">
                     <li><b>अवसरों की समानता (Liberal Vision):</b> यह उदारवादी दृष्टिकोण है जो मानता है कि यदि प्रतियोगिता के नियम निष्पक्ष, पारदर्शी और जाति-धर्म के भेदभाव से मुक्त हैं, तो परिणाम में होने वाली असमानता स्वीकार्य है। यह व्यक्तिगत 'योग्यता, कौशल और कड़ी मेहनत' को पुरस्कृत करने पर बल देता है।</li>
                     <li><b>परिणामों की समानता (Socialist Vision):</b> समाजवादियों का तर्क है कि भारी सामाजिक-आर्थिक विषमता के माहौल में केवल समान नियमों से न्याय नहीं हो सकता। जब तक परिणाम (जैसे बुनियादी आय, स्वास्थ्य और जीवन स्तर) में सापेक्ष समानता नहीं होगी, तब तक 'समान अवसर' केवल एक दिखावा रहेंगे।</li>
                     <li><b>संतुलित दृष्टिकोण:</b> एक सफल लोकतंत्र केवल औपचारिक नियम बनाकर चुप नहीं बैठता। वह समझता है कि एक कमजोर और एक ताकतवर व्यक्ति के बीच निष्पक्ष दौड़ नहीं हो सकती। इसलिए राज्य को कमजोर धावक को विशेष पोषण और प्रशिक्षण देना होगा।</li>
@@ -322,34 +356,34 @@
                     <li><b>प्रतिभा बनाम पृष्ठभूमि:</b> यह सिद्धांत स्पष्ट करता है कि किसी व्यक्ति की सफलता केवल उसकी 'मेहनत' का परिणाम नहीं होती; उसकी सामाजिक पृष्ठभूमि, पारिवारिक संपन्नता और शुरुआती संसाधन भी उसकी सफलता में बहुत बड़ी भूमिका निभाते हैं।</li>
                 </ul>
 
-                <div style="margin: 20px 0; padding: 15px 20px; background-color: #f5f3ff; border-left: 6px solid #7c3aed; border-radius: 8px;">
+                <div class="info-box" style="border-left-color: #7c3aed;">
                     <h4 style="margin: 0 0 10px 0; color: #5b21b6; font-size: 20pt;">📖 राजनैतिक निष्कर्ष</h4>
-                    <p style="margin: 0; font-size: 16pt; color: #4c1d95;">एक संतुलित लोकतांत्रिक व्यवस्था दोनों के बीच सामंजस्य बनाती है। वह 'निष्पक्ष अवसर' तो प्रदान करती ही है, साथ ही 'सकारात्मक कार्रवाई' के माध्यम से परिणामों में मौजूद भारी विसंगतियों को पाटने का प्रयास भी करती है।</p>
+                    <p style="margin: 0; font-size: 18pt; color: #000000; text-align: justify;">एक संतुलित लोकतांत्रिक व्यवस्था दोनों के बीच सामंजस्य बनाती है। वह 'निष्पक्ष अवसर' तो प्रदान करती ही है, साथ ही 'सकारात्मक कार्रवाई' के माध्यम से परिणामों में मौजूद भारी विसंगतियों को पाटने का प्रयास भी करती है।</p>
                 </div>
             </div>
 
             <!-- PART 17 -->
-            <div style="margin-bottom: 50px;">
-                <h2 style="color: #ffffff; background-color: #db2777; padding: 15px 20px; border-radius: 8px; font-size: 30pt; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">17. सामाजिक अलगाव (Social Segregation) और समानता का संकट</h2>
+            <div class="part-container" style="border-top-color: #db2777;">
+                <h2 style="color: #9d174d !important; background-color: #fdf2f8; border-left: 10px solid #db2777; padding: 20px 25px; border-radius: 10px; font-size: 32pt; font-weight: 900 !important; margin-top: 0; -webkit-text-stroke: 1px #9d174d;">17. सामाजिक अलगाव (Social Segregation) और समानता का संकट</h2>
                 <p style="font-size: 18pt; text-align: justify;">समानता के मार्ग में 'भौतिक और सामाजिक अलगाव' एक मज़बूत दीवार है। जब समाज के वर्ग अलग-अलग बस्तियों (Ghettoization) में रहने लगते हैं, तो भाईचारा और समानता खत्म होने लगती है।</p>
 
-                <h3 style="color: #9d174d; font-size: 24pt;">17.1 अलगाव के प्रभाव:</h3>
-                <ul style="font-size: 18pt; line-height: 1.8; color: #831843; list-style-type: disc;">
+                <h3 style="color: #9d174d; font-size: 24pt;">17.1 अलगाव के प्रभाव (5 बिंदु):</h3>
+                <ul style="font-size: 18pt; line-height: 1.8; color: #000000; list-style-type: disc;">
                     <li><b>संवाद और सहानुभूति की कमी (Lack of Dialogue):</b> जब अमीर और गरीब या अलग-अलग जातियों के लोग भौगोलिक रूप से अलग रहते हैं, तो उनके बीच आपसी संवाद और सामाजिक सहानुभूति समाप्त हो जाती है। यह अलगाव एक-दूसरे के प्रति पूर्वाग्रह (Prejudices) और अविश्वास को जन्म देता है।</li>
                     <li><b>सुविधाओं में भारी असमानता (Unequal Infrastructure):</b> अक्सर 'अभिजात वर्ग' (Elite Class) की बस्तियों में बेहतरीन सड़कें, 24 घंटे पानी-बिजली और आधुनिक स्कूल-अस्पताल होते हैं, जबकि झुग्गी-झोपड़ियों और शोषितों के इलाकों में बुनियादी मानवीय सुविधाओं का भी घोर अभाव होता है।</li>
                     <li><b>मानसिक दासता और हीन भावना (Psychological Trauma):</b> अलगाव उपेक्षित वर्गों के बच्चों में जन्म से ही 'हीन भावना' भर देता है। वे खुद को समाज से कटा हुआ और दोयम दर्जे का नागरिक मानने लगते हैं, जो उनके समानता के दावे को मानसिक रूप से कमजोर कर देता है।</li>
-                    <li><b>सामाजिक विभाजन का गहराना (Ghettoization):</b> जातियों और समुदायों के आधार पर अलग-अलग कॉलोनियों का बनना भाईचारे की भावना को नष्ट करता है, जिससे एक राष्ट्र के रूप में सामूहिक चेतना का विकास रुक जाता है।</li>
+                    <li><b>सामाजिक विभाजन का गहराना (Ghettoization):</b> जातियों और समुदायों के आधार पर अलग-अलग कॉलोनियों का बनना भाईचारे की भावना को नष्ट करता है, जिससे एक nation के रूप में सामूहिक चेतना का विकास रुक जाता है।</li>
                     <li><b>मिश्रित आवासों की आवश्यकता:</b> समाजशास्त्रियों के अनुसार, समानता लाने के लिए मिश्रित कॉलोनियों (Mixed Housing Schemes) और साझा सार्वजनिक स्थानों (जैसे पार्क, पुस्तकालय, क्रीड़ा स्थल) का होना आवश्यक है जहाँ सभी वर्गों के लोग प्राकृतिक रूप से मिल-जुल सकें।</li>
                 </ul>
             </div>
 
             <!-- PART 18 -->
-            <div style="margin-bottom: 50px;">
-                <h2 style="color: #ffffff; background-color: #0369a1; padding: 15px 20px; border-radius: 8px; font-size: 30pt; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">18. डिजिटल युग में समानता और डेटा संप्रभुता</h2>
+            <div class="part-container" style="border-top-color: #0369a1;">
+                <h2 style="color: #075985 !important; background-color: #e0f2fe; border-left: 10px solid #0369a1; padding: 20px 25px; border-radius: 10px; font-size: 32pt; font-weight: 900 !important; margin-top: 0; -webkit-text-stroke: 1px #075985;">18. डिजिटल युग में समानता और डेटा संप्रभुता</h2>
                 <p style="font-size: 18pt; text-align: justify;">21वीं सदी में समानता की लड़ाई अब 'बाइनरी' और 'एल्गोरिदम' में बदली गई है। सूचना का अधिकार आज समानता का सबसे बड़ा हथियार है।</p>
 
-                <h3 style="color: #075985; font-size: 24pt;">18.1 डिजिटल चुनौतियां:</h3>
-                <ul style="font-size: 18pt; line-height: 1.8; color: #0c4a6e; list-style-type: square;">
+                <h3 style="color: #075985; font-size: 24pt;">18.1 डिजिटल चुनौतियां (5 बिंदु):</h3>
+                <ul style="font-size: 18pt; line-height: 1.8; color: #000000; list-style-type: square;">
                     <li><b>एल्गोरिदम पूर्वाग्रह (Algorithmic Bias):</b> आर्टिफिशियल इंटेलिजेंस (AI) और एल्गोरिदम पुराने भेदभावपूर्ण डेटा के आधार पर भर्ती प्रक्रियाओं, ऋण देने या आपराधिक न्याय प्रणालियों में महिलाओं और अश्वेत/वंचित समुदायों के खिलाफ अदृश्य पक्षपात करते हैं।</li>
                     <li><b>सूचना और डेटा पर एकाधिकार (Data Monopoly):</b> मुट्ठी भर विशाल टेक कंपनियों का वैश्विक डेटा पर नियंत्रण नागरिकों की निजता, स्वतंत्र निर्णय लेने की क्षमता और उनकी राजनैतिक-आर्थिक समानता को प्रभावित कर रहा है।</li>
                     <li><b>डेटा सुरक्षा कानून (Data Sovereignty):</b> हर नागरिक का अपने निजी डेटा पर पूर्ण स्वामित्व होना चाहिए। डेटा संप्रभुता के बिना 21वीं सदी में डिजिटल गुलामी का खतरा बढ़ जाएगा, जो समानता के विरुद्ध है।</li>
@@ -359,12 +393,12 @@
             </div>
 
             <!-- PART 19 -->
-            <div style="margin-bottom: 50px;">
-                <h2 style="color: #ffffff; background-color: #059669; padding: 15px 20px; border-radius: 8px; font-size: 30pt; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">19. शिक्षा और स्वास्थ्य—समानता के वास्तविक आधार</h2>
+            <div class="part-container" style="border-top-color: #059669;">
+                <h2 style="color: #065f46 !important; background-color: #ecfdf5; border-left: 10px solid #059669; padding: 20px 25px; border-radius: 10px; font-size: 32pt; font-weight: 900 !important; margin-top: 0; -webkit-text-stroke: 1px #065f46;">19. शिक्षा और स्वास्थ्य—समानता के वास्तविक आधार</h2>
                 <p style="font-size: 18pt; text-align: justify;">समानता केवल वोट देने से नहीं आती, वह व्यक्ति की 'क्षमता' में होती है। शिक्षा और स्वास्थ्य वे दो इंजन हैं जो व्यक्ति को वास्तव में समान बनाते हैं।</p>
 
-                <h3 style="color: #065f46; font-size: 24pt;">19.1 मानव विकास की भूमिका:</h3>
-                <ul style="font-size: 18pt; line-height: 1.8; color: #064e3b; list-style-type: disc;">
+                <h3 style="color: #065f46; font-size: 24pt;">19.1 मानव विकास की भूमिका (5 बिंदु):</h3>
+                <ul style="font-size: 18pt; line-height: 1.8; color: #000000; list-style-type: disc;">
                     <li><b>गुणवत्तापूर्ण सार्वजनिक शिक्षा (Quality Public Education):</b> जब तक एक निर्धन परिवार के बच्चे को सरकारी स्कूल में वही विश्वस्तरीय शिक्षा और तकनीक नहीं मिलती जो अमीर को मिलती है, तब तक प्रतिस्पर्धा की शुरुआत ही असमान रहेगी। शिक्षा अवसरों की समानता की पहली सीढ़ी है।</li>
                     <li><b>सार्वभौमिक स्वास्थ्य सुरक्षा (Universal Healthcare):</b> बीमारी किसी भी परिवार को कर्ज और गरीबी के दलदल में धकेल देती है। मुफ़्त और उच्च गुणवत्ता वाली स्वास्थ्य सेवाएं यह सुनिश्चित करती हैं कि कोई भी नागरिक केवल पैसों की कमी के कारण अपने जीवन और आजीविका की समानता से हाथ न धोए।</li>
                     <li><b>कुपोषण के खिलाफ लड़ाई (Nutrition & Health):</b> वंचित वर्गों के बच्चों में कुपोषण और बौनापन (Stunting) उनके शारीरिक और बौद्धिक विकास को हमेशा के लिए सीमित कर देता है। मिड-डे मील और आंगनवाड़ी जैसी योजनाएं समानता की नींव रखने के लिए आवश्यक हैं।</li>
@@ -374,18 +408,52 @@
             </div>
 
             <!-- PART 20 -->
-            <div style="background-color: #0f172a; padding: 50px; border-radius: 15px; margin-bottom: 50px; border: 5px double #334155; color: #ffffff;">
-                <h2 style="color: #ffffff; font-size: 35pt; margin-top: 0; text-align: center; border-bottom: 2px solid #475569; padding-bottom: 20px;">20. निष्कर्ष: एक न्यायपूर्ण और समान समाज की राह</h2>
-                <p style="font-size: 18pt; text-align: justify; color: #cbd5e1;">समानता का यह 20-भागों का गहन विश्लेषण हमें इस निष्कर्ष पर ले जाता है कि समानता एक 'स्थिर मंज़िल' नहीं, बल्कि एक 'निरंतर प्रक्रिया' है। यह प्रत्येक नागरिक के आत्म-सम्मान और राष्ट्र की एकता की पहली शर्त है। हमने इस अध्याय में सीखा कि कैसे समानता, स्वतंत्रता के साथ जुड़कर ही लोकतंत्र को पूर्ण बनाती है।</p>
+            <div class="part-container" style="border-top-color: #334155;">
+                <h2 style="color: #334155 !important; background-color: #f1f5f9; border-left: 10px solid #334155; padding: 20px 25px; border-radius: 10px; font-size: 32pt; font-weight: 900 !important; margin-top: 0; -webkit-text-stroke: 1px #334155;">20. निष्कर्ष: एक न्यायपूर्ण और समान समाज की राह</h2>
+                <p style="font-size: 18pt; text-align: justify;">समानता का यह 20-भागों का गहन विश्लेषण हमें इस निष्कर्ष पर ले जाता है कि समानता एक 'स्थिर मंज़िल' नहीं, बल्कि एक 'निरंतर प्रक्रिया' है। यह प्रत्येक नागरिक के आत्म-सम्मान और राष्ट्र की एकता की पहली शर्त है।</p>
                 
-                <div style="text-align: center; margin-top: 40px; font-size: 22pt; font-weight: bold; color: #38bdf8; padding: 30px; border: 2px dashed #0ea5e9; background: #1e293b; border-radius: 10px;">
-                    🎯 मास्टर सिनोप्सिस (Final Synopsis):<br>
-                    <span style="font-size: 18pt; font-weight: normal; color: #e2e8f0; display: block; margin-top: 20px;">
-                        "समानता वह धागा है जो समाज के विभिन्न मोतियों को एक माला में पिरोकर रखता है।" इस अध्याय का सार यह है कि समाज में मौजूद 'प्राकृतिक भिन्नताओं' का सम्मान करते हुए, हमें उन 'सामाजिक और आर्थिक बाधाओं' को नष्ट करना है जो मनुष्य की प्रगति को रोकती हैं। सच्ची समानता का अर्थ उत्कृष्ट और औसत के बीच अंतर मिटाना नहीं, बल्कि कमज़ोर को इतना सशक्त बनाना है कि वह भी शिखर छू सके। (संपूर्ण अध्याय 13: सफलतापूर्वक संपन्न)।
-                    </span>
+                <h3 style="color: #334155; font-size: 24pt;">20.1 निष्कर्ष के पांच प्रमुख स्तंभ (5 बिंदु):</h3>
+                <ul style="font-size: 18pt; line-height: 1.8; color: #000000; list-style-type: square;">
+                    <li><b>समानता एक सतत यात्रा:</b> यह कोई अंतिम लक्ष्य नहीं है, बल्कि समाज के बदलने के साथ-साथ पैदा होने वाली नई विसंगतियों को दूर करने की एक निरंतर प्रक्रिया है।</li>
+                    <li><b>स्वतंत्रता और समानता का संतुलन:</b> बिना स्वतंत्रता के समानता दमनकारी हो जाती है, और बिना समानता के स्वतंत्रता मुट्ठी भर लोगों का विशेषाधिकार बनकर रह जाती है।</li>
+                    <li><b>भाईचारे (Fraternity) की अनिवार्यता:</b> जब तक समाज में एक-दूसरे के प्रति सम्मान और भाईचारा नहीं होगा, तब तक कानूनन थोपी गई समानता कभी टिकाऊ नहीं होगी।</li>
+                    <li><b>वंचितों का सशक्तिकरण:</b> किसी भी महान लोकतंत्र की प्रगति महलों से नहीं, बल्कि समाज के अंतिम पायदान पर खड़े व्यक्ति की खुशहाली से मापी जाती है।</li>
+                    <li><b>संवैधानिक संकल्प:</b> प्रत्येक नागरिक को अपने दैनिक आचरण में समानता के आदर्शों को जीना चाहिए, ताकि भारत एक प्रगतिशील और न्यायप्रिय राष्ट्र बन सके।</li>
+                </ul>
+
+                <div class="debate-box" style="border-color: #334155; background-color: #f8fafc; text-align: center;">
+                    <h4 style="margin: 0 0 15px 0; color: #334155; font-size: 22pt;">🎯 मास्टर सिनोप्सिस (Final Synopsis)</h4>
+                    <p style="font-size: 18pt; color: #000000; margin: 0; text-align: justify;">"समानता वह धागा है जो समाज के विभिन्न मोतियों को एक माला में पिरोकर रखता है।" इस अध्याय का सार यह है कि समाज में मौजूद 'प्राकृतिक भिन्नताओं' का सम्मान करते हुए, हमें उन 'सामाजिक और आर्थिक बाधाओं' को नष्ट करना है जो मनुष्य की प्रगति को रोकती हैं। सच्ची समानता का अर्थ उत्कृष्ट और औसत के बीच अंतर मिटाना नहीं, बल्कि कमज़ोर को इतना सशक्त बनाना है कि वह भी शिखर छू सके। (संपूर्ण अध्याय 13: सफलतापूर्वक संपन्न)।</p>
                 </div>
             </div>
+
         </div>
     </div>
+
+    <script>
+    async function copyToGoogleDoc() {
+        const btn = document.getElementById('mainCopyBtn');
+        const status = document.getElementById('status');
+        const content = document.getElementById('contentToCopy').innerHTML;
+        
+        try {
+            const blob = new Blob([content], { type: 'text/html' });
+            const item = new ClipboardItem({ 'text/html': blob });
+            await navigator.clipboard.write([item]);
+            
+            status.style.display = 'block';
+            btn.style.backgroundColor = '#059669';
+            btn.innerText = '✅ COPIED! NOW PASTE IN DOC';
+            
+            setTimeout(() => {
+                status.style.display = 'none';
+                btn.style.backgroundColor = '#2563eb';
+                btn.innerText = '📋 COPY EVERYTHING FOR GOOGLE DOCS';
+            }, 5000);
+        } catch (err) {
+            alert('Error copying: ' + err);
+        }
+    }
+    </script>
 </body>
 </html>
