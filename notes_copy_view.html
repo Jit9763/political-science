@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="css/styles.css">
     <style>
         .page-container {
-            max-width: 900px;
+            max-width: var(--container-width, 900px);
             margin: 15px auto;
             background: white;
             color: #1a202c;
@@ -217,6 +217,8 @@
         
         <div class="page-container" style="position: relative;">
             <div class="action-bar">
+                <button class="action-btn" onclick="adjustWidth(100)" title="Increase Page Width" style="font-family: 'Outfit', sans-serif; font-weight: 600;">W+</button>
+                <button class="action-btn" onclick="adjustWidth(-100)" title="Decrease Page Width" style="font-family: 'Outfit', sans-serif; font-weight: 600;">W-</button>
                 <button class="action-btn" onclick="adjustFontSize(2)" title="Increase Font Size" style="font-family: 'Outfit', sans-serif; font-weight: 600;">A+</button>
                 <button class="action-btn" onclick="adjustFontSize(-2)" title="Decrease Font Size" style="font-family: 'Outfit', sans-serif; font-weight: 600;">A-</button>
                 <button class="action-btn" onclick="adjustFontWeight(100)" title="Increase Text Boldness" style="font-family: 'Outfit', sans-serif; font-weight: 600;">B+</button>
@@ -232,6 +234,18 @@
     </div>
 
     <script>
+        let containerWidth = 900; // default width in pixels
+
+        function adjustWidth(amount) {
+            containerWidth += amount;
+            if (containerWidth < 500) containerWidth = 500;
+            if (containerWidth > 2000) containerWidth = 2000;
+            const container = document.querySelector('.page-container');
+            if (container) {
+                container.style.setProperty('--container-width', containerWidth + 'px');
+            }
+        }
+
         let sizeOffset = 0;
         let weightOffset = 0;
         let strokeOffset = 0;
