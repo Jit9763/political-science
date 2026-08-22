@@ -34,6 +34,9 @@
             display: flex;
             gap: 10px;
             z-index: 1100;
+            flex-wrap: wrap;
+            justify-content: flex-end;
+            max-width: calc(100% - 40px);
         }
 
         .action-btn {
@@ -55,6 +58,11 @@
         .action-btn:hover {
             transform: scale(1.1);
             background: var(--qa-accent);
+        }
+
+        .adjustable-text {
+            font-size: calc(var(--orig-size) + var(--size-offset, 0px)) !important;
+            font-weight: calc(var(--orig-weight) + var(--weight-offset, 0)) !important;
         }
 
         .btn-copy.success {
@@ -86,10 +94,16 @@
                 border-radius: 0 !important;
                 background: white !important;
             }
+            #qa-content {
+                margin-top: 0 !important;
+            }
         }
         /* Prevent images and containers from overflowing */
         * {
             box-sizing: border-box;
+        }
+        #qa-content {
+            margin-top: 80px;
         }
         #qa-content img {
             max-width: 100%;
@@ -105,6 +119,10 @@
 
         <div class="page-container" style="position: relative;">
             <div class="action-bar">
+                <button class="action-btn" onclick="adjustFontSize(2)" title="Increase Font Size" style="font-family: 'Outfit', sans-serif; font-weight: 600;">A+</button>
+                <button class="action-btn" onclick="adjustFontSize(-2)" title="Decrease Font Size" style="font-family: 'Outfit', sans-serif; font-weight: 600;">A-</button>
+                <button class="action-btn" onclick="adjustFontWeight(100)" title="Increase Text Boldness" style="font-family: 'Outfit', sans-serif; font-weight: 600;">B+</button>
+                <button class="action-btn" onclick="adjustFontWeight(-100)" title="Decrease Text Boldness" style="font-family: 'Outfit', sans-serif; font-weight: 600;">B-</button>
                 <button id="floatingCopyBtn" class="action-btn btn-copy" onclick="copyEntireContent()" title="Copy for Google Docs">📋</button>
                 <button class="action-btn" onclick="window.print()" title="Print / Save as PDF">🖨️</button>
             </div>
@@ -116,11 +134,80 @@
     </div>
 
     <script>
+        let sizeOffset = 0;
+        let weightOffset = 0;
+
+        function adjustFontSize(amount) {
+            sizeOffset += amount;
+            if (sizeOffset < -8) sizeOffset = -8;
+            if (sizeOffset > 24) sizeOffset = 24;
+            const container = document.getElementById('qa-content');
+            if (container) {
+                container.style.setProperty('--size-offset', sizeOffset + 'px');
+            }
+        }
+
+        function adjustFontWeight(amount) {
+            weightOffset += amount;
+            if (weightOffset < -300) weightOffset = -300;
+            if (weightOffset > 500) weightOffset = 500;
+            const container = document.getElementById('qa-content');
+            if (container) {
+                container.style.setProperty('--weight-offset', weightOffset);
+            }
+        }
+
+        function initTextFormatting(containerId) {
+            const container = document.getElementById(containerId);
+            if (!container) return;
+            const elements = container.querySelectorAll('*');
+            elements.forEach(el => {
+                const tagName = el.tagName.toLowerCase();
+                if (['script', 'style', 'img', 'br', 'hr'].includes(tagName)) return;
+                
+                const style = window.getComputedStyle(el);
+                const fontSize = style.fontSize;
+                const fontWeight = style.fontWeight;
+                
+                if (fontSize) {
+                    el.style.setProperty('--orig-size', fontSize);
+                }
+                if (fontWeight) {
+                    let weightVal = fontWeight;
+                    if (fontWeight === 'normal') weightVal = '400';
+                    else if (fontWeight === 'bold') weightVal = '700';
+                    el.style.setProperty('--orig-weight', weightVal);
+                }
+                el.classList.add('adjustable-text');
+            });
+        }
+
         async function copyEntireContent() {
             const btn = document.getElementById('floatingCopyBtn');
             const target = document.getElementById('qa-content');
 
             const clone = target.cloneNode(true);
+            
+            // Revert adjustable styles in the clone to make it clean for Google Docs
+            const adjustableElements = clone.querySelectorAll('.adjustable-text');
+            adjustableElements.forEach(el => {
+                const origSize = el.style.getPropertyValue('--orig-size');
+                const origWeight = el.style.getPropertyValue('--orig-weight');
+                if (origSize) {
+                    el.style.fontSize = origSize;
+                } else {
+                    el.style.removeProperty('font-size');
+                }
+                if (origWeight) {
+                    el.style.fontWeight = origWeight;
+                } else {
+                    el.style.removeProperty('font-weight');
+                }
+                el.style.removeProperty('--orig-size');
+                el.style.removeProperty('--orig-weight');
+                el.classList.remove('adjustable-text');
+            });
+
             const images = clone.querySelectorAll('img');
             images.forEach(img => {
                 img.setAttribute('src', img.src);
@@ -168,6 +255,7 @@
                         
                         document.getElementById('qa-content').innerHTML = content.innerHTML;
                         document.title = "Q&A - चैप्टर " + id;
+                        initTextFormatting('qa-content');
                     } else {
                         document.getElementById('qa-content').innerHTML = "<p>त्रुटि: प्रश्न-उत्तर प्राप्त नहीं हो सके।</p>";
                     }
