@@ -2,16 +2,448 @@
 <html lang="hi">
 <head>
     <meta charset="UTF-8">
-    <title>Chapter 3 - Premium Notes (Class 11)</title>
+    <title>Chapter 3 COPY MASTER - Premium Notes (Election and Representation)</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;700;900&family=Outfit:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        #control-header {
+            position: fixed; top: 0; left: 0; width: 100%; background-color: #0f172a; color: #ffffff;
+            padding: 15px 20px; display: flex; justify-content: space-between; align-items: center;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); z-index: 1000; font-family: 'Outfit', sans-serif; box-sizing: border-box;
+        }
+        #control-header h1 { margin: 0; font-size: 1.4rem; font-weight: 900; }
+        body {
+            margin-top: 80px;
+            background-color: #ffffff;
+            font-family: 'Outfit', 'Noto Sans Devanagari', sans-serif;
+            font-size: 20pt;
+            font-weight: 800;
+            line-height: 2.2;
+            color: #000000;
+        }
+        p, li, div, td, th {
+            font-weight: 800 !important;
+            color: #000000 !important;
+        }
+        b, strong {
+            font-weight: 900 !important;
+            color: #000000 !important;
+        }
+        ul, ol { padding-left: 60px !important; margin-left: 20px !important; }
+        li {
+            padding-left: 15px;
+            margin-bottom: 25px;
+            text-align: justify;
+            line-height: 2.2;
+            font-size: 20pt;
+            font-weight: 800 !important;
+        }
+        /* Heavy text thickness for projector visibility */
+        p, li, h1, h2, h3, h4, b, strong {
+            font-weight: 900 !important;
+            -webkit-text-stroke: 0.5px #000000;
+        }
+        
+        .part-container {
+            margin-bottom: 80px; padding: 50px 60px; background-color: #ffffff;
+            border-radius: 15px; box-shadow: 0 15px 25px -5px rgba(0,0,0,0.05);
+            border-top: 12px solid #1e3a8a;
+        }
+        .info-box {
+            background-color: #f8fafc; padding: 30px; border-left: 14px solid #1e3a8a; 
+            margin: 30px 0; border-radius: 8px; font-size: 19pt; line-height: 2.2; font-weight: 900;
+        }
+        .debate-box {
+            background-color: #fffbeb; padding: 30px; border: 6px solid #b45309; 
+            border-radius: 15px; margin: 40px 0; line-height: 2.2; font-size: 19pt; font-weight: 900;
+        }
+    </style>
+    <script>
+        function copyToGoogleDoc() {
+            var content = document.getElementById('contentToCopy').innerHTML;
+            var blob = new Blob([content], { type: 'text/html' });
+            var data = [new ClipboardItem({ 'text/html': blob })];
+            
+            navigator.clipboard.write(data).then(function() {
+                var status = document.getElementById('status');
+                status.style.display = 'block';
+                setTimeout(function() {
+                    status.style.display = 'none';
+                }, 5000);
+            }).catch(function(err) {
+                alert('Copy failed: ' + err);
+            });
+        }
+    </script>
 </head>
 <body>
+
+    <!-- Persistent Control Header -->
+    <div id="control-header">
+        <h1>📖 अध्याय 3: चुनाव और प्रतिनिधित्व (ELECTION AND REPRESENTATION) - 100-PAGE MASTER NOTES</h1>
+        <button id="mainCopyBtn" onclick="copyToGoogleDoc()">
+            📋 COPY EVERYTHING FOR GOOGLE DOCS
+        </button>
+    </div>
+    
+    <div id="status" style="display: none; position: fixed; top: 70px; right: 20px; background-color: #059669; color: white; padding: 12px 24px; border-radius: 6px; z-index: 1000; font-family: sans-serif; font-size: 14px; font-weight: bold; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+        ✨ SUCCESS! Content copied to clipboard in rich format. Now open Google Docs and press Ctrl+V.
+    </div>
+
     <div id="contentToCopy">
-        <div style="font-family: 'Arial', verdana, sans-serif; font-size: 16pt; line-height: 1.8; color: #1a202c;">
-            <h1 style="text-align: center; color: #1e3a8a; font-size: 40pt; font-weight: bold; border-bottom: 5px solid #3b82f6; padding-bottom: 30px; margin-bottom: 40px;">
-                अध्याय 3: जल्द ही आ रहा है...<br/>
-                <span style="font-size: 24pt; color:#6b7280; font-weight: normal;">(Coming Soon...)</span>
-            </h1>
-            <p style="text-align: center; font-size: 20pt;">इस अध्याय के विस्तृत नोट्स और प्रीमियम कंटेंट पर अभी काम चल रहा है। कृपया कुछ समय बाद पुनः देखें।</p>
+        <div style="font-family: 'Outfit', 'Noto Sans Devanagari', sans-serif; font-size: 20pt; line-height: 2.2; color: #000000; max-width: 1400px; margin: auto; padding: 20px;">
+
+            <!-- Title Section (Projector Friendly) -->
+            <div style="text-align: center; margin-bottom: 80px; padding: 75px; border: 15px double #1e3a8a; background-color: #eff6ff; border-radius: 30px;">
+                <h1 style="color: #1e3a8a !important; font-size: 58pt; font-weight: 950 !important; margin-bottom: 20px; -webkit-text-stroke: 1.5px #1e3a8a;">
+                    अध्याय 3: चुनाव और प्रतिनिधित्व<br/>
+                    <span style="font-size: 30pt; color:#475569; font-weight: 900;">(ELECTION AND REPRESENTATION)</span>
+                </h1>
+                <p style="font-size: 26pt; color: #000000; margin-top: 10px; font-weight: 900;">कक्षा 11 राजनीति विज्ञान - अति-गहन शैक्षणिक मास्टर नोट्स</p>
+                <p style="font-size: 20pt; color: #b91c1c; font-style: italic; font-weight: 900;">(विशेष फोकस: FPTP बनाम PR प्रणाली, निर्वाचन आयोग, आरक्षित निर्वाचन क्षेत्र, और चुनावी सुधार)</p>
+            </div>
+
+            
+            <!-- PART 1 -->
+            <div class="part-container" style="border-top-color: #0284c7;">
+                <h2 style="color: #0369a1 !important; background-color: #f0f9ff; border-left: 10px solid #0284c7; padding: 20px 25px; border-radius: 10px; font-size: 32pt; font-weight: 900 !important; margin-top: 0; -webkit-text-stroke: 1px #0369a1;">1. चुनाव और लोकतंत्र: एक परिचय</h2>
+                <p style="font-size: 18pt; text-align: justify;">चुनाव और लोकतंत्र एक-दूसरे के पूरक हैं। चुनाव वह लोकतांत्रिक माध्यम है जिसके द्वारा देश के नागरिक अपने प्रतिनिधियों को चुनते हैं जो शासन चलाने के लिए कानून बनाते हैं।</p>
+
+                <h3 style="color: #0369a1; font-size: 24pt;">1.1 चुनाव और लोकतंत्र का अटूट संबंध:</h3>
+                <ul style="font-size: 18pt; line-height: 1.8; color: #000000; list-style-type: square;">
+                    <li><b>प्रतिनिधित्व का आधार:</b> विशाल आबादी वाले देशों में सभी नागरिक सीधे शासन नहीं चला सकते; अतः वे चुनाव द्वारा अपने प्रतिनिधि चुनते हैं।</li>
+                    <li><b>लोकतांत्रिक वैधता:</b> चुनाव सरकार को जनता की ओर से शासन करने की नैतिक और कानूनी शक्ति (वैधता) प्रदान करते हैं।</li>
+                    <li><b>शांतिपूर्ण सत्ता परिवर्तन:</b> चुनाव बिना किसी हिंसा या क्रांति के, बैलट या ईवीएम के माध्यम से सत्ता बदलने का शांतिपूर्ण साधन हैं।</li>
+                    <li><b>सरकार पर नियंत्रण:</b> नियमित चुनावों के कारण सरकार जनता के प्रति उत्तरदायी रहती है क्योंकि उसे पुनः वोट माँगने जाना होता है।</li>
+                    <li><b>नागरिक सशक्तिकरण:</b> चुनाव देश के प्रत्येक नागरिक को देश की नीति-निर्माण और शासन व्यवस्था में हिस्सेदार बनने की शक्ति देते हैं।</li>
+                </ul>
+            </div>
+
+
+            <!-- PART 2 -->
+            <div class="part-container" style="border-top-color: #059669;">
+                <h2 style="color: #065f46 !important; background-color: #f0fdf4; border-left: 10px solid #059669; padding: 20px 25px; border-radius: 10px; font-size: 32pt; font-weight: 900 !important; margin-top: 0; -webkit-text-stroke: 1px #065f46;">2. प्रत्यक्ष बनाम अप्रत्यक्ष लोकतंत्र</h2>
+                <p style="font-size: 18pt; text-align: justify;">नागरिकों की निर्णय लेने की प्रक्रिया में भागीदारी के आधार पर लोकतंत्र को दो प्रमुख रूपों में विभाजित किया जाता है—प्रत्यक्ष लोकतंत्र और अप्रत्यक्ष लोकतंत्र।</p>
+
+                <h3 style="color: #065f46; font-size: 24pt;">2.1 प्रत्यक्ष लोकतंत्र (Direct Democracy):</h3>
+                <ul style="font-size: 18pt; line-height: 1.8; color: #000000; list-style-type: square;">
+                    <li><b>सीधी भागीदारी:</b> इसमें सभी नागरिक प्रतिदिन के सरकारी निर्णयों, नीतियों और कानून बनाने की प्रक्रिया में सीधे वोट डालकर भाग लेते हैं।</li>
+                    <li><b>ऐतिहासिक और आधुनिक उदाहरण:</b> प्राचीन यूनान के नगर-राज्य (Athens) और वर्तमान समय में स्विट्जरलैंड के कुछ कैंटन (प्रांत)।</li>
+                    <li><b>भौगोलिक सीमा:</b> यह प्रणाली केवल बहुत कम जनसंख्या और सीमित भौगोलिक आकार वाले छोटे समाजों के लिए ही व्यावहारिक है।</li>
+                </ul>
+
+                <h3 style="color: #065f46; font-size: 24pt;">2.2 अप्रत्यक्ष/प्रतिनिधिमूलक लोकतंत्र (Indirect/Representative Democracy):</h3>
+                <ul style="font-size: 18pt; line-height: 1.8; color: #000000; list-style-type: square;">
+                    <li><b>प्रतिनिधियों द्वारा शासन:</b> नागरिक स्वयं शासन न करके अपने प्रतिनिधियों (सांसदों/विधायकों) को चुनते हैं जो संसद में उनके हित में निर्णय लेते हैं।</li>
+                    <li><b>व्यावहारिक उपयोगिता:</b> भारत, अमेरिका और ब्रिटेन जैसे विशाल भौगोलिक आकार और करोड़ों की जनसंख्या वाले देशों के लिए यही एकमात्र व्यावहारिक विकल्प है।</li>
+                    <li><b>नियमित अंतराल:</b> इसमें निश्चित समय (जैसे 5 वर्ष) पर पुनः चुनाव होते हैं ताकि प्रतिनिधियों की जवाबदेही जनता के प्रति बनी रहे।</li>
+                </ul>
+            </div>
+
+
+            <!-- PART 3 -->
+            <div class="part-container" style="border-top-color: #d97706;">
+                <h2 style="color: #92400e !important; background-color: #fff7ed; border-left: 10px solid #d97706; padding: 20px 25px; border-radius: 10px; font-size: 32pt; font-weight: 900 !important; margin-top: 0; -webkit-text-stroke: 1px #92400e;">3. लोकतंत्र में चुनाव की आवश्यकता क्यों?</h2>
+                <p style="font-size: 18pt; text-align: justify;">बिना निष्पक्ष और नियमित चुनावों के कोई भी लोकतांत्रिक व्यवस्था तानाशाही या राजतंत्र में बदल सकती है। चुनाव लोकतंत्र को जीवित रखने का सबसे प्रमुख जरिया हैं।</p>
+
+                <h3 style="color: #92400e; font-size: 24pt;">3.1 चुनाव की आवश्यकता के प्रमुख कारण:</h3>
+                <ul style="font-size: 18pt; line-height: 1.8; color: #000000; list-style-type: square;">
+                    <li><b>विकल्पों की उपलब्धता:</b> चुनाव मतदाताओं को विभिन्न नीतियों, राजनीतिक दलों और उम्मीदवारों में से अपनी पसंद का शासन चुनने का विकल्प देते हैं।</li>
+                    <li><b>जनता का नियंत्रण:</b> यदि चुने हुए प्रतिनिधि जनता की आकांक्षाओं को पूरा नहीं करते, तो अगले चुनाव में जनता उन्हें सत्ता से बाहर कर सकती है।</li>
+                    <li><b>पॉलिसी निर्धारण में हिस्सेदारी:</b> चुनाव के समय राजनीतिक दल अपने घोषणापत्र (Manifesto) जारी करते हैं, जिससे जनता विकास की दिशा तय करती है।</li>
+                    <li><b>अल्पसंख्यकों की आवाज:</b> चुनावी लोकतंत्र में पिछड़े, शोषित और अल्पसंख्यक समुदायों को भी अपना प्रतिनिधित्व चुनकर नीति-निर्माण में शामिल होने का मौका मिलता है।</li>
+                    <li><b>शांतिपूर्ण क्रांति का साधन:</b> चुनाव बिना किसी सशस्त्र संघर्ष या हिंसा के, जनता की इच्छा के अनुसार पूरी सरकार और नीतियों को बदलने का सबसे सुरक्षित साधन हैं।</li>
+                </ul>
+            </div>
+
+
+            <!-- PART 4 -->
+            <div class="part-container" style="border-top-color: #7c3aed;">
+                <h2 style="color: #5b21b6 !important; background-color: #f5f3ff; border-left: 10px solid #7c3aed; padding: 20px 25px; border-radius: 10px; font-size: 32pt; font-weight: 900 !important; margin-top: 0; -webkit-text-stroke: 1px #5b21b6;">4. भारत में चुनाव प्रणाली: एक विहंगम दृष्टि</h2>
+                <p style="font-size: 18pt; text-align: justify;">भारतीय संविधान निर्माताओं ने देश की सामाजिक-आर्थिक विविधता और विशाल जनसांख्यिकी को ध्यान में रखते हुए एक अत्यंत सुदृढ़, निष्पक्ष और पारदर्शी चुनाव प्रणाली का ढांचा तैयार किया है।</p>
+
+                <h3 style="color: #5b21b6; font-size: 24pt;">4.1 भारतीय चुनाव प्रणाली के प्रमुख आधार:</h3>
+                <ul style="font-size: 18pt; line-height: 1.8; color: #000000; list-style-type: square;">
+                    <li><b>सार्वभौमिक वयस्क मताधिकार:</b> 18 वर्ष से ऊपर के प्रत्येक नागरिक को बिना किसी जाति, धर्म, लिंग या वर्ग के भेदभाव के वोट देने का समान अधिकार।</li>
+                    <li><b>स्वतंत्र निर्वाचन आयोग (ECI):</b> संविधान के अनुच्छेद 324 के तहत एक स्वतंत्र और शक्तिशाली चुनाव आयोग की स्थापना जो पूरी प्रक्रिया को निष्पक्ष रखता है।</li>
+                    <li><b>भौगोलिक निर्वाचन क्षेत्र:</b> पूरे देश को जनसंख्या के आधार पर एक-सदस्यीय निर्वाचन क्षेत्रों (जैसे लोकसभा के 543 क्षेत्र) में विभाजित करना।</li>
+                    <li><b>संवैधानिक आरक्षण:</b> समाज के ऐतिहासिक रूप से वंचित वर्गों (SC/ST) के लिए कुछ निर्वाचन क्षेत्रों को आरक्षित करने की विशेष व्यवस्था।</li>
+                    <li><b>गुप्त मतदान (Secret Ballot):</b> मतदाताओं को बिना किसी भय, दबाव या प्रलोभन के अपनी इच्छा से गुप्त रूप से वोट डालने की कानूनी सुरक्षा देना।</li>
+                </ul>
+            </div>
+
+
+            <!-- PART 5 -->
+            <div class="part-container" style="border-top-color: #4c1d95;">
+                <h2 style="color: #4c1d95 !important; background-color: #faf5ff; border-left: 10px solid #4c1d95; padding: 20px 25px; border-radius: 10px; font-size: 32pt; font-weight: 900 !important; margin-top: 0; -webkit-text-stroke: 1px #4c1d95;">5. 'जो सबसे आगे वही जीते' (FPTP) प्रणाली</h2>
+                <p style="font-size: 18pt; text-align: justify;">भारत में लोकसभा और विधानसभा चुनावों के लिए अपनाई जाने वाली सबसे लोकप्रिय प्रणाली को 'फर्स्ट-पास्ट-द-पोस्ट' (FPTP) या 'जो सबसे आगे वही जीते' कहा जाता है।</p>
+
+                <h3 style="color: #4c1d95; font-size: 24pt;">5.1 FPTP प्रणाली की प्रमुख कार्यप्रणाली:</h3>
+                <ul style="font-size: 18pt; line-height: 1.8; color: #000000; list-style-type: square;">
+                    <li><b>एक-सदस्यीय क्षेत्र:</b> पूरे निर्वाचन क्षेत्र से केवल एक ही प्रतिनिधि चुना जाता है, और प्रत्येक मतदाता केवल एक ही उम्मीदवार को वोट देता है।</li>
+                    <li><b>बहुमत की आवश्यकता नहीं:</b> जीतने वाले उम्मीदवार को कुल मतों का 50% या उससे अधिक पाना आवश्यक नहीं है; उसे केवल बाकी उम्मीदवारों से अधिक वोट मिलने चाहिए।</li>
+                    <li><b>सरल और व्यावहारिक:</b> यह प्रणाली बेहद सरल है; एक अशिक्षित मतदाता भी आसानी से समझ सकता है कि उसे किस व्यक्ति के चुनाव चिन्ह पर बटन दबाना है।</li>
+                    <li><b>उम्मीदवार और मतदाता का सीधा संबंध:</b> मतदाता को स्पष्ट पता होता है कि उसके क्षेत्र का प्रतिनिधि कौन है, जिससे वह जवाबदेही तय कर सकता है।</li>
+                    <li><b>स्थायी सरकार की संभावना:</b> यह प्रणाली अक्सर किसी एक बड़े राजनीतिक दल को संसद में स्पष्ट बहुमत दिलाने में मदद करती है, जिससे स्थिर सरकार बनती है।</li>
+                </ul>
+            </div>
+
+
+            <!-- PART 6 -->
+            <div class="part-container" style="border-top-color: #0d9488;">
+                <h2 style="color: #0f766e !important; background-color: #f0fdf4; border-left: 10px solid #0d9488; padding: 20px 25px; border-radius: 10px; font-size: 32pt; font-weight: 900 !important; margin-top: 0; -webkit-text-stroke: 1px #0f766e;">6. भारत ने FPTP प्रणाली को क्यों चुना? - तर्क एवं इतिहास</h2>
+                <p style="font-size: 18pt; text-align: justify;">संविधान सभा में विचारकों ने जटिल प्रणालियों के बजाय FPTP को क्यों चुना? इसके पीछे भारत की तत्कालीन सामाजिक और राजनैतिक परिस्थितियां थीं।</p>
+
+                <h3 style="color: #0f766e; font-size: 24pt;">6.1 FPTP चुनने के प्रमुख कारण:</h3>
+                <ul style="font-size: 18pt; line-height: 1.8; color: #000000; list-style-type: square;">
+                    <li><b>असाधारण सरलता:</b> स्वतंत्रता के समय भारत में साक्षरता दर बहुत कम थी। FPTP का ढांचा इतना सरल था कि एक आम अनपढ़ ग्रामीण भी इसे आसानी से समझ सकता था।</li>
+                    <li><b>स्थिरता की आवश्यकता:</b> भारत विभाजन और सांप्रदायिक दंगों के दौर से गुजर रहा था; देश को एक स्थिर, मज़बूत और बहुसंख्यक समर्थन वाली सरकार की जरूरत थी।</li>
+                    <li><b>व्यक्तियों का चुनाव (Personal Choice):</b> मतदाता केवल अमूर्त राजनीतिक दलों को वोट नहीं देता, बल्कि अपने स्थानीय उम्मीदवार के चरित्र और योग्यता को देखकर चुनता है।</li>
+                    <li><b>विविधता का प्रतिनिधित्व:</b> यह विभिन्न जातियों और समुदायों के उम्मीदवारों को एक ही क्षेत्र में गठबंधन बनाने और चुनाव जीतने के लिए प्रेरित करती है।</li>
+                    <li><b>गठबंधन सरकारों का अनुभव:</b> यद्यपि यह बड़े दलों को लाभ देती है, फिर भी इसने भारत में बहुदलीय प्रणाली और क्षेत्रीय दलों के उदय को कभी नहीं रोका।</li>
+                </ul>
+            </div>
+
+
+            <!-- PART 7 -->
+            <div class="part-container" style="border-top-color: #4338ca;">
+                <h2 style="color: #3730a3 !important; background-color: #eef2ff; border-left: 10px solid #4338ca; padding: 20px 25px; border-radius: 10px; font-size: 32pt; font-weight: 900 !important; margin-top: 0; -webkit-text-stroke: 1px #3730a3;">7. समानुपातिक प्रतिनिधित्व (Proportional Representation)</h2>
+                <p style="font-size: 18pt; text-align: justify;">समानुपातिक प्रतिनिधित्व (PR) वह चुनाव प्रणाली है जिसमें प्रत्येक राजनीतिक दल को संसद में उतनी ही सीटें मिलती हैं जितने प्रतिशत वोट उसे पूरे देश में प्राप्त होते हैं।</p>
+
+                <h3 style="color: #3730a3; font-size: 24pt;">7.1 PR प्रणाली की विशेषताएं:</h3>
+                <ul style="font-size: 18pt; line-height: 1.8; color: #000000; list-style-type: square;">
+                    <li><b>बहु-सदस्यीय निर्वाचन क्षेत्र:</b> पूरे देश को एक ही निर्वाचन क्षेत्र मान लिया जाता है या फिर बहुत बड़े बहु-सदस्यीय क्षेत्रों में बांट दिया जाता है।</li>
+                    <li><b>दलों की प्राथमिकता (Party List):</b> मतदाता व्यक्ति को नहीं, बल्कि राजनीतिक दल को वोट देता है; दल अपने वोटों के अनुपात में उम्मीदवारों को सीटें आवंटित करते हैं।</li>
+                    <li><b>वोट का नुकसान नहीं:</b> इसमें छोटे दलों के वोट बेकार नहीं जाते; यदि किसी दल को केवल 2% वोट भी मिले हैं, तो उसे संसद में 2% सीटें अवश्य मिलेंगी।</li>
+                    <li><b>जटिल गणना:</b> यह प्रणाली काफी जटिल है; इसमें वोटों की गिनती और सीटों का निर्धारण करने के लिए उच्च गणितीय सूत्रों की आवश्यकता होती है।</li>
+                    <li><b>अस्थिरता की आशंका:</b> इसके कारण संसद में बहुत सारे छोटे दलों का प्रवेश हो जाता है, जिससे अक्सर गठबंधन सरकारें बनती और गिरती रहती हैं।</li>
+                </ul>
+            </div>
+
+
+            <!-- PART 8 -->
+            <div class="part-container" style="border-top-color: #be123c;">
+                <h2 style="color: #9f1239 !important; background-color: #fff1f2; border-left: 10px solid #be123c; padding: 20px 25px; border-radius: 10px; font-size: 32pt; font-weight: 900 !important; margin-top: 0; -webkit-text-stroke: 1px #9f1239;">8. तुलनात्मक विश्लेषण: FPTP बनाम PR</h2>
+                <p style="font-size: 18pt; text-align: justify;">लोकतांत्रिक देशों में इन दोनों प्रणालियों के अपने-अपने लाभ और हानियां हैं, जिनका तुलनात्मक अध्ययन लोकतांत्रिक ढांचे को समझने के लिए जरूरी है।</p>
+
+                <h3 style="color: #9f1239; font-size: 24pt;">8.1 'जो सबसे आगे वही जीते' (FPTP) प्रणाली की विशेषताएं:</h3>
+                <ul style="font-size: 18pt; line-height: 1.8; color: #000000; list-style-type: square;">
+                    <li><b>सीटों और वोटों में असंतुलन:</b> कई बार 30% वोट पाने वाले दल को भी संसद में 60% सीटें मिल जाती हैं (जैसे भारत में 1984 के चुनाव)।</li>
+                    <li><b>सरल मतदाता अनुभव:</b> मतदाता सीधे अपने पसंदीदा व्यक्ति को चुनता है, जिससे उम्मीदवार की जवाबदेही तय करना आसान होता है।</li>
+                    <li><b>स्थिर बहुमत:</b> यह प्रणाली प्रायः स्पष्ट बहुमत दिलाकर एक मज़बूत और स्थायी सरकार का गठन सुनिश्चित करती है।</li>
+                </ul>
+
+                <h3 style="color: #9f1239; font-size: 24pt;">8.2 समानुपातिक प्रतिनिधित्व (PR) प्रणाली की विशेषताएं:</h3>
+                <ul style="font-size: 18pt; line-height: 1.8; color: #000000; list-style-type: square;">
+                    <li><b>सटीक प्रतिनिधित्व:</b> वोटों के प्रतिशत और सीटों के अनुपात में पूर्ण समानता होती है; कोई भी मत व्यर्थ नहीं जाता।</li>
+                    <li><b>दलों का अधिक नियंत्रण:</b> मतदाता दल को वोट देता है, जिससे व्यक्तिगत उम्मीदवार के बजाय पार्टी आलाकमान की शक्ति बढ़ जाती है।</li>
+                    <li><b>कमजोर क्षेत्रीय जवाबदेही:</b> बहुत बड़े या देशव्यापी निर्वाचन क्षेत्र होने के कारण मतदाता को यह नहीं पता होता कि उसका स्थानीय सांसद कौन है।</li>
+                </ul>
+            </div>
+
+
+            <!-- PART 9 -->
+            <div class="part-container" style="border-top-color: #1e3a8a;">
+                <h2 style="color: #1e40af !important; background-color: #eff6ff; border-left: 10px solid #1e3a8a; padding: 20px 25px; border-radius: 10px; font-size: 32pt; font-weight: 900 !important; margin-top: 0; -webkit-text-stroke: 1px #1e40af;">9. PR प्रणाली के वैश्विक उदाहरण (Case Studies)</h2>
+                <p style="font-size: 18pt; text-align: justify;">दुनिया के अनेक देशों ने अपनी राजनीतिक परिस्थितियों के अनुकूल समानुपातिक प्रतिनिधित्व (PR) प्रणाली के विभिन्न रूपों को अपनाया है।</p>
+
+                <h3 style="color: #1e40af; font-size: 24pt;">9.1 प्रमुख देशों के चुनावी उदाहरण:</h3>
+                <ul style="font-size: 18pt; line-height: 1.8; color: #000000; list-style-type: square;">
+                    <li><b>इज़राइल:</b> यहाँ पूरा देश एक ही निर्वाचन क्षेत्र माना जाता है; प्रत्येक दल को मिले कुल मतों के आधार पर संसद (Knesset) में सीटें मिलती हैं।</li>
+                    <li><b>नीदरलैंड:</b> इज़राइल की तरह यहाँ भी शुद्ध समानुपातिक सूची प्रणाली का उपयोग किया जाता है जिससे बहुत सारे दलों को प्रतिनिधित्व मिलता है।</li>
+                    <li><b>अर्जेंटीना और पुर्तगाल:</b> इन देशों में बहु-सदस्यीय जिलों की सूची प्रणाली अपनाई जाती है जहाँ क्षेत्रीय आधार पर दलों की सूचियां होती हैं।</li>
+                    <li><b>जर्मनी (मिश्रित प्रणाली):</b> यहाँ FPTP और PR दोनों प्रणालियों का एक सुंदर समन्वय (Mixed Member Proportional) उपयोग किया जाता है।</li>
+                    <li><b>विविधता का लाभ:</b> यह प्रणाली उन देशों के लिए अनुकूल है जहाँ समाज कई स्पष्ट भाषाई या धार्मिक समूहों में विभाजित है और सबको प्रतिनिधित्व चाहिए।</li>
+                </ul>
+            </div>
+
+
+            <!-- PART 10 -->
+            <div class="part-container" style="border-top-color: #be185d;">
+                <h2 style="color: #be185d !important; background-color: #fdf2f8; border-left: 10px solid #be185d; padding: 20px 25px; border-radius: 10px; font-size: 32pt; font-weight: 900 !important; margin-top: 0; -webkit-text-stroke: 1px #be185d;">10. भारत में PR प्रणाली का उपयोग: राज्य सभा एवं राष्ट्रपति</h2>
+                <p style="font-size: 18pt; text-align: justify;">यद्यपि भारत में आम चुनावों के लिए FPTP प्रणाली है, लेकिन राष्ट्रपति, उपराष्ट्रपति और राज्य सभा के अप्रत्यक्ष चुनावों के लिए संविधान ने समानुपातिक प्रतिनिधित्व का एक रूप अपनाया है।</p>
+
+                <h3 style="color: #be185d; font-size: 24pt;">10.1 राष्ट्रपति और उपराष्ट्रपति का चुनाव:</h3>
+                <ul style="font-size: 18pt; line-height: 1.8; color: #000000; list-style-type: square;">
+                    <li><b>एकल संक्रमणीय मत प्रणाली (STV):</b> मतदाता उम्मीदवारों को अपनी पसंद के आधार पर वरीयता (1, 2, 3) देता है।</li>
+                    <li><b>निर्वाचक मंडल (Electoral College):</b> इसमें संसद के दोनों सदनों के निर्वाचित सदस्य और राज्यों की विधानसभाओं (MLAs) के सदस्य भाग लेते हैं।</li>
+                    <li><b>जीत का कोटा:</b> जीतने वाले उम्मीदवार को मतों का एक निश्चित कोटा (50% + 1) प्राप्त करना अनिवार्य होता है।</li>
+                </ul>
+
+                <h3 style="color: #be185d; font-size: 24pt;">10.2 राज्य सभा सदस्यों की चुनाव प्रणाली (Elected by MLAs):</h3>
+                <ul style="font-size: 18pt; line-height: 1.8; color: #000000; list-style-type: square;">
+                    <li><b>विधायकों द्वारा चुनाव:</b> प्रत्येक राज्य की विधानसभा के विधायक एकल संक्रमणीय मत प्रणाली द्वारा राज्य सभा के प्रतिनिधियों को चुनते हैं।</li>
+                    <li><b>राज्य की जनसंख्या का प्रतिनिधित्व:</b> उत्तर प्रदेश जैसे बड़े राज्य की अधिक सीटें हैं, जबकि छोटे राज्यों (जैसे सिक्किम) की एक ही सीट है।</li>
+                    <li><b>संघीय संतुलन:</b> यह प्रणाली केंद्र में राज्यों की आवाज सुनिश्चित करती है और सत्तारूढ़ दल को राज्यों की अनदेखी करने से रोकती है।</li>
+                </ul>
+            </div>
+
+
+            <!-- PART 11 -->
+            <div class="part-container" style="border-top-color: #f59e0b;">
+                <h2 style="color: #b45309 !important; background-color: #fffbeb; border-left: 10px solid #f59e0b; padding: 20px 25px; border-radius: 10px; font-size: 32pt; font-weight: 900 !important; margin-top: 0; -webkit-text-stroke: 1px #b45309;">11. निर्वाचन क्षेत्रों का परिसीमन (Delimitation)</h2>
+                <p style="font-size: 18pt; text-align: justify;">जनसंख्या के बदलावों के अनुसार चुनावी निर्वाचन क्षेत्रों की सीमाओं का पुनर्निर्धारण करना परिसीमन कहलाता है, जो चुनावी निष्पक्षता की प्राथमिक शर्त है।</p>
+
+                <h3 style="color: #b45309; font-size: 24pt;">11.1 परिसीमन आयोग के प्रमुख कार्य और चुनौतियां:</h3>
+                <ul style="font-size: 18pt; line-height: 1.8; color: #000000; list-style-type: square;">
+                    <li><b>स्वतंत्र संस्था:</b> परिसीमन आयोग (Delimitation Commission) का गठन राष्ट्रपति द्वारा किया जाता है जिसमें सुप्रीम कोर्ट के सेवानिवृत्त न्यायाधीश अध्यक्ष होते हैं।</li>
+                    <li><b>जनसंख्या का संतुलन:</b> प्रत्येक निर्वाचन क्षेत्र की आबादी को यथासंभव समान रखना ताकि 'एक वोट, एक मूल्य' का लोकतांत्रिक सिद्धांत लागू रहे।</li>
+                    <li><b>अंतिम निर्णय:</b> आयोग के आदेशों को देश की किसी भी अदालत में चुनौती नहीं दी जा सकती; इसके फैसले सीधे संसद और विधानसभाओं में लागू होते हैं।</li>
+                    <li><b>सीटों का फ्रीज होना:</b> दक्षिण भारतीय राज्यों द्वारा जनसंख्या नियंत्रण के अच्छे प्रयासों के कारण उनकी सीटें न घटें, इसलिए 2026 तक सीटों की संख्या को फ्रीज किया गया है।</li>
+                    <li><b>आरक्षित सीटों का निर्धारण:</b> आयोग अनुसूचित जातियों और जनजातियों की सघन आबादी के आधार पर आरक्षित सीटों का निर्धारण करता है।</li>
+                </ul>
+            </div>
+
+
+            <!-- PART 12 -->
+            <div class="part-container" style="border-top-color: #1d4ed8;">
+                <h2 style="color: #1e40af !important; background-color: #eff6ff; border-left: 10px solid #1d4ed8; padding: 20px 25px; border-radius: 10px; font-size: 32pt; font-weight: 900 !important; margin-top: 0; -webkit-text-stroke: 1px #1e40af;">12. आरक्षित निर्वाचन क्षेत्र (SC/ST Reservation)</h2>
+                <p style="font-size: 18pt; text-align: justify;">भारतीय संविधान ऐतिहासिक रूप से शोषित और पिछड़े समुदायों को संसद में पर्याप्त प्रतिनिधित्व देने के लिए 'आरक्षित निर्वाचन क्षेत्रों' (Reserved Constituencies) का प्रावधान करता है।</p>
+
+                <h3 style="color: #1e40af; font-size: 24pt;">12.1 आरक्षित निर्वाचन क्षेत्रों के प्रमुख नियम:</h3>
+                <ul style="font-size: 18pt; line-height: 1.8; color: #000000; list-style-type: square;">
+                    <li><b>संवैधानिक कोटा:</b> लोकसभा में अनुसूचित जातियों (SC) के लिए 84 सीटें और अनुसूचित जनजातियों (ST) के लिए 47 सीटें आरक्षित की गई हैं।</li>
+                    <li><b>उम्मीदवार की सीमा:</b> इन आरक्षित क्षेत्रों में केवल आरक्षित वर्ग का व्यक्ति ही चुनाव लड़ सकता है, लेकिन वोट समाज के सभी वर्ग देते हैं।</li>
+                    <li><b>सामाजिक समरसता:</b> यह प्रणाली यह सुनिश्चित करती है कि शोषित वर्गों की आवाज देश की सर्वोच्च पंचायत (संसद) में अनसुनी न रह जाए।</li>
+                    <li><b>रोटेशन का नियम:</b> परिसीमन आयोग समय-समय पर आरक्षित सीटों की भौगोलिक स्थिति को बदलता है ताकि अन्य क्षेत्रों को भी अवसर मिले।</li>
+                    <li><b>सकारात्मक कदम:</b> यह ऐतिहासिक जातिगत भेदभाव की क्षतिपूर्ति करने और कमजोर वर्गों को राजनैतिक रूप से सशक्त बनाने का अत्यंत मज़बूत साधन है।</li>
+                </ul>
+            </div>
+
+
+            <!-- PART 13 -->
+            <div class="part-container" style="border-top-color: #047857;">
+                <h2 style="color: #064e3b !important; background-color: #ecfdf5; border-left: 10px solid #047857; padding: 20px 25px; border-radius: 10px; font-size: 32pt; font-weight: 900 !important; margin-top: 0; -webkit-text-stroke: 1px #064e3b;">13. पृथक निर्वाचन मंडल (Separate Electorates) का विरोध क्यों?</h2>
+                <p style="font-size: 18pt; text-align: justify;">ब्रिटिश काल में 'पृथक निर्वाचन मंडल' (Separate Electorate) का नियम लागू था, जिसे हमारे संविधान निर्माताओं ने देश की एकता के लिए घातक मानकर खारिज कर दिया था।</p>
+
+                <h3 style="color: #064e3b; font-size: 24pt;">13.1 पृथक निर्वाचन मंडल के विरोध के प्रमुख कारण:</h3>
+                <ul style="font-size: 18pt; line-height: 1.8; color: #000000; list-style-type: square;">
+                    <li><b>सांप्रदायिक विभाजन:</b> इसमें मुस्लिम या सिख उम्मीदवारों को केवल उनके समुदाय के लोग ही वोट दे सकते थे, जिससे समाज में नफरत फैली।</li>
+                    <li><b>विभाजनकारी नीति:</b> ब्रिटिश सरकार की 'बांटो और राज करो' (Divide and Rule) नीति का हिस्सा जिसने अंततः देश के विभाजन का मार्ग प्रशस्त किया।</li>
+                    <li><b>साझा भाईचारे का अंत:</b> जब एक उम्मीदवार को केवल अपने ही समुदाय के वोटों की आवश्यकता होगी, तो वह दूसरे समुदायों के हितों की चिंता नहीं करेगा।</li>
+                    <li><b>आरक्षित सीटों का बेहतर विकल्प:</b> संविधान सभा ने इसके स्थान पर आरक्षित सीटों को चुना जहाँ उम्मीदवार आरक्षित वर्ग का होता है, लेकिन उसे वोट सभी जाति-धर्म के लोग देते हैं।</li>
+                    <li><b>अखंड भारत का संकल्प:</b> देश के सभी नागरिकों में एक साझी राष्ट्रीय पहचान और आपसी सहयोग की भावना विकसित करने के लिए संयुक्त निर्वाचन आवश्यक था।</li>
+                </ul>
+            </div>
+
+
+            <!-- PART 14 -->
+            <div class="part-container" style="border-top-color: #4338ca;">
+                <h2 style="color: #3730a3 !important; background-color: #eef2ff; border-left: 10px solid #4338ca; padding: 20px 25px; border-radius: 10px; font-size: 32pt; font-weight: 900 !important; margin-top: 0; -webkit-text-stroke: 1px #3730a3;">14. भारत निर्वाचन आयोग (ECI): स्वतंत्र एवं शक्तिशाली</h2>
+                <p style="font-size: 18pt; text-align: justify;">संविधान का अनुच्छेद 324 भारत निर्वाचन आयोग (Election Commission of India) की स्थापना करता है जो देश में स्वतंत्र और निष्पक्ष चुनाव कराने के लिए उत्तरदायी है।</p>
+
+                <h3 style="color: #3730a3; font-size: 24pt;">14.1 निर्वाचन आयोग की स्वतंत्रता के प्रमुख उपाय:</h3>
+                <ul style="font-size: 18pt; line-height: 1.8; color: #000000; list-style-type: square;">
+                    <li><b>संवैधानिक दर्जा:</b> यह एक स्वायत्त संवैधानिक संस्था है; सरकार या कार्यपालिका इसके दैनिक कार्यों में सीधे हस्तक्षेप नहीं कर सकती।</li>
+                    <li><b>महाभियोग जैसी सुरक्षा:</b> मुख्य चुनाव आयुक्त (CEC) को उनके पद से केवल उसी विशेष प्रक्रिया (महाभियोग) से हटाया जा सकता है जो सुप्रीम कोर्ट के जज के लिए है।</li>
+                    <li><b>वेतन और सेवा शर्तें:</b> नियुक्ति के बाद चुनाव आयुक्तों की सेवा शर्तों और वेतन में कोई भी हानिकारक बदलाव नहीं किया जा सकता।</li>
+                    <li><b>बहु-सदस्यीय निकाय:</b> 1989 के बाद आयोग को तीन-सदस्यीय (एक मुख्य और दो अन्य चुनाव आयुक्त) बनाया गया ताकि निर्णय निष्पक्ष और सामूहिक रूप से हों।</li>
+                    <li><b>प्रशासनिक नियंत्रण:</b> चुनाव के दौरान देश के सभी सरकारी कर्मचारी और पुलिस बल आयोग के सीधे नियंत्रण और आदेश पर कार्य करते हैं।</li>
+                </ul>
+            </div>
+
+
+            <!-- PART 15 -->
+            <div class="part-container" style="border-top-color: #334155;">
+                <h2 style="color: #1e293b !important; background-color: #f1f5f9; border-left: 10px solid #334155; padding: 20px 25px; border-radius: 10px; font-size: 32pt; font-weight: 900 !important; margin-top: 0; -webkit-text-stroke: 1px #1e293b;">15. चुनाव आयोग के कार्य एवं शक्तियाँ</h2>
+                <p style="font-size: 18pt; text-align: justify;">निर्वाचन आयोग के पास चुनावों को सुचारू और निष्पक्ष रूप से संपन्न कराने के लिए असाधारण प्रशासनिक और अर्द्ध-न्यायिक शक्तियां होती हैं।</p>
+
+                <h3 style="color: #1e293b; font-size: 24pt;">15.1 चुनाव आयोग के प्रशासनिक कार्य:</h3>
+                <ul style="font-size: 18pt; line-height: 1.8; color: #000000; list-style-type: square;">
+                    <li><b>मतदाता सूची तैयार करना:</b> योग्य नागरिकों के नाम जोड़ना, नए वोटर आईडी कार्ड जारी करना और मृत व्यक्तियों के नाम हटाना।</li>
+                    <li><b>चुनाव तिथियों की घोषणा:</b> नामांकन पत्र भरने, उनकी जांच करने, नाम वापसी और मतदान की तारीखों का विस्तृत कार्यक्रम तय करना।</li>
+                    <li><b>आचार संहिता (Model Code of Conduct) लागू करना:</b> चुनाव के समय मंत्रियों और सरकारी अधिकारियों द्वारा सरकारी मशीनरी के अनुचित उपयोग पर रोक लगाना।</li>
+                </ul>
+
+                <h3 style="color: #1e293b; font-size: 24pt;">15.2 चुनाव आयोग के अर्द्ध-न्यायिक और सलाहकारी कार्य:</h3>
+                <ul style="font-size: 18pt; line-height: 1.8; color: #000000; list-style-type: square;">
+                    <li><b>दलों को मान्यता और चुनाव चिन्ह देना:</b> राष्ट्रीय और क्षेत्रीय राजनीतिक दलों को मान्यता देना और उनके लिए स्थायी चुनाव चिन्हों का आवंटन करना।</li>
+                    <li><b>चुनाव रद्द करने की शक्ति:</b> यदि किसी बूथ या क्षेत्र में धांधली, हिंसा या बूथ कैप्चरिंग की शिकायत मिले, तो वहाँ का चुनाव रद्द कर पुनर्मतदान कराना।</li>
+                    <li><b>अयोग्यता पर सलाह:</b> सांसदों और विधायकों की अयोग्यता के संबंध में राष्ट्रपति और राज्यपाल को कानूनी रूप से सलाह देना।</li>
+                </ul>
+            </div>
+
+
+            <!-- PART 16 -->
+            <div class="part-container" style="border-top-color: #7c3aed;">
+                <h2 style="color: #5b21b6 !important; background-color: #f5f3ff; border-left: 10px solid #7c3aed; padding: 20px 25px; border-radius: 10px; font-size: 32pt; font-weight: 900 !important; margin-top: 0; -webkit-text-stroke: 1px #5b21b6;">16. स्वतंत्र और निष्पक्ष चुनाव: चुनौतियां और हकीकत</h2>
+                <p style="font-size: 18pt; text-align: justify;">यद्यपि भारत में चुनाव प्रक्रिया काफी हद तक निष्पक्ष रही है, फिर भी हमारी लोकतांत्रिक व्यवस्था के सामने कई बड़ी आर्थिक, सामाजिक और राजनैतिक चुनौतियां हैं।</p>
+
+                <h3 style="color: #5b21b6; font-size: 24pt;">16.1 भारतीय चुनावों की प्रमुख चुनौतियां:</h3>
+                <ul style="font-size: 18pt; line-height: 1.8; color: #000000; list-style-type: square;">
+                    <li><b>धनबल (Money Power) का अत्यधिक प्रभाव:</b> अमीर उम्मीदवारों और बड़े दलों द्वारा प्रचार में पानी की तरह पैसा बहाना, जिससे गरीब योग्य व्यक्ति पिछड़ जाता है।</li>
+                    <li><b>अपराधीकरण (Criminalisation):</b> बाहुबलियों और आपराधिक पृष्ठभूमि वाले लोगों को दलों द्वारा टिकट देना जो डरा-धमकाकर वोट बटोरते हैं।</li>
+                    <li><b>वंशवाद (Dynasty Politics):</b> राजनीतिक दलों में आंतरिक लोकतंत्र का अभाव होना और टिकटों का वितरण कुछ चुनिंदा परिवारों तक सीमित रखना।</li>
+                    <li><b>सांप्रदायिक और जातिगत ध्रुवीकरण:</b> विकास, शिक्षा और रोजगार के वास्तविक मुद्दों के बजाय जाति और धर्म के नाम पर वोट बैंक बटोरना।</li>
+                    <li><b>निर्दलीय उम्मीदवारों की बाढ़:</b> चुनावों में बड़ी संख्या में फर्जी या निर्दलीय उम्मीदवारों का खड़ा होना जिससे मतदाता भ्रमित होते हैं और वोट बंटते हैं।</li>
+                </ul>
+            </div>
+
+
+            <!-- PART 17 -->
+            <div class="part-container" style="border-top-color: #db2777;">
+                <h2 style="color: #9d174d !important; background-color: #fdf2f8; border-left: 10px solid #db2777; padding: 20px 25px; border-radius: 10px; font-size: 32pt; font-weight: 900 !important; margin-top: 0; -webkit-text-stroke: 1px #9d174d;">17. चुनावी सुधार (Electoral Reforms): क्या बदलना चाहिए?</h2>
+                <p style="font-size: 18pt; text-align: justify;">भारतीय लोकतंत्र को अधिक मज़बूत और पारदर्शी बनाने के लिए चुनावी प्रक्रिया में समय-समय पर बड़े सुधारों की वकालत आयोगों और बुद्धिजीवियों द्वारा की गई है।</p>
+
+                <h3 style="color: #9d174d; font-size: 24pt;">17.1 प्रमुख चुनावी सुधारों के प्रस्ताव:</h3>
+                <ul style="font-size: 18pt; line-height: 1.8; color: #000000; list-style-type: square;">
+                    <li><b>चुनावों का राज्य वित्तपोषण (State Funding):</b> उम्मीदवारों के निजी खर्चे पर रोक लगाकर सरकार द्वारा एक निश्चित चुनावी फंड देना ताकि धनबल का प्रभाव रुके।</li>
+                    <li><b>अपराधियों पर पूर्ण प्रतिबंध:</b> जिस व्यक्ति के खिलाफ गंभीर आपराधिक मुकदमे कोर्ट में विचाराधीन हों, उसे चुनाव लड़ने से कानूनन प्रतिबंधित करना।</li>
+                    <li><b>महिलाओं के लिए आरक्षण:</b> संसद और राज्य विधानसभाओं में महिलाओं के लिए न्यूनतम 33% सीटें आरक्षित करने के कानून को कड़ाई से लागू करना।</li>
+                    <li><b>दलों के भीतर आंतरिक लोकतंत्र:</b> राजनीतिक दलों के लिए यह अनिवार्य करना कि वे अपने सांगठनिक पदों और टिकटों का बंटवारा लोकतांत्रिक तरीके से करें।</li>
+                    <li><b>समानुपातिक प्रतिनिधित्व का आंशिक समावेश:</b> भारतीय संसद में स्थिरता और समावेशन के लिए FPTP के साथ कुछ सीटों पर PR प्रणाली को भी लागू करना।</li>
+                </ul>
+            </div>
+
+
+            <!-- PART 18 -->
+            <div class="part-container" style="border-top-color: #0369a1;">
+                <h2 style="color: #075985 !important; background-color: #f0f9ff; border-left: 10px solid #0369a1; padding: 20px 25px; border-radius: 10px; font-size: 32pt; font-weight: 900 !important; margin-top: 0; -webkit-text-stroke: 1px #075985;">18. सार्वभौमिक वयस्क मताधिकार एवं चुनाव लड़ने का अधिकार</h2>
+                <p style="font-size: 18pt; text-align: justify;">भारतीय संविधान ने देश के प्रत्येक नागरिक को बिना किसी सामाजिक-आर्थिक भेदभाव के मतदान करने और चुनाव लड़ने का समान अधिकार दिया है जो राजनैतिक समता का मूल आधार है।</p>
+
+                <h3 style="color: #075985; font-size: 24pt;">18.1 राजनैतिक अधिकारों के प्रमुख आयाम:</h3>
+                <ul style="font-size: 18pt; line-height: 1.8; color: #000000; list-style-type: square;">
+                    <li><b>मतदान की न्यूनतम आयु:</b> संविधान के 61वें संशोधन 1989 द्वारा मतदान की आयु को 21 वर्ष से घटाकर 18 वर्ष किया गया।</li>
+                    <li><b>चुनाव लड़ने की न्यूनतम आयु:</b> लोकसभा और विधानसभा का चुनाव लड़ने के लिए न्यूनतम आयु 25 वर्ष, जबकि राज्यसभा के लिए 30 वर्ष तय है।</li>
+                    <li><b>समान वोट का मूल्य:</b> देश के सबसे अमीर व्यक्ति के वोट का मूल्य भी बिल्कुल उतना ही है जितना कि एक अत्यंत गरीब दिहाड़ी मजदूर के वोट का।</li>
+                    <li><b>राजनैतिक समता की स्थापना:</b> यह अधिकार सदियों से सामाजिक रूप से प्रताड़ित जातियों को राजनैतिक रूप से शासक वर्ग के बराबर ला खड़ा करता है।</li>
+                    <li><b>नागरिक जिम्मेदारी:</b> वोट देना केवल एक अधिकार नहीं है, बल्कि देश के प्रति प्रत्येक नागरिक का एक बड़ा लोकतांत्रिक कर्तव्य भी है।</li>
+                </ul>
+            </div>
+
+
+            <!-- PART 19 -->
+            <div class="part-container" style="border-top-color: #059669;">
+                <h2 style="color: #065f46 !important; background-color: #f0fdf4; border-left: 10px solid #059669; padding: 20px 25px; border-radius: 10px; font-size: 32pt; font-weight: 900 !important; margin-top: 0; -webkit-text-stroke: 1px #065f46;">19. धन और बाहुबल की भूमिका: राजनीति का काला पक्ष</h2>
+                <p style="font-size: 18pt; text-align: justify;">आधुनिक चुनावी राजनीति में बढ़ते धन और बाहुबल (Muscle Power) के प्रभाव ने चुनावी शुचिता और लोकतंत्र के नैतिक मूल्यों को गंभीर नुकसान पहुँचाया है।</p>
+
+                <h3 style="color: #065f46; font-size: 24pt;">19.1 धन और बाहुबल के दुष्प्रभाव:</h3>
+                <ul style="font-size: 18pt; line-height: 1.8; color: #000000; list-style-type: square;">
+                    <li><b>कॉर्पोरेट और राजनीति का गठजोड़:</b> चुनाव जीतने के बाद नीतियां आम जनता के हित में नहीं, बल्कि फंडिंग करने वाले बड़े कॉर्पोरेट घरानों के हित में बनना।</li>
+                    <li><b>मतदाताओं को प्रलोभन:</b> मतदान से पहले गरीबों में शराब, नकद पैसे और मुफ्त उपहार बांटकर उनके कीमती वोट को खरीदना।</li>
+                    <li><b>सुरक्षा का संकट:</b> आपराधिक पृष्ठभूमि वाले उम्मीदवारों के कारण मतदान केंद्रों पर भय का माहौल बनना और निष्पक्ष मतदान में बाधा आना।</li>
+                    <li><b>ईमानदार योग्य व्यक्तियों की उपेक्षा:</b> राजनैतिक दलों द्वारा साफ-सुथरी छवि वाले गरीब बुद्धिजीवियों के स्थान पर केवल करोड़पति और दबंगों को टिकट देना।</li>
+                    <li><b>जनता का अविश्वास:</b> इन कुप्रथाओं के कारण आम नागरिकों में लोकतांत्रिक संस्थाओं और नेताओं के प्रति अविश्वास और उदासीनता की भावना पैदा होती है।</li>
+                </ul>
+            </div>
+
+
+            <!-- PART 20 -->
+            <div class="part-container" style="border-top-color: #0f172a;">
+                <h2 style="color: #0f172a !important; background-color: #f1f5f9; border-left: 10px solid #0f172a; padding: 20px 25px; border-radius: 10px; font-size: 32pt; font-weight: 900 !important; margin-top: 0; -webkit-text-stroke: 1px #0f172a;">20. निष्कर्ष: लोकतंत्र का महापर्व</h2>
+                <p style="font-size: 18pt; text-align: justify;">अध्याय 3 (चुनाव और प्रतिनिधित्व) का यह गहन सफर हमें इस मूल सत्य तक ले जाता है कि चुनाव केवल सरकार बनाने का माध्यम नहीं, बल्कि हमारे जीवंत लोकतंत्र का महापर्व हैं।</p>
+
+                <h3 style="color: #0f172a; font-size: 24pt;">20.1 निष्कर्ष के प्रमुख स्तंभ:</h3>
+                <ul style="font-size: 18pt; line-height: 1.8; color: #000000; list-style-type: square;">
+                    <li><b>सुदृढ़ संवैधानिक ढांचा:</b> निर्वाचन आयोग की स्वतंत्रता और पारदर्शी परिसीमन ही हमारे चुनावों की सफलता और साख के मूल आधार हैं।</li>
+                    <li><b>FPTP की सफलता:</b> भारत जैसे विशाल देश में FPTP प्रणाली ने स्थायी सरकारें देकर देश की राजनैतिक स्थिरता को बनाए रखा है।</li>
+                    <li><b>चुनावी सुधारों की तात्कालिक आवश्यकता:</b> धनबल, बाहुबल और अपराधीकरण को मिटाकर ही हम अपने लोकतंत्र को वास्तव में शुचितापूर्ण बना सकते हैं।</li>
+                    <li><b>जागरूक मतदाता:</b> अंततः लोकतंत्र की मज़बूती इस बात पर निर्भर करती है कि देश का मतदाता प्रलोभन से मुक्त होकर राष्ट्रहित में मतदान करे।</li>
+                    <li><b>सर्वोच्च संदेश:</b> "मतदान केवल अधिकार नहीं, बल्कि एक महा-कर्तव्य है" और "सजग मतदाता ही लोकतंत्र का रक्षक है"—यही इस पूरे अध्याय का अंतिम और सर्वोच्च संदेश है।</li>
+                </ul>
+            </div>
+
         </div>
     </div>
 </body>
