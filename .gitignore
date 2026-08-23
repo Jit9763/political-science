@@ -12,3 +12,6 @@ create_pol_sci_docs.gs
 
 # Ignore image backup folders
 images/*_backup/
+
+# Ignore Class 11 backup files
+class11_backup/
