@@ -9,3 +9,6 @@ create_pol_sci_docs.gs
 # Temporary files
 /tmp/
 .gemini/
+
+# Ignore image backup folders
+images/*_backup/
