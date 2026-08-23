@@ -16,3 +16,4 @@ images/*_backup/
 # Ignore Class 11 backup files
 class11_backup/
 images/ch14_backup/
+images/ch13_backup/
