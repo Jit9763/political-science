@@ -2,120 +2,60 @@
 <html lang="hi">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>अध्याय 7: वैश्वीकरण - COPY MASTER (Premium Notes)</title>
+    <title>Chapter 7 COPY MASTER - Premium Notes</title>
     <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            background-color: #f8fafc;
-            color: #000000;
-            line-height: 2.2;
-            margin: 0;
-            padding: 20px;
-        }
-        .container {
-            max-width: 1100px;
-            margin: 0 auto;
-            background: #ffffff;
-            padding: 40px;
-            border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-        }
-        .ch7-content {
-            font-size: 24pt !important;
-            line-height: 2.2 !important;
-            color: #000000 !important;
-        }
-        .section-header {
-            color: #b91c1c !important;
-            border-bottom: 5px solid #ef4444;
-            padding-bottom: 15px;
-            font-size: 40pt !important;
-            margin-top: 40px;
-            margin-bottom: 30px;
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f1f5f9; margin: 0; padding: 20px; text-align: center; }
+        .header { background: #b91c1c; color: white; padding: 20px; border-radius: 10px; margin-bottom: 30px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+        .copy-btn { background-color: #b91c1c; color: white; padding: 20px 40px; font-size: 24pt; border: none; border-radius: 50px; cursor: pointer; font-weight: 900; transition: all 0.3s; box-shadow: 0 10px 20px rgba(185, 28, 28, 0.4); }
+        .copy-btn:hover { background-color: #991b1b; transform: scale(1.05); }
+        .preview { background: white; padding: 40px; border-radius: 15px; margin-top: 30px; text-align: justify; max-width: 1400px; margin-left: auto; margin-right: auto; border: 3px solid #e2e8f0; }
+        #status { margin-top: 20px; font-weight: 900; color: #b91c1c; font-size: 24pt; display: none; }
+    
+        /* Extra Heavy Text Thickness */
+        p, li, h1, h2, h3, h4, b, strong {
             font-weight: 900 !important;
+            -webkit-text-stroke: 1.2px #000000; text-shadow: 0 0 1px #000;
         }
-        .sub-header {
-            color: #1e3a8a !important;
-            font-size: 38pt !important;
-            margin-top: 50px;
-            margin-bottom: 20px;
-            font-weight: 900 !important;
-        }
-        .keyword-box {
-            background: #fee2e2;
-            border-left: 14px solid #ef4444;
-            padding: 25px;
-            margin: 30px 0;
-            border-radius: 12px;
-            font-size: 24pt !important;
-            border: 6px solid #ef4444;
-        }
-        .story-box {
-            background: #eff6ff;
-            border: 4px solid #1e3a8a;
-            padding: 25px;
-            border-radius: 12px;
-            margin: 25px 0;
-            font-size: 24pt !important;
-        }
-        .stat-box {
-            background: #eff6ff;
-            border: 4px solid #1e3a8a;
-            padding: 20px;
-            border-radius: 10px;
-            margin: 20px 0;
-            font-size: 24pt !important;
-        }
-        .highlight-blue {
-            color: #1e3a8a !important;
-            font-weight: 900 !important;
-        }
-        .highlight-red {
-            color: #b91c1c !important;
-            font-weight: 900 !important;
-        }
-        .illustration-box {
-            border: 10px solid #000000 !important;
-            margin-top: 35px;
-            margin-bottom: 35px;
-            border-radius: 12px;
-            text-align: center;
-            background-color: #ffffff;
-        }
-        .illustration-img {
-            width: 100%;
-            max-width: 650px;
-            height: auto;
-            display: block;
-            margin: 20px auto;
-            border: 10px solid #cbd5e1 !important;
-            border-radius: 8px;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.15);
-        }
-        .illustration-explanation {
-            border-left: 20px solid #b91c1c !important;
-            background: #fff5f5;
-            padding: 25px;
-            font-size: 24pt !important;
-            text-align: justify;
-            line-height: 1.8;
-            font-weight: 900 !important;
-        }
+        .bio-box { border: 10px solid #000000 !important; }
+        .illustration-box { border: 10px solid #000000 !important; }
+        .illustration-img { border: 10px solid #000000 !important; }
+        .illustration-explanation { border-left: 20px solid #b91c1c !important; font-size: 24pt !important; }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <h1>🚀 Chapter 7: वैश्वीकरण (Full-Proof Copy Master)</h1>
+        <p>100% Google Docs Compatible with Images (Localhost-Sync)</p>
+    </div>
+
+    <button id="mainCopyBtn" class="copy-btn" onclick="copyToGoogleDoc()">📋 COPY EVERYTHING FOR GOOGLE DOCS</button>
+    <p id="status">✅ Copied Successfully! Now go to your Google Doc and Press Ctrl+V</p>
+
+    <div class="preview" id="contentToCopy">
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        .ch7-content { font-family: 'Arial', sans-serif; line-height: 2.2; font-size: 24pt; color: #000000; padding: 40px; }
+        .section-header { color: #b91c1c; border-bottom: 5px solid #ef4444; padding-bottom: 15px; font-size: 40pt; margin-bottom: 30px; font-weight: 900; }
+        .sub-header { color: #1e3a8a; font-size: 38pt; margin-top: 50px; font-weight: 900; }
+        .keyword-box { background: #fee2e2; border-left: 14px solid #ef4444; padding: 25px; margin: 30px 0; border-radius: 12px; font-size: 24pt; border: 6px solid #ef4444; }
+        .keyword-box b { color: #b91c1c; }
+        .highlight-blue { color: #1e3a8a !important; font-weight: 900; }
+        .highlight-red { color: #b91c1c !important; font-weight: 900; }
+        .story-box { background: #eff6ff; border: 4px solid #1e3a8a; padding: 25px; border-radius: 12px; margin: 25px 0; font-size: 24pt; }
         
-        p, li, h1, h2, h3, h4, b, strong, div {
+        p, li, h1, h2, h3, h4, b, strong {
             font-weight: 900 !important;
-            -webkit-text-stroke: 1.2px #000000;
-            text-shadow: 0 0 1px #000;
+            -webkit-text-stroke: 1.2px #000000; text-shadow: 0 0 1px #000;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-
-<!-- START part1_intro_concept.html -->
-<div class="ch7-content">
-<h1 class="section-header">अध्याय 7: वैश्वीकरण - भाग 1 (परिचय, अवधारणा एवं वैश्विक प्रवाह)</h1>
+    <div class="ch7-content">
+        <h1 class="section-header">अध्याय 7: वैश्वीकरण - भाग 1 (परिचय, अवधारणा एवं वैश्विक प्रवाह)</h1>
         
         <p>समकालीन विश्व-राजनीति का सबसे प्रभावशाली और बहुचर्चित आयाम <span class="highlight-red">वैश्वीकरण (Globalization)</span> है। यह एक ऐसी प्रक्रिया है जिसने भौगोलिक दूरियों को समेटकर पूरी दुनिया को एक <span class="highlight-blue">'वैश्विक गाँव' (Global Village)</span> में बदल दिया है।</p>
 
@@ -190,13 +130,33 @@
                 "क्या साम्राज्यवाद का ही नया नाम वैश्वीकरण है?"—यह व्यंग्यात्मक कार्टून दर्शाता है कि किस प्रकार आलोचक वैश्वीकरण को विकसित देशों द्वारा विकासशील देशों पर नए रूप से थोपा गया नव-औपनिवेशिक नियंत्रण मानते हैं।
             </div>
         </div>
-</div>
-<!-- END {part} -->
-<hr style="border: 3px dashed #cbd5e1; margin: 50px 0;">
+    </div>
+</body>
+</html>
 
-<!-- START part2_political_consequences.html -->
-<div class="ch7-content">
-<h1 class="section-header">अध्याय 7: वैश्वीकरण - भाग 2 (वैश्वीकरण के राजनीतिक प्रभाव)</h1>
+
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        .ch7-content { font-family: 'Arial', sans-serif; line-height: 2.2; font-size: 24pt; color: #000000; padding: 40px; }
+        .section-header { color: #b91c1c; border-bottom: 5px solid #ef4444; padding-bottom: 15px; font-size: 40pt; margin-bottom: 30px; font-weight: 900; }
+        .sub-header { color: #1e3a8a; font-size: 38pt; margin-top: 50px; font-weight: 900; }
+        .keyword-box { background: #fee2e2; border-left: 14px solid #ef4444; padding: 25px; margin: 30px 0; border-radius: 12px; font-size: 24pt; border: 6px solid #ef4444; }
+        .keyword-box b { color: #b91c1c; }
+        .highlight-blue { color: #1e3a8a !important; font-weight: 900; }
+        .highlight-red { color: #b91c1c !important; font-weight: 900; }
+        
+        p, li, h1, h2, h3, h4, b, strong {
+            font-weight: 900 !important;
+            -webkit-text-stroke: 1.2px #000000; text-shadow: 0 0 1px #000;
+        }
+    </style>
+</head>
+<body>
+    <div class="ch7-content">
+        <h1 class="section-header">अध्याय 7: वैश्वीकरण - भाग 2 (वैश्वीकरण के राजनीतिक प्रभाव)</h1>
         
         <p>वैश्वीकरण का प्रभाव केवल अर्थव्यवस्था तक सीमित नहीं है, बल्कि इसने राष्ट्र-राज्यों की राजनीतिक व्यवस्था, सरकार के कार्यों और राज्य की संप्रभुता को गहराई से प्रभावित किया है।</p>
 
@@ -231,13 +191,33 @@
         <div class="keyword-box">
             <b class="highlight-red">तकनीक द्वारा राज्य की क्षमता में वृद्धि (State Capacity Enhancement):</b> आधुनिक सूचना तकनीक, बायोमेट्रिक डेटा (जैसे आधार), सैटेलाइट निगरानी और डिजिटल नेटवर्किंग के कारण सरकारों के पास अपने नागरिकों के बारे में जानकारी जुटाने और शासन चलाने की क्षमता पहले से कहीं अधिक मजबूत हुई है। राज्य आज भी वैश्विक राजनीति का सबसे शक्तिशाली और निर्णायक तत्व बना हुआ है।
         </div>
-</div>
-<!-- END {part} -->
-<hr style="border: 3px dashed #cbd5e1; margin: 50px 0;">
+    </div>
+</body>
+</html>
 
-<!-- START part3_economic_consequences.html -->
-<div class="ch7-content">
-<h1 class="section-header">अध्याय 7: वैश्वीकरण - भाग 3 (वैश्वीकरण के आर्थिक प्रभाव)</h1>
+
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        .ch7-content { font-family: 'Arial', sans-serif; line-height: 2.2; font-size: 24pt; color: #000000; padding: 40px; }
+        .section-header { color: #b91c1c; border-bottom: 5px solid #ef4444; padding-bottom: 15px; font-size: 40pt; margin-bottom: 30px; font-weight: 900; }
+        .sub-header { color: #1e3a8a; font-size: 38pt; margin-top: 50px; font-weight: 900; }
+        .keyword-box { background: #fee2e2; border-left: 14px solid #ef4444; padding: 25px; margin: 30px 0; border-radius: 12px; font-size: 24pt; border: 6px solid #ef4444; }
+        .keyword-box b { color: #b91c1c; }
+        .highlight-blue { color: #1e3a8a !important; font-weight: 900; }
+        .highlight-red { color: #b91c1c !important; font-weight: 900; }
+        
+        p, li, h1, h2, h3, h4, b, strong {
+            font-weight: 900 !important;
+            -webkit-text-stroke: 1.2px #000000; text-shadow: 0 0 1px #000;
+        }
+    </style>
+</head>
+<body>
+    <div class="ch7-content">
+        <h1 class="section-header">अध्याय 7: वैश्वीकरण - भाग 3 (वैश्वीकरण के आर्थिक प्रभाव)</h1>
         
         <p>वैश्वीकरण का सबसे गहन और सीधा असर आर्थिक क्षेत्र में देखा गया है। आर्थिक वैश्वीकरण के तहत अंतर्राष्ट्रीय व्यापार, निवेश और पूंजी प्रवाह के रास्ते में आने वाली बाधाओं को समाप्त किया गया है।</p>
 
@@ -272,13 +252,33 @@
         <div class="keyword-box">
             <b class="highlight-red">सामाजिक सुरक्षा कवच (Social Safety Nets):</b> आर्थिक वैश्वीकरण से उत्पन्न विषमताओं और बेरोजगारी से गरीब और कमजोर वर्गों को बचाने के लिए सरकारों द्वारा स्वास्थ्य, शिक्षा, न्यूनतम मजदूरी और खाद्य सुरक्षा की व्यवस्था करना 'सामाजिक सुरक्षा कवच' कहलाता है।
         </div>
-</div>
-<!-- END {part} -->
-<hr style="border: 3px dashed #cbd5e1; margin: 50px 0;">
+    </div>
+</body>
+</html>
 
-<!-- START part4_cultural_consequences.html -->
-<div class="ch7-content">
-<h1 class="section-header">अध्याय 7: वैश्वीकरण - भाग 4 (वैश्वीकरण के सांस्कृतिक प्रभाव)</h1>
+
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        .ch7-content { font-family: 'Arial', sans-serif; line-height: 2.2; font-size: 24pt; color: #000000; padding: 40px; }
+        .section-header { color: #b91c1c; border-bottom: 5px solid #ef4444; padding-bottom: 15px; font-size: 40pt; margin-bottom: 30px; font-weight: 900; }
+        .sub-header { color: #1e3a8a; font-size: 38pt; margin-top: 50px; font-weight: 900; }
+        .keyword-box { background: #fee2e2; border-left: 14px solid #ef4444; padding: 25px; margin: 30px 0; border-radius: 12px; font-size: 24pt; border: 6px solid #ef4444; }
+        .keyword-box b { color: #b91c1c; }
+        .highlight-blue { color: #1e3a8a !important; font-weight: 900; }
+        .highlight-red { color: #b91c1c !important; font-weight: 900; }
+        
+        p, li, h1, h2, h3, h4, b, strong {
+            font-weight: 900 !important;
+            -webkit-text-stroke: 1.2px #000000; text-shadow: 0 0 1px #000;
+        }
+    </style>
+</head>
+<body>
+    <div class="ch7-content">
+        <h1 class="section-header">अध्याय 7: वैश्वीकरण - भाग 4 (वैश्वीकरण के सांस्कृतिक प्रभाव)</h1>
         
         <p>वैश्वीकरण का प्रभाव हमारे खान-पान, पहनावे, भाषा, संगीत और सोचने के तरीके पर गहराई से पड़ता है। इसे <span class="highlight-red">सांस्कृतिक वैश्वीकरण (Cultural Globalization)</span> कहा जाता है।</p>
 
@@ -313,13 +313,33 @@
         <div class="keyword-box">
             <b class="highlight-red">सांस्कृतिक वैषम्यीकरण (Cultural Heterogenization):</b> बाहरी संस्कृतियों के प्रभाव से स्थानीय संस्कृति खत्म होने के बजाय और अधिक समृद्ध व विशिष्ट हो जाती है। उदाहरण के लिए, भारत में खादी के कुर्ते के ऊपर नीली जींस पहनना—यह न तो पूरी तरह पश्चिमी है और न पूरी तरह पारंपरिक, बल्कि एक नया सांस्कृतिक सम्मिश्रण (Cultural Hybridity) है। ठीक इसी प्रकार भारतीय योग, संगीत और मसालों (जैसे मसाला डोसा या चिकन टिक्का) का पूरे विश्व में लोकप्रिय होना सांस्कृतिक लेन-देन को दर्शाता है।
         </div>
-</div>
-<!-- END {part} -->
-<hr style="border: 3px dashed #cbd5e1; margin: 50px 0;">
+    </div>
+</body>
+</html>
 
-<!-- START part5_india_resistance_qa.html -->
-<div class="ch7-content">
-<h1 class="section-header">अध्याय 7: वैश्वीकरण - भाग 5 (भारत और वैश्वीकरण एवं वैश्वीकरण का प्रतिरोध)</h1>
+
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        .ch7-content { font-family: 'Arial', sans-serif; line-height: 2.2; font-size: 24pt; color: #000000; padding: 40px; }
+        .section-header { color: #b91c1c; border-bottom: 5px solid #ef4444; padding-bottom: 15px; font-size: 40pt; margin-bottom: 30px; font-weight: 900; }
+        .sub-header { color: #1e3a8a; font-size: 38pt; margin-top: 50px; font-weight: 900; }
+        .keyword-box { background: #fee2e2; border-left: 14px solid #ef4444; padding: 25px; margin: 30px 0; border-radius: 12px; font-size: 24pt; border: 6px solid #ef4444; }
+        .keyword-box b { color: #b91c1c; }
+        .highlight-blue { color: #1e3a8a !important; font-weight: 900; }
+        .highlight-red { color: #b91c1c !important; font-weight: 900; }
+        
+        p, li, h1, h2, h3, h4, b, strong {
+            font-weight: 900 !important;
+            -webkit-text-stroke: 1.2px #000000; text-shadow: 0 0 1px #000;
+        }
+    </style>
+</head>
+<body>
+    <div class="ch7-content">
+        <h1 class="section-header">अध्याय 7: वैश्वीकरण - भाग 5 (भारत और वैश्वीकरण एवं वैश्वीकरण का प्रतिरोध)</h1>
         
         <p>वैश्वीकरण का भारत पर गहरा प्रभाव पड़ा है। भारत औपनिवेशिक काल से ही वैश्विक अर्थव्यवस्था का हिस्सा रहा है, लेकिन 1991 के वित्तीय संकट के बाद भारत ने अपनी आर्थिक नीतियों में बुनियादी बदलाव किया।</p>
 
@@ -382,10 +402,37 @@
             <li><b class="highlight-blue">स्वदेशी जागरण मंच:</b> स्वदेशी उत्पादों के इस्तेमाल और विदेशी रिटेल बहुराष्ट्रीय कंपनियों (जैसे वालमार्ट, अमेजन) का विरोध।</li>
             <li><b class="highlight-red">सांस्कृतिक विरोध:</b> बहुराष्ट्रीय टीवी चैनलों, पश्चिमी पहनावे और पश्चिमी त्यौहारों के अत्यधिक प्रभाव के खिलाफ विरोध।</li>
         </ul>
-</div>
-<!-- END {part} -->
-<hr style="border: 3px dashed #cbd5e1; margin: 50px 0;">
+    </div>
+</body>
+</html>
 
     </div>
+
+    <script>
+    async function copyToGoogleDoc() {
+        const btn = document.getElementById('mainCopyBtn');
+        const status = document.getElementById('status');
+        const content = document.getElementById('contentToCopy').innerHTML;
+        
+        try {
+            const blob = new Blob([content], { type: 'text/html' });
+            const item = new ClipboardItem({ 'text/html': blob });
+            await navigator.clipboard.write([item]);
+            
+            status.style.display = 'block';
+            btn.style.backgroundColor = '#059669';
+            btn.innerText = '✅ COPIED! NOW PASTE IN DOC';
+            
+            setTimeout(() => {
+                status.style.display = 'none';
+                btn.style.backgroundColor = '#b91c1c';
+                btn.innerText = '📋 COPY EVERYTHING FOR GOOGLE DOCS';
+            }, 5000);
+        } catch (err) {
+            alert('Error copying: ' + err);
+        }
+    }
+    </script>
+
 </body>
 </html>
