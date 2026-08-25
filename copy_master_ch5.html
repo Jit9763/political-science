@@ -1,9 +1,98 @@
 <!DOCTYPE html>
+
 <html lang="hi">
 <head>
-    <meta charset="UTF-8">
-    <title>Chapter 5 COPY MASTER - Premium Notes</title>
-    <style>
+<meta charset="utf-8"/>
+<title>Chapter 5 COPY MASTER - Premium Notes</title>
+<style>
+        p, li, h1, h2, h3, h4, b, strong, td, th {
+            font-weight: 900 !important;
+            -webkit-text-stroke: 1.1px #000000;
+            text-shadow: 0 0 1px #000;
+        }
+        body, p, li, td, th, div, span {
+            font-size: 28pt !important;
+            line-height: 1.8 !important;
+        }
+        .ch5-content {
+            font-size: 28pt !important;
+            line-height: 1.8 !important;
+            padding: 10px !important;
+        }
+        /* Projector Banner Styles for Headings */
+        .hero-title, h1.section-header {
+            text-align: center !important;
+            color: #ffffff !important;
+            background-color: #064e3b !important; /* Dark Green Background */
+            border: 5px solid #10b981 !important;
+            border-radius: 20px !important;
+            padding: 30px !important;
+            margin-bottom: 50px !important;
+            font-size: 60pt !important;
+            font-weight: 900 !important;
+            box-shadow: 0 8px 25px rgba(6, 78, 59, 0.4) !important;
+        }
+        .part-header {
+            color: #7f1d1d !important;
+            background-color: #fee2e2 !important;
+            border-left: 18px solid #b91c1c !important;
+            padding: 22px 28px !important;
+            border-radius: 14px !important;
+            font-size: 46pt !important;
+            font-weight: 900 !important;
+            margin-top: 40px !important;
+            margin-bottom: 35px !important;
+            box-shadow: 0 6px 15px rgba(0,0,0,0.08) !important;
+        }
+        .topic-header, h2.sub-header {
+            color: #1e3a8a !important;
+            background-color: #eff6ff !important;
+            border-left: 16px solid #2563eb !important;
+            padding: 20px 26px !important;
+            border-radius: 12px !important;
+            font-size: 38pt !important;
+            font-weight: 900 !important;
+            margin-top: 45px !important;
+            margin-bottom: 30px !important;
+        }
+        .subtopic-header {
+            color: #4c1d95 !important;
+            background-color: #f3e8ff !important;
+            border-left: 14px solid #7c3aed !important;
+            padding: 18px 24px !important;
+            border-radius: 10px !important;
+            font-size: 32pt !important;
+            font-weight: 900 !important;
+            margin-top: 40px !important;
+            margin-bottom: 25px !important;
+        }
+        .box-header {
+            color: #166534 !important;
+            background-color: #f0fdf4 !important;
+            border-left: 12px solid #16a34a !important;
+            padding: 16px 20px !important;
+            border-radius: 10px !important;
+            font-size: 30pt !important;
+            font-weight: 900 !important;
+        }
+        /* Highlights */
+        b, strong {
+            color: #b91c1c !important; /* Dark Red */
+            font-weight: 900 !important;
+        }
+        .blue-highlight, b.blue-text, strong.blue-text {
+            color: #1e3a8a !important;
+        }
+        .keyword-box, .concept-card, .highlight-box {
+            font-size: 28pt !important;
+            line-height: 1.8 !important;
+            padding: 25px !important;
+            margin: 30px 0 !important;
+        }
+        .illustration-box { border: 4px solid #cbd5e1 !important; border-radius: 12px; padding: 20px; background-color: #ffffff; margin-top: 25px; }
+        .illustration-explanation { border-left: 6px solid #cbd5e1 !important; padding-left: 15px; font-size: 28pt !important; line-height: 1.6 !important; text-align: left; margin-top: 15px; }
+
+
         body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f1f5f9; margin: 0; padding: 20px; text-align: center; }
         .header { background: #1e293b; color: white; padding: 20px; border-radius: 10px; margin-bottom: 30px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
         .copy-btn { background-color: #2563eb; color: white; padding: 20px 40px; font-size: 24pt; border: none; border-radius: 50px; cursor: pointer; font-weight: 900; transition: all 0.3s; box-shadow: 0 10px 20px rgba(37, 99, 235, 0.4); }
@@ -24,21 +113,107 @@
     </style>
 </head>
 <body>
+<div class="header">
+<h1>🚀 Chapter 5: समकालीन विश्व में सुरक्षा (Full-Proof Copy Master)</h1>
+<p>100% Google Docs Compatible with Images (Localhost-Sync)</p>
+</div>
+<button class="copy-btn" id="mainCopyBtn" onclick="copyToGoogleDoc()">📋 COPY EVERYTHING FOR GOOGLE DOCS</button>
+<p id="status">✅ Copied Successfully! Now go to your Google Doc and Press Ctrl+V</p>
+<div class="preview" id="contentToCopy">
+<!DOCTYPE html>
 
-    <div class="header">
-        <h1>🚀 Chapter 5: समकालीन विश्व में सुरक्षा (Full-Proof Copy Master)</h1>
-        <p>100% Google Docs Compatible with Images (Localhost-Sync)</p>
-    </div>
-
-    <button id="mainCopyBtn" class="copy-btn" onclick="copyToGoogleDoc()">📋 COPY EVERYTHING FOR GOOGLE DOCS</button>
-    <p id="status">✅ Copied Successfully! Now go to your Google Doc and Press Ctrl+V</p>
-
-    <div class="preview" id="contentToCopy">
-        <!DOCTYPE html>
 <html lang="hi">
 <head>
-    <meta charset="UTF-8">
-    <style>
+<meta charset="utf-8"/>
+<style>
+        p, li, h1, h2, h3, h4, b, strong, td, th {
+            font-weight: 900 !important;
+            -webkit-text-stroke: 1.1px #000000;
+            text-shadow: 0 0 1px #000;
+        }
+        body, p, li, td, th, div, span {
+            font-size: 28pt !important;
+            line-height: 1.8 !important;
+        }
+        .ch5-content {
+            font-size: 28pt !important;
+            line-height: 1.8 !important;
+            padding: 10px !important;
+        }
+        /* Projector Banner Styles for Headings */
+        .hero-title, h1.section-header {
+            text-align: center !important;
+            color: #ffffff !important;
+            background-color: #064e3b !important; /* Dark Green Background */
+            border: 5px solid #10b981 !important;
+            border-radius: 20px !important;
+            padding: 30px !important;
+            margin-bottom: 50px !important;
+            font-size: 60pt !important;
+            font-weight: 900 !important;
+            box-shadow: 0 8px 25px rgba(6, 78, 59, 0.4) !important;
+        }
+        .part-header {
+            color: #7f1d1d !important;
+            background-color: #fee2e2 !important;
+            border-left: 18px solid #b91c1c !important;
+            padding: 22px 28px !important;
+            border-radius: 14px !important;
+            font-size: 46pt !important;
+            font-weight: 900 !important;
+            margin-top: 40px !important;
+            margin-bottom: 35px !important;
+            box-shadow: 0 6px 15px rgba(0,0,0,0.08) !important;
+        }
+        .topic-header, h2.sub-header {
+            color: #1e3a8a !important;
+            background-color: #eff6ff !important;
+            border-left: 16px solid #2563eb !important;
+            padding: 20px 26px !important;
+            border-radius: 12px !important;
+            font-size: 38pt !important;
+            font-weight: 900 !important;
+            margin-top: 45px !important;
+            margin-bottom: 30px !important;
+        }
+        .subtopic-header {
+            color: #4c1d95 !important;
+            background-color: #f3e8ff !important;
+            border-left: 14px solid #7c3aed !important;
+            padding: 18px 24px !important;
+            border-radius: 10px !important;
+            font-size: 32pt !important;
+            font-weight: 900 !important;
+            margin-top: 40px !important;
+            margin-bottom: 25px !important;
+        }
+        .box-header {
+            color: #166534 !important;
+            background-color: #f0fdf4 !important;
+            border-left: 12px solid #16a34a !important;
+            padding: 16px 20px !important;
+            border-radius: 10px !important;
+            font-size: 30pt !important;
+            font-weight: 900 !important;
+        }
+        /* Highlights */
+        b, strong {
+            color: #b91c1c !important; /* Dark Red */
+            font-weight: 900 !important;
+        }
+        .blue-highlight, b.blue-text, strong.blue-text {
+            color: #1e3a8a !important;
+        }
+        .keyword-box, .concept-card, .highlight-box {
+            font-size: 28pt !important;
+            line-height: 1.8 !important;
+            padding: 25px !important;
+            margin: 30px 0 !important;
+        }
+        .illustration-box { border: 4px solid #cbd5e1 !important; border-radius: 12px; padding: 20px; background-color: #ffffff; margin-top: 25px; }
+        .illustration-explanation { border-left: 6px solid #cbd5e1 !important; padding-left: 15px; font-size: 28pt !important; line-height: 1.6 !important; text-align: left; margin-top: 15px; }
+
+
         .ch5-content { font-family: 'Arial', sans-serif; line-height: 2.2; font-size: 24pt; color: #000000; padding: 40px; }
         .section-header { color: #b91c1c; border-bottom: 5px solid #ef4444; padding-bottom: 15px; font-size: 40pt; margin-bottom: 30px; font-weight: 900; }
         .sub-header { color: #dc2626; font-size: 38pt; margin-top: 50px; font-weight: 900; }
@@ -65,79 +240,158 @@
     </style>
 </head>
 <body>
-    <div class="ch5-content">
-        <h1 class="section-header">अध्याय 5: समकालीन विश्व में सुरक्षा (Security in the Contemporary World) - भाग 1</h1>
-        
-        <p>विश्व-राजनीति के बारे में पढ़ते हुए अक्सर हमारा सामना <b>'सुरक्षा' (Security)</b> अथवा <b>'राष्ट्रीय सुरक्षा' (National Security)</b> जैसे शब्दों से होता है। अक्सर यह कहा जाता है कि यह सुरक्षा का मसला है और देश की भलाई के लिए बड़ा जरूरी है। ऐसा कहने का मकसद यह जताना होता है कि मसला बड़ा महत्वपूर्ण अथवा गुप्त है और इस कारण उस पर खुली चर्चा नहीं हो सकती। लेकिन लोकतंत्र में कोई भी बात इतनी ढकी-छिपी नहीं रखी जा सकती। सुरक्षा के बारे में हमें और ज्यादा जानने की जरूरत है।</p>
-
-        <!-- NCERT Header Cartoon: Ares War Cartoon -->
-        <div class="illustration-box" style="border: 10px solid #b91c1c !important; margin-top: 35px; margin-bottom: 35px; border-radius: 12px; text-align: center; background-color: #ffffff;">
-            <img alt="Ares War Cartoon" src="images/ch5/war_cagle_cartoon.webp" style="width: 100%; max-width: 600px; height: auto; display: block; margin: 20px auto; border: 10px solid #cbd5e1 !important; border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.15);" class="illustration-img"/>
-            <div class="illustration-explanation" style="border-left: 20px solid #b91c1c !important; background: #fff5f5; padding: 25px; font-size: 24pt !important; text-align: justify; line-height: 1.8;">
-                <b>एनसीईआरटी कार्टून: युद्ध और सुरक्षा (Ares - War Cartoon by Cagle):</b><br/>
-                <b>कार्टून का विवरण:</b> कार्टून में युद्ध के देवता (Ares) और युद्ध के विनाशकारी रूप को दिखाया गया है।<br/>
-                <b>कार्टून का संदेश:</b> "युद्ध का मतलब है असुरक्षा, विध्वंस और मृत्यु! युद्ध किसी को क्या सुरक्षा दे पायेगा?" यह कार्टून यह सवाल उठाता है कि क्या वास्तव में सैन्य युद्धों द्वारा कभी स्थाई सुरक्षा प्राप्त की जा सकती है।
+<div class="ch5-content">
+<h1 class="section-header hero-title">अध्याय 5: समकालीन विश्व में सुरक्षा (Security in the Contemporary World) - भाग 1</h1>
+<p>विश्व-राजनीति के बारे में पढ़ते हुए अक्सर हमारा सामना <b>'सुरक्षा' (Security)</b> अथवा <b>'राष्ट्रीय सुरक्षा' (National Security)</b> जैसे शब्दों से होता है। अक्सर यह कहा जाता है कि यह सुरक्षा का मसला है और देश की भलाई के लिए बड़ा जरूरी है। ऐसा कहने का मकसद यह जताना होता है कि मसला बड़ा महत्वपूर्ण अथवा गुप्त है और इस कारण उस पर खुली चर्चा नहीं हो सकती। लेकिन लोकतंत्र में कोई भी बात इतनी ढकी-छिपी नहीं रखी जा सकती। सुरक्षा के बारे में हमें और ज्यादा जानने की जरूरत है।</p>
+<!-- NCERT Header Cartoon: Ares War Cartoon -->
+<div class="illustration-box" style="border: 10px solid #b91c1c !important; margin-top: 35px; margin-bottom: 35px; border-radius: 12px; text-align: center; background-color: #ffffff;">
+<img alt="Ares War Cartoon" class="illustration-img" src="images/ch5/war_cagle_cartoon.webp" style="width: 100%; max-width: 600px; height: auto; display: block; margin: 20px auto; border: 10px solid #cbd5e1 !important; border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.15);"/>
+<div class="illustration-explanation" style="border-left: 20px solid #b91c1c !important; background: #fff5f5; padding: 25px;  text-align: justify; line-height: 1.8;">
+<b>एनसीईआरटी कार्टून: युद्ध और सुरक्षा (Ares - War Cartoon by Cagle):</b><br/>
+<b>कार्टून का विवरण:</b> कार्टून में युद्ध के देवता (Ares) और युद्ध के विनाशकारी रूप को दिखाया गया है।<br/>
+<b>कार्टून का संदेश:</b> "युद्ध का मतलब है असुरक्षा, विध्वंस और मृत्यु! युद्ध किसी को क्या सुरक्षा दे पायेगा?" यह कार्टून यह सवाल उठाता है कि क्या वास्तव में सैन्य युद्धों द्वारा कभी स्थाई सुरक्षा प्राप्त की जा सकती है।
             </div>
+</div>
+<h2 class="sub-header topic-header">1. सुरक्षा क्या है? (What is Security?)</h2>
+<p>सुरक्षा का बुनियादी अर्थ है—<b>खतरे से आजादी (Freedom from Threats)</b>। मानव का अस्तित्व और किसी देश का जीवन खतरों से भरा होता है। तब क्या इसका मतलब यह है कि हर तरह के खतरे को सुरक्षा पर खतरा माना जाए? सुरक्षा का अध्ययन करने वाले विद्वानों का कहना है कि केवल उन चीजों को 'सुरक्षा' से जुड़ी चीजों का विषय बनाया जाए जिनसे जीवन के <b>'केंद्रीय मूल्यों' (Central Values)</b> को गंभीर खतरा हो।</p>
+<div class="keyword-box">
+<b>सुरक्षा (Security):</b> इसका रिश्ता केवल बड़े गंभीर खतरों से है—ऐसे खतरे जिनको रोकने के उपाय न किए गए, तो हमारे केंद्रीय मूल्यों को अपूरणीय क्षति पहुंचेगी।
         </div>
-
-        <h2 class="sub-header">1. सुरक्षा क्या है? (What is Security?)</h2>
-        <p>सुरक्षा का बुनियादी अर्थ है—<b>खतरे से आजादी (Freedom from Threats)</b>। मानव का अस्तित्व और किसी देश का जीवन खतरों से भरा होता है। तब क्या इसका मतलब यह है कि हर तरह के खतरे को सुरक्षा पर खतरा माना जाए? सुरक्षा का अध्ययन करने वाले विद्वानों का कहना है कि केवल उन चीजों को 'सुरक्षा' से जुड़ी चीजों का विषय बनाया जाए जिनसे जीवन के <b>'केंद्रीय मूल्यों' (Central Values)</b> को गंभीर खतरा हो।</p>
-        
-        <div class="keyword-box">
-            <b>सुरक्षा (Security):</b> इसका रिश्ता केवल बड़े गंभीर खतरों से है—ऐसे खतरे जिनको रोकने के उपाय न किए गए, तो हमारे केंद्रीय मूल्यों को अपूरणीय क्षति पहुंचेगी।
-        </div>
-
-        <!-- NCERT Collage Box: Guatemala & Bangladesh -->
-        <div class="illustration-box" style="border: 10px solid #000000 !important; margin-top: 35px; margin-bottom: 35px; border-radius: 12px; text-align: center; background-color: #ffffff;">
-            <img alt="Guatemala and Bangladesh Collage" src="images/ch5/page_1_intro_collage.webp" style="width: 100%; max-width: 600px; height: auto; display: block; margin: 20px auto; border: 10px solid #cbd5e1 !important; border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.15);" class="illustration-img"/>
-            <div class="illustration-explanation" style="border-left: 20px solid #000000 !important; background: #f8fafc; padding: 25px; font-size: 24pt !important; text-align: justify; line-height: 1.8;">
-                <b>एनसीईआरटी चित्र विवरण: सुरक्षा के दो भिन्न पहलू (NCERT Page 1 Collage)</b><br/>
+<!-- NCERT Collage Box: Guatemala & Bangladesh -->
+<div class="illustration-box" style="border: 10px solid #000000 !important; margin-top: 35px; margin-bottom: 35px; border-radius: 12px; text-align: center; background-color: #ffffff;">
+<img alt="Guatemala and Bangladesh Collage" class="illustration-img" src="images/ch5/page_1_intro_collage.webp" style="width: 100%; max-width: 600px; height: auto; display: block; margin: 20px auto; border: 10px solid #cbd5e1 !important; border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.15);"/>
+<div class="illustration-explanation" style="border-left: 20px solid #000000 !important; background: #f8fafc; padding: 25px;  text-align: justify; line-height: 1.8;">
+<b>एनसीईआरटी चित्र विवरण: सुरक्षा के दो भिन्न पहलू (NCERT Page 1 Collage)</b><br/>
                 ये चित्र सुरक्षा के दो भिन्न पहलुओं को दर्शाते हैं:<br/>
                 1. <b>ग्वाटेमाला (Guatemala):</b> ग्वाटेमाला में चल रहे गृह-युद्ध के दृश्य, जहाँ माताएं युद्ध में खोए अपने बच्चों का इंतजार कर रही हैं और युद्ध में शहीद हुए लोगों को याद किया जा रहा है।<br/>
                 2. <b>बांग्लादेश (Bangladesh):</b> बांग्लादेश में बाढ़ जैसी प्राकृतिक आपदा से पैदा हुई असुरक्षा को दिखाया गया है।
             </div>
-        </div>
-
-        <h2 class="sub-header">2. सुरक्षा की दो धारणाएं: पारंपरिक और अपारंपरिक</h2>
-        <p>विभिन्न संदर्भों और स्थितियों को ध्यान में रखना जरूरी है क्योंकि इसी से सुरक्षा के बारे में हमारा नजरिया बनता है। सुरक्षा की धारणा को मुख्य रूप से दो श्रेणियों में समझा जाता है:</p>
-        <ol style="font-size: 24pt; line-height: 2.2;">
-            <li><b>पारंपरिक धारणा (Traditional Notion):</b> जिसमें सैन्य खतरे, बाहरी आक्रमण, शक्ति-संतुलन और सीमा रक्षा शामिल है।</li>
-            <li><b>अपारंपरिक धारणा (Non-Traditional Notion):</b> जिसमें मानवाधिकार, गरीबी, महामारी, विस्थापन और पर्यावरण संकट शामिल हैं।</li>
-        </ol>
-
-        <!-- NCERT Peacekeeping Force Dove Cartoon (Page 2 / Page 64 NCERT) -->
-        <div class="illustration-box" style="border: 10px solid #db2777 !important; margin-top: 35px; margin-bottom: 35px; border-radius: 12px; text-align: center; background-color: #ffffff;">
-            <img alt="Peacekeeping Force Dove Cartoon" src="images/ch5/page_2_peacekeeping_dove.webp" style="width: 100%; max-width: 550px; height: auto; display: block; margin: 20px auto; border: 10px solid #cbd5e1 !important; border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.15);" class="illustration-img"/>
-            <div class="illustration-explanation" style="border-left: 20px solid #db2777 !important; background: #fff5f5; padding: 25px; font-size: 24pt !important; text-align: justify; line-height: 1.8;">
-                <b>एनसीईआरटी कार्टून: शांति-सेना का विरोधाभास (Ares, Cagle Cartoon - NCERT Page 64):</b><br/>
-                <b>कार्टून का विवरण:</b> कार्टून में एक भारी हथियारों से लैस सैनिक को शांति के प्रतीक 'सफेद फाख्ता' (Peace Dove) पर सवार होकर उसे लगाम से नियंत्रित करते हुए दिखाया गया है।<br/>
-                <b>एनसीईआरटी प्रश्न:</b> "आपने 'शांति-सेना' के बारे में सुना होगा। क्या आपको लगता है कि 'शांति-सेना' का होना स्वयं में एक विरोधाभासी बात है?"
+</div>
+<h2 class="sub-header topic-header">2. सुरक्षा की दो धारणाएं: पारंपरिक और अपारंपरिक</h2>
+<p>विभिन्न संदर्भों और स्थितियों को ध्यान में रखना जरूरी है क्योंकि इसी से सुरक्षा के बारे में हमारा नजरिया बनता है। सुरक्षा की धारणा को मुख्य रूप से दो श्रेणियों में समझा जाता है:</p>
+<ol style=" line-height: 2.2;">
+<li><b>पारंपरिक धारणा (Traditional Notion):</b> जिसमें सैन्य खतरे, बाहरी आक्रमण, शक्ति-संतुलन और सीमा रक्षा शामिल है।</li>
+<li><b>अपारंपरिक धारणा (Non-Traditional Notion):</b> जिसमें मानवाधिकार, गरीबी, महामारी, विस्थापन और पर्यावरण संकट शामिल हैं।</li>
+</ol>
+<!-- NCERT Peacekeeping Force Dove Cartoon (Page 2 / Page 64 NCERT) -->
+<div class="illustration-box" style="border: 10px solid #db2777 !important; margin-top: 35px; margin-bottom: 35px; border-radius: 12px; text-align: center; background-color: #ffffff;">
+<img alt="Peacekeeping Force Dove Cartoon" class="illustration-img" src="images/ch5/page_2_peacekeeping_dove.webp" style="width: 100%; max-width: 550px; height: auto; display: block; margin: 20px auto; border: 10px solid #cbd5e1 !important; border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.15);"/>
+<div class="illustration-explanation" style="border-left: 20px solid #db2777 !important; background: #fff5f5; padding: 25px;  text-align: justify; line-height: 1.8;">
+<b>एनसीईआरटी कार्टून: शांति-सेना का विरोधाभास (Ares, Cagle Cartoon - NCERT Page 64):</b><br/>
+<b>कार्टून का विवरण:</b> कार्टून में एक भारी हथियारों से लैस सैनिक को शांति के प्रतीक 'सफेद फाख्ता' (Peace Dove) पर सवार होकर उसे लगाम से नियंत्रित करते हुए दिखाया गया है।<br/>
+<b>एनसीईआरटी प्रश्न:</b> "आपने 'शांति-सेना' के बारे में सुना होगा। क्या आपको लगता है कि 'शांति-सेना' का होना स्वयं में एक विरोधाभासी बात है?"
             </div>
-        </div>
-
-        <!-- NCERT Student Avatar Comment -->
-        <div class="bio-box" style="border: 10px solid #000000 !important; border-radius: 12px; padding: 25px; margin: 30px 0; display: flex; gap: 20px; align-items: center; color: #000000; font-weight: 900; background-color: #ffffff;">
-            <div class="bio-img-container" style="flex: 0 0 130px; text-align: center;">
-                <img alt="Student Comment Avatar" src="images/ch5/page_2_img_1.webp" style="width: 120px; height: auto; border: 5px solid #000000; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.2); margin: 0;"/>
+</div>
+<!-- NCERT Student Avatar Comment -->
+<div class="bio-box" style="border: 10px solid #000000 !important; border-radius: 12px; padding: 25px; margin: 30px 0; display: flex; gap: 20px; align-items: center; color: #000000; font-weight: 900; background-color: #ffffff;">
+<div class="bio-img-container" style="flex: 0 0 130px; text-align: center;">
+<img alt="Student Comment Avatar" src="images/ch5/page_2_img_1.webp" style="width: 120px; height: auto; border: 5px solid #000000; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.2); margin: 0;"/>
+</div>
+<div class="bio-text" style="flex: 1;  line-height: 1.8;">
+<b>एनसीईआरटी छात्र विचार:</b> "मेरी सुरक्षा के बारे में किसने फैसला किया? कुछ नेताओं और विशेषज्ञों ने? क्या मैं अपनी सुरक्षा का फैसला खुद नहीं कर सकती?"
             </div>
-            <div class="bio-text" style="flex: 1; font-size: 24pt; line-height: 1.8;">
-                <b>एनसीईआरटी छात्र विचार:</b> "मेरी सुरक्षा के बारे में किसने फैसला किया? कुछ नेताओं और विशेषज्ञों ने? क्या मैं अपनी सुरक्षा का फैसला खुद नहीं कर सकती?"
-            </div>
+</div>
+<div class="concept-card" style="border-color: #db2777;">
+<b>शांति-सेना (Peacekeeping Force):</b> संयुक्त राष्ट्र संघ (UN) द्वारा विश्व के विभिन्न अशांत क्षेत्रों में शांति बनाए रखने के लिए सदस्य देशों की सेनाओं को मिलाकर 'शांति-सेना' गठित की जाती है।
         </div>
-
-        <div class="concept-card" style="border-color: #db2777;">
-            <b>शांति-सेना (Peacekeeping Force):</b> संयुक्त राष्ट्र संघ (UN) द्वारा विश्व के विभिन्न अशांत क्षेत्रों में शांति बनाए रखने के लिए सदस्य देशों की सेनाओं को मिलाकर 'शांति-सेना' गठित की जाती है।
-        </div>
-    </div>
+</div>
 </body>
 </html>
-
-<br><br><hr><br><br>
+<br/><br/><hr/><br/><br/>
 <!DOCTYPE html>
+
 <html lang="hi">
 <head>
-    <meta charset="UTF-8">
-    <style>
+<meta charset="utf-8"/>
+<style>
+        p, li, h1, h2, h3, h4, b, strong, td, th {
+            font-weight: 900 !important;
+            -webkit-text-stroke: 1.1px #000000;
+            text-shadow: 0 0 1px #000;
+        }
+        body, p, li, td, th, div, span {
+            font-size: 28pt !important;
+            line-height: 1.8 !important;
+        }
+        .ch5-content {
+            font-size: 28pt !important;
+            line-height: 1.8 !important;
+            padding: 10px !important;
+        }
+        /* Projector Banner Styles for Headings */
+        .hero-title, h1.section-header {
+            text-align: center !important;
+            color: #ffffff !important;
+            background-color: #064e3b !important; /* Dark Green Background */
+            border: 5px solid #10b981 !important;
+            border-radius: 20px !important;
+            padding: 30px !important;
+            margin-bottom: 50px !important;
+            font-size: 60pt !important;
+            font-weight: 900 !important;
+            box-shadow: 0 8px 25px rgba(6, 78, 59, 0.4) !important;
+        }
+        .part-header {
+            color: #7f1d1d !important;
+            background-color: #fee2e2 !important;
+            border-left: 18px solid #b91c1c !important;
+            padding: 22px 28px !important;
+            border-radius: 14px !important;
+            font-size: 46pt !important;
+            font-weight: 900 !important;
+            margin-top: 40px !important;
+            margin-bottom: 35px !important;
+            box-shadow: 0 6px 15px rgba(0,0,0,0.08) !important;
+        }
+        .topic-header, h2.sub-header {
+            color: #1e3a8a !important;
+            background-color: #eff6ff !important;
+            border-left: 16px solid #2563eb !important;
+            padding: 20px 26px !important;
+            border-radius: 12px !important;
+            font-size: 38pt !important;
+            font-weight: 900 !important;
+            margin-top: 45px !important;
+            margin-bottom: 30px !important;
+        }
+        .subtopic-header {
+            color: #4c1d95 !important;
+            background-color: #f3e8ff !important;
+            border-left: 14px solid #7c3aed !important;
+            padding: 18px 24px !important;
+            border-radius: 10px !important;
+            font-size: 32pt !important;
+            font-weight: 900 !important;
+            margin-top: 40px !important;
+            margin-bottom: 25px !important;
+        }
+        .box-header {
+            color: #166534 !important;
+            background-color: #f0fdf4 !important;
+            border-left: 12px solid #16a34a !important;
+            padding: 16px 20px !important;
+            border-radius: 10px !important;
+            font-size: 30pt !important;
+            font-weight: 900 !important;
+        }
+        /* Highlights */
+        b, strong {
+            color: #b91c1c !important; /* Dark Red */
+            font-weight: 900 !important;
+        }
+        .blue-highlight, b.blue-text, strong.blue-text {
+            color: #1e3a8a !important;
+        }
+        .keyword-box, .concept-card, .highlight-box {
+            font-size: 28pt !important;
+            line-height: 1.8 !important;
+            padding: 25px !important;
+            margin: 30px 0 !important;
+        }
+        .illustration-box { border: 4px solid #cbd5e1 !important; border-radius: 12px; padding: 20px; background-color: #ffffff; margin-top: 25px; }
+        .illustration-explanation { border-left: 6px solid #cbd5e1 !important; padding-left: 15px; font-size: 28pt !important; line-height: 1.6 !important; text-align: left; margin-top: 15px; }
+
+
         .ch5-content { font-family: 'Arial', sans-serif; line-height: 2.2; font-size: 24pt; color: #000000; padding: 40px; }
         .section-header { color: #b91c1c; border-bottom: 5px solid #ef4444; padding-bottom: 15px; font-size: 40pt; margin-bottom: 30px; font-weight: 900; }
         .sub-header { color: #dc2626; font-size: 38pt; margin-top: 50px; font-weight: 900; }
@@ -164,63 +418,144 @@
     </style>
 </head>
 <body>
-    <div class="ch5-content">
-        <h1 class="section-header">अध्याय 5: समकालीन विश्व में सुरक्षा - भाग 2 (पारंपरिक धारणा: बाहरी सुरक्षा)</h1>
-        
-        <p>अधिकतर जब हम सुरक्षा के बारे में कुछ पढ़ या सुन रहे होते हैं तो हमारा सामना सुरक्षा की पारंपरिक अर्थात <b>राष्ट्रीय सुरक्षा (National Security)</b> की धारणा से होता है। सुरक्षा की पारंपरिक अवधारणा में <b>सैन्य खतरे (Military Threat)</b> को किसी देश के लिए सबसे ज्यादा खतरनाक माना जाता है। इस खतरे का स्रोत कोई दूसरा मुल्क होता है जो सैन्य हमले की धमकी देकर संप्रभुता, स्वतंत्रता और क्षेत्रीय अखंडता जैसे किसी देश के केंद्रीय मूल्यों के लिए खतरा पैदा करता है।</p>
-
-        <h2 class="sub-header">1. युद्ध की स्थिति में सरकार के पास तीन विकल्प</h2>
-        <p>बुनियादी तौर पर किसी सरकार के पास युद्ध की स्थिति में तीन विकल्प होते हैं:</p>
-        <ul style="list-style-type: square; margin-left: 40px;">
-            <li><b>आत्मसमर्पण करना:</b> दूसरे पक्ष की बात को बिना युद्ध किए मान लेना। (कोई भी सरकार इसे अपनी नीति नहीं घोषित करती)</li>
-            <li><b>अपरोध (Deterrence):</b> युद्ध से होने वाले नाश को इस हद तक बढ़ाने के संकेत देना कि दूसरा पक्ष सहमकर हमला करने से बाज आए। (युद्ध की आशंका को रोकना)</li>
-            <li><b>रक्षा करना (Defense):</b> यदि युद्ध ठन जाए तो अपनी रक्षा करना ताकि हमलावर देश अपने मकसद में कामयाब न हो सके और पीछे हट जाए या हमलावर को पराजित कर देना।</li>
-        </ul>
-
-        <!-- NCERT Cartoon Box: Nuclear Claim Cartoon (NCERT Page 66) -->
-        <div class="illustration-box" style="border: 10px solid #b91c1c !important; margin-top: 35px; margin-bottom: 35px; border-radius: 12px; text-align: center; background-color: #ffffff;">
-            <img alt="Nuclear Claim Cartoon" src="images/ch5/page_4_nuclear_claim.webp" style="width: 100%; max-width: 600px; height: auto; display: block; margin: 20px auto; border: 10px solid #cbd5e1 !important; border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.15);" class="illustration-img"/>
-            <div class="illustration-explanation" style="border-left: 20px solid #b91c1c !important; background: #fff5f5; padding: 25px; font-size: 24pt !important; text-align: justify; line-height: 1.8;">
-                <b>एनसीईआरटी कार्टून: बड़ी ताकतों का रवैया (NCERT Page 66):</b><br/>
-                <b>एनसीईआरटी पाठ्यपुस्तक प्रश्न:</b> "जब कोई नया देश परमाणु शक्ति-संपन्न होने की दावेदारी करता है तो बड़ी ताकतें क्या रवैया अख्तियार करती हैं? हमारे पास यह कहने के क्या आधार हैं कि परमाण्विक हथियारों से लैस कुछ देशों पर तो विश्वास किया जा सकता है परंतु कुछ पर नहीं?"
-            </div>
+<div class="ch5-content">
+<h1 class="section-header hero-title">अध्याय 5: समकालीन विश्व में सुरक्षा - भाग 2 (पारंपरिक धारणा: बाहरी सुरक्षा)</h1>
+<p>अधिकतर जब हम सुरक्षा के बारे में कुछ पढ़ या सुन रहे होते हैं तो हमारा सामना सुरक्षा की पारंपरिक अर्थात <b>राष्ट्रीय सुरक्षा (National Security)</b> की धारणा से होता है। सुरक्षा की पारंपरिक अवधारणा में <b>सैन्य खतरे (Military Threat)</b> को किसी देश के लिए सबसे ज्यादा खतरनाक माना जाता है। इस खतरे का स्रोत कोई दूसरा मुल्क होता है जो सैन्य हमले की धमकी देकर संप्रभुता, स्वतंत्रता और क्षेत्रीय अखंडता जैसे किसी देश के केंद्रीय मूल्यों के लिए खतरा पैदा करता है।</p>
+<h2 class="sub-header topic-header">1. युद्ध की स्थिति में सरकार के पास तीन विकल्प</h2>
+<p>बुनियादी तौर पर किसी सरकार के पास युद्ध की स्थिति में तीन विकल्प होते हैं:</p>
+<ul style="list-style-type: square; margin-left: 40px;">
+<li><b>आत्मसमर्पण करना:</b> दूसरे पक्ष की बात को बिना युद्ध किए मान लेना। (कोई भी सरकार इसे अपनी नीति नहीं घोषित करती)</li>
+<li><b>अपरोध (Deterrence):</b> युद्ध से होने वाले नाश को इस हद तक बढ़ाने के संकेत देना कि दूसरा पक्ष सहमकर हमला करने से बाज आए। (युद्ध की आशंका को रोकना)</li>
+<li><b>रक्षा करना (Defense):</b> यदि युद्ध ठन जाए तो अपनी रक्षा करना ताकि हमलावर देश अपने मकसद में कामयाब न हो सके और पीछे हट जाए या हमलावर को पराजित कर देना।</li>
+</ul>
+<!-- NCERT Cartoon Box: Nuclear Claim Cartoon (NCERT Page 66) -->
+<div class="illustration-box" style="border: 10px solid #b91c1c !important; margin-top: 35px; margin-bottom: 35px; border-radius: 12px; text-align: center; background-color: #ffffff;">
+<img alt="Nuclear Claim Cartoon" class="illustration-img" src="images/ch5/page_4_nuclear_claim.webp" style="width: 100%; max-width: 600px; height: auto; display: block; margin: 20px auto; border: 10px solid #cbd5e1 !important; border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.15);"/>
+<div class="illustration-explanation" style="border-left: 20px solid #b91c1c !important; background: #fff5f5; padding: 25px;  text-align: justify; line-height: 1.8;">
+<b>एनसीईआरटी कार्टून: बड़ी ताकतों का रवैया (NCERT Page 66):</b><br>
+<b>एनसीईआरटी पाठ्यपुस्तक प्रश्न:</b> "जब कोई नया देश परमाणु शक्ति-संपन्न होने की दावेदारी करता है तो बड़ी ताकतें क्या रवैया अख्तियार करती हैं? हमारे पास यह कहने के क्या आधार हैं कि परमाण्विक हथियारों से लैस कुछ देशों पर तो विश्वास किया जा सकता है परंतु कुछ पर नहीं?"
+            </br></div>
+</div>
+<h2 class="sub-header topic-header">2. शक्ति-संतुलन (Balance of Power)</h2>
+<p>परंपरागत सुरक्षा-नीति का एक और तत्व है। इसे <b>'शक्ति-संतुलन' (Balance of Power)</b> कहते हैं। कोई देश अपने अड़ोस-पड़ोस में देखने पर पाता है कि कुछ मुल्क छोटे हैं तो कुछ बड़े। इससे इशारा मिल जाता है कि भविष्य में किस देश से उसे खतरा हो सकता है।</p>
+<div class="keyword-box">
+<b>शक्ति-संतुलन (Balance of Power):</b> कोई सरकार दूसरे देशों से अपने शक्ति-संतुलन का पलड़ा अपने पक्ष में बैठाने के लिए जी-तोड़ कोशिश करती है। जो देश नजदीक हों, जिनके साथ अनबन हो या जिन देशों के साथ अतीत में युद्ध हो चुका हो, उनके साथ शक्ति-संतुलन को अपने पक्ष में करने पर विशेष जोर दिया जाता है।
         </div>
-
-        <h2 class="sub-header">2. शक्ति-संतुलन (Balance of Power)</h2>
-        <p>परंपरागत सुरक्षा-नीति का एक और तत्व है। इसे <b>'शक्ति-संतुलन' (Balance of Power)</b> कहते हैं। कोई देश अपने अड़ोस-पड़ोस में देखने पर पाता है कि कुछ मुल्क छोटे हैं तो कुछ बड़े। इससे इशारा मिल जाता है कि भविष्य में किस देश से उसे खतरा हो सकता है।</p>
-        
-        <div class="keyword-box">
-            <b>शक्ति-संतुलन (Balance of Power):</b> कोई सरकार दूसरे देशों से अपने शक्ति-संतुलन का पलड़ा अपने पक्ष में बैठाने के लिए जी-तोड़ कोशिश करती है। जो देश नजदीक हों, जिनके साथ अनबन हो या जिन देशों के साथ अतीत में युद्ध हो चुका हो, उनके साथ शक्ति-संतुलन को अपने पक्ष में करने पर विशेष जोर दिया जाता है।
-        </div>
-        <p>शक्ति-संतुलन बनाए रखने का मुख्य जरिया अपनी सैन्य शक्ति बढ़ाना है, हालांकि आर्थिक और प्रौद्योगिकी ताकत भी इसके लिए महत्वपूर्ण हैं।</p>
-
-        <h2 class="sub-header">3. गठबंधन निर्माण (Alliance Building)</h2>
-        <p>परंपरागत सुरक्षा नीति का चौथा तत्व <b>'गठबंधन निर्माण' (Alliance Building)</b> है। गठबंधन में कई देश शामिल होते हैं और सैन्य हमले को रोकने अथवा उससे रक्षा करने के लिए समवेत कदम उठाते हैं।</p>
-        <ul style="list-style-type: disc; margin-left: 40px;">
-            <li>अधिकांश गठबंधन लिखित संधियों पर आधारित होते हैं।</li>
-            <li>गठबंधन राष्ट्रीय हितों (National Interests) पर आधारित होते हैं, इसलिए राष्ट्रीय हित बदलने पर गठबंधन भी बदल जाते हैं।</li>
-            <li><b>उदाहरण:</b> शीतयुद्ध के दौरान अमेरिका का <b>नाटो (NATO)</b> तथा सोवियत संघ का <b>वारसा पैक्ट (Warsaw Pact)</b>।</li>
-        </ul>
-
-        <!-- NCERT Avatar Comment -->
-        <div class="bio-box" style="border: 10px solid #000000 !important; border-radius: 12px; padding: 25px; margin: 30px 0; display: flex; gap: 20px; align-items: center; color: #000000; font-weight: 900; background-color: #ffffff;">
-            <div class="bio-img-container" style="flex: 0 0 130px; text-align: center;">
-                <img alt="Student Comment Avatar" src="images/ch5/page_3_img_2.webp" style="width: 120px; height: auto; border: 5px solid #000000; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.2); margin: 0;"/>
+<p>शक्ति-संतुलन बनाए रखने का मुख्य जरिया अपनी सैन्य शक्ति बढ़ाना है, हालांकि आर्थिक और प्रौद्योगिकी ताकत भी इसके लिए महत्वपूर्ण हैं।</p>
+<h2 class="sub-header topic-header">3. गठबंधन निर्माण (Alliance Building)</h2>
+<p>परंपरागत सुरक्षा नीति का चौथा तत्व <b>'गठबंधन निर्माण' (Alliance Building)</b> है। गठबंधन में कई देश शामिल होते हैं और सैन्य हमले को रोकने अथवा उससे रक्षा करने के लिए समवेत कदम उठाते हैं।</p>
+<ul style="list-style-type: disc; margin-left: 40px;">
+<li>अधिकांश गठबंधन लिखित संधियों पर आधारित होते हैं।</li>
+<li>गठबंधन राष्ट्रीय हितों (National Interests) पर आधारित होते हैं, इसलिए राष्ट्रीय हित बदलने पर गठबंधन भी बदल जाते हैं।</li>
+<li><b>उदाहरण:</b> शीतयुद्ध के दौरान अमेरिका का <b>नाटो (NATO)</b> तथा सोवियत संघ का <b>वारसा पैक्ट (Warsaw Pact)</b>।</li>
+</ul>
+<!-- NCERT Avatar Comment -->
+<div class="bio-box" style="border: 10px solid #000000 !important; border-radius: 12px; padding: 25px; margin: 30px 0; display: flex; gap: 20px; align-items: center; color: #000000; font-weight: 900; background-color: #ffffff;">
+<div class="bio-img-container" style="flex: 0 0 130px; text-align: center;">
+<img alt="Student Comment Avatar" src="images/ch5/page_3_img_2.webp" style="width: 120px; height: auto; border: 5px solid #000000; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.2); margin: 0;"/>
+</div>
+<div class="bio-text" style="flex: 1;  line-height: 1.8;">
+<b>एनसीईआरटी छात्र विचार:</b> "युद्ध का मतलब है असुरक्षा, विध्वंस और मृत्यु! युद्ध किसी को क्या सुरक्षा दे पायेगा? युद्ध की अर्थव्यवस्थाएं बदलती रहती हैं।"
             </div>
-            <div class="bio-text" style="flex: 1; font-size: 24pt; line-height: 1.8;">
-                <b>एनसीईआरटी छात्र विचार:</b> "युद्ध का मतलब है असुरक्षा, विध्वंस और मृत्यु! युद्ध किसी को क्या सुरक्षा दे पायेगा? युद्ध की अर्थव्यवस्थाएं बदलती रहती हैं।"
-            </div>
-        </div>
-    </div>
+</div>
+</div>
 </body>
 </html>
-
-<br><br><hr><br><br>
+<br/><br/><hr/><br/><br/>
 <!DOCTYPE html>
+
 <html lang="hi">
 <head>
-    <meta charset="UTF-8">
-    <style>
+<meta charset="utf-8"/>
+<style>
+        p, li, h1, h2, h3, h4, b, strong, td, th {
+            font-weight: 900 !important;
+            -webkit-text-stroke: 1.1px #000000;
+            text-shadow: 0 0 1px #000;
+        }
+        body, p, li, td, th, div, span {
+            font-size: 28pt !important;
+            line-height: 1.8 !important;
+        }
+        .ch5-content {
+            font-size: 28pt !important;
+            line-height: 1.8 !important;
+            padding: 10px !important;
+        }
+        /* Projector Banner Styles for Headings */
+        .hero-title, h1.section-header {
+            text-align: center !important;
+            color: #ffffff !important;
+            background-color: #064e3b !important; /* Dark Green Background */
+            border: 5px solid #10b981 !important;
+            border-radius: 20px !important;
+            padding: 30px !important;
+            margin-bottom: 50px !important;
+            font-size: 60pt !important;
+            font-weight: 900 !important;
+            box-shadow: 0 8px 25px rgba(6, 78, 59, 0.4) !important;
+        }
+        .part-header {
+            color: #7f1d1d !important;
+            background-color: #fee2e2 !important;
+            border-left: 18px solid #b91c1c !important;
+            padding: 22px 28px !important;
+            border-radius: 14px !important;
+            font-size: 46pt !important;
+            font-weight: 900 !important;
+            margin-top: 40px !important;
+            margin-bottom: 35px !important;
+            box-shadow: 0 6px 15px rgba(0,0,0,0.08) !important;
+        }
+        .topic-header, h2.sub-header {
+            color: #1e3a8a !important;
+            background-color: #eff6ff !important;
+            border-left: 16px solid #2563eb !important;
+            padding: 20px 26px !important;
+            border-radius: 12px !important;
+            font-size: 38pt !important;
+            font-weight: 900 !important;
+            margin-top: 45px !important;
+            margin-bottom: 30px !important;
+        }
+        .subtopic-header {
+            color: #4c1d95 !important;
+            background-color: #f3e8ff !important;
+            border-left: 14px solid #7c3aed !important;
+            padding: 18px 24px !important;
+            border-radius: 10px !important;
+            font-size: 32pt !important;
+            font-weight: 900 !important;
+            margin-top: 40px !important;
+            margin-bottom: 25px !important;
+        }
+        .box-header {
+            color: #166534 !important;
+            background-color: #f0fdf4 !important;
+            border-left: 12px solid #16a34a !important;
+            padding: 16px 20px !important;
+            border-radius: 10px !important;
+            font-size: 30pt !important;
+            font-weight: 900 !important;
+        }
+        /* Highlights */
+        b, strong {
+            color: #b91c1c !important; /* Dark Red */
+            font-weight: 900 !important;
+        }
+        .blue-highlight, b.blue-text, strong.blue-text {
+            color: #1e3a8a !important;
+        }
+        .keyword-box, .concept-card, .highlight-box {
+            font-size: 28pt !important;
+            line-height: 1.8 !important;
+            padding: 25px !important;
+            margin: 30px 0 !important;
+        }
+        .illustration-box { border: 4px solid #cbd5e1 !important; border-radius: 12px; padding: 20px; background-color: #ffffff; margin-top: 25px; }
+        .illustration-explanation { border-left: 6px solid #cbd5e1 !important; padding-left: 15px; font-size: 28pt !important; line-height: 1.6 !important; text-align: left; margin-top: 15px; }
+
+
         .ch5-content { font-family: 'Arial', sans-serif; line-height: 2.2; font-size: 24pt; color: #000000; padding: 40px; }
         .section-header { color: #b91c1c; border-bottom: 5px solid #ef4444; padding-bottom: 15px; font-size: 40pt; margin-bottom: 30px; font-weight: 900; }
         .sub-header { color: #dc2626; font-size: 38pt; margin-top: 50px; font-weight: 900; }
@@ -247,54 +582,136 @@
     </style>
 </head>
 <body>
-    <div class="ch5-content">
-        <h1 class="section-header">अध्याय 5: समकालीन विश्व में सुरक्षा - भाग 3 (पारंपरिक धारणा: आंतरिक सुरक्षा और तीसरी दुनिया)</h1>
-        
-        <p>सुरक्षा की पारंपरिक धारणा में <b>आंतरिक सुरक्षा (Internal Security)</b> भी शामिल है। द्वितीय विश्वयुद्ध के बाद यूरोपीय ताकतों के लिए आंतरिक सुरक्षा का मामला कोई बहुत बड़ा मुद्दा नहीं रहा क्योंकि अधिकांश यूरोपीय देश अपनी सीमाओं के भीतर सुगठित और शांत थे। लेकिन नव-स्वतंत्र विकासशील देशों (तीसरी दुनिया) के लिए स्थिति बिल्कुल अलग थी।</p>
-
-        <h2 class="sub-header">1. नव-स्वतंत्र देशों (तीसरी दुनिया) की सुरक्षा चुनौतियां</h2>
-        <p>एशिया और अफ्रीका के नव-स्वतंत्र देशों के सामने खड़ी सुरक्षा की चुनौतियां यूरोपीय देशों के मुकाबले दो मायनों में विशिष्ट थीं:</p>
-        <ul style="list-style-type: square; margin-left: 40px;">
-            <li><b>पड़ोसी देशों से सीमा विवाद:</b> इन देशों को अपने पड़ोसी देशों से सैन्य हमले की आशंका थी। सीमा रेखा, भू-क्षेत्र और आबादी पर नियंत्रण को लेकर झगड़े थे।</li>
-            <li><b>आंतरिक पृथकतावादी आंदोलन:</b> इन देशों को अंदरूनी सैन्य-संघर्ष और अलगाववादी आंदोलनों की भी चिंता करनी थी जो अलग राष्ट्र बनाने पर तुले हुए थे।</li>
-        </ul>
-
-        <!-- NCERT Cartoon Box: Third World Weapons (NCERT Page 68) -->
-        <div class="illustration-box" style="border: 10px solid #b91c1c !important; margin-top: 35px; margin-bottom: 35px; border-radius: 12px; text-align: center; background-color: #ffffff;">
-            <img alt="Weapons of the Third World Cartoon" src="images/ch5/page_6_civil_war.webp" style="width: 100%; max-width: 550px; height: auto; display: block; margin: 20px auto; border: 10px solid #cbd5e1 !important; border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.15);" class="illustration-img"/>
-            <div class="illustration-explanation" style="border-left: 20px solid #b91c1c !important; background: #fff5f5; padding: 25px; font-size: 24pt !important; text-align: justify; line-height: 1.8;">
-                <b>एनसीईआरटी कार्टून: तीसरी दुनिया के हथियार (Ares, Cagle Cartoon - NCERT Page 68):</b><br/>
-                <b>कार्टून का विवरण:</b> कार्टून में एक गरीब, फटेहाल कपड़ों में व्यक्ति को एक विशाल मिसाइल/हथियार के खोल के अंदर कचरा ढूँढते और अपने शॉपिंग ट्रॉली में सामान इकट्ठा करते हुए दिखाया गया है। चित्र के नीचे शीर्षक लिखा है—<b>"तीसरी दुनिया के हथियार"</b>।<br/>
-                <b>कार्टून का संदेश:</b> यह कार्टून विकासशील (तीसरी दुनिया के) देशों की स्थिति पर करारा व्यंग्य करता है। ये देश गरीबी, भुखमरी और मूलभूत सुविधाओं की कमी से जूझ रहे हैं, फिर भी अपनी बहुमूल्य संपत्ति और बजट को रक्षा व हथियारों की होड़ में बर्बाद करते हैं। यह दर्शाता है कि तीसरी दुनिया के लिए सबसे बड़ी असुरक्षा गरीबी और हथियारों पर फिजूलखर्ची है।
-            </div>
+<div class="ch5-content">
+<h1 class="section-header hero-title">अध्याय 5: समकालीन विश्व में सुरक्षा - भाग 3 (पारंपरिक धारणा: आंतरिक सुरक्षा और तीसरी दुनिया)</h1>
+<p>सुरक्षा की पारंपरिक धारणा में <b>आंतरिक सुरक्षा (Internal Security)</b> भी शामिल है। द्वितीय विश्वयुद्ध के बाद यूरोपीय ताकतों के लिए आंतरिक सुरक्षा का मामला कोई बहुत बड़ा मुद्दा नहीं रहा क्योंकि अधिकांश यूरोपीय देश अपनी सीमाओं के भीतर सुगठित और शांत थे। लेकिन नव-स्वतंत्र विकासशील देशों (तीसरी दुनिया) के लिए स्थिति बिल्कुल अलग थी।</p>
+<h2 class="sub-header topic-header">1. नव-स्वतंत्र देशों (तीसरी दुनिया) की सुरक्षा चुनौतियां</h2>
+<p>एशिया और अफ्रीका के नव-स्वतंत्र देशों के सामने खड़ी सुरक्षा की चुनौतियां यूरोपीय देशों के मुकाबले दो मायनों में विशिष्ट थीं:</p>
+<ul style="list-style-type: square; margin-left: 40px;">
+<li><b>पड़ोसी देशों से सीमा विवाद:</b> इन देशों को अपने पड़ोसी देशों से सैन्य हमले की आशंका थी। सीमा रेखा, भू-क्षेत्र और आबादी पर नियंत्रण को लेकर झगड़े थे।</li>
+<li><b>आंतरिक पृथकतावादी आंदोलन:</b> इन देशों को अंदरूनी सैन्य-संघर्ष और अलगाववादी आंदोलनों की भी चिंता करनी थी जो अलग राष्ट्र बनाने पर तुले हुए थे।</li>
+</ul>
+<!-- NCERT Cartoon Box: Third World Weapons (NCERT Page 68) -->
+<div class="illustration-box" style="border: 10px solid #b91c1c !important; margin-top: 35px; margin-bottom: 35px; border-radius: 12px; text-align: center; background-color: #ffffff;">
+<img alt="Weapons of the Third World Cartoon" class="illustration-img" src="images/ch5/page_6_civil_war.webp" style="width: 100%; max-width: 550px; height: auto; display: block; margin: 20px auto; border: 10px solid #cbd5e1 !important; border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.15);"/>
+<div class="illustration-explanation" style="border-left: 20px solid #b91c1c !important; background: #fff5f5; padding: 25px;  text-align: justify; line-height: 1.8;">
+<b>एनसीईआरटी कार्टून: तीसरी दुनिया के हथियार (Ares, Cagle Cartoon - NCERT Page 68):</b><br>
+<b>कार्टून का विवरण:</b> कार्टून में एक गरीब, फटेहाल कपड़ों में व्यक्ति को एक विशाल मिसाइल/हथियार के खोल के अंदर कचरा ढूँढते और अपने शॉपिंग ट्रॉली में सामान इकट्ठा करते हुए दिखाया गया है। चित्र के नीचे शीर्षक लिखा है—<b>"तीसरी दुनिया के हथियार"</b>।<br>
+<b>कार्टून का संदेश:</b> यह कार्टून विकासशील (तीसरी दुनिया के) देशों की स्थिति पर करारा व्यंग्य करता है। ये देश गरीबी, भुखमरी और मूलभूत सुविधाओं की कमी से जूझ रहे हैं, फिर भी अपनी बहुमूल्य संपत्ति और बजट को रक्षा व हथियारों की होड़ में बर्बाद करते हैं। यह दर्शाता है कि तीसरी दुनिया के लिए सबसे बड़ी असुरक्षा गरीबी और हथियारों पर फिजूलखर्ची है।
+            </br></br></div>
+</div>
+<h2 class="sub-header topic-header">2. शीतयुद्ध और तीसरी दुनिया के गृहयुद्ध</h2>
+<p>तीसरी दुनिया के अधिकांश युद्धों के लिए शीतयुद्ध भी जिम्मेदार रहा। महाशक्तियों ने तीसरी दुनिया के देशों के आंतरिक विवादों में हस्तक्षेप किया, विद्रोही गुटों को हथियार और पैसा मुहैया कराया और इन युद्धों को लंबे समय तक जारी रखा।</p>
+<div class="keyword-box">
+<b>गृहयुद्ध (Civil War):</b> किसी देश के भीतर ही सरकार और विद्रोही सशस्त्र समूहों के बीच होने वाला भीषण संघर्ष जो देश की आंतरिक अखंडता के लिए सबसे बड़ा खतरा बन जाता है। (विश्व के 95% सशस्त्र संघर्ष अब गृहयुद्ध के अंतर्गत आते हैं)।
         </div>
-
-        <h2 class="sub-header">2. शीतयुद्ध और तीसरी दुनिया के गृहयुद्ध</h2>
-        <p>तीसरी दुनिया के अधिकांश युद्धों के लिए शीतयुद्ध भी जिम्मेदार रहा। महाशक्तियों ने तीसरी दुनिया के देशों के आंतरिक विवादों में हस्तक्षेप किया, विद्रोही गुटों को हथियार और पैसा मुहैया कराया और इन युद्धों को लंबे समय तक जारी रखा।</p>
-        
-        <div class="keyword-box">
-            <b>गृहयुद्ध (Civil War):</b> किसी देश के भीतर ही सरकार और विद्रोही सशस्त्र समूहों के बीच होने वाला भीषण संघर्ष जो देश की आंतरिक अखंडता के लिए सबसे बड़ा खतरा बन जाता है। (विश्व के 95% सशस्त्र संघर्ष अब गृहयुद्ध के अंतर्गत आते हैं)।
-        </div>
-
-        <!-- NCERT Student Avatar Comment -->
-        <div class="bio-box" style="border: 10px solid #000000 !important; border-radius: 12px; padding: 25px; margin: 30px 0; display: flex; gap: 20px; align-items: center; color: #000000; font-weight: 900; background-color: #ffffff;">
-            <div class="bio-img-container" style="flex: 0 0 130px; text-align: center;">
-                <img alt="Student Comment Avatar" src="images/ch5/page_6_img_2.webp" style="width: 120px; height: auto; border: 5px solid #000000; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.2); margin: 0;"/>
+<!-- NCERT Student Avatar Comment -->
+<div class="bio-box" style="border: 10px solid #000000 !important; border-radius: 12px; padding: 25px; margin: 30px 0; display: flex; gap: 20px; align-items: center; color: #000000; font-weight: 900; background-color: #ffffff;">
+<div class="bio-img-container" style="flex: 0 0 130px; text-align: center;">
+<img alt="Student Comment Avatar" src="images/ch5/page_6_img_2.webp" style="width: 120px; height: auto; border: 5px solid #000000; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.2); margin: 0;"/>
+</div>
+<div class="bio-text" style="flex: 1;  line-height: 1.8;">
+<b>एनसीईआरटी पाठ्यपुस्तक वक्तव्य:</b> "जो अपने ही देश के खिलाफ लड़ते हैं निश्चित ही वे किन्हीं बातों से नाखुश होते हैं। शायद यह उनकी अपनी असुरक्षा ही है जो देश के लिए असुरक्षा पैदा करती है।"
             </div>
-            <div class="bio-text" style="flex: 1; font-size: 24pt; line-height: 1.8;">
-                <b>एनसीईआरटी पाठ्यपुस्तक वक्तव्य:</b> "जो अपने ही देश के खिलाफ लड़ते हैं निश्चित ही वे किन्हीं बातों से नाखुश होते हैं। शायद यह उनकी अपनी असुरक्षा ही है जो देश के लिए असुरक्षा पैदा करती है।"
-            </div>
-        </div>
-    </div>
+</div>
+</div>
 </body>
 </html>
-
-<br><br><hr><br><br>
+<br/><br/><hr/><br/><br/>
 <!DOCTYPE html>
+
 <html lang="hi">
 <head>
-    <meta charset="UTF-8">
-    <style>
+<meta charset="utf-8"/>
+<style>
+        p, li, h1, h2, h3, h4, b, strong, td, th {
+            font-weight: 900 !important;
+            -webkit-text-stroke: 1.1px #000000;
+            text-shadow: 0 0 1px #000;
+        }
+        body, p, li, td, th, div, span {
+            font-size: 28pt !important;
+            line-height: 1.8 !important;
+        }
+        .ch5-content {
+            font-size: 28pt !important;
+            line-height: 1.8 !important;
+            padding: 10px !important;
+        }
+        /* Projector Banner Styles for Headings */
+        .hero-title, h1.section-header {
+            text-align: center !important;
+            color: #ffffff !important;
+            background-color: #064e3b !important; /* Dark Green Background */
+            border: 5px solid #10b981 !important;
+            border-radius: 20px !important;
+            padding: 30px !important;
+            margin-bottom: 50px !important;
+            font-size: 60pt !important;
+            font-weight: 900 !important;
+            box-shadow: 0 8px 25px rgba(6, 78, 59, 0.4) !important;
+        }
+        .part-header {
+            color: #7f1d1d !important;
+            background-color: #fee2e2 !important;
+            border-left: 18px solid #b91c1c !important;
+            padding: 22px 28px !important;
+            border-radius: 14px !important;
+            font-size: 46pt !important;
+            font-weight: 900 !important;
+            margin-top: 40px !important;
+            margin-bottom: 35px !important;
+            box-shadow: 0 6px 15px rgba(0,0,0,0.08) !important;
+        }
+        .topic-header, h2.sub-header {
+            color: #1e3a8a !important;
+            background-color: #eff6ff !important;
+            border-left: 16px solid #2563eb !important;
+            padding: 20px 26px !important;
+            border-radius: 12px !important;
+            font-size: 38pt !important;
+            font-weight: 900 !important;
+            margin-top: 45px !important;
+            margin-bottom: 30px !important;
+        }
+        .subtopic-header {
+            color: #4c1d95 !important;
+            background-color: #f3e8ff !important;
+            border-left: 14px solid #7c3aed !important;
+            padding: 18px 24px !important;
+            border-radius: 10px !important;
+            font-size: 32pt !important;
+            font-weight: 900 !important;
+            margin-top: 40px !important;
+            margin-bottom: 25px !important;
+        }
+        .box-header {
+            color: #166534 !important;
+            background-color: #f0fdf4 !important;
+            border-left: 12px solid #16a34a !important;
+            padding: 16px 20px !important;
+            border-radius: 10px !important;
+            font-size: 30pt !important;
+            font-weight: 900 !important;
+        }
+        /* Highlights */
+        b, strong {
+            color: #b91c1c !important; /* Dark Red */
+            font-weight: 900 !important;
+        }
+        .blue-highlight, b.blue-text, strong.blue-text {
+            color: #1e3a8a !important;
+        }
+        .keyword-box, .concept-card, .highlight-box {
+            font-size: 28pt !important;
+            line-height: 1.8 !important;
+            padding: 25px !important;
+            margin: 30px 0 !important;
+        }
+        .illustration-box { border: 4px solid #cbd5e1 !important; border-radius: 12px; padding: 20px; background-color: #ffffff; margin-top: 25px; }
+        .illustration-explanation { border-left: 6px solid #cbd5e1 !important; padding-left: 15px; font-size: 28pt !important; line-height: 1.6 !important; text-align: left; margin-top: 15px; }
+
+
         .ch5-content { font-family: 'Arial', sans-serif; line-height: 2.2; font-size: 24pt; color: #000000; padding: 40px; }
         .section-header { color: #b91c1c; border-bottom: 5px solid #ef4444; padding-bottom: 15px; font-size: 40pt; margin-bottom: 30px; font-weight: 900; }
         .sub-header { color: #dc2626; font-size: 38pt; margin-top: 50px; font-weight: 900; }
@@ -321,58 +738,140 @@
     </style>
 </head>
 <body>
-    <div class="ch5-content">
-        <h1 class="section-header">अध्याय 5: समकालीन विश्व में सुरक्षा - भाग 4 (पारंपरिक सुरक्षा के तरीके: निशस्त्रीकरण, अस्त्र-नियंत्रण और विश्वास बहाली)</h1>
-        
-        <p>सुरक्षा की पारंपरिक धारणा में स्वीकार किया जाता है कि हिंसा का इस्तेमाल यथासंभव सीमित होना चाहिए। 'न्याय-युद्ध' की यूरोपीय परंपरा का ही यह परिवर्ती विस्तार है कि आज लगभग पूरा विश्व मानता है कि किसी देश को युद्ध उचित कारणों यानी <b>आत्म-रक्षा</b> अथवा <b>दूसरों को जनसंहार से बचाने</b> के लिए ही करना चाहिए। युद्ध में बल प्रयोग तभी किया जाए जब बाकी उपाय असफल हो गए हों।</p>
-
-        <h2 class="sub-header">1. निशस्त्रीकरण (Disarmament)</h2>
-        <p>निशस्त्रीकरण की मांग होती है कि सभी राज्य कुछ खास किस्म के हथियारों को पूरी तरह छोड़ दें:</p>
-        <ul style="list-style-type: square; margin-left: 40px;">
-            <li><b>जैविक हथियार संधि (BWC 1972):</b> 155 से अधिक देशों ने 1972 की जैविक हथियार संधि (Biological Weapons Convention) पर दस्तखत किए और इन हथियारों को बनाने व रखने पर रोक लगाई।</li>
-            <li><b>रासायनिक हथियार संधि (CWC 1993):</b> 181 से अधिक देशों ने 1993 की रासायनिक हथियार संधि (Chemical Weapons Convention) पर हस्ताक्षर किए।</li>
-        </ul>
-
-        <!-- NCERT Cartoon Box: Complex Treaties & Terror Meter (NCERT Page 69) -->
-        <div class="illustration-box" style="border: 10px solid #b91c1c !important; margin-top: 35px; margin-bottom: 35px; border-radius: 12px; text-align: center; background-color: #ffffff;">
-            <img alt="Complex Treaties Cartoon" src="images/ch5/page_7_complex_treaties.webp" style="width: 100%; max-width: 550px; height: auto; display: block; margin: 20px auto; border: 10px solid #cbd5e1 !important; border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.15);" class="illustration-img"/>
-            <div class="illustration-explanation" style="border-left: 20px solid #b91c1c !important; background: #fff5f5; padding: 25px; font-size: 24pt !important; text-align: justify; line-height: 1.8;">
-                <b>एनसीईआरटी कार्टून वक्तव्य (एरेस, कैगल्स कार्टून - NCERT पृष्ठ 69):</b><br/>
-                "वाह रे! पहले तो इन लोगों ने ये मारक और महंगे हथियार बनाए, फिर इन हथियारों से खुद को बचाने के लिए ये जटिल संधियां कीं। इसे कहते हैं सुरक्षा!"<br/><br/>
-                <b>एनसीईआरटी आतंकमापी (Terror Meter) पाठ्यपुस्तक विवरण:</b><br/>
+<div class="ch5-content">
+<h1 class="section-header hero-title">अध्याय 5: समकालीन विश्व में सुरक्षा - भाग 4 (पारंपरिक सुरक्षा के तरीके: निशस्त्रीकरण, अस्त्र-नियंत्रण और विश्वास बहाली)</h1>
+<p>सुरक्षा की पारंपरिक धारणा में स्वीकार किया जाता है कि हिंसा का इस्तेमाल यथासंभव सीमित होना चाहिए। 'न्याय-युद्ध' की यूरोपीय परंपरा का ही यह परिवर्ती विस्तार है कि आज लगभग पूरा विश्व मानता है कि किसी देश को युद्ध उचित कारणों यानी <b>आत्म-रक्षा</b> अथवा <b>दूसरों को जनसंहार से बचाने</b> के लिए ही करना चाहिए। युद्ध में बल प्रयोग तभी किया जाए जब बाकी उपाय असफल हो गए हों।</p>
+<h2 class="sub-header topic-header">1. निशस्त्रीकरण (Disarmament)</h2>
+<p>निशस्त्रीकरण की मांग होती है कि सभी राज्य कुछ खास किस्म के हथियारों को पूरी तरह छोड़ दें:</p>
+<ul style="list-style-type: square; margin-left: 40px;">
+<li><b>जैविक हथियार संधि (BWC 1972):</b> 155 से अधिक देशों ने 1972 की जैविक हथियार संधि (Biological Weapons Convention) पर दस्तखत किए और इन हथियारों को बनाने व रखने पर रोक लगाई।</li>
+<li><b>रासायनिक हथियार संधि (CWC 1993):</b> 181 से अधिक देशों ने 1993 की रासायनिक हथियार संधि (Chemical Weapons Convention) पर हस्ताक्षर किए।</li>
+</ul>
+<!-- NCERT Cartoon Box: Complex Treaties & Terror Meter (NCERT Page 69) -->
+<div class="illustration-box" style="border: 10px solid #b91c1c !important; margin-top: 35px; margin-bottom: 35px; border-radius: 12px; text-align: center; background-color: #ffffff;">
+<img alt="Complex Treaties Cartoon" class="illustration-img" src="images/ch5/page_7_complex_treaties.webp" style="width: 100%; max-width: 550px; height: auto; display: block; margin: 20px auto; border: 10px solid #cbd5e1 !important; border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.15);"/>
+<div class="illustration-explanation" style="border-left: 20px solid #b91c1c !important; background: #fff5f5; padding: 25px;  text-align: justify; line-height: 1.8;">
+<b>एनसीईआरटी कार्टून वक्तव्य (एरेस, कैगल्स कार्टून - NCERT पृष्ठ 69):</b><br>
+                "वाह रे! पहले तो इन लोगों ने ये मारक और महंगे हथियार बनाए, फिर इन हथियारों से खुद को बचाने के लिए ये जटिल संधियां कीं। इसे कहते हैं सुरक्षा!"<br><br>
+<b>एनसीईआरटी आतंकमापी (Terror Meter) पाठ्यपुस्तक विवरण:</b><br>
                 "इस चित्र के भीतर लिखा है — क्या देश पर खतरे के बादल मंडरा रहे हैं? अगर इसमें आप कोई फैसला नहीं कर पा रहे तो गृह रक्षा-विभाग के इस आतंकमापी का इस्तेमाल करें। यह मीटर आपको बताता है कि देश पर आतंक का साया कितना घना है। आतंकसूचक सूई को ऊपर दिए गए खानों में से किसी एक पर ले जायें जो आपके जानते मौजूदा ख़ौफ़ की सही तस्वीर पेश करता हो। इससे पता चलेगा कि अमरीकी जनता आतंकी हमले को लेकर कितनी आशंकित है। आतंक हमारे हर तरफ है और वह कभी भी हम पर झपट सकता है। इस आतंकमापी के बूते आपको पता चल जाएगा कि आपको कितना भयभीत रहना है। सावधानीपूर्वक सूई घुमाएँ।"
-            </div>
-        </div>
-
-        <h2 class="sub-header">2. अस्त्र-नियंत्रण (Arms Control)</h2>
-        <p>अस्त्र नियंत्रण के अंतर्गत हथियारों के अधिग्रहण और उनके विकास पर कुछ नियम-कानून लागू किए जाते हैं:</p>
-        <ul style="list-style-type: disc; margin-left: 40px;">
-            <li><b>परमाणु अप्रसार संधि (NPT 1968):</b> जिन देशों ने 1967 से पहले परमाणु हथियार बना लिए थे उन्हें ही इन्हें रखने की अनुमति दी गई। भारत ने इसे भेदभावपूर्ण माना।</li>
-            <li><b>एन्टी-बैलिस्टिक मिसाइल संधि (ABM Treaty 1972):</b> अमेरिका और सोवियत संघ ने रक्षात्मक मिसाइल प्रणालियों पर रोक लगाई।</li>
-            <li><b>SALT और START संधियां:</b> सामरिक अस्त्र परिसीमन वार्ता (SALT I & II) और सामरिक अस्त्र न्यूनीकरण संधि (START I & II)।</li>
-        </ul>
-
-        <!-- NCERT Cartoon Box: Andy Singer Pentagon Defense Budget (NCERT Page 70) -->
-        <div class="illustration-box" style="border: 10px solid #000000 !important; margin-top: 35px; margin-bottom: 35px; border-radius: 12px; text-align: center; background-color: #ffffff;">
-            <img alt="Andy Singer Defense Spending Cartoon" src="images/ch5/page_8_andy_singer_pentagon.webp" style="width: 100%; max-width: 550px; height: auto; display: block; margin: 20px auto; border: 10px solid #cbd5e1 !important; border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.15);" class="illustration-img"/>
-            <div class="illustration-explanation" style="border-left: 20px solid #000000 !important; background: #f8fafc; padding: 25px; font-size: 24pt !important; text-align: justify; line-height: 1.8;">
-                <b>एनसीईआरटी कार्टून: विशाल रक्षा बजट बनाम शांति (Andy Singer, Cagle Cartoon - NCERT Page 70):</b><br/>
-                <b>कार्टून का विवरण:</b> कार्टून में विशाल रक्षा खर्चों (जैसे इराक युद्ध पर 300 अरब डॉलर, रक्षा विभाग पर 425 अरब डॉलर, अफगान युद्ध पर 100 अरब डॉलर) के सामने नागरिकों को तख्तियां लिए दिखाया गया है—"अहिंसा विभाग की स्थापना करो! शांति-अहिंसा विधेयक पारित करो!"
-            </div>
-        </div>
-
-        <h2 class="sub-header">3. विश्वास बहाली के उपाय (Confidence Building Measures)</h2>
-        <p>पारंपरिक सुरक्षा का एक तरीका विश्वास बहाली के उपाय (CBMs) भी है। इससे दो देशों के बीच इस बात की आश्वस्ति बनती है कि कोई भी पक्ष अचानक हमला नहीं करेगा। इसमें दोनों देश अपनी सैन्य योजनाओं और युद्धाभ्यासों के बारे में एक-दूसरे को पूर्व सूचना देते हैं।</p>
-    </div>
+            </br></br></br></br></div>
+</div>
+<h2 class="sub-header topic-header">2. अस्त्र-नियंत्रण (Arms Control)</h2>
+<p>अस्त्र नियंत्रण के अंतर्गत हथियारों के अधिग्रहण और उनके विकास पर कुछ नियम-कानून लागू किए जाते हैं:</p>
+<ul style="list-style-type: disc; margin-left: 40px;">
+<li><b>परमाणु अप्रसार संधि (NPT 1968):</b> जिन देशों ने 1967 से पहले परमाणु हथियार बना लिए थे उन्हें ही इन्हें रखने की अनुमति दी गई। भारत ने इसे भेदभावपूर्ण माना।</li>
+<li><b>एन्टी-बैलिस्टिक मिसाइल संधि (ABM Treaty 1972):</b> अमेरिका और सोवियत संघ ने रक्षात्मक मिसाइल प्रणालियों पर रोक लगाई।</li>
+<li><b>SALT और START संधियां:</b> सामरिक अस्त्र परिसीमन वार्ता (SALT I &amp; II) और सामरिक अस्त्र न्यूनीकरण संधि (START I &amp; II)।</li>
+</ul>
+<!-- NCERT Cartoon Box: Andy Singer Pentagon Defense Budget (NCERT Page 70) -->
+<div class="illustration-box" style="border: 10px solid #000000 !important; margin-top: 35px; margin-bottom: 35px; border-radius: 12px; text-align: center; background-color: #ffffff;">
+<img alt="Andy Singer Defense Spending Cartoon" class="illustration-img" src="images/ch5/page_8_andy_singer_pentagon.webp" style="width: 100%; max-width: 550px; height: auto; display: block; margin: 20px auto; border: 10px solid #cbd5e1 !important; border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.15);"/>
+<div class="illustration-explanation" style="border-left: 20px solid #000000 !important; background: #f8fafc; padding: 25px;  text-align: justify; line-height: 1.8;">
+<b>एनसीईआरटी कार्टून: विशाल रक्षा बजट बनाम शांति (Andy Singer, Cagle Cartoon - NCERT Page 70):</b><br>
+<b>कार्टून का विवरण:</b> कार्टून में विशाल रक्षा खर्चों (जैसे इराक युद्ध पर 300 अरब डॉलर, रक्षा विभाग पर 425 अरब डॉलर, अफगान युद्ध पर 100 अरब डॉलर) के सामने नागरिकों को तख्तियां लिए दिखाया गया है—"अहिंसा विभाग की स्थापना करो! शांति-अहिंसा विधेयक पारित करो!"
+            </br></div>
+</div>
+<h2 class="sub-header topic-header">3. विश्वास बहाली के उपाय (Confidence Building Measures)</h2>
+<p>पारंपरिक सुरक्षा का एक तरीका विश्वास बहाली के उपाय (CBMs) भी है। इससे दो देशों के बीच इस बात की आश्वस्ति बनती है कि कोई भी पक्ष अचानक हमला नहीं करेगा। इसमें दोनों देश अपनी सैन्य योजनाओं और युद्धाभ्यासों के बारे में एक-दूसरे को पूर्व सूचना देते हैं।</p>
+</div>
 </body>
 </html>
-
-<br><br><hr><br><br>
+<br/><br/><hr/><br/><br/>
 <!DOCTYPE html>
+
 <html lang="hi">
 <head>
-    <meta charset="UTF-8">
-    <style>
+<meta charset="utf-8"/>
+<style>
+        p, li, h1, h2, h3, h4, b, strong, td, th {
+            font-weight: 900 !important;
+            -webkit-text-stroke: 1.1px #000000;
+            text-shadow: 0 0 1px #000;
+        }
+        body, p, li, td, th, div, span {
+            font-size: 28pt !important;
+            line-height: 1.8 !important;
+        }
+        .ch5-content {
+            font-size: 28pt !important;
+            line-height: 1.8 !important;
+            padding: 10px !important;
+        }
+        /* Projector Banner Styles for Headings */
+        .hero-title, h1.section-header {
+            text-align: center !important;
+            color: #ffffff !important;
+            background-color: #064e3b !important; /* Dark Green Background */
+            border: 5px solid #10b981 !important;
+            border-radius: 20px !important;
+            padding: 30px !important;
+            margin-bottom: 50px !important;
+            font-size: 60pt !important;
+            font-weight: 900 !important;
+            box-shadow: 0 8px 25px rgba(6, 78, 59, 0.4) !important;
+        }
+        .part-header {
+            color: #7f1d1d !important;
+            background-color: #fee2e2 !important;
+            border-left: 18px solid #b91c1c !important;
+            padding: 22px 28px !important;
+            border-radius: 14px !important;
+            font-size: 46pt !important;
+            font-weight: 900 !important;
+            margin-top: 40px !important;
+            margin-bottom: 35px !important;
+            box-shadow: 0 6px 15px rgba(0,0,0,0.08) !important;
+        }
+        .topic-header, h2.sub-header {
+            color: #1e3a8a !important;
+            background-color: #eff6ff !important;
+            border-left: 16px solid #2563eb !important;
+            padding: 20px 26px !important;
+            border-radius: 12px !important;
+            font-size: 38pt !important;
+            font-weight: 900 !important;
+            margin-top: 45px !important;
+            margin-bottom: 30px !important;
+        }
+        .subtopic-header {
+            color: #4c1d95 !important;
+            background-color: #f3e8ff !important;
+            border-left: 14px solid #7c3aed !important;
+            padding: 18px 24px !important;
+            border-radius: 10px !important;
+            font-size: 32pt !important;
+            font-weight: 900 !important;
+            margin-top: 40px !important;
+            margin-bottom: 25px !important;
+        }
+        .box-header {
+            color: #166534 !important;
+            background-color: #f0fdf4 !important;
+            border-left: 12px solid #16a34a !important;
+            padding: 16px 20px !important;
+            border-radius: 10px !important;
+            font-size: 30pt !important;
+            font-weight: 900 !important;
+        }
+        /* Highlights */
+        b, strong {
+            color: #b91c1c !important; /* Dark Red */
+            font-weight: 900 !important;
+        }
+        .blue-highlight, b.blue-text, strong.blue-text {
+            color: #1e3a8a !important;
+        }
+        .keyword-box, .concept-card, .highlight-box {
+            font-size: 28pt !important;
+            line-height: 1.8 !important;
+            padding: 25px !important;
+            margin: 30px 0 !important;
+        }
+        .illustration-box { border: 4px solid #cbd5e1 !important; border-radius: 12px; padding: 20px; background-color: #ffffff; margin-top: 25px; }
+        .illustration-explanation { border-left: 6px solid #cbd5e1 !important; padding-left: 15px; font-size: 28pt !important; line-height: 1.6 !important; text-align: left; margin-top: 15px; }
+
+
         .ch5-content { font-family: 'Arial', sans-serif; line-height: 2.2; font-size: 24pt; color: #000000; padding: 40px; }
         .section-header { color: #b91c1c; border-bottom: 5px solid #ef4444; padding-bottom: 15px; font-size: 40pt; margin-bottom: 30px; font-weight: 900; }
         .sub-header { color: #dc2626; font-size: 38pt; margin-top: 50px; font-weight: 900; }
@@ -399,53 +898,136 @@
     </style>
 </head>
 <body>
-    <div class="ch5-content">
-        <h1 class="section-header">अध्याय 5: समकालीन विश्व में सुरक्षा - भाग 5 (अपारंपरिक धारणा: मानव सुरक्षा और मानवाधिकार)</h1>
-        
-        <p>सुरक्षा की अपारंपरिक धारणा सिर्फ राज्यों की सुरक्षा तक सीमित नहीं रहती, बल्कि इसमें व्यक्तियों और मानव समूहों को भी शामिल किया जाता है। इसे <b>'मानव सुरक्षा' (Human Security)</b> अथवा <b>'मानवता की सुरक्षा'</b> कहा जाता है।</p>
-
-        <h2 class="sub-header">1. मानव सुरक्षा (Human Security) की दो अवधारणाएं</h2>
-        <p>मानव सुरक्षा की धारणा में सुरक्षा किसकी, किन खतरों से और सुरक्षा के तरीके क्या हैं—इन तीनों पर सवाल उठाया जाता है:</p>
-        <ul style="list-style-type: square; margin-left: 40px;">
-            <li><b>संकीर्ण अर्थ (भय से मुक्ति - Freedom from Fear):</b> इस पर जोर देने वाले विद्वान व्यक्तियों को हिंसक खतरों यानी खून-खराबे से बचाने पर बल देते हैं। संयुक्त राष्ट्र संघ के पूर्व महासचिव कोफी अन्नान के शब्दों में—"मानव सुरक्षा का लक्ष्य व्यक्तियों को हिंसक खतरों से बचाना है।"</li>
-            <li><b>व्यापक अर्थ (अभाव से मुक्ति - Freedom from Want):</b> इसमें भूख, बीमारी, प्राकृतिक आपदाओं, गरीबी और अभाव से मुक्ति को भी सुरक्षा में शामिल किया जाता है।</li>
-        </ul>
-
-        <!-- NCERT Cartoon Box: Real Security (NCERT Page 71) -->
-        <div class="illustration-box" style="border: 10px solid #b91c1c !important; margin-top: 35px; margin-bottom: 35px; border-radius: 12px; text-align: center; background-color: #ffffff;">
-            <img alt="Real Security Cartoon" src="images/ch5/page_9_real_security.webp" style="width: 100%; max-width: 500px; height: auto; display: block; margin: 20px auto; border: 10px solid #cbd5e1 !important; border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.15);" class="illustration-img"/>
-            <div class="illustration-explanation" style="border-left: 20px solid #b91c1c !important; background: #fff5f5; padding: 25px; font-size: 24pt !important; text-align: justify; line-height: 1.8;">
-                <b>एनसीईआरटी कार्टून: आम इंसान की असली सुरक्षा (NCERT Page 71):</b><br/>
-                <b>एनसीईआरटी पाठ्यपुस्तक वक्तव्य:</b> "अब लग रहा है कि बात हो रही है! इसे ही मैं सचमुच के आदमी के लिए सचमुच की सुरक्षा कहता हूँ।" यह कार्टून मानव सुरक्षा (भूख, गरीबी और हिंसा से मुक्ति) की आवश्यकता को रेखांकित करता है।
-            </div>
-        </div>
-
-        <h2 class="sub-header">2. मानवाधिकारों का वर्गीकरण (Human Rights Classification)</h2>
-        <p>मानवाधिकारों के हनन और उल्लंघन से उपजी असुरक्षा से निपटने के लिए मानवाधिकारों को तीन कोटियों में वर्गीकृत किया जाता है:</p>
-        <ol style="font-size: 24pt; line-height: 2.2;">
-            <li><b>प्रथम कोटि:</b> राजनीतिक अधिकार (जैसे सभा करने, संगठन बनाने और अभिव्यक्ति की स्वतंत्रता)।</li>
-            <li><b>द्वितीय कोटि:</b> आर्थिक और सामाजिक अधिकार (जैसे काम करने, न्यूनतम जीवन स्तर और सामाजिक सुरक्षा का अधिकार)।</li>
-            <li><b>तृतीय कोटि:</b> औपनिवेशीकृत जनता अथवा जातीय और मूलवासी अल्पसंख्यकों के अधिकार।</li>
-        </ol>
-
-        <!-- NCERT Cartoon Box: Human Rights Violations (NCERT Page 72) -->
-        <div class="illustration-box" style="border: 10px solid #000000 !important; margin-top: 35px; margin-bottom: 35px; border-radius: 12px; text-align: center; background-color: #ffffff;">
-            <img alt="Human Rights Violation Cartoon" src="images/ch5/page_10_human_rights.webp" style="width: 100%; max-width: 550px; height: auto; display: block; margin: 20px auto; border: 10px solid #cbd5e1 !important; border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.15);" class="illustration-img"/>
-            <div class="illustration-explanation" style="border-left: 20px solid #000000 !important; background: #f8fafc; padding: 25px; font-size: 24pt !important; text-align: justify; line-height: 1.8;">
-                <b>एनसीईआरटी कार्टून: मानवाधिकार उल्लंघन और दोहरा रवैया (Tab, Cagle Cartoon - NCERT Page 72):</b><br/>
-                <b>एनसीईआरटी पाठ्यपुस्तक प्रश्न:</b> "मानवाधिकारों के उल्लंघन की बात हो तो हम हमेशा बाहर क्यों देखते हैं? क्या हमारे अपने देश में इसके उदाहरण नहीं मिलते?"
-            </div>
-        </div>
-    </div>
+<div class="ch5-content">
+<h1 class="section-header hero-title">अध्याय 5: समकालीन विश्व में सुरक्षा - भाग 5 (अपारंपरिक धारणा: मानव सुरक्षा और मानवाधिकार)</h1>
+<p>सुरक्षा की अपारंपरिक धारणा सिर्फ राज्यों की सुरक्षा तक सीमित नहीं रहती, बल्कि इसमें व्यक्तियों और मानव समूहों को भी शामिल किया जाता है। इसे <b>'मानव सुरक्षा' (Human Security)</b> अथवा <b>'मानवता की सुरक्षा'</b> कहा जाता है।</p>
+<h2 class="sub-header topic-header">1. मानव सुरक्षा (Human Security) की दो अवधारणाएं</h2>
+<p>मानव सुरक्षा की धारणा में सुरक्षा किसकी, किन खतरों से और सुरक्षा के तरीके क्या हैं—इन तीनों पर सवाल उठाया जाता है:</p>
+<ul style="list-style-type: square; margin-left: 40px;">
+<li><b>संकीर्ण अर्थ (भय से मुक्ति - Freedom from Fear):</b> इस पर जोर देने वाले विद्वान व्यक्तियों को हिंसक खतरों यानी खून-खराबे से बचाने पर बल देते हैं। संयुक्त राष्ट्र संघ के पूर्व महासचिव कोफी अन्नान के शब्दों में—"मानव सुरक्षा का लक्ष्य व्यक्तियों को हिंसक खतरों से बचाना है।"</li>
+<li><b>व्यापक अर्थ (अभाव से मुक्ति - Freedom from Want):</b> इसमें भूख, बीमारी, प्राकृतिक आपदाओं, गरीबी और अभाव से मुक्ति को भी सुरक्षा में शामिल किया जाता है।</li>
+</ul>
+<!-- NCERT Cartoon Box: Real Security (NCERT Page 71) -->
+<div class="illustration-box" style="border: 10px solid #b91c1c !important; margin-top: 35px; margin-bottom: 35px; border-radius: 12px; text-align: center; background-color: #ffffff;">
+<img alt="Real Security Cartoon" class="illustration-img" src="images/ch5/page_9_real_security.webp" style="width: 100%; max-width: 500px; height: auto; display: block; margin: 20px auto; border: 10px solid #cbd5e1 !important; border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.15);"/>
+<div class="illustration-explanation" style="border-left: 20px solid #b91c1c !important; background: #fff5f5; padding: 25px;  text-align: justify; line-height: 1.8;">
+<b>एनसीईआरटी कार्टून: आम इंसान की असली सुरक्षा (NCERT Page 71):</b><br>
+<b>एनसीईआरटी पाठ्यपुस्तक वक्तव्य:</b> "अब लग रहा है कि बात हो रही है! इसे ही मैं सचमुच के आदमी के लिए सचमुच की सुरक्षा कहता हूँ।" यह कार्टून मानव सुरक्षा (भूख, गरीबी और हिंसा से मुक्ति) की आवश्यकता को रेखांकित करता है।
+            </br></div>
+</div>
+<h2 class="sub-header topic-header">2. मानवाधिकारों का वर्गीकरण (Human Rights Classification)</h2>
+<p>मानवाधिकारों के हनन और उल्लंघन से उपजी असुरक्षा से निपटने के लिए मानवाधिकारों को तीन कोटियों में वर्गीकृत किया जाता है:</p>
+<ol style=" line-height: 2.2;">
+<li><b>प्रथम कोटि:</b> राजनीतिक अधिकार (जैसे सभा करने, संगठन बनाने और अभिव्यक्ति की स्वतंत्रता)।</li>
+<li><b>द्वितीय कोटि:</b> आर्थिक और सामाजिक अधिकार (जैसे काम करने, न्यूनतम जीवन स्तर और सामाजिक सुरक्षा का अधिकार)।</li>
+<li><b>तृतीय कोटि:</b> औपनिवेशीकृत जनता अथवा जातीय और मूलवासी अल्पसंख्यकों के अधिकार।</li>
+</ol>
+<!-- NCERT Cartoon Box: Human Rights Violations (NCERT Page 72) -->
+<div class="illustration-box" style="border: 10px solid #000000 !important; margin-top: 35px; margin-bottom: 35px; border-radius: 12px; text-align: center; background-color: #ffffff;">
+<img alt="Human Rights Violation Cartoon" class="illustration-img" src="images/ch5/page_10_human_rights.webp" style="width: 100%; max-width: 550px; height: auto; display: block; margin: 20px auto; border: 10px solid #cbd5e1 !important; border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.15);"/>
+<div class="illustration-explanation" style="border-left: 20px solid #000000 !important; background: #f8fafc; padding: 25px;  text-align: justify; line-height: 1.8;">
+<b>एनसीईआरटी कार्टून: मानवाधिकार उल्लंघन और दोहरा रवैया (Tab, Cagle Cartoon - NCERT Page 72):</b><br>
+<b>एनसीईआरटी पाठ्यपुस्तक प्रश्न:</b> "मानवाधिकारों के उल्लंघन की बात हो तो हम हमेशा बाहर क्यों देखते हैं? क्या हमारे अपने देश में इसके उदाहरण नहीं मिलते?"
+            </br></div>
+</div>
+</div>
 </body>
 </html>
-
-<br><br><hr><br><br>
+<br/><br/><hr/><br/><br/>
 <!DOCTYPE html>
+
 <html lang="hi">
 <head>
-    <meta charset="UTF-8">
-    <style>
+<meta charset="utf-8"/>
+<style>
+        p, li, h1, h2, h3, h4, b, strong, td, th {
+            font-weight: 900 !important;
+            -webkit-text-stroke: 1.1px #000000;
+            text-shadow: 0 0 1px #000;
+        }
+        body, p, li, td, th, div, span {
+            font-size: 28pt !important;
+            line-height: 1.8 !important;
+        }
+        .ch5-content {
+            font-size: 28pt !important;
+            line-height: 1.8 !important;
+            padding: 10px !important;
+        }
+        /* Projector Banner Styles for Headings */
+        .hero-title, h1.section-header {
+            text-align: center !important;
+            color: #ffffff !important;
+            background-color: #064e3b !important; /* Dark Green Background */
+            border: 5px solid #10b981 !important;
+            border-radius: 20px !important;
+            padding: 30px !important;
+            margin-bottom: 50px !important;
+            font-size: 60pt !important;
+            font-weight: 900 !important;
+            box-shadow: 0 8px 25px rgba(6, 78, 59, 0.4) !important;
+        }
+        .part-header {
+            color: #7f1d1d !important;
+            background-color: #fee2e2 !important;
+            border-left: 18px solid #b91c1c !important;
+            padding: 22px 28px !important;
+            border-radius: 14px !important;
+            font-size: 46pt !important;
+            font-weight: 900 !important;
+            margin-top: 40px !important;
+            margin-bottom: 35px !important;
+            box-shadow: 0 6px 15px rgba(0,0,0,0.08) !important;
+        }
+        .topic-header, h2.sub-header {
+            color: #1e3a8a !important;
+            background-color: #eff6ff !important;
+            border-left: 16px solid #2563eb !important;
+            padding: 20px 26px !important;
+            border-radius: 12px !important;
+            font-size: 38pt !important;
+            font-weight: 900 !important;
+            margin-top: 45px !important;
+            margin-bottom: 30px !important;
+        }
+        .subtopic-header {
+            color: #4c1d95 !important;
+            background-color: #f3e8ff !important;
+            border-left: 14px solid #7c3aed !important;
+            padding: 18px 24px !important;
+            border-radius: 10px !important;
+            font-size: 32pt !important;
+            font-weight: 900 !important;
+            margin-top: 40px !important;
+            margin-bottom: 25px !important;
+        }
+        .box-header {
+            color: #166534 !important;
+            background-color: #f0fdf4 !important;
+            border-left: 12px solid #16a34a !important;
+            padding: 16px 20px !important;
+            border-radius: 10px !important;
+            font-size: 30pt !important;
+            font-weight: 900 !important;
+        }
+        /* Highlights */
+        b, strong {
+            color: #b91c1c !important; /* Dark Red */
+            font-weight: 900 !important;
+        }
+        .blue-highlight, b.blue-text, strong.blue-text {
+            color: #1e3a8a !important;
+        }
+        .keyword-box, .concept-card, .highlight-box {
+            font-size: 28pt !important;
+            line-height: 1.8 !important;
+            padding: 25px !important;
+            margin: 30px 0 !important;
+        }
+        .illustration-box { border: 4px solid #cbd5e1 !important; border-radius: 12px; padding: 20px; background-color: #ffffff; margin-top: 25px; }
+        .illustration-explanation { border-left: 6px solid #cbd5e1 !important; padding-left: 15px; font-size: 28pt !important; line-height: 1.6 !important; text-align: left; margin-top: 15px; }
+
+
         .ch5-content { font-family: 'Arial', sans-serif; line-height: 2.2; font-size: 24pt; color: #000000; padding: 40px; }
         .section-header { color: #b91c1c; border-bottom: 5px solid #ef4444; padding-bottom: 15px; font-size: 40pt; margin-bottom: 30px; font-weight: 900; }
         .sub-header { color: #dc2626; font-size: 38pt; margin-top: 50px; font-weight: 900; }
@@ -476,75 +1058,157 @@
     </style>
 </head>
 <body>
-    <div class="ch5-content">
-        <h1 class="section-header">अध्याय 5: समकालीन विश्व में सुरक्षा - भाग 6 (खतरे के नए स्रोत: वैश्विक निर्धनता और जन-पलायन)</h1>
-        
-        <p>1990 के दशक में <b>'विश्व-सुरक्षा' (Global Security)</b> की धारणा उभरी। कोई भी देश इन समस्याओं का समाधान अकेले नहीं कर सकता। खतरों के नए स्रोतों में सबसे प्रमुख है—<b>वैश्विक निर्धनता (Global Poverty)</b> और जन-पलायन।</p>
-
-        <h2 class="sub-header">1. उत्तरी बनाम दक्षिणी गोलार्द्ध की खाई</h2>
-        <p>विश्व में जनसंख्या वृद्धि और आय के बीच गहरा असंतुलन है:</p>
-        <ul style="list-style-type: square; margin-left: 40px;">
-            <li><b>उत्तरी गोलार्द्ध के देश:</b> विकसित देशों में जनसंख्या कम है और प्रति व्यक्ति आय बहुत अधिक है।</li>
-            <li><b>दक्षिणी गोलार्द्ध के देश:</b> विकासशील देशों में जनसंख्या बहुत तेजी से बढ़ रही है और 21वीं सदी के मध्य तक इसके दुगुने होने की संभावना है, जबकि प्रति व्यक्ति आय बेहद कम है।</li>
-        </ul>
-
-        <h2 class="sub-header">2. नवजात शिशु मृत्यु दर और आयु-प्रत्याशा (NCERT Page 74 डेटा)</h2>
-        <p>एनसीईआरटी पाठ्यपुस्तक के अनुसार अमीर और गरीब देशों के बीच जीवन स्तर का अंतर तालिका में स्पष्ट है:</p>
-        
-        <table>
-            <thead>
-                <tr>
-                    <th>क्षेत्र / देश</th>
-                    <th>जन्म के समय आयु-प्रत्याशा</th>
-                    <th>शिशु मृत्यु दर / बाल-मृत्यु</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td><b>स्वीडन (विकसित देश)</b></td>
-                    <td>70 वर्ष से अधिक (आय > $1000)</td>
-                    <td>1000 में से केवल 3 मौतें</td>
-                </tr>
-                <tr>
-                    <td><b>भारतीय उपमहाद्वीप</b></td>
-                    <td>मध्यम जीवन स्तर</td>
-                    <td>प्रत्येक 7 शिशुओं में 1 की मौत</td>
-                </tr>
-                <tr>
-                    <td><b>सहारा मरुस्थल के दक्षिणी अफ्रीकी देश</b></td>
-                    <td>केवल 40 वर्ष (अत्यंत कम)</td>
-                    <td>प्रत्येक 5 शिशुओं में 1 की मौत (20%)</td>
-                </tr>
-            </tbody>
-        </table>
-
-        <!-- NCERT Map Box: Africa Refugee Map & Stats (NCERT Page 74) -->
-        <div class="illustration-box" style="border: 10px solid #b91c1c !important; margin-top: 35px; margin-bottom: 35px; border-radius: 12px; text-align: center; background-color: #ffffff;">
-            <img alt="Africa Refugee Map and Health Stats" src="images/ch5/page_12_africa_refugee_map.webp" style="width: 100%; max-width: 600px; height: auto; display: block; margin: 20px auto; border: 10px solid #cbd5e1 !important; border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.15);" class="illustration-img"/>
-            <div class="illustration-explanation" style="border-left: 20px solid #b91c1c !important; background: #fff5f5; padding: 25px; font-size: 24pt !important; text-align: justify; line-height: 1.8;">
-                <b>एनसीईआरटी मानचित्र एवं सांख्यिकी: अफ्रीका में विस्थापन (NCERT Page 74):</b><br/>
-                <b>एनसीईआरटी पाठ्यपुस्तक वक्तव्य:</b> "अफ्रीका का एक मानचित्र लीजिए और जनता की सुरक्षा पर मंडराते विभिन्न खतरों को इस मानचित्र पर चिह्नित कीजिए। 'आंतरिक रूप से विस्थापित जन' के उदाहरण। विश्व का शरणार्थी-मानचित्र विश्व के संघर्ष-मानचित्र से लगभग हू-ब-हू मेल खाता है क्योंकि दक्षिणी गोलार्द्ध के देशों में सशस्त्र संघर्षों के कारण बड़े पैमाने पर विस्थापन होता है।"
-            </div>
+<div class="ch5-content">
+<h1 class="section-header hero-title">अध्याय 5: समकालीन विश्व में सुरक्षा - भाग 6 (खतरे के नए स्रोत: वैश्विक निर्धनता और जन-पलायन)</h1>
+<p>1990 के दशक में <b>'विश्व-सुरक्षा' (Global Security)</b> की धारणा उभरी। कोई भी देश इन समस्याओं का समाधान अकेले नहीं कर सकता। खतरों के नए स्रोतों में सबसे प्रमुख है—<b>वैश्विक निर्धनता (Global Poverty)</b> और जन-पलायन।</p>
+<h2 class="sub-header topic-header">1. उत्तरी बनाम दक्षिणी गोलार्द्ध की खाई</h2>
+<p>विश्व में जनसंख्या वृद्धि और आय के बीच गहरा असंतुलन है:</p>
+<ul style="list-style-type: square; margin-left: 40px;">
+<li><b>उत्तरी गोलार्द्ध के देश:</b> विकसित देशों में जनसंख्या कम है और प्रति व्यक्ति आय बहुत अधिक है।</li>
+<li><b>दक्षिणी गोलार्द्ध के देश:</b> विकासशील देशों में जनसंख्या बहुत तेजी से बढ़ रही है और 21वीं सदी के मध्य तक इसके दुगुने होने की संभावना है, जबकि प्रति व्यक्ति आय बेहद कम है।</li>
+</ul>
+<h2 class="sub-header topic-header">2. नवजात शिशु मृत्यु दर और आयु-प्रत्याशा (NCERT Page 74 डेटा)</h2>
+<p>एनसीईआरटी पाठ्यपुस्तक के अनुसार अमीर और गरीब देशों के बीच जीवन स्तर का अंतर तालिका में स्पष्ट है:</p>
+<table>
+<thead>
+<tr>
+<th>क्षेत्र / देश</th>
+<th>जन्म के समय आयु-प्रत्याशा</th>
+<th>शिशु मृत्यु दर / बाल-मृत्यु</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><b>स्वीडन (विकसित देश)</b></td>
+<td>70 वर्ष से अधिक (आय &gt; $1000)</td>
+<td>1000 में से केवल 3 मौतें</td>
+</tr>
+<tr>
+<td><b>भारतीय उपमहाद्वीप</b></td>
+<td>मध्यम जीवन स्तर</td>
+<td>प्रत्येक 7 शिशुओं में 1 की मौत</td>
+</tr>
+<tr>
+<td><b>सहारा मरुस्थल के दक्षिणी अफ्रीकी देश</b></td>
+<td>केवल 40 वर्ष (अत्यंत कम)</td>
+<td>प्रत्येक 5 शिशुओं में 1 की मौत (20%)</td>
+</tr>
+</tbody>
+</table>
+<!-- NCERT Map Box: Africa Refugee Map & Stats (NCERT Page 74) -->
+<div class="illustration-box" style="border: 10px solid #b91c1c !important; margin-top: 35px; margin-bottom: 35px; border-radius: 12px; text-align: center; background-color: #ffffff;">
+<img alt="Africa Refugee Map and Health Stats" class="illustration-img" src="images/ch5/page_12_africa_refugee_map.webp" style="width: 100%; max-width: 600px; height: auto; display: block; margin: 20px auto; border: 10px solid #cbd5e1 !important; border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.15);"/>
+<div class="illustration-explanation" style="border-left: 20px solid #b91c1c !important; background: #fff5f5; padding: 25px;  text-align: justify; line-height: 1.8;">
+<b>एनसीईआरटी मानचित्र एवं सांख्यिकी: अफ्रीका में विस्थापन (NCERT Page 74):</b><br>
+<b>एनसीईआरटी पाठ्यपुस्तक वक्तव्य:</b> "अफ्रीका का एक मानचित्र लीजिए और जनता की सुरक्षा पर मंडराते विभिन्न खतरों को इस मानचित्र पर चिह्नित कीजिए। 'आंतरिक रूप से विस्थापित जन' के उदाहरण। विश्व का शरणार्थी-मानचित्र विश्व के संघर्ष-मानचित्र से लगभग हू-ब-हू मेल खाता है क्योंकि दक्षिणी गोलार्द्ध के देशों में सशस्त्र संघर्षों के कारण बड़े पैमाने पर विस्थापन होता है।"
+            </br></div>
+</div>
+<h2 class="sub-header topic-header">3. शरणार्थी (Refugees) बनाम आंतरिक विस्थापित जन (Internally Displaced)</h2>
+<p>जन-पलायन के कारण अंतर्राष्ट्रीय राजनीति में दो भिन्न प्रकार के समूह बनते हैं:</p>
+<div class="keyword-box">
+<b>(i) शरणार्थी (Refugees):</b> युद्ध, प्राकृतिक आपदा अथवा राजनीतिक उत्पीड़न के कारण जो लोग अपना देश छोड़कर दूसरे देशों में शरण लेते हैं। अंतर्राष्ट्रीय कानून के तहत इन्हें सुरक्षा मिलती है।
         </div>
-
-        <h2 class="sub-header">3. शरणार्थी (Refugees) बनाम आंतरिक विस्थापित जन (Internally Displaced)</h2>
-        <p>जन-पलायन के कारण अंतर्राष्ट्रीय राजनीति में दो भिन्न प्रकार के समूह बनते हैं:</p>
-        <div class="keyword-box">
-            <b>(i) शरणार्थी (Refugees):</b> युद्ध, प्राकृतिक आपदा अथवा राजनीतिक उत्पीड़न के कारण जो लोग अपना देश छोड़कर दूसरे देशों में शरण लेते हैं। अंतर्राष्ट्रीय कानून के तहत इन्हें सुरक्षा मिलती है।
+<div class="keyword-box" style="background-color: #f0f9ff; border-color: #3b82f6;">
+<b>(ii) आंतरिक रूप से विस्थापित जन (Internally Displaced Persons):</b> वे लोग जो हिंसा या आपदा के कारण अपना घर-बार छोड़ते हैं परंतु अपने देश की सीमाओं के भीतर ही बने रहते हैं। (जैसे 1990 के दशक में कश्मीर घाटी छोड़ने वाले कश्मीरी पंडित)।
         </div>
-        <div class="keyword-box" style="background-color: #f0f9ff; border-color: #3b82f6;">
-            <b>(ii) आंतरिक रूप से विस्थापित जन (Internally Displaced Persons):</b> वे लोग जो हिंसा या आपदा के कारण अपना घर-बार छोड़ते हैं परंतु अपने देश की सीमाओं के भीतर ही बने रहते हैं। (जैसे 1990 के दशक में कश्मीर घाटी छोड़ने वाले कश्मीरी पंडित)।
-        </div>
-    </div>
+</div>
 </body>
 </html>
-
-<br><br><hr><br><br>
+<br/><br/><hr/><br/><br/>
 <!DOCTYPE html>
+
 <html lang="hi">
 <head>
-    <meta charset="UTF-8">
-    <style>
+<meta charset="utf-8"/>
+<style>
+        p, li, h1, h2, h3, h4, b, strong, td, th {
+            font-weight: 900 !important;
+            -webkit-text-stroke: 1.1px #000000;
+            text-shadow: 0 0 1px #000;
+        }
+        body, p, li, td, th, div, span {
+            font-size: 28pt !important;
+            line-height: 1.8 !important;
+        }
+        .ch5-content {
+            font-size: 28pt !important;
+            line-height: 1.8 !important;
+            padding: 10px !important;
+        }
+        /* Projector Banner Styles for Headings */
+        .hero-title, h1.section-header {
+            text-align: center !important;
+            color: #ffffff !important;
+            background-color: #064e3b !important; /* Dark Green Background */
+            border: 5px solid #10b981 !important;
+            border-radius: 20px !important;
+            padding: 30px !important;
+            margin-bottom: 50px !important;
+            font-size: 60pt !important;
+            font-weight: 900 !important;
+            box-shadow: 0 8px 25px rgba(6, 78, 59, 0.4) !important;
+        }
+        .part-header {
+            color: #7f1d1d !important;
+            background-color: #fee2e2 !important;
+            border-left: 18px solid #b91c1c !important;
+            padding: 22px 28px !important;
+            border-radius: 14px !important;
+            font-size: 46pt !important;
+            font-weight: 900 !important;
+            margin-top: 40px !important;
+            margin-bottom: 35px !important;
+            box-shadow: 0 6px 15px rgba(0,0,0,0.08) !important;
+        }
+        .topic-header, h2.sub-header {
+            color: #1e3a8a !important;
+            background-color: #eff6ff !important;
+            border-left: 16px solid #2563eb !important;
+            padding: 20px 26px !important;
+            border-radius: 12px !important;
+            font-size: 38pt !important;
+            font-weight: 900 !important;
+            margin-top: 45px !important;
+            margin-bottom: 30px !important;
+        }
+        .subtopic-header {
+            color: #4c1d95 !important;
+            background-color: #f3e8ff !important;
+            border-left: 14px solid #7c3aed !important;
+            padding: 18px 24px !important;
+            border-radius: 10px !important;
+            font-size: 32pt !important;
+            font-weight: 900 !important;
+            margin-top: 40px !important;
+            margin-bottom: 25px !important;
+        }
+        .box-header {
+            color: #166534 !important;
+            background-color: #f0fdf4 !important;
+            border-left: 12px solid #16a34a !important;
+            padding: 16px 20px !important;
+            border-radius: 10px !important;
+            font-size: 30pt !important;
+            font-weight: 900 !important;
+        }
+        /* Highlights */
+        b, strong {
+            color: #b91c1c !important; /* Dark Red */
+            font-weight: 900 !important;
+        }
+        .blue-highlight, b.blue-text, strong.blue-text {
+            color: #1e3a8a !important;
+        }
+        .keyword-box, .concept-card, .highlight-box {
+            font-size: 28pt !important;
+            line-height: 1.8 !important;
+            padding: 25px !important;
+            margin: 30px 0 !important;
+        }
+        .illustration-box { border: 4px solid #cbd5e1 !important; border-radius: 12px; padding: 20px; background-color: #ffffff; margin-top: 25px; }
+        .illustration-explanation { border-left: 6px solid #cbd5e1 !important; padding-left: 15px; font-size: 28pt !important; line-height: 1.6 !important; text-align: left; margin-top: 15px; }
+
+
         .ch5-content { font-family: 'Arial', sans-serif; line-height: 2.2; font-size: 24pt; color: #000000; padding: 40px; }
         .section-header { color: #b91c1c; border-bottom: 5px solid #ef4444; padding-bottom: 15px; font-size: 40pt; margin-bottom: 30px; font-weight: 900; }
         .sub-header { color: #dc2626; font-size: 38pt; margin-top: 50px; font-weight: 900; }
@@ -571,67 +1235,148 @@
     </style>
 </head>
 <body>
-    <div class="ch5-content">
-        <h1 class="section-header">अध्याय 5: समकालीन विश्व में सुरक्षा - भाग 7 (खतरे के नए स्रोत: आतंकवाद, महामारियां और वैश्विक तापवृद्धि)</h1>
-        
-        <p>गैर-पारंपरिक सुरक्षा के अंतर्गत खतरे के नए स्रोतों में <b>आतंकवाद (Terrorism)</b>, <b>महामारियां (Epidemics)</b> और <b>वैश्विक तापवृद्धि (Global Warming)</b> भी शामिल हैं जो किसी एक देश की सीमा तक सीमित नहीं हैं।</p>
-
-        <h2 class="sub-header">1. आतंकवाद (Terrorism)</h2>
-        <p>आतंकवाद का आशय राजनीतिक हिंसा से है जो जानबूझकर और बिना किसी मुरौवत के आम नागरिकों को अपना निशाना बनाती है।</p>
-        <ul style="list-style-type: square; margin-left: 40px;">
-            <li>इसका उद्देश्य समाज में दहशत फैलाना और सरकार की नीति को बदलना होता है।</li>
-            <li>विमान का अपहरण, भीड़भरे स्थानों पर बम विस्फोट और सार्वजनिक इमारतों पर हमला इसके सामान्य तरीके हैं।</li>
-            <li><b>9/11 की घटना:</b> 11 सितंबर 2001 को अमेरिका में हुए हमलों के बाद आतंकवाद को विश्व स्तर पर सुरक्षा का मुख्य मुद्दा माना जाने लगा।</li>
-        </ul>
-
-        <!-- NCERT Cartoon Box: Blind World Cartoon (NCERT Page 76) -->
-        <div class="illustration-box" style="border: 10px solid #b91c1c !important; margin-top: 35px; margin-bottom: 35px; border-radius: 12px; text-align: center; background-color: #ffffff;">
-            <img alt="Blind World Cartoon" src="images/ch5/page_14_blind_world.webp" style="width: 100%; max-width: 550px; height: auto; display: block; margin: 20px auto; border: 10px solid #cbd5e1 !important; border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.15);" class="illustration-img"/>
-            <div class="illustration-explanation" style="border-left: 20px solid #b91c1c !important; background: #fff5f5; padding: 25px; font-size: 24pt !important; text-align: justify; line-height: 1.8;">
-                <b>एनसीईआरटी कार्टून: अंधा विश्व (Ares, Cagle Cartoon - NCERT पृष्ठ 76):</b><br/>
-                <b>कार्टून का विवरण:</b> कार्टून में एक व्यक्ति (विश्व बिरादरी/नेताओं) को दिखाया गया है जिसकी आँखों को दोनों तरफ से 'युद्ध' (War) और 'आतंकवाद' (Terrorism) की उंगलियों ने ढँक रखा है, जिससे वह अंधा हो चुका है। चित्र के नीचे शीर्षक लिखा है—<b>"अंधा विश्व"</b>।<br/>
-                <b>कार्टून का संदेश:</b> यह कार्टून दर्शाता है कि विश्व समुदाय युद्ध और आतंकवाद की पारस्परिक हिंसा की अंधी होड़ में इस कदर उलझ चुका है कि वह मानवता की असली चुनौतियों (जैसे गरीबी, विकास और महामारियों) को देख ही नहीं पा रहा है।
-            </div>
-        </div>
-
-        <!-- NCERT Cartoon Box: Keshav Global Threats Cartoon (NCERT Page 75) -->
-        <div class="illustration-box" style="border: 10px solid #b91c1c !important; margin-top: 35px; margin-bottom: 35px; border-radius: 12px; text-align: center; background-color: #ffffff;">
-            <img alt="Keshav Global Threats Cartoon" src="images/ch5/page_13_keshav_global_threats.webp" style="width: 100%; max-width: 550px; height: auto; display: block; margin: 20px auto; border: 10px solid #cbd5e1 !important; border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.15);" class="illustration-img"/>
-            <div class="illustration-explanation" style="border-left: 20px solid #b91c1c !important; background: #fff5f5; padding: 25px; font-size: 24pt !important; text-align: justify; line-height: 1.8;">
-                <b>एनसीईआरटी कार्टून: मानवता पर तीन वैश्विक संकट (Keshav, The Hindu - NCERT Page 75):</b><br/>
-                <b>एनसीईआरटी पाठ्यपुस्तक प्रश्न:</b> "यहाँ जो मुद्दे दिखाए गए हैं (आतंकवाद, प्राकृतिक आपदाएं, महामारी) उनसे दुनिया कैसे उबरे?"
-            </div>
-        </div>
-
-        <h2 class="sub-header">2. वैश्विक महामारियां (Global Epidemics)</h2>
-        <p>HIV-AIDS, बर्ड फ्लू और सार्स (SARS - Severe Acute Respiratory Syndrome) जैसी महामारियां आव्रजन, व्यवसाय, पर्यटन और सैन्य अभियानों के जरिए तेजी से फैलती हैं:</p>
-        <ul style="list-style-type: disc; margin-left: 40px;">
-            <li>दक्षिणी अफ्रीकी देशों में HIV-AIDS का गंभीर खतरा है। बोत्सवाना में 3 में से 1 व्यक्ति और दक्षिण अफ्रीका में 6 में से 1 व्यक्ति इस रोग से पीड़ित है।</li>
-            <li>बर्ड फ्लू के कारण कई दक्षिण एशियाई देशों को मुर्ग-निर्यात बंद करना पड़ा।</li>
-            <li>इबोला, हंतावायरस, हेपेटाइटिस सी और कोविड-19 ने सिद्ध किया कि महामारियों से निपटने के लिए अंतर्राष्ट्रीय सहयोग आवश्यक है।</li>
-        </ul>
-
-        <h2 class="sub-header">3. वैश्विक तापवृद्धि (Global Warming)</h2>
-        <p>वैश्विक तापवृद्धि से पर्यावरण को भारी खतरा है क्योंकि समुद्र तल के ऊँचा उठने से मालदीव और बांग्लादेश का ज्यादातर हिस्सा डूब जाएगा और करोड़ों लोग बेघर होंगे।</p>
-
-        <!-- NCERT Chart Box: Global Refugee Distribution 2017 (NCERT Page 76) -->
-        <div class="illustration-box" style="border: 10px solid #000000 !important; margin-top: 35px; margin-bottom: 35px; border-radius: 12px; text-align: center; background-color: #ffffff;">
-            <img alt="Global Refugee Distribution Chart 2017" src="images/ch5/page_14_refugee_chart_2017.webp" style="width: 100%; max-width: 550px; height: auto; display: block; margin: 20px auto; border: 10px solid #cbd5e1 !important; border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.15);" class="illustration-img"/>
-            <div class="illustration-explanation" style="border-left: 20px solid #000000 !important; background: #f8fafc; padding: 25px; font-size: 24pt !important; text-align: justify; line-height: 1.8;">
-                <b>एनसीईआरटी चार्ट: शरणार्थियों को शरण (UNHCR Data 2017 - NCERT Page 76):</b><br/>
-                <b>मानचित्र डेटा:</b> विश्व के विस्थापित लोगों को शरण दिए जाने के आंकड़े—17% यूरोप, 30% अफ्रीका, 26% एशिया और पैसिफिक, तथा मिडिल ईस्ट एवं उत्तरी अफ्रीका। (स्रोत: http://www.unhcr.org)
-            </div>
-        </div>
-    </div>
+<div class="ch5-content">
+<h1 class="section-header hero-title">अध्याय 5: समकालीन विश्व में सुरक्षा - भाग 7 (खतरे के नए स्रोत: आतंकवाद, महामारियां और वैश्विक तापवृद्धि)</h1>
+<p>गैर-पारंपरिक सुरक्षा के अंतर्गत खतरे के नए स्रोतों में <b>आतंकवाद (Terrorism)</b>, <b>महामारियां (Epidemics)</b> और <b>वैश्विक तापवृद्धि (Global Warming)</b> भी शामिल हैं जो किसी एक देश की सीमा तक सीमित नहीं हैं।</p>
+<h2 class="sub-header topic-header">1. आतंकवाद (Terrorism)</h2>
+<p>आतंकवाद का आशय राजनीतिक हिंसा से है जो जानबूझकर और बिना किसी मुरौवत के आम नागरिकों को अपना निशाना बनाती है।</p>
+<ul style="list-style-type: square; margin-left: 40px;">
+<li>इसका उद्देश्य समाज में दहशत फैलाना और सरकार की नीति को बदलना होता है।</li>
+<li>विमान का अपहरण, भीड़भरे स्थानों पर बम विस्फोट और सार्वजनिक इमारतों पर हमला इसके सामान्य तरीके हैं।</li>
+<li><b>9/11 की घटना:</b> 11 सितंबर 2001 को अमेरिका में हुए हमलों के बाद आतंकवाद को विश्व स्तर पर सुरक्षा का मुख्य मुद्दा माना जाने लगा।</li>
+</ul>
+<!-- NCERT Cartoon Box: Blind World Cartoon (NCERT Page 76) -->
+<div class="illustration-box" style="border: 10px solid #b91c1c !important; margin-top: 35px; margin-bottom: 35px; border-radius: 12px; text-align: center; background-color: #ffffff;">
+<img alt="Blind World Cartoon" class="illustration-img" src="images/ch5/page_14_blind_world.webp" style="width: 100%; max-width: 550px; height: auto; display: block; margin: 20px auto; border: 10px solid #cbd5e1 !important; border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.15);"/>
+<div class="illustration-explanation" style="border-left: 20px solid #b91c1c !important; background: #fff5f5; padding: 25px;  text-align: justify; line-height: 1.8;">
+<b>एनसीईआरटी कार्टून: अंधा विश्व (Ares, Cagle Cartoon - NCERT पृष्ठ 76):</b><br>
+<b>कार्टून का विवरण:</b> कार्टून में एक व्यक्ति (विश्व बिरादरी/नेताओं) को दिखाया गया है जिसकी आँखों को दोनों तरफ से 'युद्ध' (War) और 'आतंकवाद' (Terrorism) की उंगलियों ने ढँक रखा है, जिससे वह अंधा हो चुका है। चित्र के नीचे शीर्षक लिखा है—<b>"अंधा विश्व"</b>।<br>
+<b>कार्टून का संदेश:</b> यह कार्टून दर्शाता है कि विश्व समुदाय युद्ध और आतंकवाद की पारस्परिक हिंसा की अंधी होड़ में इस कदर उलझ चुका है कि वह मानवता की असली चुनौतियों (जैसे गरीबी, विकास और महामारियों) को देख ही नहीं पा रहा है।
+            </br></br></div>
+</div>
+<!-- NCERT Cartoon Box: Keshav Global Threats Cartoon (NCERT Page 75) -->
+<div class="illustration-box" style="border: 10px solid #b91c1c !important; margin-top: 35px; margin-bottom: 35px; border-radius: 12px; text-align: center; background-color: #ffffff;">
+<img alt="Keshav Global Threats Cartoon" class="illustration-img" src="images/ch5/page_13_keshav_global_threats.webp" style="width: 100%; max-width: 550px; height: auto; display: block; margin: 20px auto; border: 10px solid #cbd5e1 !important; border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.15);"/>
+<div class="illustration-explanation" style="border-left: 20px solid #b91c1c !important; background: #fff5f5; padding: 25px;  text-align: justify; line-height: 1.8;">
+<b>एनसीईआरटी कार्टून: मानवता पर तीन वैश्विक संकट (Keshav, The Hindu - NCERT Page 75):</b><br>
+<b>एनसीईआरटी पाठ्यपुस्तक प्रश्न:</b> "यहाँ जो मुद्दे दिखाए गए हैं (आतंकवाद, प्राकृतिक आपदाएं, महामारी) उनसे दुनिया कैसे उबरे?"
+            </br></div>
+</div>
+<h2 class="sub-header topic-header">2. वैश्विक महामारियां (Global Epidemics)</h2>
+<p>HIV-AIDS, बर्ड फ्लू और सार्स (SARS - Severe Acute Respiratory Syndrome) जैसी महामारियां आव्रजन, व्यवसाय, पर्यटन और सैन्य अभियानों के जरिए तेजी से फैलती हैं:</p>
+<ul style="list-style-type: disc; margin-left: 40px;">
+<li>दक्षिणी अफ्रीकी देशों में HIV-AIDS का गंभीर खतरा है। बोत्सवाना में 3 में से 1 व्यक्ति और दक्षिण अफ्रीका में 6 में से 1 व्यक्ति इस रोग से पीड़ित है।</li>
+<li>बर्ड फ्लू के कारण कई दक्षिण एशियाई देशों को मुर्ग-निर्यात बंद करना पड़ा।</li>
+<li>इबोला, हंतावायरस, हेपेटाइटिस सी और कोविड-19 ने सिद्ध किया कि महामारियों से निपटने के लिए अंतर्राष्ट्रीय सहयोग आवश्यक है।</li>
+</ul>
+<h2 class="sub-header topic-header">3. वैश्विक तापवृद्धि (Global Warming)</h2>
+<p>वैश्विक तापवृद्धि से पर्यावरण को भारी खतरा है क्योंकि समुद्र तल के ऊँचा उठने से मालदीव और बांग्लादेश का ज्यादातर हिस्सा डूब जाएगा और करोड़ों लोग बेघर होंगे।</p>
+<!-- NCERT Chart Box: Global Refugee Distribution 2017 (NCERT Page 76) -->
+<div class="illustration-box" style="border: 10px solid #000000 !important; margin-top: 35px; margin-bottom: 35px; border-radius: 12px; text-align: center; background-color: #ffffff;">
+<img alt="Global Refugee Distribution Chart 2017" class="illustration-img" src="images/ch5/page_14_refugee_chart_2017.webp" style="width: 100%; max-width: 550px; height: auto; display: block; margin: 20px auto; border: 10px solid #cbd5e1 !important; border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.15);"/>
+<div class="illustration-explanation" style="border-left: 20px solid #000000 !important; background: #f8fafc; padding: 25px;  text-align: justify; line-height: 1.8;">
+<b>एनसीईआरटी चार्ट: शरणार्थियों को शरण (UNHCR Data 2017 - NCERT Page 76):</b><br>
+<b>मानचित्र डेटा:</b> विश्व के विस्थापित लोगों को शरण दिए जाने के आंकड़े—17% यूरोप, 30% अफ्रीका, 26% एशिया और पैसिफिक, तथा मिडिल ईस्ट एवं उत्तरी अफ्रीका। (स्रोत: http://www.unhcr.org)
+            </br></div>
+</div>
+</div>
 </body>
 </html>
-
-<br><br><hr><br><br>
+<br/><br/><hr/><br/><br/>
 <!DOCTYPE html>
+
 <html lang="hi">
 <head>
-    <meta charset="UTF-8">
-    <style>
+<meta charset="utf-8"/>
+<style>
+        p, li, h1, h2, h3, h4, b, strong, td, th {
+            font-weight: 900 !important;
+            -webkit-text-stroke: 1.1px #000000;
+            text-shadow: 0 0 1px #000;
+        }
+        body, p, li, td, th, div, span {
+            font-size: 28pt !important;
+            line-height: 1.8 !important;
+        }
+        .ch5-content {
+            font-size: 28pt !important;
+            line-height: 1.8 !important;
+            padding: 10px !important;
+        }
+        /* Projector Banner Styles for Headings */
+        .hero-title, h1.section-header {
+            text-align: center !important;
+            color: #ffffff !important;
+            background-color: #064e3b !important; /* Dark Green Background */
+            border: 5px solid #10b981 !important;
+            border-radius: 20px !important;
+            padding: 30px !important;
+            margin-bottom: 50px !important;
+            font-size: 60pt !important;
+            font-weight: 900 !important;
+            box-shadow: 0 8px 25px rgba(6, 78, 59, 0.4) !important;
+        }
+        .part-header {
+            color: #7f1d1d !important;
+            background-color: #fee2e2 !important;
+            border-left: 18px solid #b91c1c !important;
+            padding: 22px 28px !important;
+            border-radius: 14px !important;
+            font-size: 46pt !important;
+            font-weight: 900 !important;
+            margin-top: 40px !important;
+            margin-bottom: 35px !important;
+            box-shadow: 0 6px 15px rgba(0,0,0,0.08) !important;
+        }
+        .topic-header, h2.sub-header {
+            color: #1e3a8a !important;
+            background-color: #eff6ff !important;
+            border-left: 16px solid #2563eb !important;
+            padding: 20px 26px !important;
+            border-radius: 12px !important;
+            font-size: 38pt !important;
+            font-weight: 900 !important;
+            margin-top: 45px !important;
+            margin-bottom: 30px !important;
+        }
+        .subtopic-header {
+            color: #4c1d95 !important;
+            background-color: #f3e8ff !important;
+            border-left: 14px solid #7c3aed !important;
+            padding: 18px 24px !important;
+            border-radius: 10px !important;
+            font-size: 32pt !important;
+            font-weight: 900 !important;
+            margin-top: 40px !important;
+            margin-bottom: 25px !important;
+        }
+        .box-header {
+            color: #166534 !important;
+            background-color: #f0fdf4 !important;
+            border-left: 12px solid #16a34a !important;
+            padding: 16px 20px !important;
+            border-radius: 10px !important;
+            font-size: 30pt !important;
+            font-weight: 900 !important;
+        }
+        /* Highlights */
+        b, strong {
+            color: #b91c1c !important; /* Dark Red */
+            font-weight: 900 !important;
+        }
+        .blue-highlight, b.blue-text, strong.blue-text {
+            color: #1e3a8a !important;
+        }
+        .keyword-box, .concept-card, .highlight-box {
+            font-size: 28pt !important;
+            line-height: 1.8 !important;
+            padding: 25px !important;
+            margin: 30px 0 !important;
+        }
+        .illustration-box { border: 4px solid #cbd5e1 !important; border-radius: 12px; padding: 20px; background-color: #ffffff; margin-top: 25px; }
+        .illustration-explanation { border-left: 6px solid #cbd5e1 !important; padding-left: 15px; font-size: 28pt !important; line-height: 1.6 !important; text-align: left; margin-top: 15px; }
+
+
         .ch5-content { font-family: 'Arial', sans-serif; line-height: 2.2; font-size: 24pt; color: #000000; padding: 40px; }
         .section-header { color: #b91c1c; border-bottom: 5px solid #ef4444; padding-bottom: 15px; font-size: 40pt; margin-bottom: 30px; font-weight: 900; }
         .sub-header { color: #dc2626; font-size: 38pt; margin-top: 50px; font-weight: 900; }
@@ -658,65 +1403,57 @@
     </style>
 </head>
 <body>
-    <div class="ch5-content">
-        <h1 class="section-header">अध्याय 5: समकालीन विश्व में सुरक्षा - भाग 8 (सहयोगात्मक सुरक्षा और भारत की सुरक्षा रणनीति)</h1>
-        
-        <p>सुरक्षा पर मंडराते अपारंपरिक खतरों से निपटने के लिए सैन्य-संघर्ष की नहीं बल्कि <b>सहयोग (Cooperative Security)</b> की जरूरत है। आतंकवाद से लड़ने या पर्यावरण बचाने में सैन्य बल से काम नहीं लिया जा सकता।</p>
-
-        <h2 class="sub-header">1. सहयोगात्मक सुरक्षा (Cooperative Security)</h2>
-        <p>सहयोगात्मक सुरक्षा में अंतर्राष्ट्रीय स्तर पर द्विपक्षीय, क्षेत्रीय और वैश्विक स्तर की संस्थाएं काम करती हैं:</p>
-        <ul style="list-style-type: square; margin-left: 40px;">
-            <li><b>अंतर्राष्ट्रीय संस्थाएं:</b> संयुक्त राष्ट्र संघ, विश्व बैंक, विश्व स्वास्थ्य संगठन (WHO)।</li>
-            <li><b>गैर-सरकारी संगठन और हस्तियां:</b> एमनेस्टी इंटरनेशनल, रेडक्रॉस तथा नेल्सन मंडेला व मदर टेरेसा जैसी हस्तियां।</li>
-            <li>बल प्रयोग का इस्तेमाल केवल अंतिम उपाय के रूप में और अंतर्राष्ट्रीय समुदाय की सहमति (UN सुरक्षा परिषद) से ही होना चाहिए।</li>
-        </ul>
-
-
-        <h2 class="sub-header">2. भारत की सुरक्षा रणनीति (India's Security Strategy)</h2>
-        <p>भारत की सुरक्षा रणनीति के चार प्रमुख घटक हैं:</p>
-        <ol style="font-size: 24pt; line-height: 2.2;">
-            <li><b>सैन्य क्षमता को मजबूत करना:</b> भारत ने अपने पड़ोसियों से हुए युद्धों के कारण अपनी सैन्य ताकत बढ़ाई और 1974 व 1998 में परमाणु परीक्षण किए।</li>
-            <li><b>अंतर्राष्ट्रीय नियमों को मजबूत करना:</b> भारत ने अंतर्राष्ट्रीय संस्थाओं और नियमों (जैसे गुटनिरपेक्षता, UN शांति अभियान, परमाणु निशस्त्रीकरण) को मजबूत करने की वकालत की।</li>
-            <li><b>आंतरिक सुरक्षा चुनौतियों से निपटना:</b> नागालैंड, मिजोरम, पंजाब और कश्मीर जैसे क्षेत्रों के अलगाववादी आंदोलनों से लोकतांत्रिक तरीके से निपटना और राष्ट्रीय एकता बनाए रखना।</li>
-            <li><b>आर्थिक विकास और गरीबी उन्मूलन:</b> भारतीय अर्थव्यवस्था को इस तरह विकसित करना कि नागरिकों को गरीबी और अभाव से निजात मिले तथा आर्थिक असमानता न बढ़े।</li>
-        </ol>
-
-        <!-- NCERT Active Exercise Diagram: Kotabagh River Simulation (NCERT Page 78) -->
-        <div class="concept-card" style="border-color: #3b82f6; background-color: #f0f9ff; border: 6px solid #3b82f6;">
-            <h3 style="color: #1e3a8a; font-size: 32pt; margin-top: 0; font-weight: 900;">🧩 एनसीईआरटी गतिविधि: कोटाबाग नदी जल विवाद खेल (NCERT Page 78)</h3>
-            <p><b>सिमुलेशन का विवरण:</b> नदी के किनारे चार गांव बसे हैं—<b>कोटाबाग (Kotabagh)</b>, <b>गेवली (Gewali)</b>, <b>कंडली (Kandli)</b> और <b>गोइप्पा (Goippa)</b>।</p>
-            <ul style="font-size: 24pt; line-height: 2.0;">
-                <li><b>कोटाबाग:</b> नदी के किनारे सबसे पहले आकर बसा, प्राकृतिक संसाधनों पर इसकी अबाध पहुँच है।</li>
-                <li><b>गेवली, कंडली, गोइप्पा:</b> बाद में बसे, जो संसाधन और जल बंटवारे की सुरक्षा को लेकर चिंतित हैं।</li>
-            </ul>
-            <div style="text-align: center; margin: 20px 0;">
-                <img alt="Kotabagh River Simulation Diagram" src="images/ch5/page_16_kotabagh_river_simulation.webp" style="width: 100%; max-width: 550px; height: auto; display: block; margin: 0 auto; border: 4px solid #cbd5e1; border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.15);" class="illustration-img"/>
-            </div>
-            <p><b>एनसीईआरटी शिक्षक निर्देश:</b> "गांवों को राष्ट्र के रूप में वर्णित करें और सुरक्षा/खतरे की समस्याओं को प्राकृतिक संसाधनों तक पहुंच और क्षेत्रीय अखंडता से जोड़ें।"</p>
-        </div>
-
-        <!-- NCERT Cartoon Box: War and Terrorism (NCERT Page 80) -->
-        <div class="illustration-box" style="border: 10px solid #b91c1c !important; margin-top: 35px; margin-bottom: 35px; border-radius: 12px; text-align: center; background-color: #ffffff;">
-            <img alt="War and Terrorism Cartoon" src="images/ch5/page_18_war_terrorism.webp" style="width: 100%; max-width: 550px; height: auto; display: block; margin: 20px auto; border: 10px solid #cbd5e1 !important; border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.15);" class="illustration-img"/>
-            <div class="illustration-explanation" style="border-left: 20px solid #b91c1c !important; background: #fff5f5; padding: 25px; font-size: 24pt !important; text-align: justify; line-height: 1.8;">
-                <b>एनसीईआरटी प्रश्न 12 / कार्टून (Ares, Cagle Cartoon - NCERT Page 80):</b><br/>
-                <b>एनसीईआरटी पाठ्यपुस्तक प्रश्न:</b> "नीचे दिए गए कार्टून को समझें। कार्टून में युद्ध और आतंकवाद का जो संबंध दिखाया गया है उसके पक्ष या विपक्ष में एक संक्षिप्त टिप्पणी लिखिए।"<br/><br/>
-                <b>📝 उत्तर / विस्तृत टिप्पणी:</b><br/>
-                <b>1. युद्ध और आतंकवाद का गहरा संबंध (पक्ष में तर्क):</b><br/>
-                * कार्टून में युद्ध के सैनिक (Ares) के पीछे आतंकवाद के साये को हथियार और बम के साथ खड़ा दिखाया गया है। यह स्पष्ट करता है कि **सैन्य युद्ध और आतंकवाद एक-दूसरे को बढ़ावा देते हैं**।<br/>
-                * युद्ध के कारण किसी देश की राजनीतिक स्थिरता, कानून-व्यवस्था और अर्थव्यवस्था नष्ट हो जाती है। इस अराजकता का फायदा उठाकर आतंकी संगठन मजबूत होते हैं (जैसे इराक, सीरिया और अफगानिस्तान में देखा गया)।<br/>
-                * युद्धों में बेगुनाह नागरिकों की मौत और तबाही से उत्पन्न आक्रोश को आतंकवादी संगठन नए युवाओं की भर्ती के लिए इस्तेमाल करते हैं।<br/><br/>
-                <b>2. निष्कर्ष:</b><br/>
+<div class="ch5-content">
+<h1 class="section-header hero-title">अध्याय 5: समकालीन विश्व में सुरक्षा - भाग 8 (सहयोगात्मक सुरक्षा और भारत की सुरक्षा रणनीति)</h1>
+<p>सुरक्षा पर मंडराते अपारंपरिक खतरों से निपटने के लिए सैन्य-संघर्ष की नहीं बल्कि <b>सहयोग (Cooperative Security)</b> की जरूरत है। आतंकवाद से लड़ने या पर्यावरण बचाने में सैन्य बल से काम नहीं लिया जा सकता।</p>
+<h2 class="sub-header topic-header">1. सहयोगात्मक सुरक्षा (Cooperative Security)</h2>
+<p>सहयोगात्मक सुरक्षा में अंतर्राष्ट्रीय स्तर पर द्विपक्षीय, क्षेत्रीय और वैश्विक स्तर की संस्थाएं काम करती हैं:</p>
+<ul style="list-style-type: square; margin-left: 40px;">
+<li><b>अंतर्राष्ट्रीय संस्थाएं:</b> संयुक्त राष्ट्र संघ, विश्व बैंक, विश्व स्वास्थ्य संगठन (WHO)।</li>
+<li><b>गैर-सरकारी संगठन और हस्तियां:</b> एमनेस्टी इंटरनेशनल, रेडक्रॉस तथा नेल्सन मंडेला व मदर टेरेसा जैसी हस्तियां।</li>
+<li>बल प्रयोग का इस्तेमाल केवल अंतिम उपाय के रूप में और अंतर्राष्ट्रीय समुदाय की सहमति (UN सुरक्षा परिषद) से ही होना चाहिए।</li>
+</ul>
+<h2 class="sub-header topic-header">2. भारत की सुरक्षा रणनीति (India's Security Strategy)</h2>
+<p>भारत की सुरक्षा रणनीति के चार प्रमुख घटक हैं:</p>
+<ol style=" line-height: 2.2;">
+<li><b>सैन्य क्षमता को मजबूत करना:</b> भारत ने अपने पड़ोसियों से हुए युद्धों के कारण अपनी सैन्य ताकत बढ़ाई और 1974 व 1998 में परमाणु परीक्षण किए।</li>
+<li><b>अंतर्राष्ट्रीय नियमों को मजबूत करना:</b> भारत ने अंतर्राष्ट्रीय संस्थाओं और नियमों (जैसे गुटनिरपेक्षता, UN शांति अभियान, परमाणु निशस्त्रीकरण) को मजबूत करने की वकालत की।</li>
+<li><b>आंतरिक सुरक्षा चुनौतियों से निपटना:</b> नागालैंड, मिजोरम, पंजाब और कश्मीर जैसे क्षेत्रों के अलगाववादी आंदोलनों से लोकतांत्रिक तरीके से निपटना और राष्ट्रीय एकता बनाए रखना।</li>
+<li><b>आर्थिक विकास और गरीबी उन्मूलन:</b> भारतीय अर्थव्यवस्था को इस तरह विकसित करना कि नागरिकों को गरीबी और अभाव से निजात मिले तथा आर्थिक असमानता न बढ़े।</li>
+</ol>
+<!-- NCERT Active Exercise Diagram: Kotabagh River Simulation (NCERT Page 78) -->
+<div class="concept-card" style="border-color: #3b82f6; background-color: #f0f9ff; border: 6px solid #3b82f6;">
+<h3 class="subtopic-header" style="margin-top: 0; font-weight: 900;">🧩 एनसीईआरटी गतिविधि: कोटाबाग नदी जल विवाद खेल (NCERT Page 78)</h3>
+<p><b>सिमुलेशन का विवरण:</b> नदी के किनारे चार गांव बसे हैं—<b>कोटाबाग (Kotabagh)</b>, <b>गेवली (Gewali)</b>, <b>कंडली (Kandli)</b> और <b>गोइप्पा (Goippa)</b>।</p>
+<ul style=" line-height: 2.0;">
+<li><b>कोटाबाग:</b> नदी के किनारे सबसे पहले आकर बसा, प्राकृतिक संसाधनों पर इसकी अबाध पहुँच है।</li>
+<li><b>गेवली, कंडली, गोइप्पा:</b> बाद में बसे, जो संसाधन और जल बंटवारे की सुरक्षा को लेकर चिंतित हैं।</li>
+</ul>
+<div style="text-align: center; margin: 20px 0;">
+<img alt="Kotabagh River Simulation Diagram" class="illustration-img" src="images/ch5/page_16_kotabagh_river_simulation.webp" style="width: 100%; max-width: 550px; height: auto; display: block; margin: 0 auto; border: 4px solid #cbd5e1; border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.15);"/>
+</div>
+<p><b>एनसीईआरटी शिक्षक निर्देश:</b> "गांवों को राष्ट्र के रूप में वर्णित करें और सुरक्षा/खतरे की समस्याओं को प्राकृतिक संसाधनों तक पहुंच और क्षेत्रीय अखंडता से जोड़ें।"</p>
+</div>
+<!-- NCERT Cartoon Box: War and Terrorism (NCERT Page 80) -->
+<div class="illustration-box" style="border: 10px solid #b91c1c !important; margin-top: 35px; margin-bottom: 35px; border-radius: 12px; text-align: center; background-color: #ffffff;">
+<img alt="War and Terrorism Cartoon" class="illustration-img" src="images/ch5/page_18_war_terrorism.webp" style="width: 100%; max-width: 550px; height: auto; display: block; margin: 20px auto; border: 10px solid #cbd5e1 !important; border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.15);"/>
+<div class="illustration-explanation" style="border-left: 20px solid #b91c1c !important; background: #fff5f5; padding: 25px;  text-align: justify; line-height: 1.8;">
+<b>एनसीईआरटी प्रश्न 12 / कार्टून (Ares, Cagle Cartoon - NCERT Page 80):</b><br>
+<b>एनसीईआरटी पाठ्यपुस्तक प्रश्न:</b> "नीचे दिए गए कार्टून को समझें। कार्टून में युद्ध और आतंकवाद का जो संबंध दिखाया गया है उसके पक्ष या विपक्ष में एक संक्षिप्त टिप्पणी लिखिए।"<br><br>
+<b>📝 उत्तर / विस्तृत टिप्पणी:</b><br>
+<b>1. युद्ध और आतंकवाद का गहरा संबंध (पक्ष में तर्क):</b><br>
+                * कार्टून में युद्ध के सैनिक (Ares) के पीछे आतंकवाद के साये को हथियार और बम के साथ खड़ा दिखाया गया है। यह स्पष्ट करता है कि **सैन्य युद्ध और आतंकवाद एक-दूसरे को बढ़ावा देते हैं**।<br>
+                * युद्ध के कारण किसी देश की राजनीतिक स्थिरता, कानून-व्यवस्था और अर्थव्यवस्था नष्ट हो जाती है। इस अराजकता का फायदा उठाकर आतंकी संगठन मजबूत होते हैं (जैसे इराक, सीरिया और अफगानिस्तान में देखा गया)।<br>
+                * युद्धों में बेगुनाह नागरिकों की मौत और तबाही से उत्पन्न आक्रोश को आतंकवादी संगठन नए युवाओं की भर्ती के लिए इस्तेमाल करते हैं।<br><br>
+<b>2. निष्कर्ष:</b><br>
                 * यह कार्टून सिद्ध करता है कि **"सैन्य हिंसा कभी भी आतंकवाद का स्थाई समाधान नहीं हो सकती।"** आतंकवाद के खात्मे के लिए केवल हथियार नहीं, बल्कि गरीबी, अन्याय और राजनीतिक दमन जैसे मूल कारणों को 'सहयोगात्मक सुरक्षा' से दूर करना होगा।
-            </div>
-        </div>
-    </div>
+            </br></br></br></br></br></br></br></br></br></br></div>
+</div>
+</div>
 </body>
 </html>
-
-    </div>
-
-    <script>
+</div>
+<script>
     async function copyToGoogleDoc() {
         const btn = document.getElementById('mainCopyBtn');
         const status = document.getElementById('status');
@@ -741,6 +1478,5 @@
         }
     }
     </script>
-
 </body>
 </html>
