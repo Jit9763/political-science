@@ -1,9 +1,98 @@
 <!DOCTYPE html>
+
 <html lang="hi">
 <head>
-    <meta charset="UTF-8">
-    <title>Chapter 2 COPY MASTER - Premium Notes</title>
-    <style>
+<meta charset="utf-8"/>
+<title>Chapter 2 COPY MASTER - Premium Notes</title>
+<style>
+        p, li, h1, h2, h3, h4, b, strong, td, th {
+            font-weight: 900 !important;
+            -webkit-text-stroke: 1.1px #000000;
+            text-shadow: 0 0 1px #000;
+        }
+        body, p, li, td, th, div, span {
+            font-size: 28pt !important;
+            line-height: 1.8 !important;
+        }
+        .ch2-content {
+            font-size: 28pt !important;
+            line-height: 1.8 !important;
+            padding: 10px !important;
+        }
+        /* Projector Banner Styles for Headings */
+        .hero-title, h1.section-header {
+            text-align: center !important;
+            color: #ffffff !important;
+            background-color: #064e3b !important; /* Dark Green Background */
+            border: 5px solid #10b981 !important;
+            border-radius: 20px !important;
+            padding: 30px !important;
+            margin-bottom: 50px !important;
+            font-size: 60pt !important;
+            font-weight: 900 !important;
+            box-shadow: 0 8px 25px rgba(6, 78, 59, 0.4) !important;
+        }
+        .part-header {
+            color: #7f1d1d !important;
+            background-color: #fee2e2 !important;
+            border-left: 18px solid #b91c1c !important;
+            padding: 22px 28px !important;
+            border-radius: 14px !important;
+            font-size: 46pt !important;
+            font-weight: 900 !important;
+            margin-top: 40px !important;
+            margin-bottom: 35px !important;
+            box-shadow: 0 6px 15px rgba(0,0,0,0.08) !important;
+        }
+        .topic-header, h2.sub-header {
+            color: #1e3a8a !important;
+            background-color: #eff6ff !important;
+            border-left: 16px solid #2563eb !important;
+            padding: 20px 26px !important;
+            border-radius: 12px !important;
+            font-size: 38pt !important;
+            font-weight: 900 !important;
+            margin-top: 45px !important;
+            margin-bottom: 30px !important;
+        }
+        .subtopic-header {
+            color: #4c1d95 !important;
+            background-color: #f3e8ff !important;
+            border-left: 14px solid #7c3aed !important;
+            padding: 18px 24px !important;
+            border-radius: 10px !important;
+            font-size: 32pt !important;
+            font-weight: 900 !important;
+            margin-top: 40px !important;
+            margin-bottom: 25px !important;
+        }
+        .box-header {
+            color: #166534 !important;
+            background-color: #f0fdf4 !important;
+            border-left: 12px solid #16a34a !important;
+            padding: 16px 20px !important;
+            border-radius: 10px !important;
+            font-size: 30pt !important;
+            font-weight: 900 !important;
+        }
+        /* Highlights */
+        b, strong {
+            color: #b91c1c !important; /* Dark Red */
+            font-weight: 900 !important;
+        }
+        .blue-highlight, b.blue-text, strong.blue-text {
+            color: #1e3a8a !important;
+        }
+        .keyword-box, .highlight-box {
+            font-size: 28pt !important;
+            line-height: 1.8 !important;
+            padding: 25px !important;
+            margin: 30px 0 !important;
+        }
+        .illustration-box { border: 4px solid #cbd5e1 !important; border-radius: 12px; padding: 20px; background-color: #ffffff; margin-top: 25px; }
+        .illustration-explanation { border-left: 6px solid #cbd5e1 !important; padding-left: 15px; font-size: 28pt !important; line-height: 1.6 !important; text-align: left; margin-top: 15px; }
+
+
         body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f1f5f9; margin: 0; padding: 20px; text-align: center; }
         .header { background: #1e293b; color: white; padding: 20px; border-radius: 10px; margin-bottom: 30px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
         .copy-btn { background-color: #2563eb; color: white; padding: 20px 40px; font-size: 24pt; border: none; border-radius: 50px; cursor: pointer; font-weight: 900; transition: all 0.3s; box-shadow: 0 10px 20px rgba(37, 99, 235, 0.4); }
@@ -24,21 +113,19 @@
     </style>
 </head>
 <body>
+<div class="header">
+<h1>🚀 Chapter 2 (Full-Proof Copy Master)</h1>
+<p>100% Google Docs Compatible with Images (Localhost-Sync)</p>
+</div>
+<button class="copy-btn" id="mainCopyBtn" onclick="copyToGoogleDoc()">📋 COPY EVERYTHING FOR GOOGLE DOCS</button>
+<p id="status">✅ Copied Successfully! Now go to your Google Doc and Press Ctrl+V</p>
+<div class="preview" id="contentToCopy">
+<!DOCTYPE html>
 
-    <div class="header">
-        <h1>🚀 Chapter 2 (Full-Proof Copy Master)</h1>
-        <p>100% Google Docs Compatible with Images (Localhost-Sync)</p>
-    </div>
-
-    <button id="mainCopyBtn" class="copy-btn" onclick="copyToGoogleDoc()">📋 COPY EVERYTHING FOR GOOGLE DOCS</button>
-    <p id="status">✅ Copied Successfully! Now go to your Google Doc and Press Ctrl+V</p>
-
-    <div class="preview" id="contentToCopy">
-        <!DOCTYPE html>
 <html lang="hi">
 <head>
-    <meta charset="UTF-8">
-    <style>
+<meta charset="utf-8"/>
+<style>
         .ch2-content { font-family: 'Arial', sans-serif; line-height: 2.2; font-size: 18pt; color: #1a202c; padding: 40px; }
         .section-header { color: #1e3a8a; border-bottom: 5px solid #3b82f6; padding-bottom: 15px; font-size: 34pt; margin-bottom: 30px; }
         .sub-header { color: #2563eb; font-size: 28pt; margin-top: 50px; }
@@ -50,53 +137,48 @@
 </head>
 <body>
 <div class="ch2-content">
-    <h1 class="section-header">अध्याय 2: सत्ता के समकालीन केंद्र (Contemporary Centres of Power)</h1>
-    
-    <p><b>1.1 परिचय और वैश्विक परिदृश्य (Introduction & Global Context):</b><br/>
+<h1 class="section-header hero-title">अध्याय 2: सत्ता के समकालीन केंद्र (Contemporary Centres of Power)</h1>
+<p><b>1.1 परिचय और वैश्विक परिदृश्य (Introduction &amp; Global Context):</b><br/>
     1991 में सोवियत संघ (USSR) के विघटन के बाद, शीतयुद्ध की द्विध्रुवीय व्यवस्था समाप्त हो गई। पूरा विश्व एकध्रुवीय (Unipolar) हो गया, जहाँ अमेरिका एकमात्र महाशक्ति के रूप में स्थापित हो गया। अमेरिका ने अपने सैन्य, आर्थिक और सांस्कृतिक प्रभाव के बल पर पूरे विश्व पर अपना वर्चस्व कायम किया। लेकिन इतिहास गवाह है कि सत्ता का कोई भी केंद्र स्थायी नहीं रहता। विश्व राजनीति में अमेरिकी एकध्रुवीयता को चुनौती देने और संतुलित करने के लिए कई नए क्षेत्रीय संगठन (जैसे यूरोपीय संघ, आसियान, सार्क, ब्रिक्स) और देश (जैसे चीन, भारत, जापान, दक्षिण कोरिया) उभरकर सामने आए हैं। इन्हीं शक्तियों को <b>'सत्ता के समकालीन केंद्र'</b> या <b>'सत्ता के वैकल्पिक केंद्र'</b> कहा जाता है।</p>
-
-    <!-- Intro Illustration Card -->
-    <div class="illustration-box" style="border-color: #1e3a8a !important; margin-top: 35px; margin-bottom: 35px;">
-        <img alt="Contemporary Centres of Power Overview" src="images/ch2/ch2_intro_illustration.webp" style="width: 90%; max-width: 800px; display: block; margin: 0 auto; border: 4px solid #cbd5e1; border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.15);" class="illustration-img"/>
-        <div class="illustration-explanation" style="border-left-color: #1e3a8a !important;">
-            <b>आरेख: सत्ता के समकालीन वैकल्पिक केंद्र (Overview of Alternative Power Centres):</b><br/>
+<!-- Intro Illustration Card -->
+<div class="illustration-box" style="border-color: #1e3a8a !important; margin-top: 35px; margin-bottom: 35px;">
+<img alt="Contemporary Centres of Power Overview" class="illustration-img" src="images/ch2/ch2_intro_illustration.webp" style="width: 90%; max-width: 800px; display: block; margin: 0 auto; border: 4px solid #cbd5e1; border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.15);"/>
+<div class="illustration-explanation" style="border-left-color: #1e3a8a !important;">
+<b>आरेख: सत्ता के समकालीन वैकल्पिक केंद्र (Overview of Alternative Power Centres):</b><br/>
             यह आरेख शीत युद्धोत्तर काल में वैश्विक रंगमंच पर उभरे विभिन्न वैकल्पिक शक्ति समूहों को दर्शाता है, जो बहुध्रुवीय व्यवस्था (Multipolarity) का आधार हैं।
         </div>
-    </div>
-
-    <!-- Intro Stamp -->
-    <div class="illustration-box" style="border-color: #1e3a8a !important; margin-top: 35px; margin-bottom: 35px;">
-        <img alt="Chapter Introduction Stamp" src="images/ch2/ch2_intro_stamp.webp" style="width: 40%; max-width: 300px; display: block; margin: 0 auto; border: 4px solid #cbd5e1; border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.15);" class="illustration-img"/>
-        <div class="illustration-explanation" style="border-left-color: #1e3a8a !important;">
-            <b>ऐतिहासिक डाक टिकट (Introductory Stamp of Regional Cooperation):</b><br/>
+</div>
+<!-- Intro Stamp -->
+<div class="illustration-box" style="border-color: #1e3a8a !important; margin-top: 35px; margin-bottom: 35px;">
+<img alt="Chapter Introduction Stamp" class="illustration-img" src="images/ch2/ch2_intro_stamp.webp" style="width: 40%; max-width: 300px; display: block; margin: 0 auto; border: 4px solid #cbd5e1; border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.15);"/>
+<div class="illustration-explanation" style="border-left-color: #1e3a8a !important;">
+<b>ऐतिहासिक डाक टिकट (Introductory Stamp of Regional Cooperation):</b><br/>
             गांधी जी के चित्र वाली यह डाक टिकट भारत के ऐतिहासिक कूटनीतिक सफर और वैश्विक सहयोग के संदेश का प्रतिनिधित्व करती है।
         </div>
+</div>
+<div class="keyword-box">
+<b>बहुध्रुवीय विश्व (Multipolar World):</b> वह वैश्विक व्यवस्था जिसमें अंतर्राष्ट्रीय शक्ति और प्रभाव केवल एक या दो महाशक्तियों के पास न होकर अनेक देशों या क्षेत्रीय संगठनों के पास वितरित हो।
     </div>
-
-    <div class="keyword-box">
-        <b>बहुध्रुवीय विश्व (Multipolar World):</b> वह वैश्विक व्यवस्था जिसमें अंतर्राष्ट्रीय शक्ति और प्रभाव केवल एक या दो महाशक्तियों के पास न होकर अनेक देशों या क्षेत्रीय संगठनों के पास वितरित हो।
-    </div>
-
-    <h2 class="sub-header">2. वैकल्पिक शक्ति केंद्रों का उदय और औचित्य</h2>
-    <p>द्वितीय विश्वयुद्ध के बाद उभरे इन केंद्रों के बनने के निम्नलिखित मुख्य कारण थे:</p>
-    <ul style="list-style-type: square; margin-left: 40px; font-size: 20pt;">
-        <li><b>सामूहिक सुरक्षा और विकास:</b> छोटे और मध्यम आकार के देशों ने महसूस किया कि व्यक्तिगत रूप से वे अमेरिका की विशाल शक्ति का सामना नहीं कर सकते, इसलिए आर्थिक और राजनीतिक एकीकरण आवश्यक है।</li>
-        <li><b>क्षेत्रीय शांति:</b> आपसी ऐतिहासिक विवादों और युद्ध की विभीषिका से बचने के लिए बातचीत का मंच तैयार करना।</li>
-        <li><b>आर्थिक संप्रभुता:</b> पश्चिमी देशों के वर्चस्व वाली वित्तीय संस्थाओं (जैसे विश्व बैंक और आईएमएफ) पर निर्भरता कम करना और क्षेत्रीय मुक्त व्यापार क्षेत्र (FTA) बनाना।</li>
-    </ul>
-
-    <div class="highlight-box">
-        <b>अध्ययन युक्ति:</b> इस अध्याय का मुख्य उद्देश्य यह समझना है कि कैसे यूरोपीय संघ, आसियान, चीन, भारत, जापान और दक्षिण कोरिया जैसी शक्तियां भविष्य में विश्व राजनीति की रूपरेखा तय करेंगी।
+<h2 class="sub-header topic-header">2. वैकल्पिक शक्ति केंद्रों का उदय और औचित्य</h2>
+<p>द्वितीय विश्वयुद्ध के बाद उभरे इन केंद्रों के बनने के निम्नलिखित मुख्य कारण थे:</p>
+<ul style="list-style-type: square; margin-left: 40px; ">
+<li><b>सामूहिक सुरक्षा और विकास:</b> छोटे और मध्यम आकार के देशों ने महसूस किया कि व्यक्तिगत रूप से वे अमेरिका की विशाल शक्ति का सामना नहीं कर सकते, इसलिए आर्थिक और राजनीतिक एकीकरण आवश्यक है।</li>
+<li><b>क्षेत्रीय शांति:</b> आपसी ऐतिहासिक विवादों और युद्ध की विभीषिका से बचने के लिए बातचीत का मंच तैयार करना।</li>
+<li><b>आर्थिक संप्रभुता:</b> पश्चिमी देशों के वर्चस्व वाली वित्तीय संस्थाओं (जैसे विश्व बैंक और आईएमएफ) पर निर्भरता कम करना और क्षेत्रीय मुक्त व्यापार क्षेत्र (FTA) बनाना।</li>
+</ul>
+<div class="highlight-box">
+<b>अध्ययन युक्ति:</b> इस अध्याय का मुख्य उद्देश्य यह समझना है कि कैसे यूरोपीय संघ, आसियान, चीन, भारत, जापान और दक्षिण कोरिया जैसी शक्तियां भविष्य में विश्व राजनीति की रूपरेखा तय करेंगी।
     </div>
 </div>
 </body>
 </html>
-<br><br><hr><br><br>
+<br/><br/><hr/><br/><br/>
 <!DOCTYPE html>
+
 <html lang="hi">
 <head>
-    <meta charset="UTF-8">
-    <style>
+<meta charset="utf-8"/>
+<style>
         .ch2-content { font-family: 'Arial', sans-serif; line-height: 2.2; font-size: 18pt; color: #1a202c; padding: 40px; }
         .section-header { color: #6d28d9; border-bottom: 5px solid #a78bfa; padding-bottom: 15px; font-size: 34pt; margin-bottom: 30px; }
         .sub-header { color: #5b21b6; font-size: 28pt; margin-top: 50px; }
@@ -108,79 +190,71 @@
 </head>
 <body>
 <div class="ch2-content">
-    <h1 class="section-header">यूरोपीय संघ (European Union) - इतिहास, विकास और आर्थिक प्रभाव</h1>
-    
-    <div class="info-card">
-        <b>1. भौगोलिक स्थिति और मानचित्र (Map Position):</b><br/>
+<h1 class="section-header hero-title">यूरोपीय संघ (European Union) - इतिहास, विकास और आर्थिक प्रभाव</h1>
+<div class="info-card">
+<b>1. भौगोलिक स्थिति और मानचित्र (Map Position):</b><br>
         यूरोपीय संघ मुख्य रूप से यूरोप महाद्वीप में स्थित है। इसमें वर्तमान में 27 सदस्य देश शामिल हैं। भौगोलिक रूप से यह अटलांटिक महासागर से लेकर पूर्वी यूरोप की सीमाओं तक फैला हुआ है।
-    </div>
-
-    <!-- EU Flag -->
-    <div class="illustration-box" style="border-color: #6d28d9 !important; margin-top: 35px; margin-bottom: 35px;">
-        <img alt="EU Flag" src="images/ch2/eu_flag.webp" style="width: 90%; max-width: 800px; display: block; margin: 0 auto; border: 4px solid #cbd5e1; border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.15);" class="illustration-img"/>
-        <div class="illustration-explanation" style="border-left-color: #6d28d9 !important;">
-            <b>यूरोपीय संघ का ध्वज (Flag of the European Union):</b><br/>
+    </br></div>
+<!-- EU Flag -->
+<div class="illustration-box" style="border-color: #6d28d9 !important; margin-top: 35px; margin-bottom: 35px;">
+<img alt="EU Flag" class="illustration-img" src="images/ch2/eu_flag.webp" style="width: 90%; max-width: 800px; display: block; margin: 0 auto; border: 4px solid #cbd5e1; border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.15);"/>
+<div class="illustration-explanation" style="border-left-color: #6d28d9 !important;">
+<b>यूरोपीय संघ का ध्वज (Flag of the European Union):</b><br>
             नीले रंग की पृष्ठभूमि पर सोने के रंग के 12 सितारे हैं। यह यूरोप के लोगों के बीच एकता, मेल-मिलाप और पूर्ण सद्भाव का प्रतीक है। संख्या 12 को पूर्णता और समग्रता का पारंपरिक प्रतीक माना जाता है।
-        </div>
-    </div>
-
-    <h2 class="sub-header">1. संक्षिप्त इतिहास और द्वितीय विश्वयुद्ध के बाद वैकल्पिक केंद्र बनना</h2>
-    <p><b>1.1 ऐतिहासिक पृष्ठभूमि:</b><br/>
-    द्वितीय विश्वयुद्ध (1939-1945) ने पूरे यूरोप को तबाह कर दिया था। यूरोपीय नेताओं ने समझा कि यदि वे अपनी अर्थव्यवस्था को फिर से खड़ा करना चाहते हैं और भविष्य में होने वाले महाविनाश से बचना चाहते हैं, तो उन्हें एकजुट होना पड़ेगा। शीत युद्ध के दौरान, अमेरिका ने <b>'मार्शल योजना' (Marshall Plan)</b> के तहत यूरोप के पूंजीवादी देशों को भारी आर्थिक सहायता दी। 1948 में <b>यूरोपीय आर्थिक सहयोग संगठन (OEEC)</b> की स्थापना हुई, जिसने पश्चिमी यूरोप के देशों के बीच आर्थिक सहयोग शुरू कराया।</p>
-
-    <!-- EU Historical Portrait -->
-    <div class="illustration-box" style="border-color: #6d28d9 !important; margin-top: 35px; margin-bottom: 35px;">
-        <img alt="Robert Schuman" src="images/ch2/eu_historical_portrait.webp" style="width: 40%; max-width: 300px; display: block; margin: 0 auto; border: 4px solid #cbd5e1; border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.15);" class="illustration-img"/>
-        <div class="illustration-explanation" style="border-left-color: #6d28d9 !important;">
-            <b>रॉबर्ट शुमान (Robert Schuman):</b><br/>
+        </br></div>
+</div>
+<h2 class="sub-header topic-header">1. संक्षिप्त इतिहास और द्वितीय विश्वयुद्ध के बाद वैकल्पिक केंद्र बनना</h2>
+<p><b>1.1 ऐतिहासिक पृष्ठभूमि:</b><br>
+    द्वितीय विश्वयुद्ध (1939-1945) ने पूरे यूरोप को तबाह कर दिया था। यूरोपीय नेताओं ने समझा कि यदि वे अपनी अर्थव्यवस्था को फिर से खड़ा करना चाहते हैं और भविष्य में होने वाले महाविनाश से बचना चाहते हैं, तो उन्हें एकजुट होना पड़ेगा। शीत युद्ध के दौरान, अमेरिका ने <b>'मार्शल योजना' (Marshall Plan)</b> के तहत यूरोप के पूंजीवादी देशों को भारी आर्थिक सहायता दी। 1948 में <b>यूरोपीय आर्थिक सहयोग संगठन (OEEC)</b> की स्थापना हुई, जिसने पश्चिमी यूरोप के देशों के बीच आर्थिक सहयोग शुरू कराया।</br></p>
+<!-- EU Historical Portrait -->
+<div class="illustration-box" style="border-color: #6d28d9 !important; margin-top: 35px; margin-bottom: 35px;">
+<img alt="Robert Schuman" class="illustration-img" src="images/ch2/eu_historical_portrait.webp" style="width: 40%; max-width: 300px; display: block; margin: 0 auto; border: 4px solid #cbd5e1; border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.15);"/>
+<div class="illustration-explanation" style="border-left-color: #6d28d9 !important;">
+<b>रॉबर्ट शुमान (Robert Schuman):</b><br>
             फ्रांसीसी विदेश मंत्री रॉबर्ट शुमान की ऐतिहासिक तस्वीर, जिन्होंने 1950 में शुमान घोषणा पत्र के जरिए कोयला और इस्पात उद्योग के साझा प्रबंधन की नींव रखी, जो भविष्य के यूरोपीय संघ का आधार बना।
-        </div>
-    </div>
-
-    <h2 class="sub-header">2. यूरोपीय एकीकरण के प्रमुख चरण (Milestones)</h2>
-    
-    <!-- EU Timeline Chart -->
-    <div class="illustration-box" style="border-color: #6d28d9 !important; margin-top: 35px; margin-bottom: 35px;">
-        <img alt="EU Timeline" src="images/ch2/eu_timeline_chart.webp" style="width: 90%; max-width: 800px; display: block; margin: 0 auto; border: 4px solid #cbd5e1; border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.15);" class="illustration-img"/>
-        <div class="illustration-explanation" style="border-left-color: #6d28d9 !important;">
-            <b>समयरेखा: यूरोपीय संघ एकीकरण (Timeline of European Union Integration):</b><br/>
+        </br></div>
+</div>
+<h2 class="sub-header topic-header">2. यूरोपीय एकीकरण के प्रमुख चरण (Milestones)</h2>
+<!-- EU Timeline Chart -->
+<div class="illustration-box" style="border-color: #6d28d9 !important; margin-top: 35px; margin-bottom: 35px;">
+<img alt="EU Timeline" class="illustration-img" src="images/ch2/eu_timeline_chart.webp" style="width: 90%; max-width: 800px; display: block; margin: 0 auto; border: 4px solid #cbd5e1; border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.15);"/>
+<div class="illustration-explanation" style="border-left-color: #6d28d9 !important;">
+<b>समयरेखा: यूरोपीय संघ एकीकरण (Timeline of European Union Integration):</b><br/>
             एनसीईआरटी पुस्तक का मूल चार्ट जो 1951 के कोयला एवं इस्पात समुदाय से लेकर 1992 की मास्ट्रिच संधि और यूरोपीय संघ के जन्म के विभिन्न चरणों को दर्शाता है।
         </div>
-    </div>
-
-    <ul style="list-style-type: disc; margin-left: 40px; font-size: 20pt;">
-        <li><b>1951:</b> छह देशों ने मिलकर यूरोपीय कोयला और इस्पात समुदाय (ECSC) का गठन किया।</li>
-        <li><b>1957 (रोम की संधि):</b> यूरोपीय आर्थिक समुदाय (EEC) और यूरोपीय परमाणु ऊर्जा समुदाय (Euratom) की स्थापना की गई।</li>
-        <li><b>1992 (मास्ट्रिच संधि - Maastricht Treaty):</b> इस अत्यंत महत्वपूर्ण संधि के द्वारा औपचारिक रूप से **यूरोपीय संघ (EU)** का गठन हुआ।</li>
-        <li><b>2002:</b> यूरोपीय संघ की साझी मुद्रा **'यूरो' (Euro)** को अपनाया गया।</li>
-        <li><b>2009 (लिस्बन की संधि):</b> यूरोपीय संघ के प्रशासनिक ढांचे और विदेश नीतियों को और अधिक सुदृढ़ बनाया गया।</li>
-    </ul>
-
-    <!-- EU Expansion Map -->
-    <div class="illustration-box" style="border-color: #6d28d9 !important; margin-top: 35px; margin-bottom: 35px;">
-        <img alt="EU Expansion Map" src="images/ch2/eu_expansion_map.webp" style="width: 90%; max-width: 800px; display: block; margin: 0 auto; border: 4px solid #cbd5e1; border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.15);" class="illustration-img"/>
-        <div class="illustration-explanation" style="border-left-color: #6d28d9 !important;">
-            <b>मानचित्र: यूरोपीय संघ का भौगोलिक विस्तार (Map of EU Expansion):</b><br/>
+</div>
+<ul style="list-style-type: disc; margin-left: 40px; ">
+<li><b>1951:</b> छह देशों ने मिलकर यूरोपीय कोयला और इस्पात समुदाय (ECSC) का गठन किया।</li>
+<li><b>1957 (रोम की संधि):</b> यूरोपीय आर्थिक समुदाय (EEC) और यूरोपीय परमाणु ऊर्जा समुदाय (Euratom) की स्थापना की गई।</li>
+<li><b>1992 (मास्ट्रिच संधि - Maastricht Treaty):</b> इस अत्यंत महत्वपूर्ण संधि के द्वारा औपचारिक रूप से **यूरोपीय संघ (EU)** का गठन हुआ।</li>
+<li><b>2002:</b> यूरोपीय संघ की साझी मुद्रा **'यूरो' (Euro)** को अपनाया गया।</li>
+<li><b>2009 (लिस्बन की संधि):</b> यूरोपीय संघ के प्रशासनिक ढांचे और विदेश नीतियों को और अधिक सुदृढ़ बनाया गया।</li>
+</ul>
+<!-- EU Expansion Map -->
+<div class="illustration-box" style="border-color: #6d28d9 !important; margin-top: 35px; margin-bottom: 35px;">
+<img alt="EU Expansion Map" class="illustration-img" src="images/ch2/eu_expansion_map.webp" style="width: 90%; max-width: 800px; display: block; margin: 0 auto; border: 4px solid #cbd5e1; border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.15);"/>
+<div class="illustration-explanation" style="border-left-color: #6d28d9 !important;">
+<b>मानचित्र: यूरोपीय संघ का भौगोलिक विस्तार (Map of EU Expansion):</b><br/>
             यूरोपीय संघ के देशों का वैश्विक मानचित्र स्थिति, जो पश्चिमी यूरोप से लेकर पूर्वी सीमाओं तक इसकी भौगोलिक पहुंच को दर्शाता है।
         </div>
-    </div>
-
-    <h2 class="sub-header">3. यूरोपीय संघ - एक आर्थिक महाशक्ति के रूप में</h2>
-    <p>यूरोपीय संघ आज दुनिया के सबसे शक्तिशाली आर्थिक केंद्रों में से एक है:</p>
-    <ul style="list-style-type: square; margin-left: 40px; font-size: 20pt;">
-        <li><b>साझी मुद्रा 'यूरो':</b> यह मुद्रा वैश्विक व्यापार में अमेरिकी डॉलर के वर्चस्व के लिए एक गंभीर चुनौती है।</li>
-        <li><b>व्यापार में दबदबा:</b> विश्व व्यापार में इसका कुल हिस्सा अमेरिका से तीन गुना अधिक है, जिससे यह विश्व व्यापार संगठन (WTO) में एक बहुत बड़ी ताकत है।</li>
-        <li><b>वैश्विक जीडीपी:</b> यूरोपीय संघ का सकल घरेलू उत्पाद (GDP) लगभग 17 ट्रिलियन डॉलर से अधिक है, जो विश्व अर्थव्यवस्था की धुरी है।</li>
-    </ul>
+</div>
+<h2 class="sub-header topic-header">3. यूरोपीय संघ - एक आर्थिक महाशक्ति के रूप में</h2>
+<p>यूरोपीय संघ आज दुनिया के सबसे शक्तिशाली आर्थिक केंद्रों में से एक है:</p>
+<ul style="list-style-type: square; margin-left: 40px; ">
+<li><b>साझी मुद्रा 'यूरो':</b> यह मुद्रा वैश्विक व्यापार में अमेरिकी डॉलर के वर्चस्व के लिए एक गंभीर चुनौती है।</li>
+<li><b>व्यापार में दबदबा:</b> विश्व व्यापार में इसका कुल हिस्सा अमेरिका से तीन गुना अधिक है, जिससे यह विश्व व्यापार संगठन (WTO) में एक बहुत बड़ी ताकत है।</li>
+<li><b>वैश्विक जीडीपी:</b> यूरोपीय संघ का सकल घरेलू उत्पाद (GDP) लगभग 17 ट्रिलियन डॉलर से अधिक है, जो विश्व अर्थव्यवस्था की धुरी है।</li>
+</ul>
 </div>
 </body>
 </html>
-<br><br><hr><br><br>
+<br/><br/><hr/><br/><br/>
 <!DOCTYPE html>
+
 <html lang="hi">
 <head>
-    <meta charset="UTF-8">
-    <style>
+<meta charset="utf-8"/>
+<style>
         .ch2-content { font-family: 'Arial', sans-serif; line-height: 2.2; font-size: 18pt; color: #1a202c; padding: 40px; }
         .section-header { color: #1e40af; border-bottom: 5px solid #60a5fa; padding-bottom: 15px; font-size: 34pt; margin-bottom: 30px; }
         .sub-header { color: #1d4ed8; font-size: 28pt; margin-top: 50px; }
@@ -191,83 +265,74 @@
 </head>
 <body>
 <div class="ch2-content">
-    <h1 class="section-header">यूरोपीय संघ - राजनीतिक, सैन्य प्रभाव और सीमाएं</h1>
-    
-    <h2 class="sub-header">1. राजनीतिक और कूटनीतिक प्रभाव (Political &amp; Diplomatic Influence)</h2>
-    
-    <!-- EU Leader Portrait -->
-    <div class="illustration-box" style="border-color: #1e40af !important; margin-top: 35px; margin-bottom: 35px;">
-        <img alt="Ursula von der Leyen" src="images/ch2/eu_leader_portrait.webp" style="width: 40%; max-width: 300px; display: block; margin: 0 auto; border: 4px solid #cbd5e1; border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.15);" class="illustration-img"/>
-        <div class="illustration-explanation" style="border-left-color: #1e40af !important;">
-            <b>उर्सुला वॉन डेर लेयेन (Ursula von der Leyen):</b><br/>
+<h1 class="section-header hero-title">यूरोपीय संघ - राजनीतिक, सैन्य प्रभाव और सीमाएं</h1>
+<h2 class="sub-header topic-header">1. राजनीतिक और कूटनीतिक प्रभाव (Political &amp; Diplomatic Influence)</h2>
+<!-- EU Leader Portrait -->
+<div class="illustration-box" style="border-color: #1e40af !important; margin-top: 35px; margin-bottom: 35px;">
+<img alt="Ursula von der Leyen" class="illustration-img" src="images/ch2/eu_leader_portrait.webp" style="width: 40%; max-width: 300px; display: block; margin: 0 auto; border: 4px solid #cbd5e1; border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.15);"/>
+<div class="illustration-explanation" style="border-left-color: #1e40af !important;">
+<b>उर्सुला वॉन डेर लेयेन (Ursula von der Leyen):</b><br>
             यूरोपीय आयोग की वर्तमान अध्यक्ष उर्सुला वॉन डेर लेयेन की तस्वीर, जो यूरोपीय परिषद और संघ की राजनीतिक एवं प्रशासनिक नीतियों के नेतृत्व का प्रतिनिधित्व करती हैं।
-        </div>
-    </div>
-
-    <p>यूरोपीय संघ वैश्विक कूटनीति में अत्यंत प्रभावशाली भूमिका निभाता है:</p>
-    <ul style="list-style-type: disc; margin-left: 40px; font-size: 20pt;">
-        <li><b>सुरक्षा परिषद में वीटो पावर:</b> यूरोपीय संघ का प्रमुख सदस्य **फ्रांस** संयुक्त राष्ट्र सुरक्षा परिषद का स्थायी सदस्य है। इसके अलावा कई सदस्य देश अस्थायी सदस्य के रूप में इसमें प्रतिनिधित्व करते हैं।</li>
-        <li><b>सॉफ्ट पावर और मानवाधिकार:</b> ईयू मानवाधिकारों के उल्लंघन और पर्यावरण संरक्षण जैसे अंतरराष्ट्रीय मुद्दों पर शांतिपूर्ण कूटनीतिक वार्ताओं के जरिए प्रभाव डालता है।</li>
-    </ul>
-
-    <h2 class="sub-header">2. सैन्य शक्ति के रूप में प्रभाव (Military Power)</h2>
-    <p>सैनिक रूप से यूरोपीय संघ के पास अभूतपूर्व क्षमताएं हैं:</p>
-    <ul style="list-style-type: square; margin-left: 40px; font-size: 20pt;">
-        <li><b>संयुक्त रक्षा बजट:</b> सभी सदस्य देशों का रक्षा बजट मिलाकर दुनिया में अमेरिका के बाद दूसरे स्थान पर आता है।</li>
-        <li><b>परमाणु हथियार:</b> फ्रांस के पास अत्याधुनिक परमाणु हथियारों का भंडार है।</li>
-        <li><b>अंतरिक्ष विज्ञान:</b> संचार और रक्षा तकनीक के क्षेत्र में यूरोपीय संघ की अंतरिक्ष तकनीक (ESA) तीसरे स्थान पर है।</li>
-    </ul>
-
-    <h2 class="sub-header">3. यूरोपीय संघ की सीमाएं और चुनौतियां</h2>
-    
-    <!-- EU Integration / Ship Cartoon -->
-    <div class="illustration-box" style="border-color: #1e40af !important; margin-top: 35px; margin-bottom: 35px;">
-        <img alt="EU Integration Challenges Cartoon" src="images/ch2/eu_integration_cartoon.webp" style="width: 90%; max-width: 800px; display: block; margin: 0 auto; border: 4px solid #cbd5e1; border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.15);" class="illustration-img"/>
-        <div class="illustration-explanation" style="border-left-color: #1e40af !important;">
-            <b>व्यंग्यचित्र: यूरोपीय संघ का साझा संविधान और एकीकरण की सीमाएं (The EU Ship / Constitution Cartoon):</b><br/>
+        </br></div>
+</div>
+<p>यूरोपीय संघ वैश्विक कूटनीति में अत्यंत प्रभावशाली भूमिका निभाता है:</p>
+<ul style="list-style-type: disc; margin-left: 40px; ">
+<li><b>सुरक्षा परिषद में वीटो पावर:</b> यूरोपीय संघ का प्रमुख सदस्य **फ्रांस** संयुक्त राष्ट्र सुरक्षा परिषद का स्थायी सदस्य है। इसके अलावा कई सदस्य देश अस्थायी सदस्य के रूप में इसमें प्रतिनिधित्व करते हैं।</li>
+<li><b>सॉफ्ट पावर और मानवाधिकार:</b> ईयू मानवाधिकारों के उल्लंघन और पर्यावरण संरक्षण जैसे अंतरराष्ट्रीय मुद्दों पर शांतिपूर्ण कूटनीतिक वार्ताओं के जरिए प्रभाव डालता है।</li>
+</ul>
+<h2 class="sub-header topic-header">2. सैन्य शक्ति के रूप में प्रभाव (Military Power)</h2>
+<p>सैनिक रूप से यूरोपीय संघ के पास अभूतपूर्व क्षमताएं हैं:</p>
+<ul style="list-style-type: square; margin-left: 40px; ">
+<li><b>संयुक्त रक्षा बजट:</b> सभी सदस्य देशों का रक्षा बजट मिलाकर दुनिया में अमेरिका के बाद दूसरे स्थान पर आता है।</li>
+<li><b>परमाणु हथियार:</b> फ्रांस के पास अत्याधुनिक परमाणु हथियारों का भंडार है।</li>
+<li><b>अंतरिक्ष विज्ञान:</b> संचार और रक्षा तकनीक के क्षेत्र में यूरोपीय संघ की अंतरिक्ष तकनीक (ESA) तीसरे स्थान पर है।</li>
+</ul>
+<h2 class="sub-header topic-header">3. यूरोपीय संघ की सीमाएं और चुनौतियां</h2>
+<!-- EU Integration / Ship Cartoon -->
+<div class="illustration-box" style="border-color: #1e40af !important; margin-top: 35px; margin-bottom: 35px;">
+<img alt="EU Integration Challenges Cartoon" class="illustration-img" src="images/ch2/eu_integration_cartoon.webp" style="width: 90%; max-width: 800px; display: block; margin: 0 auto; border: 4px solid #cbd5e1; border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.15);"/>
+<div class="illustration-explanation" style="border-left-color: #1e40af !important;">
+<b>व्यंग्यचित्र: यूरोपीय संघ का साझा संविधान और एकीकरण की सीमाएं (The EU Ship / Constitution Cartoon):</b><br>
             एनसीईआरटी पुस्तक का मूल व्यंग्यचित्र जो यह दिखाता है कि कैसे एक साझा यूरोपीय संविधान बनाने का प्रयास असफल रहा। जहाज पर विभिन्न सदस्य देशों के नाविक नीतियों को अलग-अलग दिशा में खींच रहे हैं, जो आपसी मतभेदों और ब्रेक्सिट की दरार (Brexit Gap) को दर्शाता है।
-        </div>
-    </div>
-
-    <p>तमाम शक्तियों के बावजूद यूरोपीय संघ के समक्ष निम्नलिखित सीमाएं हैं:</p>
-    <ul style="list-style-type: circle; margin-left: 40px; font-size: 20pt;">
-        <li><b>ब्रेक्सिट (Brexit):</b> 2016 के जनमत संग्रह के बाद, 2020 में ब्रिटेन (UK) ने औपचारिक रूप से यूरोपीय संघ की सदस्यता छोड़ दी, जिससे इसकी साख और आर्थिक दायरे को भारी चोट पहुंची।</li>
-        <li><b>राष्ट्रवाद बनाम संघवाद:</b> कई मामलों में सदस्य देश अपनी संप्रभुता को यूरोपीय संघ के नियमों से ऊपर रखते हैं, जिससे साझी नीतियां बनाने में गतिरोध पैदा होता है।</li>
-        <li><b>यूरो का विरोध:</b> डेनमार्क और स्वीडन जैसे देशों ने मास्ट्रिच संधि के तहत साझी मुद्रा 'यूरो' को अपनाने से इनकार कर दिया।</li>
-    </ul>
-
-    <h2 class="sub-header">4. भारत और यूरोपीय संघ (EU) संबंध</h2>
-    
-    <div class="keyword-box">
-        <b>4.1 सहयोग के 5 प्रमुख बिंदु (Cooperation):</b>
-        <ul style="list-style-type: decimal; margin-left: 20px; font-size: 18pt;">
-            <li><b>रणनीतिक साझेदारी (Strategic Partnership):</b> भारत और ईयू ने 2004 में रणनीतिक साझेदारी की शुरुआत की, जिसके तहत नियमित रूप से वार्षिक शिखर सम्मेलनों का आयोजन किया जाता है।</li>
-            <li><b>व्यापार और निवेश:</b> यूरोपीय संघ भारत का एक बहुत बड़ा व्यापारिक साझेदार है और भारत में होने वाले प्रत्यक्ष विदेशी निवेश (FDI) का एक बड़ा स्रोत है।</li>
-            <li><b>तकनीक एवं अनुसंधान:</b> दोनों देश विज्ञान, प्रौद्योगिकी, स्वच्छ ऊर्जा और अंतरिक्ष अनुसंधान (जैसे गैलीलियो उपग्रह प्रणाली) में सहयोग कर रहे हैं।</li>
-            <li><b>वैश्विक सुरक्षा:</b> समुद्री सुरक्षा और आतंकवाद विरोधी अभियानों में सूचनाओं का आदान-प्रदान और रक्षा समन्वय।</li>
-            <li><b>जलवायु परिवर्तन:</b> हरित ऊर्जा संक्रमण और अंतर्राष्ट्रीय सौर गठबंधन (ISA) में दोनों शक्तियों का मजबूत सहयोग।</li>
-        </ul>
-    </div>
-
-    <div class="keyword-box" style="border-left-color: #ef4444 !important; background: #fff5f5;">
-        <b>4.2 टकराव और चुनौतियां (Conflict &amp; Challenges - 5 Points):</b>
-        <ul style="list-style-type: decimal; margin-left: 20px; font-size: 18pt; color: #7f1d1d;">
-            <li><b>मुक्त व्यापार समझौते (FTA) पर गतिरोध:</b> भारत और ईयू के बीच व्यापक व्यापार और निवेश समझौते (BTIA) पर 2007 से बातचीत चल रही है, लेकिन कृषि शुल्क, आईटी सेवाओं और बौद्धिक संपदा पर असहमति के कारण यह रुका हुआ है।</li>
-            <li><b>गैर-टैरिफ बाधाएं (Non-tariff Barriers):</b> भारत का आरोप है कि यूरोपीय संघ भारतीय कृषि और फार्मास्युटिकल उत्पादों पर कड़े सुरक्षा मानक लगाकर उनके निर्यात को रोकता है।</li>
-            <li><b>कार्बन टैक्स (CBAM) विवाद:</b> यूरोपीय संघ द्वारा आयातित स्टील और एल्यूमीनियम पर प्रस्तावित 'कार्बन सीमा समायोजन तंत्र' (Carbon Tax) को भारत एक संरक्षणवादी नीति मानता है।</li>
-            <li><b>मानवाधिकारों पर आलोचना:</b> यूरोपीय संसद द्वारा समय-समय पर भारत के आंतरिक मुद्दों (जैसे कश्मीर या नागरिकता कानून) पर प्रस्ताव पारित करना, जिसे भारत बाहरी हस्तक्षेप मानता है।</li>
-            <li><b>वीजा और डेटा सुरक्षा नियम:</b> भारत को ईयू द्वारा 'डेटा सुरक्षित राष्ट्र' का दर्जा न दिए जाने से आईटी क्षेत्र में बाधा आती है, साथ ही भारतीय पेशेवरों के लिए कड़े वीजा नियम टकराव का कारण हैं।</li>
-        </ul>
-    </div>
+        </br></div>
+</div>
+<p>तमाम शक्तियों के बावजूद यूरोपीय संघ के समक्ष निम्नलिखित सीमाएं हैं:</p>
+<ul style="list-style-type: circle; margin-left: 40px; ">
+<li><b>ब्रेक्सिट (Brexit):</b> 2016 के जनमत संग्रह के बाद, 2020 में ब्रिटेन (UK) ने औपचारिक रूप से यूरोपीय संघ की सदस्यता छोड़ दी, जिससे इसकी साख और आर्थिक दायरे को भारी चोट पहुंची।</li>
+<li><b>राष्ट्रवाद बनाम संघवाद:</b> कई मामलों में सदस्य देश अपनी संप्रभुता को यूरोपीय संघ के नियमों से ऊपर रखते हैं, जिससे साझी नीतियां बनाने में गतिरोध पैदा होता है।</li>
+<li><b>यूरो का विरोध:</b> डेनमार्क और स्वीडन जैसे देशों ने मास्ट्रिच संधि के तहत साझी मुद्रा 'यूरो' को अपनाने से इनकार कर दिया।</li>
+</ul>
+<h2 class="sub-header topic-header">4. भारत और यूरोपीय संघ (EU) संबंध</h2>
+<div class="keyword-box">
+<b>4.1 सहयोग के 5 प्रमुख बिंदु (Cooperation):</b>
+<ul style="list-style-type: decimal; margin-left: 20px; ">
+<li><b>रणनीतिक साझेदारी (Strategic Partnership):</b> भारत और ईयू ने 2004 में रणनीतिक साझेदारी की शुरुआत की, जिसके तहत नियमित रूप से वार्षिक शिखर सम्मेलनों का आयोजन किया जाता है।</li>
+<li><b>व्यापार और निवेश:</b> यूरोपीय संघ भारत का एक बहुत बड़ा व्यापारिक साझेदार है और भारत में होने वाले प्रत्यक्ष विदेशी निवेश (FDI) का एक बड़ा स्रोत है।</li>
+<li><b>तकनीक एवं अनुसंधान:</b> दोनों देश विज्ञान, प्रौद्योगिकी, स्वच्छ ऊर्जा और अंतरिक्ष अनुसंधान (जैसे गैलीलियो उपग्रह प्रणाली) में सहयोग कर रहे हैं।</li>
+<li><b>वैश्विक सुरक्षा:</b> समुद्री सुरक्षा और आतंकवाद विरोधी अभियानों में सूचनाओं का आदान-प्रदान और रक्षा समन्वय।</li>
+<li><b>जलवायु परिवर्तन:</b> हरित ऊर्जा संक्रमण और अंतर्राष्ट्रीय सौर गठबंधन (ISA) में दोनों शक्तियों का मजबूत सहयोग।</li>
+</ul>
+</div>
+<div class="keyword-box" style="border-left-color: #ef4444 !important; background: #fff5f5;">
+<b>4.2 टकराव और चुनौतियां (Conflict &amp; Challenges - 5 Points):</b>
+<ul style="list-style-type: decimal; margin-left: 20px;  color: #7f1d1d;">
+<li><b>मुक्त व्यापार समझौते (FTA) पर गतिरोध:</b> भारत और ईयू के बीच व्यापक व्यापार और निवेश समझौते (BTIA) पर 2007 से बातचीत चल रही है, लेकिन कृषि शुल्क, आईटी सेवाओं और बौद्धिक संपदा पर असहमति के कारण यह रुका हुआ है।</li>
+<li><b>गैर-टैरिफ बाधाएं (Non-tariff Barriers):</b> भारत का आरोप है कि यूरोपीय संघ भारतीय कृषि और फार्मास्युटिकल उत्पादों पर कड़े सुरक्षा मानक लगाकर उनके निर्यात को रोकता है।</li>
+<li><b>कार्बन टैक्स (CBAM) विवाद:</b> यूरोपीय संघ द्वारा आयातित स्टील और एल्यूमीनियम पर प्रस्तावित 'कार्बन सीमा समायोजन तंत्र' (Carbon Tax) को भारत एक संरक्षणवादी नीति मानता है।</li>
+<li><b>मानवाधिकारों पर आलोचना:</b> यूरोपीय संसद द्वारा समय-समय पर भारत के आंतरिक मुद्दों (जैसे कश्मीर या नागरिकता कानून) पर प्रस्ताव पारित करना, जिसे भारत बाहरी हस्तक्षेप मानता है।</li>
+<li><b>वीजा और डेटा सुरक्षा नियम:</b> भारत को ईयू द्वारा 'डेटा सुरक्षित राष्ट्र' का दर्जा न दिए जाने से आईटी क्षेत्र में बाधा आती है, साथ ही भारतीय पेशेवरों के लिए कड़े वीजा नियम टकराव का कारण हैं।</li>
+</ul>
+</div>
 </div>
 </body>
 </html>
-<br><br><hr><br><br>
+<br/><br/><hr/><br/><br/>
 <!DOCTYPE html>
+
 <html lang="hi">
 <head>
-    <meta charset="UTF-8">
-    <style>
+<meta charset="utf-8"/>
+<style>
         .ch2-content { font-family: 'Arial', sans-serif; line-height: 2.2; font-size: 18pt; color: #1a202c; padding: 40px; }
         .section-header { color: #b91c1c; border-bottom: 5px solid #ef4444; padding-bottom: 15px; font-size: 34pt; margin-bottom: 30px; }
         .sub-header { color: #dc2626; font-size: 28pt; margin-top: 50px; }
@@ -278,107 +343,95 @@
 </head>
 <body>
 <div class="ch2-content">
-    <h1 class="section-header">आसियन (ASEAN) - दक्षिण-पूर्व एशियाई देशों का संगठन</h1>
-    
-    <div class="keyword-box">
-        <b>1. भौगोलिक स्थिति और मानचित्र (Map Position):</b><br/>
+<h1 class="section-header hero-title">आसियन (ASEAN) - दक्षिण-पूर्व एशियाई देशों का संगठन</h1>
+<div class="keyword-box">
+<b>1. भौगोलिक स्थिति और मानचित्र (Map Position):</b><br>
         आसियान का भौगोलिक क्षेत्र दक्षिण-पूर्व एशिया में स्थित है। इसमें इंडोनेशिया, मलेशिया, फिलीपींस, सिंगापुर, थाईलैंड, ब्रुनेई, वियतनाम, लाओस, म्यांमार और कंबोडिया जैसे 10 देश शामिल हैं।
-    </div>
-
-    <!-- ASEAN Logo -->
-    <div class="illustration-box" style="border-color: #b91c1c !important; margin-top: 35px; margin-bottom: 35px;">
-        <img alt="ASEAN Logo" src="images/ch2/asean_logo.webp" style="width: 90%; max-width: 800px; display: block; margin: 0 auto; border: 4px solid #cbd5e1; border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.15);" class="illustration-img"/>
-        <div class="illustration-explanation" style="border-left-color: #b91c1c !important;">
-            <b>आसियन का प्रतीक चिह्न (Symbol of ASEAN):</b><br/>
+    </br></div>
+<!-- ASEAN Logo -->
+<div class="illustration-box" style="border-color: #b91c1c !important; margin-top: 35px; margin-bottom: 35px;">
+<img alt="ASEAN Logo" class="illustration-img" src="images/ch2/asean_logo.webp" style="width: 90%; max-width: 800px; display: block; margin: 0 auto; border: 4px solid #cbd5e1; border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.15);"/>
+<div class="illustration-explanation" style="border-left-color: #b91c1c !important;">
+<b>आसियन का प्रतीक चिह्न (Symbol of ASEAN):</b><br>
             इस प्रतीक चिह्न में धान की दस बालियां दक्षिण-पूर्व एशिया के दस सदस्य देशों को दर्शाती हैं, जो आपस में मित्रता और एकता के धागे से बंधे हैं। बाहरी घेरा (Circle) आसियान की अखंडता और एकजुटता का प्रतीक है।
-        </div>
-    </div>
-
-    <!-- ASEAN Map -->
-    <div class="illustration-box" style="border-color: #b91c1c !important; margin-top: 35px; margin-bottom: 35px;">
-        <img alt="ASEAN Countries Map" src="images/ch2/asean_map.webp" style="width: 90%; max-width: 800px; display: block; margin: 0 auto; border: 4px solid #cbd5e1; border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.15);" class="illustration-img"/>
-        <div class="illustration-explanation" style="border-left-color: #b91c1c !important;">
-            <b>मानचित्र: दक्षिण-पूर्व एशिया के आसियान देश (Map of ASEAN Member States):</b><br/>
+        </br></div>
+</div>
+<!-- ASEAN Map -->
+<div class="illustration-box" style="border-color: #b91c1c !important; margin-top: 35px; margin-bottom: 35px;">
+<img alt="ASEAN Countries Map" class="illustration-img" src="images/ch2/asean_map.webp" style="width: 90%; max-width: 800px; display: block; margin: 0 auto; border: 4px solid #cbd5e1; border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.15);"/>
+<div class="illustration-explanation" style="border-left-color: #b91c1c !important;">
+<b>मानचित्र: दक्षिण-पूर्व एशिया के आसियान देश (Map of ASEAN Member States):</b><br>
             एनसीईआरटी पुस्तक का मूल मानचित्र जो आसियान के 10 सदस्य देशों की भौगोलिक स्थिति और उनके आर्थिक प्रभुत्व के क्षेत्र को स्पष्ट रूप से निरूपित करता है।
-        </div>
-    </div>
-
-    <h2 class="sub-header">1. इतिहास और द्वितीय विश्वयुद्ध के बाद संगठन का जन्म</h2>
-    <p><b>1.1 पृष्ठभूमि:</b><br/>
-    दक्षिण-पूर्व एशिया के देश द्वितीय विश्वयुद्ध से पहले और उसके दौरान यूरोपीय और जापानी साम्राज्यवाद के शिकार रहे। युद्ध के बाद वे निर्धनता, राष्ट्रीय पुनर्निर्माण और शीत युद्ध में महाशक्तियों के बीच खिंचे चले जाने के संकट से जूझ रहे थे। बांडुंग सम्मेलन और गुटनिरपेक्ष आंदोलन के माध्यम से एशिया-अफ्रीका के बीच सहयोग के प्रयास किए गए, लेकिन वे पर्याप्त नहीं थे। अंततः 1967 में पांच देशों (इंडोनेशिया, मलेशिया, फिलीपींस, सिंगापुर और थाईलैंड) ने **बैंकॉक घोषणा-पत्र (Bangkok Declaration)** पर हस्ताक्षर करके **आसियन (ASEAN)** की स्थापना की।</p>
-
-    <!-- ASEAN Summit Portrait -->
-    <div class="illustration-box" style="border-color: #b91c1c !important; margin-top: 35px; margin-bottom: 35px;">
-        <img alt="ASEAN leaders at Summit" src="images/ch2/asean_summit_portrait.webp" style="width: 40%; max-width: 300px; display: block; margin: 0 auto; border: 4px solid #cbd5e1; border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.15);" class="illustration-img"/>
-        <div class="illustration-explanation" style="border-left-color: #b91c1c !important;">
-            <b>आसियन शिखर सम्मेलन की समूह तस्वीर (ASEAN Leaders Summit Group Photo):</b><br/>
+        </br></div>
+</div>
+<h2 class="sub-header topic-header">1. इतिहास और द्वितीय विश्वयुद्ध के बाद संगठन का जन्म</h2>
+<p><b>1.1 पृष्ठभूमि:</b><br>
+    दक्षिण-पूर्व एशिया के देश द्वितीय विश्वयुद्ध से पहले और उसके दौरान यूरोपीय और जापानी साम्राज्यवाद के शिकार रहे। युद्ध के बाद वे निर्धनता, राष्ट्रीय पुनर्निर्माण और शीत युद्ध में महाशक्तियों के बीच खिंचे चले जाने के संकट से जूझ रहे थे। बांडुंग सम्मेलन और गुटनिरपेक्ष आंदोलन के माध्यम से एशिया-अफ्रीका के बीच सहयोग के प्रयास किए गए, लेकिन वे पर्याप्त नहीं थे। अंततः 1967 में पांच देशों (इंडोनेशिया, मलेशिया, फिलीपींस, सिंगापुर और थाईलैंड) ने **बैंकॉक घोषणा-पत्र (Bangkok Declaration)** पर हस्ताक्षर करके **आसियन (ASEAN)** की स्थापना की।</br></p>
+<!-- ASEAN Summit Portrait -->
+<div class="illustration-box" style="border-color: #b91c1c !important; margin-top: 35px; margin-bottom: 35px;">
+<img alt="ASEAN leaders at Summit" class="illustration-img" src="images/ch2/asean_summit_portrait.webp" style="width: 40%; max-width: 300px; display: block; margin: 0 auto; border: 4px solid #cbd5e1; border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.15);"/>
+<div class="illustration-explanation" style="border-left-color: #b91c1c !important;">
+<b>आसियन शिखर सम्मेलन की समूह तस्वीर (ASEAN Leaders Summit Group Photo):</b><br>
             आसियान सदस्य देशों के राष्ट्राध्यक्षों की ऐतिहासिक समूह तस्वीर जो कूटनीतिक समन्वय और सर्वसम्मति को रेखांकित करती है।
-        </div>
-    </div>
-
-    <h2 class="sub-header">2. 'आसियन शैली' (The ASEAN Way) और विकास के 3 स्तंभ</h2>
-    
-    <!-- ASEAN Way Ship Cartoon -->
-    <div class="illustration-box" style="border-color: #b91c1c !important; margin-top: 35px; margin-bottom: 35px;">
-        <img alt="ASEAN Way Ship Cartoon" src="images/ch2/asean_way_ship_cartoon.webp" style="width: 90%; max-width: 800px; display: block; margin: 0 auto; border: 4px solid #cbd5e1; border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.15);" class="illustration-img"/>
-        <div class="illustration-explanation" style="border-left-color: #b91c1c !important;">
-            <b>व्यंग्यचित्र: सहमति और सहयोग का संदेश (The ASEAN Express Cartoon):</b><br/>
+        </br></div>
+</div>
+<h2 class="sub-header topic-header">2. 'आसियन शैली' (The ASEAN Way) और विकास के 3 स्तंभ</h2>
+<!-- ASEAN Way Ship Cartoon -->
+<div class="illustration-box" style="border-color: #b91c1c !important; margin-top: 35px; margin-bottom: 35px;">
+<img alt="ASEAN Way Ship Cartoon" class="illustration-img" src="images/ch2/asean_way_ship_cartoon.webp" style="width: 90%; max-width: 800px; display: block; margin: 0 auto; border: 4px solid #cbd5e1; border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.15);"/>
+<div class="illustration-explanation" style="border-left-color: #b91c1c !important;">
+<b>व्यंग्यचित्र: सहमति और सहयोग का संदेश (The ASEAN Express Cartoon):</b><br>
             यह कार्टून आसियान देशों की आपसी सहमति, टकराव-मुक्त बातचीत और अनौपचारिक सहयोग (ASEAN Way) को एक बड़े शांत जहाज के रूप में निरूपित करता है, जो यूरोपीय संघ की जटिल संधियों से भिन्न है।
-        </div>
-    </div>
-
-    <p><b>2.1 आसियान शैली (The ASEAN Way):</b><br/>
+        </br></div>
+</div>
+<p><b>2.1 आसियान शैली (The ASEAN Way):</b><br/>
     यह आसियान का एक अनूठा कूटनीतिक तरीका है जो अनौपचारिक, टकराव-रहित और सहयोगात्मक बातचीत पर आधारित है। इसमें सदस्य देशों की संप्रभुता का सम्मान किया जाता है और निर्णय सर्वसम्मति से लिए जाते हैं।</p>
-
-    <!-- ASEAN Community Cartoon -->
-    <div class="illustration-box" style="border-color: #b91c1c !important; margin-top: 35px; margin-bottom: 35px;">
-        <img alt="ASEAN Community Pillars Cartoon" src="images/ch2/asean_community_cartoon.webp" style="width: 90%; max-width: 800px; display: block; margin: 0 auto; border: 4px solid #cbd5e1; border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.15);" class="illustration-img"/>
-        <div class="illustration-explanation" style="border-left-color: #b91c1c !important;">
-            <b>व्यंग्यचित्र: प्रतिस्पर्धा और सहयोग (The Karate / ASEAN Community Cartoon):</b><br/>
+<!-- ASEAN Community Cartoon -->
+<div class="illustration-box" style="border-color: #b91c1c !important; margin-top: 35px; margin-bottom: 35px;">
+<img alt="ASEAN Community Pillars Cartoon" class="illustration-img" src="images/ch2/asean_community_cartoon.webp" style="width: 90%; max-width: 800px; display: block; margin: 0 auto; border: 4px solid #cbd5e1; border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.15);"/>
+<div class="illustration-explanation" style="border-left-color: #b91c1c !important;">
+<b>व्यंग्यचित्र: प्रतिस्पर्धा और सहयोग (The Karate / ASEAN Community Cartoon):</b><br/>
             एनसीईआरटी पुस्तक का मूल कार्टून जो यह दिखाता है कि कैसे दक्षिण-पूर्व एशिया में आसियान के तीन समुदायों (सुरक्षा, आर्थिक, सामाजिक-सांस्कृतिक) के तहत देश शांतिपूर्वक प्रतिस्पर्धा और आर्थिक विकास को आगे बढ़ा रहे हैं।
         </div>
-    </div>
-
-    <p><b>2.2 आसियान समुदाय के 3 प्रमुख स्तंभ (Three Pillars):</b><br/>
+</div>
+<p><b>2.2 आसियान समुदाय के 3 प्रमुख स्तंभ (Three Pillars):</b><br/>
     2003 में आसियान ने तीन बुनियादी समुदायों का गठन किया जो इसके तीव्र विकास को दर्शाते हैं:</p>
-    <ul style="list-style-type: square; margin-left: 40px; font-size: 20pt;">
-        <li><b>आसियन सुरक्षा समुदाय (ASEAN Security Community):</b> सदस्य देशों के बीच सीमा विवादों को युद्ध तक न जाने देना और आपसी बातचीत से सुरक्षा बनाए रखना।</li>
-        <li><b>आसियन आर्थिक समुदाय (ASEAN Economic Community):</b> पूरे क्षेत्र में साझा बाज़ार और मुक्त व्यापार व्यवस्था (FTA) का निर्माण करना।</li>
-        <li><b>आसियन सामाजिक-सांस्कृतिक समुदाय (ASEAN Socio-Cultural Community):</b> लोगों के बीच सांस्कृतिक संबंधों और शिक्षा को बढ़ावा देना।</li>
-    </ul>
-
-    <h2 class="sub-header">3. भारत और आसियान (ASEAN) संबंध</h2>
-    
-    <div class="keyword-box">
-        <b>3.1 सहयोग के 5 प्रमुख बिंदु (Cooperation):</b>
-        <ul style="list-style-type: decimal; margin-left: 20px; font-size: 18pt;">
-            <li><b>लुक ईस्ट से एक्ट ईस्ट नीति (Act East Policy):</b> भारत ने 1992 में 'लुक ईस्ट' नीति अपनाई, जिसे 2014 में प्रधानमंत्री मोदी ने 'एक्ट ईस्ट' में बदला, जिससे दक्षिण-पूर्व एशिया हमारी कूटनीति का अहम हिस्सा बना।</li>
-            <li><b>मुक्त व्यापार समझौता (FTA):</b> भारत और आसियान ने वस्तुओं (2009) और सेवाओं/निवेश (2014) में मुक्त व्यापार समझौते पर हस्ताक्षर किए हैं।</li>
-            <li><b>कनेक्टिविटी परियोजनाएं:</b> भारत-म्यांमार-थाईलैंड त्रिपक्षीय राजमार्ग (Trilateral Highway) और कलादान मल्टी-मॉडल परियोजना के जरिए सड़क व समुद्री संपर्क।</li>
-            <li><b>नौसैनिक अभ्यास और सुरक्षा:</b> हिंद महासागर क्षेत्र में समुद्री डकैती को रोकने और नौपरिवहन की स्वतंत्रता (Freedom of Navigation) सुनिश्चित करने के लिए नियमित संयुक्त अभ्यास (जैसे SIMBEX)।</li>
-            <li><b>सांस्कृतिक और बौद्ध संबंध:</b> भारत आसियान देशों के साथ साझा बौद्ध विरासत और ऐतिहासिक सांस्कृतिक जुड़ाव को बढ़ावा देता है।</li>
-        </ul>
-    </div>
-
-    <div class="keyword-box" style="border-left-color: #ef4444 !important; background: #fff5f5;">
-        <b>3.2 टकराव और चुनौतियां (Conflict &amp; Challenges - 5 Points):</b>
-        <ul style="list-style-type: decimal; margin-left: 20px; font-size: 18pt; color: #7f1d1d;">
-            <li><b>बढ़ता व्यापार घाटा:</b> मुक्त व्यापार समझौते के बाद भारत का आसियान देशों के साथ व्यापार घाटा बहुत बढ़ गया है, जिससे घरेलू उद्योगों पर नकारात्मक प्रभाव पड़ा है।</li>
-            <li><b>RCEP समझौते से बाहर निकलना:</b> भारत ने 2019 में चीनी सामानों की डंपिंग के डर से RCEP व्यापार संधि से बाहर निकलने का फैसला किया, जिससे कई आसियान देश निराश हुए।</li>
-            <li><b>परियोजनाओं में अत्यधिक देरी:</b> त्रिपक्षीय राजमार्ग जैसी बड़ी बुनियादी ढांचा परियोजनाओं के क्रियान्वयन में भारत की सुस्त गति सहयोग की राह में बड़ी बाधा है।</li>
-            <li><b>चीन का भारी आर्थिक प्रभाव:</b> आसियान के कई देश (जैसे कंबोडिया, लाओस) आर्थिक रूप से चीन पर पूरी तरह निर्भर हैं, इसलिए वे चीन के खिलाफ भारत के साथ आने में कतराते हैं।</li>
-            <li><b>म्यांमार संकट पर नीतियां:</b> म्यांमार के सैन्य तख्तापलट पर आसियान का रुख विभाजित है, जबकि भारत अपनी सीमा सुरक्षा के कारण व्यावहारिक संबंध बनाए रखता है, जिससे नीतिगत अंतर आता है।</li>
-        </ul>
-    </div>
+<ul style="list-style-type: square; margin-left: 40px; ">
+<li><b>आसियन सुरक्षा समुदाय (ASEAN Security Community):</b> सदस्य देशों के बीच सीमा विवादों को युद्ध तक न जाने देना और आपसी बातचीत से सुरक्षा बनाए रखना।</li>
+<li><b>आसियन आर्थिक समुदाय (ASEAN Economic Community):</b> पूरे क्षेत्र में साझा बाज़ार और मुक्त व्यापार व्यवस्था (FTA) का निर्माण करना।</li>
+<li><b>आसियन सामाजिक-सांस्कृतिक समुदाय (ASEAN Socio-Cultural Community):</b> लोगों के बीच सांस्कृतिक संबंधों और शिक्षा को बढ़ावा देना।</li>
+</ul>
+<h2 class="sub-header topic-header">3. भारत और आसियान (ASEAN) संबंध</h2>
+<div class="keyword-box">
+<b>3.1 सहयोग के 5 प्रमुख बिंदु (Cooperation):</b>
+<ul style="list-style-type: decimal; margin-left: 20px; ">
+<li><b>लुक ईस्ट से एक्ट ईस्ट नीति (Act East Policy):</b> भारत ने 1992 में 'लुक ईस्ट' नीति अपनाई, जिसे 2014 में प्रधानमंत्री मोदी ने 'एक्ट ईस्ट' में बदला, जिससे दक्षिण-पूर्व एशिया हमारी कूटनीति का अहम हिस्सा बना।</li>
+<li><b>मुक्त व्यापार समझौता (FTA):</b> भारत और आसियान ने वस्तुओं (2009) और सेवाओं/निवेश (2014) में मुक्त व्यापार समझौते पर हस्ताक्षर किए हैं।</li>
+<li><b>कनेक्टिविटी परियोजनाएं:</b> भारत-म्यांमार-थाईलैंड त्रिपक्षीय राजमार्ग (Trilateral Highway) और कलादान मल्टी-मॉडल परियोजना के जरिए सड़क व समुद्री संपर्क।</li>
+<li><b>नौसैनिक अभ्यास और सुरक्षा:</b> हिंद महासागर क्षेत्र में समुद्री डकैती को रोकने और नौपरिवहन की स्वतंत्रता (Freedom of Navigation) सुनिश्चित करने के लिए नियमित संयुक्त अभ्यास (जैसे SIMBEX)।</li>
+<li><b>सांस्कृतिक और बौद्ध संबंध:</b> भारत आसियान देशों के साथ साझा बौद्ध विरासत और ऐतिहासिक सांस्कृतिक जुड़ाव को बढ़ावा देता है।</li>
+</ul>
+</div>
+<div class="keyword-box" style="border-left-color: #ef4444 !important; background: #fff5f5;">
+<b>3.2 टकराव और चुनौतियां (Conflict &amp; Challenges - 5 Points):</b>
+<ul style="list-style-type: decimal; margin-left: 20px;  color: #7f1d1d;">
+<li><b>बढ़ता व्यापार घाटा:</b> मुक्त व्यापार समझौते के बाद भारत का आसियान देशों के साथ व्यापार घाटा बहुत बढ़ गया है, जिससे घरेलू उद्योगों पर नकारात्मक प्रभाव पड़ा है।</li>
+<li><b>RCEP समझौते से बाहर निकलना:</b> भारत ने 2019 में चीनी सामानों की डंपिंग के डर से RCEP व्यापार संधि से बाहर निकलने का फैसला किया, जिससे कई आसियान देश निराश हुए।</li>
+<li><b>परियोजनाओं में अत्यधिक देरी:</b> त्रिपक्षीय राजमार्ग जैसी बड़ी बुनियादी ढांचा परियोजनाओं के क्रियान्वयन में भारत की सुस्त गति सहयोग की राह में बड़ी बाधा है।</li>
+<li><b>चीन का भारी आर्थिक प्रभाव:</b> आसियान के कई देश (जैसे कंबोडिया, लाओस) आर्थिक रूप से चीन पर पूरी तरह निर्भर हैं, इसलिए वे चीन के खिलाफ भारत के साथ आने में कतराते हैं।</li>
+<li><b>म्यांमार संकट पर नीतियां:</b> म्यांमार के सैन्य तख्तापलट पर आसियान का रुख विभाजित है, जबकि भारत अपनी सीमा सुरक्षा के कारण व्यावहारिक संबंध बनाए रखता है, जिससे नीतिगत अंतर आता है।</li>
+</ul>
+</div>
 </div>
 </body>
 </html>
-<br><br><hr><br><br>
+<br/><br/><hr/><br/><br/>
 <!DOCTYPE html>
+
 <html lang="hi">
 <head>
-    <meta charset="UTF-8">
-    <style>
+<meta charset="utf-8"/>
+<style>
         .ch2-content { font-family: 'Arial', sans-serif; line-height: 2.2; font-size: 18pt; color: #1a202c; padding: 40px; }
         .section-header { color: #166534; border-bottom: 5px solid #22c55e; padding-bottom: 15px; font-size: 34pt; margin-bottom: 30px; }
         .sub-header { color: #15803d; font-size: 28pt; margin-top: 50px; }
@@ -389,103 +442,90 @@
 </head>
 <body>
 <div class="ch2-content">
-    <h1 class="section-header">चीन (China) का आर्थिक उत्थान और वैश्विक चुनौती</h1>
-    
-    <div class="keyword-box">
-        <b>1. भौगोलिक स्थिति (Map Position):</b><br/>
+<h1 class="section-header hero-title">चीन (China) का आर्थिक उत्थान और वैश्विक चुनौती</h1>
+<div class="keyword-box">
+<b>1. भौगोलिक स्थिति (Map Position):</b><br>
         चीन पूर्वी एशिया में स्थित क्षेत्रफल और जनसंख्या के हिसाब से दुनिया का एक अत्यंत महत्वपूर्ण देश है। यह लद्दाख से लेकर प्रशांत महासागर तक सीमाएं साझा करता है।
-    </div>
-
-    <!-- China Map -->
-    <div class="illustration-box" style="border-color: #166534 !important; margin-top: 35px; margin-bottom: 35px;">
-        <img alt="China Map" src="images/ch2/china_map.webp" style="width: 90%; max-width: 800px; display: block; margin: 0 auto; border: 4px solid #cbd5e1; border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.15);" class="illustration-img"/>
-        <div class="illustration-explanation" style="border-left-color: #166534 !important;">
-            <b>मानचित्र: जनवादी गणराज्य चीन (Map of China):</b><br/>
+    </br></div>
+<!-- China Map -->
+<div class="illustration-box" style="border-color: #166534 !important; margin-top: 35px; margin-bottom: 35px;">
+<img alt="China Map" class="illustration-img" src="images/ch2/china_map.webp" style="width: 90%; max-width: 800px; display: block; margin: 0 auto; border: 4px solid #cbd5e1; border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.15);"/>
+<div class="illustration-explanation" style="border-left-color: #166534 !important;">
+<b>मानचित्र: जनवादी गणराज्य चीन (Map of China):</b><br>
             चीन का भौगोलिक स्थिति मानचित्र, जो पूर्वी एशिया में इसके विशाल भूभाग और पड़ोसी देशों के साथ इसकी सीमाओं को दर्शाता है।
-        </div>
-    </div>
-
-    <h2 class="sub-header">1. चीन की पुरानी सोवियत समाजवादी प्रणाली (Mao era)</h2>
-    
-    <!-- Mao Zedong Portrait -->
-    <div class="illustration-box" style="border-color: #166534 !important; margin-top: 35px; margin-bottom: 35px;">
-        <img alt="Mao Zedong" src="images/ch2/mao_zedong.webp" style="width: 90%; max-width: 800px; display: block; margin: 0 auto; border: 4px solid #cbd5e1; border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.15);" class="illustration-img"/>
-        <div class="illustration-explanation" style="border-left-color: #166534 !important;">
-            <b>माओ जेदांग (Mao Zedong):</b><br/>
+        </br></div>
+</div>
+<h2 class="sub-header topic-header">1. चीन की पुरानी सोवियत समाजवादी प्रणाली (Mao era)</h2>
+<!-- Mao Zedong Portrait -->
+<div class="illustration-box" style="border-color: #166534 !important; margin-top: 35px; margin-bottom: 35px;">
+<img alt="Mao Zedong" class="illustration-img" src="images/ch2/mao_zedong.webp" style="width: 90%; max-width: 800px; display: block; margin: 0 auto; border: 4px solid #cbd5e1; border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.15);"/>
+<div class="illustration-explanation" style="border-left-color: #166534 !important;">
+<b>माओ जेदांग (Mao Zedong):</b><br>
             1949 की चीनी कम्युनिस्ट क्रांति के सर्वमान्य नेता और पीपल्स रिपब्लिक ऑफ...
-        </div>
-    </div>
-
-    <p>1949 में माओ जेदांग के नेतृत्व में हुई समाजवादी क्रांति के बाद चीन ने सोवियत मॉडल पर आधारित एक बंद साम्यवादी अर्थव्यवस्था की स्थापना की। विदेशी व्यापार बहुत कम था और सारा नियंत्रण कम्युनिस्ट पार्टी का था। यद्यपि नागरिकों को बुनियादी सुविधाएं मिलीं, लेकिन आर्थिक विकास की दर जनसंख्या की वृद्धि दर (2-3%) से कम थी, जिससे भोजन की भारी कमी होने लगी।</p>
-
-    <h2 class="sub-header">2. 1978 के सुधार और 'खुले द्वार की नीति' (Deng Xiaoping era)</h2>
-    
-    <!-- Deng Xiaoping Portrait -->
-    <div class="illustration-box" style="border-color: #166534 !important; margin-top: 35px; margin-bottom: 35px;">
-        <img alt="Deng Xiaoping" src="images/ch2/deng_xiaoping.webp" style="width: 90%; max-width: 800px; display: block; margin: 0 auto; border: 4px solid #cbd5e1; border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.15);" class="illustration-img"/>
-        <div class="illustration-explanation" style="border-left-color: #166534 !important;">
-            <b>डेंग श्याओपिंग (Deng Xiaoping):</b><br/>
+        </br></div>
+</div>
+<p>1949 में माओ जेदांग के नेतृत्व में हुई समाजवादी क्रांति के बाद चीन ने सोवियत मॉडल पर आधारित एक बंद साम्यवादी अर्थव्यवस्था की स्थापना की। विदेशी व्यापार बहुत कम था और सारा नियंत्रण कम्युनिस्ट पार्टी का था। यद्यपि नागरिकों को बुनियादी सुविधाएं मिलीं, लेकिन आर्थिक विकास की दर जनसंख्या की वृद्धि दर (2-3%) से कम थी, जिससे भोजन की भारी कमी होने लगी।</p>
+<h2 class="sub-header topic-header">2. 1978 के सुधार और 'खुले द्वार की नीति' (Deng Xiaoping era)</h2>
+<!-- Deng Xiaoping Portrait -->
+<div class="illustration-box" style="border-color: #166534 !important; margin-top: 35px; margin-bottom: 35px;">
+<img alt="Deng Xiaoping" class="illustration-img" src="images/ch2/deng_xiaoping.webp" style="width: 90%; max-width: 800px; display: block; margin: 0 auto; border: 4px solid #cbd5e1; border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.15);"/>
+<div class="illustration-explanation" style="border-left-color: #166534 !important;">
+<b>डेंग श्याओपिंग (Deng Xiaoping):</b><br>
             चीन के मुख्य आर्थिक सुधारक जिन्होंने 1978 में 'खुले द्वार की नीति' (Open Door Policy) की घोषणा की। इन्होंने चीन को एक बंद सोवियत अर्थव्यवस्था से निकालकर वैश्विक व्यापार और बाजार-आधारित आर्थिक महाशक्ति में बदल दिया।
-        </div>
-    </div>
-
-    <p>चीन ने अपनी अर्थव्यवस्था को मजबूत करने के लिए 1970 के दशक में बड़े कूटनीतिक और आर्थिक बदलाव किए:</p>
-    <ul style="list-style-type: square; margin-left: 40px; font-size: 20pt;">
-        <li><b>1972:</b> अमेरिका के साथ राजनयिक और व्यापारिक संबंध बनाकर अपनी राजनीतिक अलग-थलग स्थिति (Isolation) समाप्त की।</li>
-        <li><b>1978:</b> डेंग श्याओपिंग ने <b>'खुले द्वार की नीति' (Open Door Policy)</b> की घोषणा की, जिसका उद्देश्य बाहरी दुनिया की तकनीक और निवेश को आकर्षित करना था।</li>
-        <li><b>चरणबद्ध आर्थिक सुधार:</b> सोवियत संघ की तरह एकाएक सब कुछ खोलने के बजाय, चीन ने 1982 में कृषि का निजीकरण किया और 1998 में उद्योगों का निजीकरण किया।</li>
-        <li><b>विशेष आर्थिक क्षेत्र (SEZ):</b> विदेशी पूंजी को आमंत्रित करने के लिए शेंजेन जैसे तटीय क्षेत्रों में एसईजेड की स्थापना की।</li>
-    </ul>
-
-    <!-- China Bicycle Cartoon -->
-    <div class="illustration-box" style="border-color: #166534 !important; margin-top: 35px; margin-bottom: 35px;">
-        <img alt="China Bicycle Cartoon" src="images/ch2/china_bicycle_cartoon.webp" style="width: 90%; max-width: 800px; display: block; margin: 0 auto; border: 4px solid #cbd5e1; border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.15);" class="illustration-img"/>
-        <div class="illustration-explanation" style="border-left-color: #166534 !important;">
-            <b>व्यंग्यचित्र: साम्यवाद और पूंजीवाद का चीनी तालमेल (The Chinese Bicycle Cartoon):</b><br/>
+        </br></div>
+</div>
+<p>चीन ने अपनी अर्थव्यवस्था को मजबूत करने के लिए 1970 के दशक में बड़े कूटनीतिक और आर्थिक बदलाव किए:</p>
+<ul style="list-style-type: square; margin-left: 40px; ">
+<li><b>1972:</b> अमेरिका के साथ राजनयिक और व्यापारिक संबंध बनाकर अपनी राजनीतिक अलग-थलग स्थिति (Isolation) समाप्त की।</li>
+<li><b>1978:</b> डेंग श्याओपिंग ने <b>'खुले द्वार की नीति' (Open Door Policy)</b> की घोषणा की, जिसका उद्देश्य बाहरी दुनिया की तकनीक और निवेश को आकर्षित करना था।</li>
+<li><b>चरणबद्ध आर्थिक सुधार:</b> सोवियत संघ की तरह एकाएक सब कुछ खोलने के बजाय, चीन ने 1982 में कृषि का निजीकरण किया और 1998 में उद्योगों का निजीकरण किया।</li>
+<li><b>विशेष आर्थिक क्षेत्र (SEZ):</b> विदेशी पूंजी को आमंत्रित करने के लिए शेंजेन जैसे तटीय क्षेत्रों में एसईजेड की स्थापना की।</li>
+</ul>
+<!-- China Bicycle Cartoon -->
+<div class="illustration-box" style="border-color: #166534 !important; margin-top: 35px; margin-bottom: 35px;">
+<img alt="China Bicycle Cartoon" class="illustration-img" src="images/ch2/china_bicycle_cartoon.webp" style="width: 90%; max-width: 800px; display: block; margin: 0 auto; border: 4px solid #cbd5e1; border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.15);"/>
+<div class="illustration-explanation" style="border-left-color: #166534 !important;">
+<b>व्यंग्यचित्र: साम्यवाद और पूंजीवाद का चीनी तालमेल (The Chinese Bicycle Cartoon):</b><br/>
             एनसीईआरटी का मूल कार्टून जो चीन के अनोखे हाइब्रिड मॉडल को साइकिल के दो पहियों के रूप में दर्शाता है। आगे के पहिये में कम्युनिस्ट पार्टी का लाल सितारा (राजनीतिक नियंत्रण) है और पिछले पहिये में पूंजीवादी डॉलर का निशान (आर्थिक स्वतंत्रता) है।
         </div>
-    </div>
-
-    <h2 class="sub-header">3. चीन के आर्थिक चमत्कार के परिणाम और उसकी सीमाएं</h2>
-    
-    <!-- China Dragon Cartoon -->
-    <div class="illustration-box" style="border-color: #166534 !important; margin-top: 35px; margin-bottom: 35px;">
-        <img alt="China Dragon Cartoon" src="images/ch2/china_dragon_cartoon.webp" style="width: 90%; max-width: 800px; display: block; margin: 0 auto; border: 4px solid #cbd5e1; border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.15);" class="illustration-img"/>
-        <div class="illustration-explanation" style="border-left-color: #166534 !important;">
-            <b>व्यंग्यचित्र: विश्व व्यापार में चीनी वर्चस्व (The Chinese Dragon Cartoon):</b><br/>
+</div>
+<h2 class="sub-header topic-header">3. चीन के आर्थिक चमत्कार के परिणाम और उसकी सीमाएं</h2>
+<!-- China Dragon Cartoon -->
+<div class="illustration-box" style="border-color: #166534 !important; margin-top: 35px; margin-bottom: 35px;">
+<img alt="China Dragon Cartoon" class="illustration-img" src="images/ch2/china_dragon_cartoon.webp" style="width: 90%; max-width: 800px; display: block; margin: 0 auto; border: 4px solid #cbd5e1; border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.15);"/>
+<div class="illustration-explanation" style="border-left-color: #166534 !important;">
+<b>व्यंग्यचित्र: विश्व व्यापार में चीनी वर्चस्व (The Chinese Dragon Cartoon):</b><br/>
             एनसीईआरटी का मूल चित्र जो यह दिखाता है कि कैसे चीन का विशाल व्यापारिक ड्रैगन अमेरिका के वर्चस्व को खुली चुनौती दे रहा है और पूरी दुनिया में चीनी सामानों की पैठ बढ़ गई है।
         </div>
-    </div>
-
-    <!-- China Growth SEZ Photo -->
-    <div class="illustration-box" style="border-color: #166534 !important; margin-top: 35px; margin-bottom: 35px;">
-        <img alt="China Economic SEZ Growth" src="images/ch2/china_growth_sez.webp" style="width: 90%; max-width: 800px; display: block; margin: 0 auto; border: 4px solid #cbd5e1; border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.15);" class="illustration-img"/>
-        <div class="illustration-explanation" style="border-left-color: #166534 !important;">
-            <b>चित्र: शेंजेन विशेष आर्थिक क्षेत्र (Shenzhen SEZ Skyline):</b><br/>
+</div>
+<!-- China Growth SEZ Photo -->
+<div class="illustration-box" style="border-color: #166534 !important; margin-top: 35px; margin-bottom: 35px;">
+<img alt="China Economic SEZ Growth" class="illustration-img" src="images/ch2/china_growth_sez.webp" style="width: 90%; max-width: 800px; display: block; margin: 0 auto; border: 4px solid #cbd5e1; border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.15);"/>
+<div class="illustration-explanation" style="border-left-color: #166534 !important;">
+<b>चित्र: शेंजेन विशेष आर्थिक क्षेत्र (Shenzhen SEZ Skyline):</b><br/>
             चीन का वह प्रसिद्ध तटीय शहर जो विशेष आर्थिक क्षेत्र के रूप में विकसित होकर चीनी विनिर्माण का प्रमुख वैश्विक केंद्र बन चुका है।
         </div>
-    </div>
-
-    <!-- Great Wall Cartoon -->
-    <div class="illustration-box" style="border-color: #166534 !important; margin-top: 35px; margin-bottom: 35px;">
-        <img alt="China Great Wall Cartoon" src="images/ch2/china_great_wall_cartoon.webp" style="width: 90%; max-width: 800px; display: block; margin: 0 auto; border: 4px solid #cbd5e1; border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.15);" class="illustration-img"/>
-        <div class="illustration-explanation" style="border-left-color: #166534 !important;">
-            <b>व्यंग्यचित्र: माओ का चीन और आज का चीन (The Great Wall / Mao-Hu Cartoon):</b><br/>
+</div>
+<!-- Great Wall Cartoon -->
+<div class="illustration-box" style="border-color: #166534 !important; margin-top: 35px; margin-bottom: 35px;">
+<img alt="China Great Wall Cartoon" class="illustration-img" src="images/ch2/china_great_wall_cartoon.webp" style="width: 90%; max-width: 800px; display: block; margin: 0 auto; border: 4px solid #cbd5e1; border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.15);"/>
+<div class="illustration-explanation" style="border-left-color: #166534 !important;">
+<b>व्यंग्यचित्र: माओ का चीन और आज का चीन (The Great Wall / Mao-Hu Cartoon):</b><br/>
             यह व्यंग्यचित्र चीन की महान दीवार और कम्युनिस्ट शासन में आए ऐतिहासिक बदलावों को दिखाता है कि कैसे पुराने समाजवादी सिद्धांतों से हटकर चीन ने विदेशी निवेश का मार्ग खोला।
         </div>
-    </div>
-
-    <p><b>3.1 आर्थिक उपलब्धियां:</b> चीन विदेशी पूंजी निवेश का सबसे बड़ा गंतव्य है, जिसके पास दुनिया का सबसे बड़ा विदेशी मुद्रा भंडार है।<br/>
-    <b>3.2 सीमाएं:</b> चीन के इस तीव्र विकास ने आंतरिक चुनौतियां भी खड़ी की हैं: समाज में बढ़ती आर्थिक असमानता, औद्योगिक प्रदूषण और कम्युनिस्ट शासन में लोकतांत्रिक अधिकारों का अभाव।</p>
+</div>
+<p><b>3.1 आर्थिक उपलब्धियां:</b> चीन विदेशी पूंजी निवेश का सबसे बड़ा गंतव्य है, जिसके पास दुनिया का सबसे बड़ा विदेशी मुद्रा भंडार है।<br/>
+<b>3.2 सीमाएं:</b> चीन के इस तीव्र विकास ने आंतरिक चुनौतियां भी खड़ी की हैं: समाज में बढ़ती आर्थिक असमानता, औद्योगिक प्रदूषण और कम्युनिस्ट शासन में लोकतांत्रिक अधिकारों का अभाव।</p>
 </div>
 </body>
 </html>
-<br><br><hr><br><br>
+<br/><br/><hr/><br/><br/>
 <!DOCTYPE html>
+
 <html lang="hi">
 <head>
-    <meta charset="UTF-8">
-    <style>
+<meta charset="utf-8"/>
+<style>
         .ch2-content { font-family: 'Arial', sans-serif; line-height: 2.2; font-size: 18pt; color: #1a202c; padding: 40px; }
         .section-header { color: #b91c1c; border-bottom: 5px solid #ef4444; padding-bottom: 15px; font-size: 34pt; margin-bottom: 30px; }
         .sub-header { color: #dc2626; font-size: 28pt; margin-top: 50px; }
@@ -496,49 +536,44 @@
 </head>
 <body>
 <div class="ch2-content">
-    <h1 class="section-header">भारत-चीन संबंध (India-China Relations) - कूटनीति, सहयोग और टकराव</h1>
-    
-    <p>भारत और चीन एशिया महाद्वीप की दो उभरती हुई विशाल अर्थव्यवस्थाएं और राजनीतिक शक्तियां हैं। दोनों पड़ोसी देशों का प्राचीन काल से सांस्कृतिक और व्यापारिक संबंध रहा है। 1947 में भारत की आजादी और 1949 in जनवादी चीन की स्थापना के बाद दोनों के संबंधों में उतार-चढ़ाव आए हैं।</p>
-
-    <h2 class="sub-header">1. ऐतिहासिक पृष्ठभूमि और 1962 का युद्ध</h2>
-    
-    <!-- India-China Border Map -->
-    <div class="illustration-box" style="border-color: #b91c1c !important; margin-top: 35px; margin-bottom: 35px;">
-        <img alt="India China Border Disputed Map" src="images/ch2/india_china_border_map.webp" style="width: 90%; max-width: 800px; display: block; margin: 0 auto; border: 4px solid #cbd5e1; border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.15);" class="illustration-img"/>
-        <div class="illustration-explanation" style="border-left-color: #b91c1c !important;">
-            <b>मानचित्र: भारत-चीन सीमा विवाद (Disputed India-China Borders Map):</b><br/>
+<h1 class="section-header hero-title">भारत-चीन संबंध (India-China Relations) - कूटनीति, सहयोग और टकराव</h1>
+<p>भारत और चीन एशिया महाद्वीप की दो उभरती हुई विशाल अर्थव्यवस्थाएं और राजनीतिक शक्तियां हैं। दोनों पड़ोसी देशों का प्राचीन काल से सांस्कृतिक और व्यापारिक संबंध रहा है। 1947 में भारत की आजादी और 1949 in जनवादी चीन की स्थापना के बाद दोनों के संबंधों में उतार-चढ़ाव आए हैं।</p>
+<h2 class="sub-header topic-header">1. ऐतिहासिक पृष्ठभूमि और 1962 का युद्ध</h2>
+<!-- India-China Border Map -->
+<div class="illustration-box" style="border-color: #b91c1c !important; margin-top: 35px; margin-bottom: 35px;">
+<img alt="India China Border Disputed Map" class="illustration-img" src="images/ch2/india_china_border_map.webp" style="width: 90%; max-width: 800px; display: block; margin: 0 auto; border: 4px solid #cbd5e1; border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.15);"/>
+<div class="illustration-explanation" style="border-left-color: #b91c1c !important;">
+<b>मानचित्र: भारत-चीन सीमा विवाद (Disputed India-China Borders Map):</b><br>
             पश्चिमी सेक्टर (लद्दाख में अक्साई चिन) and पूर्वी सेक्टर (अरुणाचल प्रदेश में मैकमोहन रेखा) को दर्शाता हुआ सीमा विवाद का महत्वपूर्ण मानचित्र। 1962 के युद्ध का मुख्य कारण यही सीमा विवाद था।
-        </div>
-    </div>
-
-    <p>1950 में तिब्बत पर चीन के कब्जे और 1959 में तिब्बती आध्यात्मिक गुरु दलाई लामा को भारत द्वारा शरण दिए जाने के कारण दोनों देशों के संबंधों में खटास आ गई। इन विवादों के कारण अक्टूबर 1962 में चीन ने भारत पर हमला किया और अक्साई चिन के हिस्से पर अधिकार कर लिया।</p>
-
-    <h2 class="sub-header">2. भारत और चीन के बीच सहयोग के 5 प्रमुख बिंदु (Cooperation)</h2>
-    <ul style="list-style-type: square; margin-left: 40px; font-size: 20pt;">
-        <li><b>1. द्विपक्षीय व्यापार (Bilateral Trade):</b> चीन आज भारत के सबसे बड़े व्यापारिक साझेदारों में से एक है। दोनों देशों के बीच अरबों डॉलर का व्यापार होता है।</li>
-        <li><b>2. अंतरराष्ट्रीय मंचों पर समन्वय:</b> वैश्विक स्तर पर जलवायु परिवर्तन वार्ताओं, WTO और संयुक्त राष्ट्र के आर्थिक सुधारों के मुद्दों पर भारत और चीन अक्सर विकासशील देशों के हित में एकजुट होकर बात रखते हैं।</li>
-        <li><b>3. सीमा प्रबंधन समझौते:</b> दोनों देशों ने 1993, 1996 और 2005 में सीमा पर शांति और वास्तविक नियंत्रण रेखा (LAC) पर तनाव कम करने के लिए महत्वपूर्ण द्विपक्षीय समझौतों पर हस्ताक्षर किए हैं।</li>
-        <li><b>4. राजनयिक सुधार और यात्राएं:</b> 1988 में राजीव गांधी की चीन यात्रा के बाद से दोनों देशों के राष्ट्राध्यक्षों के बीच नियमित द्विपक्षीय बैठकों का क्रम शुरू हुआ।</li>
-        <li><b>5. ब्रिक्स और सार्क मंच:</b> दोनों देश ब्रिक्स (BRICS), शंघाई सहयोग संगठन (SCO) और जी-20 जैसे प्रमुख बहुपक्षीय मंचों पर साथ मिलकर वैश्विक आर्थिक स्थिरता के लिए कार्य कर रहे हैं।</li>
-    </ul>
-
-    <h2 class="sub-header">3. भारत और चीन के बीच टकराव के 5 प्रमुख बिंदु (Conflict)</h2>
-    <ul style="list-style-type: square; margin-left: 40px; font-size: 20pt;">
-        <li><b>1. सीमा विवाद और हालिया झड़पें:</b> वास्तविक नियंत्रण रेखा (LAC) पर डोकलाम (2017) और गलवान घाटी (2020) में हिंसक झड़पों के कारण दोनों देशों के सैन्य संबंध अत्यधिक तनावपूर्ण हो गए हैं।</li>
-        <li><b>2. चीन-पाकिस्तान आर्थिक गलियारा (CPEC):</b> चीन द्वारा पाकिस्तान अधिकृत कश्मीर (POK) से होकर गुजारी जा रही बीआरआई (Belt and Road Initiative) सड़क का भारत अपनी क्षेत्रीय अखंडता के आधार पर कड़ा विरोध करता है।</li>
-        <li><b>3. पाकिस्तान को चीनी सैन्य सहयोग:</b> चीन द्वारा पाकिस्तान को परमाणु तकनीक, मिसाइल और संयुक्त राष्ट्र में जैश-ए-मोहम्मद के आतंकियों पर वीटो लगाकर संरक्षण देना भारत की सुरक्षा के लिए बड़ी चिंता है।</li>
-        <li><b>4. 'मोतियों की माला' नीति (String of Pearls):</b> हिंद महासागर में भारत को चारों तरफ से घेरने के लिए चीन द्वारा श्रीलंका (हंबनटोटा), मालदीव और म्यांमार में बंदरगाहों का विकास करना।</li>
-        <li><b>5. तिब्बत का मुद्दा और नदियों का विवाद:</b> ब्रह्मपुत्र नदी पर चीन द्वारा बड़े बांधों का निर्माण करना, जिससे पूर्वोत्तर भारत में बाढ़ और पानी की कमी का संकट बढ़ सकता है।</li>
-    </ul>
+        </br></div>
+</div>
+<p>1950 में तिब्बत पर चीन के कब्जे और 1959 में तिब्बती आध्यात्मिक गुरु दलाई लामा को भारत द्वारा शरण दिए जाने के कारण दोनों देशों के संबंधों में खटास आ गई। इन विवादों के कारण अक्टूबर 1962 में चीन ने भारत पर हमला किया और अक्साई चिन के हिस्से पर अधिकार कर लिया।</p>
+<h2 class="sub-header topic-header">2. भारत और चीन के बीच सहयोग के 5 प्रमुख बिंदु (Cooperation)</h2>
+<ul style="list-style-type: square; margin-left: 40px; ">
+<li><b>1. द्विपक्षीय व्यापार (Bilateral Trade):</b> चीन आज भारत के सबसे बड़े व्यापारिक साझेदारों में से एक है। दोनों देशों के बीच अरबों डॉलर का व्यापार होता है।</li>
+<li><b>2. अंतरराष्ट्रीय मंचों पर समन्वय:</b> वैश्विक स्तर पर जलवायु परिवर्तन वार्ताओं, WTO और संयुक्त राष्ट्र के आर्थिक सुधारों के मुद्दों पर भारत और चीन अक्सर विकासशील देशों के हित में एकजुट होकर बात रखते हैं।</li>
+<li><b>3. सीमा प्रबंधन समझौते:</b> दोनों देशों ने 1993, 1996 और 2005 में सीमा पर शांति और वास्तविक नियंत्रण रेखा (LAC) पर तनाव कम करने के लिए महत्वपूर्ण द्विपक्षीय समझौतों पर हस्ताक्षर किए हैं।</li>
+<li><b>4. राजनयिक सुधार और यात्राएं:</b> 1988 में राजीव गांधी की चीन यात्रा के बाद से दोनों देशों के राष्ट्राध्यक्षों के बीच नियमित द्विपक्षीय बैठकों का क्रम शुरू हुआ।</li>
+<li><b>5. ब्रिक्स और सार्क मंच:</b> दोनों देश ब्रिक्स (BRICS), शंघाई सहयोग संगठन (SCO) और जी-20 जैसे प्रमुख बहुपक्षीय मंचों पर साथ मिलकर वैश्विक आर्थिक स्थिरता के लिए कार्य कर रहे हैं।</li>
+</ul>
+<h2 class="sub-header topic-header">3. भारत और चीन के बीच टकराव के 5 प्रमुख बिंदु (Conflict)</h2>
+<ul style="list-style-type: square; margin-left: 40px; ">
+<li><b>1. सीमा विवाद और हालिया झड़पें:</b> वास्तविक नियंत्रण रेखा (LAC) पर डोकलाम (2017) और गलवान घाटी (2020) में हिंसक झड़पों के कारण दोनों देशों के सैन्य संबंध अत्यधिक तनावपूर्ण हो गए हैं।</li>
+<li><b>2. चीन-पाकिस्तान आर्थिक गलियारा (CPEC):</b> चीन द्वारा पाकिस्तान अधिकृत कश्मीर (POK) से होकर गुजारी जा रही बीआरआई (Belt and Road Initiative) सड़क का भारत अपनी क्षेत्रीय अखंडता के आधार पर कड़ा विरोध करता है।</li>
+<li><b>3. पाकिस्तान को चीनी सैन्य सहयोग:</b> चीन द्वारा पाकिस्तान को परमाणु तकनीक, मिसाइल और संयुक्त राष्ट्र में जैश-ए-मोहम्मद के आतंकियों पर वीटो लगाकर संरक्षण देना भारत की सुरक्षा के लिए बड़ी चिंता है।</li>
+<li><b>4. 'मोतियों की माला' नीति (String of Pearls):</b> हिंद महासागर में भारत को चारों तरफ से घेरने के लिए चीन द्वारा श्रीलंका (हंबनटोटा), मालदीव और म्यांमार में बंदरगाहों का विकास करना।</li>
+<li><b>5. तिब्बत का मुद्दा और नदियों का विवाद:</b> ब्रह्मपुत्र नदी पर चीन द्वारा बड़े बांधों का निर्माण करना, जिससे पूर्वोत्तर भारत में बाढ़ और पानी की कमी का संकट बढ़ सकता है।</li>
+</ul>
 </div>
 </body>
 </html>
-<br><br><hr><br><br>
+<br/><br/><hr/><br/><br/>
 <!DOCTYPE html>
+
 <html lang="hi">
 <head>
-    <meta charset="UTF-8">
-    <style>
+<meta charset="utf-8"/>
+<style>
         .ch2-content { font-family: 'Arial', sans-serif; line-height: 2.2; font-size: 18pt; color: #1a202c; padding: 40px; }
         .section-header { color: #0369a1; border-bottom: 5px solid #38bdf8; padding-bottom: 15px; font-size: 34pt; margin-bottom: 30px; }
         .sub-header { color: #0284c7; font-size: 28pt; margin-top: 50px; }
@@ -550,103 +585,92 @@
 </head>
 <body>
 <div class="ch2-content">
-    <h1 class="section-header">जापान और दक्षिण कोरिया (Japan &amp; South Korea) - वैकल्पिक केंद्र</h1>
-    
-    <div class="keyword-box">
-        <b>1. भौगोलिक स्थिति (Map Position):</b><br/>
+<h1 class="section-header hero-title">जापान और दक्षिण कोरिया (Japan &amp; South Korea) - वैकल्पिक केंद्र</h1>
+<div class="keyword-box">
+<b>1. भौगोलिक स्थिति (Map Position):</b><br>
         जापान पूर्वी एशिया में प्रशांत महासागर में स्थित एक द्वीप देश है। दक्षिण कोरिया कोरियाई प्रायद्वीप के दक्षिणी भाग में स्थित है। दोनों देश रणनीतिक रूप से अत्यंत महत्वपूर्ण हैं।
-    </div>
-
-    <!-- Japan Map -->
-    <div class="illustration-box" style="border-color: #0369a1 !important; margin-top: 35px; margin-bottom: 35px;">
-        <img alt="Japan Map" src="images/ch2/japan_map.webp" style="width: 90%; max-width: 800px; display: block; margin: 0 auto; border: 4px solid #cbd5e1; border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.15);" class="illustration-img"/>
-        <div class="illustration-explanation" style="border-left-color: #0369a1 !important;">
-            <b>मानचित्र: जापान की वैश्विक स्थिति (Map of Japan on Globe):</b><br/>
+    </br></div>
+<!-- Japan Map -->
+<div class="illustration-box" style="border-color: #0369a1 !important; margin-top: 35px; margin-bottom: 35px;">
+<img alt="Japan Map" class="illustration-img" src="images/ch2/japan_map.webp" style="width: 90%; max-width: 800px; display: block; margin: 0 auto; border: 4px solid #cbd5e1; border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.15);"/>
+<div class="illustration-explanation" style="border-left-color: #0369a1 !important;">
+<b>मानचित्र: जापान की वैश्विक स्थिति (Map of Japan on Globe):</b><br>
             जापान का भौगोलिक स्थिति मानचित्र, जो प्रशांत महासागर में इसके द्वीपों की रणनीतिक अवस्थिति को निरूपित करता है।
-        </div>
-    </div>
-
-    <h2 class="sub-header">1. जापान: सैन्य विनाश से तकनीकी चमत्कार तक (Japan)</h2>
-    <p><b>1.1 संक्षिप्त इतिहास और द्वितीय विश्वयुद्ध के बाद उदय:</b><br/>
-    द्वितीय विश्वयुद्ध में हिरोशिमा और नागासाकी पर अमेरिकी परमाणु बम हमलों के कारण जापान पूरी तरह से नष्ट हो गया था। युद्ध के बाद, जापान ने संविधान के <b>अनुच्छेद 9 (Article 9)</b> को स्वीकार किया, जिसके तहत उसने युद्ध की घोषणा करने के अपने अधिकार को त्याग दिया और शांति का मार्ग चुना। अमेरिका के साथ सुरक्षा संधि के बाद, जापान ने अपनी पूरी ऊर्जा आर्थिक और तकनीकी विकास में लगा दी।</p>
-    
-    <p><b>1.2 विकास और उपलब्धियां:</b><br/>
-    जापान आज दुनिया का सबसे उन्नत तकनीकी राष्ट्र है। जापानी ब्रांड जैसे <b>Sony, Toyota, Honda, Panasonic, Suzuki</b> पूरी दुनिया में गुणवत्ता के प्रतीक हैं। यह विकसित औद्योगिक देशों के समूह <b>जी-7 (G-7)</b> का एकमात्र एशियाई सदस्य है।</p>
-
-    <!-- South Korea Map -->
-    <div class="illustration-box" style="border-color: #0369a1 !important; margin-top: 35px; margin-bottom: 35px;">
-        <img alt="South Korea Map" src="images/ch2/korea_map.webp" style="width: 90%; max-width: 800px; display: block; margin: 0 auto; border: 4px solid #cbd5e1; border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.15);" class="illustration-img"/>
-        <div class="illustration-explanation" style="border-left-color: #0369a1 !important;">
-            <b>मानचित्र: दक्षिण कोरिया की स्थिति (Map of South Korea on Globe):</b><br/>
+        </br></div>
+</div>
+<h2 class="sub-header topic-header">1. जापान: सैन्य विनाश से तकनीकी चमत्कार तक (Japan)</h2>
+<p><b>1.1 संक्षिप्त इतिहास और द्वितीय विश्वयुद्ध के बाद उदय:</b><br>
+    द्वितीय विश्वयुद्ध में हिरोशिमा और नागासाकी पर अमेरिकी परमाणु बम हमलों के कारण जापान पूरी तरह से नष्ट हो गया था। युद्ध के बाद, जापान ने संविधान के <b>अनुच्छेद 9 (Article 9)</b> को स्वीकार किया, जिसके तहत उसने युद्ध की घोषणा करने के अपने अधिकार को त्याग दिया और शांति का मार्ग चुना। अमेरिका के साथ सुरक्षा संधि के बाद, जापान ने अपनी पूरी ऊर्जा आर्थिक और तकनीकी विकास में लगा दी।</br></p>
+<p><b>1.2 विकास और उपलब्धियां:</b><br>
+    जापान आज दुनिया का सबसे उन्नत तकनीकी राष्ट्र है। जापानी ब्रांड जैसे <b>Sony, Toyota, Honda, Panasonic, Suzuki</b> पूरी दुनिया में गुणवत्ता के प्रतीक हैं। यह विकसित औद्योगिक देशों के समूह <b>जी-7 (G-7)</b> का एकमात्र एशियाई सदस्य है।</br></p>
+<!-- South Korea Map -->
+<div class="illustration-box" style="border-color: #0369a1 !important; margin-top: 35px; margin-bottom: 35px;">
+<img alt="South Korea Map" class="illustration-img" src="images/ch2/korea_map.webp" style="width: 90%; max-width: 800px; display: block; margin: 0 auto; border: 4px solid #cbd5e1; border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.15);"/>
+<div class="illustration-explanation" style="border-left-color: #0369a1 !important;">
+<b>मानचित्र: दक्षिण कोरिया की स्थिति (Map of South Korea on Globe):</b><br>
             कोरियाई प्रायद्वीप पर दक्षिण कोरिया की भौगोलिक अवस्थिति का चित्र।
-        </div>
+        </br></div>
+</div>
+<h2 class="sub-header topic-header">2. दक्षिण कोरिया: 'हान नदी का चमत्कार' और K-Wave</h2>
+<p><b>2.1 संक्षिप्त इतिहास और द्वितीय विश्वयुद्ध के बाद उदय:</b><br>
+    1950-53 के विनाशकारी कोरियाई युद्ध के बाद दक्षिण कोरिया एक अत्यंत निर्धन और खंडहर बन चुका देश था। लेकिन, केवल 30 वर्षों में उसने असाधारण विकास दर हासिल की, जिसे <b>'हान नदी का चमत्कार' (Miracle on the Han River)</b> कहा जाता है।</br></p>
+<div class="tech-card" style="">
+<b>वैश्विक तकनीकी ब्रांड:</b> दक्षिण कोरिया के पास **Samsung, LG, Hyundai**, और **Kia** जैसी महाकाय तकनीकी कंपनियां हैं।
     </div>
-
-    <h2 class="sub-header">2. दक्षिण कोरिया: 'हान नदी का चमत्कार' और K-Wave</h2>
-    <p><b>2.1 संक्षिप्त इतिहास और द्वितीय विश्वयुद्ध के बाद उदय:</b><br/>
-    1950-53 के विनाशकारी कोरियाई युद्ध के बाद दक्षिण कोरिया एक अत्यंत निर्धन और खंडहर बन चुका देश था। लेकिन, केवल 30 वर्षों में उसने असाधारण विकास दर हासिल की, जिसे <b>'हान नदी का चमत्कार' (Miracle on the Han River)</b> कहा जाता है।</p>
-
-    <div class="tech-card" style="font-size: 20pt;">
-        <b>वैश्विक तकनीकी ब्रांड:</b> दक्षिण कोरिया के पास **Samsung, LG, Hyundai**, और **Kia** जैसी महाकाय तकनीकी कंपनियां हैं।
-    </div>
-
-    <p><b>2.2 सॉफ्ट पावर और सांस्कृतिक लहर (K-Wave / Hallyu):</b><br/>
-    हाल के वर्षों में दक्षिण कोरिया ने अपनी 'सॉफ्ट पावर' का पूरी दुनिया में लोहा मनवाया है। युवाओं के बीच कोरियन पॉप संगीत <b>(K-Pop जैसे BTS और Blackpink)</b>, कोरियन नाटक और फिल्में <b>(K-Drama जैसे Squid Game, Crash Landing on You)</b> और कोरियन सौंदर्य उत्पाद (K-Beauty) वैश्विक स्तर पर अभूतपूर्व रूप से लोकप्रिय हैं।</p>
-
-    <h2 class="sub-header">3. भारत और जापान संबंध</h2>
-    <div class="keyword-box">
-        <b>3.1 सहयोग के 5 प्रमुख बिंदु (Cooperation):</b>
-        <ul style="list-style-type: decimal; margin-left: 20px; font-size: 18pt;">
-            <li><b>बुलेट ट्रेन परियोजना:</b> जापान भारत की पहली मुंबई-अहमदाबाद हाई-स्पीड रेल (Bullet Train) परियोजना का पूर्ण वित्तपोषण और तकनीकी मार्गदर्शन कर रहा है।</li>
-            <li><b>क्वाड (Quad) गठबंधन:</b> भारत और जापान हिंद-प्रशांत क्षेत्र में चीनी प्रभाव को संतुलित करने के लिए अमेरिका और ऑस्ट्रेलिया के साथ मिलकर 'क्वाड' के तहत काम कर रहे हैं।</li>
-            <li><b>आधिकारिक विकास सहायता (ODA):</b> जापान भारत में मेट्रो रेलवे परियोजनाओं (जैसे दिल्ली मेट्रो, मुंबई मेट्रो) और राष्ट्रीय राजमार्गों के विकास में सबसे बड़ा निवेशक है।</li>
-            <li><b>सैन्य अभ्यास:</b> दोनों देशों के बीच धर्म गार्जियन (सेना), जिमेक्स (नौसेना) और शिन्यू मैत्री (वायुसेना) जैसे नियमित सैन्य अभ्यास आयोजित होते हैं।</li>
-            <li><b>औद्योगिक गलियारे:</b> दिल्ली-मुंबई औद्योगिक गलियारा (DMIC) और चेन्नई-बेंगलुरु औद्योगिक गलियारे में जापानी सहयोग।</li>
-        </ul>
-    </div>
-
-    <div class="keyword-box" style="border-left-color: #ef4444 !important; background: #fff5f5;">
-        <b>3.2 टकराव और चुनौतियां (Conflict &amp; Challenges - 5 Points):</b>
-        <ul style="list-style-type: decimal; margin-left: 20px; font-size: 18pt; color: #7f1d1d;">
-            <li><b>कम द्विपक्षीय व्यापार:</b> दोनों देशों के बीच CEPA संधि होने के बावजूद द्विपक्षीय व्यापार केवल 18-20 अरब डॉलर पर सिमटा हुआ है, जो चीन-भारत व्यापार की तुलना में बहुत कम है।</li>
-            <li><b>रूस-यूक्रेन युद्ध पर मतभेद:</b> जापान पश्चिमी देशों के साथ रूस पर कड़े प्रतिबंधों का पक्षधर है, जबकि भारत ने रूस से कच्चे तेल का आयात जारी रखा है और संयुक्त राष्ट्र में निष्पक्ष रुख अपनाया है।</li>
-            <li><b>RCEP पर भिन्न मत:</b> जापान चाहता था कि भारत RCEP समझौते में रहे ताकि चीनी प्रभाव को संतुलित किया जा सके, लेकिन भारत के हटने से जापान कूटनीतिक रूप से निराश हुआ।</li>
-            <li><b>निवेशकों की प्रशासनिक शिकायतें:</b> जापानी कंपनियों द्वारा भारत में भूमि अधिग्रहण, कर प्रणाली की जटिलताओं और प्रशासनिक फाइलों की देरी पर चिंता व्यक्त की जाती है।</li>
-            <li><b>सैन्य संधियों की सीमा:</b> जापान की शांतिवादी नीतियों (संविधान के अनुच्छेद 9) के कारण दोनों देशों के बीच प्रत्यक्ष युद्धक संधियों और हथियारों के सह-विकास में सीमाएं हैं।</li>
-        </ul>
-    </div>
-
-    <h2 class="sub-header">4. भारत और दक्षिण कोरिया संबंध</h2>
-    <div class="keyword-box">
-        <b>4.1 सहयोग के 5 प्रमुख बिंदु (Cooperation):</b>
-        <ul style="list-style-type: decimal; margin-left: 20px; font-size: 18pt;">
-            <li><b>रक्षा विनिर्माण:</b> दक्षिण कोरिया की मदद से भारतीय सेना के लिए 'के-9 वज्र' (K-9 Vajra) तोपों का भारत में ही सफल विनिर्माण किया जा रहा है।</li>
-            <li><b>आर्थिक व्यापार:</b> दोनों देशों ने 2009 में व्यापक आर्थिक भागीदारी समझौते (CEPA) पर हस्ताक्षर किए, जिससे व्यापारिक करों में कटौती हुई।</li>
-            <li><b>निवेश और ब्रांड:</b> हुंडई, सैमसंग और एलजी जैसी बड़ी दक्षिण कोरियाई कंपनियों ने भारत में भारी निवेश किया है और सैमसंग की नोएडा फैक्ट्री दुनिया की सबसे बड़ी मोबाइल विनिर्माण इकाई है।</li>
-            <li><b>एक्ट ईस्ट नीति का जुड़ाव:</b> दक्षिण कोरिया की 'न्यू सदर्न पॉलिसी' और भारत की 'एक्ट ईस्ट पॉलिसी' के बीच गहरा समन्वय।</li>
-            <li><b>सॉफ्ट पावर और सांस्कृतिक जुड़ाव:</b> कोरियन संगीत (K-Pop) और ड्रामा (K-Drama) की भारत के युवाओं में बढ़ती लोकप्रियता।</li>
-        </ul>
-    </div>
-
-    <div class="keyword-box" style="border-left-color: #ef4444 !important; background: #fff5f5;">
-        <b>4.2 टकराव और चुनौतियां (Conflict &amp; Challenges - 5 Points):</b>
-        <ul style="list-style-type: decimal; margin-left: 20px; font-size: 18pt; color: #7f1d1d;">
-            <li><b>व्यापार असंतुलन:</b> भारत का दक्षिण कोरिया के साथ लगातार व्यापार घाटा बढ़ रहा है, जिसे कम करने के लिए भारत CEPA समझौते की समीक्षा की मांग कर रहा है।</li>
-            <li><b>पोस्को (POSCO) विवाद:</b> दक्षिण कोरियाई इस्पात कंपनी पोस्को का ओडिशा में प्रस्तावित 12 अरब डॉलर का प्रोजेक्ट भूमि अधिग्रहण और स्थानीय लोगों के कड़े विरोध के कारण रद्द करना पड़ा।</li>
-            <li><b>गैर-टैरिफ व्यापार बाधाएं:</b> भारतीय फार्मास्युटिकल और कृषि निर्यातकों को दक्षिण कोरियाई मानकों से कठिन नियामकीय चुनौतियों का सामना करना पड़ता है।</li>
-            <li><b>चीन के प्रति रुख में अंतर:</b> दक्षिण कोरिया आर्थिक और भौगोलिक रूप से चीन के प्रति आक्रामक रवैया अपनाने से बचता है, जबकि भारत चीन सीमा विवाद के प्रति अधिक सख्त है।</li>
-            <li><b>प्रशासनिक बाधाएं:</b> भारत में जटिल नौकरशाही और टैक्स सुधारों में देरी से दक्षिण कोरियाई निवेशक अक्सर असहज महसूस करते हैं।</li>
-        </ul>
-    </div>
+<p><b>2.2 सॉफ्ट पावर और सांस्कृतिक लहर (K-Wave / Hallyu):</b><br>
+    हाल के वर्षों में दक्षिण कोरिया ने अपनी 'सॉफ्ट पावर' का पूरी दुनिया में लोहा मनवाया है। युवाओं के बीच कोरियन पॉप संगीत <b>(K-Pop जैसे BTS और Blackpink)</b>, कोरियन नाटक और फिल्में <b>(K-Drama जैसे Squid Game, Crash Landing on You)</b> और कोरियन सौंदर्य उत्पाद (K-Beauty) वैश्विक स्तर पर अभूतपूर्व रूप से लोकप्रिय हैं।</br></p>
+<h2 class="sub-header topic-header">3. भारत और जापान संबंध</h2>
+<div class="keyword-box">
+<b>3.1 सहयोग के 5 प्रमुख बिंदु (Cooperation):</b>
+<ul style="list-style-type: decimal; margin-left: 20px; ">
+<li><b>बुलेट ट्रेन परियोजना:</b> जापान भारत की पहली मुंबई-अहमदाबाद हाई-स्पीड रेल (Bullet Train) परियोजना का पूर्ण वित्तपोषण और तकनीकी मार्गदर्शन कर रहा है।</li>
+<li><b>क्वाड (Quad) गठबंधन:</b> भारत और जापान हिंद-प्रशांत क्षेत्र में चीनी प्रभाव को संतुलित करने के लिए अमेरिका और ऑस्ट्रेलिया के साथ मिलकर 'क्वाड' के तहत काम कर रहे हैं।</li>
+<li><b>आधिकारिक विकास सहायता (ODA):</b> जापान भारत में मेट्रो रेलवे परियोजनाओं (जैसे दिल्ली मेट्रो, मुंबई मेट्रो) और राष्ट्रीय राजमार्गों के विकास में सबसे बड़ा निवेशक है।</li>
+<li><b>सैन्य अभ्यास:</b> दोनों देशों के बीच धर्म गार्जियन (सेना), जिमेक्स (नौसेना) और शिन्यू मैत्री (वायुसेना) जैसे नियमित सैन्य अभ्यास आयोजित होते हैं।</li>
+<li><b>औद्योगिक गलियारे:</b> दिल्ली-मुंबई औद्योगिक गलियारा (DMIC) और चेन्नई-बेंगलुरु औद्योगिक गलियारे में जापानी सहयोग।</li>
+</ul>
+</div>
+<div class="keyword-box" style="border-left-color: #ef4444 !important; background: #fff5f5;">
+<b>3.2 टकराव और चुनौतियां (Conflict &amp; Challenges - 5 Points):</b>
+<ul style="list-style-type: decimal; margin-left: 20px;  color: #7f1d1d;">
+<li><b>कम द्विपक्षीय व्यापार:</b> दोनों देशों के बीच CEPA संधि होने के बावजूद द्विपक्षीय व्यापार केवल 18-20 अरब डॉलर पर सिमटा हुआ है, जो चीन-भारत व्यापार की तुलना में बहुत कम है।</li>
+<li><b>रूस-यूक्रेन युद्ध पर मतभेद:</b> जापान पश्चिमी देशों के साथ रूस पर कड़े प्रतिबंधों का पक्षधर है, जबकि भारत ने रूस से कच्चे तेल का आयात जारी रखा है और संयुक्त राष्ट्र में निष्पक्ष रुख अपनाया है।</li>
+<li><b>RCEP पर भिन्न मत:</b> जापान चाहता था कि भारत RCEP समझौते में रहे ताकि चीनी प्रभाव को संतुलित किया जा सके, लेकिन भारत के हटने से जापान कूटनीतिक रूप से निराश हुआ।</li>
+<li><b>निवेशकों की प्रशासनिक शिकायतें:</b> जापानी कंपनियों द्वारा भारत में भूमि अधिग्रहण, कर प्रणाली की जटिलताओं और प्रशासनिक फाइलों की देरी पर चिंता व्यक्त की जाती है।</li>
+<li><b>सैन्य संधियों की सीमा:</b> जापान की शांतिवादी नीतियों (संविधान के अनुच्छेद 9) के कारण दोनों देशों के बीच प्रत्यक्ष युद्धक संधियों और हथियारों के सह-विकास में सीमाएं हैं।</li>
+</ul>
+</div>
+<h2 class="sub-header topic-header">4. भारत और दक्षिण कोरिया संबंध</h2>
+<div class="keyword-box">
+<b>4.1 सहयोग के 5 प्रमुख बिंदु (Cooperation):</b>
+<ul style="list-style-type: decimal; margin-left: 20px; ">
+<li><b>रक्षा विनिर्माण:</b> दक्षिण कोरिया की मदद से भारतीय सेना के लिए 'के-9 वज्र' (K-9 Vajra) तोपों का भारत में ही सफल विनिर्माण किया जा रहा है।</li>
+<li><b>आर्थिक व्यापार:</b> दोनों देशों ने 2009 में व्यापक आर्थिक भागीदारी समझौते (CEPA) पर हस्ताक्षर किए, जिससे व्यापारिक करों में कटौती हुई।</li>
+<li><b>निवेश और ब्रांड:</b> हुंडई, सैमसंग और एलजी जैसी बड़ी दक्षिण कोरियाई कंपनियों ने भारत में भारी निवेश किया है और सैमसंग की नोएडा फैक्ट्री दुनिया की सबसे बड़ी मोबाइल विनिर्माण इकाई है।</li>
+<li><b>एक्ट ईस्ट नीति का जुड़ाव:</b> दक्षिण कोरिया की 'न्यू सदर्न पॉलिसी' और भारत की 'एक्ट ईस्ट पॉलिसी' के बीच गहरा समन्वय।</li>
+<li><b>सॉफ्ट पावर और सांस्कृतिक जुड़ाव:</b> कोरियन संगीत (K-Pop) और ड्रामा (K-Drama) की भारत के युवाओं में बढ़ती लोकप्रियता।</li>
+</ul>
+</div>
+<div class="keyword-box" style="border-left-color: #ef4444 !important; background: #fff5f5;">
+<b>4.2 टकराव और चुनौतियां (Conflict &amp; Challenges - 5 Points):</b>
+<ul style="list-style-type: decimal; margin-left: 20px;  color: #7f1d1d;">
+<li><b>व्यापार असंतुलन:</b> भारत का दक्षिण कोरिया के साथ लगातार व्यापार घाटा बढ़ रहा है, जिसे कम करने के लिए भारत CEPA समझौते की समीक्षा की मांग कर रहा है।</li>
+<li><b>पोस्को (POSCO) विवाद:</b> दक्षिण कोरियाई इस्पात कंपनी पोस्को का ओडिशा में प्रस्तावित 12 अरब डॉलर का प्रोजेक्ट भूमि अधिग्रहण और स्थानीय लोगों के कड़े विरोध के कारण रद्द करना पड़ा।</li>
+<li><b>गैर-टैरिफ व्यापार बाधाएं:</b> भारतीय फार्मास्युटिकल और कृषि निर्यातकों को दक्षिण कोरियाई मानकों से कठिन नियामकीय चुनौतियों का सामना करना पड़ता है।</li>
+<li><b>चीन के प्रति रुख में अंतर:</b> दक्षिण कोरिया आर्थिक और भौगोलिक रूप से चीन के प्रति आक्रामक रवैया अपनाने से बचता है, जबकि भारत चीन सीमा विवाद के प्रति अधिक सख्त है।</li>
+<li><b>प्रशासनिक बाधाएं:</b> भारत में जटिल नौकरशाही और टैक्स सुधारों में देरी से दक्षिण कोरियाई निवेशक अक्सर असहज महसूस करते हैं।</li>
+</ul>
+</div>
 </div>
 </body>
 </html>
-<br><br><hr><br><br>
+<br/><br/><hr/><br/><br/>
 <!DOCTYPE html>
+
 <html lang="hi">
 <head>
-    <meta charset="UTF-8">
-    <style>
+<meta charset="utf-8"/>
+<style>
         .ch2-content { font-family: 'Arial', sans-serif; line-height: 2.2; font-size: 18pt; color: #1a202c; padding: 40px; }
         .section-header { color: #065f46; border-bottom: 5px solid #10b981; padding-bottom: 15px; font-size: 34pt; margin-bottom: 30px; }
         .sub-header { color: #047857; font-size: 28pt; margin-top: 50px; }
@@ -657,117 +681,105 @@
 </head>
 <body>
 <div class="ch2-content">
-    <h1 class="section-header">क्षेत्रीय सहयोग संगठन - सार्क और ब्रिक्स (SAARC &amp; BRICS)</h1>
-    
-    <div class="keyword-box">
-        <b>1. सार्क और ब्रिक्स की भौगोलिक स्थिति (Map Position):</b><br/>
+<h1 class="section-header hero-title">क्षेत्रीय सहयोग संगठन - सार्क और ब्रिक्स (SAARC &amp; BRICS)</h1>
+<div class="keyword-box">
+<b>1. सार्क और ब्रिक्स की भौगोलिक स्थिति (Map Position):</b><br>
         सार्क मुख्य रूप से दक्षिण एशिया के देशों (भारत और उसके पड़ोसी) का संगठन है। ब्रिक्स एक अंतर-महाद्वीपीय ब्लॉक है, जिसमें ब्राजील (दक्षिण अमेरिका), रूस (यूरोप/एशिया), भारत (दक्षिण एशिया), चीन (पूर्वी एशिया) और दक्षिण अफ्रीका शामिल हैं।
-    </div>
-
-    <!-- SAARC Logo -->
-    <div class="illustration-box" style="border-color: #065f46 !important; margin-top: 35px; margin-bottom: 35px;">
-        <img alt="SAARC Logo" src="images/ch2/saarc_logo.webp" style="width: 90%; max-width: 800px; display: block; margin: 0 auto; border: 4px solid #cbd5e1; border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.15);" class="illustration-img"/>
-        <div class="illustration-explanation" style="border-left-color: #065f46 !important;">
-            <b>सार्क का प्रतीक चिह्न (Official SAARC Logo):</b><br/>
+    </br></div>
+<!-- SAARC Logo -->
+<div class="illustration-box" style="border-color: #065f46 !important; margin-top: 35px; margin-bottom: 35px;">
+<img alt="SAARC Logo" class="illustration-img" src="images/ch2/saarc_logo.webp" style="width: 90%; max-width: 800px; display: block; margin: 0 auto; border: 4px solid #cbd5e1; border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.15);"/>
+<div class="illustration-explanation" style="border-left-color: #065f46 !important;">
+<b>सार्क का प्रतीक चिह्न (Official SAARC Logo):</b><br>
             सार्क का लोगो दक्षिण एशिया के सदस्य देशों के बीच क्षेत्रीय सहयोग, शांति और परस्पर सहयोग की प्रतिबद्धता को दर्शाता है।
-        </div>
-    </div>
-
-    <!-- SAARC Summit Portrait -->
-    <div class="illustration-box" style="border-color: #065f46 !important; margin-top: 35px; margin-bottom: 35px;">
-        <img alt="SAARC Summit Leaders" src="images/ch2/saarc_summit_portrait.webp" style="width: 40%; max-width: 300px; display: block; margin: 0 auto; border: 4px solid #cbd5e1; border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.15);" class="illustration-img"/>
-        <div class="illustration-explanation" style="border-left-color: #065f46 !important;">
-            <b>सार्क शिखर सम्मेलन (SAARC Leaders Summit Photo):</b><br/>
+        </br></div>
+</div>
+<!-- SAARC Summit Portrait -->
+<div class="illustration-box" style="border-color: #065f46 !important; margin-top: 35px; margin-bottom: 35px;">
+<img alt="SAARC Summit Leaders" class="illustration-img" src="images/ch2/saarc_summit_portrait.webp" style="width: 40%; max-width: 300px; display: block; margin: 0 auto; border: 4px solid #cbd5e1; border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.15);"/>
+<div class="illustration-explanation" style="border-left-color: #065f46 !important;">
+<b>सार्क शिखर सम्मेलन (SAARC Leaders Summit Photo):</b><br>
             सार्क देशों के राष्ट्राध्यक्षों की ऐतिहासिक बैठक, जो उनके बीच क्षेत्रीय सहयोग और शांति व्यवस्था की स्थापना को निरूपित करती है।
-        </div>
-    </div>
-
-    <h2 class="sub-header">1. सार्क (SAARC - दक्षिण एशियाई क्षेत्रीय सहयोग संगठन)</h2>
-    <p><b>1.1 संक्षिप्त इतिहास और विकास:</b><br/>
-    सार्क की स्थापना **8 दिसंबर 1985** को ढाका में हुई थी। इसके सदस्य देश भारत, पाकिस्तान, बांग्लादेश, श्रीलंका, नेपाल, भूटान, मालदीव और अफगानिस्तान (2007 में शामिल) हैं। इसका मुख्य उद्देश्य आर्थिक विकास, सामाजिक प्रगति और क्षेत्रीय आत्मनिर्भरता को बढ़ावा देना था। सार्क देशों ने आपसी व्यापार बाधाओं को दूर करने के लिए **SAFTA (साफ्टा - दक्षिण एशियाई मुक्त व्यापार क्षेत्र)** समझौते पर 2004 में हस्ताक्षर किए।</p>
-    
-    <p><b>1.2 सार्क की विफलता और सीमाएं:</b><br/>
+        </br></div>
+</div>
+<h2 class="sub-header topic-header">1. सार्क (SAARC - दक्षिण एशियाई क्षेत्रीय सहयोग संगठन)</h2>
+<p><b>1.1 संक्षिप्त इतिहास और विकास:</b><br>
+    सार्क की स्थापना **8 दिसंबर 1985** को ढाका में हुई थी। इसके सदस्य देश भारत, पाकिस्तान, बांग्लादेश, श्रीलंका, नेपाल, भूटान, मालदीव और अफगानिस्तान (2007 में शामिल) हैं। इसका मुख्य उद्देश्य आर्थिक विकास, सामाजिक प्रगति और क्षेत्रीय आत्मनिर्भरता को बढ़ावा देना था। सार्क देशों ने आपसी व्यापार बाधाओं को दूर करने के लिए **SAFTA (साफ्टा - दक्षिण एशियाई मुक्त व्यापार क्षेत्र)** समझौते पर 2004 में हस्ताक्षर किए।</br></p>
+<p><b>1.2 सार्क की विफलता और सीमाएं:</b><br/>
     भारत और पाकिस्तान के बीच लगातार बने रहने वाले सीमा विवादों, कश्मीर मुद्दे और आपसी अविश्वास के कारण सार्क एक निष्क्रिय संगठन बनकर रह गया है। इसके शिखर सम्मेलन नियमित रूप से आयोजित नहीं हो पा रहे हैं।</p>
-
-    <!-- BRICS Summit Logo -->
-    <div class="illustration-box" style="border-color: #065f46 !important; margin-top: 35px; margin-bottom: 35px;">
-        <img alt="BRICS Logo and Summit" src="images/ch2/brics_logo_summit.webp" style="width: 90%; max-width: 800px; display: block; margin: 0 auto; border: 4px solid #cbd5e1; border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.15);" class="illustration-img"/>
-        <div class="illustration-explanation" style="border-left-color: #065f46 !important;">
-            <b>ब्रिक्स का शिखर सम्मेलन और वैश्विक प्रभाव (BRICS Global Summit Logo):</b><br/>
+<!-- BRICS Summit Logo -->
+<div class="illustration-box" style="border-color: #065f46 !important; margin-top: 35px; margin-bottom: 35px;">
+<img alt="BRICS Logo and Summit" class="illustration-img" src="images/ch2/brics_logo_summit.webp" style="width: 90%; max-width: 800px; display: block; margin: 0 auto; border: 4px solid #cbd5e1; border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.15);"/>
+<div class="illustration-explanation" style="border-left-color: #065f46 !important;">
+<b>ब्रिक्स का शिखर सम्मेलन और वैश्विक प्रभाव (BRICS Global Summit Logo):</b><br/>
             ब्रिक्स (ब्राजील, रूस, भारत, चीन, दक्षिण अफ्रीका) विश्व की प्रमुख उभरती हुई अर्थव्यवस्थाओं का समूह है। यह वैश्विक राजनीतिक और आर्थिक व्यवस्था को और अधिक समावेशी बनाने का प्रयास करता है।
         </div>
-    </div>
-
-    <!-- BRICS Flag Symbol -->
-    <div class="illustration-box" style="border-color: #065f46 !important; margin-top: 35px; margin-bottom: 35px;">
-        <img alt="BRICS Leaders" src="images/ch2/brics_flag_symbol.webp" style="width: 90%; max-width: 800px; display: block; margin: 0 auto; border: 4px solid #cbd5e1; border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.15);" class="illustration-img"/>
-        <div class="illustration-explanation" style="border-left-color: #065f46 !important;">
-            <b>ब्रिक्स राष्ट्राध्यक्षों की बैठक (BRICS Leaders Summit Family Photo):</b><br/>
+</div>
+<!-- BRICS Flag Symbol -->
+<div class="illustration-box" style="border-color: #065f46 !important; margin-top: 35px; margin-bottom: 35px;">
+<img alt="BRICS Leaders" class="illustration-img" src="images/ch2/brics_flag_symbol.webp" style="width: 90%; max-width: 800px; display: block; margin: 0 auto; border: 4px solid #cbd5e1; border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.15);"/>
+<div class="illustration-explanation" style="border-left-color: #065f46 !important;">
+<b>ब्रिक्स राष्ट्राध्यक्षों की बैठक (BRICS Leaders Summit Family Photo):</b><br/>
             ब्रिक्स देशों के राष्ट्राध्यक्षों की ऐतिहासिक तस्वीर, जो वैश्विक आर्थिक व राजनीतिक मोर्चे पर विकासशील शक्तियों की एकता को दर्शाती है।
         </div>
-    </div>
-
-    <h2 class="sub-header">2. ब्रिक्स (BRICS - उभरती आर्थिक महाशक्तियों का ब्लॉक)</h2>
-    <p><b>2.1 इतिहास और उद्देश्य:</b><br/>
+</div>
+<h2 class="sub-header topic-header">2. ब्रिक्स (BRICS - उभरती आर्थिक महाशक्तियों का ब्लॉक)</h2>
+<p><b>2.1 इतिहास और उद्देश्य:</b><br/>
     2006 में 'ब्रिक' (BRIC) के रूप में इसकी शुरुआत हुई और 2010 में दक्षिण अफ्रीका के शामिल होने के बाद यह **'ब्रिक्स' (BRICS)** बन गया। इसका मुख्य उद्देश्य सदस्य देशों के बीच आर्थिक सहयोग, व्यापार और निवेश को बढ़ावा देना है।</p>
-    
-    <p><b>2.2 विकास और महत्वपूर्ण उपलब्धियां (New Development Bank):</b><br/>
+<p><b>2.2 विकास और महत्वपूर्ण उपलब्धियां (New Development Bank):</b><br/>
     ब्रिक्स देशों ने शंघाई में **न्यू डेवलपमेंट बैंक (NDB)** की स्थापना की, जो आईएमएफ और विश्व बैंक जैसी पश्चिमी संस्थाओं पर निर्भरता को कम करता है। ब्रिक्स देश आज वैश्विक जनसंख्या का 40% और वैश्विक अर्थव्यवस्था का लगभग 30% हिस्सा संभालते हैं, जिससे वे अमेरिका के एकतरफा दबदबे को संतुलित करने का बड़ा माध्यम हैं।</p>
-
-    <h2 class="sub-header">3. भारत और सार्क (SAARC) संबंध</h2>
-    <div class="keyword-box">
-        <b>3.1 सहयोग के 5 प्रमुख बिंदु (Cooperation):</b>
-        <ul style="list-style-type: decimal; margin-left: 20px; font-size: 18pt;">
-            <li><b>मुक्त व्यापार क्षेत्र (SAFTA):</b> भारत ने दक्षिण एशिया में सीमा शुल्क और व्यापार बाधाओं को दूर करने के लिए साफ्टा को पूर्ण सहयोग दिया।</li>
-            <li><b>मानवीय और चिकित्सा सहायता:</b> भारत पड़ोसी देशों (जैसे नेपाल भूकंप 2015, मालदीव जल संकट) में आपदा के समय सबसे पहले मदद पहुंचाने वाला 'फर्स्ट रेस्पॉन्डर' रहा है।</li>
-            <li><b>दक्षिण एशिया उपग्रह (South Asia Satellite):</b> 2017 में भारत ने सार्क देशों की मदद के लिए एक समर्पित संचार उपग्रह लॉन्च किया, जो आपदा प्रबंधन और टेलीमेडिसिन में सहायक है।</li>
-            <li><b>शैक्षणिक एवं सांस्कृतिक सहयोग:</b> नई दिल्ली में **दक्षिण एशियाई विश्वविद्यालय (SAU)** की स्थापना की गई, जहाँ सभी सार्क देशों के छात्र पढ़ते हैं।</li>
-            <li><b>सार्क कोविड-19 इमरजेंसी फंड:</b> 2020 में भारत की पहल पर वैश्विक महामारी से लड़ने के लिए 10 मिलियन डॉलर की सहायता राशि के साथ फंड की शुरुआत।</li>
-        </ul>
-    </div>
-
-    <div class="keyword-box" style="border-left-color: #ef4444 !important; background: #fff5f5;">
-        <b>3.2 टकराव और चुनौतियां (Conflict &amp; Challenges - 5 Points):</b>
-        <ul style="list-style-type: decimal; margin-left: 20px; font-size: 18pt; color: #7f1d1d;">
-            <li><b>आतंकवाद और पाकिस्तान का रुख:</b> पाकिस्तान द्वारा भारत-विरोधी आतंकवादी गतिविधियों को बढ़ावा देने के कारण भारत ने "आतंक और बातचीत साथ-साथ नहीं चल सकते" नीति के तहत सार्क सम्मेलनों में भाग लेना बंद कर दिया है।</li>
-            <li><b>संगठन का पक्षाघात (Paralysis of SAARC):</b> 2016 के इस्लामाबाद शिखर सम्मेलन के रद्द होने के बाद से कोई भी सार्क शिखर सम्मेलन आयोजित नहीं हो पाया है।</li>
-            <li><b>कनेक्टिविटी समझौतों पर अवरोध:</b> पाकिस्तान द्वारा सार्क मोटर वाहन समझौते और रेलवे संपर्क प्रस्तावों को बार-बार ब्लॉक करना।</li>
-            <li><b>BIMSTEC की ओर झुकाव:</b> सार्क के ठप होने से भारत अब बिम्सटेक (BIMSTEC) जैसे संगठनों को अधिक प्राथमिकता दे रहा है, जिसमें पाकिस्तान शामिल नहीं है।</li>
-            <li><b>बड़े भाई का डर (Hegemony Fear):</b> आकार और आर्थिक क्षमता में भारत के विशाल होने के कारण छोटे पड़ोसियों में एक अघोषित 'अविश्वास' की स्थिति बनी रहती है।</li>
-        </ul>
-    </div>
-
-    <h2 class="sub-header">4. भारत और ब्रिक्स (BRICS) संबंध</h2>
-    <div class="keyword-box">
-        <b>4.1 सहयोग के 5 प्रमुख बिंदु (Cooperation):</b>
-        <ul style="list-style-type: decimal; margin-left: 20px; font-size: 18pt;">
-            <li><b>न्यू डेवलपमेंट बैंक (NDB):</b> भारत बैंक का संस्थापक सदस्य है और देश में बुनियादी ढांचा परियोजनाओं के विकास के लिए बड़े पैमाने पर ऋण प्राप्त कर चुका है।</li>
-            <li><b>कंटिंजेंट रिजर्व अरेंजमेंट (CRA):</b> भुगतान संतुलन के संकट के समय सदस्य देशों की वित्तीय सुरक्षा सुनिश्चित करने वाली मौद्रिक व्यवस्था।</li>
-            <li><b>ग्लोबल साउथ का नेतृत्व:</b> ब्रिक्स भारत को विकासशील देशों की आवाज अंतर्राष्ट्रीय मंचों पर उठाने का एक सशक्त मंच देता है।</li>
-            <li><b>आतंकवाद विरोधी रणनीति:</b> ब्रिक्स ने भारत के प्रयासों से आतंकवाद के वित्तपोषण को रोकने और आतंकवाद विरोधी कार्य योजना को अपनाया है।</li>
-            <li><b>कृषि और अंतरिक्ष सहयोग:</b> कृषि अनुसंधान मंचों का विकास और रिमोट सेंसिंग उपग्रहों का साझा समूह।</li>
-        </ul>
-    </div>
-
-    <div class="keyword-box" style="border-left-color: #ef4444 !important; background: #fff5f5;">
-        <b>4.2 टकराव और चुनौतियां (Conflict &amp; Challenges - 5 Points):</b>
-        <ul style="list-style-type: decimal; margin-left: 20px; font-size: 18pt; color: #7f1d1d;">
-            <li><b>चीन-भारत सीमा तनाव:</b> लद्दाख सीमा विवाद (गलवान झड़प) के कारण ब्रिक्स के दो सबसे बड़े सदस्यों के बीच द्विपक्षीय संबंध अत्यंत खराब हुए हैं, जिससे ब्रिक्स की एकता प्रभावित होती है।</li>
-            <li><b>चीन का वर्चस्ववादी रवैया:</b> भारत आशंकित रहता है कि चीन ब्रिक्स को अमेरिकी/पश्चिमी विरोधी ब्लॉक बनाकर अपनी मुद्रा (Yuan) को वैश्विक मुद्रा के रूप में स्थापित करने के लिए इस्तेमाल न करे।</li>
-            <li><b>सदस्यता विस्तार पर असहमति:</b> चीन तेजी से ईरान, मिस्र जैसे देशों को शामिल कर ब्रिक्स को एक चीनी-समर्थित गुट बनाना चाहता था, जबकि भारत कड़े मानकों के साथ विस्तार का पक्षधर था।</li>
-            <li><b>रूस-चीन का बढ़ता गठबंधन:</b> यूक्रेन युद्ध के बाद रूस की चीन पर बढ़ती आर्थिक निर्भरता ने भारत के लिए ब्रिक्स के अंदर संतुलन बनाना कठिन कर दिया है।</li>
-            <li><b>साझा व्यापारिक असंतुलन:</b> भारत का ब्रिक्स के अन्य देशों (विशेष रूप से चीन) के साथ भारी व्यापार घाटा है, जो आर्थिक हितों में टकराव पैदा करता है।</li>
-        </ul>
-    </div>
+<h2 class="sub-header topic-header">3. भारत और सार्क (SAARC) संबंध</h2>
+<div class="keyword-box">
+<b>3.1 सहयोग के 5 प्रमुख बिंदु (Cooperation):</b>
+<ul style="list-style-type: decimal; margin-left: 20px; ">
+<li><b>मुक्त व्यापार क्षेत्र (SAFTA):</b> भारत ने दक्षिण एशिया में सीमा शुल्क और व्यापार बाधाओं को दूर करने के लिए साफ्टा को पूर्ण सहयोग दिया।</li>
+<li><b>मानवीय और चिकित्सा सहायता:</b> भारत पड़ोसी देशों (जैसे नेपाल भूकंप 2015, मालदीव जल संकट) में आपदा के समय सबसे पहले मदद पहुंचाने वाला 'फर्स्ट रेस्पॉन्डर' रहा है।</li>
+<li><b>दक्षिण एशिया उपग्रह (South Asia Satellite):</b> 2017 में भारत ने सार्क देशों की मदद के लिए एक समर्पित संचार उपग्रह लॉन्च किया, जो आपदा प्रबंधन और टेलीमेडिसिन में सहायक है।</li>
+<li><b>शैक्षणिक एवं सांस्कृतिक सहयोग:</b> नई दिल्ली में **दक्षिण एशियाई विश्वविद्यालय (SAU)** की स्थापना की गई, जहाँ सभी सार्क देशों के छात्र पढ़ते हैं।</li>
+<li><b>सार्क कोविड-19 इमरजेंसी फंड:</b> 2020 में भारत की पहल पर वैश्विक महामारी से लड़ने के लिए 10 मिलियन डॉलर की सहायता राशि के साथ फंड की शुरुआत।</li>
+</ul>
+</div>
+<div class="keyword-box" style="border-left-color: #ef4444 !important; background: #fff5f5;">
+<b>3.2 टकराव और चुनौतियां (Conflict &amp; Challenges - 5 Points):</b>
+<ul style="list-style-type: decimal; margin-left: 20px;  color: #7f1d1d;">
+<li><b>आतंकवाद और पाकिस्तान का रुख:</b> पाकिस्तान द्वारा भारत-विरोधी आतंकवादी गतिविधियों को बढ़ावा देने के कारण भारत ने "आतंक और बातचीत साथ-साथ नहीं चल सकते" नीति के तहत सार्क सम्मेलनों में भाग लेना बंद कर दिया है।</li>
+<li><b>संगठन का पक्षाघात (Paralysis of SAARC):</b> 2016 के इस्लामाबाद शिखर सम्मेलन के रद्द होने के बाद से कोई भी सार्क शिखर सम्मेलन आयोजित नहीं हो पाया है।</li>
+<li><b>कनेक्टिविटी समझौतों पर अवरोध:</b> पाकिस्तान द्वारा सार्क मोटर वाहन समझौते और रेलवे संपर्क प्रस्तावों को बार-बार ब्लॉक करना।</li>
+<li><b>BIMSTEC की ओर झुकाव:</b> सार्क के ठप होने से भारत अब बिम्सटेक (BIMSTEC) जैसे संगठनों को अधिक प्राथमिकता दे रहा है, जिसमें पाकिस्तान शामिल नहीं है।</li>
+<li><b>बड़े भाई का डर (Hegemony Fear):</b> आकार और आर्थिक क्षमता में भारत के विशाल होने के कारण छोटे पड़ोसियों में एक अघोषित 'अविश्वास' की स्थिति बनी रहती है।</li>
+</ul>
+</div>
+<h2 class="sub-header topic-header">4. भारत और ब्रिक्स (BRICS) संबंध</h2>
+<div class="keyword-box">
+<b>4.1 सहयोग के 5 प्रमुख बिंदु (Cooperation):</b>
+<ul style="list-style-type: decimal; margin-left: 20px; ">
+<li><b>न्यू डेवलपमेंट बैंक (NDB):</b> भारत बैंक का संस्थापक सदस्य है और देश में बुनियादी ढांचा परियोजनाओं के विकास के लिए बड़े पैमाने पर ऋण प्राप्त कर चुका है।</li>
+<li><b>कंटिंजेंट रिजर्व अरेंजमेंट (CRA):</b> भुगतान संतुलन के संकट के समय सदस्य देशों की वित्तीय सुरक्षा सुनिश्चित करने वाली मौद्रिक व्यवस्था।</li>
+<li><b>ग्लोबल साउथ का नेतृत्व:</b> ब्रिक्स भारत को विकासशील देशों की आवाज अंतर्राष्ट्रीय मंचों पर उठाने का एक सशक्त मंच देता है।</li>
+<li><b>आतंकवाद विरोधी रणनीति:</b> ब्रिक्स ने भारत के प्रयासों से आतंकवाद के वित्तपोषण को रोकने और आतंकवाद विरोधी कार्य योजना को अपनाया है।</li>
+<li><b>कृषि और अंतरिक्ष सहयोग:</b> कृषि अनुसंधान मंचों का विकास और रिमोट सेंसिंग उपग्रहों का साझा समूह।</li>
+</ul>
+</div>
+<div class="keyword-box" style="border-left-color: #ef4444 !important; background: #fff5f5;">
+<b>4.2 टकराव और चुनौतियां (Conflict &amp; Challenges - 5 Points):</b>
+<ul style="list-style-type: decimal; margin-left: 20px;  color: #7f1d1d;">
+<li><b>चीन-भारत सीमा तनाव:</b> लद्दाख सीमा विवाद (गलवान झड़प) के कारण ब्रिक्स के दो सबसे बड़े सदस्यों के बीच द्विपक्षीय संबंध अत्यंत खराब हुए हैं, जिससे ब्रिक्स की एकता प्रभावित होती है।</li>
+<li><b>चीन का वर्चस्ववादी रवैया:</b> भारत आशंकित रहता है कि चीन ब्रिक्स को अमेरिकी/पश्चिमी विरोधी ब्लॉक बनाकर अपनी मुद्रा (Yuan) को वैश्विक मुद्रा के रूप में स्थापित करने के लिए इस्तेमाल न करे।</li>
+<li><b>सदस्यता विस्तार पर असहमति:</b> चीन तेजी से ईरान, मिस्र जैसे देशों को शामिल कर ब्रिक्स को एक चीनी-समर्थित गुट बनाना चाहता था, जबकि भारत कड़े मानकों के साथ विस्तार का पक्षधर था।</li>
+<li><b>रूस-चीन का बढ़ता गठबंधन:</b> यूक्रेन युद्ध के बाद रूस की चीन पर बढ़ती आर्थिक निर्भरता ने भारत के लिए ब्रिक्स के अंदर संतुलन बनाना कठिन कर दिया है।</li>
+<li><b>साझा व्यापारिक असंतुलन:</b> भारत का ब्रिक्स के अन्य देशों (विशेष रूप से चीन) के साथ भारी व्यापार घाटा है, जो आर्थिक हितों में टकराव पैदा करता है।</li>
+</ul>
+</div>
 </div>
 </body>
 </html>
-<br><br><hr><br><br>
+<br/><br/><hr/><br/><br/>
 <!DOCTYPE html>
+
 <html lang="hi">
 <head>
-    <meta charset="UTF-8">
-    <style>
+<meta charset="utf-8"/>
+<style>
         .ch2-content { font-family: 'Arial', sans-serif; line-height: 2.2; font-size: 18pt; color: #1a202c; padding: 40px; }
         .section-header { color: #b91c1c; border-bottom: 5px solid #ef4444; padding-bottom: 15px; font-size: 34pt; margin-bottom: 30px; }
         .sub-header { color: #991b1b; font-size: 26pt; margin-top: 50px; background: #fee2e2; padding: 10px 20px; border-radius: 8px; }
@@ -778,86 +790,72 @@
     </style>
 </head>
 <body>
-    <div class="ch2-content">
-        <h1 class="section-header">अध्याय 2: मेगा प्रश्न बैंक (50+ Q&A)</h1>
-        
-        <h2 class="sub-header">महत्वपूर्ण बहुविकल्पीय प्रश्न (MCQs)</h2>
-        
-        <div class="qa-box">
-            <p class="question">Q1. यूरोपीय संघ (EU) की स्थापना किस संधि द्वारा हुई?</p>
-            <p class="answer"><b>उत्तर:</b> मास्ट्रिच संधि (Maastricht Treaty), 1992।</p>
-        </div>
-
-        <div class="qa-box">
-            <p class="question">Q2. आसियान (ASEAN) की स्थापना कब हुई?</p>
-            <p class="answer"><b>उत्तर:</b> 1967 में बैंकॉक घोषणा (Bangkok Declaration) के माध्यम से।</p>
-        </div>
-
-        <div class="qa-box">
-            <p class="question">Q3. 'खुले द्वार की नीति' (Open Door Policy) किस देश ने अपनाई?</p>
-            <p class="answer"><b>उत्तर:</b> चीन (1978 में डेंग शियाओपिंग द्वारा)।</p>
-        </div>
-
-        <div class="qa-box">
-            <p class="question">Q4. सार्क (SAARC) का मुख्यालय कहाँ स्थित है?</p>
-            <p class="answer"><b>उत्तर:</b> काठमांडू (नेपाल)।</p>
-        </div>
-
-        <div class="qa-box">
-            <p class="question">Q5. 'ब्रिक्स' (BRICS) में शामिल होने वाला अंतिम देश कौन सा था?</p>
-            <p class="answer"><b>उत्तर:</b> दक्षिण अफ्रीका (2010 में)।</p>
-        </div>
-
-        <h2 class="sub-header">लघु उत्तरीय प्रश्न (Short Answer Questions)</h2>
-
-        <div class="qa-box-alt">
-            <p class="question">Q6. 'आसियान शैली' (ASEAN Way) से आप क्या समझते हैं?</p>
-            <p class="answer"><b>उत्तर:</b> आसियान के सदस्य देशों के बीच अनौपचारिक, टकराव-रहित और सहयोगात्मक बातचीत करने के तरीके को 'आसियान शैली' कहा जाता है। इसमें देश एक-दूसरे की संप्रभुता का सम्मान करते हैं।</p>
-        </div>
-
-        <div class="qa-box-alt">
-            <p class="question">Q7. यूरोपीय संघ को एक 'अति-राष्ट्रीय संगठन' (Super National Organisation) क्यों कहा जाता है?</p>
-            <p class="answer"><b>उत्तर:</b> क्योंकि इसके पास अपनी साझी मुद्रा (Euro), एक साझा ध्वज, स्थापना दिवस, और साझी विदेश व सुरक्षा नीति है। यह एक देश की तरह व्यवहार करने की दिशा में बढ़ रहा है।</p>
-        </div>
-
-        <div class="qa-box-alt">
-            <p class="question">Q8. चीन ने अपनी अर्थव्यवस्था को सुधारने के लिए कौन से दो चरणों को अपनाया?</p>
-            <p class="answer"><b>उत्तर:</b> 1. 1982 में खेती का निजीकरण (Privatisation of Agriculture), 2. 1998 में उद्योगों का निजीकरण (Privatisation of Industries)।</p>
-        </div>
-
-        <div class="qa-box-alt">
-            <p class="question">Q9. भारत और चीन के बीच विवाद के मुख्य मुद्दे क्या हैं?</p>
-            <p class="answer"><b>उत्तर:</b> 1. सीमा विवाद (जैसे गलवान घाटी और अरुणाचल प्रदेश), 2. तिब्बत और दलाई लामा का मुद्दा, 3. पाकिस्तान के साथ चीन की नजदीकी।</p>
-        </div>
-
-        <h2 class="sub-header">दीर्घ उत्तरीय प्रश्न (Long Answer Questions - 6 Marks)</h2>
-
-        <div class="qa-box">
-            <p class="question">Q10. यूरोपीय संघ के आर्थिक, राजनैतिक और सैन्य प्रभाव की विस्तार से चर्चा करें।</p>
-            <p class="answer"><b>उत्तर:</b> <br>
-            1. **आर्थिक प्रभाव:** यूरो डॉलर के लिए खतरा है और इसका विश्व व्यापार में अमेरिका से ज्यादा हिस्सा है। <br>
-            2. **राजनैतिक प्रभाव:** फ्रांस सुरक्षा परिषद का स्थायी सदस्य है। <br>
+<div class="ch2-content">
+<h1 class="section-header hero-title">अध्याय 2: मेगा प्रश्न बैंक (50+ Q&amp;A)</h1>
+<h2 class="sub-header topic-header">महत्वपूर्ण बहुविकल्पीय प्रश्न (MCQs)</h2>
+<div class="qa-box">
+<p class="question">Q1. यूरोपीय संघ (EU) की स्थापना किस संधि द्वारा हुई?</p>
+<p class="answer"><b>उत्तर:</b> मास्ट्रिच संधि (Maastricht Treaty), 1992।</p>
+</div>
+<div class="qa-box">
+<p class="question">Q2. आसियान (ASEAN) की स्थापना कब हुई?</p>
+<p class="answer"><b>उत्तर:</b> 1967 में बैंकॉक घोषणा (Bangkok Declaration) के माध्यम से।</p>
+</div>
+<div class="qa-box">
+<p class="question">Q3. 'खुले द्वार की नीति' (Open Door Policy) किस देश ने अपनाई?</p>
+<p class="answer"><b>उत्तर:</b> चीन (1978 में डेंग शियाओपिंग द्वारा)।</p>
+</div>
+<div class="qa-box">
+<p class="question">Q4. सार्क (SAARC) का मुख्यालय कहाँ स्थित है?</p>
+<p class="answer"><b>उत्तर:</b> काठमांडू (नेपाल)।</p>
+</div>
+<div class="qa-box">
+<p class="question">Q5. 'ब्रिक्स' (BRICS) में शामिल होने वाला अंतिम देश कौन सा था?</p>
+<p class="answer"><b>उत्तर:</b> दक्षिण अफ्रीका (2010 में)।</p>
+</div>
+<h2 class="sub-header topic-header">लघु उत्तरीय प्रश्न (Short Answer Questions)</h2>
+<div class="qa-box-alt">
+<p class="question">Q6. 'आसियान शैली' (ASEAN Way) से आप क्या समझते हैं?</p>
+<p class="answer"><b>उत्तर:</b> आसियान के सदस्य देशों के बीच अनौपचारिक, टकराव-रहित और सहयोगात्मक बातचीत करने के तरीके को 'आसियान शैली' कहा जाता है। इसमें देश एक-दूसरे की संप्रभुता का सम्मान करते हैं।</p>
+</div>
+<div class="qa-box-alt">
+<p class="question">Q7. यूरोपीय संघ को एक 'अति-राष्ट्रीय संगठन' (Super National Organisation) क्यों कहा जाता है?</p>
+<p class="answer"><b>उत्तर:</b> क्योंकि इसके पास अपनी साझी मुद्रा (Euro), एक साझा ध्वज, स्थापना दिवस, और साझी विदेश व सुरक्षा नीति है। यह एक देश की तरह व्यवहार करने की दिशा में बढ़ रहा है।</p>
+</div>
+<div class="qa-box-alt">
+<p class="question">Q8. चीन ने अपनी अर्थव्यवस्था को सुधारने के लिए कौन से दो चरणों को अपनाया?</p>
+<p class="answer"><b>उत्तर:</b> 1. 1982 में खेती का निजीकरण (Privatisation of Agriculture), 2. 1998 में उद्योगों का निजीकरण (Privatisation of Industries)।</p>
+</div>
+<div class="qa-box-alt">
+<p class="question">Q9. भारत और चीन के बीच विवाद के मुख्य मुद्दे क्या हैं?</p>
+<p class="answer"><b>उत्तर:</b> 1. सीमा विवाद (जैसे गलवान घाटी और अरुणाचल प्रदेश), 2. तिब्बत और दलाई लामा का मुद्दा, 3. पाकिस्तान के साथ चीन की नजदीकी।</p>
+</div>
+<h2 class="sub-header topic-header">दीर्घ उत्तरीय प्रश्न (Long Answer Questions - 6 Marks)</h2>
+<div class="qa-box">
+<p class="question">Q10. यूरोपीय संघ के आर्थिक, राजनैतिक और सैन्य प्रभाव की विस्तार से चर्चा करें।</p>
+<p class="answer"><b>उत्तर:</b> <br/>
+            1. **आर्थिक प्रभाव:** यूरो डॉलर के लिए खतरा है और इसका विश्व व्यापार में अमेरिका से ज्यादा हिस्सा है। <br/>
+            2. **राजनैतिक प्रभाव:** फ्रांस सुरक्षा परिषद का स्थायी सदस्य है। <br/>
             3. **सैन्य प्रभाव:** संयुक्त रूप से इसकी सेना अमेरिका के बाद दूसरी सबसे बड़ी है। फ्रांस के पास परमाणु हथियार भी हैं।</p>
-        </div>
-
-        <div class="qa-box">
-            <p class="question">Q11. आसियान के तीन स्तंभों की व्याख्या करें और उनके उद्देश्यों को स्पष्ट करें।</p>
-            <p class="answer"><b>उत्तर:</b> <br>
-            1. **सुरक्षा समुदाय:** क्षेत्रीय शांति और विवादों को युद्ध तक न पहुँचने देना। <br>
-            2. **आर्थिक समुदाय:** साझा बाज़ार और उत्पादन आधार तैयार करना। <br>
+</div>
+<div class="qa-box">
+<p class="question">Q11. आसियान के तीन स्तंभों की व्याख्या करें और उनके उद्देश्यों को स्पष्ट करें।</p>
+<p class="answer"><b>उत्तर:</b> <br/>
+            1. **सुरक्षा समुदाय:** क्षेत्रीय शांति और विवादों को युद्ध तक न पहुँचने देना। <br/>
+            2. **आर्थिक समुदाय:** साझा बाज़ार और उत्पादन आधार तैयार करना। <br/>
             3. **सामाजिक-सांस्कृतिक समुदाय:** सामाजिक विकास और संस्कृति को बढ़ावा देना।</p>
-        </div>
-
-        <p>अगले भाग में हम **बोर्ड परीक्षा विशेष (Previous Year Questions)** और नक्शों (Maps) को देखेंगे।</p>
-    </div>
+</div>
+<p>अगले भाग में हम **बोर्ड परीक्षा विशेष (Previous Year Questions)** और नक्शों (Maps) को देखेंगे।</p>
+</div>
 </body>
 </html>
-<br><br><hr><br><br>
+<br/><br/><hr/><br/><br/>
 <!DOCTYPE html>
+
 <html lang="hi">
 <head>
-    <meta charset="UTF-8">
-    <style>
+<meta charset="utf-8"/>
+<style>
         .ch2-content { font-family: 'Arial', sans-serif; line-height: 2.2; font-size: 18pt; color: #1a202c; padding: 40px; }
         .section-header { color: #1e3a8a; border-bottom: 5px solid #3b82f6; padding-bottom: 15px; font-size: 34pt; margin-bottom: 30px; }
         .sub-header { color: #2563eb; font-size: 28pt; margin-top: 50px; }
@@ -868,60 +866,52 @@
     </style>
 </head>
 <body>
-    <div class="ch2-content">
-        <h1 class="section-header">अध्याय 2: बोर्ड परीक्षा विशेष (Board Exam Special)</h1>
-        
-        <h2 class="sub-header">1. मानचित्र कार्य (Map Work) - अत्यंत महत्वपूर्ण</h2>
-        <p>बोर्ड परीक्षा में इस अध्याय से अक्सर नक्शे पर आधारित प्रश्न पूछे जाते हैं। आपको निम्नलिखित देशों की पहचान करनी आनी चाहिए:</p>
-        
-        <div class="map-box">
-            <b>मैप पर पहचानें:</b> 
-            <ul class="qa-list">
-                <li><b>यूरोपीय संघ का वह देश जो सुरक्षा परिषद का स्थायी सदस्य है:</b> फ्रांस</li>
-                <li><b>आसियान के संस्थापक देश:</b> इंडोनेशिया, मलेशिया, फिलीपिंस, सिंगापुर, थाईलैंड।</li>
-                <li><b>वह देश जो द्वितीय विश्वयुद्ध के बाद 'हान नदी के चमत्कार' के लिए जाना गया:</b> दक्षिण कोरिया</li>
-                <li><b>सार्क का वह सदस्य देश जिसने 2007 में इस संगठन में प्रवेश किया:</b> अफगानिस्तान</li>
-            </ul>
-        </div>
-
-        <h2 class="sub-header">2. पिछले 10 वर्षों के बोर्ड प्रश्न (Previous Year Questions)</h2>
-        <p>इन प्रश्नों को हल करना आपकी बोर्ड परीक्षा की तैयारी को 100% सटीक बनाएगा:</p>
-
-        <div class="pyq-box">
-            <b>2019-2023 के प्रमुख प्रश्न:</b>
-            <ul class="qa-list">
-                <li>Q1. 'ब्रिक्स' के उद्देश्यों की चर्चा करें और भारत के लिए इसका क्या महत्व है? (6 अंक)</li>
-                <li>Q2. यूरोपीय संघ की साझी आर्थिक और राजनैतिक विशेषताओं का वर्णन करें। (4 अंक)</li>
-                <li>Q3. 'आसियान शैली' क्या है? इसे दक्षिण-पूर्व एशिया में शांति का मार्ग क्यों माना जाता है? (2 अंक)</li>
-                <li>Q4. चीन की 'सुधारों' की नीति का वहां के समाज और दुनिया पर क्या प्रभाव पड़ा? (6 अंक)</li>
-            </ul>
-        </div>
-
-        <div class="pyq-box">
-            <b>2014-2018 के प्रमुख प्रश्न:</b>
-            <ul class="qa-list">
-                <li>Q5. जापान अपनी सैन्य आवश्यकताओं के लिए किस पर निर्भर है और इसकी अर्थव्यवस्था इतनी मजबूत क्यों है? (4 अंक)</li>
-                <li>Q6. सार्क (SAARC) की विफलता के मुख्य कारणों को बताएं। क्या यह संगठन आज भी प्रासंगिक है? (6 अंक)</li>
-                <li>Q7. भारत और चीन के बीच संबंधों में सुधार के लिए राजीव गांधी ने क्या कदम उठाए थे? (4 अंक)</li>
-                <li>Q8. दक्षिण कोरिया और जापान के बीच संबंधों को 'आर्थिक सहयोग' के संदर्भ में समझाएं। (2 अंक)</li>
-            </ul>
-        </div>
-
-        <h2 class="sub-header">3. मास्टर गुरुमन्त्र (Final Tips)</h2>
-        <ul class="qa-list" style="list-style-type: square;">
-            <li><b>यूरोपीय संघ:</b> हमेशा 1992 और मास्ट्रिच संधि को याद रखें।</li>
-            <li><b>आसियान:</b> विजन 2020 और 'आसियान शैली' सबसे ज्यादा पूछे जाने वाले सवाल हैं।</li>
-            <li><b>चीन:</b> डेंग शियाओपिंग और 1978 की 'ओपन डोर पॉलिसी' (Open Door Policy) पर विशेष ध्यान दें।</li>
-            <li><b>ब्रिक्स:</b> नया विकास बैंक (NDB) और पाँचों देशों के नामों का संक्षिप्त रूप याद रखें।</li>
-        </ul>
-
-        <p style="text-align: center; color: #1e3a8a; font-weight: bold; margin-top: 50px;">चैप्टर 2 का मास्टर कोर्स संपन्न। अब आप बोर्ड परीक्षा के लिए 100% तैयार हैं!</p>
-    </div>
+<div class="ch2-content">
+<h1 class="section-header hero-title">अध्याय 2: बोर्ड परीक्षा विशेष (Board Exam Special)</h1>
+<h2 class="sub-header topic-header">1. मानचित्र कार्य (Map Work) - अत्यंत महत्वपूर्ण</h2>
+<p>बोर्ड परीक्षा में इस अध्याय से अक्सर नक्शे पर आधारित प्रश्न पूछे जाते हैं। आपको निम्नलिखित देशों की पहचान करनी आनी चाहिए:</p>
+<div class="map-box">
+<b>मैप पर पहचानें:</b>
+<ul class="qa-list">
+<li><b>यूरोपीय संघ का वह देश जो सुरक्षा परिषद का स्थायी सदस्य है:</b> फ्रांस</li>
+<li><b>आसियान के संस्थापक देश:</b> इंडोनेशिया, मलेशिया, फिलीपिंस, सिंगापुर, थाईलैंड।</li>
+<li><b>वह देश जो द्वितीय विश्वयुद्ध के बाद 'हान नदी के चमत्कार' के लिए जाना गया:</b> दक्षिण कोरिया</li>
+<li><b>सार्क का वह सदस्य देश जिसने 2007 में इस संगठन में प्रवेश किया:</b> अफगानिस्तान</li>
+</ul>
+</div>
+<h2 class="sub-header topic-header">2. पिछले 10 वर्षों के बोर्ड प्रश्न (Previous Year Questions)</h2>
+<p>इन प्रश्नों को हल करना आपकी बोर्ड परीक्षा की तैयारी को 100% सटीक बनाएगा:</p>
+<div class="pyq-box">
+<b>2019-2023 के प्रमुख प्रश्न:</b>
+<ul class="qa-list">
+<li>Q1. 'ब्रिक्स' के उद्देश्यों की चर्चा करें और भारत के लिए इसका क्या महत्व है? (6 अंक)</li>
+<li>Q2. यूरोपीय संघ की साझी आर्थिक और राजनैतिक विशेषताओं का वर्णन करें। (4 अंक)</li>
+<li>Q3. 'आसियान शैली' क्या है? इसे दक्षिण-पूर्व एशिया में शांति का मार्ग क्यों माना जाता है? (2 अंक)</li>
+<li>Q4. चीन की 'सुधारों' की नीति का वहां के समाज और दुनिया पर क्या प्रभाव पड़ा? (6 अंक)</li>
+</ul>
+</div>
+<div class="pyq-box">
+<b>2014-2018 के प्रमुख प्रश्न:</b>
+<ul class="qa-list">
+<li>Q5. जापान अपनी सैन्य आवश्यकताओं के लिए किस पर निर्भर है और इसकी अर्थव्यवस्था इतनी मजबूत क्यों है? (4 अंक)</li>
+<li>Q6. सार्क (SAARC) की विफलता के मुख्य कारणों को बताएं। क्या यह संगठन आज भी प्रासंगिक है? (6 अंक)</li>
+<li>Q7. भारत और चीन के बीच संबंधों में सुधार के लिए राजीव गांधी ने क्या कदम उठाए थे? (4 अंक)</li>
+<li>Q8. दक्षिण कोरिया और जापान के बीच संबंधों को 'आर्थिक सहयोग' के संदर्भ में समझाएं। (2 अंक)</li>
+</ul>
+</div>
+<h2 class="sub-header topic-header">3. मास्टर गुरुमन्त्र (Final Tips)</h2>
+<ul class="qa-list" style="list-style-type: square;">
+<li><b>यूरोपीय संघ:</b> हमेशा 1992 और मास्ट्रिच संधि को याद रखें।</li>
+<li><b>आसियान:</b> विजन 2020 और 'आसियान शैली' सबसे ज्यादा पूछे जाने वाले सवाल हैं।</li>
+<li><b>चीन:</b> डेंग शियाओपिंग और 1978 की 'ओपन डोर पॉलिसी' (Open Door Policy) पर विशेष ध्यान दें।</li>
+<li><b>ब्रिक्स:</b> नया विकास बैंक (NDB) और पाँचों देशों के नामों का संक्षिप्त रूप याद रखें।</li>
+</ul>
+<p style="text-align: center; color: #1e3a8a; font-weight: bold; margin-top: 50px;">चैप्टर 2 का मास्टर कोर्स संपन्न। अब आप बोर्ड परीक्षा के लिए 100% तैयार हैं!</p>
+</div>
 </body>
 </html>
-    </div>
-
-    <script>
+</div>
+<script>
     async function copyToGoogleDoc() {
         const btn = document.getElementById('mainCopyBtn');
         const status = document.getElementById('status');
@@ -946,6 +936,5 @@
         }
     }
     </script>
-
 </body>
 </html>
