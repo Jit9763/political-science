@@ -1,9 +1,98 @@
 <!DOCTYPE html>
+
 <html lang="hi">
 <head>
-    <meta charset="UTF-8">
-    <title>Chapter 13 COPY MASTER - Premium Notes</title>
-    <style>
+<meta charset="utf-8"/>
+<title>Chapter 13 COPY MASTER - Premium Notes</title>
+<style>
+        p, li, h1, h2, h3, h4, b, strong, td, th {
+            font-weight: 900 !important;
+            -webkit-text-stroke: 1.1px #000000;
+            text-shadow: 0 0 1px #000;
+        }
+        body, p, li, td, th, div, span {
+            font-size: 28pt !important;
+            line-height: 1.8 !important;
+        }
+        .ch13-content {
+            font-size: 28pt !important;
+            line-height: 1.8 !important;
+            padding: 10px !important;
+        }
+        /* Projector Banner Styles for Headings */
+        .hero-title, h1.section-header {
+            text-align: center !important;
+            color: #ffffff !important;
+            background-color: #064e3b !important; /* Dark Green Background */
+            border: 5px solid #10b981 !important;
+            border-radius: 20px !important;
+            padding: 30px !important;
+            margin-bottom: 50px !important;
+            font-size: 60pt !important;
+            font-weight: 900 !important;
+            box-shadow: 0 8px 25px rgba(6, 78, 59, 0.4) !important;
+        }
+        .part-header {
+            color: #7f1d1d !important;
+            background-color: #fee2e2 !important;
+            border-left: 18px solid #b91c1c !important;
+            padding: 22px 28px !important;
+            border-radius: 14px !important;
+            font-size: 46pt !important;
+            font-weight: 900 !important;
+            margin-top: 40px !important;
+            margin-bottom: 35px !important;
+            box-shadow: 0 6px 15px rgba(0,0,0,0.08) !important;
+        }
+        .topic-header, h2.sub-header {
+            color: #1e3a8a !important;
+            background-color: #eff6ff !important;
+            border-left: 16px solid #2563eb !important;
+            padding: 20px 26px !important;
+            border-radius: 12px !important;
+            font-size: 38pt !important;
+            font-weight: 900 !important;
+            margin-top: 45px !important;
+            margin-bottom: 30px !important;
+        }
+        .subtopic-header {
+            color: #4c1d95 !important;
+            background-color: #f3e8ff !important;
+            border-left: 14px solid #7c3aed !important;
+            padding: 18px 24px !important;
+            border-radius: 10px !important;
+            font-size: 32pt !important;
+            font-weight: 900 !important;
+            margin-top: 40px !important;
+            margin-bottom: 25px !important;
+        }
+        .box-header {
+            color: #166534 !important;
+            background-color: #f0fdf4 !important;
+            border-left: 12px solid #16a34a !important;
+            padding: 16px 20px !important;
+            border-radius: 10px !important;
+            font-size: 30pt !important;
+            font-weight: 900 !important;
+        }
+        /* Highlights */
+        b, strong {
+            color: #b91c1c !important; /* Dark Red */
+            font-weight: 900 !important;
+        }
+        .blue-highlight, b.blue-text, strong.blue-text {
+            color: #1e3a8a !important;
+        }
+        .keyword-box, .story-box, .highlight-box {
+            font-size: 28pt !important;
+            line-height: 1.8 !important;
+            padding: 25px !important;
+            margin: 30px 0 !important;
+        }
+        .illustration-box { border: 4px solid #cbd5e1 !important; border-radius: 12px; padding: 20px; background-color: #ffffff; margin-top: 25px; }
+        .illustration-explanation { border-left: 6px solid #cbd5e1 !important; padding-left: 15px; font-size: 28pt !important; line-height: 1.6 !important; text-align: left; margin-top: 15px; }
+
+
         body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f1f5f9; margin: 0; padding: 20px; text-align: center; }
         .header { background: #1e293b; color: white; padding: 20px; border-radius: 10px; margin-bottom: 30px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
         .copy-btn { background-color: #2563eb; color: white; padding: 20px 40px; font-size: 24pt; border: none; border-radius: 50px; cursor: pointer; font-weight: 900; transition: all 0.3s; box-shadow: 0 10px 20px rgba(37, 99, 235, 0.4); }
@@ -23,33 +112,30 @@
     </style>
 </head>
 <body>
-
-    <div class="header">
-        <h1>🚀 Chapter 13 (Full-Proof Copy Master)</h1>
-        <p>100% Google Docs Compatible with Images (Localhost-Sync)</p>
-    </div>
-
-    <button id="mainCopyBtn" class="copy-btn" onclick="copyToGoogleDoc()">📋 COPY EVERYTHING FOR GOOGLE DOCS</button>
-    <p id="status">✅ Copied Successfully! Now go to your Google Doc and Press Ctrl+V</p>
-
-    <div class="preview" id="contentToCopy">
-        <div style="font-family: 'Arial', verdana, sans-serif; font-size: 16pt; line-height: 1.8; color: #1a202c; padding: 20px;">
+<div class="header">
+<h1>🚀 Chapter 13 (Full-Proof Copy Master)</h1>
+<p>100% Google Docs Compatible with Images (Localhost-Sync)</p>
+</div>
+<button class="copy-btn" id="mainCopyBtn" onclick="copyToGoogleDoc()">📋 COPY EVERYTHING FOR GOOGLE DOCS</button>
+<p id="status">✅ Copied Successfully! Now go to your Google Doc and Press Ctrl+V</p>
+<div class="preview" id="contentToCopy">
+<div style="font-family: 'Arial', verdana, sans-serif;  line-height: 1.8; color: #1a202c; padding: 20px;">
 <!-- BIG HERO HEADER -->
-<h1 style="text-align: center; color: #9f1239; font-size: 40pt; font-weight: bold; border-bottom: 5px solid #fb7185; padding-bottom: 30px; margin-bottom: 40px;">
+<h1 class="hero-title" style="text-align: center;   font-weight: bold; border-bottom: 5px solid #fb7185; padding-bottom: 30px; margin-bottom: 40px;">
         अध्याय 13: लोकतांत्रिक व्यवस्था का संकट<br/>
-<span style="font-size: 24pt; color:#6b7280; font-weight: normal;">(The Crisis of Democratic Order) - भाग 1: पृष्ठभूमि</span>
+<span style=" color:#6b7280; font-weight: normal;">(The Crisis of Democratic Order) - भाग 1: पृष्ठभूमि</span>
 </h1>
 <!-- PART 1 SECTION: Background -->
 <div style="background-color: #fff1f2; padding: 40px; border-radius: 12px; margin-bottom: 40px; border: 2px solid #fda4af;">
-<h2 style="color: #9f1239; font-size: 28pt; margin-top: 0;">1. आपातकाल की कड़वी यादें</h2>
+<h2 class="topic-header" style="margin-top: 0;">1. आपातकाल की कड़वी यादें</h2>
 <p><i>प्रिय विद्यार्थियों,</i> 25 जून 1975 की आधी रात को भारत के लोकतंत्र पर एक काला साया मँडराया। प्रधानमंत्री इंदिरा गांधी ने 'आंतरिक अशांति' (Internal Disturbance) के नाम पर देश में **आपातकाल (Emergency)** की घोषणा कर दी।</p>
 <p>लेकिन यह आपातकाल अचानक नहीं आया था। इसके पीछे कई आर्थिक और राजनैतिक कारण थे।</p>
 </div>
 <!-- ECONOMIC CRISIS -->
 <div style="background-color: #f8fafc; padding: 30px; border-left: 10px solid #475569; margin-bottom: 50px;">
-<h2 style="color: #1e293b; font-size: 26pt; margin-top: 0;">2. आर्थिक संकट और असंतोष</h2>
+<h2 class="topic-header" style="margin-top: 0;">2. आर्थिक संकट और असंतोष</h2>
 <p>1971 की जीत के बाद लगा था कि 'गरीबी हटाओ' का सपना सच होगा, लेकिन हकीकत कुछ और थी:</p>
-<ul style="font-size: 18pt; line-height: 2.2;">
+<ul style=" line-height: 2.2;">
 <li><b>तेल संकट (Oil Crisis):</b> अंतरराष्ट्रीय स्तर पर तेल की कीमतें बेतहाशा बढ़ गईं, जिससे महंगाई 23% से 30% तक पहुँच गई।</li>
 <li><b>बांग्लादेशी शरणार्थी:</b> 1971 के युद्ध के बाद करोड़ों शरणार्थियों का बोझ भारतीय अर्थव्यवस्था पर पड़ा।</li>
 <li><b>मानसून की विफलता:</b> 1972-73 में खराब मानसून के कारण अनाज की पैदावार गिर गई।</li>
@@ -58,12 +144,12 @@
 </div>
 <!-- RAILWAY STRIKE BOX -->
 <div style="background-color: #fdf4ff; padding: 30px; border: 4px solid #f0abfc; border-radius: 15px; margin-top: 40px;">
-<h2 style="color: #701a75; font-size: 28pt; text-align: center;">🚂 रेलवे की हड़ताल (1974)</h2>
-<p style="font-size: 18pt; line-height: 2;">मई 1974 में **जॉर्ज फर्नांडीस** के नेतृत्व में रेलवे कर्मचारियों ने बोनस और सेवा शर्तों के लिए देशव्यापी हड़ताल कर दी। इस हड़ताल ने पूरे देश की रफ्तार रोक दी। सरकार ने इसे 'अवैध' करार दिया और हजारों कर्मचारियों को गिरफ्तार कर लिया। यह सरकार और जनता के बीच बढ़ती खाई का सबसे बड़ा उदाहरण था। (NCERT Fact)</p>
+<h2 class="topic-header" style="text-align: center;">🚂 रेलवे की हड़ताल (1974)</h2>
+<p style=" line-height: 2;">मई 1974 में **जॉर्ज फर्नांडीस** के नेतृत्व में रेलवे कर्मचारियों ने बोनस और सेवा शर्तों के लिए देशव्यापी हड़ताल कर दी। इस हड़ताल ने पूरे देश की रफ्तार रोक दी। सरकार ने इसे 'अवैध' करार दिया और हजारों कर्मचारियों को गिरफ्तार कर लिया। यह सरकार और जनता के बीच बढ़ती खाई का सबसे बड़ा उदाहरण था। (NCERT Fact)</p>
 </div>
 <div style="text-align: center; margin: 30px 0;">
 <img alt="Economic Unrest 1974" src="images/ch13/unrest.webp" style="border: 8px solid #cbd5e1; border-radius: 12px; box-shadow: 0 10px 20px rgba(0,0,0,0.2);" width="700"/>
-<p style="font-size: 16pt; color: #4b5563; font-style: italic; background-color: #f3f4f6; padding: 15px; border-radius: 8px;">
+<p style=" color: #4b5563; font-style: italic; background-color: #f3f4f6; padding: 15px; border-radius: 8px;">
 <b>संकट का दौर:</b> महंगाई और बेरोजगारी के खिलाफ जनता का विद्रोह। (NCERT Archive View)
         </p>
 </div>
@@ -71,82 +157,77 @@
 <b style="color: #b91c1c;">आंतरिक अशांति:</b> 1975 से पहले आपातकाल लगाने का वह संवैधानिक आधार जिसका उपयोग इंदिरा गांधी ने किया।
     </div>
 </div>
-
-
-<br><br><hr><br><br>
-<div style="font-family: 'Arial', verdana, sans-serif; font-size: 16pt; line-height: 1.8; color: #1a202c; padding: 20px;">
+<br/><br/><hr/><br/><br/>
+<div style="font-family: 'Arial', verdana, sans-serif;  line-height: 1.8; color: #1a202c; padding: 20px;">
 <!-- PART 2 SECTION: JP Movement -->
-<h1 style="color: #92400e; font-size: 34pt; border-bottom: 4px solid #f59e0b; padding-bottom: 10px; padding-top: 40px;">
+<h1 class="part-header" style="border-bottom: 4px solid #f59e0b; padding-bottom: 10px; padding-top: 40px;">
         भाग 2: छात्र आंदोलन और जेपी (JP Movement)
     </h1>
 <p>आर्थिक संकट के बाद, महंगाई और भ्रष्टाचार के खिलाफ छात्रों ने एक बड़ा मोर्चा खोल दिया। गुजरात और बिहार इन आंदोलनों के मुख्य केंद्र बने।</p>
 <div style="background-color: #fefce8; padding: 30px; border-radius: 12px; margin-top: 30px; border-left: 8px solid #d97706;">
-<h2 style="color: #92400e; font-size: 26pt; margin-top: 0;">1. गुजरात और बिहार: आंदोलनों की आग</h2>
-<ul style="font-size: 18pt; line-height: 2.2;">
+<h2 class="topic-header" style="margin-top: 0;">1. गुजरात और बिहार: आंदोलनों की आग</h2>
+<ul style=" line-height: 2.2;">
 <li><b>गुजरात (1974):</b> खाने-पीने की चीज़ों की बढ़ती कीमतों के खिलाफ छात्रों ने आंदोलन किया। मार्च 1974 में गुजरात विधानसभा भंग कर दी गई और वहाँ नए चुनाव हुए, जिसमें कांग्रेस को हार का मुँह देखना पड़ा।</li>
 <li><b>बिहार (1974):</b> भ्रष्टाचार और बेरोजगारी के खिलाफ छात्रों ने आंदोलन शुरू किया। (NCERT Insight)</li>
 </ul>
 </div>
 <!-- JAYAPRAKASH NARAYAN BOX -->
 <div style="background-color: #fffbeb; padding: 30px; border: 4px solid #b45309; border-radius: 15px; margin-top: 40px;">
-<h2 style="color: #78350f; font-size: 30pt; text-align: center;">🛡️ जयप्रकाश नारायण (जेपी) का नेतृत्व</h2>
-<p style="font-size: 18pt; line-height: 2;">बिहार के छात्रों ने अपना नेतृत्व करने के लिए **जयप्रकाश नारायण** को आमंत्रित किया। जेपी ने दो शर्तें रखीं:</p>
-<ul style="font-size: 18pt; font-weight: bold; color: #78350f; line-height: 2.2;">
+<h2 class="topic-header" style="text-align: center;">🛡️ जयप्रकाश नारायण (जेपी) का नेतृत्व</h2>
+<p style=" line-height: 2;">बिहार के छात्रों ने अपना नेतृत्व करने के लिए **जयप्रकाश नारायण** को आमंत्रित किया। जेपी ने दो शर्तें रखीं:</p>
+<ul style=" font-weight: bold; color: #78350f; line-height: 2.2;">
 <li>1. आंदोलन पूरी तरह **'अहिंसक'** (Non-violent) होगा।</li>
 <li>2. आंदोलन केवल बिहार तक सीमित नहीं रहेगा, बल्कि पूरे देश का होगा।</li>
 <li>3. नारा—**'सम्पूर्ण क्रांति' (Total Revolution):** जेपी ने समाज, राजनीति और अर्थतंत्र में पूरी तरह बदलाव की मांग की।</li>
 </ul>
 </div>
-<h2 style="color: #1e3a8a; font-size: 32pt; margin-top: 50px;">2. दिल्ली तक गूँज: रामलीला मैदान</h2>
+<h2 class="topic-header" style="margin-top: 50px;">2. दिल्ली तक गूँज: रामलीला मैदान</h2>
 <div style="background-color: #f8fafc; padding: 25px; border-left: 10px solid #cbd5e1; margin-bottom: 30px; border-radius: 8px;">
 <p>जेपी के नेतृत्व में पूरा विपक्ष एकजुट हो गया। दिल्ली के रामलीला मैदान में एक विशाल रैली हुई, जहाँ जेपी ने प्रसिद्ध पंक्ति गूँजा दी—**"सिंहासन खाली करो कि जनता आती है"**। (NCERT Perspective)</p>
 </div>
-    <!-- NCERT Cartoon: JP Leader (Jayaprakash Narayan and Parliament March - 1975) -->
-    <div class="illustration-box" style="border-color: #d97706 !important; margin-bottom: 35px;">
-        <img alt="Jayaprakash Narayan Leader" src="images/ch13/jp_leader.webp" style="width: 60%; max-width: 450px; display: block; margin: 0 auto; border: 4px solid #cbd5e1; border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.15);"/>
-        <div class="illustration-explanation" style="border-left-color: #d97706 !important;">
-            <b>NCERT पुस्तक का चित्र (जयप्रकाश नारायण और संसद मार्च - 1975):</b><br/>
+<!-- NCERT Cartoon: JP Leader (Jayaprakash Narayan and Parliament March - 1975) -->
+<div class="illustration-box" style="border-color: #d97706 !important; margin-bottom: 35px;">
+<img alt="Jayaprakash Narayan Leader" src="images/ch13/jp_leader.webp" style="width: 60%; max-width: 450px; display: block; margin: 0 auto; border: 4px solid #cbd5e1; border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.15);"/>
+<div class="illustration-explanation" style="border-left-color: #d97706 !important;">
+<b>NCERT पुस्तक का चित्र (जयप्रकाश नारायण और संसद मार्च - 1975):</b><br>
             1975 में जेपी के नेतृत्व में दिल्ली के रामलीला मैदान में इतिहास की सबसे बड़ी रैली आयोजित की गई। उन्होंने 'संपूर्ण क्रांति' (Total Revolution) का आह्वान किया और विपक्षी दलों को एकजुट कर इंदिरा सरकार के खिलाफ अहिंसक आंदोलन का नेतृत्व किया।
-            <div style="background-color: #f1f5f9; border-left: 10px solid #000000; padding: 20px; margin-top: 20px; font-size: 20pt; line-height: 1.6; font-weight: bold;">
-                <b>बोर्ड परीक्षा विशेष प्रश्नोत्तर (CBSE Board Q&amp;A):</b><br/>
-                • <b>प्रश्न: जयप्रकाश नारायण (जेपी) द्वारा चलाए गए आंदोलन की दो मुख्य शर्तें क्या थीं?</b><br/>
+            <div style="background-color: #f1f5f9; border-left: 10px solid #000000; padding: 20px; margin-top: 20px;  line-height: 1.6; font-weight: bold;">
+<b>बोर्ड परीक्षा विशेष प्रश्नोत्तर (CBSE Board Q&amp;A):</b><br>
+                • <b>प्रश्न: जयप्रकाश नारायण (जेपी) द्वारा चलाए गए आंदोलन की दो मुख्य शर्तें क्या थीं?</b><br>
                 • <b>उत्तर:</b> (1) आंदोलन पूरी तरह से अहिंसक (non-violent) रहेगा। (2) आंदोलन केवल बिहार तक सीमित नहीं रहेगा, बल्कि इसे देशव्यापी बनाया जाएगा।
-            </div>
-        </div>
-    </div>
-
-    <!-- Biography Card: Jayaprakash Narayan -->
-    <div class="bio-box" style="border: 6px dashed #d97706 !important; background-color: #fffbeb; border-radius: 12px; padding: 25px; margin-top: 35px; overflow: auto; margin-bottom: 35px;">
-        <img src="images/ch13/jp_leader.webp" style="width: 150px; height: auto; border: 4px solid #cbd5e1; border-radius: 6px; float: right; margin-left: 20px;"/>
-        <div style="display: flex; gap: 20px; align-items: center; justify-content: left; margin-bottom: 15px; border-bottom: 2px solid #fef08a; padding-bottom: 10px;">
-            <h4 style="color: #b45309; font-size: 24pt; font-weight: 900; margin: 0;">
+            </br></br></div>
+</br></div>
+</div>
+<!-- Biography Card: Jayaprakash Narayan -->
+<div class="bio-box" style="border: 6px dashed #d97706 !important; background-color: #fffbeb; border-radius: 12px; padding: 25px; margin-top: 35px; overflow: auto; margin-bottom: 35px;">
+<img src="images/ch13/jp_leader.webp" style="width: 150px; height: auto; border: 4px solid #cbd5e1; border-radius: 6px; float: right; margin-left: 20px;"/>
+<div style="display: flex; gap: 20px; align-items: center; justify-content: left; margin-bottom: 15px; border-bottom: 2px solid #fef08a; padding-bottom: 10px;">
+<h4 style="font-weight: 900; margin: 0;">
                 जयप्रकाश नारायण (जेपी) (1902 - 1979)
             </h4>
-        </div>
-        <p style="font-size: 18pt; line-height: 1.6; color: #b45309; margin: 0;">
-            • <b>उपाधि:</b> 'लोकनायक' के रूप में प्रसिद्ध, प्रख्यात गांधीवादी और समाजवादी नेता।<br/>
+</div>
+<p style=" line-height: 1.6; color: #b45309; margin: 0;">
+            • <b>उपाधि:</b> 'लोकनायक' के रूप में प्रसिद्ध, प्रख्यात गांधीवादी और समाजवादी नेता।<br>
             • <b>महत्वपूर्ण योगदान:</b> 1942 के भारत छोड़ो आंदोलन के नायक, नेहरू के बाद देश के सबसे लोकप्रिय नेता।<br/>
             • <b>राजनैतिक जीवन:</b> कांग्रेस छोड़कर सोशलिस्ट पार्टी का गठन किया, बाद में विनोबा भावे के भूदान आंदोलन में शामिल हुए। 1974 के बिहार आंदोलन और 'सम्पूर्ण क्रांति' (Total Revolution) के प्रणेता। आपातकाल के बाद इंदिरा गांधी विरोधी दलों को एकजुट कर सत्ता परिवर्तन कराया।
-        </p>
-    </div>
+        </br></p>
+</div>
 <div style="background-color: #fdf2f2; padding: 30px; border-radius: 12px; margin-top: 40px; border: 2px dashed #dc2626;">
-<h3 style="color: #b91c1c; font-size: 24pt;">🛑 मुख्य विचार:</h3>
+<h3 class="subtopic-header" style="">🛑 मुख्य विचार:</h3>
 <p>छात्रों और जेपी के इस आंदोलन ने इंदिरा गांधी की सरकार की चूलें हिला दीं। यह आंदोलन केवल भ्रष्टाचार के खिलाफ नहीं था, बल्कि यह राजनैतिक शक्ति के केंद्रीकरण के खिलाफ भी एक बड़ी आवाज़ थी।</p>
 </div>
 </div>
-
-
-<br><br><hr><br><br>
-<div style="font-family: 'Arial', verdana, sans-serif; font-size: 16pt; line-height: 1.8; color: #1a202c; padding: 20px;">
+<br/><br/><hr/><br/><br/>
+<div style="font-family: 'Arial', verdana, sans-serif;  line-height: 1.8; color: #1a202c; padding: 20px;">
 <!-- PART 3 SECTION: Judiciary Conflict -->
-<h1 style="color: #6d28d9; font-size: 36pt; border-bottom: 4px solid #a78bfa; padding-bottom: 20px; padding-top: 40px;">
+<h1 class="part-header" style="border-bottom: 4px solid #a78bfa; padding-bottom: 20px; padding-top: 40px;">
         भाग 3: न्यायपालिका के साथ संघर्ष (Conflict with Judiciary)
     </h1>
 <p>1970 के दशक में सरकार और न्यायपालिका के बीच का टकराव अपने चरम पर था। यह सब शुरू हुआ एक ऐतिहासिक अदालती फैसले से जिसने भारतीय राजनीति की दिशा बदल दी।</p>
 <div style="background-color: #f5f3ff; padding: 30px; border-radius: 12px; margin-bottom: 40px; border-left: 8px solid #7c3aed;">
-<h2 style="color: #4c1d95; font-size: 26pt; margin-top: 0;">1. इलाहाबाद हाई कोर्ट का फैसला (12 जून 1975)</h2>
+<h2 class="topic-header" style="margin-top: 0;">1. इलाहाबाद हाई कोर्ट का फैसला (12 जून 1975)</h2>
 <p>12 जून 1975 को इलाहाबाद हाई कोर्ट के न्यायाधीश **जगमोहन लाल सिन्हा** ने एक ऐसा फैसला सुनाया जिसने इंदिरा गांधी की सत्ता की चूलें हिला दीं।</p>
-<ul style="font-size: 18pt; line-height: 2.2;">
+<ul style=" line-height: 2.2;">
 <li><b>आरोप:</b> राज नारायण नाम के नेता ने आरोप लगाया था कि इंदिरा गांधी ने 1971 के चुनावों में सरकारी मशीनरी का दुरुपयोग किया।</li>
 <li><b>फैसला:</b> कोर्ट ने इंदिरा गांधी के चुनाव को **'अवैध'** और **'शून्य'** घोषित कर दिया। इसका मतलब था कि अब वह प्रधानमंत्री नहीं रह सकती थीं।</li>
 <li><b>प्रतिक्रिया:</b> इंदिरा गांधी ने इस फैसले के खिलाफ सुप्रीम कोर्ट में अपील की।</li>
@@ -154,103 +235,96 @@
 </div>
 <!-- SUPREME COURT STAY BOX -->
 <div style="background-color: #fdf4ff; padding: 30px; border: 4px solid #f0abfc; border-radius: 15px; margin-top: 40px;">
-<h2 style="color: #701a75; font-size: 30pt; text-align: center;">🛡️ सुप्रीम कोर्ट का फैसला (24 जून 1975)</h2>
-<p style="font-size: 18pt; line-height: 2;">सुप्रीम कोर्ट ने इलाहाबाद कोर्ट के फैसले पर **'आंशिक स्थगन'** (Partial Stay) लगा दिया। कोर्ट ने कहा कि इंदिरा गांधी प्रधानमंत्री तो बनी रह सकती हैं, लेकिन वह संसद की कार्यवाही में हिस्सा नहीं लेंगी। इसी तनाव के बीच जेपी और विपक्ष ने इंदिरा गांधी से इस्तीफा मांगना शुरू कर दिया। (NCERT Insight)</p>
+<h2 class="topic-header" style="text-align: center;">🛡️ सुप्रीम कोर्ट का फैसला (24 जून 1975)</h2>
+<p style=" line-height: 2;">सुप्रीम कोर्ट ने इलाहाबाद कोर्ट के फैसले पर **'आंशिक स्थगन'** (Partial Stay) लगा दिया। कोर्ट ने कहा कि इंदिरा गांधी प्रधानमंत्री तो बनी रह सकती हैं, लेकिन वह संसद की कार्यवाही में हिस्सा नहीं लेंगी। इसी तनाव के बीच जेपी और विपक्ष ने इंदिरा गांधी से इस्तीफा मांगना शुरू कर दिया। (NCERT Insight)</p>
 </div>
-
-    <!-- NCERT Cartoon: Conditional Stay Order (impending Political Crisis) -->
-    <div class="illustration-box" style="border-color: #701a75 !important; margin-bottom: 35px;">
-        <img alt="Conditional Stay Cartoon" src="images/ch13/conditional_stay_cartoon.webp" style="width: 85%; max-width: 750px; display: block; margin: 0 auto; border: 4px solid #cbd5e1; border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.15);"/>
-        <div class="illustration-explanation" style="border-left-color: #701a75 !important;">
-            <b>NCERT पुस्तक का चित्र (कंडीशनल स्टे ऑर्डर कार्टून):</b><br/>
+<!-- NCERT Cartoon: Conditional Stay Order (impending Political Crisis) -->
+<div class="illustration-box" style="border-color: #701a75 !important; margin-bottom: 35px;">
+<img alt="Conditional Stay Cartoon" src="images/ch13/conditional_stay_cartoon.webp" style="width: 85%; max-width: 750px; display: block; margin: 0 auto; border: 4px solid #cbd5e1; border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.15);"/>
+<div class="illustration-explanation" style="border-left-color: #701a75 !important;">
+<b>NCERT पुस्तक का चित्र (कंडीशनल स्टे ऑर्डर कार्टून):</b><br>
             यह प्रसिद्ध आर. के. लक्ष्मण का कार्टून आपातकाल की घोषणा से कुछ दिन पहले प्रकाशित हुआ था। यह उस समय के गंभीर राजनैतिक संकट को दर्शाता है। कार्टून में प्रधानमंत्री इंदिरा गांधी 'कंडीशनल स्टे ऑर्डर' (आंशिक स्थगन आदेश) लिखी कुर्सी पर बैठी हैं, जो राजनीतिक तूफान की लहरों (Political Crisis) में घिरी है। उनके पीछे कांग्रेस अध्यक्ष डी. के. बरुआ कुर्सी को थामे हुए खड़े हैं और कह रहे हैं कि इतनी भारी भीड़ के समर्थन के बाद आपको इस्तीफा देने के बारे में नहीं सोचना चाहिए।
-            <div style="background-color: #f1f5f9; border-left: 10px solid #000000; padding: 20px; margin-top: 20px; font-size: 20pt; line-height: 1.6; font-weight: bold;">
-                <b>बोर्ड परीक्षा विशेष कार्टून आधारित प्रश्नोत्तर (CBSE Board Cartoon Q&amp;A):</b><br/>
-                • <b>प्रश्न: 'कंडीशनल स्टे ऑर्डर' (Conditional Stay Order) से यहाँ क्या तात्पर्य है और इसका क्या प्रभाव पड़ा?</b><br/>
-                • <b>उत्तर:</b> (1) **तात्पर्य:** 24 जून 1975 को सुप्रीम कोर्ट ने इलाहाबाद हाई कोर्ट के फैसले पर आंशिक रोक लगाते हुए कहा कि इंदिरा गांधी प्रधानमंत्री पद पर बनी रह सकती हैं, लेकिन वे लोकसभा की कार्यवाही में मतदान नहीं कर सकतीं। (2) **प्रभाव:** विपक्ष ने इसके बाद इंदिरा गांधी के इस्तीफे के लिए आंदोलन तेज कर दिया, जिसके प्रत्युत्तर में इंदिरा गांधी ने 25 जून की रात को आपातकाल घोषित कर दिया।<br/>
+            <div style="background-color: #f1f5f9; border-left: 10px solid #000000; padding: 20px; margin-top: 20px;  line-height: 1.6; font-weight: bold;">
+<b>बोर्ड परीक्षा विशेष कार्टून आधारित प्रश्नोत्तर (CBSE Board Cartoon Q&amp;A):</b><br>
+                • <b>प्रश्न: 'कंडीशनल स्टे ऑर्डर' (Conditional Stay Order) से यहाँ क्या तात्पर्य है और इसका क्या प्रभाव पड़ा?</b><br>
+                • <b>उत्तर:</b> (1) **तात्पर्य:** 24 जून 1975 को सुप्रीम कोर्ट ने इलाहाबाद हाई कोर्ट के फैसले पर आंशिक रोक लगाते हुए कहा कि इंदिरा गांधी प्रधानमंत्री पद पर बनी रह सकती हैं, लेकिन वे लोकसभा की कार्यवाही में मतदान नहीं कर सकतीं। (2) **प्रभाव:** विपक्ष ने इसके बाद इंदिरा गांधी के इस्तीफे के लिए आंदोलन तेज कर दिया, जिसके प्रत्युत्तर में इंदिरा गांधी ने 25 जून की रात को आपातकाल घोषित कर दिया।<br>
                 • <b>प्रश्न: कार्टून में इंदिरा गांधी की कुर्सी के पीछे खड़े व्यक्ति कौन हैं और उनका भारतीय राजनीति में क्या प्रसिद्ध नारा था?</b><br/>
                 • <b>उत्तर:</b> वे तत्कालीन कांग्रेस अध्यक्ष **डी. के. बरुआ** हैं। उनका प्रसिद्ध नारा **"इंदिरा इज इंडिया, इंडिया इज इंदिरा"** (Indira is India, India is Indira) उस समय कांग्रेस के भीतर इंदिरा गांधी के प्रति व्यक्ति-पूजा का प्रतीक था।
-            </div>
-        </div>
-    </div>
-
-<h2 style="color: #be123c; font-size: 32pt; margin-top: 50px;">2. मुख्य संघर्ष के मुद्दे</h2>
+            </br></br></br></div>
+</br></div>
+</div>
+<h2 class="topic-header" style="margin-top: 50px;">2. मुख्य संघर्ष के मुद्दे</h2>
 <div style="background-color: #f8fafc; padding: 25px; border-left: 10px solid #cbd5e1; margin-bottom: 30px; border-radius: 8px;">
 <p>सरकार और कोर्ट के बीच तीन बड़ी बातों को लेकर खींचतान थी:</p>
-<ul style="font-size: 18pt; line-height: 2.2;">
+<ul style=" line-height: 2.2;">
 <li><b>मौलिक अधिकार बनाम नीति निदेशक तत्व:</b> सरकार चाहती थी कि वह मौलिक अधिकारों में कटौती कर सके।</li>
 <li><b>संसद की शक्ति:</b> क्या संसद संविधान के किसी भी हिस्से को बदल सकती है? (केशवानंद भारती केस)।</li>
 <li><b>न्यायाधीशों की नियुक्ति:</b> सरकार ने तीन वरिष्ठ जजों की अनदेखी करके **ए. एन. रे** को मुख्य न्यायाधीश (CJI) बनाया, जिसे न्यायपालिका की आजादी पर हमला माना गया।</li>
 </ul>
 </div>
-
 <div style="background-color: #fdf2fb; padding: 30px; border-radius: 12px; margin-top: 40px; border: 2px dashed #db2777;">
-<h3 style="color: #9d174d; font-size: 24pt;">🛑 मुख्य विचार:</h3>
+<h3 class="subtopic-header" style="">🛑 मुख्य विचार:</h3>
 <p>इलाहाबाद हाई कोर्ट का फैसला ही वह 'चिंगारी' थी जिसने आपातकाल के बारूद को जलाया। इंदिरा गांधी के पास केवल दो ही रास्ते थे—या तो कुर्सी छोड़ दें या संविधान की शक्ति का इस्तेमाल कर पूरी व्यवस्था को ही बंधक बना लें। उन्होंने दूसरा रास्ता चुना!</p>
 </div>
 </div>
-
-
-<br><br><hr><br><br>
-<div style="font-family: 'Arial', verdana, sans-serif; font-size: 16pt; line-height: 1.8; color: #1a202c; padding: 20px;">
+<br/><br/><hr/><br/><br/>
+<div style="font-family: 'Arial', verdana, sans-serif;  line-height: 1.8; color: #1a202c; padding: 20px;">
 <!-- PART 4 SECTION: Declaration -->
-<h1 style="color: #991b1b; font-size: 34pt; border-bottom: 5px solid #f87171; padding-bottom: 10px; padding-top: 40px;">
+<h1 class="part-header" style="border-bottom: 5px solid #f87171; padding-bottom: 10px; padding-top: 40px;">
         भाग 4: आपातकाल की घोषणा (25 जून 1975)
     </h1>
 <p>25 जून 1975 की रात को भारत के इतिहास में 'काली रात' कहा जाता है। वह रात जब देश सो रहा था और लोकतंत्र को बंधक बना लिया गया।</p>
 <div style="background-color: #fef2f2; padding: 30px; border-radius: 12px; margin-top: 30px; border-left: 8px solid #dc2626;">
-<h2 style="color: #991b1b; font-size: 26pt; margin-top: 0;">1. अनुच्छेद 352 का प्रयोग</h2>
+<h2 class="topic-header" style="margin-top: 0;">1. अनुच्छेद 352 का प्रयोग</h2>
 <p>सरकार ने **अनुच्छेद 352** का उपयोग करते हुए 'आंतरिक अशांति' के आधार पर आपातकाल की घोषणा की। राष्ट्रपति **फखरुद्दीन अली अहमद** ने देर रात इस पर हस्ताक्षर कर दिए।</p>
-<ul style="font-size: 18pt; line-height: 2.2;">
+<ul style=" line-height: 2.2;">
 <li><b>आधी रात के अंधेरे:</b> दिल्ली के कई अखबारों के दफ्तरों की बिजली काट दी गई ताकि वे अगले दिन खबर न छाप सकें।</li>
 <li><b>नेताओं की गिरफ्तारी:</b> जयप्रकाश नारायण, अटल बिहारी वाजपेयी, लालकृष्ण आडवाणी और अन्य विपक्षी नेताओं को रातों-रात जेल में डाल दिया गया।</li>
 </ul>
 </div>
 <!-- PRESS CENSORSHIP BOX -->
 <div style="background-color: #f8fafc; padding: 30px; border: 4px solid #475569; border-radius: 15px; margin-top: 40px;">
-<h2 style="color: #1e293b; font-size: 30pt; text-align: center;">🛑 प्रेस सेंसरशिप (Press Censorship)</h2>
-<p style="font-size: 18pt; line-height: 2;">आपातकाल के दौरान प्रेस की आजादी पूरी तरह खत्म कर दी गई। अब अखबारों को कुछ भी छापने से पहले सरकार से अनुमति लेनी पड़ती थी।</p>
-<ul style="font-size: 18pt; font-weight: bold; color: #1e293b; line-height: 2.2;">
+<h2 class="topic-header" style="text-align: center;">🛑 प्रेस सेंसरशिप (Press Censorship)</h2>
+<p style=" line-height: 2;">आपातकाल के दौरान प्रेस की आजादी पूरी तरह खत्म कर दी गई। अब अखबारों को कुछ भी छापने से पहले सरकार से अनुमति लेनी पड़ती थी।</p>
+<ul style=" font-weight: bold; color: #1e293b; line-height: 2.2;">
 <li>1. 'इंडियन एक्सप्रेस' और 'स्टेट्समैन' ने अपना विरोध जताने के लिए संपादकीय (Editorial) की जगह खाली छोड़ दी।</li>
 <li>2. 'संगठन' पर प्रतिबंध: आरएसएस (RSS) और जमात-ए-इस्लामी जैसे संगठनों पर रातोंरात पाबंदी लगा दी गई।</li>
 <li>3. डिटेंशन (MISA): **MISA** जैसे सख्त कानूनों का इस्तेमाल करके बिना किसी मुकदमे के किसी को भी जेल में रखा जा सकता था।</li>
 </ul>
 </div>
-<h2 style="color: #1e3a8a; font-size: 32pt; margin-top: 50px;">2. 20 सूत्रीय कार्यक्रम (20-Point Programme)</h2>
+<h2 class="topic-header" style="margin-top: 50px;">2. 20 सूत्रीय कार्यक्रम (20-Point Programme)</h2>
 <div style="background-color: #f0fdf4; padding: 25px; border-left: 10px solid #22c55e; margin-bottom: 30px; border-radius: 8px;">
 <p>इंदिरा गांधी ने आपातकाल के दौरान अपनी लोकप्रियता को बनाए रखने के लिए 20-सूत्रीय कार्यक्रम किया। इसमें भूमि सुधार, बंधुआ मजदूरी का अंत और गरीबों को घर देने जैसे लोकलुभावन वादे किए गए। (NCERT Perspective)</p>
 </div>
-    <!-- NCERT Cartoon: Emergency News (Press Censorship) -->
-    <div class="illustration-box" style="border-color: #dc2626 !important; margin-bottom: 35px;">
-        <img alt="The Emergency Headlines" src="images/ch13/emergency_news.webp" style="width: 70%; max-width: 500px; display: block; margin: 0 auto; border: 4px solid #cbd5e1; border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.15);"/>
-        <div class="illustration-explanation" style="border-left-color: #dc2626 !important;">
-            <b>NCERT पुस्तक का चित्र (आपातकाल की घोषणा और प्रेस सेंसरशिप):</b><br/>
+<!-- NCERT Cartoon: Emergency News (Press Censorship) -->
+<div class="illustration-box" style="border-color: #dc2626 !important; margin-bottom: 35px;">
+<img alt="The Emergency Headlines" src="images/ch13/emergency_news.webp" style="width: 70%; max-width: 500px; display: block; margin: 0 auto; border: 4px solid #cbd5e1; border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.15);"/>
+<div class="illustration-explanation" style="border-left-color: #dc2626 !important;">
+<b>NCERT पुस्तक का चित्र (आपातकाल की घोषणा और प्रेस सेंसरशिप):</b><br>
             25 जून 1975 की रात को आपातकाल की घोषणा की गई और रातों-रात प्रमुख समाचार पत्रों (जैसे इंडियन एक्सप्रेस और मद्रास मेल) के दफ्तरों की बिजली काट दी गई। सरकार ने प्रेस सेंसरशिप लागू कर दी, जिससे प्रेस की आज़ादी छीन ली गई।
-            <div style="background-color: #f1f5f9; border-left: 10px solid #000000; padding: 20px; margin-top: 20px; font-size: 20pt; line-height: 1.6; font-weight: bold;">
-                <b>बोर्ड परीक्षा विशेष प्रश्नोत्तर (CBSE Board Q&amp;A):</b><br/>
-                • <b>प्रश्न: आपातकाल के दौरान 'प्रेस सेंसरशिप' (Press Censorship) का क्या प्रभाव पड़ा?</b><br/>
+            <div style="background-color: #f1f5f9; border-left: 10px solid #000000; padding: 20px; margin-top: 20px;  line-height: 1.6; font-weight: bold;">
+<b>बोर्ड परीक्षा विशेष प्रश्नोत्तर (CBSE Board Q&amp;A):</b><br>
+                • <b>प्रश्न: आपातकाल के दौरान 'प्रेस सेंसरशिप' (Press Censorship) का क्या प्रभाव पड़ा?</b><br>
                 • <b>उत्तर:</b> समाचार पत्रों और मीडिया हाउसों को निर्देशित किया गया कि वे कुछ भी छापने से पहले सरकार (सेंसर अधिकारी) की अनुमति लें। इसके विरोध में कई समाचार पत्रों ने संपादकीय पन्नों को खाली छोड़ दिया और प्रसिद्ध लेखकों ने अपने पद्म पुरस्कार लौटा दिए।
-            </div>
-        </div>
-    </div>
+            </br></br></div>
+</br></div>
+</div>
 <div style="background-color: #fdf2f2; padding: 30px; border-radius: 15px; margin-top: 10px; border: 2px solid #ef4444;">
-<h3 style="color: #b91c1c; font-size: 24pt;">🛑 मुख्य विचार:</h3>
+<h3 class="subtopic-header" style="">🛑 मुख्य विचार:</h3>
 <p>आपातकाल की घोषणा ने यह साबित किया कि जब सत्ता को कोई खतरा होता है, तो वह किसी भी हद तक जा सकती है। भारतीय लोकतंत्र के इतिहास का यह सबसे विवादास्पद अध्याय था जिसने भविष्य के कई कानूनों को जन्म दिया।</p>
 </div>
 </div>
-
-
-<br><br><hr><br><br>
-<div style="font-family: 'Arial', verdana, sans-serif; font-size: 16pt; line-height: 1.8; color: #1a202c; padding: 20px;">
+<br/><br/><hr/><br/><br/>
+<div style="font-family: 'Arial', verdana, sans-serif;  line-height: 1.8; color: #1a202c; padding: 20px;">
 <!-- PART 5 SECTION: Consequences -->
-<h1 style="color: #be123c; font-size: 36pt; border-bottom: 5px solid #f43f5e; padding-bottom: 15px; padding-top: 40px;">
+<h1 class="part-header" style="border-bottom: 5px solid #f43f5e; padding-bottom: 15px; padding-top: 40px;">
         भाग 5: आपातकाल के परिणाम और प्रभाव (Consequences)
     </h1>
 <p>आपातकाल का अर्थ केवल नेताओं की गिरफ्तारी नहीं था, बल्कि इसने आम जनता के जीवन को भी बुरी तरह प्रभावित किया। इसके कुछ भयंकर परिणाम हुए:</p>
 <div style="background-color: #fff1f2; padding: 30px; border-radius: 12px; margin-bottom: 40px; border-left: 8px solid #e11d48;">
-<h2 style="color: #991b1b; font-size: 28pt; margin-top: 0;">1. मानवाधिकारों का हनन</h2>
+<h2 class="topic-header" style="margin-top: 0;">1. मानवाधिकारों का हनन</h2>
 <p>आपातकाल के दौरान नागरिकों के 'मौलिक अधिकार' (Fundamental Rights) छीन लिए गए और लोग कोर्ट भी नहीं जा सकते थे।</p>
-<ul style="font-size: 18pt; line-height: 2.2;">
+<ul style=" line-height: 2.2;">
 <li><b>जबरन नसबंदी (Forced Sterilization):</b> जनसंख्या को नियंत्रित करने के नाम पर हजारों लोगों की जबरन नसबंदी की गई। (संजय गांधी की योजनाएं)।</li>
 <li><b>तुर्कमान गेट की घटना:</b> दिल्ली में झुग्गी-झोपड़ियों को हटाने के दौरान पुलिस की बर्बरता का शिकार हुए सैकड़ों लोग। (NCERT Insight)</li>
 <li><b>हिरासत में मौतें:</b> कई राजनैतिक बंदियों की पुलिस हिरासत में मौतें हुईं।</li>
@@ -258,113 +332,107 @@
 </div>
 <!-- 42nd AMENDMENT BOX -->
 <div style="background-color: #fdf4ff; padding: 30px; border: 4px solid #f0abfc; border-radius: 15px; margin-top: 40px;">
-<h2 style="color: #701a75; font-size: 30pt; text-align: center;">📜 42वाँ संविधान संशोधन (Mini Constitution)</h2>
-<p style="font-size: 18pt; line-height: 2;">सरकार ने संविधान में इतने सारे बदलाव किए कि इसे 'नया संविधान' ही कहा जाने लगा। इसके दो मुख्य उद्देश्य थे:</p>
-<ul style="font-size: 18pt; font-weight: bold; color: #701a75; line-height: 2.2;">
+<h2 class="topic-header" style="text-align: center;">📜 42वाँ संविधान संशोधन (Mini Constitution)</h2>
+<p style=" line-height: 2;">सरकार ने संविधान में इतने सारे बदलाव किए कि इसे 'नया संविधान' ही कहा जाने लगा। इसके दो मुख्य उद्देश्य थे:</p>
+<ul style=" font-weight: bold; color: #701a75; line-height: 2.2;">
 <li>1. प्रधानमंत्री की शक्ति बढ़ाना: ताकि कोर्ट हस्तक्षपे न कर सके।</li>
 <li>2. कार्यकाल बढ़ाना: लोकसभा का कार्यकाल 5 साल से बढ़ाकर **6 साल** कर दिया गया।</li>
 <li>3. धर्मनिरपेक्ष और समाजवादी शब्दों को प्रस्तावना में जोड़ा गया।</li>
 </ul>
 </div>
-<h2 style="color: #1e3a8a; font-size: 28pt; margin-top: 50px;">2. आपातकाल के प्रति प्रतिरोध</h2>
+<h2 class="topic-header" style="margin-top: 50px;">2. आपातकाल के प्रति प्रतिरोध</h2>
 <div style="background-color: #f8fafc; padding: 25px; border-left: 10px solid #cbd5e1; margin-bottom: 30px; border-radius: 8px;">
 <p>इतनी पाबंदियों के बावजूद लोगों ने हार नहीं मानी। विपक्षी नेताओं ने जेल से ही अपना संघर्ष जारी रखा। कई पत्रकारों और साहित्यकारों (जैसे फणीश्वर नाथ 'रेणु') ने अपने पद्म-पुरस्कार लौटा दिए। (NCERT Perspective)</p>
 </div>
-    <!-- NCERT Cartoon: Emergency Consequences (Abuse of Power) -->
-    <div class="illustration-box" style="border-color: #f43f5e !important; margin-bottom: 35px;">
-        <img alt="Sanjay Gandhi and Emergency" src="images/ch13/emergency_consequences.webp" style="width: 65%; max-width: 450px; display: block; margin: 0 auto; border: 4px solid #cbd5e1; border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.15);"/>
-        <div class="illustration-explanation" style="border-left-color: #f43f5e !important;">
-            <b>NCERT पुस्तक का चित्र (आपातकाल के दौरान नागरिक अधिकारों का हनन):</b><br/>
+<!-- NCERT Cartoon: Emergency Consequences (Abuse of Power) -->
+<div class="illustration-box" style="border-color: #f43f5e !important; margin-bottom: 35px;">
+<img alt="Sanjay Gandhi and Emergency" src="images/ch13/emergency_consequences.webp" style="width: 65%; max-width: 450px; display: block; margin: 0 auto; border: 4px solid #cbd5e1; border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.15);"/>
+<div class="illustration-explanation" style="border-left-color: #f43f5e !important;">
+<b>NCERT पुस्तक का चित्र (आपातकाल के दौरान नागरिक अधिकारों का हनन):</b><br>
             आपातकाल के दौरान निवारक नजरबंदी (Preventive Detention) का बड़े पैमाने पर दुरुपयोग हुआ। विपक्षी नेताओं को बिना मुकदमा चलाए जेलों में डाल दिया गया, संजय गांधी के नेतृत्व में जबरन नसबंदी की गई और दिल्ली में तुर्कमान गेट विध्वंस जैसी बर्बरता हुई।
-            <div style="background-color: #f1f5f9; border-left: 10px solid #000000; padding: 20px; margin-top: 20px; font-size: 20pt; line-height: 1.6; font-weight: bold;">
-                <b>बोर्ड परीक्षा विशेष प्रश्नोत्तर (CBSE Board Q&amp;A):</b><br/>
-                • <b>प्रश्न: आपातकाल के दौरान 'निवारक नजरबंदी' (Preventive Detention) का दुरुपयोग कैसे किया गया?</b><br/>
+            <div style="background-color: #f1f5f9; border-left: 10px solid #000000; padding: 20px; margin-top: 20px;  line-height: 1.6; font-weight: bold;">
+<b>बोर्ड परीक्षा विशेष प्रश्नोत्तर (CBSE Board Q&amp;A):</b><br>
+                • <b>प्रश्न: आपातकाल के दौरान 'निवारक नजरबंदी' (Preventive Detention) का दुरुपयोग कैसे किया गया?</b><br>
                 • <b>उत्तर:</b> सामान्यतः निवारक नजरबंदी किसी व्यक्ति को अपराध करने से रोकने के लिए होती है, लेकिन आपातकाल में इसका उपयोग विपक्षी नेताओं, बुद्धिजीवियों और सामाजिक कार्यकर्ताओं की आवाज़ को दबाने के लिए किया गया, जिसमें उन्हें कोर्ट जाने का अधिकार भी नहीं दिया गया (बंदी प्रत्यक्षीकरण का निलंबन)।
-            </div>
-        </div>
-    </div>
+            </br></br></div>
+</br></div>
+</div>
 <div style="background-color: #fdf2f2; padding: 30px; border-radius: 12px; margin-top: 40px; border: 2px dashed #dc2626;">
-<h3 style="color: #b91c1c; font-size: 24pt;">🛑 मुख्य विचार:</h3>
+<h3 class="subtopic-header" style="">🛑 मुख्य विचार:</h3>
 <p>आपातकाल ने सिखाया कि लोकतंत्र में **'व्यवस्था'** से ऊपर **'व्यक्तिगत आजादी'** होनी चाहिए। यह वह साल था जब भारत ने तानाशाही का असली चेहरा देखा और कसम खाई कि इसे दोबारा कभी नहीं होने दिया जाएगा।</p>
 </div>
 </div>
-
-
-<br><br><hr><br><br>
-<div style="font-family: 'Arial', verdana, sans-serif; font-size: 16pt; line-height: 1.8; color: #1a202c; padding: 20px;">
+<br/><br/><hr/><br/><br/>
+<div style="font-family: 'Arial', verdana, sans-serif;  line-height: 1.8; color: #1a202c; padding: 20px;">
 <!-- PART 6 SECTION: 1977 Election -->
-<h1 style="color: #047857; font-size: 34pt; border-bottom: 5px solid #10b981; padding-bottom: 15px; padding-top: 40px;">
+<h1 class="part-header" style="border-bottom: 5px solid #10b981; padding-bottom: 15px; padding-top: 40px;">
         भाग 6: आपातकाल के बाद: 1977 के चुनाव (Result)
     </h1>
 <p>18 महीनों के बाद, मार्च 1977 में आपातकाल हटा लिया गया। देश में फिर से चुनाव हुए, जो भारत के राजनैतिक इतिहास में 'क्रांतिकारी' साबित हुए।</p>
 <div style="background-color: #ecfdf5; padding: 30px; border-radius: 12px; margin-bottom: 40px; border-left: 8px solid #059669;">
-<h2 style="color: #065f46; font-size: 28pt; margin-top: 0;">1. जनता पार्टी का गठन</h2>
+<h2 class="topic-header" style="margin-top: 0;">1. जनता पार्टी का गठन</h2>
 <p>आपातकाल के दौरान जेल में बंद सभी विपक्षी दल (जैसे जनसंघ, लोकदल, सोशलिस्ट) एक हो गए और **'जनता पार्टी'** बनाई।</p>
-<ul style="font-size: 18pt; line-height: 2.2;">
+<ul style=" line-height: 2.2;">
 <li><b>नेतृत्व:</b> जयप्रकाश नारायण। उन्होंने इस चुनाव को 'लोकतंत्र बनाम तानाशाही' (Democracy vs Dictatorship) की जंग बना दिया।</li>
 <li><b>मुख्य मुद्दा:</b> आपातकाल के दौरान हुई ज्यादतियाँ। "सेव डेमोक्रेसी" (Save Democracy) ही उनका सबसे बड़ा नारा था। (NCERT Insight)</li>
 </ul>
 </div>
 <!-- THE LANDSLIDE BOX -->
 <div style="background-color: #fef2f2; padding: 30px; border: 4px solid #ef4444; border-radius: 15px; margin-top: 40px;">
-<h2 style="color: #991b1b; font-size: 30pt; text-align: center;">🏆 पहली बार कांग्रेस की हार</h2>
-<p style="font-size: 18pt; line-height: 2;">1977 के चुनावों के नतीजे एक बहुत बड़े बदलाव की गवाही थे:</p>
-<ul style="font-size: 18pt; font-weight: bold; color: #991b1b; line-height: 2.2;">
+<h2 class="topic-header" style="text-align: center;">🏆 पहली बार कांग्रेस की हार</h2>
+<p style=" line-height: 2;">1977 के चुनावों के नतीजे एक बहुत बड़े बदलाव की गवाही थे:</p>
+<ul style=" font-weight: bold; color: #991b1b; line-height: 2.2;">
 <li>1. केंद्र से कांग्रेस की विदा: आजादी के 30 साल बाद पहली बार कांग्रेस केंद्र की सत्ता से बाहर हो गई।</li>
 <li>2. जनता पार्टी की जीत: जनता पार्टी और उसके सहयोगियों ने **330 सीटें** जीतीं। (जनता पार्टी अकेले 295 सीटें लाई)।</li>
 <li>3. इंदिरा गांधी की हार: उत्तर भारत में कांग्रेस का सूपड़ा साफ हो गया। इंदिरा गांधी (रायबरेली) और उनके बेटे संजय गांधी (अमेठी) खुद चुनाव हार गए।</li>
 </ul>
 </div>
-
-    <!-- NCERT Map: Lok Sabha Election Results 1977 Map -->
-    <div class="illustration-box" style="border-color: #0284c7 !important; margin-bottom: 35px;">
-        <img alt="Lok Sabha Election Results 1977 Map" src="images/ch13/janata_map.webp" style="width: 80%; max-width: 600px; display: block; margin: 0 auto; border: 4px solid #cbd5e1; border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.15);"/>
-        <div class="illustration-explanation" style="border-left-color: #0284c7 !important;">
-            <b>NCERT पुस्तक का चित्र (1977 का चुनाव परिणाम मानचित्र):</b><br/>
+<!-- NCERT Map: Lok Sabha Election Results 1977 Map -->
+<div class="illustration-box" style="border-color: #0284c7 !important; margin-bottom: 35px;">
+<img alt="Lok Sabha Election Results 1977 Map" src="images/ch13/janata_map.webp" style="width: 80%; max-width: 600px; display: block; margin: 0 auto; border: 4px solid #cbd5e1; border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.15);"/>
+<div class="illustration-explanation" style="border-left-color: #0284c7 !important;">
+<b>NCERT पुस्तक का चित्र (1977 का चुनाव परिणाम मानचित्र):</b><br>
             यह मानचित्र 1977 के लोकसभा चुनावों के परिणामों को दर्शाता है। इसमें हरे/काले रंग में चिह्नित क्षेत्र जनता पार्टी की भारी जीत को दर्शाते हैं (विशेष रूप से उत्तर भारत में, जहाँ उसने लगभग 100% सीटें जीतीं)। जबकि पीले रंग में कांग्रेस की सीटें मुख्य रूप से दक्षिण भारत (जैसे केरल, आंध्र प्रदेश, कर्नाटक और तमिलनाडु) में केंद्रित थीं, जहाँ आपातकाल का प्रभाव बहुत कम या सकारात्मक था।
-            <div style="background-color: #f1f5f9; border-left: 10px solid #000000; padding: 20px; margin-top: 20px; font-size: 20pt; line-height: 1.6; font-weight: bold;">
-                <b>बोर्ड परीक्षा विशेष मानचित्र आधारित प्रश्नोत्तर (CBSE Board Map Q&amp;A):</b><br/>
-                • <b>प्रश्न: 1977 के लोकसभा चुनाव में देश के उत्तर और दक्षिण भाग में अलग-अलग चुनावी नतीजे क्यों मिले?</b><br/>
+            <div style="background-color: #f1f5f9; border-left: 10px solid #000000; padding: 20px; margin-top: 20px;  line-height: 1.6; font-weight: bold;">
+<b>बोर्ड परीक्षा विशेष मानचित्र आधारित प्रश्नोत्तर (CBSE Board Map Q&amp;A):</b><br>
+                • <b>प्रश्न: 1977 के लोकसभा चुनाव में देश के उत्तर और दक्षिण भाग में अलग-अलग चुनावी नतीजे क्यों मिले?</b><br>
                 • <b>उत्तर:</b> (1) **उत्तर भारत में आक्रोश:** उत्तर भारत में आपातकाल का दमन, जबरन नसबंदी और गिरफ्तारियों का सीधा असर पड़ा, जिससे मतदाताओं में जबरदस्त आक्रोश था। (2) **दक्षिण भारत में शांति:** दक्षिण भारत में जबरन नसबंदी या प्रशासनिक ज्यादतियाँ लगभग नगण्य थीं और लोगों ने इंदिरा गांधी के 20-सूत्रीय कार्यक्रमों (जैसे भूमि सुधार) को स्थिरता के रूप में देखा।
-            </div>
-        </div>
-    </div>
-
-<h2 style="color: #1e3a8a; font-size: 28pt; margin-top: 50px;">2. भारत का पहला 'गैर-कांग्रेसी' प्रधानमंत्री</h2>
+            </br></br></div>
+</br></div>
+</div>
+<h2 class="topic-header" style="margin-top: 50px;">2. भारत का पहला 'गैर-कांग्रेसी' प्रधानमंत्री</h2>
 <div style="background-color: #f8fafc; padding: 25px; border-left: 10px solid #cbd5e1; margin-bottom: 30px; border-radius: 8px;">
 <p>जनता पार्टी के भीतर प्रधानमंत्री पद के लिए मोरारजी देसाई, चरण सिंह और जगजीवन राम के बीच मुकाबला था। अंततः **मोरारजी देसाई** भारत के पहले गैर-कांग्रेसी प्रधानमंत्री बने। (NCERT Perspective)</p>
 </div>
-    <!-- NCERT Cartoon: Janata Victory (1977 Election Results) -->
-    <div class="illustration-box" style="border-color: #10b981 !important; margin-bottom: 35px;">
-        <img alt="Janata Party Celebration 1977" src="images/ch13/janata_victory.webp" style="width: 60%; max-width: 450px; display: block; margin: 0 auto; border: 4px solid #cbd5e1; border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.15);"/>
-        <div class="illustration-explanation" style="border-left-color: #10b981 !important;">
-            <b>NCERT पुस्तक का चित्र (1977 के ऐतिहासिक चुनाव और गैर-कांग्रेसी सरकार का शपथ ग्रहण):</b><br/>
+<!-- NCERT Cartoon: Janata Victory (1977 Election Results) -->
+<div class="illustration-box" style="border-color: #10b981 !important; margin-bottom: 35px;">
+<img alt="Janata Party Celebration 1977" src="images/ch13/janata_victory.webp" style="width: 60%; max-width: 450px; display: block; margin: 0 auto; border: 4px solid #cbd5e1; border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.15);"/>
+<div class="illustration-explanation" style="border-left-color: #10b981 !important;">
+<b>NCERT पुस्तक का चित्र (1977 के ऐतिहासिक चुनाव और गैर-कांग्रेसी सरकार का शपथ ग्रहण):</b><br>
             1977 के चुनावों में जनता पार्टी ने आपातकाल के खिलाफ जनादेश प्राप्त किया। कांग्रेस को लोकसभा में केवल 154 सीटें मिलीं, जबकि जनता पार्टी और उसके सहयोगियों ने 330 सीटें जीतीं। मोरारजी देसाई के नेतृत्व में पहली गैर-कांग्रेसी सरकार का शपथ ग्रहण हुआ।
-            <div style="background-color: #f1f5f9; border-left: 10px solid #000000; padding: 20px; margin-top: 20px; font-size: 20pt; line-height: 1.6; font-weight: bold;">
-                <b>बोर्ड परीक्षा विशेष प्रश्नोत्तर (CBSE Board Q&amp;A):</b><br/>
-                • <b>प्रश्न: 1977 के चुनावों को भारतीय लोकतंत्र में एक 'ऐतिहासिक मोड़' क्यों माना जाता है?</b><br/>
+            <div style="background-color: #f1f5f9; border-left: 10px solid #000000; padding: 20px; margin-top: 20px;  line-height: 1.6; font-weight: bold;">
+<b>बोर्ड परीक्षा विशेष प्रश्नोत्तर (CBSE Board Q&amp;A):</b><br>
+                • <b>प्रश्न: 1977 के चुनावों को भारतीय लोकतंत्र में एक 'ऐतिहासिक मोड़' क्यों माना जाता है?</b><br>
                 • <b>उत्तर:</b> (1) स्वतंत्रता के बाद पहली बार केंद्र में कांग्रेस सत्ता से बाहर हुई और गैर-कांग्रेसी सरकार बनी। (2) उत्तर भारत में कांग्रेस का सूपड़ा साफ हो गया, जिससे यह साबित हुआ कि भारतीय मतदाता तानाशाही और नागरिक अधिकारों के हनन को स्वीकार नहीं करते।
-            </div>
-        </div>
-    </div>
+            </br></br></div>
+</br></div>
+</div>
 <div style="background-color: #fdf2fb; padding: 30px; border-radius: 12px; margin-top: 40px; border: 2px dashed #db2777;">
-<h3 style="color: #9d174d; font-size: 24pt;">🛑 मुख्य विचार:</h3>
+<h3 class="subtopic-header" style="">🛑 मुख्य विचार:</h3>
 <p>1977 के चुनावों ने पूरी दुनिया को यह दिखा दिया कि भारत के लोग गरीबी सह सकते हैं, लेकिन **आज़ादी का अपमान** कभी नहीं। यह भारतीय लोकतंत्र के परिपक्व (Mature) होने का सबसे बड़ा प्रमाण था।</p>
 </div>
 </div>
-
-
-<br><br><hr><br><br>
-<div style="font-family: 'Arial', verdana, sans-serif; font-size: 16pt; line-height: 1.8; color: #1a202c; padding: 20px;">
+<br/><br/><hr/><br/><br/>
+<div style="font-family: 'Arial', verdana, sans-serif;  line-height: 1.8; color: #1a202c; padding: 20px;">
 <!-- PART 7 SECTION: Janata Party Failure -->
-<h1 style="color: #92400e; font-size: 34pt; border-bottom: 4px solid #f59e0b; padding-bottom: 10px; padding-top: 40px;">
+<h1 class="part-header" style="border-bottom: 4px solid #f59e0b; padding-bottom: 10px; padding-top: 40px;">
         भाग 7: जनता पार्टी सरकार और उसकी विफलता
     </h1>
 <p>1977 की जीत के बाद बहुत उम्मीदें थीं, लेकिन जनता पार्टी की सरकार एक 'खिंचड़ी' (Coalition) बनकर रह गई। आंतरिक विवादों ने उसे बहुत जल्दी कमजोर कर दिया।</p>
 <div style="background-color: #fffbeb; padding: 30px; border-radius: 12px; margin-bottom: 40px; border-left: 8px solid #d97706;">
-<h2 style="color: #92400e; font-size: 26pt; margin-top: 0;">1. सरकार के मुख्य काम</h2>
+<h2 class="topic-header" style="margin-top: 0;">1. सरकार के मुख्य काम</h2>
 <p>कम समय के बावजूद, जनता पार्टी ने कुछ महत्वपूर्ण कदम उठाए:</p>
-<ul style="font-size: 18pt; line-height: 2.2;">
+<ul style=" line-height: 2.2;">
 <li><b>शाह आयोग (Shah Commission):</b> आपातकाल के दौरान हुई ज्यादतियों की जाँच के लिए इसे बनाया गया।</li>
 <li><b>संविधान सुधार:</b> 44वाँ संविधान संशोधन करके आपातकाल के नियमों को कड़ा बनाया गया ताकि 'आंतरिक अशांति' के बहाने दोबारा ऐसा न हो सके। (NCERT Insight)</li>
 <li><b>मंडल आयोग (Mandal Commission):</b> पिछड़ों के लिए आरक्षण के मुद्दों की जाँच के लिए 1978 में इसे बनाया गया।</li>
@@ -372,174 +440,165 @@
 </div>
 <!-- INTERNAL STRIFE BOX -->
 <div style="background-color: #fef2f2; padding: 30px; border: 4px solid #ef4444; border-radius: 15px; margin-top: 40px;">
-<h2 style="color: #991b1b; font-size: 30pt; text-align: center;">⚡ दरारें और बिखराव</h2>
-<p style="font-size: 18pt; line-height: 2;">जनता पार्टी में तीन बड़े नेता प्रधानमंत्री बनना चाहते थे—मोरारजी देसाई, चरण सिंह और जगजीवन राम।</p>
-<ul style="font-size: 18pt; font-weight: bold; color: #991b1b; line-height: 2.2;">
+<h2 class="topic-header" style="text-align: center;">⚡ दरारें और बिखराव</h2>
+<p style=" line-height: 2;">जनता पार्टी में तीन बड़े नेता प्रधानमंत्री बनना चाहते थे—मोरारजी देसाई, चरण सिंह और जगजीवन राम।</p>
+<ul style=" font-weight: bold; color: #991b1b; line-height: 2.2;">
 <li>1. केवल 18 महीने: मोरारजी देसाई की सरकार केवल 18 महीने चली और बहुमत खो बैठी।</li>
 <li>2. चरण सिंह की सरकार: इंदिरा गांधी ने बाहर से समर्थन देकर चरण सिंह को प्रधानमंत्री बनाया, लेकिन केवल 4 महीने बाद समर्थन वापस ले लिया।</li>
 <li>3. अस्थिरता: जनता पार्टी के नेताओं की आपसी लड़ाई ने जनता को निराश कर दिया।</li>
 </ul>
 </div>
-<h2 style="color: #1e3a8a; font-size: 32pt; margin-top: 50px;">2. 1980 के चुनाव और इंदिरा की वापसी</h2>
+<h2 class="topic-header" style="margin-top: 50px;">2. 1980 के चुनाव और इंदिरा की वापसी</h2>
 <div style="background-color: #f8fafc; padding: 25px; border-left: 10px solid #cbd5e1; margin-bottom: 30px; border-radius: 8px;">
 <p>1980 में समय से पहले चुनाव हुए। जनता ने 'अस्थिरता' को नकारते हुए एक बार फिर **इंदिरा गांधी** पर भरोसा जताया। कांग्रेस ने **353 सीटें** जीतीं। (NCERT Perspective)</p>
 <p><b>मुख्य चुनावी नारा (1980):</b> कांग्रेस ने इस चुनाव में प्रसिद्ध नारा दिया था—<b>"इन्दिरा लाओ, देश बचाओ"</b> (Bring Back Indira, Save the Country)। इस नारे ने जनता को एक स्थिर और मजबूत सरकार का भरोसा दिलाया।</p>
 </div>
-
-    <!-- NCERT Cartoon: Sweeping the Polls (1980 Elections Landslide) -->
-    <div class="illustration-box" style="border-color: #6d28d9 !important; margin-bottom: 35px;">
-        <img alt="Sweeping the Polls" src="images/ch13/sweeping_polls.webp" style="width: 85%; max-width: 750px; display: block; margin: 0 auto; border: 4px solid #cbd5e1; border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.15);"/>
-        <div class="illustration-explanation" style="border-left-color: #6d28d9 !important;">
-            <b>NCERT पुस्तक का चित्र (Sweeping the Polls - 1980 के चुनाव परिणाम और इंदिरा की वापसी):</b><br/>
+<!-- NCERT Cartoon: Sweeping the Polls (1980 Elections Landslide) -->
+<div class="illustration-box" style="border-color: #6d28d9 !important; margin-bottom: 35px;">
+<img alt="Sweeping the Polls" src="images/ch13/sweeping_polls.webp" style="width: 85%; max-width: 750px; display: block; margin: 0 auto; border: 4px solid #cbd5e1; border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.15);"/>
+<div class="illustration-explanation" style="border-left-color: #6d28d9 !important;">
+<b>NCERT पुस्तक का चित्र (Sweeping the Polls - 1980 के चुनाव परिणाम और इंदिरा की वापसी):</b><br>
             यह प्रसिद्ध आर. के. लक्ष्मण का कार्टून 1980 के मध्यावधि चुनावों में इंदिरा गांधी की भारी जीत और उनकी शानदार वापसी को दर्शाता है। कार्टून में इंदिरा गांधी एक हाथ में झाड़ू लेकर जनता पार्टी और लोकदल के सभी प्रमुख नेताओं (जो आपसी झगड़े में अपनी सरकार गिरा चुके थे) को समेटकर कूड़ेदान में डाल रही हैं, जो चुनाव में उनके पूर्ण सूपड़ा साफ होने (Sweeping the Polls) को प्रदर्शित करता है।
-            <div style="background-color: #f1f5f9; border-left: 10px solid #000000; padding: 20px; margin-top: 20px; font-size: 20pt; line-height: 1.6; font-weight: bold;">
-                <b>बोर्ड परीक्षा विशेष कार्टून आधारित प्रश्नोत्तर (CBSE Board Cartoon Q&amp;A):</b><br/>
-                • <b>प्रश्न: 1980 के मध्यावधि चुनावों में इंदिरा गांधी की कांग्रेस की वापसी के क्या मुख्य कारण थे?</b><br/>
-                • <b>उत्तर:</b> (1) **जनता पार्टी की विफलता:** जनता सरकार के आपसी कलह, गुटबाजी और अस्थिरता से जनता त्रस्त हो चुकी थी। (2) **स्थिरता की चाह:** इंदिरा गांधी ने **"इन्दिरा लाओ, देश बचाओ"** के नारे के साथ जनता को एक मजबूत और स्थिर सरकार देने का भरोसा दिलाया।<br/>
+            <div style="background-color: #f1f5f9; border-left: 10px solid #000000; padding: 20px; margin-top: 20px;  line-height: 1.6; font-weight: bold;">
+<b>बोर्ड परीक्षा विशेष कार्टून आधारित प्रश्नोत्तर (CBSE Board Cartoon Q&amp;A):</b><br>
+                • <b>प्रश्न: 1980 के मध्यावधि चुनावों में इंदिरा गांधी की कांग्रेस की वापसी के क्या मुख्य कारण थे?</b><br>
+                • <b>उत्तर:</b> (1) **जनता पार्टी की विफलता:** जनता सरकार के आपसी कलह, गुटबाजी और अस्थिरता से जनता त्रस्त हो चुकी थी। (2) **स्थिरता की चाह:** इंदिरा गांधी ने **"इन्दिरा लाओ, देश बचाओ"** के नारे के साथ जनता को एक मजबूत और स्थिर सरकार देने का भरोसा दिलाया।<br>
                 • <b>प्रश्न: कार्टून में इंदिरा गांधी द्वारा विपक्षी नेताओं को कूड़ेदान में डालते दिखाना किस मुहावरे का राजनीतिक अर्थ प्रकट करता है?</b><br/>
                 • <b>उत्तर:</b> यह 'Sweeping the Polls' (चुनावों में सूपड़ा साफ करना) मुहावरे को दर्शाता है, जिसका अर्थ है कि इंदिरा गांधी ने सभी विपक्षी दलों को बुरी तरह हराकर संसद में दो-तिहाई से अधिक बहुमत (353 सीटें) हासिल किया।
-            </div>
-        </div>
-    </div>
-    <!-- NCERT Cartoon: Morarji and Charan Singh (Fall of Janata Party) -->
-    <div class="illustration-box" style="border-color: #b45309 !important; margin-bottom: 35px;">
-        <img alt="Morarji and Charan Singh" src="images/ch13/morarji_charan.webp" style="width: 60%; max-width: 450px; display: block; margin: 0 auto; border: 4px solid #cbd5e1; border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.15);"/>
-        <div class="illustration-explanation" style="border-left-color: #b45309 !important;">
-            <b>NCERT पुस्तक का चित्र (जनता पार्टी के भीतर गृहयुद्ध और सरकार का पतन):</b><br/>
+            </br></br></br></div>
+</br></div>
+</div>
+<!-- NCERT Cartoon: Morarji and Charan Singh (Fall of Janata Party) -->
+<div class="illustration-box" style="border-color: #b45309 !important; margin-bottom: 35px;">
+<img alt="Morarji and Charan Singh" src="images/ch13/morarji_charan.webp" style="width: 60%; max-width: 450px; display: block; margin: 0 auto; border: 4px solid #cbd5e1; border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.15);"/>
+<div class="illustration-explanation" style="border-left-color: #b45309 !important;">
+<b>NCERT पुस्तक का चित्र (जनता पार्टी के भीतर गृहयुद्ध और सरकार का पतन):</b><br/>
             1977 में बनी जनता पार्टी की सरकार में कोई तालमेल नहीं था। प्रधानमंत्री पद के लिए मोरारजी देसाई, चौधरी चरण सिंह और जगजीवन राम के बीच जबरदस्त खींचतान थी। इस आपसी कलह के कारण सरकार केवल 18 महीने में गिर गई।
-            <div style="background-color: #f1f5f9; border-left: 10px solid #000000; padding: 20px; margin-top: 20px; font-size: 20pt; line-height: 1.6; font-weight: bold;">
-                <b>बोर्ड परीक्षा विशेष प्रश्नोत्तर (CBSE Board Q&amp;A):</b><br/>
+            <div style="background-color: #f1f5f9; border-left: 10px solid #000000; padding: 20px; margin-top: 20px;  line-height: 1.6; font-weight: bold;">
+<b>बोर्ड परीक्षा विशेष प्रश्नोत्तर (CBSE Board Q&amp;A):</b><br/>
                 • <b>प्रश्न: 1977 की जनता पार्टी सरकार के पतन के मुख्य कारण क्या थे?</b><br/>
                 • <b>उत्तर:</b> (1) **नेतृत्व का संघर्ष:** पार्टी के तीन प्रमुख नेताओं (मोरारजी देसाई, चरण सिंह, जगजीवन राम) के बीच प्रधानमंत्री बनने की व्यक्तिगत होड़। (2) **वैचारिक मतभेद:** जनता पार्टी विभिन्न परस्पर विरोधी विचारधाराओं (समाजवादी, दक्षिणपंथी, जनसंघ) का एक अस्थाई गठबंधन थी, जिसके पास कोई ठोस साझा कार्यक्रम नहीं था।
             </div>
-        </div>
-    </div>
-
-    <!-- NCERT Cartoon: Faction Fight - Close Ears -->
-    <div class="illustration-box" style="border-color: #b45309 !important; margin-bottom: 35px;">
-        <img alt="Janata Infighting close ears" src="images/ch13/janata_infighting_1.webp" style="width: 85%; max-width: 750px; display: block; margin: 0 auto; border: 4px solid #cbd5e1; border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.15);"/>
-        <div class="illustration-explanation" style="border-left-color: #b45309 !important;">
-            <b>NCERT पुस्तक का चित्र (जनता पार्टी के भीतर अंतर्द्वंद्व - I Can't Hear You!!):</b><br/>
+</div>
+</div>
+<!-- NCERT Cartoon: Faction Fight - Close Ears -->
+<div class="illustration-box" style="border-color: #b45309 !important; margin-bottom: 35px;">
+<img alt="Janata Infighting close ears" src="images/ch13/janata_infighting_1.webp" style="width: 85%; max-width: 750px; display: block; margin: 0 auto; border: 4px solid #cbd5e1; border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.15);"/>
+<div class="illustration-explanation" style="border-left-color: #b45309 !important;">
+<b>NCERT पुस्तक का चित्र (जनता पार्टी के भीतर अंतर्द्वंद्व - I Can't Hear You!!):</b><br/>
             यह कार्टून प्रधानमंत्री मोरारजी देसाई की लाचारी को दर्शाता है, जो अपने दोनों कानों को बंद किए हुए हैं। एक तरफ चौधरी चरण सिंह के समर्थकों का भारी 'किसान सम्मेलन' का शोर है, और दूसरी तरफ विपक्ष की 'कांति जांच' (Kanti Probe - मोरारजी देसाई के पुत्र कांति देसाई के खिलाफ भ्रष्टाचार की जांच की मांग) और विरोध प्रदर्शनों का भारी कोलाहल है। नीचे एक आम नागरिक चुनाव घोषणापत्र (Election Promises) हाथ में लिए खड़ा है, जिसकी आवाज़ सरकार तक नहीं पहुँच पा रही है।
-            <div style="background-color: #f1f5f9; border-left: 10px solid #000000; padding: 20px; margin-top: 20px; font-size: 20pt; line-height: 1.6; font-weight: bold;">
-                <b>बोर्ड परीक्षा विशेष कार्टून आधारित प्रश्नोत्तर (CBSE Board Cartoon Q&amp;A):</b><br/>
+            <div style="background-color: #f1f5f9; border-left: 10px solid #000000; padding: 20px; margin-top: 20px;  line-height: 1.6; font-weight: bold;">
+<b>बोर्ड परीक्षा विशेष कार्टून आधारित प्रश्नोत्तर (CBSE Board Cartoon Q&amp;A):</b><br/>
                 • <b>प्रश्न: जनता पार्टी सरकार के समय 'कांति जांच' (Kanti Probe) क्या विवाद था?</b><br/>
                 • <b>उत्तर:</b> यह प्रधानमंत्री मोरारजी देसाई के पुत्र कांति देसाई के खिलाफ भ्रष्टाचार के आरोपों की जांच के लिए विपक्ष द्वारा की गई मांग थी, जिसने जनता सरकार की छवि को काफी नुकसान पहुँचाया।
             </div>
-        </div>
-    </div>
-
-    <!-- NCERT Cartoon: Janata Government Toppled -->
-    <div class="illustration-box" style="border-color: #b45309 !important; margin-bottom: 35px;">
-        <img alt="Janata government toppled" src="images/ch13/janata_infighting_2.webp" style="width: 85%; max-width: 750px; display: block; margin: 0 auto; border: 4px solid #cbd5e1; border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.15);"/>
-        <div class="illustration-explanation" style="border-left-color: #b45309 !important;">
-            <b>NCERT पुस्तक का चित्र (जनता सरकार का पतन - I Toppled Janata Government!):</b><br/>
+</div>
+</div>
+<!-- NCERT Cartoon: Janata Government Toppled -->
+<div class="illustration-box" style="border-color: #b45309 !important; margin-bottom: 35px;">
+<img alt="Janata government toppled" src="images/ch13/janata_infighting_2.webp" style="width: 85%; max-width: 750px; display: block; margin: 0 auto; border: 4px solid #cbd5e1; border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.15);"/>
+<div class="illustration-explanation" style="border-left-color: #b45309 !important;">
+<b>NCERT पुस्तक का चित्र (जनता सरकार का पतन - I Toppled Janata Government!):</b><br/>
             इस कार्टून में इंदिरा गांधी हाथ में एक तख्ती लिए खड़ी हैं जिस पर लिखा है "मैंने जनता सरकार को गिराया!" (I Toppled Janata Government!)। उनके पीछे खड़े जनता पार्टी के नेता (जैसे मोरारजी देसाई, चरण सिंह, जगजीवन राम) विरोध करते हुए कह रहे हैं: "यह झूठ है! हर कोई जानता है कि हम सबने दो साल तक मेहनत की और इसे खुद गिराया!" यह जनता पार्टी के आंतरिक कलह पर एक करारा कटाक्ष है।
-            <div style="background-color: #f1f5f9; border-left: 10px solid #000000; padding: 20px; margin-top: 20px; font-size: 20pt; line-height: 1.6; font-weight: bold;">
-                <b>बोर्ड परीक्षा विशेष कार्टून आधारित प्रश्नोत्तर (CBSE Board Cartoon Q&amp;A):</b><br/>
+            <div style="background-color: #f1f5f9; border-left: 10px solid #000000; padding: 20px; margin-top: 20px;  line-height: 1.6; font-weight: bold;">
+<b>बोर्ड परीक्षा विशेष कार्टून आधारित प्रश्नोत्तर (CBSE Board Cartoon Q&amp;A):</b><br/>
                 • <b>प्रश्न: इंदिरा गांधी ने चौधरी चरण सिंह की सरकार को किस प्रकार समर्थन दिया और वापस लिया?</b><br/>
                 • <b>उत्तर:</b> मोरारजी देसाई के इस्तीफे के बाद, इंदिरा गांधी की कांग्रेस पार्टी ने चौधरी चरण सिंह को सरकार बनाने के लिए बाहर से समर्थन दिया, लेकिन केवल चार महीने बाद (संसद में बहुमत साबित करने से ठीक पहले) समर्थन वापस ले लिया, जिससे उनकी सरकार गिर गई।
             </div>
-        </div>
-    </div>
-
-    <!-- NCERT Cartoon: Umbrella Struggle -->
-    <div class="illustration-box" style="border-color: #b45309 !important; margin-bottom: 35px;">
-        <img alt="Janata umbrella struggle" src="images/ch13/janata_infighting_3.webp" style="width: 85%; max-width: 750px; display: block; margin: 0 auto; border: 4px solid #cbd5e1; border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.15);"/>
-        <div class="illustration-explanation" style="border-left-color: #b45309 !important;">
-            <b>NCERT पुस्तक का चित्र (एक छतरी के नीचे संघर्ष - Let me do it first!):</b><br/>
+</div>
+</div>
+<!-- NCERT Cartoon: Umbrella Struggle -->
+<div class="illustration-box" style="border-color: #b45309 !important; margin-bottom: 35px;">
+<img alt="Janata umbrella struggle" src="images/ch13/janata_infighting_3.webp" style="width: 85%; max-width: 750px; display: block; margin: 0 auto; border: 4px solid #cbd5e1; border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.15);"/>
+<div class="illustration-explanation" style="border-left-color: #b45309 !important;">
+<b>NCERT पुस्तक का चित्र (एक छतरी के नीचे संघर्ष - Let me do it first!):</b><br/>
             इस कार्टून में जनता पार्टी के सभी नेता बारिश से बचने के लिए 'जनता पार्टी' नाम की एक ही छतरी के नीचे आने की कोशिश कर रहे हैं, लेकिन हर नेता (मोरारजी, चरण सिंह, जगजीवन राम) कह रहा है: "चलो एक ही छतरी के नीचे चलते हैं, लेकिन पहले मुझे जाने दो!" यह उनकी व्यक्तिगत सत्ता-लोलुपता और एकजुटता के अभाव को दर्शाता है। दाईं ओर "DEMOCRACY" (लोकतंत्र) नामक मरीज को दिखाया गया है जिसे आपातकाल रूपी कड़वी सुई (वैक्सीनेशन) लगाई गई थी, जिसने लोकतंत्र की प्रतिरोधक क्षमता को बढ़ाया।
-            <div style="background-color: #f1f5f9; border-left: 10px solid #000000; padding: 20px; margin-top: 20px; font-size: 20pt; line-height: 1.6; font-weight: bold;">
-                <b>बोर्ड परीक्षा विशेष कार्टून आधारित प्रश्नोत्तर (CBSE Board Cartoon Q&amp;A):</b><br/>
+            <div style="background-color: #f1f5f9; border-left: 10px solid #000000; padding: 20px; margin-top: 20px;  line-height: 1.6; font-weight: bold;">
+<b>बोर्ड परीक्षा विशेष कार्टून आधारित प्रश्नोत्तर (CBSE Board Cartoon Q&amp;A):</b><br/>
                 • <b>प्रश्न: जनता पार्टी की 'छतरी' (Coalition) में शामिल प्रमुख घटक दल कौन-से थे?</b><br/>
                 • <b>उत्तर:</b> संगठन कांग्रेस (Congress O), जनसंघ, भारतीय लोकदल, सोशलिस्ट पार्टी और जगजीवन राम की 'कांग्रेस फॉर डेमोक्रेसी' (CFD) शामिल थे।
             </div>
-        </div>
-    </div>
-
-    <!-- Biography Card: Morarji Desai -->
-    <div class="bio-box" style="border: 6px dashed #2563eb !important; background-color: #eff6ff; border-radius: 12px; padding: 25px; margin-top: 35px; overflow: auto; margin-bottom: 35px;">
-        <img src="images/ch13/morarji_stamp.webp" style="width: 150px; height: auto; border: 4px solid #cbd5e1; border-radius: 6px; float: right; margin-left: 20px;"/>
-        <div style="display: flex; gap: 20px; align-items: center; justify-content: left; margin-bottom: 15px; border-bottom: 2px solid #bae6fd; padding-bottom: 10px;">
-            <h4 style="color: #1e3a8a; font-size: 24pt; font-weight: 900; margin: 0;">
+</div>
+</div>
+<!-- Biography Card: Morarji Desai -->
+<div class="bio-box" style="border: 6px dashed #2563eb !important; background-color: #eff6ff; border-radius: 12px; padding: 25px; margin-top: 35px; overflow: auto; margin-bottom: 35px;">
+<img src="images/ch13/morarji_stamp.webp" style="width: 150px; height: auto; border: 4px solid #cbd5e1; border-radius: 6px; float: right; margin-left: 20px;"/>
+<div style="display: flex; gap: 20px; align-items: center; justify-content: left; margin-bottom: 15px; border-bottom: 2px solid #bae6fd; padding-bottom: 10px;">
+<h4 style="font-weight: 900; margin: 0;">
                 मोरारजी देसाई (1896 - 1995)
             </h4>
-        </div>
-        <p style="font-size: 18pt; line-height: 1.6; color: #1e3a8a; margin: 0;">
+</div>
+<p style=" line-height: 1.6; color: #1e3a8a; margin: 0;">
             • <b>उपाधि:</b> भारत के पहले गैर-कांग्रेसी प्रधानमंत्री (1977-1979)।<br/>
             • <b>राजनैतिक जीवन:</b> स्वतंत्रता सेनानी, बॉम्बे प्रांत के मुख्यमंत्री, इंदिरा गांधी के मंत्रिमंडल में उप-प्रधानमंत्री और वित्त मंत्री। 1969 के कांग्रेस विभाजन के समय सिंडिकेट गुट के साथ रहे और बाद में जनता पार्टी में शामिल हुए।<br/>
             • <b>सिद्धांत:</b> गांधीवादी सिद्धांतों के कट्टर समर्थक, परमाणु अप्रसार संधि के विरोधी, अपनी प्रशासनिक दक्षता और सिद्धांतों के प्रति दृढ़ता के लिए जाने जाते थे।
         </p>
-    </div>
-
-    <!-- Biography Card: Chaudhary Charan Singh -->
-    <div class="bio-box" style="border: 6px dashed #16a34a !important; background-color: #f0fdf4; border-radius: 12px; padding: 25px; margin-top: 35px; overflow: auto; margin-bottom: 35px;">
-        <img src="images/ch13/charan_stamp.webp" style="width: 150px; height: auto; border: 4px solid #cbd5e1; border-radius: 6px; float: right; margin-left: 20px;"/>
-        <div style="display: flex; gap: 20px; align-items: center; justify-content: left; margin-bottom: 15px; border-bottom: 2px solid #bbf7d0; padding-bottom: 10px;">
-            <h4 style="color: #15803d; font-size: 24pt; font-weight: 900; margin: 0;">
+</div>
+<!-- Biography Card: Chaudhary Charan Singh -->
+<div class="bio-box" style="border: 6px dashed #16a34a !important; background-color: #f0fdf4; border-radius: 12px; padding: 25px; margin-top: 35px; overflow: auto; margin-bottom: 35px;">
+<img src="images/ch13/charan_stamp.webp" style="width: 150px; height: auto; border: 4px solid #cbd5e1; border-radius: 6px; float: right; margin-left: 20px;"/>
+<div style="display: flex; gap: 20px; align-items: center; justify-content: left; margin-bottom: 15px; border-bottom: 2px solid #bbf7d0; padding-bottom: 10px;">
+<h4 style="font-weight: 900; margin: 0;">
                 चौधरी चरण सिंह (1902 - 1987)
             </h4>
-        </div>
-        <p style="font-size: 18pt; line-height: 1.6; color: #15803d; margin: 0;">
+</div>
+<p style=" line-height: 1.6; color: #15803d; margin: 0;">
             • <b>उपाधि:</b> भारत के पांचवें प्रधानमंत्री (जुलाई 1979 - जनवरी 1980)।<br/>
             • <b>महत्वपूर्ण योगदान:</b> उत्तर प्रदेश के प्रमुख किसान नेता, जमींदारी उन्मूलन और भूमि सुधारों के प्रणेता।<br/>
             • <b>राजनैतिक जीवन:</b> उत्तर प्रदेश के मुख्यमंत्री रहे, कांग्रेस से अलग होकर भारतीय लोक दल का गठन किया। 1977 में जनता सरकार में गृह मंत्री और उप-प्रधानमंत्री रहे। बाद में कांग्रेस के बाहरी समर्थन से प्रधानमंत्री बने।
         </p>
-    </div>
-
-    <!-- Biography Card: Jagjivan Ram -->
-    <div class="bio-box" style="border: 6px dashed #db2777 !important; background-color: #fdf2f8; border-radius: 12px; padding: 25px; margin-top: 35px; overflow: auto; margin-bottom: 35px;">
-        <img src="images/ch13/jagjivan_stamp.webp" style="width: 150px; height: auto; border: 4px solid #cbd5e1; border-radius: 6px; float: right; margin-left: 20px;"/>
-        <div style="display: flex; gap: 20px; align-items: center; justify-content: left; margin-bottom: 15px; border-bottom: 2px solid #fbcfe8; padding-bottom: 10px;">
-            <h4 style="color: #be185d; font-size: 24pt; font-weight: 900; margin: 0;">
+</div>
+<!-- Biography Card: Jagjivan Ram -->
+<div class="bio-box" style="border: 6px dashed #db2777 !important; background-color: #fdf2f8; border-radius: 12px; padding: 25px; margin-top: 35px; overflow: auto; margin-bottom: 35px;">
+<img src="images/ch13/jagjivan_stamp.webp" style="width: 150px; height: auto; border: 4px solid #cbd5e1; border-radius: 6px; float: right; margin-left: 20px;"/>
+<div style="display: flex; gap: 20px; align-items: center; justify-content: left; margin-bottom: 15px; border-bottom: 2px solid #fbcfe8; padding-bottom: 10px;">
+<h4 style="font-weight: 900; margin: 0;">
                 जगजीवन राम (बाबूजी) (1908 - 1986)
             </h4>
-        </div>
-        <p style="font-size: 18pt; line-height: 1.6; color: #be185d; margin: 0;">
+</div>
+<p style=" line-height: 1.6; color: #be185d; margin: 0;">
             • <b>उपाधि:</b> बाबूजी, प्रख्यात दलित नेता।<br/>
             • <b>महत्वपूर्ण योगदान:</b> संविधान सभा के सदस्य, भारत के रक्षा मंत्री (1971 के भारत-पाक युद्ध के समय), और उप-प्रधानमंत्री (1977-1979)।<br/>
             • <b>राजनैतिक जीवन:</b> 1936 से 1986 तक लगातार संसद सदस्य रहने का विश्व रिकॉर्ड। आपातकाल के तुरंत बाद कांग्रेस छोड़कर 'कांग्रेस फॉर डेमोक्रेसी' का गठन किया।
         </p>
-    </div>
+</div>
 <div style="background-color: #fdf2f8; padding: 30px; border-radius: 12px; margin-top: 40px; border: 2px dashed #db2777;">
-<h3 style="color: #9d174d; font-size: 24pt;">🛑 मुख्य विचार:</h3>
+<h3 class="subtopic-header" style="">🛑 मुख्य विचार:</h3>
 <p>जनता पार्टी का दौर केवल 'विपक्ष' की एकता का उदाहरण था, न कि **'सफल प्रशासन'** का। लेकिन इस दौर ने यह साबित कर दिया कि भारत में अब कोई भी दल हमेशा के लिए सत्ता पर काबिज नहीं रह सकता।</p>
 </div>
 </div>
-
-
-<br><br><hr><br><br>
-<div style="font-family: 'Arial', verdana, sans-serif; font-size: 16pt; line-height: 1.8; color: #1a202c; padding: 20px;">
+<br/><br/><hr/><br/><br/>
+<div style="font-family: 'Arial', verdana, sans-serif;  line-height: 1.8; color: #1a202c; padding: 20px;">
 <!-- PART 8 SECTION: Q&amp;A -->
-<h1 style="color: #9f1239; font-size: 36pt; border-bottom: 4px solid #fb7185; padding-bottom: 20px; padding-top: 40px;">
+<h1 class="hero-title" style="border-bottom: 4px solid #fb7185; padding-bottom: 20px; padding-top: 40px;">
         अध्याय 13: मेगा प्रश्न बैंक (Board Exam Special)
     </h1>
 <div style="background-color: #f8fafc; padding: 30px; border-radius: 12px; margin-bottom: 40px;">
-<h2 style="color: #be123c; font-size: 28pt; margin-top: 0;">1. अध्याय का सार (Chapter Summary)</h2>
+<h2 class="topic-header" style="margin-top: 0;">1. अध्याय का सार (Chapter Summary)</h2>
 <p>इस अध्याय में हमने देखा कि भारत के लोकतंत्र ने कैसे 1975 के आपातकाल के कठिन दौर का सामना किया और फिर से एक मजबूत लोकतांत्रिक राष्ट्र के रूप में उभरा।</p>
 </div>
 <!-- MEGA QUESTION BANK -->
 <div style="background-color: #f8fafc; padding: 25px; border-left: 10px solid #cbd5e1; margin-bottom: 30px; border-radius: 8px; border: 1px solid #e2e8f0;">
-<h3 style="color: #475569; font-size: 24pt;">खंड A: अति-लघु उत्तरीय प्रश्न (1 अंक)</h3>
-<ul style="font-size: 18pt;">
-<li><b>Q1:</b> 1975 में आपातकाल की घोषणा किस अनुच्छेद के तहत की गई थी? <br/> <b>Ans:</b> अनुच्छेद 352।</li>
-<li><b>Q2:</b> 'सम्पूर्ण क्रांति' का आह्वान किसने किया था? <br/> <b>Ans:</b> जयप्रकाश नारायण (जेपी)।</li>
-<li><b>Q3:</b> भारत के पहले 'गैर-कांग्रेसी' प्रधानमंत्री कौन थे? <br/> <b>Ans:</b> मोरारजी देसाई।</li>
-<li><b>Q4:</b> आपातकाल की जाँच के लिए कौन-सा आयोग बनाया गया था? <br/> <b>Ans:</b> शाह आयोग।</li>
+<h3 class="box-header" style="">खंड A: अति-लघु उत्तरीय प्रश्न (1 अंक)</h3>
+<ul style="">
+<li><b>Q1:</b> 1975 में आपातकाल की घोषणा किस अनुच्छेद के तहत की गई थी? <br> <b>Ans:</b> अनुच्छेद 352।</br></li>
+<li><b>Q2:</b> 'सम्पूर्ण क्रांति' का आह्वान किसने किया था? <br> <b>Ans:</b> जयप्रकाश नारायण (जेपी)।</br></li>
+<li><b>Q3:</b> भारत के पहले 'गैर-कांग्रेसी' प्रधानमंत्री कौन थे? <br> <b>Ans:</b> मोरारजी देसाई।</br></li>
+<li><b>Q4:</b> आपातकाल की जाँच के लिए कौन-सा आयोग बनाया गया था? <br> <b>Ans:</b> शाह आयोग।</br></li>
 </ul>
 </div>
 <div style="background-color: #fdf4ff; padding: 25px; border-left: 10px solid #f0abfc; margin-bottom: 30px; border-radius: 8px; border: 1px solid #f5d0fe;">
-<h3 style="color: #a21caf; font-size: 24pt;">खंड B: लघु उत्तरीय प्रश्न (4 अंक)</h3>
-<ul style="font-size: 18pt; line-height: 2.2;">
+<h3 class="box-header" style="">खंड B: लघु उत्तरीय प्रश्न (4 अंक)</h3>
+<ul style=" line-height: 2.2;">
 <li><b>Q1: आपातकाल के दौरान प्रेस की क्या स्थिति थी?</b> <br/> <b>Ans:</b> प्रेस पर 'सेंसरशिप' लगा दी गई थी, बिना सरकारी अनुमति के कुछ भी नहीं छापा जा सकता था और कई अखबारों ने विरोध स्वरूप संपादकीय की जगह खाली छोड़ दी थी।</li>
 <li><b>Q2: 1977 के चुनावों में जनता पार्टी की जीत के मुख्य कारण क्या थे?</b> <br/> <b>Ans:</b> आपातकाल की ज्यादतियों के प्रति आक्रोश, जेपी का करिश्माई नेतृत्व और विपक्षी दलों की अभूतपूर्व एकता।</li>
 </ul>
 </div>
 <!-- 6 MARKER V.V. IMP -->
 <div style="background-color: #fefce8; padding: 25px; border-left: 10px solid #fde047; margin-bottom: 30px; border-radius: 8px; border: 2px solid #fef08a;">
-<h3 style="color: #a16207; font-size: 24pt;">खंड C: दीर्घ उत्तरीय प्रश्न (6 अंक) [V.V. IMP]</h3>
-<p style="font-size: 18pt;"><b>Q: आपातकाल भारत के लोकतंत्र के लिए क्या सबक (Lessons) छोड़ गया? चर्चा करें।</b></p>
-<p style="font-size: 18pt; line-height: 2.2;"><b>Ans:</b> <br/>
+<h3 class="box-header" style="">खंड C: दीर्घ उत्तरीय प्रश्न (6 अंक) [V.V. IMP]</h3>
+<p style=""><b>Q: आपातकाल भारत के लोकतंत्र के लिए क्या सबक (Lessons) छोड़ गया? चर्चा करें।</b></p>
+<p style=" line-height: 2.2;"><b>Ans:</b> <br/>
             - पहला: भारत में लोकतंत्र को खत्म करना लगभग असंभव है। <br/>
             - दूसरा: 'आंतरिक अशांति' के नियम को खत्म करके अब केवल 'सशस्त्र विद्रोह' की स्थिति में ही आपातकाल लग सकता है। <br/>
             - तीसरा: जनता के मौलिक अधिकारों की रक्षा के लिए न्यायपालिका और नागरिक समाज (Civil Society) की मजबूती जरूरी है। <br/>
@@ -547,8 +606,8 @@
 </div>
 <!-- CONCLUSION GURU MANTRA -->
 <div style="background-color: #dcfce7; padding: 30px; border-radius: 12px; margin-top: 50px; border: 4px solid #4ade80;">
-<h2 style="color: #14532d; font-size: 30pt; text-align: center;">अध्याय 13 का 'गुरुमंत्र' (Master Notes Summary)</h2>
-<ul style="font-size: 18pt; line-height: 2.2; font-weight: bold; color: #166534;">
+<h2 class="topic-header" style="text-align: center;">अध्याय 13 का 'गुरुमंत्र' (Master Notes Summary)</h2>
+<ul style=" line-height: 2.2; font-weight: bold; color: #166534;">
 <li>1. आपातकाल भारतीय लोकतंत्र का एक भयंकर परीक्षण (Dark Test) था।</li>
 <li>2. जेपी के आंदोलन ने सत्ता के खिलाफ जनता की आवाज़ को बुलंद किया।</li>
 <li>3. 25 जून 1975 की रात ने अभिव्यक्ति की आजादी का गला घोंटा।</li>
@@ -559,13 +618,9 @@
 </ul>
 </div>
 </div>
-
-
-<br><br><hr><br><br>
-
-    </div>
-
-    <script>
+<br/><br/><hr/><br/><br/>
+</div>
+<script>
     async function copyToGoogleDoc() {
         const btn = document.getElementById('mainCopyBtn');
         const status = document.getElementById('status');
@@ -590,6 +645,5 @@
         }
     }
     </script>
-
 </body>
 </html>
