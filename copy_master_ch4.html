@@ -1,9 +1,99 @@
 <!DOCTYPE html>
+
 <html lang="hi">
 <head>
-    <meta charset="UTF-8">
-    <title>Chapter 4 COPY MASTER - Premium Notes</title>
-    <style>
+<meta charset="utf-8"/>
+<title>Chapter 4 COPY MASTER - Premium Notes</title>
+<style>
+        p, li, h1, h2, h3, h4, b, strong, td, th {
+            font-weight: 900 !important;
+            -webkit-text-stroke: 1.1px #000000;
+            text-shadow: 0 0 1px #000;
+        }
+        body, p, li, td, th, div, span {
+            font-size: 28pt !important;
+            line-height: 1.8 !important;
+        }
+        .ch4-content {
+            font-size: 28pt !important;
+            line-height: 1.8 !important;
+            padding: 10px !important;
+        }
+        /* Projector Banner Styles for Headings */
+        .hero-title, h1.section-header {
+            text-align: center !important;
+            color: #ffffff !important;
+            background-color: #064e3b !important; /* Dark Green Background */
+            border: 5px solid #10b981 !important;
+            border-radius: 20px !important;
+            padding: 30px !important;
+            margin-bottom: 50px !important;
+            font-size: 60pt !important;
+            font-weight: 900 !important;
+            box-shadow: 0 8px 25px rgba(6, 78, 59, 0.4) !important;
+        }
+        .part-header {
+            color: #7f1d1d !important;
+            background-color: #fee2e2 !important;
+            border-left: 18px solid #b91c1c !important;
+            padding: 22px 28px !important;
+            border-radius: 14px !important;
+            font-size: 46pt !important;
+            font-weight: 900 !important;
+            margin-top: 40px !important;
+            margin-bottom: 35px !important;
+            box-shadow: 0 6px 15px rgba(0,0,0,0.08) !important;
+        }
+        .topic-header, h2.sub-header {
+            color: #1e3a8a !important;
+            background-color: #eff6ff !important;
+            border-left: 16px solid #2563eb !important;
+            padding: 20px 26px !important;
+            border-radius: 12px !important;
+            font-size: 38pt !important;
+            font-weight: 900 !important;
+            margin-top: 45px !important;
+            margin-bottom: 30px !important;
+        }
+        .subtopic-header {
+            color: #4c1d95 !important;
+            background-color: #f3e8ff !important;
+            border-left: 14px solid #7c3aed !important;
+            padding: 18px 24px !important;
+            border-radius: 10px !important;
+            font-size: 32pt !important;
+            font-weight: 900 !important;
+            margin-top: 40px !important;
+            margin-bottom: 25px !important;
+        }
+        .box-header {
+            color: #166534 !important;
+            background-color: #f0fdf4 !important;
+            border-left: 12px solid #16a34a !important;
+            padding: 16px 20px !important;
+            border-radius: 10px !important;
+            font-size: 30pt !important;
+            font-weight: 900 !important;
+        }
+        /* Highlights */
+        b, strong {
+            color: #b91c1c !important; /* Dark Red */
+            font-weight: 900 !important;
+        }
+        .blue-highlight, b.blue-text, strong.blue-text {
+            color: #1e3a8a !important;
+        }
+        .keyword-box, .un-card, .highlight-box {
+            font-size: 28pt !important;
+            line-height: 1.8 !important;
+            padding: 25px !important;
+            margin: 30px 0 !important;
+        }
+        .leader-bio-text { flex: 1; font-size: 28pt !important; }
+        .illustration-box { border: 4px solid #cbd5e1 !important; border-radius: 12px; padding: 20px; background-color: #ffffff; margin-top: 25px; }
+        .illustration-explanation { border-left: 6px solid #cbd5e1 !important; padding-left: 15px; font-size: 28pt !important; line-height: 1.6 !important; text-align: left; margin-top: 15px; }
+
+
         body { font-family: 'Nirmala UI', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f1f5f9; margin: 0; padding: 20px; text-align: center; }
         .header { background: #1e293b; color: white; padding: 20px; border-radius: 10px; margin-bottom: 30px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
         .copy-btn { background-color: #2563eb; color: white; padding: 20px 40px; font-size: 24pt; border: none; border-radius: 50px; cursor: pointer; font-weight: 900; transition: all 0.3s; box-shadow: 0 10px 20px rgba(37, 99, 235, 0.4); }
@@ -27,22 +117,108 @@
     </style>
 </head>
 <body>
-
-    <div class="header">
-        <h1>🚀 Chapter 4 (Full-Proof Copy Master)</h1>
-        <p>100% Google Docs Compatible with Images (Localhost-Sync)</p>
-    </div>
-
-    <button id="mainCopyBtn" class="copy-btn" onclick="copyToGoogleDoc()">📋 COPY EVERYTHING FOR GOOGLE DOCS</button>
-    <p id="status">✅ Copied Successfully! Now go to your Google Doc and Press Ctrl+V</p>
-
-    <div class="preview" id="contentToCopy">
-        <!DOCTYPE html>
+<div class="header">
+<h1>🚀 Chapter 4 (Full-Proof Copy Master)</h1>
+<p>100% Google Docs Compatible with Images (Localhost-Sync)</p>
+</div>
+<button class="copy-btn" id="mainCopyBtn" onclick="copyToGoogleDoc()">📋 COPY EVERYTHING FOR GOOGLE DOCS</button>
+<p id="status">✅ Copied Successfully! Now go to your Google Doc and Press Ctrl+V</p>
+<div class="preview" id="contentToCopy">
+<!DOCTYPE html>
 
 <html lang="hi">
 <head>
-<meta charset="utf-8"/>
+<meta charset="utf-8">
 <style>
+        p, li, h1, h2, h3, h4, b, strong, td, th {
+            font-weight: 900 !important;
+            -webkit-text-stroke: 1.1px #000000;
+            text-shadow: 0 0 1px #000;
+        }
+        body, p, li, td, th, div, span {
+            font-size: 28pt !important;
+            line-height: 1.8 !important;
+        }
+        .ch4-content {
+            font-size: 28pt !important;
+            line-height: 1.8 !important;
+            padding: 10px !important;
+        }
+        /* Projector Banner Styles for Headings */
+        .hero-title, h1.section-header {
+            text-align: center !important;
+            color: #ffffff !important;
+            background-color: #064e3b !important; /* Dark Green Background */
+            border: 5px solid #10b981 !important;
+            border-radius: 20px !important;
+            padding: 30px !important;
+            margin-bottom: 50px !important;
+            font-size: 60pt !important;
+            font-weight: 900 !important;
+            box-shadow: 0 8px 25px rgba(6, 78, 59, 0.4) !important;
+        }
+        .part-header {
+            color: #7f1d1d !important;
+            background-color: #fee2e2 !important;
+            border-left: 18px solid #b91c1c !important;
+            padding: 22px 28px !important;
+            border-radius: 14px !important;
+            font-size: 46pt !important;
+            font-weight: 900 !important;
+            margin-top: 40px !important;
+            margin-bottom: 35px !important;
+            box-shadow: 0 6px 15px rgba(0,0,0,0.08) !important;
+        }
+        .topic-header, h2.sub-header {
+            color: #1e3a8a !important;
+            background-color: #eff6ff !important;
+            border-left: 16px solid #2563eb !important;
+            padding: 20px 26px !important;
+            border-radius: 12px !important;
+            font-size: 38pt !important;
+            font-weight: 900 !important;
+            margin-top: 45px !important;
+            margin-bottom: 30px !important;
+        }
+        .subtopic-header {
+            color: #4c1d95 !important;
+            background-color: #f3e8ff !important;
+            border-left: 14px solid #7c3aed !important;
+            padding: 18px 24px !important;
+            border-radius: 10px !important;
+            font-size: 32pt !important;
+            font-weight: 900 !important;
+            margin-top: 40px !important;
+            margin-bottom: 25px !important;
+        }
+        .box-header {
+            color: #166534 !important;
+            background-color: #f0fdf4 !important;
+            border-left: 12px solid #16a34a !important;
+            padding: 16px 20px !important;
+            border-radius: 10px !important;
+            font-size: 30pt !important;
+            font-weight: 900 !important;
+        }
+        /* Highlights */
+        b, strong {
+            color: #b91c1c !important; /* Dark Red */
+            font-weight: 900 !important;
+        }
+        .blue-highlight, b.blue-text, strong.blue-text {
+            color: #1e3a8a !important;
+        }
+        .keyword-box, .un-card, .highlight-box {
+            font-size: 28pt !important;
+            line-height: 1.8 !important;
+            padding: 25px !important;
+            margin: 30px 0 !important;
+        }
+        .leader-bio-text { flex: 1; font-size: 28pt !important; }
+        .illustration-box { border: 4px solid #cbd5e1 !important; border-radius: 12px; padding: 20px; background-color: #ffffff; margin-top: 25px; }
+        .illustration-explanation { border-left: 6px solid #cbd5e1 !important; padding-left: 15px; font-size: 28pt !important; line-height: 1.6 !important; text-align: left; margin-top: 15px; }
+
+
         .ch4-content { font-family: 'Nirmala UI', 'Arial', sans-serif; line-height: 2.2; font-size: 24pt; color: #1a202c; padding: 40px; }
         .section-header { color: #1e3a8a; border-bottom: 5px solid #3b82f6; padding-bottom: 15px; font-size: 40pt; margin-bottom: 30px; }
         .sub-header { color: #2563eb; font-size: 38pt; margin-top: 50px; }
@@ -58,33 +234,33 @@
     
         b, strong { color: #b91c1c !important; }
 </style>
-</head>
+</meta></head>
 <body>
 <div class="ch4-content">
-<h1 class="section-header">अध्याय 4: अंतरराष्ट्रीय संगठन (अंतरराष्ट्रीय Organisations) - भाग 1</h1>
+<h1 class="section-header hero-title">अध्याय 4: अंतरराष्ट्रीय संगठन (अंतरराष्ट्रीय Organisations) - भाग 1</h1>
 <p>जब हम एक ऐसी दुनिया में रहते हैं जहाँ देशों के बीच अक्सर युद्ध, सीमा विवाद, और वैचारिक संघर्ष की स्थिति बनी रहती है, तो हमें एक ऐसी निष्पक्ष संस्था की ज़रूरत महसूस होती है जो इन विवादों को शांति से सुलझा सके। **संयुक्त राष्ट्र संघ (UN)** इस दिशा में दुनिया का सबसे बड़ा और महत्वपूर्ण संगठन है।</p>
 <!-- UN Logo Bio Box (REAL CROP) -->
 <div class="leader-bio-box">
 <img alt="UN Logo" src="images/ch4/un_logo_official.webp"/>
 <div class="leader-bio-text">
-<h3><b>संयुक्त राष्ट्र का आधिकारिक प्रतीक चिन्ह (Official Emblem of the UN)</b></h3>
+<h3 class="subtopic-header"><b>संयुक्त राष्ट्र का आधिकारिक प्रतीक चिन्ह (Official Emblem of the UN)</b></h3>
 <p>संयुक्त राष्ट्र संघ के इस प्रतीक चिन्ह में दुनिया का मानचित्र बना हुआ है, जिसके दोनों तरफ जैतून (Olive) की पत्तियां हैं। जैतून की पत्तियां पूरी दुनिया में <b>वैश्विक शांति (World Peace)</b> का प्रतीक मानी जाती हैं।</p>
 </div>
 </div>
-<h2 class="sub-header">1. हमें अंतरराष्ट्रीय संगठनों की आवश्यकता क्यों है?</h2>
+<h2 class="sub-header topic-header">1. हमें अंतरराष्ट्रीय संगठनों की आवश्यकता क्यों है?</h2>
 <p>कई बार आलोचक पूछते हैं कि क्या ये संगठन वाकई काम करते हैं? इसका जवाब प्रसिद्ध दूसरे यूएन महासचिव डैग हैमरशोल्ड (Dag Hammarskjöld) के शब्दों में है:</p>
 <div class="keyword-box">
         "संयुक्त राष्ट्र का गठन मानवता को स्वर्ग पहुँचाने के लिए नहीं, बल्कि उसे नरक से बचाने के लिए किया गया था।"<br/>
-<span style="font-size: 16pt; color: #475569; display: block; margin-top: 10px;">— डैग हैमरशोल्ड (यूएन के दूसरे महासचिव)</span>
+<span style=" color: #475569; display: block; margin-top: 10px;">— डैग हैमरशोल्ड (यूएन के दूसरे महासचिव)</span>
 </div>
 <div class="keyword-box" style="border-left-color: #0284c7; background: #f0f9ff;">
         "हथियारों की लड़ाई से तो अच्छा है कि बातों की ही लड़ाई लड़ ली जाए... जैसा कि विंस्टन चर्चिल ने कहा था, 'हथियार चलाने (युद्ध) से तो अच्छा है कि जबान चलाई जाए (बातचीत की जाए) (Jaw-jaw is better than war-war)।'"<br/>
-<span style="font-size: 16pt; color: #475569; display: block; margin-top: 10px;">— शशि थरूर (यूएन के पूर्व अवर-महासचिव द्वारा उद्धृत)</span>
+<span style=" color: #475569; display: block; margin-top: 10px;">— शशि थरूर (यूएन के पूर्व अवर-महासचिव द्वारा उद्धृत)</span>
 </div>
 <!-- Lebanon Cartoon Box (REAL CROP - LEBANON WAR 2006 CARTOONS) -->
 <div class="illustration-box" style="border-color: #1e3a8a !important; margin-top: 35px; margin-bottom: 35px; border: 4px solid #1e3a8a; border-radius: 10px; text-align: center;">
 <img alt="Lebanon War 2006 Cartoons" class="illustration-img" src="images/ch4/lebanon_war_2006.webp" style="width: 100%; max-width: 850px; height: auto; max-height: 450px; object-fit: contain; display: block; margin: 20px auto; border: 4px solid #cbd5e1; border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.15);"/>
-<div class="illustration-explanation" style="border-left: 15px solid #1e3a8a; background: #eff6ff; padding: 25px; font-size: 18pt; text-align: justify; line-height: 1.8;">
+<div class="illustration-explanation" style="border-left: 15px solid #1e3a8a; background: #eff6ff; padding: 25px;  text-align: justify; line-height: 1.8;">
 <b>एनसीईआरटी कार्टून: लेबनान संकट (2006) और यूएन की भूमिका (Lebanon Crisis 2006 और the Role of UN):</b><br/>
 <b>कार्टून का विवरण:</b> बाएं कार्टून (हैरी हैरिसन) में मलबे के बीच संयुक्त राष्ट्र के टूटे हुए प्रतीकों को दिखाया गया है। दाएं कार्टून (पीटर पिसमेस्त्रोविच) में तत्कालीन यूएन महासचिव को एक पिंजरेनुमा बाड़े (जिस पर 'UN Resolution' लिखा है) के भीतर खड़े होकर केवल हवाई हमले/मिसाइलों को देखते हुए लाचार दिखाया गया है।<br/>
 <b>एनसीईआरटी पाठ्यपुस्तक संदर्भ:</b> जून 2006 के दौरान इजराइल ने लेबनान पर हमला किया। उसका कहना था कि उग्रवादी गुट हिज़बुल्लाह पर नियंत्रण करने के लिए हमला ज़रूरी है। भारी संख्या में आम नागरिक मारे गए। कई सार्वजनिक इमारत और रिहायशी इलाके इजराइली बमबारी की चपेट में आए। संयुक्त राष्ट्र संघ ने इस मामले पर एक प्रस्ताव बहुत बाद यानी अगस्त में पास किया और इजराइली सेना इस इलाके से अक्टूबर में ही वापस हो सकी। ये दोनों कार्टून इस संकट में संयुक्त राष्ट्रसंघ और उसके महासचिव की भूमिका पर टिप्पणी करते हैं।
@@ -96,7 +272,7 @@
 <li><b>वैश्विक सहयोग बढ़ाना (Global Cooperation):</b> कुछ वैश्विक समस्याएं ऐसी हैं जिन्हें कोई एक देश अकेले नहीं कर सकता (जैसे जलवायु परिवर्तन, वैश्विक तापमान बढ़ना, आतंकवाद, गरीबी और कोरोना जैसी महामारियां)। इसके लिए साझा मंच आवश्यक है।</li>
 <li><b>साझा नियम और दिशा-निर्देश:</b> अंतरराष्ट्रीय व्यापार, समुद्री सीमा के नियम, नागरिक उड्डयन और स्वास्थ्य मानकों को तय करने के लिए सार्वभौमिक नियम बनाना।</li>
 </ul>
-<h2 class="sub-header">2. संयुक्त राष्ट्र संघ का विकास (Evolution of the UN)</h2>
+<h2 class="sub-header topic-header">2. संयुक्त राष्ट्र संघ का विकास (Evolution of the UN)</h2>
 <p>प्रथम विश्वयुद्ध (1914-1918) की भयानक तबाही के बाद दुनिया के नेताओं ने शांति के लिए **'लीग ऑफ नेशंस' (League of Nations)** की स्थापना की थी। लेकिन यह संगठन अत्यधिक कमजोर था और 1939 में शुरू हुए द्वितीय विश्वयुद्ध को रोकने में पूरी तरह विफल रहा।</p>
 <!-- UN Headquarters -->
 <div class="illustration-box" style="border-color: #1e3a8a !important; margin-top: 35px; margin-bottom: 35px; border: 4px solid #1e3a8a; border-radius: 10px;">
@@ -106,9 +282,9 @@
             संयुक्त राष्ट्र संघ की मुख्य प्रशासनिक इमारत जहाँ सुरक्षा परिषद और महासभा के सत्र आयोजित किए जाते हैं।
         </div>
 </div>
-<h2 class="sub-header">संयुक्त राष्ट्र संघ की स्थापना की विकास यात्रा (Steps to the Founding of the UN)</h2>
+<h2 class="sub-header topic-header">संयुक्त राष्ट्र संघ की स्थापना की विकास यात्रा (Steps to the Founding of the UN)</h2>
 <p>संयुक्त राष्ट्र संघ की स्थापना रातोंरात नहीं हुई, बल्कि इसके लिए लंबे समय तक विभिन्न देशों के बीच बैठकों और घोषणाओं का दौर चला। इसकी प्रमुख सीढ़ियां निम्नलिखित हैं:</p>
-<table style="width: 100%; border-collapse: collapse; margin: 30px 0; font-size: 18pt; border: 3px solid #cbd5e1;">
+<table style="width: 100%; border-collapse: collapse; margin: 30px 0;  border: 3px solid #cbd5e1;">
 <thead>
 <tr style="background-color: #1e3a8a; color: white;">
 <th style="padding: 15px; border: 1px solid #cbd5e1; text-align: left; width: 250px;">समय</th>
@@ -149,7 +325,7 @@
 <div class="un-card">
 <b>स्थापना (Birth of the UN):</b> द्वितीय विश्वयुद्ध के तुरंत बाद 24 अक्टूबर 1945 को संयुक्त राष्ट्र संघ की स्थापना की गई। आरंभ में इसके चार्टर पर 51 देशों ने हस्ताक्षर किए थे। **भारत 30 अक्टूबर 1945** को इसके संस्थापक सदस्य के रूप में शामिल हुआ। वर्तमान में इसके सदस्यों की संख्या 193 है।
     </div>
-<h2 class="sub-header">3. यूएन के मुख्य उद्देश्य</h2>
+<h2 class="sub-header topic-header">3. यूएन के मुख्य उद्देश्य</h2>
 <ol style="margin-left: 40px;">
 <li>विश्व में अंतरराष्ट्रीय शांति, सुरक्षा और स्थिरता बनाए रखना।</li>
 <li>विभिन्न राष्ट्रों के बीच समानता और मित्रवत संबंधों को बढ़ावा देना।</li>
@@ -159,13 +335,102 @@
 </div>
 </body>
 </html>
-<br><br><hr><br><br>
+<br/><br/><hr/><br/><br/>
 <!DOCTYPE html>
 
 <html lang="hi">
 <head>
 <meta charset="utf-8"/>
 <style>
+        p, li, h1, h2, h3, h4, b, strong, td, th {
+            font-weight: 900 !important;
+            -webkit-text-stroke: 1.1px #000000;
+            text-shadow: 0 0 1px #000;
+        }
+        body, p, li, td, th, div, span {
+            font-size: 28pt !important;
+            line-height: 1.8 !important;
+        }
+        .ch4-content {
+            font-size: 28pt !important;
+            line-height: 1.8 !important;
+            padding: 10px !important;
+        }
+        /* Projector Banner Styles for Headings */
+        .hero-title, h1.section-header {
+            text-align: center !important;
+            color: #ffffff !important;
+            background-color: #064e3b !important; /* Dark Green Background */
+            border: 5px solid #10b981 !important;
+            border-radius: 20px !important;
+            padding: 30px !important;
+            margin-bottom: 50px !important;
+            font-size: 60pt !important;
+            font-weight: 900 !important;
+            box-shadow: 0 8px 25px rgba(6, 78, 59, 0.4) !important;
+        }
+        .part-header {
+            color: #7f1d1d !important;
+            background-color: #fee2e2 !important;
+            border-left: 18px solid #b91c1c !important;
+            padding: 22px 28px !important;
+            border-radius: 14px !important;
+            font-size: 46pt !important;
+            font-weight: 900 !important;
+            margin-top: 40px !important;
+            margin-bottom: 35px !important;
+            box-shadow: 0 6px 15px rgba(0,0,0,0.08) !important;
+        }
+        .topic-header, h2.sub-header {
+            color: #1e3a8a !important;
+            background-color: #eff6ff !important;
+            border-left: 16px solid #2563eb !important;
+            padding: 20px 26px !important;
+            border-radius: 12px !important;
+            font-size: 38pt !important;
+            font-weight: 900 !important;
+            margin-top: 45px !important;
+            margin-bottom: 30px !important;
+        }
+        .subtopic-header {
+            color: #4c1d95 !important;
+            background-color: #f3e8ff !important;
+            border-left: 14px solid #7c3aed !important;
+            padding: 18px 24px !important;
+            border-radius: 10px !important;
+            font-size: 32pt !important;
+            font-weight: 900 !important;
+            margin-top: 40px !important;
+            margin-bottom: 25px !important;
+        }
+        .box-header {
+            color: #166534 !important;
+            background-color: #f0fdf4 !important;
+            border-left: 12px solid #16a34a !important;
+            padding: 16px 20px !important;
+            border-radius: 10px !important;
+            font-size: 30pt !important;
+            font-weight: 900 !important;
+        }
+        /* Highlights */
+        b, strong {
+            color: #b91c1c !important; /* Dark Red */
+            font-weight: 900 !important;
+        }
+        .blue-highlight, b.blue-text, strong.blue-text {
+            color: #1e3a8a !important;
+        }
+        .keyword-box, .un-card, .highlight-box {
+            font-size: 28pt !important;
+            line-height: 1.8 !important;
+            padding: 25px !important;
+            margin: 30px 0 !important;
+        }
+        .leader-bio-text { flex: 1; font-size: 28pt !important; }
+        .illustration-box { border: 4px solid #cbd5e1 !important; border-radius: 12px; padding: 20px; background-color: #ffffff; margin-top: 25px; }
+        .illustration-explanation { border-left: 6px solid #cbd5e1 !important; padding-left: 15px; font-size: 28pt !important; line-height: 1.6 !important; text-align: left; margin-top: 15px; }
+
+
         .ch4-content { font-family: 'Nirmala UI', 'Arial', sans-serif; line-height: 2.2; font-size: 24pt; color: #1a202c; padding: 40px; }
         .section-header { color: #1e40af; border-bottom: 5px solid #60a5fa; padding-bottom: 15px; font-size: 40pt; margin-bottom: 30px; }
         .sub-header { color: #1d4ed8; font-size: 38pt; margin-top: 50px; }
@@ -184,16 +449,16 @@
 </head>
 <body>
 <div class="ch4-content">
-<h1 class="section-header">यूएन (UN) के प्रमुख अंग और उनके कार्य - भाग 2</h1>
+<h1 class="section-header hero-title">यूएन (UN) के प्रमुख अंग और उनके कार्य - भाग 2</h1>
 <p>संयुक्त राष्ट्र संघ एक विशाल प्रशासनिक मशीनरी है जो छह मुख्य अंगों के माध्यम से वैश्विक गतिविधियों को नियंत्रित करती है।</p>
-<h2 class="sub-header">1. महासभा (General Assembly)</h2>
+<h2 class="sub-header topic-header">1. महासभा (General Assembly)</h2>
 <p>महासभा को अक्सर 'विश्व की संसद' कहा जाता है। इसमें हर सदस्य देश को एक समान वोट देने का अधिकार है (चाहे वह छोटा द्वीप देश हो या कोई बड़ी महाशक्ति)।</p>
 <ul style="list-style-type: disc; margin-left: 40px;">
 <li><b>सदस्यता:</b> वर्तमान में इसमें 193 सदस्य देश शामिल हैं।</li>
 <li><b>मतदान नियम:</b> प्रत्येक सदस्य देश का 1 मत (One Vote) होता है। महत्वपूर्ण फैसलों (जैसे शांति व सुरक्षा, नए देशों के प्रवेश, बजट) के लिए <b>दो-तिहाई (2/3) बहुमत</b> की आवश्यकता होती है, जबकि सामान्य मामलों में निर्णय <b>साधारण बहुमत (Simple Majority)</b> से लिया जाता है।</li>
 <li><b>कार्य:</b> वैश्विक नीतियों पर चर्चा, नए सदस्यों का प्रवेश, सुरक्षा परिषद के अस्थायी सदस्यों का चुनाव, और संयुक्त राष्ट्र के बजट को मंजूरी देना।</li>
 </ul>
-<h2 class="sub-header">2. सुरक्षा परिषद (Security Council)</h2>
+<h2 class="sub-header topic-header">2. सुरक्षा परिषद (Security Council)</h2>
 <p>यह यूएन का सबसे शक्तिशाली और निर्णय लेने वाला अंग है। इसे पूरी दुनिया का **'ग्लोबल पुलिसमैन' (Global Policeman)** कहा जाता है क्योंकि इसके फैसले सदस्य देशों पर कानूनी रूप से बाध्यकारी होते हैं।</p>
 <div class="organs-card" style="border-left: 10px solid #ef4444;">
 <b>संरचना और नियम:</b> इसमें कुल 15 सदस्य होते हैं।
@@ -205,19 +470,19 @@
 <div class="keyword-box">
 <b>वीटो पावर (Veto Power):</b> यदि सुरक्षा परिषद के 15 सदस्यों में से 14 सदस्य किसी प्रस्ताव के पक्ष में हों, लेकिन केवल एक स्थायी सदस्य असहमत होकर वीटो कर दे, तो वह प्रस्ताव खारिज हो जाता है।
     </div>
-<h2 class="sub-header">3. सचिवालय (Secretariat) और महासचिव</h2>
+<h2 class="sub-header topic-header">3. सचिवालय (Secretariat) और महासचिव</h2>
 <p>सचिवालय संयुक्त राष्ट्र का प्रशासनिक कार्यालय है। इसके कार्यों का संचालन महासचिव (Secretary-General) की देखरेख में होता है।</p>
 <!-- Antonio Guterres Bio Box (REAL CROP) -->
 <div class="leader-bio-box">
 <img alt="Antonio Guterres" src="images/ch4/page_7_img_9.webp"/>
 <div class="leader-bio-text">
-<h3><b>एंटोनियो गुटेरेस (António Guterres)</b></h3>
+<h3 class="subtopic-header"><b>एंटोनियो गुटेरेस (António Guterres)</b></h3>
 <p>पुर्तगाल के पूर्व प्रधानमंत्री जो 1 जनवरी 2017 से संयुक्त राष्ट्र के 9वें महासचिव (Secretary-General) हैं। महासचिव संयुक्त राष्ट्र का मुख्य प्रशासनिक अधिकारी और पूरी दुनिया में इसका चेहरा होता है।</p>
 </div>
 </div>
-<h3 class="sub-header" style="font-size: 22pt;">संयुक्त राष्ट्र संघ के महासचिव (UN Secretaries-General List)</h3>
+<h3 class="sub-header subtopic-header" style="">संयुक्त राष्ट्र संघ के महासचिव (UN Secretaries-General List)</h3>
 <p>संयुक्त राष्ट्र संघ के अब तक के सभी महासचिवों और उनके प्रमुख कार्यों की सूची निम्नलिखित है:</p>
-<table style="width: 100%; border-collapse: collapse; margin: 30px 0; font-size: 18pt; border: 3px solid #cbd5e1;">
+<table style="width: 100%; border-collapse: collapse; margin: 30px 0;  border: 3px solid #cbd5e1;">
 <thead>
 <tr style="background-color: #1e40af; color: white;">
 <th style="padding: 15px; border: 1px solid #cbd5e1; text-align: left; width: 220px;">नाम और देश</th>
@@ -227,22 +492,22 @@
 </thead>
 <tbody>
 <tr>
-<td style="padding: 15px; border: 1px solid #cbd5e1; font-weight: bold;">1. ट्राइग्वे ली (Trygve Lie)<br/><small>नॉर्वे</small></td>
+<td style="padding: 15px; border: 1px solid #cbd5e1; font-weight: bold;">1. ट्राइग्वे ली (Trygve Lie)<br><small>नॉर्वे</small></br></td>
 <td style="padding: 15px; border: 1px solid #cbd5e1;">1946 - 1952</td>
 <td style="padding: 15px; border: 1px solid #cbd5e1;">संयुक्त राष्ट्र संघ के <b>प्रथम महासचिव</b>। पेशे से वकील और नॉर्वे के विदेश मंत्री थे। उन्होंने कश्मीर पर भारत-पाकिस्तान के बीच पहले युद्ध में युद्धविराम के प्रयास किए तथा कोरियाई युद्ध की समाप्ति के लिए मध्यस्थता की। सोवियत संघ द्वारा उनके दूसरे कार्यकाल का विरोध किए जाने पर इस्तीफा दे दिया।</td>
 </tr>
 <tr style="background-color: #f8fafc;">
-<td style="padding: 15px; border: 1px solid #cbd5e1; font-weight: bold;">2. डैग हैमरशोल्ड (Dag Hammarskjöld)<br/><small>स्वीडन</small></td>
+<td style="padding: 15px; border: 1px solid #cbd5e1; font-weight: bold;">2. डैग हैमरशोल्ड (Dag Hammarskjöld)<br><small>स्वीडन</small></br></td>
 <td style="padding: 15px; border: 1px solid #cbd5e1;">1953 - 1961</td>
 <td style="padding: 15px; border: 1px solid #cbd5e1;">अर्थशास्त्री और स्वीडन के सिविल सर्वेंट। स्वेज नहर संकट (1956) को शांतिपूर्वक सुलझाने में महत्वपूर्ण भूमिका निभाई। कांगो संकट के दौरान एक हवाई दुर्घटना में मृत्यु। उन्हें मरणोपरांत <b>नोबेल शांति पुरस्कार (1961)</b> से सम्मानित किया गया।</td>
 </tr>
 <tr>
-<td style="padding: 15px; border: 1px solid #cbd5e1; font-weight: bold;">3. यू थांट (U Thant)<br/><small>म्यांमार (बर्मा)</small></td>
+<td style="padding: 15px; border: 1px solid #cbd5e1; font-weight: bold;">3. यू थांट (U Thant)<br><small>म्यांमार (बर्मा)</small></br></td>
 <td style="padding: 15px; border: 1px solid #cbd5e1;">1961 - 1971</td>
 <td style="padding: 15px; border: 1px solid #cbd5e1;">शिक्षक और राजनयिक। वह एशिया से प्रथम महासचिव थे। उन्होंने प्रसिद्ध <b>क्यूबा मिसाइल संकट (1962)</b> को शांत कराने में महत्वपूर्ण कूटनीतिक सफलता प्राप्त की। वियतनाम युद्ध के दौरान अमेरिका की नीतियों की आलोचना की तथा भारत-पाकिस्तान युद्ध (1965) के समय मध्यस्थता की।</td>
 </tr>
 <tr style="background-color: #f8fafc;">
-<td style="padding: 15px; border: 1px solid #cbd5e1; font-weight: bold;">4. कुर्त वाल्डहाइम (Kurt Waldheim)<br/><small>ऑस्ट्रिया</small></td>
+<td style="padding: 15px; border: 1px solid #cbd5e1; font-weight: bold;">4. कुर्त वाल्डहाइम (Kurt Waldheim)<br><small>ऑस्ट्रिया</small></br></td>
 <td style="padding: 15px; border: 1px solid #cbd5e1;">1972 - 1981</td>
 <td style="padding: 15px; border: 1px solid #cbd5e1;">राजनयिक और ऑस्ट्रिया के विदेश मंत्री। उनके कार्यकाल के दौरान बांग्लादेश संकट और भारत-पाकिस्तान युद्ध (1971) के बाद नामीबिया और पश्चिम एशिया संकट सुलझाने के शांति प्रयास किए गए। तीसरे कार्यकाल के लिए उनके नाम पर चीन ने वीटो कर दिया था।</td>
 </tr>
@@ -276,7 +541,7 @@
 <div class="keyword-box" style="border-left-color: #1e40af; background: #eff6ff;">
 <b>सचिवालय (Secretariat) और महासचिव की नियुक्ति:</b> सचिवालय संयुक्त राष्ट्र का प्रशासनिक कार्यालय है। इसके प्रमुख <b>महासचिव</b> की नियुक्ति सुरक्षा परिषद की सिफारिश पर महासभा द्वारा <b>5 वर्ष के कार्यकाल</b> के लिए की जाती है, तथा इन्हें दोबारा भी चुना जा सकता है।
     </div>
-<h2 class="sub-header">4. अंतरराष्ट्रीय न्यायालय (अंतरराष्ट्रीय Court of Justice - ICJ)</h2>
+<h2 class="sub-header topic-header">4. अंतरराष्ट्रीय न्यायालय (अंतरराष्ट्रीय Court of Justice - ICJ)</h2>
 <p>यह यूएन का मुख्य न्यायिक अंग है जो देशों के बीच होने वाले कानूनी और सीमा विवादों का फैसला करता है।</p>
 <div class="organs-card" style="border-left: 10px solid #1e40af;">
 <b>ICJ की संरचना और नियम:</b>
@@ -290,39 +555,128 @@
 <div class="illustration-box" style="border-color: #1e40af !important; margin-top: 35px; margin-bottom: 35px; border: 4px solid #1e40af; border-radius: 10px;">
 <img alt="Peace Palace ICJ" class="illustration-img" src="images/ch4/icj_palace.webp" style="width: 100%; max-width: 850px; height: auto; max-height: 450px; object-fit: contain; display: block; margin: 0 auto; border: 4px solid #cbd5e1; border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.15);"/>
 <div class="illustration-explanation" style="border-left-color: #1e40af !important;">
-<b>पीस पैलेस, द हेग (Peace Palace, The Hague):</b><br>
+<b>पीस पैलेस, द हेग (Peace Palace, The Hague):</b><br/>
             नीदरलैंड के द हेग शहर में स्थित यह भव्य महल अंतरराष्ट्रीय न्यायालय (ICJ) का मुख्यालय है।
-        </br></div>
+        </div>
 </div>
-<h2 class="sub-header">5. अन्य प्रमुख अंग (Other Major Organs)</h2>
+<h2 class="sub-header topic-header">5. अन्य प्रमुख अंग (Other Major Organs)</h2>
 <ol style="margin-left: 40px; line-height: 2.2;">
 <li style="margin-bottom: 25px;">
-<b>आर्थिक और सामाजिक परिषद (ECOSOC):</b><br>
+<b>आर्थिक और सामाजिक परिषद (ECOSOC):</b><br/>
 <ul>
 <li>इसमें वर्तमान में <b>54 सदस्य देश</b> हैं।</li>
 <li>इनका चुनाव महासभा द्वारा <b>3 वर्ष के कार्यकाल</b> के लिए किया जाता है।</li>
 <li><b>नियम:</b> प्रत्येक वर्ष परिषद के एक-तिहाई (1/3) सदस्य सेवानिवृत्त होते हैं और नए सदस्यों का चुनाव किया जाता है।</li>
 <li><b>कार्य:</b> वैश्विक गरीबी उन्मूलन, सामाजिक कल्याण, मानवाधिकार, शिक्षा और सांस्कृतिक सहयोग से संबंधित यूएन की विभिन्न विशेष एजेंसियों के कार्यों का समन्वय करना।</li>
 </ul>
-</br></li>
-        <li>
-            <b>न्यास परिषद (Trusteeship Council):</b><br/>
-            <ul>
-                <li>यह परिषद उन क्षेत्रों की देखरेख के लिए बनाई गई थी जो स्वशासन प्राप्त नहीं कर पाए थे।</li>
-                <li><b>निलंबन:</b> 1 नवंबर 1994 को अंतिम &#2344;&#2381;&#2351;&#2366;&#2360; &#2325;&#2381;&#2359;&#2375;&#2340;&#2381;&#2352; 'पलाऊ' के स्वतंत्र होने के बाद इसके कार्यों को औपचारिक रूप से निलंबित कर दिया गया है।</li>
-            </ul>
-        </li>
+</li>
+<li>
+<b>न्यास परिषद (Trusteeship Council):</b><br/>
+<ul>
+<li>यह परिषद उन क्षेत्रों की देखरेख के लिए बनाई गई थी जो स्वशासन प्राप्त नहीं कर पाए थे।</li>
+<li><b>निलंबन:</b> 1 नवंबर 1994 को अंतिम न्यास क्षेत्र 'पलाऊ' के स्वतंत्र होने के बाद इसके कार्यों को औपचारिक रूप से निलंबित कर दिया गया है।</li>
+</ul>
+</li>
 </ol>
 </div>
 </body>
 </html>
-<br><br><hr><br><br>
+<br/><br/><hr/><br/><br/>
 <!DOCTYPE html>
 
 <html lang="hi">
 <head>
 <meta charset="utf-8"/>
 <style>
+        p, li, h1, h2, h3, h4, b, strong, td, th {
+            font-weight: 900 !important;
+            -webkit-text-stroke: 1.1px #000000;
+            text-shadow: 0 0 1px #000;
+        }
+        body, p, li, td, th, div, span {
+            font-size: 28pt !important;
+            line-height: 1.8 !important;
+        }
+        .ch4-content {
+            font-size: 28pt !important;
+            line-height: 1.8 !important;
+            padding: 10px !important;
+        }
+        /* Projector Banner Styles for Headings */
+        .hero-title, h1.section-header {
+            text-align: center !important;
+            color: #ffffff !important;
+            background-color: #064e3b !important; /* Dark Green Background */
+            border: 5px solid #10b981 !important;
+            border-radius: 20px !important;
+            padding: 30px !important;
+            margin-bottom: 50px !important;
+            font-size: 60pt !important;
+            font-weight: 900 !important;
+            box-shadow: 0 8px 25px rgba(6, 78, 59, 0.4) !important;
+        }
+        .part-header {
+            color: #7f1d1d !important;
+            background-color: #fee2e2 !important;
+            border-left: 18px solid #b91c1c !important;
+            padding: 22px 28px !important;
+            border-radius: 14px !important;
+            font-size: 46pt !important;
+            font-weight: 900 !important;
+            margin-top: 40px !important;
+            margin-bottom: 35px !important;
+            box-shadow: 0 6px 15px rgba(0,0,0,0.08) !important;
+        }
+        .topic-header, h2.sub-header {
+            color: #1e3a8a !important;
+            background-color: #eff6ff !important;
+            border-left: 16px solid #2563eb !important;
+            padding: 20px 26px !important;
+            border-radius: 12px !important;
+            font-size: 38pt !important;
+            font-weight: 900 !important;
+            margin-top: 45px !important;
+            margin-bottom: 30px !important;
+        }
+        .subtopic-header {
+            color: #4c1d95 !important;
+            background-color: #f3e8ff !important;
+            border-left: 14px solid #7c3aed !important;
+            padding: 18px 24px !important;
+            border-radius: 10px !important;
+            font-size: 32pt !important;
+            font-weight: 900 !important;
+            margin-top: 40px !important;
+            margin-bottom: 25px !important;
+        }
+        .box-header {
+            color: #166534 !important;
+            background-color: #f0fdf4 !important;
+            border-left: 12px solid #16a34a !important;
+            padding: 16px 20px !important;
+            border-radius: 10px !important;
+            font-size: 30pt !important;
+            font-weight: 900 !important;
+        }
+        /* Highlights */
+        b, strong {
+            color: #b91c1c !important; /* Dark Red */
+            font-weight: 900 !important;
+        }
+        .blue-highlight, b.blue-text, strong.blue-text {
+            color: #1e3a8a !important;
+        }
+        .keyword-box, .un-card, .highlight-box {
+            font-size: 28pt !important;
+            line-height: 1.8 !important;
+            padding: 25px !important;
+            margin: 30px 0 !important;
+        }
+        .leader-bio-text { flex: 1; font-size: 28pt !important; }
+        .illustration-box { border: 4px solid #cbd5e1 !important; border-radius: 12px; padding: 20px; background-color: #ffffff; margin-top: 25px; }
+        .illustration-explanation { border-left: 6px solid #cbd5e1 !important; padding-left: 15px; font-size: 28pt !important; line-height: 1.6 !important; text-align: left; margin-top: 15px; }
+
+
         .ch4-content { font-family: 'Nirmala UI', 'Arial', sans-serif; line-height: 2.2; font-size: 24pt; color: #1a202c; padding: 40px; }
         .section-header { color: #b91c1c; border-bottom: 5px solid #ef4444; padding-bottom: 15px; font-size: 40pt; margin-bottom: 30px; }
         .sub-header { color: #dc2626; font-size: 38pt; margin-top: 50px; }
@@ -336,15 +690,15 @@
 </head>
 <body>
 <div class="ch4-content">
-<h1 class="section-header">यूएन (UN) में सुधारों की आवश्यकता - भाग 3</h1>
+<h1 class="section-header hero-title">यूएन (UN) में सुधारों की आवश्यकता - भाग 3</h1>
 <p>1945 में जब संयुक्त राष्ट्र बना था, तो दुनिया वैसी नहीं थी जैसी आज है। तब शीत युद्ध चल रहा था, और आज दुनिया 'एकध्रुवीय' या 'बहुध्रुवीय' बनने की ओर बढ़ रही है। इसलिए, यूएन की संरचना और कार्यप्रणाली में बदलाव की मांग उठ रही है।</p>
-<h2 class="sub-header">1. सुरक्षा परिषद में सुधार (Changes in Security Council)</h2>
+<h2 class="sub-header topic-header">1. सुरक्षा परिषद में सुधार (Changes in Security Council)</h2>
 <p>सबसे बड़ा विवाद सुरक्षा परिषद के विस्तार और उसकी वीटो प्रणाली को लेकर है। दुनिया चाहती है कि P-5 (स्थायी सदस्यों) की संख्या बढ़ाई जाए और निर्णय लेने की प्रक्रिया अधिक न्यायसंगत हो।</p>
 <div class="keyword-box">
 <b>P-5 (Permanent Five):</b> अमेरिका, रूस, सोवियत संघ (अब रूस), ब्रिटेन, फ्रांस और चीन। ये वे देश हैं जिन्हें सुरक्षा परिषद में स्थायी सदस्यता और <b>वीटो (Veto Power)</b> का विशेषाधिकार प्राप्त है।
     </div>
-<h3 class="sub-header" style="font-size: 22pt;">सुरक्षा परिषद के स्थायी और अस्थायी सदस्यों में अंतर (Permanent vs Non-Permanent Members)</h3>
-<table style="width: 100%; border-collapse: collapse; margin: 30px 0; font-size: 18pt; border: 3px solid #cbd5e1;">
+<h3 class="sub-header subtopic-header" style="">सुरक्षा परिषद के स्थायी और अस्थायी सदस्यों में अंतर (Permanent vs Non-Permanent Members)</h3>
+<table style="width: 100%; border-collapse: collapse; margin: 30px 0;  border: 3px solid #cbd5e1;">
 <thead>
 <tr style="background-color: #b91c1c; color: white;">
 <th style="padding: 15px; border: 1px solid #cbd5e1; text-align: left; width: 250px;">अंतर का आधार</th>
@@ -375,7 +729,7 @@
 </tr>
 </tbody>
 </table>
-<h3 class="sub-header" style="font-size: 22pt;">स्थायी सदस्यता के लिए 1997 में प्रस्तावित 6 मानदंड (Proposed Criteria of 1997)</h3>
+<h3 class="sub-header subtopic-header" style="">स्थायी सदस्यता के लिए 1997 में प्रस्तावित 6 मानदंड (Proposed Criteria of 1997)</h3>
 <p>1 जनवरी 1997 को तत्कालीन महासचिव कोफी अन्नान ने सुरक्षा परिषद के सुधारों के तहत नए स्थायी और अस्थायी सदस्यों के चयन के लिए <b>6 प्रमुख मानदंड</b> प्रस्तावित किए थे। एक नए सदस्य में निम्नलिखित योग्यताएं होनी चाहिए:</p>
 <ol style="margin-left: 40px; line-height: 2.2;">
 <li><b>बड़ी आर्थिक ताकत (Major Economic Power):</b> वह देश एक बड़ी वैश्विक आर्थिक शक्ति होना चाहिए।</li>
@@ -385,7 +739,7 @@
 <li><b>लोकतंत्र और मानवाधिकारों का सम्मान (Respect for Democracy और Human Rights):</b> उस देश में एक मजबूत लोकतांत्रिक व्यवस्था होनी चाहिए और वह मानवाधिकारों की रक्षा करता हो।</li>
 <li><b>विश्व की विविधता का प्रतिनिधित्व (Representation of Diversity):</b> भौगोलिक, आर्थिक प्रणालियों और सांस्कृतिक रूप से वह देश विश्व की विविधता का प्रतिनिधित्व करता हो ताकि परिषद संतुलित दिखे।</li>
 </ol>
-<h3 class="sub-header" style="font-size: 22pt;">इन मानदंडों पर विवाद और प्रश्न (Debates और Questions on Criteria)</h3>
+<h3 class="sub-header box-header" style="">इन मानदंडों पर विवाद और प्रश्न (Debates और Questions on Criteria)</h3>
 <p>ये मानदंड दिखने में सरल हैं, लेकिन इनके व्यावहारिक उपयोग पर सदस्य देशों के बीच गंभीर असहमति है:</p>
 <ul style="list-style-type: square; margin-left: 40px;">
 <li><b>आर्थिक ताकत:</b> कोई देश कितना अमीर होना चाहिए कि उसे स्थायी सदस्य बनाया जाए? क्या विकासशील देशों की श्रेणी के देशों को भी इसमें जगह मिलेगी?</li>
@@ -397,17 +751,17 @@
 <!-- NCERT Student Margin Comment (REAL CROP) -->
 <div class="illustration-box" style="border-color: #b91c1c !important; margin-top: 35px; margin-bottom: 35px; border: 4px solid #b91c1c; border-radius: 10px;">
 <img alt="Student Comment on Reforms" class="illustration-img" src="images/ch4/page_6_img_2.webp" style="width: 100%; max-width: 250px; height: auto; display: block; margin: 0 auto; border: 4px solid #cbd5e1; border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.15);"/>
-<div class="illustration-explanation" style="border-left: 15px solid #b91c1c; background: #fff5f5; padding: 25px; font-size: 18pt;">
-<b>एनसीईआरटी छात्र टिप्पणी: लोकतंत्र और सुधार (Student's Comment on Reforms):</b><br/>
-<b>कार्टून का विवरण:</b> पुस्तक के हाशिये में दिया गया छात्र (चश्मा और बैग पहने मुस्कुराता हुआ लड़का) जो यूएन की सदस्यता प्रणाली पर टिप्पणी कर रहा है।<br/>
+<div class="illustration-explanation" style="border-left: 15px solid #b91c1c; background: #fff5f5; padding: 25px; ">
+<b>एनसीईआरटी छात्र टिप्पणी: लोकतंत्र और सुधार (Student's Comment on Reforms):</b><br>
+<b>कार्टून का विवरण:</b> पुस्तक के हाशिये में दिया गया छात्र (चश्मा और बैग पहने मुस्कुराता हुआ लड़का) जो यूएन की सदस्यता प्रणाली पर टिप्पणी कर रहा है।<br>
 <b>छात्र का कथन:</b> "शीत युद्ध हो या न हो, एक सुधार तो सबसे पहले जरूरी है। संयुक्त राष्ट्र संघ में केवल लोकतांत्रिक नेताओं को ही अपने देश का प्रतिनिधित्व करने का हक होना चाहिए। आखिर किसी तानाशाह को अपने देश की जनता की ओर से बोलने की अनुमति कैसे दी जा सकती है?"
-        </div>
+        </br></br></div>
 </div>
 <ul style="list-style-type: square; margin-left: 40px;">
 <li><b>प्रतिनिधित्व की कमी:</b> वर्तमान सुरक्षा परिषद में एशिया, अफ्रीका और दक्षिण अमेरिका जैसे महाद्वीपों का उचित प्रतिनिधित्व नहीं है।</li>
 <li><b>वीटो पावर का दुरुपयोग:</b> अक्सर स्थायी सदस्य अपनी वीटो पावर का इस्तेमाल अपने निजी स्वार्थों के लिए करते हैं, जिससे शांति प्रक्रिया रुक जाती है।</li>
 </ul>
-<h2 class="sub-header">2. संगठन की कार्यप्रणाली में बदलाव</h2>
+<h2 class="sub-header topic-header">2. संगठन की कार्यप्रणाली में बदलाव</h2>
 <p>कई विशेषज्ञों का मानना है कि यूएन को शांति और सुरक्षा के अलावा अन्य महत्वपूर्ण क्षेत्रों पर अपना ध्यान ज़्यादा केंद्रित करना चाहिए:</p>
 <ul style="list-style-type: disc; margin-left: 40px;">
 <li><b>मानवीय सहायता:</b> अकाल, भूकंप और महामारियों के समय यूएन की भूमिका तेज़ होनी चाहिए।</li>
@@ -417,7 +771,7 @@
 <div class="info-card">
 <b>एक बड़ा सवाल:</b> क्या सुरक्षा परिषद के स्थायी सदस्यों की संख्या बढ़ाने से यूएन अधिक लोकतांत्रिक हो जाएगा? या क्या इससे निर्णय लेने की प्रक्रिया धीमी हो जाएगी? यह पूरी दुनिया के लिए एक बड़ी चर्चा का विषय है।
     </div>
-<h2 class="sub-header">3. लोकतंत्र और मानवाधिकारों को बढ़ावा</h2>
+<h2 class="sub-header topic-header">3. लोकतंत्र और मानवाधिकारों को बढ़ावा</h2>
 <p>आज यूएन केवल युद्ध रोकने तक सीमित नहीं है, बल्कि वह दुनिया भर में **लोकतंत्र** (Democracy) और **मानवाधिकारों** (Human Rights) की रक्षा के लिए नए संस्थानों के गठन की भी मांग कर रहा है।</p>
 <div class="keyword-box">
 <b>प्रभुसत्ता का संकोच:</b> कई देशों को डर है कि यूएन में सुधार के नाम पर उनकी स्वतंत्रता (Sovereignty) कम की जा सकती है, जिससे वे अपने निर्णय स्वतंत्र रूप से नहीं ले पाएंगे।
@@ -425,13 +779,102 @@
 </div>
 </body>
 </html>
-<br><br><hr><br><br>
+<br/><br/><hr/><br/><br/>
 <!DOCTYPE html>
 
 <html lang="hi">
 <head>
 <meta charset="utf-8"/>
 <style>
+        p, li, h1, h2, h3, h4, b, strong, td, th {
+            font-weight: 900 !important;
+            -webkit-text-stroke: 1.1px #000000;
+            text-shadow: 0 0 1px #000;
+        }
+        body, p, li, td, th, div, span {
+            font-size: 28pt !important;
+            line-height: 1.8 !important;
+        }
+        .ch4-content {
+            font-size: 28pt !important;
+            line-height: 1.8 !important;
+            padding: 10px !important;
+        }
+        /* Projector Banner Styles for Headings */
+        .hero-title, h1.section-header {
+            text-align: center !important;
+            color: #ffffff !important;
+            background-color: #064e3b !important; /* Dark Green Background */
+            border: 5px solid #10b981 !important;
+            border-radius: 20px !important;
+            padding: 30px !important;
+            margin-bottom: 50px !important;
+            font-size: 60pt !important;
+            font-weight: 900 !important;
+            box-shadow: 0 8px 25px rgba(6, 78, 59, 0.4) !important;
+        }
+        .part-header {
+            color: #7f1d1d !important;
+            background-color: #fee2e2 !important;
+            border-left: 18px solid #b91c1c !important;
+            padding: 22px 28px !important;
+            border-radius: 14px !important;
+            font-size: 46pt !important;
+            font-weight: 900 !important;
+            margin-top: 40px !important;
+            margin-bottom: 35px !important;
+            box-shadow: 0 6px 15px rgba(0,0,0,0.08) !important;
+        }
+        .topic-header, h2.sub-header {
+            color: #1e3a8a !important;
+            background-color: #eff6ff !important;
+            border-left: 16px solid #2563eb !important;
+            padding: 20px 26px !important;
+            border-radius: 12px !important;
+            font-size: 38pt !important;
+            font-weight: 900 !important;
+            margin-top: 45px !important;
+            margin-bottom: 30px !important;
+        }
+        .subtopic-header {
+            color: #4c1d95 !important;
+            background-color: #f3e8ff !important;
+            border-left: 14px solid #7c3aed !important;
+            padding: 18px 24px !important;
+            border-radius: 10px !important;
+            font-size: 32pt !important;
+            font-weight: 900 !important;
+            margin-top: 40px !important;
+            margin-bottom: 25px !important;
+        }
+        .box-header {
+            color: #166534 !important;
+            background-color: #f0fdf4 !important;
+            border-left: 12px solid #16a34a !important;
+            padding: 16px 20px !important;
+            border-radius: 10px !important;
+            font-size: 30pt !important;
+            font-weight: 900 !important;
+        }
+        /* Highlights */
+        b, strong {
+            color: #b91c1c !important; /* Dark Red */
+            font-weight: 900 !important;
+        }
+        .blue-highlight, b.blue-text, strong.blue-text {
+            color: #1e3a8a !important;
+        }
+        .keyword-box, .un-card, .highlight-box {
+            font-size: 28pt !important;
+            line-height: 1.8 !important;
+            padding: 25px !important;
+            margin: 30px 0 !important;
+        }
+        .leader-bio-text { flex: 1; font-size: 28pt !important; }
+        .illustration-box { border: 4px solid #cbd5e1 !important; border-radius: 12px; padding: 20px; background-color: #ffffff; margin-top: 25px; }
+        .illustration-explanation { border-left: 6px solid #cbd5e1 !important; padding-left: 15px; font-size: 28pt !important; line-height: 1.6 !important; text-align: left; margin-top: 15px; }
+
+
         .ch4-content { font-family: 'Nirmala UI', 'Arial', sans-serif; line-height: 2.2; font-size: 24pt; color: #1a202c; padding: 40px; }
         .section-header { color: #166534; border-bottom: 5px solid #22c55e; padding-bottom: 15px; font-size: 40pt; margin-bottom: 30px; }
         .sub-header { color: #15803d; font-size: 38pt; margin-top: 50px; }
@@ -445,77 +888,70 @@
 </head>
 <body>
 <div class="ch4-content">
-<h1 class="section-header">सुरक्षा परिषद में भारत का दावा - भाग 4</h1>
+<h1 class="section-header hero-title">सुरक्षा परिषद में भारत का दावा - भाग 4</h1>
 <p>भारत दुनिया का सबसे बड़ा लोकतंत्र (The World's Largest Democracy) है और वह लंबे समय से संयुक्त राष्ट्र सुरक्षा परिषद (UNSC) में स्थायी सदस्यता (Permanent Membership) की मांग कर रहा है। भारत के पास इसके लिए बहुत मजबूत तर्क और योग्यताएं हैं।</p>
-
 <!-- Premium Graphic Box (Main India-UN Illustration) -->
 <div class="illustration-box" style="border-color: #166534 !important; margin-top: 35px; margin-bottom: 35px; border: 4px solid #166534; border-radius: 10px;">
 <img alt="India UN Claim Main Illustration" class="illustration-img" src="images/ch4/india_un_main.webp" style="width: 100%; max-width: 850px; height: auto; display: block; margin: 0 auto; border: 4px solid #cbd5e1; border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.15);"/>
-<div class="illustration-explanation" style="border-left: 15px solid #166534; background: #f0fdf4; padding: 25px; font-size: 18pt;">
-<b>मुख्य चित्र: संयुक्त राष्ट्र में भारत की सशक्त दावेदारी (India's Strong Claim in UN):</b><br/>
+<div class="illustration-explanation" style="border-left: 15px solid #166534; background: #f0fdf4; padding: 25px; ">
+<b>मुख्य चित्र: संयुक्त राष्ट्र में भारत की सशक्त दावेदारी (India's Strong Claim in UN):</b><br>
 यह चित्र संयुक्त राष्ट्र संघ (UN) में भारत की बढ़ती भूमिका, मजबूत लोकतंत्र, तीव्र आर्थिक विकास और वैश्विक शांति अभियानों में योगदान को दर्शाता है, जो इसे सुरक्षा परिषद (UNSC) की स्थायी सदस्यता का सबसे प्रमुख हकदार बनाते हैं।
+</br></div>
 </div>
-</div>
-
-<h2 class="sub-header">1. भारत की सदस्यता के पक्ष में तर्क (Arguments for India's Claim)</h2>
+<h2 class="sub-header topic-header">1. भारत की सदस्यता के पक्ष में तर्क (Arguments for India's Claim)</h2>
 <p>भारत सुरक्षा परिषद (UNSC) में स्थायी सदस्यता का सबसे सशक्त दावेदार है। इसके समर्थन में निम्नलिखित 5 प्रमुख तर्क दिए जाते हैं:</p>
-
 <div class="india-claim-card" style="display: flex; align-items: center; gap: 20px; background: #fff5f5; border: 3px solid #fca5a5; padding: 25px; border-radius: 15px; margin: 25px 0; color: #b91c1c;">
-    <img src="images/ch4/claim_icon_population.webp" style="width: 140px; height: 140px; border-radius: 12px; margin: 0; box-shadow: 0 4px 8px rgba(0,0,0,0.1); border: 2px solid #fca5a5;" />
-    <div>
-        <h3 style="margin-top: 0; margin-bottom: 10px; color: #b91c1c; font-size: 26pt; font-weight: 900;">1. विशाल जनसंख्या (Huge Population)</h3>
-        <p style="margin: 0; color: #b91c1c; font-size: 22pt; font-weight: 900; line-height: 1.6;">भारत दुनिया की सबसे बड़ी आबादी वाला देश है। यहाँ विश्व की कुल जनसंख्या का लगभग 18% हिस्सा निवास करता है। इतनी बड़ी मानव आबादी का संयुक्त राष्ट्र सुरक्षा परिषद के स्थायी निर्णय लेने वाले अंग में प्रतिनिधित्व होना बेहद आवश्यक है।</p>
-    </div>
+<img src="images/ch4/claim_icon_population.webp" style="width: 140px; height: 140px; border-radius: 12px; margin: 0; box-shadow: 0 4px 8px rgba(0,0,0,0.1); border: 2px solid #fca5a5;"/>
+<div>
+<h3 class="subtopic-header" style="margin-top: 0; margin-bottom: 10px;   font-weight: 900;">1. विशाल जनसंख्या (Huge Population)</h3>
+<p style="margin: 0; color: #b91c1c;  font-weight: 900; line-height: 1.6;">भारत दुनिया की सबसे बड़ी आबादी वाला देश है। यहाँ विश्व की कुल जनसंख्या का लगभग 18% हिस्सा निवास करता है। इतनी बड़ी मानव आबादी का संयुक्त राष्ट्र सुरक्षा परिषद के स्थायी निर्णय लेने वाले अंग में प्रतिनिधित्व होना बेहद आवश्यक है।</p>
 </div>
-
-<div class="india-claim-card" style="display: flex; align-items: center; gap: 20px; background: #fff5f5; border: 3px solid #fca5a5; padding: 25px; border-radius: 15px; margin: 25px 0; color: #b91c1c;">
-    <img src="images/ch4/claim_icon_democracy.webp" style="width: 140px; height: 140px; border-radius: 12px; margin: 0; box-shadow: 0 4px 8px rgba(0,0,0,0.1); border: 2px solid #fca5a5;" />
-    <div>
-        <h3 style="margin-top: 0; margin-bottom: 10px; color: #b91c1c; font-size: 26pt; font-weight: 900;">2. सफल और स्थिर लोकतंत्र (Stable Democracy)</h3>
-        <p style="margin: 0; color: #b91c1c; font-size: 22pt; font-weight: 900; line-height: 1.6;">भारत विश्व का सबसे बड़ा और निरंतर सफल रहने वाला लोकतंत्र है। भारत ने हमेशा अंतरराष्ट्रीय स्तर पर लोकतांत्रिक मूल्यों, बहुपक्षवाद, मानवाधिकारों और कानून के शासन का पुरजोर समर्थन और पालन किया है।</p>
-    </div>
 </div>
-
 <div class="india-claim-card" style="display: flex; align-items: center; gap: 20px; background: #fff5f5; border: 3px solid #fca5a5; padding: 25px; border-radius: 15px; margin: 25px 0; color: #b91c1c;">
-    <img src="images/ch4/claim_icon_economy.webp" style="width: 140px; height: 140px; border-radius: 12px; margin: 0; box-shadow: 0 4px 8px rgba(0,0,0,0.1); border: 2px solid #fca5a5;" />
-    <div>
-        <h3 style="margin-top: 0; margin-bottom: 10px; color: #b91c1c; font-size: 26pt; font-weight: 900;">3. बढ़ती हुई आर्थिक शक्ति (Growing Economic Power)</h3>
-        <p style="margin: 0; color: #b91c1c; font-size: 22pt; font-weight: 900; line-height: 1.6;">भारत विश्व की सबसे तेज़ गति से आगे बढ़ने वाली प्रमुख अर्थव्यवस्थाओं में से एक है। इसकी विशाल आर्थिक क्षमता, बड़ा घरेलू बाज़ार और विदेशी निवेश के केंद्र के रूप में उभरता प्रभाव इसे एक अपरिहार्य वैश्विक आर्थिक शक्ति बनाते हैं।</p>
-    </div>
+<img src="images/ch4/claim_icon_democracy.webp" style="width: 140px; height: 140px; border-radius: 12px; margin: 0; box-shadow: 0 4px 8px rgba(0,0,0,0.1); border: 2px solid #fca5a5;"/>
+<div>
+<h3 class="subtopic-header" style="margin-top: 0; margin-bottom: 10px;   font-weight: 900;">2. सफल और स्थिर लोकतंत्र (Stable Democracy)</h3>
+<p style="margin: 0; color: #b91c1c;  font-weight: 900; line-height: 1.6;">भारत विश्व का सबसे बड़ा और निरंतर सफल रहने वाला लोकतंत्र है। भारत ने हमेशा अंतरराष्ट्रीय स्तर पर लोकतांत्रिक मूल्यों, बहुपक्षवाद, मानवाधिकारों और कानून के शासन का पुरजोर समर्थन और पालन किया है।</p>
 </div>
-
-<div class="india-claim-card" style="display: flex; align-items: center; gap: 20px; background: #fff5f5; border: 3px solid #fca5a5; padding: 25px; border-radius: 15px; margin: 25px 0; color: #b91c1c;">
-    <img src="images/ch4/claim_icon_peacekeepers.webp" style="width: 140px; height: 140px; border-radius: 12px; margin: 0; box-shadow: 0 4px 8px rgba(0,0,0,0.1); border: 2px solid #fca5a5;" />
-    <div>
-        <h3 style="margin-top: 0; margin-bottom: 10px; color: #b91c1c; font-size: 26pt; font-weight: 900;">4. शांति अभियानों में अनुकरणीय योगदान (Peacekeeping Operations)</h3>
-        <p style="margin: 0; color: #b91c1c; font-size: 22pt; font-weight: 900; line-height: 1.6;">भारत संयुक्त राष्ट्र के शांति स्थापना अभियानों (UN Peacekeeping Missions) में सबसे ज्यादा सैनिक भेजने वाले शीर्ष देशों में से एक है। भारतीय सैनिकों ने दुनिया भर के अशांत क्षेत्रों में शांति और स्थिरता बहाल करने के लिए अपनी शहादत और सेवा दी है।</p>
-    </div>
 </div>
-
 <div class="india-claim-card" style="display: flex; align-items: center; gap: 20px; background: #fff5f5; border: 3px solid #fca5a5; padding: 25px; border-radius: 15px; margin: 25px 0; color: #b91c1c;">
-    <img src="images/ch4/claim_icon_influence.webp" style="width: 140px; height: 140px; border-radius: 12px; margin: 0; box-shadow: 0 4px 8px rgba(0,0,0,0.1); border: 2px solid #fca5a5;" />
-    <div>
-        <h3 style="margin-top: 0; margin-bottom: 10px; color: #b91c1c; font-size: 26pt; font-weight: 900;">5. बढ़ता वैश्विक प्रभाव और जिम्मेदारी (Global Stature)</h3>
-        <p style="margin: 0; color: #b91c1c; font-size: 22pt; font-weight: 900; line-height: 1.6;">भारत एक परमाणु शक्ति संपन्न राष्ट्र होने के बावजूद हमेशा एक अत्यंत ज़िम्मेदार वैश्विक कर्ता रहा है। गुटनिरपेक्ष आंदोलन के नेतृत्व से लेकर वैश्विक मंचों (जैसे G20 की अध्यक्षता) तक, भारत ने विकासशील देशों (Global South) की आवाज़ को मजबूती से उठाया है।</p>
-    </div>
+<img src="images/ch4/claim_icon_economy.webp" style="width: 140px; height: 140px; border-radius: 12px; margin: 0; box-shadow: 0 4px 8px rgba(0,0,0,0.1); border: 2px solid #fca5a5;"/>
+<div>
+<h3 class="subtopic-header" style="margin-top: 0; margin-bottom: 10px;   font-weight: 900;">3. बढ़ती हुई आर्थिक शक्ति (Growing Economic Power)</h3>
+<p style="margin: 0; color: #b91c1c;  font-weight: 900; line-height: 1.6;">भारत विश्व की सबसे तेज़ गति से आगे बढ़ने वाली प्रमुख अर्थव्यवस्थाओं में से एक है। इसकी विशाल आर्थिक क्षमता, बड़ा घरेलू बाज़ार और विदेशी निवेश के केंद्र के रूप में उभरता प्रभाव इसे एक अपरिहार्य वैश्विक आर्थिक शक्ति बनाते हैं।</p>
+</div>
+</div>
+<div class="india-claim-card" style="display: flex; align-items: center; gap: 20px; background: #fff5f5; border: 3px solid #fca5a5; padding: 25px; border-radius: 15px; margin: 25px 0; color: #b91c1c;">
+<img src="images/ch4/claim_icon_peacekeepers.webp" style="width: 140px; height: 140px; border-radius: 12px; margin: 0; box-shadow: 0 4px 8px rgba(0,0,0,0.1); border: 2px solid #fca5a5;"/>
+<div>
+<h3 class="subtopic-header" style="margin-top: 0; margin-bottom: 10px;   font-weight: 900;">4. शांति अभियानों में अनुकरणीय योगदान (Peacekeeping Operations)</h3>
+<p style="margin: 0; color: #b91c1c;  font-weight: 900; line-height: 1.6;">भारत संयुक्त राष्ट्र के शांति स्थापना अभियानों (UN Peacekeeping Missions) में सबसे ज्यादा सैनिक भेजने वाले शीर्ष देशों में से एक है। भारतीय सैनिकों ने दुनिया भर के अशांत क्षेत्रों में शांति और स्थिरता बहाल करने के लिए अपनी शहादत और सेवा दी है।</p>
+</div>
+</div>
+<div class="india-claim-card" style="display: flex; align-items: center; gap: 20px; background: #fff5f5; border: 3px solid #fca5a5; padding: 25px; border-radius: 15px; margin: 25px 0; color: #b91c1c;">
+<img src="images/ch4/claim_icon_influence.webp" style="width: 140px; height: 140px; border-radius: 12px; margin: 0; box-shadow: 0 4px 8px rgba(0,0,0,0.1); border: 2px solid #fca5a5;"/>
+<div>
+<h3 class="subtopic-header" style="margin-top: 0; margin-bottom: 10px;   font-weight: 900;">5. बढ़ता वैश्विक प्रभाव और जिम्मेदारी (Global Stature)</h3>
+<p style="margin: 0; color: #b91c1c;  font-weight: 900; line-height: 1.6;">भारत एक परमाणु शक्ति संपन्न राष्ट्र होने के बावजूद हमेशा एक अत्यंत ज़िम्मेदार वैश्विक कर्ता रहा है। गुटनिरपेक्ष आंदोलन के नेतृत्व से लेकर वैश्विक मंचों (जैसे G20 की अध्यक्षता) तक, भारत ने विकासशील देशों (Global South) की आवाज़ को मजबूती से उठाया है।</p>
+</div>
 </div>
 <!-- NCERT Cartoon Box (REAL LADDER CARTOON) -->
 <div class="illustration-box" style="border-color: #15803d !important; margin-top: 35px; margin-bottom: 35px; border: 4px solid #15803d; border-radius: 10px;">
 <img alt="UNSC Ladder Cartoon" class="illustration-img" src="images/ch4/un_hegemony_ladder.webp" style="width: 100%; max-width: 850px; height: auto; max-height: 450px; object-fit: contain; display: block; margin: 0 auto; border: 4px solid #cbd5e1; border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.15);"/>
-<div class="illustration-explanation" style="border-left: 15px solid #15803d; background: #f0fdf4; padding: 25px; font-size: 18pt;">
-<b>एनसीईआरटी कार्टून: सुरक्षा परिषद की सीढ़ी (Climbing the UN Ladder):</b><br/>
-<b>कार्टून का विवरण:</b> कार्टून में एक तरफ यूएन के सचिवालय भवन पर अमेरिकी वर्चस्व का झंडा और क्रेन, तथा दूसरी तरफ यूएन के सर्वोच्च पायदान पर चढ़ने के लिए लगी लंबी सीढ़ी पर चढ़ते देशों को दिखाया गया है।<br/>
+<div class="illustration-explanation" style="border-left: 15px solid #15803d; background: #f0fdf4; padding: 25px; ">
+<b>एनसीईआरटी कार्टून: सुरक्षा परिषद की सीढ़ी (Climbing the UN Ladder):</b><br>
+<b>कार्टून का विवरण:</b> कार्टून में एक तरफ यूएन के सचिवालय भवन पर अमेरिकी वर्चस्व का झंडा और क्रेन, तथा दूसरी तरफ यूएन के सर्वोच्च पायदान पर चढ़ने के लिए लगी लंबी सीढ़ी पर चढ़ते देशों को दिखाया गया है।<br>
 <b>कार्टून का संदेश:</b> यह दर्शाता है कि कैसे उभरती हुई शक्तियाँ (जैसे भारत) सीढ़ी चढ़कर यूएन के निर्णय लेने वाले शीर्ष अंगों (सुरक्षा परिषद) में शामिल होना चाहती हैं, जबकि पुराने सदस्य वर्चस्व बनाए रखने के लिए इस सीढ़ी पर नियंत्रण रखते हैं।
-        </div>
+        </br></br></div>
 </div>
 <!-- NCERT Student comment on P5 bullying (REAL CROP) -->
 <div class="illustration-box" style="border-color: #15803d !important; margin-top: 35px; margin-bottom: 35px; border: 4px solid #15803d; border-radius: 10px;">
 <img alt="Student Comment on P5 Bullying" class="illustration-img" src="images/ch4/page_13_img_1.webp" style="width: 100%; max-width: 250px; height: auto; display: block; margin: 0 auto; border: 4px solid #cbd5e1; border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.15);"/>
-<div class="illustration-explanation" style="border-left: 15px solid #15803d; background: #f0fdf4; padding: 25px; font-size: 18pt;">
-<b>एनसीईआरटी छात्र टिप्पणी: पांच देशों की दादागिरी (P-5 Supremacy Debate):</b><br/>
-<b>चित्र का विवरण:</b> हाशिये में एक छात्र का कार्टून (फोन पर बात करता हुआ लड़का) जो स्थायी देशों की 'दादागिरी' पर कटाक्ष कर रहा है।<br/>
+<div class="illustration-explanation" style="border-left: 15px solid #15803d; background: #f0fdf4; padding: 25px; ">
+<b>एनसीईआरटी छात्र टिप्पणी: पांच देशों की दादागिरी (P-5 Supremacy Debate):</b><br>
+<b>चित्र का विवरण:</b> हाशिये में एक छात्र का कार्टून (फोन पर बात करता हुआ लड़का) जो स्थायी देशों की 'दादागिरी' पर कटाक्ष कर रहा है।<br>
 <b>छात्र का प्रश्न:</b> "क्या हम पाँच बड़े दादाओं की दादागिरी खत्म करना चाहते हैं या उनमें शामिल होकर एक और दादा बनना चाहते हैं?"
-        </div>
+        </br></br></div>
 </div>
 <div class="keyword-box">
 <b>शांति स्थापना (Peacekeeping):</b> संयुक्त राष्ट्र द्वारा विवादित क्षेत्रों में शांति और व्यवस्था बनाए रखने के लिए सदस्य देशों से सैनिकों की मांग की जाती है। भारत इसमें सबसे विश्वसनीय साझेदार रहा है।
@@ -523,12 +959,12 @@
 <!-- NCERT Veto Statistics Graph (REAL CROP) -->
 <div class="illustration-box" style="border-color: #15803d !important; margin-top: 35px; margin-bottom: 35px; border: 4px solid #15803d; border-radius: 10px;">
 <img alt="Veto Usage Chart" class="illustration-img" src="images/ch4/page_11_img_2.webp" style="width: 100%; max-width: 850px; height: auto; max-height: 450px; object-fit: contain; display: block; margin: 0 auto; border: 4px solid #cbd5e1; border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.15);"/>
-<div class="illustration-explanation" style="border-left: 15px solid #15803d; background: #f0fdf4; padding: 25px; font-size: 18pt;">
-<b>एनसीईआरटी आरेख: वीटो पावर का उपयोग (Use of Veto Power by P-5):</b><br/>
+<div class="illustration-explanation" style="border-left: 15px solid #15803d; background: #f0fdf4; padding: 25px; ">
+<b>एनसीईआरटी आरेख: वीटो पावर का उपयोग (Use of Veto Power by P-5):</b><br>
 <b>चार्ट का विवरण:</b> सोवियत संघ/रूस (135 बार), अमेरिका (84 बार), ब्रिटेन (32 बार), फ्रांस (18 बार), और चीन (11 बार) द्वारा वीटो पावर के उपयोग को दर्शाता आधिकारिक बार आरेख। यह सुरक्षा परिषद की असमानता को उजागर करता है।
-        </div>
+        </br></div>
 </div>
-<h2 class="sub-header">2. भारत की राह में रुकावटें (Challenges)</h2>
+<h2 class="sub-header topic-header">2. भारत की राह में रुकावटें (Challenges)</h2>
 <p>इतनी योग्यताओं के बावजूद, कुछ देश भारत की सदस्यता का विरोध करते हैं:</p>
 <ul style="list-style-type: square; margin-left: 40px;">
 <li><b>पाकिस्तान:</b> भारत का पड़ोसी देश पाकिस्तान हमेशा भारत के स्थायी सदस्य बनने का विरोध करता है।</li>
@@ -541,13 +977,102 @@
 </div>
 </body>
 </html>
-<br><br><hr><br><br>
+<br/><br/><hr/><br/><br/>
 <!DOCTYPE html>
 
 <html lang="hi">
 <head>
 <meta charset="utf-8"/>
 <style>
+        p, li, h1, h2, h3, h4, b, strong, td, th {
+            font-weight: 900 !important;
+            -webkit-text-stroke: 1.1px #000000;
+            text-shadow: 0 0 1px #000;
+        }
+        body, p, li, td, th, div, span {
+            font-size: 28pt !important;
+            line-height: 1.8 !important;
+        }
+        .ch4-content {
+            font-size: 28pt !important;
+            line-height: 1.8 !important;
+            padding: 10px !important;
+        }
+        /* Projector Banner Styles for Headings */
+        .hero-title, h1.section-header {
+            text-align: center !important;
+            color: #ffffff !important;
+            background-color: #064e3b !important; /* Dark Green Background */
+            border: 5px solid #10b981 !important;
+            border-radius: 20px !important;
+            padding: 30px !important;
+            margin-bottom: 50px !important;
+            font-size: 60pt !important;
+            font-weight: 900 !important;
+            box-shadow: 0 8px 25px rgba(6, 78, 59, 0.4) !important;
+        }
+        .part-header {
+            color: #7f1d1d !important;
+            background-color: #fee2e2 !important;
+            border-left: 18px solid #b91c1c !important;
+            padding: 22px 28px !important;
+            border-radius: 14px !important;
+            font-size: 46pt !important;
+            font-weight: 900 !important;
+            margin-top: 40px !important;
+            margin-bottom: 35px !important;
+            box-shadow: 0 6px 15px rgba(0,0,0,0.08) !important;
+        }
+        .topic-header, h2.sub-header {
+            color: #1e3a8a !important;
+            background-color: #eff6ff !important;
+            border-left: 16px solid #2563eb !important;
+            padding: 20px 26px !important;
+            border-radius: 12px !important;
+            font-size: 38pt !important;
+            font-weight: 900 !important;
+            margin-top: 45px !important;
+            margin-bottom: 30px !important;
+        }
+        .subtopic-header {
+            color: #4c1d95 !important;
+            background-color: #f3e8ff !important;
+            border-left: 14px solid #7c3aed !important;
+            padding: 18px 24px !important;
+            border-radius: 10px !important;
+            font-size: 32pt !important;
+            font-weight: 900 !important;
+            margin-top: 40px !important;
+            margin-bottom: 25px !important;
+        }
+        .box-header {
+            color: #166534 !important;
+            background-color: #f0fdf4 !important;
+            border-left: 12px solid #16a34a !important;
+            padding: 16px 20px !important;
+            border-radius: 10px !important;
+            font-size: 30pt !important;
+            font-weight: 900 !important;
+        }
+        /* Highlights */
+        b, strong {
+            color: #b91c1c !important; /* Dark Red */
+            font-weight: 900 !important;
+        }
+        .blue-highlight, b.blue-text, strong.blue-text {
+            color: #1e3a8a !important;
+        }
+        .keyword-box, .un-card, .highlight-box {
+            font-size: 28pt !important;
+            line-height: 1.8 !important;
+            padding: 25px !important;
+            margin: 30px 0 !important;
+        }
+        .leader-bio-text { flex: 1; font-size: 28pt !important; }
+        .illustration-box { border: 4px solid #cbd5e1 !important; border-radius: 12px; padding: 20px; background-color: #ffffff; margin-top: 25px; }
+        .illustration-explanation { border-left: 6px solid #cbd5e1 !important; padding-left: 15px; font-size: 28pt !important; line-height: 1.6 !important; text-align: left; margin-top: 15px; }
+
+
         .ch4-content { font-family: 'Nirmala UI', 'Arial', sans-serif; line-height: 2.2; font-size: 24pt; color: #1a202c; padding: 40px; }
         .section-header { color: #b91c1c; border-bottom: 5px solid #ef4444; padding-bottom: 15px; font-size: 40pt; margin-bottom: 30px; }
         .sub-header { color: #dc2626; font-size: 38pt; margin-top: 50px; }
@@ -561,9 +1086,9 @@
 </head>
 <body>
 <div class="ch4-content">
-<h1 class="section-header">संयुक्त राष्ट्र (UN) और अमेरिका का वर्चस्व - भाग 5</h1>
+<h1 class="section-header hero-title">संयुक्त राष्ट्र (UN) और अमेरिका का वर्चस्व - भाग 5</h1>
 <p>सोवियत संघ के पतन के बाद, अमेरिका दुनिया की एकमात्र महाशक्ति बन गया। अमेरिका का दबदबा (Hegemony) न केवल पूरी दुनिया पर है, बल्कि संयुक्त राष्ट्र संघ पर भी उसका गहरा प्रभाव देखा जाता है</p>
-<h2 class="sub-header">1. अमेरिका का यूएन पर प्रभाव क्यों है?</h2>
+<h2 class="sub-header topic-header">1. अमेरिका का यूएन पर प्रभाव क्यों है?</h2>
 <p>इसके कुछ मुख्य कारण निम्नलिखित हैं:</p>
 <ul style="list-style-type: square; margin-left: 40px;">
 <li><b>आर्थिक योगदान:</b> यूएन के बजट में अमेरिका सबसे ज्यादा हिस्सा देता है। अमेरिका के बिना यूएन का चलना मुश्किल हो सकता है।</li>
@@ -574,32 +1099,121 @@
 <!-- NCERT Cartoon Box (REAL CROP - HEGEMONY) -->
 <div class="illustration-box" style="border-color: #b91c1c !important; margin-top: 35px; margin-bottom: 35px; border: 4px solid #b91c1c; border-radius: 10px;">
 <img alt="Hegemony Cartoon" class="illustration-img" src="images/ch4/page_15_img_1.webp" style="width: 100%; max-width: 850px; height: auto; max-height: 450px; object-fit: contain; display: block; margin: 0 auto; border: 4px solid #cbd5e1; border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.15);"/>
-<div class="illustration-explanation" style="border-left: 15px solid #b91c1c; background: #fff5f5; padding: 25px; font-size: 18pt;">
-<b>एनसीईआरटी कार्टून: संयुक्त राष्ट्र और अमेरिकी सैन्य वर्चस्व (US Hegemony over the UN):</b><br/>
-<b>कार्टून का विवरण:</b> कार्टून में एक विशाल अमेरिकी सैनिक को एक हाथ में संयुक्त राष्ट्र के लोगो और दूसरे हाथ में हथियार दिखाते हुए पेश किया गया है।<br/>
+<div class="illustration-explanation" style="border-left: 15px solid #b91c1c; background: #fff5f5; padding: 25px; ">
+<b>एनसीईआरटी कार्टून: संयुक्त राष्ट्र और अमेरिकी सैन्य वर्चस्व (US Hegemony over the UN):</b><br>
+<b>कार्टून का विवरण:</b> कार्टून में एक विशाल अमेरिकी सैनिक को एक हाथ में संयुक्त राष्ट्र के लोगो और दूसरे हाथ में हथियार दिखाते हुए पेश किया गया है।<br>
 <b>कार्टून का संदेश:</b> यह दर्शाता है कि जब अमेरिका कूटनीतिक रूप से (दाएं हाथ से) बात नहीं मनवा पाता, तो वह सैन्य बल (बाएं हाथ) के उपयोग से पीछे नहीं हटता, जिससे यूएन का महत्व कम होता है।
-        </div>
+        </br></br></div>
 </div>
 <div class="keyword-box">
 <b>वर्चस्व (Hegemony):</b> किसी एक देश का दुनिया भर में आर्थिक, सैन्य और राजनीतिक रूप से हावी होना। 1991 के बाद से अमेरिका इसी वर्चस्व का आनंद ले रहा है।
     </div>
-<h2 class="sub-header">2. क्या यूएन अमेरिका को रोक सकता है?</h2>
+<h2 class="sub-header topic-header">2. क्या यूएन अमेरिका को रोक सकता है?</h2>
 <p>यह एक विवादास्पद मुद्दा है। कई बार यूएन ने अमेरिका के फैसलों का विरोध किया है (जैसे इराक युद्ध के समय), लेकिन वह उसे पूरी तरह से रोकने में विफल रहा क्योंकि अमेरिका के पास बहुत ज़्यादा शक्ति है।</p>
 <div class="info-card">
 <b>निष्कर्ष:</b> भले ही यूएन अमेरिका को पूरी तरह से नियंत्रित नहीं कर सकता, लेकिन वह अमेरिका की तानाशाही पर कुछ हद तक अंकुश ज़रूर लगाता है। यूएन एक ऐसा मंच है जहाँ दुनिया के देश अमेरिका के गलत फैसलों की आलोचना कर सकते हैं।
     </div>
-<h2 class="sub-header">3. यूएन की प्रासंगिकता</h2>
+<h2 class="sub-header topic-header">3. यूएन की प्रासंगिकता</h2>
 <p>क्या अमेरिका के वर्चस्व के समय यूएन की ज़रूरत है? हाँ, क्योंकि अमेरिका भी जानता है कि उसे अपनी कुछ गतिविधियों के लिए पूरी दुनिया के देशों की सहमति की ज़रूरत होती है, जो उसे केवल यूएन ही दिला सकता है।</p>
 </div>
 </body>
 </html>
-<br><br><hr><br><br>
+<br/><br/><hr/><br/><br/>
 <!DOCTYPE html>
 
 <html lang="hi">
 <head>
 <meta charset="utf-8"/>
 <style>
+        p, li, h1, h2, h3, h4, b, strong, td, th {
+            font-weight: 900 !important;
+            -webkit-text-stroke: 1.1px #000000;
+            text-shadow: 0 0 1px #000;
+        }
+        body, p, li, td, th, div, span {
+            font-size: 28pt !important;
+            line-height: 1.8 !important;
+        }
+        .ch4-content {
+            font-size: 28pt !important;
+            line-height: 1.8 !important;
+            padding: 10px !important;
+        }
+        /* Projector Banner Styles for Headings */
+        .hero-title, h1.section-header {
+            text-align: center !important;
+            color: #ffffff !important;
+            background-color: #064e3b !important; /* Dark Green Background */
+            border: 5px solid #10b981 !important;
+            border-radius: 20px !important;
+            padding: 30px !important;
+            margin-bottom: 50px !important;
+            font-size: 60pt !important;
+            font-weight: 900 !important;
+            box-shadow: 0 8px 25px rgba(6, 78, 59, 0.4) !important;
+        }
+        .part-header {
+            color: #7f1d1d !important;
+            background-color: #fee2e2 !important;
+            border-left: 18px solid #b91c1c !important;
+            padding: 22px 28px !important;
+            border-radius: 14px !important;
+            font-size: 46pt !important;
+            font-weight: 900 !important;
+            margin-top: 40px !important;
+            margin-bottom: 35px !important;
+            box-shadow: 0 6px 15px rgba(0,0,0,0.08) !important;
+        }
+        .topic-header, h2.sub-header {
+            color: #1e3a8a !important;
+            background-color: #eff6ff !important;
+            border-left: 16px solid #2563eb !important;
+            padding: 20px 26px !important;
+            border-radius: 12px !important;
+            font-size: 38pt !important;
+            font-weight: 900 !important;
+            margin-top: 45px !important;
+            margin-bottom: 30px !important;
+        }
+        .subtopic-header {
+            color: #4c1d95 !important;
+            background-color: #f3e8ff !important;
+            border-left: 14px solid #7c3aed !important;
+            padding: 18px 24px !important;
+            border-radius: 10px !important;
+            font-size: 32pt !important;
+            font-weight: 900 !important;
+            margin-top: 40px !important;
+            margin-bottom: 25px !important;
+        }
+        .box-header {
+            color: #166534 !important;
+            background-color: #f0fdf4 !important;
+            border-left: 12px solid #16a34a !important;
+            padding: 16px 20px !important;
+            border-radius: 10px !important;
+            font-size: 30pt !important;
+            font-weight: 900 !important;
+        }
+        /* Highlights */
+        b, strong {
+            color: #b91c1c !important; /* Dark Red */
+            font-weight: 900 !important;
+        }
+        .blue-highlight, b.blue-text, strong.blue-text {
+            color: #1e3a8a !important;
+        }
+        .keyword-box, .un-card, .highlight-box {
+            font-size: 28pt !important;
+            line-height: 1.8 !important;
+            padding: 25px !important;
+            margin: 30px 0 !important;
+        }
+        .leader-bio-text { flex: 1; font-size: 28pt !important; }
+        .illustration-box { border: 4px solid #cbd5e1 !important; border-radius: 12px; padding: 20px; background-color: #ffffff; margin-top: 25px; }
+        .illustration-explanation { border-left: 6px solid #cbd5e1 !important; padding-left: 15px; font-size: 28pt !important; line-height: 1.6 !important; text-align: left; margin-top: 15px; }
+
+
         .ch4-content { font-family: 'Nirmala UI', 'Arial', sans-serif; line-height: 2.2; font-size: 24pt; color: #1a202c; padding: 40px; }
         .section-header { color: #065f46; border-bottom: 5px solid #10b981; padding-bottom: 15px; font-size: 40pt; margin-bottom: 30px; }
         .sub-header { color: #047857; font-size: 38pt; margin-top: 50px; }
@@ -618,57 +1232,146 @@
 </head>
 <body>
 <div class="ch4-content">
-<h1 class="section-header">अन्य महत्वपूर्ण अंतरराष्ट्रीय संस्थाएं - भाग 6</h1>
+<h1 class="section-header hero-title">अन्य महत्वपूर्ण अंतरराष्ट्रीय संस्थाएं - भाग 6</h1>
 <p>संयुक्त राष्ट्र संघ के विभिन्न अंगों के अतिरिक्त, दुनिया में कुछ स्वतंत्र एजेंसियां भी हैं जो वैश्विक अर्थव्यवस्था, व्यापार और सुरक्षा के नियम तय करती हैं।</p>
-<h2 class="sub-header">1. अंतरराष्ट्रीय मुद्रा कोष (IMF)</h2>
+<h2 class="sub-header topic-header">1. अंतरराष्ट्रीय मुद्रा कोष (IMF)</h2>
 <!-- IMF Logo Bio Box (REAL CROP) -->
 <div class="leader-bio-box">
 <img alt="IMF Logo" src="images/ch4/page_3_img_2.webp"/>
 <div class="leader-bio-text">
-<h3><b>अंतरराष्ट्रीय मुद्रा कोष (अंतरराष्ट्रीय Monetary Fund - IMF)</b></h3>
+<h3 class="subtopic-header"><b>अंतरराष्ट्रीय मुद्रा कोष (अंतरराष्ट्रीय Monetary Fund - IMF)</b></h3>
 <p>1944 में स्थापित यह संस्था वैश्विक वित्तीय प्रणाली की देखरेख करती है और सदस्य देशों को वित्तीय सहायता (Loans) प्रदान करती है, विशेषकर उन देशों को जो भुगतान संतुलन (Balance of Payments) के गंभीर संकट से जूझ रहे होते हैं। इसके वोटिंग अधिकारों पर अमेरिका और विकसित देशों का तीव्र प्रभाव है।</p>
 </div>
 </div>
-<h2 class="sub-header">2. विश्व बैंक (World Bank)</h2>
+<h2 class="sub-header topic-header">2. विश्व बैंक (World Bank)</h2>
 <!-- World Bank Logo Bio Box (REAL CROP) -->
 <div class="leader-bio-box">
 <img alt="World Bank Logo" src="images/ch4/page_9_img_1.webp"/>
 <div class="leader-bio-text">
-<h3><b>विश्व बैंक (World Bank)</b></h3>
+<h3 class="subtopic-header"><b>विश्व बैंक (World Bank)</b></h3>
 <p>द्वितीय विश्वयुद्ध के दौरान 1944 में इसकी स्थापना की गई थी। यह सदस्य देशों को विकासशील कार्यों के लिए दीर्घकालिक वित्तीय सहायता और तकनीकी सलाह प्रदान करता है। इसका मुख्य ध्यान मानवीय विकास, बुनियादी ढांचा विकास और गरीबी उन्मूलन पर है।</p>
 </div>
 </div>
 <div class="info-card">
 <b>महत्वपूर्ण अंतर:</b> IMF अल्पकालिक वित्तीय संकट को ठीक करने के लिए ऋण देता है, जबकि विश्व बैंक दीर्घकालिक ढांचागत विकास और गरीबी उन्मूलन के लिए ऋण देता है।
     </div>
-<h2 class="sub-header">3. विश्व व्यापार संगठन (WTO)</h2>
+<h2 class="sub-header topic-header">3. विश्व व्यापार संगठन (WTO)</h2>
 <!-- WTO Logo Bio Box (REAL CROP) -->
 <div class="leader-bio-box">
 <img alt="WTO Logo" src="images/ch4/page_13_img_2.webp"/>
 <div class="leader-bio-text">
-<h3><b>विश्व व्यापार संगठन (World Trade Organization - WTO)</b></h3>
+<h3 class="subtopic-header"><b>विश्व व्यापार संगठन (World Trade Organization - WTO)</b></h3>
 <p>1 जनवरी 1995 को इसकी स्थापना **'गैट' (GATT - General Agreement on Tariffs और Trade)** के उत्तराधिकारी के रूप में की गई। यह पूरी दुनिया में बहुपक्षीय व्यापार के नियम बनाता है और वैश्विक व्यापार को बाधा रहित (Free Trade) बनाने के लिए काम करता है।</p>
 </div>
 </div>
-<h2 class="sub-header">4. अंतरराष्ट्रीय परमाणु ऊर्जा एजेंसी (IAEA)</h2>
+<h2 class="sub-header topic-header">4. अंतरराष्ट्रीय परमाणु ऊर्जा एजेंसी (IAEA)</h2>
 <!-- IAEA Logo Bio Box (REAL CROP) -->
 <div class="leader-bio-box">
 <img alt="IAEA Logo" src="images/ch4/page_14_img_2.webp"/>
 <div class="leader-bio-text">
-<h3><b>अंतरराष्ट्रीय परमाणु ऊर्जा एजेंसी (IAEA - अंतरराष्ट्रीय Atomic Energy Agency)</b></h3>
+<h3 class="subtopic-header"><b>अंतरराष्ट्रीय परमाणु ऊर्जा एजेंसी (IAEA - अंतरराष्ट्रीय Atomic Energy Agency)</b></h3>
 <p>इस संस्था की स्थापना 1957 में अमेरिका के राष्ट्रपति ड्वाइट आइजनहावर के "अणु शांति के लिए" (Atoms for Peace) प्रस्ताव के तहत हुई थी। इसका उद्देश्य परमाणु ऊर्जा के केवल असैन्य और शांतिपूर्ण कार्यों (जैसे चिकित्सा और बिजली उत्पादन) को बढ़ावा देना तथा देशों को परमाणु बम बनाने से रोकना है।</p>
 </div>
 </div>
 </div>
 </body>
 </html>
-<br><br><hr><br><br>
+<br/><br/><hr/><br/><br/>
 <!DOCTYPE html>
 
 <html lang="hi">
 <head>
 <meta charset="utf-8"/>
 <style>
+        p, li, h1, h2, h3, h4, b, strong, td, th {
+            font-weight: 900 !important;
+            -webkit-text-stroke: 1.1px #000000;
+            text-shadow: 0 0 1px #000;
+        }
+        body, p, li, td, th, div, span {
+            font-size: 28pt !important;
+            line-height: 1.8 !important;
+        }
+        .ch4-content {
+            font-size: 28pt !important;
+            line-height: 1.8 !important;
+            padding: 10px !important;
+        }
+        /* Projector Banner Styles for Headings */
+        .hero-title, h1.section-header {
+            text-align: center !important;
+            color: #ffffff !important;
+            background-color: #064e3b !important; /* Dark Green Background */
+            border: 5px solid #10b981 !important;
+            border-radius: 20px !important;
+            padding: 30px !important;
+            margin-bottom: 50px !important;
+            font-size: 60pt !important;
+            font-weight: 900 !important;
+            box-shadow: 0 8px 25px rgba(6, 78, 59, 0.4) !important;
+        }
+        .part-header {
+            color: #7f1d1d !important;
+            background-color: #fee2e2 !important;
+            border-left: 18px solid #b91c1c !important;
+            padding: 22px 28px !important;
+            border-radius: 14px !important;
+            font-size: 46pt !important;
+            font-weight: 900 !important;
+            margin-top: 40px !important;
+            margin-bottom: 35px !important;
+            box-shadow: 0 6px 15px rgba(0,0,0,0.08) !important;
+        }
+        .topic-header, h2.sub-header {
+            color: #1e3a8a !important;
+            background-color: #eff6ff !important;
+            border-left: 16px solid #2563eb !important;
+            padding: 20px 26px !important;
+            border-radius: 12px !important;
+            font-size: 38pt !important;
+            font-weight: 900 !important;
+            margin-top: 45px !important;
+            margin-bottom: 30px !important;
+        }
+        .subtopic-header {
+            color: #4c1d95 !important;
+            background-color: #f3e8ff !important;
+            border-left: 14px solid #7c3aed !important;
+            padding: 18px 24px !important;
+            border-radius: 10px !important;
+            font-size: 32pt !important;
+            font-weight: 900 !important;
+            margin-top: 40px !important;
+            margin-bottom: 25px !important;
+        }
+        .box-header {
+            color: #166534 !important;
+            background-color: #f0fdf4 !important;
+            border-left: 12px solid #16a34a !important;
+            padding: 16px 20px !important;
+            border-radius: 10px !important;
+            font-size: 30pt !important;
+            font-weight: 900 !important;
+        }
+        /* Highlights */
+        b, strong {
+            color: #b91c1c !important; /* Dark Red */
+            font-weight: 900 !important;
+        }
+        .blue-highlight, b.blue-text, strong.blue-text {
+            color: #1e3a8a !important;
+        }
+        .keyword-box, .un-card, .highlight-box {
+            font-size: 28pt !important;
+            line-height: 1.8 !important;
+            padding: 25px !important;
+            margin: 30px 0 !important;
+        }
+        .leader-bio-text { flex: 1; font-size: 28pt !important; }
+        .illustration-box { border: 4px solid #cbd5e1 !important; border-radius: 12px; padding: 20px; background-color: #ffffff; margin-top: 25px; }
+        .illustration-explanation { border-left: 6px solid #cbd5e1 !important; padding-left: 15px; font-size: 28pt !important; line-height: 1.6 !important; text-align: left; margin-top: 15px; }
+
+
         .ch4-content { font-family: 'Nirmala UI', 'Arial', sans-serif; line-height: 2.2; font-size: 24pt; color: #1a202c; padding: 40px; }
         .section-header { color: #854d0e; border-bottom: 5px solid #fbbf24; padding-bottom: 15px; font-size: 40pt; margin-bottom: 30px; }
         .sub-header { color: #b45309; font-size: 38pt; margin-top: 50px; }
@@ -687,45 +1390,134 @@
 </head>
 <body>
 <div class="ch4-content">
-<h1 class="section-header">मानवाधिकार और गैर-सरकारी संगठन (NGOs) - भाग 7</h1>
+<h1 class="section-header hero-title">मानवाधिकार और गैर-सरकारी संगठन (NGOs) - भाग 7</h1>
 <p>वैश्विक व्यवस्था में शांति और मानवाधिकारों की रक्षा का कार्य केवल सरकारों तक सीमित नहीं है, बल्कि कई **गैर-सरकारी संगठन (NGOs)** स्वतंत्र रूप से रिपोर्टें प्रकाशित कर सरकारों पर मानवाधिकारों के सम्मान के लिए दबाव बनाते हैं।</p>
-<h2 class="sub-header">1. एमनेस्टी इंटरनेशनल (Amnesty अंतरराष्ट्रीय)</h2>
+<h2 class="sub-header topic-header">1. एमनेस्टी इंटरनेशनल (Amnesty अंतरराष्ट्रीय)</h2>
 <!-- Amnesty Logo Bio Box (REAL CROP) -->
 <div class="leader-bio-box">
 <img alt="Amnesty Logo" src="images/ch4/page_15_img_2.webp"/>
 <div class="leader-bio-text">
-<h3><b>एमनेस्टी इंटरनेशनल (Amnesty अंतरराष्ट्रीय)</b></h3>
+<h3 class="subtopic-header"><b>एमनेस्टी इंटरनेशनल (Amnesty अंतरराष्ट्रीय)</b></h3>
 <p>यह एक वैश्विक स्वयंसेवी मानवाधिकार संस्था है। यह पूरी दुनिया में मानवाधिकारों के हनन पर शोध करती है और रिपोर्ट प्रकाशित करती. है। इसका मुख्य उद्देश्य राजनीतिक बंदियों की रिहाई सुनिश्चित करना, यातना और मृत्युदंड के खिलाफ अभियान चलाना है। इसकी रिपोर्टें वैश्विक जनमत तैयार करने में अत्यंत प्रभावशाली होती हैं।</p>
 </div>
 </div>
-<h2 class="sub-header">2. ह्यूमन राइट्स वॉच (Human Rights Watch)</h2>
+<h2 class="sub-header topic-header">2. ह्यूमन राइट्स वॉच (Human Rights Watch)</h2>
 <!-- HRW Logo Bio Box (REAL CROP) -->
 <div class="leader-bio-box">
 <img alt="HRW Logo" src="images/ch4/page_16_img_1.webp"/>
 <div class="leader-bio-text">
-<h3><b>ह्यूमन राइट्स वॉच (Human Rights Watch)</b></h3>
+<h3 class="subtopic-header"><b>ह्यूमन राइट्स वॉच (Human Rights Watch)</b></h3>
 <p>यह एक अन्य अत्यंत महत्वपूर्ण अंतरराष्ट्रीय एनजीओ है जो पूरी दुनिया में मानवाधिकारों के हनन की जांच और वकालत करता है। यह बाल श्रम, बच्चों को जबरन सैनिक बनाने, युद्ध अपराधों, और महिलाओं के खिलाफ हिंसा जैसे गंभीर मुद्दों पर अपनी रिपोर्ट के माध्यम से दुनिया भर की मीडिया का ध्यान आकर्षित करता है।</p>
 </div>
 </div>
-<h2 class="sub-header">3. विश्व स्वास्थ्य संगठन (WHO)</h2>
+<h2 class="sub-header topic-header">3. विश्व स्वास्थ्य संगठन (WHO)</h2>
 <!-- WHO Logo Bio Box (REAL CROP) -->
 <div class="leader-bio-box">
 <img alt="WHO Logo" src="images/ch4/who_logo.webp"/>
 <div class="leader-bio-text">
-<h3><b>विश्व स्वास्थ्य संगठन (World Health Organization - WHO)</b></h3>
+<h3 class="subtopic-header"><b>विश्व स्वास्थ्य संगठन (World Health Organization - WHO)</b></h3>
 <p>7 अप्रैल 1948 को स्थापित यह संयुक्त राष्ट्र की एक विशेष एजेंसी है जो अंतरराष्ट्रीय स्तर पर जन स्वास्थ्य (Public Health) को बढ़ावा देती, है, महामारियों (जैसे कोरोना, पोलियो) के खिलाफ वैश्विक अभियान चलाती है, और विभिन्न स्वास्थ्य मानकों को तय करती है।</p>
 </div>
 </div>
 </div>
 </body>
 </html>
-<br><br><hr><br><br>
+<br/><br/><hr/><br/><br/>
 <!DOCTYPE html>
 
 <html lang="hi">
 <head>
 <meta charset="utf-8"/>
 <style>
+        p, li, h1, h2, h3, h4, b, strong, td, th {
+            font-weight: 900 !important;
+            -webkit-text-stroke: 1.1px #000000;
+            text-shadow: 0 0 1px #000;
+        }
+        body, p, li, td, th, div, span {
+            font-size: 28pt !important;
+            line-height: 1.8 !important;
+        }
+        .ch4-content {
+            font-size: 28pt !important;
+            line-height: 1.8 !important;
+            padding: 10px !important;
+        }
+        /* Projector Banner Styles for Headings */
+        .hero-title, h1.section-header {
+            text-align: center !important;
+            color: #ffffff !important;
+            background-color: #064e3b !important; /* Dark Green Background */
+            border: 5px solid #10b981 !important;
+            border-radius: 20px !important;
+            padding: 30px !important;
+            margin-bottom: 50px !important;
+            font-size: 60pt !important;
+            font-weight: 900 !important;
+            box-shadow: 0 8px 25px rgba(6, 78, 59, 0.4) !important;
+        }
+        .part-header {
+            color: #7f1d1d !important;
+            background-color: #fee2e2 !important;
+            border-left: 18px solid #b91c1c !important;
+            padding: 22px 28px !important;
+            border-radius: 14px !important;
+            font-size: 46pt !important;
+            font-weight: 900 !important;
+            margin-top: 40px !important;
+            margin-bottom: 35px !important;
+            box-shadow: 0 6px 15px rgba(0,0,0,0.08) !important;
+        }
+        .topic-header, h2.sub-header {
+            color: #1e3a8a !important;
+            background-color: #eff6ff !important;
+            border-left: 16px solid #2563eb !important;
+            padding: 20px 26px !important;
+            border-radius: 12px !important;
+            font-size: 38pt !important;
+            font-weight: 900 !important;
+            margin-top: 45px !important;
+            margin-bottom: 30px !important;
+        }
+        .subtopic-header {
+            color: #4c1d95 !important;
+            background-color: #f3e8ff !important;
+            border-left: 14px solid #7c3aed !important;
+            padding: 18px 24px !important;
+            border-radius: 10px !important;
+            font-size: 32pt !important;
+            font-weight: 900 !important;
+            margin-top: 40px !important;
+            margin-bottom: 25px !important;
+        }
+        .box-header {
+            color: #166534 !important;
+            background-color: #f0fdf4 !important;
+            border-left: 12px solid #16a34a !important;
+            padding: 16px 20px !important;
+            border-radius: 10px !important;
+            font-size: 30pt !important;
+            font-weight: 900 !important;
+        }
+        /* Highlights */
+        b, strong {
+            color: #b91c1c !important; /* Dark Red */
+            font-weight: 900 !important;
+        }
+        .blue-highlight, b.blue-text, strong.blue-text {
+            color: #1e3a8a !important;
+        }
+        .keyword-box, .un-card, .highlight-box {
+            font-size: 28pt !important;
+            line-height: 1.8 !important;
+            padding: 25px !important;
+            margin: 30px 0 !important;
+        }
+        .leader-bio-text { flex: 1; font-size: 28pt !important; }
+        .illustration-box { border: 4px solid #cbd5e1 !important; border-radius: 12px; padding: 20px; background-color: #ffffff; margin-top: 25px; }
+        .illustration-explanation { border-left: 6px solid #cbd5e1 !important; padding-left: 15px; font-size: 28pt !important; line-height: 1.6 !important; text-align: left; margin-top: 15px; }
+
+
         .ch4-content { font-family: 'Nirmala UI', 'Arial', sans-serif; line-height: 2.2; font-size: 24pt; color: #1a202c; padding: 40px; }
         .section-header { color: #1e3a8a; border-bottom: 5px solid #3b82f6; padding-bottom: 15px; font-size: 40pt; margin-bottom: 30px; }
         .sub-header { color: #1d4ed8; font-size: 38pt; margin-top: 50px; }
@@ -739,9 +1531,9 @@
 </head>
 <body>
 <div class="ch4-content">
-<h1 class="section-header">निष्कर्ष: यूएन का भविष्य और इसकी प्रासंगिकता - भाग 8</h1>
+<h1 class="section-header hero-title">निष्कर्ष: यूएन का भविष्य और इसकी प्रासंगिकता - भाग 8</h1>
 <p>आज की दुनिया 1945 की तुलना में बहुत बदल चुकी है। क्या संयुक्त राष्ट्र संघ आज भी उतना ही प्रासंगिक (Relevant) है? इस पर दुनिया भर के विद्वानों की अलग-अलग राय है, लेकिन एक बात निश्चित है—यूएन के बिना दुनिया और भी खतरनाक होती।</p>
-<h2 class="sub-header">1. यूएन की ज़रूरत क्यों बनी रहेगी?</h2>
+<h2 class="sub-header topic-header">1. यूएन की ज़रूरत क्यों बनी रहेगी?</h2>
 <p>भविष्य में भी अंतरराष्ट्रीय संगठनों की भूमिका बढ़ती ही जाएगी, क्योंकि:</p>
 <ul style="list-style-type: square; margin-left: 40px;">
 <li><b>वैश्विक समस्याएं:</b> जलवायु परिवर्तन (Climate Change), परमाणु हथियार और महामारियां (जैसे कोविड-19) ऐसी समस्याएं हैं जिनका समाधान कोई एक देश अकेले नहीं कर सकता।</li>
@@ -751,24 +1543,24 @@
 <!-- NCERT Cartoon Box 1 (REAL CROP - PEACEKEEPER CARTOON) -->
 <div class="illustration-box" style="border-color: #1e3a8a !important; margin-top: 35px; margin-bottom: 35px; border: 4px solid #1e3a8a; border-radius: 10px;">
 <img alt="Peacekeeper Cartoon" class="illustration-img" src="images/ch4/page_12_img_1.webp" style="width: 100%; max-width: 850px; height: auto; max-height: 450px; object-fit: contain; display: block; margin: 0 auto; border: 4px solid #cbd5e1; border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.15);"/>
-<div class="illustration-explanation" style="border-left: 15px solid #1e3a8a; background: #eff6ff; padding: 25px; font-size: 18pt;">
-<b>एनसीईआरटी कार्टून: शांति स्थापना की लाचारी - दारफुर संकट (Helplessness of UN in Darfur Crisis):</b><br/>
-<b>कार्टून का विवरण:</b> कार्टूनिस्ट पेट बेगली (Pat Bagley) द्वारा बनाया गया यह कार्टून सूडान के दारफुर प्रांत में मानवीय संकट को दिखाता है, जिसमें पीड़ित व्यक्ति लाचार पड़ा है और संयुक्त राष्ट्र की निष्क्रियता पर टिप्पणी की गई है।<br/>
+<div class="illustration-explanation" style="border-left: 15px solid #1e3a8a; background: #eff6ff; padding: 25px; ">
+<b>एनसीईआरटी कार्टून: शांति स्थापना की लाचारी - दारफुर संकट (Helplessness of UN in Darfur Crisis):</b><br>
+<b>कार्टून का विवरण:</b> कार्टूनिस्ट पेट बेगली (Pat Bagley) द्वारा बनाया गया यह कार्टून सूडान के दारफुर प्रांत में मानवीय संकट को दिखाता है, जिसमें पीड़ित व्यक्ति लाचार पड़ा है और संयुक्त राष्ट्र की निष्क्रियता पर टिप्पणी की गई है।<br>
 <b>कार्टून का संदेश:</b> यह दर्शाता है कि सुरक्षा परिषद के स्थायी देशों के बीच राजनीतिक मतभेदों और देरी के कारण कैसे संयुक्त राष्ट्र बड़ी मानवीय आपदाओं और नरसंहारों को रोकने में असफल हो जाता है।
-    </div>
+    </br></br></div>
 <!-- NCERT Image 2 (REAL CROP - PEACEKEEPING MAP) -->
 <div class="illustration-box" style="border-color: #1e3a8a !important; margin-top: 35px; margin-bottom: 35px; border: 4px solid #1e3a8a; border-radius: 10px;">
 <img alt="UN Peacekeeping Missions Map" class="illustration-img" src="images/ch4/un_peacekeeping_map.webp" style="width: 100%; max-width: 850px; height: auto; max-height: 450px; object-fit: contain; display: block; margin: 0 auto; border: 4px solid #cbd5e1; border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.15);"/>
-<div class="illustration-explanation" style="border-left: 15px solid #1e3a8a; background: #eff6ff; padding: 25px; font-size: 18pt;">
-<b>एनसीईआरटी मानचित्र: संयुक्त राष्ट्र शांति स्थापना अभियान (Map of UN Peacekeeping Missions):</b><br/>
-<b>मानचित्र का विवरण:</b> विश्व भर के संघर्षग्रस्त क्षेत्रों (जैसे लेबनान, साइप्रस, लाइबेरिया, कांगो, दक्षिण सूडान आदि) में संयुक्त राष्ट्र द्वारा चलाए जा रहे विभिन्न शांति अभियानों की भौगोलिक स्थिति को दर्शाता आधिकारिक मानचित्र।<br/>
+<div class="illustration-explanation" style="border-left: 15px solid #1e3a8a; background: #eff6ff; padding: 25px; ">
+<b>एनसीईआरटी मानचित्र: संयुक्त राष्ट्र शांति स्थापना अभियान (Map of UN Peacekeeping Missions):</b><br>
+<b>मानचित्र का विवरण:</b> विश्व भर के संघर्षग्रस्त क्षेत्रों (जैसे लेबनान, साइप्रस, लाइबेरिया, कांगो, दक्षिण सूडान आदि) में संयुक्त राष्ट्र द्वारा चलाए जा रहे विभिन्न शांति अभियानों की भौगोलिक स्थिति को दर्शाता आधिकारिक मानचित्र।<br>
 <b>संदेश:</b> यह मानचित्र वैश्विक शांति स्थापित करने में यूएन की विशाल पहुँच और सदस्य देशों द्वारा भेजे जाने वाले शांति सैनिकों (Peacekeepers) की क्रियाशीलता को दर्शाता है।
-        </div>
+        </br></br></div>
 </div>
 <div class="keyword-box">
 <b>प्रासंगिकता (Relevance):</b> किसी संस्था या विचार की वह क्षमता जिसके द्वारा वह वर्तमान समय की चुनौतियों का सामना करने में सक्षम हो। यूएन आज भी दुनिया की सबसे प्रासंगिक संस्था है।
     </div>
-<h2 class="sub-header">3. संगठन का भविष्य - चुनौतियां और समाधान</h2>
+<h2 class="sub-header topic-header">3. संगठन का भविष्य - चुनौतियां और समाधान</h2>
 <p>भविष्य में यूएन को अधिक लोकतांत्रिक और प्रभावी बनाने के लिए कुछ बड़े कदम उठाने होंगे:</p>
 <ul style="list-style-type: disc; margin-left: 40px;">
 <li><b>संरचनात्मक बदलाव:</b> सुरक्षा परिषद का विस्तार करना और उभरती हुई शक्तियों (जैसे भारत) को स्थान देना।</li>
@@ -778,9 +1570,9 @@
 <div class="quote-box">
         "संयुक्त राष्ट्र पूरी दुनिया की एक साझी विरासत है। इसे सफल बनाना केवल यूएन का काम नहीं, बल्कि दुनिया के हर देश की जिम्मेदारी है।"
     </div>
-<h2 class="sub-header">2. संयुक्त राष्ट्र की 60वीं वर्षगांठ (2005) पर लिए गए प्रमुख निर्णय (Key Decisions of 2005 Summit)</h2>
+<h2 class="sub-header topic-header">2. संयुक्त राष्ट्र की 60वीं वर्षगांठ (2005) पर लिए गए प्रमुख निर्णय (Key Decisions of 2005 Summit)</h2>
 <p>सितंबर 2005 में संयुक्त राष्ट्र संघ के गठन के 60 वर्ष पूरे होने पर आयोजित शिखर सम्मेलन में दुनिया भर के राष्ट्राध्यक्षों ने भाग लिया। इस ऐतिहासिक बैठक में यूएन को 21वीं सदी के अनुकूल और अधिक प्रासंगिक बनाने के लिए निम्नलिखित <b>7 महत्वपूर्ण निर्णय</b> लिए गए:</p>
-<table style="width: 100%; border-collapse: collapse; margin: 30px 0; font-size: 18pt; border: 3px solid #cbd5e1;">
+<table style="width: 100%; border-collapse: collapse; margin: 30px 0;  border: 3px solid #cbd5e1;">
 <thead>
 <tr style="background-color: #1e3a8a; color: white;">
 <th style="padding: 15px; border: 1px solid #cbd5e1; text-align: left; width: 300px; font-weight: 900 !important; font-family: 'Nirmala UI', 'Arial', sans-serif">निर्णय / कदम</th>
@@ -818,7 +1610,7 @@
 </tr>
 </tbody>
 </table>
-<h2 class="sub-header">4. निष्कर्ष (Summary)</h2>
+<h2 class="sub-header topic-header">4. निष्कर्ष (Summary)</h2>
 <p>अध्याय का सार यह है कि अंतरराष्ट्रीय संगठन एक 'परफेक्ट' समाधान नहीं हैं, लेकिन वे उस अराजकता और युद्ध से कहीं बेहतर हैं जो उनकी अनुपस्थिति में होगा। सहयोग ही एकमात्र रास्ता है और यूएन उस सहयोग का प्रधान केंद्र है।</p>
 <div class="keyword-box">
 <b>अराजकता (Anarchy):</b> ऐसी स्थिति जहाँ कोई केंद्रीय नियंत्रण न हो और हर कोई अपनी मनमानी करे। अंतरराष्ट्रीय राजनीति में यूएन इस अराजकता को रोकने का काम करता है।
@@ -826,13 +1618,102 @@
 </div>
 </div></body>
 </html>
-<br><br><hr><br><br>
+<br/><br/><hr/><br/><br/>
 <!DOCTYPE html>
 
 <html lang="hi">
 <head>
 <meta charset="utf-8"/>
 <style>
+        p, li, h1, h2, h3, h4, b, strong, td, th {
+            font-weight: 900 !important;
+            -webkit-text-stroke: 1.1px #000000;
+            text-shadow: 0 0 1px #000;
+        }
+        body, p, li, td, th, div, span {
+            font-size: 28pt !important;
+            line-height: 1.8 !important;
+        }
+        .ch4-content {
+            font-size: 28pt !important;
+            line-height: 1.8 !important;
+            padding: 10px !important;
+        }
+        /* Projector Banner Styles for Headings */
+        .hero-title, h1.section-header {
+            text-align: center !important;
+            color: #ffffff !important;
+            background-color: #064e3b !important; /* Dark Green Background */
+            border: 5px solid #10b981 !important;
+            border-radius: 20px !important;
+            padding: 30px !important;
+            margin-bottom: 50px !important;
+            font-size: 60pt !important;
+            font-weight: 900 !important;
+            box-shadow: 0 8px 25px rgba(6, 78, 59, 0.4) !important;
+        }
+        .part-header {
+            color: #7f1d1d !important;
+            background-color: #fee2e2 !important;
+            border-left: 18px solid #b91c1c !important;
+            padding: 22px 28px !important;
+            border-radius: 14px !important;
+            font-size: 46pt !important;
+            font-weight: 900 !important;
+            margin-top: 40px !important;
+            margin-bottom: 35px !important;
+            box-shadow: 0 6px 15px rgba(0,0,0,0.08) !important;
+        }
+        .topic-header, h2.sub-header {
+            color: #1e3a8a !important;
+            background-color: #eff6ff !important;
+            border-left: 16px solid #2563eb !important;
+            padding: 20px 26px !important;
+            border-radius: 12px !important;
+            font-size: 38pt !important;
+            font-weight: 900 !important;
+            margin-top: 45px !important;
+            margin-bottom: 30px !important;
+        }
+        .subtopic-header {
+            color: #4c1d95 !important;
+            background-color: #f3e8ff !important;
+            border-left: 14px solid #7c3aed !important;
+            padding: 18px 24px !important;
+            border-radius: 10px !important;
+            font-size: 32pt !important;
+            font-weight: 900 !important;
+            margin-top: 40px !important;
+            margin-bottom: 25px !important;
+        }
+        .box-header {
+            color: #166534 !important;
+            background-color: #f0fdf4 !important;
+            border-left: 12px solid #16a34a !important;
+            padding: 16px 20px !important;
+            border-radius: 10px !important;
+            font-size: 30pt !important;
+            font-weight: 900 !important;
+        }
+        /* Highlights */
+        b, strong {
+            color: #b91c1c !important; /* Dark Red */
+            font-weight: 900 !important;
+        }
+        .blue-highlight, b.blue-text, strong.blue-text {
+            color: #1e3a8a !important;
+        }
+        .keyword-box, .un-card, .highlight-box {
+            font-size: 28pt !important;
+            line-height: 1.8 !important;
+            padding: 25px !important;
+            margin: 30px 0 !important;
+        }
+        .leader-bio-text { flex: 1; font-size: 28pt !important; }
+        .illustration-box { border: 4px solid #cbd5e1 !important; border-radius: 12px; padding: 20px; background-color: #ffffff; margin-top: 25px; }
+        .illustration-explanation { border-left: 6px solid #cbd5e1 !important; padding-left: 15px; font-size: 28pt !important; line-height: 1.6 !important; text-align: left; margin-top: 15px; }
+
+
         .ch4-content { font-family: 'Nirmala UI', 'Arial', sans-serif; line-height: 2.2; font-size: 24pt; color: #1a202c; padding: 40px; }
         .section-header { color: #1e3a8a; border-bottom: 5px solid #3b82f6; padding-bottom: 15px; font-size: 40pt; margin-bottom: 30px; }
         .sub-header { color: #2563eb; font-size: 38pt; margin-top: 50px; }
@@ -846,8 +1727,8 @@
 </head>
 <body>
 <div class="ch4-content">
-<h1 class="section-header">अध्याय 4: बोर्ड परीक्षा विशेष (Board Exam Special)</h1>
-<h2 class="sub-header">1. मानचित्र कार्य (Map Work) - अत्यंत महत्वपूर्ण</h2>
+<h1 class="section-header hero-title">अध्याय 4: बोर्ड परीक्षा विशेष (Board Exam Special)</h1>
+<h2 class="sub-header topic-header">1. मानचित्र कार्य (Map Work) - अत्यंत महत्वपूर्ण</h2>
 <p>बोर्ड परीक्षा में अंतरराष्ट्रीय संगठनों के मुख्यालयों और पी-5 देशों से जुड़े मैप प्रश्न अक्सर पूछे जाते हैं:</p>
 <div class="map-box">
 <b>मैप पर पहचानें:</b>
@@ -859,7 +1740,7 @@
 <li><b>आईएमएफ और विश्व बैंक के मुख्यालय:</b> वॉशिंगटन डीसी (अमेरिका)।</li>
 </ul>
 </div>
-<h2 class="sub-header">2. पिछले 10 वर्षों के बोर्ड प्रश्न (Previous Year Questions)</h2>
+<h2 class="sub-header topic-header">2. पिछले 10 वर्षों के बोर्ड प्रश्न (Previous Year Questions)</h2>
 <p>इन प्रश्नों का अभ्यास आपको बोर्ड परीक्षा के लिए पूरी तरह तैयार कर देगा:</p>
 <div class="pyq-box">
 <b>2019-2023 के प्रमुख प्रश्न:</b>
@@ -879,7 +1760,7 @@
 <li>Q8. अंतरराष्ट्रीय परमाणु ऊर्जा एजेंसी (IAEA) के मुख्य कार्यों का वर्णन करें। (2 अंक)</li>
 </ul>
 </div>
-<h2 class="sub-header">3. मास्टर गुरुमन्त्र (Final Tips)</h2>
+<h2 class="sub-header topic-header">3. मास्टर गुरुमन्त्र (Final Tips)</h2>
 <ul class="qa-list" style="list-style-type: square;">
 <li><b>मुख्यालय:</b> न्यूयॉर्क और वाशिंगटन डीसी में स्थित संस्थानों को अच्छी तरह याद रखें।</li>
 <li><b>सुरक्षा परिषद:</b> P-5 देशों के नाम और उनकी वीटो पावर पर विशेष ध्यान दें।</li>
@@ -890,9 +1771,8 @@
 </div>
 </body>
 </html>
-    </div>
-
-    <script>
+</div>
+<script>
     async function copyToGoogleDoc() {
         const btn = document.getElementById('mainCopyBtn');
         const status = document.getElementById('status');
@@ -917,6 +1797,5 @@
         }
     }
     </script>
-
 </body>
 </html>
