@@ -1,9 +1,98 @@
 <!DOCTYPE html>
+
 <html lang="hi">
 <head>
-    <meta charset="UTF-8">
-    <title>Chapter 14 COPY MASTER - Premium Notes</title>
-    <style>
+<meta charset="utf-8"/>
+<title>Chapter 14 COPY MASTER - Premium Notes</title>
+<style>
+        p, li, h1, h2, h3, h4, b, strong, td, th {
+            font-weight: 900 !important;
+            -webkit-text-stroke: 1.1px #000000;
+            text-shadow: 0 0 1px #000;
+        }
+        body, p, li, td, th, div, span {
+            font-size: 28pt !important;
+            line-height: 1.8 !important;
+        }
+        .ch14-content {
+            font-size: 28pt !important;
+            line-height: 1.8 !important;
+            padding: 10px !important;
+        }
+        /* Projector Banner Styles for Headings */
+        .hero-title, h1.section-header {
+            text-align: center !important;
+            color: #ffffff !important;
+            background-color: #064e3b !important; /* Dark Green Background */
+            border: 5px solid #10b981 !important;
+            border-radius: 20px !important;
+            padding: 30px !important;
+            margin-bottom: 50px !important;
+            font-size: 60pt !important;
+            font-weight: 900 !important;
+            box-shadow: 0 8px 25px rgba(6, 78, 59, 0.4) !important;
+        }
+        .part-header {
+            color: #7f1d1d !important;
+            background-color: #fee2e2 !important;
+            border-left: 18px solid #b91c1c !important;
+            padding: 22px 28px !important;
+            border-radius: 14px !important;
+            font-size: 46pt !important;
+            font-weight: 900 !important;
+            margin-top: 40px !important;
+            margin-bottom: 35px !important;
+            box-shadow: 0 6px 15px rgba(0,0,0,0.08) !important;
+        }
+        .topic-header, h2.sub-header {
+            color: #1e3a8a !important;
+            background-color: #eff6ff !important;
+            border-left: 16px solid #2563eb !important;
+            padding: 20px 26px !important;
+            border-radius: 12px !important;
+            font-size: 38pt !important;
+            font-weight: 900 !important;
+            margin-top: 45px !important;
+            margin-bottom: 30px !important;
+        }
+        .subtopic-header {
+            color: #4c1d95 !important;
+            background-color: #f3e8ff !important;
+            border-left: 14px solid #7c3aed !important;
+            padding: 18px 24px !important;
+            border-radius: 10px !important;
+            font-size: 32pt !important;
+            font-weight: 900 !important;
+            margin-top: 40px !important;
+            margin-bottom: 25px !important;
+        }
+        .box-header {
+            color: #166534 !important;
+            background-color: #f0fdf4 !important;
+            border-left: 12px solid #16a34a !important;
+            padding: 16px 20px !important;
+            border-radius: 10px !important;
+            font-size: 30pt !important;
+            font-weight: 900 !important;
+        }
+        /* Highlights */
+        b, strong {
+            color: #b91c1c !important; /* Dark Red */
+            font-weight: 900 !important;
+        }
+        .blue-highlight, b.blue-text, strong.blue-text {
+            color: #1e3a8a !important;
+        }
+        .keyword-box, .story-box, .highlight-box {
+            font-size: 28pt !important;
+            line-height: 1.8 !important;
+            padding: 25px !important;
+            margin: 30px 0 !important;
+        }
+        .illustration-box { border: 4px solid #cbd5e1 !important; border-radius: 12px; padding: 20px; background-color: #ffffff; margin-top: 25px; }
+        .illustration-explanation { border-left: 6px solid #cbd5e1 !important; padding-left: 15px; font-size: 28pt !important; line-height: 1.6 !important; text-align: left; margin-top: 15px; }
+
+
         body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f1f5f9; margin: 0; padding: 20px; text-align: center; }
         .header { background: #1e293b; color: white; padding: 20px; border-radius: 10px; margin-bottom: 30px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
         .copy-btn { background-color: #2563eb; color: white; padding: 20px 40px; font-size: 24pt; border: none; border-radius: 50px; cursor: pointer; font-weight: 900; transition: all 0.3s; box-shadow: 0 10px 20px rgba(37, 99, 235, 0.4); }
@@ -43,7 +132,7 @@
         .illustration-explanation { border-left: 20px solid #000000 !important; font-size: 24pt !important; }
         
     </style>
-    <script>
+<script>
         function copyToGoogleDoc() {
             var content = document.getElementById('contentToCopy').innerHTML;
             
@@ -72,387 +161,329 @@
     </script>
 </head>
 <body>
-
-    <div class="header">
-        <h1>🚀 Chapter 14 (Full-Proof Copy Master)</h1>
-        <p>100% Google Docs Compatible with Images (Localhost-Sync)</p>
-    </div>
-
-    <button id="mainCopyBtn" class="copy-btn" onclick="copyToGoogleDoc()">📋 COPY EVERYTHING FOR GOOGLE DOCS</button>
-    <p id="status">✅ Copied Successfully! Now go to your Google Doc and Press Ctrl+V</p>
-
-    <div class="preview" id="contentToCopy">
-        <div style="font-family: 'Arial', verdana, sans-serif; font-size: 32pt; line-height: 2.0; color: #000000; font-weight: 900; -webkit-text-stroke: 1.2px #000000; text-shadow: 0 0 1px #000; padding: 20px;">
-            
-            <h1 style="color: #1e3a8a; font-size: 50pt; font-weight: 900; border-bottom: 5px solid #1e3a8a; padding-bottom: 15px; margin-top: 0; text-align: center;">अध्याय 14: क्षेत्रीय आकांक्षाएँ (Regional Aspirations)</h1>
-
-            <!-- SECTION 1: INTRODUCTION -->
-            <div style="background-color: #eff6ff; padding: 40px; border-radius: 12px; margin-bottom: 40px; border: 6px solid #93c5fd;">
-                <h2 style="color: #1e40af; font-size: 38pt; font-weight: 900; margin-top: 0;">1. क्षेत्रीय आकांक्षाएँ क्या हैं? (Rise of Regionalism)</h2>
-                <p>प्रिय विद्यार्थियों, भारत विविधताओं से भरा देश है। यहाँ विभिन्न भाषाएँ, संस्कृतियाँ, जातियाँ और भौगोलिक क्षेत्र मौजूद हैं। 1980 के दशक को <b>'स्वायत्तता के दशक'</b> के रूप में जाना जाता है, क्योंकि इस दौर में देश के विभिन्न हिस्सों से क्षेत्रीय स्वायत्तता और पहचान की मांग को लेकर अनेक हिंसक और अहिंसक आंदोलन उठ खड़े हुए।</p>
-                
-                <h3 style="color: #1e3a8a; font-size: 32pt; font-weight: 900; margin-top: 25px;">भारत का लोकतांत्रिक दृष्टिकोण (The Democratic Approach):</h3>
-                <p>दुनिया के कई देशों (जैसे सोवियत संघ या कई यूरोपीय देश) ने विविधता को राष्ट्र की एकता के लिए खतरा माना और उसे दबाने की कोशिश की, जिससे उनके टुकड़े हो गए। इसके विपरीत, भारत ने <b>लोकतांत्रिक दृष्टिकोण</b> अपनाया:</p>
-                <ul style="list-style-type: square; padding-left: 20px; line-height: 2.0;">
-                    <li><b>विविधता का सम्मान:</b> भारत ने क्षेत्रीय आकांक्षाओं को राष्ट्र-विरोधी मानने के बजाय उन्हें लोकतंत्र का एक सामान्य और अटूट हिस्सा माना।</li>
-                    <li><b>एकता और विविधता में संतुलन:</b> भारत ने 'विविधता में एकता' के सिद्धांत को अपनाया। देश की एकता को मजबूत करने के लिए क्षेत्रीय आकांक्षाओं को लोकतांत्रिक तरीके से स्थान दिया गया।</li>
-                    <li><b>संवैधानिक प्रावधान:</b> भारतीय संविधान की विभिन्न अनुसूचियों (जैसे छठी अनुसूची) और विभिन्न अनुच्छेदों में विशिष्ट क्षेत्रों (जैसे पूर्वोत्तर के राज्यों और जम्मू-कश्मीर) के लिए विशेष प्रावधान किए गए हैं ताकि वे अपनी संस्कृति और स्वायत्तता की रक्षा कर सकें।</li>
-                </ul>
-            </div>
-
-            <!-- SECTION 2: JAMMU & KASHMIR -->
-            <div style="background-color: #fffaf0; padding: 40px; border-radius: 12px; margin-bottom: 40px; border: 6px solid #fbd38d;">
-                <h2 style="color: #dd6b20; font-size: 40pt; font-weight: 900; margin-top: 0; border-bottom: 4px solid #dd6b20; padding-bottom: 10px;">2. जम्मू और कश्मीर का मुद्दा (Jammu and Kashmir Issue)</h2>
-                <p>जम्मू और कश्मीर का मुद्दा आजादी के समय से ही भारतीय राजनीति के सबसे जटिल मुद्दों में से एक रहा है। कश्मीर क्षेत्र के मुख्यतः तीन सामाजिक-राजनैतिक भाग हैं: <b>जम्मू</b> (मैदानी व पहाड़ी क्षेत्र, जहाँ हिंदू, मुस्लिम और सिख रहते हैं), <b>कश्मीर घाटी</b> (मुख्यतः मुस्लिम बाहुल्य और कश्मीरी भाषी), और <b>लद्दाख</b> (बौद्ध और मुस्लिम बाहुल्य पहाड़ी क्षेत्र)।</p>
-
-                <!-- NCERT Book Map/Illustration: Kashmir Intro -->
-                <div class="illustration-box">
-                    <img alt="NCERT Jammu and Kashmir Book Map Illustration" src="images/ch14/kashmir_intro.webp" class="illustration-img"/>
-                    <div class="illustration-explanation">
-                        <b>NCERT पुस्तक का मूल मानचित्र व चित्र (kashmir_intro.png):</b> यह एनसीईआरटी पाठ्यपुस्तक का मूल नक्शा एवं चित्र है जो जम्मू और कश्मीर के विविध सामाजिक-राजनीतिक क्षेत्रों (जम्मू, कश्मीर घाटी, लद्दाख) और सीमाओं की ऐतिहासिक स्थिति को स्पष्ट रूप से दर्शाता है।
+<div class="header">
+<h1>🚀 Chapter 14 (Full-Proof Copy Master)</h1>
+<p>100% Google Docs Compatible with Images (Localhost-Sync)</p>
+</div>
+<button class="copy-btn" id="mainCopyBtn" onclick="copyToGoogleDoc()">📋 COPY EVERYTHING FOR GOOGLE DOCS</button>
+<p id="status">✅ Copied Successfully! Now go to your Google Doc and Press Ctrl+V</p>
+<div class="preview" id="contentToCopy">
+<div style="font-family: 'Arial', verdana, sans-serif;  line-height: 2.0; color: #000000; font-weight: 900; -webkit-text-stroke: 1.2px #000000; text-shadow: 0 0 1px #000; padding: 20px;">
+<h1 class="hero-title" style="font-weight: 900; border-bottom: 5px solid #1e3a8a; padding-bottom: 15px; margin-top: 0; text-align: center;">अध्याय 14: क्षेत्रीय आकांक्षाएँ (Regional Aspirations)</h1>
+<!-- SECTION 1: INTRODUCTION -->
+<div style="background-color: #eff6ff; padding: 40px; border-radius: 12px; margin-bottom: 40px; border: 6px solid #93c5fd;">
+<h2 class="topic-header" style="font-weight: 900; margin-top: 0;">1. क्षेत्रीय आकांक्षाएँ क्या हैं? (Rise of Regionalism)</h2>
+<p>प्रिय विद्यार्थियों, भारत विविधताओं से भरा देश है। यहाँ विभिन्न भाषाएँ, संस्कृतियाँ, जातियाँ और भौगोलिक क्षेत्र मौजूद हैं। 1980 के दशक को <b>'स्वायत्तता के दशक'</b> के रूप में जाना जाता है, क्योंकि इस दौर में देश के विभिन्न हिस्सों से क्षेत्रीय स्वायत्तता और पहचान की मांग को लेकर अनेक हिंसक और अहिंसक आंदोलन उठ खड़े हुए।</p>
+<h3 class="subtopic-header" style="font-weight: 900; margin-top: 25px;">भारत का लोकतांत्रिक दृष्टिकोण (The Democratic Approach):</h3>
+<p>दुनिया के कई देशों (जैसे सोवियत संघ या कई यूरोपीय देश) ने विविधता को राष्ट्र की एकता के लिए खतरा माना और उसे दबाने की कोशिश की, जिससे उनके टुकड़े हो गए। इसके विपरीत, भारत ने <b>लोकतांत्रिक दृष्टिकोण</b> अपनाया:</p>
+<ul style="list-style-type: square; padding-left: 20px; line-height: 2.0;">
+<li><b>विविधता का सम्मान:</b> भारत ने क्षेत्रीय आकांक्षाओं को राष्ट्र-विरोधी मानने के बजाय उन्हें लोकतंत्र का एक सामान्य और अटूट हिस्सा माना।</li>
+<li><b>एकता और विविधता में संतुलन:</b> भारत ने 'विविधता में एकता' के सिद्धांत को अपनाया। देश की एकता को मजबूत करने के लिए क्षेत्रीय आकांक्षाओं को लोकतांत्रिक तरीके से स्थान दिया गया।</li>
+<li><b>संवैधानिक प्रावधान:</b> भारतीय संविधान की विभिन्न अनुसूचियों (जैसे छठी अनुसूची) और विभिन्न अनुच्छेदों में विशिष्ट क्षेत्रों (जैसे पूर्वोत्तर के राज्यों और जम्मू-कश्मीर) के लिए विशेष प्रावधान किए गए हैं ताकि वे अपनी संस्कृति और स्वायत्तता की रक्षा कर सकें।</li>
+</ul>
+</div>
+<!-- SECTION 2: JAMMU & KASHMIR -->
+<div style="background-color: #fffaf0; padding: 40px; border-radius: 12px; margin-bottom: 40px; border: 6px solid #fbd38d;">
+<h2 class="topic-header" style="font-weight: 900; margin-top: 0; border-bottom: 4px solid #dd6b20; padding-bottom: 10px;">2. जम्मू और कश्मीर का मुद्दा (Jammu and Kashmir Issue)</h2>
+<p>जम्मू और कश्मीर का मुद्दा आजादी के समय से ही भारतीय राजनीति के सबसे जटिल मुद्दों में से एक रहा है। कश्मीर क्षेत्र के मुख्यतः तीन सामाजिक-राजनैतिक भाग हैं: <b>जम्मू</b> (मैदानी व पहाड़ी क्षेत्र, जहाँ हिंदू, मुस्लिम और सिख रहते हैं), <b>कश्मीर घाटी</b> (मुख्यतः मुस्लिम बाहुल्य और कश्मीरी भाषी), और <b>लद्दाख</b> (बौद्ध और मुस्लिम बाहुल्य पहाड़ी क्षेत्र)।</p>
+<!-- NCERT Book Map/Illustration: Kashmir Intro -->
+<div class="illustration-box">
+<img alt="NCERT Jammu and Kashmir Book Map Illustration" class="illustration-img" src="images/ch14/kashmir_intro.webp"/>
+<div class="illustration-explanation">
+<b>NCERT पुस्तक का मूल मानचित्र व चित्र (kashmir_intro.png):</b> यह एनसीईआरटी पाठ्यपुस्तक का मूल नक्शा एवं चित्र है जो जम्मू और कश्मीर के विविध सामाजिक-राजनीतिक क्षेत्रों (जम्मू, कश्मीर घाटी, लद्दाख) और सीमाओं की ऐतिहासिक स्थिति को स्पष्ट रूप से दर्शाता है।
                     </div>
-                </div>
-
-                <!-- Illustration: Kashmir Accession -->
-                <div class="illustration-box">
-                    <img alt="Sheikh Abdullah and Jawaharlal Nehru after Accession" src="images/ch14/sheikh_abdullah_nehru.webp" class="illustration-img"/>
-                    <div class="illustration-explanation">
-                        <b>चित्र की व्याख्या:</b> यह ऐतिहासिक चित्र 1947 के विलय के बाद प्रधानमंत्री जवाहरलाल नेहरू और कश्मीर के लोकप्रिय नेता शेख मोहम्मद अब्दुल्ला की घनिष्ठता और राजनीतिक समझौते को दर्शाता है। विलय के तुरंत बाद शेख अब्दुल्ला को जम्मू-कश्मीर का प्रधानमंत्री (मुख्यमंत्री) नियुक्त किया गया था।
+</div>
+<!-- Illustration: Kashmir Accession -->
+<div class="illustration-box">
+<img alt="Sheikh Abdullah and Jawaharlal Nehru after Accession" class="illustration-img" src="images/ch14/sheikh_abdullah_nehru.webp"/>
+<div class="illustration-explanation">
+<b>चित्र की व्याख्या:</b> यह ऐतिहासिक चित्र 1947 के विलय के बाद प्रधानमंत्री जवाहरलाल नेहरू और कश्मीर के लोकप्रिय नेता शेख मोहम्मद अब्दुल्ला की घनिष्ठता और राजनीतिक समझौते को दर्शाता है। विलय के तुरंत बाद शेख अब्दुल्ला को जम्मू-कश्मीर का प्रधानमंत्री (मुख्यमंत्री) नियुक्त किया गया था।
                     </div>
-                </div>
-
-                <h3 style="color: #c05621; font-size: 32pt; font-weight: 900; margin-top: 25px;">1. ऐतिहासिक पृष्ठभूमि और 1947 का विलय (Accession):</h3>
-                <p>1947 में आजादी के समय जम्मू-कश्मीर एक रियासत थी, जिसके शासक <b>महाराजा हरि सिंह</b> थे। वह न तो भारत में शामिल होना चाहते थे और न ही पाकिस्तान में; वह कश्मीर को स्वतंत्र रखना चाहते थे।</p>
-                <ul style="list-style-type: circle; padding-left: 20px;">
-                    <li><b>पाकिस्तानी घुसपैठ:</b> अक्टूबर 1947 में पाकिस्तान ने कबायली घुसपैठियों के भेष में अपनी सेना भेजकर कश्मीर पर आक्रमण कर दिया।</li>
-                    <li><b>विलय पत्र पर हस्ताक्षर:</b> घबराकर महाराजा हरि सिंह ने भारत से सैन्य सहायता मांगी। भारत ने सहायता देने से पहले विलय की शर्त रखी। 26 अक्टूबर 1947 को महाराजा हरि सिंह ने भारत के <b>'विलय पत्र' (Instrument of Accession)</b> पर हस्ताक्षर कर दिए और कश्मीर कानूनी तौर पर भारत का अंग बन गया।</li>
-                    <li><b>युद्ध और LoC:</b> भारतीय सेना ने कश्मीरी जनता के सहयोग से पाकिस्तानी घुसपैठियों को पीछे धकेला। इसी दौरान युद्ध विराम हुआ, जिससे कश्मीर का एक हिस्सा पाकिस्तान के कब्जे में रह गया, जिसे <b>POK (पाकिस्तान अधिकृत कश्मीर)</b> या 'आजाद कश्मीर' कहा जाता है। दोनों देशों के बीच की सीमा को **Line of Control (LoC)** कहा गया।</li>
-                </ul>
-
-                <!-- LEADER BIO BOX: Sheikh Abdullah -->
-                <div class="bio-box" style="border-color: #dd6b20;">
-                    <div class="bio-img-container">
-                        <img src="images/ch14/sheikh_abdullah.webp" alt="शेख मोहम्मद अब्दुल्ला" class="bio-img"/>
-                    </div>
-                    <div class="bio-text">
-                        <h3 style="margin: 0 0 10px 0; color: #dd6b20; font-size: 20pt; font-weight: 900;">शेख मोहम्मद अब्दुल्ला (1905-1982)</h3>
-                        <p style="margin: 0; font-size: 22pt; line-height: 1.6;">
-                            <b>योगदान:</b> कश्मीर के सबसे लोकप्रिय नेता और 'नेशनल कॉन्फ्रेंस' (National Conference) के संस्थापक। उन्होंने महाराजा हरि सिंह के राजशाही शासन के खिलाफ धर्मनिरपेक्ष आंदोलन चलाया। वह पाकिस्तान में शामिल होने के धुर विरोधी थे और भारत के धर्मनिरपेक्ष लोकतंत्र के समर्थक थे। आजादी के बाद वह जम्मू-कश्मीर के प्रधानमंत्री और बाद में मुख्यमंत्री बने। उन्होंने भूमि सुधारों के माध्यम से आम कश्मीरी जनता को उनका हक दिलाया।
+</div>
+<h3 class="subtopic-header" style="font-weight: 900; margin-top: 25px;">1. ऐतिहासिक पृष्ठभूमि और 1947 का विलय (Accession):</h3>
+<p>1947 में आजादी के समय जम्मू-कश्मीर एक रियासत थी, जिसके शासक <b>महाराजा हरि सिंह</b> थे। वह न तो भारत में शामिल होना चाहते थे और न ही पाकिस्तान में; वह कश्मीर को स्वतंत्र रखना चाहते थे।</p>
+<ul style="list-style-type: circle; padding-left: 20px;">
+<li><b>पाकिस्तानी घुसपैठ:</b> अक्टूबर 1947 में पाकिस्तान ने कबायली घुसपैठियों के भेष में अपनी सेना भेजकर कश्मीर पर आक्रमण कर दिया।</li>
+<li><b>विलय पत्र पर हस्ताक्षर:</b> घबराकर महाराजा हरि सिंह ने भारत से सैन्य सहायता मांगी। भारत ने सहायता देने से पहले विलय की शर्त रखी। 26 अक्टूबर 1947 को महाराजा हरि सिंह ने भारत के <b>'विलय पत्र' (Instrument of Accession)</b> पर हस्ताक्षर कर दिए और कश्मीर कानूनी तौर पर भारत का अंग बन गया।</li>
+<li><b>युद्ध और LoC:</b> भारतीय सेना ने कश्मीरी जनता के सहयोग से पाकिस्तानी घुसपैठियों को पीछे धकेला। इसी दौरान युद्ध विराम हुआ, जिससे कश्मीर का एक हिस्सा पाकिस्तान के कब्जे में रह गया, जिसे <b>POK (पाकिस्तान अधिकृत कश्मीर)</b> या 'आजाद कश्मीर' कहा जाता है। दोनों देशों के बीच की सीमा को **Line of Control (LoC)** कहा गया।</li>
+</ul>
+<!-- LEADER BIO BOX: Sheikh Abdullah -->
+<div class="bio-box" style="border-color: #dd6b20;">
+<div class="bio-img-container">
+<img alt="शेख मोहम्मद अब्दुल्ला" class="bio-img" src="images/ch14/sheikh_abdullah.webp"/>
+</div>
+<div class="bio-text">
+<h3 class="subtopic-header" style="margin: 0 0 10px 0;   font-weight: 900;">शेख मोहम्मद अब्दुल्ला (1905-1982)</h3>
+<p style="margin: 0;  line-height: 1.6;">
+<b>योगदान:</b> कश्मीर के सबसे लोकप्रिय नेता और 'नेशनल कॉन्फ्रेंस' (National Conference) के संस्थापक। उन्होंने महाराजा हरि सिंह के राजशाही शासन के खिलाफ धर्मनिरपेक्ष आंदोलन चलाया। वह पाकिस्तान में शामिल होने के धुर विरोधी थे और भारत के धर्मनिरपेक्ष लोकतंत्र के समर्थक थे। आजादी के बाद वह जम्मू-कश्मीर के प्रधानमंत्री और बाद में मुख्यमंत्री बने। उन्होंने भूमि सुधारों के माध्यम से आम कश्मीरी जनता को उनका हक दिलाया।
                         </p>
+</div>
+</div>
+<h3 class="subtopic-header" style="font-weight: 900; margin-top: 25px;">2. अनुच्छेद 370 और कश्मीर की आंतरिक राजनीति (1953-1986):</h3>
+<p>विलय के समय कश्मीर को विशेष दर्जा देने के लिए भारतीय संविधान में <b>अनुच्छेद 370</b> जोड़ा गया। इसके तहत जम्मू-कश्मीर को अपनी विशिष्ट स्वायत्तता मिली:</p>
+<ul style="list-style-type: square; padding-left: 20px;">
+<li><b>विशेष स्वायत्तता:</b> राज्य का अपना अलग संविधान और अलग ध्वज था। भारतीय संसद द्वारा बनाए गए कानून (रक्षा, विदेश और संचार को छोड़कर) राज्य विधानसभा की सहमति के बिना वहाँ सीधे लागू नहीं होते थे।</li>
+<li><b>सहमति और मतभेद:</b> शेख अब्दुल्ला ने राज्य में बड़े भूमि सुधार कार्यक्रम लागू किए। लेकिन केंद्र सरकार के साथ उनके बढ़ते मतभेदों के कारण उन्हें 1953 में बर्खास्त कर जेल में डाल दिया गया।</li>
+<li><b>1975 का इंदिरा-शेख समझौता:</b> लंबे समय के बाद, 1974-75 में प्रधानमंत्री इंदिरा गांधी और शेख अब्दुल्ला के बीच एक समझौता हुआ, जिसके बाद शेख अब्दुल्ला दोबारा कश्मीर के मुख्यमंत्री बने और नेशनल कॉन्फ्रेंस ने सत्ता संभाली।</li>
+</ul>
+<h3 class="subtopic-header" style="font-weight: 900; margin-top: 25px;">3. 1987 का ऐतिहासिक चुनाव और उग्रवाद (Militancy) का उदय:</h3>
+<p>1982 में शेख अब्दुल्ला की मृत्यु के बाद उनके पुत्र <b>फारुक अब्दुल्ला</b> मुख्यमंत्री बने। 1987 के विधानसभा चुनावों में नेशनल कॉन्फ्रेंस और कांग्रेस का गठबंधन विजयी रहा, लेकिन इन चुनावों पर <b>व्यापक हेराफेरी और धांधली</b> के आरोप लगे।</p>
+<ul style="list-style-type: circle; padding-left: 20px;">
+<li><b>जनता का अविश्वास:</b> चुनावों में धांधली से कश्मीर के युवाओं का लोकतांत्रिक प्रक्रिया से भरोसा उठ गया।</li>
+<li><b>आतंकवाद की शुरुआत (1989):</b> सीमा पार (पाकिस्तान) के सहयोग से कश्मीर में सशस्त्र उग्रवाद और अलगाववादी आंदोलन शुरू हो गया। उग्रवादियों ने कश्मीर को भारत से अलग करने या पाकिस्तान में मिलाने की मांग की।</li>
+<li><b>सैन्य नियंत्रण और पलायन:</b> कानून-व्यवस्था बिगड़ने के कारण राज्य में राष्ट्रपति शासन लागू कर दिया गया और सेना तैनात की गई। इस आतंकवाद के दौर में कश्मीरी पंडितों को घाटी छोड़कर भारी पलायन करना पड़ा।</li>
+</ul>
+<h3 class="subtopic-header" style="font-weight: 900; margin-top: 25px;">4. कश्मीर की वर्तमान स्थिति: अनुच्छेद 370 का हटना (अगस्त 2019):</h3>
+<p>5 अगस्त 2019 को भारत सरकार ने जम्मू-कश्मीर के इतिहास में सबसे बड़ा संवैधानिक बदलाव किया:</p>
+<ul style="list-style-type: square; padding-left: 20px;">
+<li><b>अनुच्छेद 370 और 35A का खात्मा:</b> संसद में भारी बहुमत से पारित कानून के द्वारा अनुच्छेद 370 के विशेष दर्जे को समाप्त कर दिया गया। अब भारत का संविधान जम्मू-कश्मीर पर पूरी तरह लागू होता है।</li>
+<li><b>दो केंद्र शासित प्रदेशों में विभाजन:</b> राज्य को दो हिस्सों में बांटकर केंद्र शासित प्रदेश (Union Territories) बना दिया गया—<b>1. जम्मू और कश्मीर</b> (विधानसभा के साथ) तथा <b>2. लद्दाख</b> (बिना विधानसभा के)।</li>
+</ul>
+<!-- Illustration: Kashmir Conflict Timeline -->
+<div class="illustration-box">
+<img alt="Kashmir Conflict Historical Timeline Diagram" class="illustration-img" src="images/ch14/kashmir_timeline.webp"/>
+<div class="illustration-explanation">
+<b>टाइमलाइन चार्ट (Timeline):</b> यह NCERT प्रवाह चित्र 1947 के विलय से लेकर 2019 में अनुच्छेद 370 के हटने तक जम्मू-कश्मीर के राजनीतिक घटनाक्रमों की समयरेखा को संक्षेप में प्रदर्शित करता है।
                     </div>
-                </div>
-
-                <h3 style="color: #c05621; font-size: 32pt; font-weight: 900; margin-top: 25px;">2. अनुच्छेद 370 और कश्मीर की आंतरिक राजनीति (1953-1986):</h3>
-                <p>विलय के समय कश्मीर को विशेष दर्जा देने के लिए भारतीय संविधान में <b>अनुच्छेद 370</b> जोड़ा गया। इसके तहत जम्मू-कश्मीर को अपनी विशिष्ट स्वायत्तता मिली:</p>
-                <ul style="list-style-type: square; padding-left: 20px;">
-                    <li><b>विशेष स्वायत्तता:</b> राज्य का अपना अलग संविधान और अलग ध्वज था। भारतीय संसद द्वारा बनाए गए कानून (रक्षा, विदेश और संचार को छोड़कर) राज्य विधानसभा की सहमति के बिना वहाँ सीधे लागू नहीं होते थे।</li>
-                    <li><b>सहमति और मतभेद:</b> शेख अब्दुल्ला ने राज्य में बड़े भूमि सुधार कार्यक्रम लागू किए। लेकिन केंद्र सरकार के साथ उनके बढ़ते मतभेदों के कारण उन्हें 1953 में बर्खास्त कर जेल में डाल दिया गया।</li>
-                    <li><b>1975 का इंदिरा-शेख समझौता:</b> लंबे समय के बाद, 1974-75 में प्रधानमंत्री इंदिरा गांधी और शेख अब्दुल्ला के बीच एक समझौता हुआ, जिसके बाद शेख अब्दुल्ला दोबारा कश्मीर के मुख्यमंत्री बने और नेशनल कॉन्फ्रेंस ने सत्ता संभाली।</li>
-                </ul>
-
-                <h3 style="color: #c05621; font-size: 32pt; font-weight: 900; margin-top: 25px;">3. 1987 का ऐतिहासिक चुनाव और उग्रवाद (Militancy) का उदय:</h3>
-                <p>1982 में शेख अब्दुल्ला की मृत्यु के बाद उनके पुत्र <b>फारुक अब्दुल्ला</b> मुख्यमंत्री बने। 1987 के विधानसभा चुनावों में नेशनल कॉन्फ्रेंस और कांग्रेस का गठबंधन विजयी रहा, लेकिन इन चुनावों पर <b>व्यापक हेराफेरी और धांधली</b> के आरोप लगे।</p>
-                <ul style="list-style-type: circle; padding-left: 20px;">
-                    <li><b>जनता का अविश्वास:</b> चुनावों में धांधली से कश्मीर के युवाओं का लोकतांत्रिक प्रक्रिया से भरोसा उठ गया।</li>
-                    <li><b>आतंकवाद की शुरुआत (1989):</b> सीमा पार (पाकिस्तान) के सहयोग से कश्मीर में सशस्त्र उग्रवाद और अलगाववादी आंदोलन शुरू हो गया। उग्रवादियों ने कश्मीर को भारत से अलग करने या पाकिस्तान में मिलाने की मांग की।</li>
-                    <li><b>सैन्य नियंत्रण और पलायन:</b> कानून-व्यवस्था बिगड़ने के कारण राज्य में राष्ट्रपति शासन लागू कर दिया गया और सेना तैनात की गई। इस आतंकवाद के दौर में कश्मीरी पंडितों को घाटी छोड़कर भारी पलायन करना पड़ा।</li>
-                </ul>
-
-                <h3 style="color: #c05621; font-size: 32pt; font-weight: 900; margin-top: 25px;">4. कश्मीर की वर्तमान स्थिति: अनुच्छेद 370 का हटना (अगस्त 2019):</h3>
-                <p>5 अगस्त 2019 को भारत सरकार ने जम्मू-कश्मीर के इतिहास में सबसे बड़ा संवैधानिक बदलाव किया:</p>
-                <ul style="list-style-type: square; padding-left: 20px;">
-                    <li><b>अनुच्छेद 370 और 35A का खात्मा:</b> संसद में भारी बहुमत से पारित कानून के द्वारा अनुच्छेद 370 के विशेष दर्जे को समाप्त कर दिया गया। अब भारत का संविधान जम्मू-कश्मीर पर पूरी तरह लागू होता है।</li>
-                    <li><b>दो केंद्र शासित प्रदेशों में विभाजन:</b> राज्य को दो हिस्सों में बांटकर केंद्र शासित प्रदेश (Union Territories) बना दिया गया—<b>1. जम्मू और कश्मीर</b> (विधानसभा के साथ) तथा <b>2. लद्दाख</b> (बिना विधानसभा के)।</li>
-                </ul>
-
-                <!-- Illustration: Kashmir Conflict Timeline -->
-                <div class="illustration-box">
-                    <img alt="Kashmir Conflict Historical Timeline Diagram" src="images/ch14/kashmir_timeline.webp" class="illustration-img"/>
-                    <div class="illustration-explanation">
-                        <b>टाइमलाइन चार्ट (Timeline):</b> यह NCERT प्रवाह चित्र 1947 के विलय से लेकर 2019 में अनुच्छेद 370 के हटने तक जम्मू-कश्मीर के राजनीतिक घटनाक्रमों की समयरेखा को संक्षेप में प्रदर्शित करता है।
+</div>
+</div>
+<!-- SECTION 3: PUNJAB CRISIS -->
+<div style="background-color: #f0fdf4; padding: 40px; border-radius: 12px; margin-bottom: 40px; border: 6px solid #86efac;">
+<h2 class="topic-header" style="font-weight: 900; margin-top: 0; border-bottom: 4px solid #166534; padding-bottom: 10px;">3. पंजाब संकट (Punjab Crisis - 1980s)</h2>
+<p>1980 के दशक में पंजाब में सिख पहचान और स्वायत्तता की मांग को लेकर एक बड़ा संकट खड़ा हुआ, जिसने हिंसक रूप ले लिया और देश के राजनीतिक ढांचे को झकझोर कर रख दिया।</p>
+<!-- Illustration: Punjab Factionalism / Golden Temple -->
+<div class="illustration-box">
+<img alt="Golden Temple Amritsar during 1984 Blue Star Action" class="illustration-img" src="images/ch14/punjab_crisis.webp"/>
+<div class="illustration-explanation">
+<b>चित्र की व्याख्या:</b> यह चित्र अमृतसर के पवित्र स्वर्ण मंदिर (Harmandir Sahib) को दर्शाता है, जहाँ जून 1984 में इंदिरा गांधी सरकार ने सेना भेजकर <b>'ऑपरेशन ब्लू स्टार'</b> चलाया था ताकि वहां छिपे उग्रवादियों को निकाला जा सके। इस कार्रवाई से अकाल तख्त और स्वर्ण मंदिर परिसर को भारी क्षति पहुँची थी।
                     </div>
-                </div>
-            </div>
-
-            <!-- SECTION 3: PUNJAB CRISIS -->
-            <div style="background-color: #f0fdf4; padding: 40px; border-radius: 12px; margin-bottom: 40px; border: 6px solid #86efac;">
-                <h2 style="color: #166534; font-size: 40pt; font-weight: 900; margin-top: 0; border-bottom: 4px solid #166534; padding-bottom: 10px;">3. पंजाब संकट (Punjab Crisis - 1980s)</h2>
-                <p>1980 के दशक में पंजाब में सिख पहचान और स्वायत्तता की मांग को लेकर एक बड़ा संकट खड़ा हुआ, जिसने हिंसक रूप ले लिया और देश के राजनीतिक ढांचे को झकझोर कर रख दिया।</p>
-
-                <!-- Illustration: Punjab Factionalism / Golden Temple -->
-                <div class="illustration-box">
-                    <img alt="Golden Temple Amritsar during 1984 Blue Star Action" src="images/ch14/punjab_crisis.webp" class="illustration-img"/>
-                    <div class="illustration-explanation">
-                        <b>चित्र की व्याख्या:</b> यह चित्र अमृतसर के पवित्र स्वर्ण मंदिर (Harmandir Sahib) को दर्शाता है, जहाँ जून 1984 में इंदिरा गांधी सरकार ने सेना भेजकर <b>'ऑपरेशन ब्लू स्टार'</b> चलाया था ताकि वहां छिपे उग्रवादियों को निकाला जा सके। इस कार्रवाई से अकाल तख्त और स्वर्ण मंदिर परिसर को भारी क्षति पहुँची थी।
-                    </div>
-                </div>
-
-                <h3 style="color: #15803d; font-size: 32pt; font-weight: 900; margin-top: 25px;">1. पंजाब का गठन और अकाली दल:</h3>
-                <p>आजादी के समय पंजाब एक बड़ा राज्य था। 1950 और 60 के दशक में अकाली दल के नेतृत्व में <b>'पंजाबी सूबा आंदोलन'</b> शुरू हुआ, जिसमें सिखों के लिए एक अलग पंजाबी भाषी सूबे की मांग की गई।</p>
-                <ul style="list-style-type: disc; padding-left: 20px;">
-                    <li><b>1966 का विभाजन:</b> 1966 में पंजाब का भाषाई आधार पर पुनर्गठन किया गया। पंजाबी भाषी क्षेत्र को <b>पंजाब</b> (सिख बहुल), हिंदी भाषी क्षेत्र को <b>हरियाणा</b> और पहाड़ी क्षेत्र को <b>हिमाचल प्रदेश</b> बना दिया गया।</li>
-                    <li><b>आनंदपुर साहिब प्रस्ताव (1973):</b> अकाली दल ने आनंदपुर साहिब में एक प्रस्ताव पारित कर केंद्र-राज्य संबंधों को पुनर्परिभाषित करने और सिखों के लिए अधिक स्वायत्तता (धार्मिक व राजनीतिक वर्चस्व) की मांग की।</li>
-                </ul>
-
-                <!-- LEADER BIO BOX: Master Tara Singh -->
-                <div class="bio-box" style="border-color: #166534;">
-                    <div class="bio-img-container">
-                        <img src="images/ch14/master_tara_singh.webp" alt="मास्टर तारा सिंह" class="bio-img"/>
-                    </div>
-                    <div class="bio-text">
-                        <h3 style="margin: 0 0 10px 0; color: #166534; font-size: 20pt; font-weight: 900;">मास्टर तारा सिंह (1885-1967)</h3>
-                        <p style="margin: 0; font-size: 22pt; line-height: 1.6;">
-                            <b>योगदान:</b> शिरोमणि अकाली दल के प्रमुख नेता और स्वतंत्रता सेनानी। उन्होंने सिख समुदाय के अधिकारों और स्वाभिमान की रक्षा के लिए आजीवन काम किया। वह 'पंजाबी सूबा आंदोलन' के मुख्य स्तंभों में से एक थे, जिसके कारण 1966 में आज के पंजाबी भाषी पंजाब राज्य का जन्म हुआ।
+</div>
+<h3 class="subtopic-header" style="font-weight: 900; margin-top: 25px;">1. पंजाब का गठन और अकाली दल:</h3>
+<p>आजादी के समय पंजाब एक बड़ा राज्य था। 1950 और 60 के दशक में अकाली दल के नेतृत्व में <b>'पंजाबी सूबा आंदोलन'</b> शुरू हुआ, जिसमें सिखों के लिए एक अलग पंजाबी भाषी सूबे की मांग की गई।</p>
+<ul style="list-style-type: disc; padding-left: 20px;">
+<li><b>1966 का विभाजन:</b> 1966 में पंजाब का भाषाई आधार पर पुनर्गठन किया गया। पंजाबी भाषी क्षेत्र को <b>पंजाब</b> (सिख बहुल), हिंदी भाषी क्षेत्र को <b>हरियाणा</b> और पहाड़ी क्षेत्र को <b>हिमाचल प्रदेश</b> बना दिया गया।</li>
+<li><b>आनंदपुर साहिब प्रस्ताव (1973):</b> अकाली दल ने आनंदपुर साहिब में एक प्रस्ताव पारित कर केंद्र-राज्य संबंधों को पुनर्परिभाषित करने और सिखों के लिए अधिक स्वायत्तता (धार्मिक व राजनीतिक वर्चस्व) की मांग की।</li>
+</ul>
+<!-- LEADER BIO BOX: Master Tara Singh -->
+<div class="bio-box" style="border-color: #166534;">
+<div class="bio-img-container">
+<img alt="मास्टर तारा सिंह" class="bio-img" src="images/ch14/master_tara_singh.webp"/>
+</div>
+<div class="bio-text">
+<h3 class="subtopic-header" style="margin: 0 0 10px 0;   font-weight: 900;">मास्टर तारा सिंह (1885-1967)</h3>
+<p style="margin: 0;  line-height: 1.6;">
+<b>योगदान:</b> शिरोमणि अकाली दल के प्रमुख नेता और स्वतंत्रता सेनानी। उन्होंने सिख समुदाय के अधिकारों और स्वाभिमान की रक्षा के लिए आजीवन काम किया। वह 'पंजाबी सूबा आंदोलन' के मुख्य स्तंभों में से एक थे, जिसके कारण 1966 में आज के पंजाबी भाषी पंजाब राज्य का जन्म हुआ।
                         </p>
-                    </div>
-                </div>
-
-                <h3 style="color: #15803d; font-size: 32pt; font-weight: 900; margin-top: 25px;">2. चरमपंथ का उदय और ऑपरेशन藍 स्टार:</h3>
-                <p>1980 के दशक में अकाली दल के नरमपंथी नेतृत्व पीछे छूट गया और <b>जरनैल सिंह भिंडरांवाले</b> के नेतृत्व में सिख चरमपंथ का उदय हुआ। चरमपंथियों ने भारत से अलग होकर स्वतंत्र <b>'खालिस्तान'</b> राज्य की मांग की और हिंसक गतिविधियाँ शुरू कर दीं।</p>
-                <ul style="list-style-type: square; padding-left: 20px;">
-                    <li><b>स्वर्ण मंदिर में मोर्चाबंदी:</b> भिंडरांवाले और उसके हथियारबंद समर्थकों ने अमृतसर के पवित्र <b>स्वर्ण मंदिर (Golden Temple)</b> में अपना ठिकाना बना लिया और अकाल तख्त पर कब्जा कर लिया।</li>
-                    <li><b>ऑपरेशन ब्लू स्टार (जून 1984):</b> तत्कालीन प्रधानमंत्री इंदिरा गांधी ने सैन्य कार्रवाई का आदेश दिया। सेना ने स्वर्ण मंदिर परिसर में प्रवेश कर भारी गोलाबारी के बीच उग्रवादियों को मार गिराया। इस ऑपरेशन में भिंडरांवाले मारा गया। इस कार्रवाई से सिखों की धार्मिक भावनाओं को गहरी ठेस लगी और संपूर्ण सिख समाज में आक्रोश फैल गया।</li>
-                </ul>
-
-                <h3 style="color: #15803d; font-size: 32pt; font-weight: 900; margin-top: 25px;">3. इंदिरा गांधी की हत्या और 1984 के सिख-विरोधी दंगे:</h3>
-                <p>ऑपरेशन ब्लू स्टार के ठीक चार महीने बाद, <b>31 अक्टूबर 1984</b> को इंदिरा गांधी के दो सिख अंगरक्षकों (बॉडीगार्ड्स) ने उनके निवास पर गोली मारकर उनकी हत्या कर दी।</p>
-                <ul style="list-style-type: circle; padding-left: 20px;">
-                    <li><b>सिख-विरोधी दंगे:</b> इस हत्या के बाद दिल्ली, कानपुर और उत्तर भारत के कई शहरों में भयानक सिख-विरोधी दंगे भड़क उठे। सरकारी आंकड़ों के अनुसार अकेले दिल्ली में 2,000 से अधिक और पूरे देश में लगभग 3,000 से अधिक बेगुनाह सिख मारे गए। पुलिस और प्रशासन दंगों को रोकने में नाकाम रहे, जिससे सिखों में असुरक्षा और अलगाव की भावना बढ़ी।</li>
-                </ul>
-
-                <!-- LEADER BIO BOX: Harchand Singh Longowal -->
-                <div class="bio-box" style="border-color: #15803d;">
-                    <div class="bio-img-container">
-                        <img src="images/ch14/harchand_singh_longowal.webp" alt="संत हरचंद सिंह लोंगोवाल" class="bio-img"/>
-                    </div>
-                    <div class="bio-text">
-                        <h3 style="margin: 0 0 10px 0; color: #15803d; font-size: 20pt; font-weight: 900;">संत हरचंद सिंह लोंगोवाल (1932-1985)</h3>
-                        <p style="margin: 0; font-size: 22pt; line-height: 1.6;">
-                            <b>योगदान:</b> अकाली दल के उदारवादी नेता और अकाली धार्मिक गुरु। उन्होंने चरमपंथ के दौर में शांति का रास्ता चुना। 1985 in उन्होंने प्रधानमंत्री राजीव गांधी के साथ ऐतिहासिक 'पंजाब समझौता' किया ताकि राज्य में शांति लौट सके। इस शांति प्रयास के कारण अगस्त 1985 में चरमपंथियों द्वारा उनकी हत्या कर दी गई, लेकिन उनका समझौता पंजाब में शांति का आधार बना।
+</div>
+</div>
+<h3 class="subtopic-header" style="font-weight: 900; margin-top: 25px;">2. चरमपंथ का उदय और ऑपरेशन藍 स्टार:</h3>
+<p>1980 के दशक में अकाली दल के नरमपंथी नेतृत्व पीछे छूट गया और <b>जरनैल सिंह भिंडरांवाले</b> के नेतृत्व में सिख चरमपंथ का उदय हुआ। चरमपंथियों ने भारत से अलग होकर स्वतंत्र <b>'खालिस्तान'</b> राज्य की मांग की और हिंसक गतिविधियाँ शुरू कर दीं।</p>
+<ul style="list-style-type: square; padding-left: 20px;">
+<li><b>स्वर्ण मंदिर में मोर्चाबंदी:</b> भिंडरांवाले और उसके हथियारबंद समर्थकों ने अमृतसर के पवित्र <b>स्वर्ण मंदिर (Golden Temple)</b> में अपना ठिकाना बना लिया और अकाल तख्त पर कब्जा कर लिया।</li>
+<li><b>ऑपरेशन ब्लू स्टार (जून 1984):</b> तत्कालीन प्रधानमंत्री इंदिरा गांधी ने सैन्य कार्रवाई का आदेश दिया। सेना ने स्वर्ण मंदिर परिसर में प्रवेश कर भारी गोलाबारी के बीच उग्रवादियों को मार गिराया। इस ऑपरेशन में भिंडरांवाले मारा गया। इस कार्रवाई से सिखों की धार्मिक भावनाओं को गहरी ठेस लगी और संपूर्ण सिख समाज में आक्रोश फैल गया।</li>
+</ul>
+<h3 class="subtopic-header" style="font-weight: 900; margin-top: 25px;">3. इंदिरा गांधी की हत्या और 1984 के सिख-विरोधी दंगे:</h3>
+<p>ऑपरेशन ब्लू स्टार के ठीक चार महीने बाद, <b>31 अक्टूबर 1984</b> को इंदिरा गांधी के दो सिख अंगरक्षकों (बॉडीगार्ड्स) ने उनके निवास पर गोली मारकर उनकी हत्या कर दी।</p>
+<ul style="list-style-type: circle; padding-left: 20px;">
+<li><b>सिख-विरोधी दंगे:</b> इस हत्या के बाद दिल्ली, कानपुर और उत्तर भारत के कई शहरों में भयानक सिख-विरोधी दंगे भड़क उठे। सरकारी आंकड़ों के अनुसार अकेले दिल्ली में 2,000 से अधिक और पूरे देश में लगभग 3,000 से अधिक बेगुनाह सिख मारे गए। पुलिस और प्रशासन दंगों को रोकने में नाकाम रहे, जिससे सिखों में असुरक्षा और अलगाव की भावना बढ़ी।</li>
+</ul>
+<!-- LEADER BIO BOX: Harchand Singh Longowal -->
+<div class="bio-box" style="border-color: #15803d;">
+<div class="bio-img-container">
+<img alt="संत हरचंद सिंह लोंगोवाल" class="bio-img" src="images/ch14/harchand_singh_longowal.webp"/>
+</div>
+<div class="bio-text">
+<h3 class="subtopic-header" style="margin: 0 0 10px 0;   font-weight: 900;">संत हरचंद सिंह लोंगोवाल (1932-1985)</h3>
+<p style="margin: 0;  line-height: 1.6;">
+<b>योगदान:</b> अकाली दल के उदारवादी नेता और अकाली धार्मिक गुरु। उन्होंने चरमपंथ के दौर में शांति का रास्ता चुना। 1985 in उन्होंने प्रधानमंत्री राजीव गांधी के साथ ऐतिहासिक 'पंजाब समझौता' किया ताकि राज्य में शांति लौट सके। इस शांति प्रयास के कारण अगस्त 1985 में चरमपंथियों द्वारा उनकी हत्या कर दी गई, लेकिन उनका समझौता पंजाब में शांति का आधार बना।
                         </p>
+</div>
+</div>
+<h3 class="subtopic-header" style="font-weight: 900; margin-top: 25px;">4. शांति बहाली: राजीव गांधी-लोंगोवाल समझौता (जुलाई 1985):</h3>
+<p>विपरीत परिस्थितियों में प्रधानमंत्री राजीव गांधी ने पंजाब में सुलह के प्रयास किए और उदारवादी अकाली नेता हरचंद सिंह लोंगोवाल के साथ **'पंजाब समझौता'** (राजीव गांधी-लोंगोवाल समझौता) किया:</p>
+<ul style="list-style-type: square; padding-left: 20px;">
+<li><b>समझौते के मुख्य बिंदु:</b> चंडीगढ़ को पंजाब को सौंपना, पंजाब और हरियाणा के बीच सीमा विवाद को सुलझाने के लिए एक आयोग का गठन, रावी-व्यास नदियों के पानी के बंटवारे के लिए ट्रिब्यूनल बनाना, और पंजाब में सशस्त्र बल विशेषाधिकार अधिनियम (AFSPA) को धीरे-धीरे वापस लेना।</li>
+<li><b>शांति की वापसी:</b> समझौते के बाद पंजाब में चुनाव हुए और अकाली दल की सरकार बनी। यद्यपि हिंसा पूरी तरह तुरंत बंद नहीं हुई, लेकिन 1990 के दशक के मध्य तक पंजाब में लोकतंत्र और शांति पूरी तरह बहाल हो गई।</li>
+</ul>
+</div>
+<!-- SECTION 4: THE NORTH-EAST -->
+<div style="background-color: #fdf2f8; padding: 40px; border-radius: 12px; margin-bottom: 40px; border: 6px solid #fbcfe8;">
+<h2 class="topic-header" style="font-weight: 900; margin-top: 0; border-bottom: 4px solid #9d174d; padding-bottom: 10px;">4. पूर्वोत्तर भारत के आंदोलन (The North-East Movements)</h2>
+<p>भारत के पूर्वोत्तर क्षेत्र (सात बहनें और सिक्किम) में क्षेत्रीय आकांक्षाओं का इतिहास बहुत जटिल रहा है। यहाँ की मुख्य समस्या तीन श्रेणियों में बांटी जा सकती है: <b>1. स्वायत्तता की मांग, 2. अलगाववादी आंदोलन, और 3. बाहरी लोगों का विरोध।</b></p>
+<!-- Illustration: Northeast Map -->
+<div class="illustration-box">
+<img alt="Northeast India States and Boundaries Map" class="illustration-img" src="images/ch14/northeast_map.webp"/>
+<div class="illustration-explanation">
+<b>चित्र की व्याख्या:</b> यह मानचित्र पूर्वोत्तर भारत के राज्यों के बीच की सीमा और उनके भौगोलिक स्वरूप को दर्शाता है। पूर्वोत्तर का क्षेत्र केवल 22 किलोमीटर चौड़ी एक पतली पट्टी (सिलीगुड़ी कॉरिडोर / चिकन नेक) द्वारा मुख्य भारत से जुड़ता है, जिससे यहाँ अलगाव की भावना बढ़ी।
                     </div>
-                </div>
-
-                <h3 style="color: #15803d; font-size: 32pt; font-weight: 900; margin-top: 25px;">4. शांति बहाली: राजीव गांधी-लोंगोवाल समझौता (जुलाई 1985):</h3>
-                <p>विपरीत परिस्थितियों में प्रधानमंत्री राजीव गांधी ने पंजाब में सुलह के प्रयास किए और उदारवादी अकाली नेता हरचंद सिंह लोंगोवाल के साथ **'पंजाब समझौता'** (राजीव गांधी-लोंगोवाल समझौता) किया:</p>
-                <ul style="list-style-type: square; padding-left: 20px;">
-                    <li><b>समझौते के मुख्य बिंदु:</b> चंडीगढ़ को पंजाब को सौंपना, पंजाब और हरियाणा के बीच सीमा विवाद को सुलझाने के लिए एक आयोग का गठन, रावी-व्यास नदियों के पानी के बंटवारे के लिए ट्रिब्यूनल बनाना, और पंजाब में सशस्त्र बल विशेषाधिकार अधिनियम (AFSPA) को धीरे-धीरे वापस लेना।</li>
-                    <li><b>शांति की वापसी:</b> समझौते के बाद पंजाब में चुनाव हुए और अकाली दल की सरकार बनी। यद्यपि हिंसा पूरी तरह तुरंत बंद नहीं हुई, लेकिन 1990 के दशक के मध्य तक पंजाब में लोकतंत्र और शांति पूरी तरह बहाल हो गई।</li>
-                </ul>
-            </div>
-
-            <!-- SECTION 4: THE NORTH-EAST -->
-            <div style="background-color: #fdf2f8; padding: 40px; border-radius: 12px; margin-bottom: 40px; border: 6px solid #fbcfe8;">
-                <h2 style="color: #9d174d; font-size: 40pt; font-weight: 900; margin-top: 0; border-bottom: 4px solid #9d174d; padding-bottom: 10px;">4. पूर्वोत्तर भारत के आंदोलन (The North-East Movements)</h2>
-                <p>भारत के पूर्वोत्तर क्षेत्र (सात बहनें और सिक्किम) में क्षेत्रीय आकांक्षाओं का इतिहास बहुत जटिल रहा है। यहाँ की मुख्य समस्या तीन श्रेणियों में बांटी जा सकती है: <b>1. स्वायत्तता की मांग, 2. अलगाववादी आंदोलन, और 3. बाहरी लोगों का विरोध।</b></p>
-
-                <!-- Illustration: Northeast Map -->
-                <div class="illustration-box">
-                    <img alt="Northeast India States and Boundaries Map" src="images/ch14/northeast_map.webp" class="illustration-img"/>
-                    <div class="illustration-explanation">
-                        <b>चित्र की व्याख्या:</b> यह मानचित्र पूर्वोत्तर भारत के राज्यों के बीच की सीमा और उनके भौगोलिक स्वरूप को दर्शाता है। पूर्वोत्तर का क्षेत्र केवल 22 किलोमीटर चौड़ी एक पतली पट्टी (सिलीगुड़ी कॉरिडोर / चिकन नेक) द्वारा मुख्य भारत से जुड़ता है, जिससे यहाँ अलगाव की भावना बढ़ी।
-                    </div>
-                </div>
-
-                <h3 style="color: #9d174d; font-size: 32pt; font-weight: 900; margin-top: 25px;">1. मिज़ोरम का मामला: अलगाववाद से शांति की कहानी:</h3>
-                <p>आजादी के समय मिज़ो पर्वतीय क्षेत्र असम राज्य के भीतर ही एक स्वायत्त जिला था।</p>
-                <ul style="list-style-type: circle; padding-left: 20px;">
-                    <li><b>1959 का अकाल और आक्रोश:</b> 1959 में मिज़ो पहाड़ियों में एक भीषण अकाल पड़ा। असम सरकार अकाल की स्थिति से निपटने में पूरी तरह नाकाम रही, जिससे मिज़ो लोगों में भारी रोष उत्पन्न हुआ।</li>
-                    <li><b>MNF का गठन और विद्रोह:</b> <b>लालडेंगा</b> के नेतृत्व में <b>मिज़ो नेशनल फ्रंट (Mizo National Front - MNF)</b> का गठन हुआ। 1966 में MNF ने सशस्त्र विद्रोह कर स्वतंत्र मिज़ोरम की घोषणा कर दी। पाकिस्तान और पूर्वी पाकिस्तान (बांग्लादेश) से उन्हें हथियार और शरण मिली।</li>
-                    <li><b>1986 का शांति समझौता:</b> भारतीय सेना द्वारा उग्रवाद को नियंत्रित किए जाने के बाद, 1986 में प्रधानमंत्री राजीव गांधी और लालडेंगा के बीच एक ऐतिहासिक शांति समझौता हुआ। मिज़ोरम को पूर्ण राज्य का दर्जा मिला और लालडेंगा मुख्यमंत्री बने। मिज़ोरम आज पूर्वोत्तर का सबसे शांत राज्य है।</li>
-                </ul>
-
-                <!-- LEADER BIO BOX: Laldenga -->
-                <div class="bio-box" style="border-color: #9d174d;">
-                    <div class="bio-img-container">
-                        <img src="images/ch14/laldenga.webp" alt="लालडेंगा" class="bio-img"/>
-                    </div>
-                    <div class="bio-text">
-                        <h3 style="margin: 0 0 10px 0; color: #9d174d; font-size: 20pt; font-weight: 900;">लालडेंगा (1937-1990)</h3>
-                        <p style="margin: 0; font-size: 22pt; line-height: 1.6;">
-                            <b>योगदान:</b> मिज़ो नेशनल फ्रंट (MNF) के संस्थापक और क्रांतिकारी नेता। उन्होंने 1959 के अकाल के बाद मिज़ो लोगों की मांगों का नेतृत्व किया और 20 वर्षों तक भारत सरकार के खिलाफ सशस्त्र अलगाववादी युद्ध लड़ा। अंततः उन्होंने शांति और लोकतंत्र का मार्ग चुना और 1986 में राजीव गांधी के साथ ऐतिहासिक मिज़ो शांति समझौता कर मिज़ोरम के पहले मुख्यमंत्री बने।
+</div>
+<h3 class="subtopic-header" style="font-weight: 900; margin-top: 25px;">1. मिज़ोरम का मामला: अलगाववाद से शांति की कहानी:</h3>
+<p>आजादी के समय मिज़ो पर्वतीय क्षेत्र असम राज्य के भीतर ही एक स्वायत्त जिला था।</p>
+<ul style="list-style-type: circle; padding-left: 20px;">
+<li><b>1959 का अकाल और आक्रोश:</b> 1959 में मिज़ो पहाड़ियों में एक भीषण अकाल पड़ा। असम सरकार अकाल की स्थिति से निपटने में पूरी तरह नाकाम रही, जिससे मिज़ो लोगों में भारी रोष उत्पन्न हुआ।</li>
+<li><b>MNF का गठन और विद्रोह:</b> <b>लालडेंगा</b> के नेतृत्व में <b>मिज़ो नेशनल फ्रंट (Mizo National Front - MNF)</b> का गठन हुआ। 1966 में MNF ने सशस्त्र विद्रोह कर स्वतंत्र मिज़ोरम की घोषणा कर दी। पाकिस्तान और पूर्वी पाकिस्तान (बांग्लादेश) से उन्हें हथियार और शरण मिली।</li>
+<li><b>1986 का शांति समझौता:</b> भारतीय सेना द्वारा उग्रवाद को नियंत्रित किए जाने के बाद, 1986 में प्रधानमंत्री राजीव गांधी और लालडेंगा के बीच एक ऐतिहासिक शांति समझौता हुआ। मिज़ोरम को पूर्ण राज्य का दर्जा मिला और लालडेंगा मुख्यमंत्री बने। मिज़ोरम आज पूर्वोत्तर का सबसे शांत राज्य है।</li>
+</ul>
+<!-- LEADER BIO BOX: Laldenga -->
+<div class="bio-box" style="border-color: #9d174d;">
+<div class="bio-img-container">
+<img alt="लालडेंगा" class="bio-img" src="images/ch14/laldenga.webp"/>
+</div>
+<div class="bio-text">
+<h3 class="subtopic-header" style="margin: 0 0 10px 0;   font-weight: 900;">लालडेंगा (1937-1990)</h3>
+<p style="margin: 0;  line-height: 1.6;">
+<b>योगदान:</b> मिज़ो नेशनल फ्रंट (MNF) के संस्थापक और क्रांतिकारी नेता। उन्होंने 1959 के अकाल के बाद मिज़ो लोगों की मांगों का नेतृत्व किया और 20 वर्षों तक भारत सरकार के खिलाफ सशस्त्र अलगाववादी युद्ध लड़ा। अंततः उन्होंने शांति और लोकतंत्र का मार्ग चुना और 1986 में राजीव गांधी के साथ ऐतिहासिक मिज़ो शांति समझौता कर मिज़ोरम के पहले मुख्यमंत्री बने।
                         </p>
-                    </div>
-                </div>
-
-                <h3 style="color: #9d174d; font-size: 32pt; font-weight: 900; margin-top: 25px;">2. नगालैंड का मामला: भारत का सबसे पुराना अलगाववादी आंदोलन:</h3>
-                <p>नगालैंड पूर्वोत्तर का वह पहला क्षेत्र था जहाँ सबसे पहले भारत से अलग होने की आवाज उठी।</p>
-                <ul style="list-style-type: square; padding-left: 20px;">
-                    <li><b>अन्गामी जापू फिज़ो का विद्रोह:</b> 1951 में <b>नगा नेशनल काउंसिल (NNC)</b> के नेता <b>अन्गामी जापू फिज़ो (Angami Zapu Phizo)</b> ने स्वतंत्र नगालैंड की घोषणा कर दी। फिज़ो ने भारत सरकार के साथ किसी भी समझौते से इनकार किया और सशस्त्र विद्रोह शुरू कर दिया।</li>
-                    <li><b>सैनिक कार्रवाई और राज्य का गठन:</b> भारतीय सेना ने स्थिति पर नियंत्रण किया। 1963 में नगालैंड को भारत के भीतर एक पृथक राज्य का दर्जा दिया गया। हालाँकि, नगा आंदोलन का एक धड़ा आज भी स्वायत्तता और 'ग्रेटर नगालिम' की मांग को लेकर वार्ता कर रहा है।</li>
-                </ul>
-
-                <!-- LEADER BIO BOX: Angami Zapu Phizo -->
-                <div class="bio-box" style="border-color: #9d174d;">
-                    <div class="bio-img-container">
-                        <img src="images/ch14/angami_zapu_phizo.webp" alt="अन्गामी जापू फिज़ो" class="bio-img"/>
-                    </div>
-                    <div class="bio-text">
-                        <h3 style="margin: 0 0 10px 0; color: #9d174d; font-size: 20pt; font-weight: 900;">अन्गामी जापू फिज़ो (1904-1990)</h3>
-                        <p style="margin: 0; font-size: 22pt; line-height: 1.6;">
-                            <b>योगदान:</b> नगा नेशनल काउंसिल (NNC) के करिश्माई नेता और नगा अलगाववादी आंदोलन के जनक। उन्होंने नगा जनजातियों को एकजुट किया और भारत से पूरी तरह अलग स्वतंत्र राष्ट्र बनाने के लिए सशस्त्र संघर्ष शुरू किया। बाद में वह लंदन चले गए और जीवन के अंत तक नगा स्वायत्तता की आवाज उठाते रहे।
+</div>
+</div>
+<h3 class="subtopic-header" style="font-weight: 900; margin-top: 25px;">2. नगालैंड का मामला: भारत का सबसे पुराना अलगाववादी आंदोलन:</h3>
+<p>नगालैंड पूर्वोत्तर का वह पहला क्षेत्र था जहाँ सबसे पहले भारत से अलग होने की आवाज उठी।</p>
+<ul style="list-style-type: square; padding-left: 20px;">
+<li><b>अन्गामी जापू फिज़ो का विद्रोह:</b> 1951 में <b>नगा नेशनल काउंसिल (NNC)</b> के नेता <b>अन्गामी जापू फिज़ो (Angami Zapu Phizo)</b> ने स्वतंत्र नगालैंड की घोषणा कर दी। फिज़ो ने भारत सरकार के साथ किसी भी समझौते से इनकार किया और सशस्त्र विद्रोह शुरू कर दिया।</li>
+<li><b>सैनिक कार्रवाई और राज्य का गठन:</b> भारतीय सेना ने स्थिति पर नियंत्रण किया। 1963 में नगालैंड को भारत के भीतर एक पृथक राज्य का दर्जा दिया गया। हालाँकि, नगा आंदोलन का एक धड़ा आज भी स्वायत्तता और 'ग्रेटर नगालिम' की मांग को लेकर वार्ता कर रहा है।</li>
+</ul>
+<!-- LEADER BIO BOX: Angami Zapu Phizo -->
+<div class="bio-box" style="border-color: #9d174d;">
+<div class="bio-img-container">
+<img alt="अन्गामी जापू फिज़ो" class="bio-img" src="images/ch14/angami_zapu_phizo.webp"/>
+</div>
+<div class="bio-text">
+<h3 class="subtopic-header" style="margin: 0 0 10px 0;   font-weight: 900;">अन्गामी जापू फिज़ो (1904-1990)</h3>
+<p style="margin: 0;  line-height: 1.6;">
+<b>योगदान:</b> नगा नेशनल काउंसिल (NNC) के करिश्माई नेता और नगा अलगाववादी आंदोलन के जनक। उन्होंने नगा जनजातियों को एकजुट किया और भारत से पूरी तरह अलग स्वतंत्र राष्ट्र बनाने के लिए सशस्त्र संघर्ष शुरू किया। बाद में वह लंदन चले गए और जीवन के अंत तक नगा स्वायत्तता की आवाज उठाते रहे।
                         </p>
-                    </div>
-                </div>
-
-                <h3 style="color: #9d174d; font-size: 32pt; font-weight: 900; margin-top: 25px;">3. असम आंदोलन: बाहरी लोगों (अवैध प्रवासियों) का मुद्दा:</h3>
-                <p>असम की समस्या मिज़ोरम या नगालैंड जैसी अलगाववादी नहीं थी। यह बाहरी लोगों और अवैध रूप से भारत में घुसे प्रवासियों के खिलाफ एक बड़ा जन-आंदोलन था।</p>
-                <ul style="list-style-type: circle; padding-left: 20px;">
-                    <li><b>अवैध बांग्लादेशी घुसपैठ:</b> 1971 के भारत-पाक युद्ध के बाद बड़ी संख्या में बांग्लादेशी शरणार्थी असम में बस गए। असम के लोगों को लगा कि ये बाहरी लोग उनकी जमीन, रोजगार और संस्कृति को हथिया रहे हैं और उन्हें अपने ही राज्य में अल्पसंख्यक बना रहे हैं।</li>
-                    <li><b>AASU का आंदोलन (1979-1985):</b> <b>ऑल असम स्टूडेंट्स यूनियन (All Assam Students Union - AASU)</b> के नेतृत्व में 1979 से 1985 तक एक विशाल और उग्र जन-आंदोलन चला। उनकी मांग थी कि 1961 के बाद असम में आए सभी अवैध प्रवासियों की पहचान की जाए और उन्हें राज्य से बाहर निकाला जाए।</li>
-                    <li><b>1985 का असम समझौता:</b> 1985 में राजीव गांधी सरकार और AASU के नेताओं के बीच **'असम समझौता'** हुआ। इसके तहत तय किया गया कि जो लोग 25 मार्च 1971 (बांग्लादेश की स्थापना की तारीख) के बाद असम आए हैं, उनकी पहचान कर उन्हें वापस भेजा जाएगा। आंदोलन के बाद असम गण परिषद (AGP) नाम का नया दल बना और उसने असम में सरकार बनाई।</li>
-                </ul>
-
-                <h3 style="color: #9d174d; font-size: 32pt; font-weight: 900; margin-top: 25px;">4. सिक्किम का विलय (Sikkim's Merger - 1975):</h3>
-                <p>आजादी के समय सिक्किम भारत का हिस्सा नहीं था, बल्कि वह भारत का एक **'संरक्षित राज्य' (Protectorate)** था, जहाँ <b>चोग्याल (Chogyal)</b> वंश का राजशाही शासन था। सिक्किम की रक्षा और विदेश नीति की जिम्मेदारी भारत सरकार की थी।</p>
-                <ul style="list-style-type: square; padding-left: 20px;">
-                    <li><b>लोकतंत्र की मांग:</b> सिक्किम की अधिकांश जनता (नेपाली मूल) चोग्याल के राजशाही शासन के खिलाफ थी और भारत के साथ विलय तथा लोकतंत्र की स्थापना चाहती थी। इस आंदोलन का नेतृत्व **काजी लेंडुप दोरजी** ने किया।</li>
-                    <li><b>1975 का जनमत संग्रह:</b> सिक्किम की विधानसभा ने चोग्याल के पद को समाप्त करने और भारत में पूर्ण विलय का प्रस्ताव पारित किया। इसके बाद सिक्किम में एक **जनमत संग्रह (Referendum)** कराया गया, जिसमें 97.5% जनता ने भारत में शामिल होने के पक्ष में वोट दिया। 16 मई 1975 को सिक्किम आधिकारिक रूप से भारत का 22वां राज्य बन गया।</li>
-                </ul>
-
-                <!-- LEADER BIO BOX: Kazi Lhendup Dorji -->
-                <div class="bio-box" style="border-color: #9d174d;">
-                    <div class="bio-img-container">
-                        <img src="images/ch14/kazi_lhendup_dorji.webp" alt="काजी लेंडुप दोरजी" class="bio-img"/>
-                    </div>
-                    <div class="bio-text">
-                        <h3 style="margin: 0 0 10px 0; color: #9d174d; font-size: 20pt; font-weight: 900;">काजी लेंडुप दोरजी खंगसारपा (1904-2007)</h3>
-                        <p style="margin: 0; font-size: 22pt; line-height: 1.6;">
-                            <b>योगदान:</b> सिक्किम में लोकतंत्र की स्थापना और भारत में उसके विलय के महानायक। उन्होंने 'सिक्किम कांग्रेस' के बैनर तले चोग्याल राजशाही के खिलाफ जन-आंदोलन का नेतृत्व किया। विलय के बाद वह सिक्किम के पहले लोकतांत्रिक मुख्यमंत्री बने। उन्हें 'सिक्किम का राष्ट्रपिता' भी कहा जाता है।
+</div>
+</div>
+<h3 class="subtopic-header" style="font-weight: 900; margin-top: 25px;">3. असम आंदोलन: बाहरी लोगों (अवैध प्रवासियों) का मुद्दा:</h3>
+<p>असम की समस्या मिज़ोरम या नगालैंड जैसी अलगाववादी नहीं थी। यह बाहरी लोगों और अवैध रूप से भारत में घुसे प्रवासियों के खिलाफ एक बड़ा जन-आंदोलन था।</p>
+<ul style="list-style-type: circle; padding-left: 20px;">
+<li><b>अवैध बांग्लादेशी घुसपैठ:</b> 1971 के भारत-पाक युद्ध के बाद बड़ी संख्या में बांग्लादेशी शरणार्थी असम में बस गए। असम के लोगों को लगा कि ये बाहरी लोग उनकी जमीन, रोजगार और संस्कृति को हथिया रहे हैं और उन्हें अपने ही राज्य में अल्पसंख्यक बना रहे हैं।</li>
+<li><b>AASU का आंदोलन (1979-1985):</b> <b>ऑल असम स्टूडेंट्स यूनियन (All Assam Students Union - AASU)</b> के नेतृत्व में 1979 से 1985 तक एक विशाल और उग्र जन-आंदोलन चला। उनकी मांग थी कि 1961 के बाद असम में आए सभी अवैध प्रवासियों की पहचान की जाए और उन्हें राज्य से बाहर निकाला जाए।</li>
+<li><b>1985 का असम समझौता:</b> 1985 में राजीव गांधी सरकार और AASU के नेताओं के बीच **'असम समझौता'** हुआ। इसके तहत तय किया गया कि जो लोग 25 मार्च 1971 (बांग्लादेश की स्थापना की तारीख) के बाद असम आए हैं, उनकी पहचान कर उन्हें वापस भेजा जाएगा। आंदोलन के बाद असम गण परिषद (AGP) नाम का नया दल बना और उसने असम में सरकार बनाई।</li>
+</ul>
+<h3 class="subtopic-header" style="font-weight: 900; margin-top: 25px;">4. सिक्किम का विलय (Sikkim's Merger - 1975):</h3>
+<p>आजादी के समय सिक्किम भारत का हिस्सा नहीं था, बल्कि वह भारत का एक **'संरक्षित राज्य' (Protectorate)** था, जहाँ <b>चोग्याल (Chogyal)</b> वंश का राजशाही शासन था। सिक्किम की रक्षा और विदेश नीति की जिम्मेदारी भारत सरकार की थी।</p>
+<ul style="list-style-type: square; padding-left: 20px;">
+<li><b>लोकतंत्र की मांग:</b> सिक्किम की अधिकांश जनता (नेपाली मूल) चोग्याल के राजशाही शासन के खिलाफ थी और भारत के साथ विलय तथा लोकतंत्र की स्थापना चाहती थी। इस आंदोलन का नेतृत्व **काजी लेंडुप दोरजी** ने किया।</li>
+<li><b>1975 का जनमत संग्रह:</b> सिक्किम की विधानसभा ने चोग्याल के पद को समाप्त करने और भारत में पूर्ण विलय का प्रस्ताव पारित किया। इसके बाद सिक्किम में एक **जनमत संग्रह (Referendum)** कराया गया, जिसमें 97.5% जनता ने भारत में शामिल होने के पक्ष में वोट दिया। 16 मई 1975 को सिक्किम आधिकारिक रूप से भारत का 22वां राज्य बन गया।</li>
+</ul>
+<!-- LEADER BIO BOX: Kazi Lhendup Dorji -->
+<div class="bio-box" style="border-color: #9d174d;">
+<div class="bio-img-container">
+<img alt="काजी लेंडुप दोरजी" class="bio-img" src="images/ch14/kazi_lhendup_dorji.webp"/>
+</div>
+<div class="bio-text">
+<h3 class="subtopic-header" style="margin: 0 0 10px 0;   font-weight: 900;">काजी लेंडुप दोरजी खंगसारपा (1904-2007)</h3>
+<p style="margin: 0;  line-height: 1.6;">
+<b>योगदान:</b> सिक्किम में लोकतंत्र की स्थापना और भारत में उसके विलय के महानायक। उन्होंने 'सिक्किम कांग्रेस' के बैनर तले चोग्याल राजशाही के खिलाफ जन-आंदोलन का नेतृत्व किया। विलय के बाद वह सिक्किम के पहले लोकतांत्रिक मुख्यमंत्री बने। उन्हें 'सिक्किम का राष्ट्रपिता' भी कहा जाता है।
                         </p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- SECTION 5: DRAVIDIAN MOVEMENT & GOA -->
-            <div style="background-color: #f5f5f5; padding: 40px; border-radius: 12px; margin-bottom: 40px; border: 6px solid #d4d4d8;">
-                <h2 style="color: #27272a; font-size: 40pt; font-weight: 900; margin-top: 0; border-bottom: 4px solid #27272a; padding-bottom: 10px;">5. द्रविड़ आंदोलन और गोवा की मुक्ति (Dravidian Movement & Goa)</h2>
-                
-                <h3 style="color: #27272a; font-size: 32pt; font-weight: 900; margin-top: 25px;">1. द्रविड़ आंदोलन (Dravidian Movement) और पेरियार:</h3>
-                <p>दक्षिण भारत, विशेषकर तमिलनाडु में, द्रविड़ आंदोलन भारत के सबसे पुराने और सफल क्षेत्रीय अस्मिता आंदोलनों में से एक है।</p>
-                <ul style="list-style-type: circle; padding-left: 20px;">
-                    <li><b>आत्म-सम्मान आंदोलन:</b> इसका नेतृत्व **ई. वी. रामास्वामी 'पेरियार'** ने किया। उन्होंने ब्राह्मणवादी वर्चस्व, जातिवाद और उत्तर भारत के सांस्कृतिक प्रभुत्व के खिलाफ आवाज़ उठाई।</li>
-                    <li><b>द्रविड़ कड़गम (DK) का गठन:</b> पेरियार ने द्रविड़ अस्मिता के लिए द्रविड़ कड़गम का गठन किया। बाद में उनके सहयोगियों ने राजनीतिक दल **DMK (द्रविड़ मुनेत्र कड़गम)** बनाया।</li>
-                    <li><b>हिन्दी-विरोधी आंदोलन (1965):</b> जब केंद्र सरकार ने 1965 में हिन्दी को भारत की एकमात्र राजभाषा बनाने का निर्णय लिया, तो तमिलनाडु में भीषण हिंसक प्रदर्शन शुरू हो गए। छात्रों ने आत्मदाह तक किया। अंततः केंद्र सरकार को झुकना पड़ा और नेहरू के वादे के अनुसार अंग्रेजी को राजभाषा के रूप में जारी रखने का आश्वासन दिया गया। इस आंदोलन के बाद तमिलनाडु में कांग्रेस पूरी तरह बाहर हो गई और तब से आज तक वहाँ केवल द्रविड़ दलों (DMK या AIADMK) का ही शासन रहा है।</li>
-                </ul>
-
-                <!-- LEADER BIO BOX: Periyar -->
-                <div class="bio-box" style="border-color: #27272a;">
-                    <div class="bio-img-container">
-                        <img src="images/ch14/periyar.webp" alt="ई. वी. रामास्वामी पेरियार" class="bio-img"/>
-                    </div>
-                    <div class="bio-text">
-                        <h3 style="margin: 0 0 10px 0; color: #27272a; font-size: 20pt; font-weight: 900;">ई. वी. रामास्वामी 'पेरियार' (1879-1973)</h3>
-                        <p style="margin: 0; font-size: 22pt; line-height: 1.6;">
-                            <b>योगदान:</b> दक्षिण भारत के महान समाज सुधारक, तर्कशास्त्री और द्रविड़ आंदोलन के प्रणेता। उन्होंने जाति प्रथा, छुआछूत और महिलाओं के उत्पीड़न के खिलाफ संघर्ष किया। उन्होंने तमिल स्वाभिमान को जगाने के लिए 'आत्म-सम्मान आंदोलन' (Self-Respect Movement) चलाया, जिसने तमिलनाडु की राजनीति और समाज को सदा के लिए बदल दिया।
+</div>
+</div>
+</div>
+<!-- SECTION 5: DRAVIDIAN MOVEMENT & GOA -->
+<div style="background-color: #f5f5f5; padding: 40px; border-radius: 12px; margin-bottom: 40px; border: 6px solid #d4d4d8;">
+<h2 class="topic-header" style="font-weight: 900; margin-top: 0; border-bottom: 4px solid #27272a; padding-bottom: 10px;">5. द्रविड़ आंदोलन और गोवा की मुक्ति (Dravidian Movement &amp; Goa)</h2>
+<h3 class="subtopic-header" style="font-weight: 900; margin-top: 25px;">1. द्रविड़ आंदोलन (Dravidian Movement) और पेरियार:</h3>
+<p>दक्षिण भारत, विशेषकर तमिलनाडु में, द्रविड़ आंदोलन भारत के सबसे पुराने और सफल क्षेत्रीय अस्मिता आंदोलनों में से एक है।</p>
+<ul style="list-style-type: circle; padding-left: 20px;">
+<li><b>आत्म-सम्मान आंदोलन:</b> इसका नेतृत्व **ई. वी. रामास्वामी 'पेरियार'** ने किया। उन्होंने ब्राह्मणवादी वर्चस्व, जातिवाद और उत्तर भारत के सांस्कृतिक प्रभुत्व के खिलाफ आवाज़ उठाई।</li>
+<li><b>द्रविड़ कड़गम (DK) का गठन:</b> पेरियार ने द्रविड़ अस्मिता के लिए द्रविड़ कड़गम का गठन किया। बाद में उनके सहयोगियों ने राजनीतिक दल **DMK (द्रविड़ मुनेत्र कड़गम)** बनाया।</li>
+<li><b>हिन्दी-विरोधी आंदोलन (1965):</b> जब केंद्र सरकार ने 1965 में हिन्दी को भारत की एकमात्र राजभाषा बनाने का निर्णय लिया, तो तमिलनाडु में भीषण हिंसक प्रदर्शन शुरू हो गए। छात्रों ने आत्मदाह तक किया। अंततः केंद्र सरकार को झुकना पड़ा और नेहरू के वादे के अनुसार अंग्रेजी को राजभाषा के रूप में जारी रखने का आश्वासन दिया गया। इस आंदोलन के बाद तमिलनाडु में कांग्रेस पूरी तरह बाहर हो गई और तब से आज तक वहाँ केवल द्रविड़ दलों (DMK या AIADMK) का ही शासन रहा है।</li>
+</ul>
+<!-- LEADER BIO BOX: Periyar -->
+<div class="bio-box" style="border-color: #27272a;">
+<div class="bio-img-container">
+<img alt="ई. वी. रामास्वामी पेरियार" class="bio-img" src="images/ch14/periyar.webp"/>
+</div>
+<div class="bio-text">
+<h3 class="subtopic-header" style="margin: 0 0 10px 0;   font-weight: 900;">ई. वी. रामास्वामी 'पेरियार' (1879-1973)</h3>
+<p style="margin: 0;  line-height: 1.6;">
+<b>योगदान:</b> दक्षिण भारत के महान समाज सुधारक, तर्कशास्त्री और द्रविड़ आंदोलन के प्रणेता। उन्होंने जाति प्रथा, छुआछूत और महिलाओं के उत्पीड़न के खिलाफ संघर्ष किया। उन्होंने तमिल स्वाभिमान को जगाने के लिए 'आत्म-सम्मान आंदोलन' (Self-Respect Movement) चलाया, जिसने तमिलनाडु की राजनीति और समाज को सदा के लिए बदल दिया।
                         </p>
+</div>
+</div>
+<h3 class="subtopic-header" style="font-weight: 900; margin-top: 35px;">2. गोवा की मुक्ति (Liberation of Goa - 1961):</h3>
+<p>1947 में जब भारत आज़ाद हुआ, तब भी गोवा, दमन और दीव भारत का हिस्सा नहीं बने थे; वे **पुर्तगाली शासन** के अधीन थे। पुर्तगालियों ने भारत सरकार की शांतिपूर्ण बातचीत की सभी अपीलों को खारिज कर दिया और गोवा में दमनकारी नीतियां जारी रखीं।</p>
+<!-- Illustration: Goa Liberation -->
+<div class="illustration-box">
+<img alt="Goa People Celebrating Liberation from Portuguese" class="illustration-img" src="images/ch14/goa_liberation.webp"/>
+<div class="illustration-explanation">
+<b>चित्र की व्याख्या:</b> यह ऐतिहासिक चित्र 18 दिसंबर 1961 को भारतीय सेना के गोवा में प्रवेश और पुर्तगाली गवर्नर द्वारा आत्मसमर्पण किए जाने के बाद गोवा की सड़कों पर जश्न मनाते आज़ाद नागरिकों को दर्शाता है।
                     </div>
-                </div>
-
-                <h3 style="color: #27272a; font-size: 32pt; font-weight: 900; margin-top: 35px;">2. गोवा की मुक्ति (Liberation of Goa - 1961):</h3>
-                <p>1947 में जब भारत आज़ाद हुआ, तब भी गोवा, दमन और दीव भारत का हिस्सा नहीं बने थे; वे **पुर्तगाली शासन** के अधीन थे। पुर्तगालियों ने भारत सरकार की शांतिपूर्ण बातचीत की सभी अपीलों को खारिज कर दिया और गोवा में दमनकारी नीतियां जारी रखीं।</p>
-
-                <!-- Illustration: Goa Liberation -->
-                <div class="illustration-box">
-                    <img alt="Goa People Celebrating Liberation from Portuguese" src="images/ch14/goa_liberation.webp" class="illustration-img"/>
-                    <div class="illustration-explanation">
-                        <b>चित्र की व्याख्या:</b> यह ऐतिहासिक चित्र 18 दिसंबर 1961 को भारतीय सेना के गोवा में प्रवेश और पुर्तगाली गवर्नर द्वारा आत्मसमर्पण किए जाने के बाद गोवा की सड़कों पर जश्न मनाते आज़ाद नागरिकों को दर्शाता है।
-                    </div>
-                </div>
-
-                <ul style="list-style-type: square; padding-left: 20px;">
-                    <li><b>गोवा मुक्ति आंदोलन:</b> गोवा के भीतर डॉ. राम मनोहर लोहिया जैसे भारतीय समाजवादियों और स्थानीय राष्ट्रवादियों ने पुर्तगाली दमन के खिलाफ सत्याग्रह आंदोलन शुरू किया।</li>
-                    <li><b>ऑपरेशन विजय (Operation Vijay - December 1961):</b> पुर्तगाली सैनिकों द्वारा निहत्थे सत्याग्रहियों पर गोली चलाने के बाद, प्रधानमंत्री जवाहरलाल नेहरू ने सैन्य कार्रवाई का आदेश दिया। 18 दिसंबर 1961 को भारतीय थल सेना, वायु सेना और नौसेना ने 'ऑपरेशन विजय' के तहत गोवा में प्रवेश किया। मात्र 36 घंटों के भीतर पुर्तगाली गवर्नर ने आत्मसमर्पण कर दिया और गोवा पुर्तगाली दासता से मुक्त हो गया।</li>
-                    <li><b>पूर्ण राज्य का दर्जा (1987):</b> शुरू में गोवा, दमन और दीव को एक केंद्र शासित प्रदेश बनाया गया। बाद में, 30 मई 1987 को गोवा को भारत संघ के 25वें पूर्ण राज्य के रूप में मान्यता मिली।</li>
-                </ul>
-            </div>
-
-            <!-- SECTION 6: Q&A BANK -->
-            <div style="background-color: #fff1f2; padding: 40px; border-radius: 12px; margin-bottom: 40px; border: 6px solid #fecdd3; text-align: left;">
-                <h2 style="color: #be123c; font-size: 40pt; font-weight: 900; margin-top: 0; border-bottom: 4px solid #be123c; padding-bottom: 10px; text-align: center;">📝 बोर्ड परीक्षा मास्टर प्रश्न-उत्तर बैंक (Master Q&A Bank)</h2>
-
-                <!-- 1 MARK QUESTIONS -->
-                <h3 style="color: #be123c; font-size: 32pt; font-weight: 900; margin-top: 25px; border-left: 12px solid #be123c; padding-left: 10px;">अति-लघु उत्तरीय प्रश्न (1 अंक)</h3>
-                
-                <p style="font-size: 32pt; line-height: 2.0;"><b>प्रश्न 1: 'पंजाबी सूबा आंदोलन' का मुख्य उद्देश्य क्या था?</b>
-                <br><b>उत्तर:</b> इसका मुख्य उद्देश्य सिख पहचान और पंजाबी भाषा बोलने वाले लोगों के लिए एक अलग सूबे (पंजाब राज्य) का गठन करना था, जो 1966 में सफल हुआ।</p>
-                
-                <p style="font-size: 32pt; line-height: 2.0;"><b>प्रश्न 2: आनंदपुर साहिब प्रस्ताव कब पारित हुआ और इसकी मुख्य मांग क्या थी?</b>
-                <br><b>उत्तर:</b> आनंदपुर साहिब प्रस्ताव 1973 में पारित हुआ था। इसकी मुख्य मांग केंद्र-राज्य संबंधों को सुधारकर राज्यों को अधिक स्वायत्तता देना और पंजाब में सिखों के धार्मिक वर्चस्व को स्थापित करना था।</p>
-
-                <p style="font-size: 32pt; line-height: 2.0;"><b>प्रश्न 3: 1984 में अमृतसर के स्वर्ण मंदिर में की गई सैन्य कार्रवाई को क्या नाम दिया गया था?</b>
-                <br><b>उत्तर:</b> इस सैन्य कार्रवाई को <b>'ऑपरेशन ब्लू स्टार' (Operation Blue Star)</b> नाम दिया गया था, जो जून 1984 में चलाया गया था।</p>
-
-                <p style="font-size: 32pt; line-height: 2.0;"><b>प्रश्न 4: सिक्किम भारत का कौन सा राज्य बना और यह विलय किस वर्ष हुआ?</b>
-                <br><b>उत्तर:</b> सिक्किम 16 मई 1975 को आधिकारिक विलय के बाद भारत संघ का <b>22वां पूर्ण राज्य</b> बना।</p>
-
-                <p style="font-size: 32pt; line-height: 2.0;"><b>प्रश्न 5: असम में अवैध प्रवासियों के खिलाफ आंदोलन का नेतृत्व किसने किया?</b>
-                <br><b>उत्तर:</b> असम आंदोलन (1979-1985) का नेतृत्व छात्रों के संगठन <b>ऑल असम स्टूडेंट्स यूनियन (AASU)</b> ने किया था।</p>
-
-                <p style="font-size: 32pt; line-height: 2.0;"><b>प्रश्न 6: 'ऑपरेशन विजय' (1961) किससे संबंधित है?</b>
-                <br><b>उत्तर:</b> 'ऑपरेशन विजय' भारतीय सेना द्वारा 1961 में गोवा, दमन और दीव को पुर्तगाली औपनिवेशिक शासन से मुक्त कराने के लिए की गई सैन्य कार्रवाई से संबंधित है।</p>
-
-                <hr style="border: 1px dashed #fecdd3; margin: 30px 0;">
-
-                <!-- 4 MARK QUESTIONS -->
-                <h3 style="color: #be123c; font-size: 32pt; font-weight: 900; margin-top: 25px; border-left: 12px solid #be123c; padding-left: 10px;">लघु उत्तरीय प्रश्न (4 अंक)</h3>
-
-                <p style="font-size: 32pt; line-height: 2.0;"><b>प्रश्न 1: पूर्वोत्तर राज्यों में अलगाववादी आंदोलनों के उदय के प्रमुख कारण क्या थे? स्पष्ट कीजिए।</b>
-                <br><b>उत्तर:</b> पूर्वोत्तर भारत (जैसे नागालैंड और मिज़ोरम) में अलगाववादी आंदोलनों के उदय के मुख्य कारण निम्नलिखित थे:
-                <br>1. **भौगोलिक और सांस्कृतिक अलगाव:** पूर्वोत्तर क्षेत्र भारत के मुख्य भाग से केवल एक संकरे गलियारे (सिलीगुड़ी कॉरिडोर) से जुड़ा है, जिससे लोगों में अलगाव की भावना बढ़ी।
-                <br>2. **भाषा और संस्कृति पर खतरा:** असम सरकार द्वारा मिज़ो और नगा लोगों पर असमी भाषा थोपने के प्रयासों से उनकी सांस्कृतिक पहचान को संकट महसूस हुआ।
-                <br>3. **आर्थिक उपेक्षा और अकाल:** 1959 में मिज़ो पहाड़ियों में आए भीषण अकाल के समय असम सरकार की संवेदनहीनता ने आग में घी का काम किया, जिससे अलगाववादी संगठन MNF का उदय हुआ।
-                <br>4. **बाहरी लोगों का आगमन:** बाहर से आने वाले प्रवासियों के कारण स्थानीय जनजातियाँ अपनी ही ज़मीन पर अल्पसंख्यक होने लगीं, जिससे असंतोष बढ़ा।</p>
-
-                <p style="font-size: 32pt; line-height: 2.0;"><b>प्रश्न 2: 1985 के राजीव गांधी-लोंगोवाल समझौते (पंजाब समझौते) की मुख्य शर्तों का संक्षेप में वर्णन कीजिए।</b>
-                <br><b>उत्तर:</b> जुलाई 1985 में प्रधानमंत्री राजीव गांधी और अकाली नेता संत हरचंद सिंह लोंगोवाल के बीच हुए 'पंजाब समझौते' की मुख्य शर्तें इस प्रकार थीं:
-                <br>1. **चंडीगढ़ का हस्तांतरण:** चंडीगढ़ को पूरी तरह से पंजाब की राजधानी बनाने पर सहमति बनी (जो वर्तमान में पंजाब और हरियाणा दोनों की संयुक्त राजधानी है)।
-                <br>2. **सीमा विवाद का हल:** पंजाब और हरियाणा के बीच सीमा विवाद को सुलझाने के लिए एक विशेष आयोग गठित करने का निर्णय लिया गया।
-                <br>3. **जल बंटवारे का ट्रिब्यूनल:** रावी और व्यास नदियों के अतिरिक्त पानी के बंटवारे के विवाद को निपटाने के लिए एक न्यायाधिकरण (Tribunal) बनाने की बात कही गई।
-                <br>4. **मुनावजा और पुनर्वास:** दंगों और हिंसा से प्रभावित परिवारों को मुआवजा और सुरक्षा देने तथा पंजाब से सेना का नियंत्रण धीरे-धीरे हटाने का वादा किया गया।</p>
-
-                <p style="font-size: 32pt; line-height: 2.0;"><b>प्रश्न 3: 1965 के हिन्दी-विरोधी आंदोलन के राजनीतिक प्रभावों की समीक्षा कीजिए।</b>
-                <br><b>उत्तर:</b> 1965 में तमिलनाडु (मद्रास राज्य) में हुए हिन्दी-विरोधी आंदोलन के अत्यंत गहरे राजनीतिक प्रभाव पड़े:
-                <br>1. **द्विभाषी नीति की घोषणा:** हिंसक विरोध प्रदर्शनों को शांत करने के लिए केंद्र सरकार को आश्वासन देना पड़ा कि हिन्दी के साथ-साथ अंग्रेज़ी भी संघ की राजभाषा के रूप में काम करती रहेगी।
-                <br>2. **कांग्रेस का पतन:** तमिलनाडु में कांग्रेस पार्टी का जनाधार पूरी तरह समाप्त हो गया क्योंकि उसे हिन्दी थोपने वाली उत्तर भारतीय पार्टी के रूप में देखा गया।
-                <br>3. **द्रविड़ दलों का उदय:** द्रविड़ मुनेत्र कड़गम (DMK) का राजनीतिक उभार हुआ। 1967 के विधानसभा चुनावों में DMK ने कांग्रेस को हराकर पूर्ण बहुमत की सरकार बनाई।
-                <br>4. **क्षेत्रीय पहचान की जीत:** इस आंदोलन ने सिद्ध किया कि क्षेत्रीय पहचान और भाषाई अस्मिता को दबाकर राष्ट्रीय एकता नहीं बनाई जा सकती।</p>
-
-                <hr style="border: 1px dashed #fecdd3; margin: 30px 0;">
-
-                <!-- 6 MARK QUESTIONS -->
-                <h3 style="color: #be123c; font-size: 32pt; font-weight: 900; margin-top: 25px; border-left: 12px solid #be123c; padding-left: 10px;">दीर्घ उत्तरीय प्रश्न (6 अंक)</h3>
-
-                <p style="font-size: 32pt; line-height: 2.0;"><b>प्रश्न 1: स्वतंत्रता के बाद जम्मू-कश्मीर राज्य की विशेष स्थिति (अनुच्छेद 370) और उसके बाद उत्पन्न राजनीतिक विवादों की सविस्तार व्याख्या कीजिए।</b>
-                <br><b>उत्तर:</b> जम्मू-कश्मीर की विशेष स्थिति और राजनीतिक विवाद का विस्तृत विवरण निम्नलिखित है:
-                <br><b>1. अनुच्छेद 370 का प्रावधान (विशेष स्वायत्तता):</b> 1947 में भारत में विलय के समय कश्मीरी जनता की भावनाओं और विशेष परिस्थितियों को ध्यान में रखते हुए संविधान में अनुच्छेद 370 शामिल किया गया। इसके तहत राज्य को अपनी विधानसभा द्वारा अपना अलग संविधान बनाने, पृथक राज्य ध्वज रखने का अधिकार मिला। रक्षा, विदेशी मामले और संचार को छोड़कर संघ सूची के अन्य विषयों को राज्य में लागू करने के लिए राज्य सरकार की सहमति अनिवार्य थी।
-                <br><b>2. स्वायत्तता बनाम पूर्ण एकीकरण का विवाद:</b> अनुच्छेद 370 शुरू से ही विवाद का विषय रहा। कश्मीर के बाहर के राजनीतिक दलों (जैसे भारतीय जनसंघ और बाद में भाजपा) का मानना था कि यह विशेष दर्जा भारत के पूर्ण एकीकरण में बाधा है और यह 'एक देश में दो विधान, दो निशान और दो प्रधान' को बढ़ावा देता है। वहीं कश्मीरी नेताओं का तर्क था कि यह स्वायत्तता उनके भारत में विलय का एकमात्र संवैधानिक आधार थी।
-                <br><b>3. केंद्र सरकार और कश्मीरी नेताओं में अविश्वास (1953 की बर्खास्तगी):</b> शेख अब्दुल्ला के बढ़ते प्रभाव और स्वायत्तता की कठोर मांगों से चिंतित होकर केंद्र सरकार ने 1953 में उन्हें बर्खास्त कर दिया। इसके बाद राज्य में कांग्रेस समर्थित कठपुतली सरकारें बनीं, जिससे कश्मीरियों में अविश्वास और लोकतंत्र के प्रति निराशा फैली।
-                <br><b>4. 1987 के चुनाव धांधली और उग्रवाद:</b> 1987 के चुनावों में हुई कथित धांधली ने कश्मीरी युवाओं को हथियार उठाने पर मजबूर किया। पाकिस्तान की मदद से 1989 में घाटी में हिंसक आतंकवाद शुरू हुआ, जिसने कश्मीर को युद्ध क्षेत्र में बदल दिया।
-                <br><b>5. 5 अगस्त 2019 का ऐतिहासिक निर्णय:</b> केंद्र की नरेंद्र मोदी सरकार ने अनुच्छेद 370 को निष्प्रभावी घोषित कर विशेष दर्जा समाप्त कर दिया। इसके साथ ही राज्य को जम्मू-कश्मीर और लद्दाख नामक दो केंद्र शासित प्रदेशों में विभाजित कर सीधे संघ के नियंत्रण में ला दिया गया, जिससे पूर्ण एकीकरण का लक्ष्य प्राप्त करने का दावा किया गया।</p>
-
-                <p style="font-size: 32pt; line-height: 2.0;"><b>प्रश्न 2: भारत में क्षेत्रीय स्वायत्तता और आंदोलनों के इतिहास से हमें क्या लोकतांत्रिक सीख मिलती है? उदाहरण सहित समझाइए।</b>
-                <br><b>उत्तर:</b> भारत में क्षेत्रीय आंदोलनों और स्वायत्तता के संघर्षों (जैसे कश्मीर, पंजाब और पूर्वोत्तर) के इतिहास से हमें निम्नलिखित चार सबसे महत्वपूर्ण लोकतांत्रिक सीख मिलती हैं:
-                <br><b>1. क्षेत्रीय आकांक्षाएं लोकतंत्र का स्वाभाविक अंग हैं:</b> भारत जैसी विशाल विविधता वाले देश में क्षेत्रीय भावनाओं और मांगों का उठना कोई देश-द्रोह या राष्ट्र-विरोधी गतिविधि नहीं है। लोकतांत्रिक राजनीति में यह अनिवार्य है कि लोग अपनी विशिष्ट पहचान के लिए संघर्ष करें।
-                <br><b>2. दमन के बजाय बातचीत और समझौते का रास्ता सर्वोत्तम है:</b> इतिहास गवाह है कि जब-जब केंद्र सरकार ने क्षेत्रीय मांगों को सैन्य बल से दबाने की कोशिश की, आंदोलन और हिंसक व उग्र हो गया (जैसे मिज़ोरम और पंजाब का चरमपंथ)। लेकिन जब बातचीत और लोकतांत्रिक समझौतों का रास्ता अपनाया गया, तो शांति की वापसी हुई (जैसे 1985 का पंजाब समझौता, 1985 का असम समझौता और 1986 का मिज़ो शांति समझौता)।
-                <br><b>3. सत्ता की साझेदारी (Power Sharing) अनिवार्य है:</b> केवल कानून बनाने से एकता नहीं आती। क्षेत्रीय दलों और क्षेत्रीय नेताओं को राष्ट्रीय स्तर पर सत्ता में हिस्सेदारी देना आवश्यक है। जब क्षेत्रीय दलों का केंद्र सरकार में महत्व बढ़ा, तो अलगाववादी आंदोलन स्वतः कमजोर हो गए।
-                <br><b>4. विविधता का आदर ही एकता का आधार है:</b> भारत की एकता केवल एकरूपता थोपने से नहीं बच सकती। संघीय ढांचे को मजबूत करके, राज्यों को स्वायत्तता देकर और क्षेत्रीय भाषाओं व संस्कृतियों का सम्मान करके ही एक मजबूत अखंड भारत का निर्माण किया जा सकता है।</p>
-            </div>
-
-            <!-- SECTION 7: SUMMARY & GURUMANTRA -->
-            <div style="background-color: #f0fdf4; padding: 30px; border-radius: 12px; border: 3px solid #166534; text-align: left; margin-top: 40px;">
-                <h2 style="color: #14532d; font-size: 40pt; font-weight: 900; text-align: center; margin-top: 0; border-bottom: 3px solid #166534; padding-bottom: 10px;">🔑 अध्याय 14 का 'गुरुमंत्र' (Master Revision Summary)</h2>
-                <ul style="font-size: 24pt; line-height: 2.0; list-style-type: square; padding-left: 20px;">
-                    <li><b>कश्मीर विवाद:</b> 1947 में महाराजा हरि सिंह के विलय पत्र पर हस्ताक्षर, शेख अब्दुल्ला का नेशनल कॉन्फ्रेंस आंदोलन, अनुच्छेद 370 के तहत स्वायत्तता, 1987 चुनाव धांधली से उपजा उग्रवाद (1989), और अंततः 2019 में अनुच्छेद 370 का खात्मा।</li>
-                    <li><b>पंजाब संकट:</b> 1966 में भाषाई आधार पर नए पंजाब का गठन, 1973 का आनंदपुर साहिब प्रस्ताव, भिंडरांवाले का चरमपंथ, जून 1984 का 'ऑपरेशन ब्लू स्टार', इंदिरा गांधी की हत्या व 1984 के सिख-विरोधी दंगे, और 1985 का राजीव गांधी-लोंगोवाल समझौता।</li>
-                    <li><b>पूर्वोत्तर स्वायत्तता संघर्ष:</b> मिज़ोरम में लालडेंगा के MNF का विद्रोह और 1986 का शांति समझौता; नगालैंड में फिज़ो का विद्रोह; असम में बाहरी बांग्लादेशियों के खिलाफ AASU का आंदोलन (1979-1985) और 1985 का असम समझौता; तथा 1975 में लोकतांत्रिक जनमत संग्रह द्वारा सिक्किम का 22वें राज्य के रूप में भारत में विलय।</li>
-                    <li><b>द्रविड़ आंदोलन:</b> पेरियार का आत्म-सम्मान आंदोलन, ब्राह्मणवाद व उत्तर भारतीय वर्चस्व का विरोध, 1965 का ऐतिहासिक हिन्दी-विरोधी आंदोलन, और तमिलनाडु में DMK/AIADMK की द्रविड़ राजनीति का उदय।</li>
-                    <li><b>गोवा मुक्ति (1961):</b> पुर्तगाली औपनिवेशिक शासन के खिलाफ सत्याग्रह, 18 दिसंबर 1961 को भारतीय सेना का 'ऑपरेशन विजय', पुर्तगालियों का आत्मसमर्पण, और 1987 में गोवा को पूर्ण राज्य का दर्जा मिलना।</li>
-                </ul>
-            </div>
-
-        </div>
-    </div>
-
+</div>
+<ul style="list-style-type: square; padding-left: 20px;">
+<li><b>गोवा मुक्ति आंदोलन:</b> गोवा के भीतर डॉ. राम मनोहर लोहिया जैसे भारतीय समाजवादियों और स्थानीय राष्ट्रवादियों ने पुर्तगाली दमन के खिलाफ सत्याग्रह आंदोलन शुरू किया।</li>
+<li><b>ऑपरेशन विजय (Operation Vijay - December 1961):</b> पुर्तगाली सैनिकों द्वारा निहत्थे सत्याग्रहियों पर गोली चलाने के बाद, प्रधानमंत्री जवाहरलाल नेहरू ने सैन्य कार्रवाई का आदेश दिया। 18 दिसंबर 1961 को भारतीय थल सेना, वायु सेना और नौसेना ने 'ऑपरेशन विजय' के तहत गोवा में प्रवेश किया। मात्र 36 घंटों के भीतर पुर्तगाली गवर्नर ने आत्मसमर्पण कर दिया और गोवा पुर्तगाली दासता से मुक्त हो गया।</li>
+<li><b>पूर्ण राज्य का दर्जा (1987):</b> शुरू में गोवा, दमन और दीव को एक केंद्र शासित प्रदेश बनाया गया। बाद में, 30 मई 1987 को गोवा को भारत संघ के 25वें पूर्ण राज्य के रूप में मान्यता मिली।</li>
+</ul>
+</div>
+<!-- SECTION 6: Q&A BANK -->
+<div style="background-color: #fff1f2; padding: 40px; border-radius: 12px; margin-bottom: 40px; border: 6px solid #fecdd3; text-align: left;">
+<h2 class="topic-header" style="font-weight: 900; margin-top: 0; border-bottom: 4px solid #be123c; padding-bottom: 10px; text-align: center;">📝 बोर्ड परीक्षा मास्टर प्रश्न-उत्तर बैंक (Master Q&amp;A Bank)</h2>
+<!-- 1 MARK QUESTIONS -->
+<h3 class="box-header" style="font-weight: 900; margin-top: 25px; border-left: 12px solid #be123c; padding-left: 10px;">अति-लघु उत्तरीय प्रश्न (1 अंक)</h3>
+<p style=" line-height: 2.0;"><b>प्रश्न 1: 'पंजाबी सूबा आंदोलन' का मुख्य उद्देश्य क्या था?</b>
+<br/><b>उत्तर:</b> इसका मुख्य उद्देश्य सिख पहचान और पंजाबी भाषा बोलने वाले लोगों के लिए एक अलग सूबे (पंजाब राज्य) का गठन करना था, जो 1966 में सफल हुआ।</p>
+<p style=" line-height: 2.0;"><b>प्रश्न 2: आनंदपुर साहिब प्रस्ताव कब पारित हुआ और इसकी मुख्य मांग क्या थी?</b>
+<br/><b>उत्तर:</b> आनंदपुर साहिब प्रस्ताव 1973 में पारित हुआ था। इसकी मुख्य मांग केंद्र-राज्य संबंधों को सुधारकर राज्यों को अधिक स्वायत्तता देना और पंजाब में सिखों के धार्मिक वर्चस्व को स्थापित करना था।</p>
+<p style=" line-height: 2.0;"><b>प्रश्न 3: 1984 में अमृतसर के स्वर्ण मंदिर में की गई सैन्य कार्रवाई को क्या नाम दिया गया था?</b>
+<br/><b>उत्तर:</b> इस सैन्य कार्रवाई को <b>'ऑपरेशन ब्लू स्टार' (Operation Blue Star)</b> नाम दिया गया था, जो जून 1984 में चलाया गया था।</p>
+<p style=" line-height: 2.0;"><b>प्रश्न 4: सिक्किम भारत का कौन सा राज्य बना और यह विलय किस वर्ष हुआ?</b>
+<br/><b>उत्तर:</b> सिक्किम 16 मई 1975 को आधिकारिक विलय के बाद भारत संघ का <b>22वां पूर्ण राज्य</b> बना।</p>
+<p style=" line-height: 2.0;"><b>प्रश्न 5: असम में अवैध प्रवासियों के खिलाफ आंदोलन का नेतृत्व किसने किया?</b>
+<br/><b>उत्तर:</b> असम आंदोलन (1979-1985) का नेतृत्व छात्रों के संगठन <b>ऑल असम स्टूडेंट्स यूनियन (AASU)</b> ने किया था।</p>
+<p style=" line-height: 2.0;"><b>प्रश्न 6: 'ऑपरेशन विजय' (1961) किससे संबंधित है?</b>
+<br/><b>उत्तर:</b> 'ऑपरेशन विजय' भारतीय सेना द्वारा 1961 में गोवा, दमन और दीव को पुर्तगाली औपनिवेशिक शासन से मुक्त कराने के लिए की गई सैन्य कार्रवाई से संबंधित है।</p>
+<hr style="border: 1px dashed #fecdd3; margin: 30px 0;"/>
+<!-- 4 MARK QUESTIONS -->
+<h3 class="box-header" style="font-weight: 900; margin-top: 25px; border-left: 12px solid #be123c; padding-left: 10px;">लघु उत्तरीय प्रश्न (4 अंक)</h3>
+<p style=" line-height: 2.0;"><b>प्रश्न 1: पूर्वोत्तर राज्यों में अलगाववादी आंदोलनों के उदय के प्रमुख कारण क्या थे? स्पष्ट कीजिए।</b>
+<br/><b>उत्तर:</b> पूर्वोत्तर भारत (जैसे नागालैंड और मिज़ोरम) में अलगाववादी आंदोलनों के उदय के मुख्य कारण निम्नलिखित थे:
+                <br/>1. **भौगोलिक और सांस्कृतिक अलगाव:** पूर्वोत्तर क्षेत्र भारत के मुख्य भाग से केवल एक संकरे गलियारे (सिलीगुड़ी कॉरिडोर) से जुड़ा है, जिससे लोगों में अलगाव की भावना बढ़ी।
+                <br/>2. **भाषा और संस्कृति पर खतरा:** असम सरकार द्वारा मिज़ो और नगा लोगों पर असमी भाषा थोपने के प्रयासों से उनकी सांस्कृतिक पहचान को संकट महसूस हुआ।
+                <br/>3. **आर्थिक उपेक्षा और अकाल:** 1959 में मिज़ो पहाड़ियों में आए भीषण अकाल के समय असम सरकार की संवेदनहीनता ने आग में घी का काम किया, जिससे अलगाववादी संगठन MNF का उदय हुआ।
+                <br/>4. **बाहरी लोगों का आगमन:** बाहर से आने वाले प्रवासियों के कारण स्थानीय जनजातियाँ अपनी ही ज़मीन पर अल्पसंख्यक होने लगीं, जिससे असंतोष बढ़ा।</p>
+<p style=" line-height: 2.0;"><b>प्रश्न 2: 1985 के राजीव गांधी-लोंगोवाल समझौते (पंजाब समझौते) की मुख्य शर्तों का संक्षेप में वर्णन कीजिए।</b>
+<br/><b>उत्तर:</b> जुलाई 1985 में प्रधानमंत्री राजीव गांधी और अकाली नेता संत हरचंद सिंह लोंगोवाल के बीच हुए 'पंजाब समझौते' की मुख्य शर्तें इस प्रकार थीं:
+                <br/>1. **चंडीगढ़ का हस्तांतरण:** चंडीगढ़ को पूरी तरह से पंजाब की राजधानी बनाने पर सहमति बनी (जो वर्तमान में पंजाब और हरियाणा दोनों की संयुक्त राजधानी है)।
+                <br/>2. **सीमा विवाद का हल:** पंजाब और हरियाणा के बीच सीमा विवाद को सुलझाने के लिए एक विशेष आयोग गठित करने का निर्णय लिया गया।
+                <br/>3. **जल बंटवारे का ट्रिब्यूनल:** रावी और व्यास नदियों के अतिरिक्त पानी के बंटवारे के विवाद को निपटाने के लिए एक न्यायाधिकरण (Tribunal) बनाने की बात कही गई।
+                <br/>4. **मुनावजा और पुनर्वास:** दंगों और हिंसा से प्रभावित परिवारों को मुआवजा और सुरक्षा देने तथा पंजाब से सेना का नियंत्रण धीरे-धीरे हटाने का वादा किया गया।</p>
+<p style=" line-height: 2.0;"><b>प्रश्न 3: 1965 के हिन्दी-विरोधी आंदोलन के राजनीतिक प्रभावों की समीक्षा कीजिए।</b>
+<br/><b>उत्तर:</b> 1965 में तमिलनाडु (मद्रास राज्य) में हुए हिन्दी-विरोधी आंदोलन के अत्यंत गहरे राजनीतिक प्रभाव पड़े:
+                <br/>1. **द्विभाषी नीति की घोषणा:** हिंसक विरोध प्रदर्शनों को शांत करने के लिए केंद्र सरकार को आश्वासन देना पड़ा कि हिन्दी के साथ-साथ अंग्रेज़ी भी संघ की राजभाषा के रूप में काम करती रहेगी।
+                <br/>2. **कांग्रेस का पतन:** तमिलनाडु में कांग्रेस पार्टी का जनाधार पूरी तरह समाप्त हो गया क्योंकि उसे हिन्दी थोपने वाली उत्तर भारतीय पार्टी के रूप में देखा गया।
+                <br/>3. **द्रविड़ दलों का उदय:** द्रविड़ मुनेत्र कड़गम (DMK) का राजनीतिक उभार हुआ। 1967 के विधानसभा चुनावों में DMK ने कांग्रेस को हराकर पूर्ण बहुमत की सरकार बनाई।
+                <br/>4. **क्षेत्रीय पहचान की जीत:** इस आंदोलन ने सिद्ध किया कि क्षेत्रीय पहचान और भाषाई अस्मिता को दबाकर राष्ट्रीय एकता नहीं बनाई जा सकती।</p>
+<hr style="border: 1px dashed #fecdd3; margin: 30px 0;"/>
+<!-- 6 MARK QUESTIONS -->
+<h3 class="box-header" style="font-weight: 900; margin-top: 25px; border-left: 12px solid #be123c; padding-left: 10px;">दीर्घ उत्तरीय प्रश्न (6 अंक)</h3>
+<p style=" line-height: 2.0;"><b>प्रश्न 1: स्वतंत्रता के बाद जम्मू-कश्मीर राज्य की विशेष स्थिति (अनुच्छेद 370) और उसके बाद उत्पन्न राजनीतिक विवादों की सविस्तार व्याख्या कीजिए।</b>
+<br/><b>उत्तर:</b> जम्मू-कश्मीर की विशेष स्थिति और राजनीतिक विवाद का विस्तृत विवरण निम्नलिखित है:
+                <br/><b>1. अनुच्छेद 370 का प्रावधान (विशेष स्वायत्तता):</b> 1947 में भारत में विलय के समय कश्मीरी जनता की भावनाओं और विशेष परिस्थितियों को ध्यान में रखते हुए संविधान में अनुच्छेद 370 शामिल किया गया। इसके तहत राज्य को अपनी विधानसभा द्वारा अपना अलग संविधान बनाने, पृथक राज्य ध्वज रखने का अधिकार मिला। रक्षा, विदेशी मामले और संचार को छोड़कर संघ सूची के अन्य विषयों को राज्य में लागू करने के लिए राज्य सरकार की सहमति अनिवार्य थी।
+                <br/><b>2. स्वायत्तता बनाम पूर्ण एकीकरण का विवाद:</b> अनुच्छेद 370 शुरू से ही विवाद का विषय रहा। कश्मीर के बाहर के राजनीतिक दलों (जैसे भारतीय जनसंघ और बाद में भाजपा) का मानना था कि यह विशेष दर्जा भारत के पूर्ण एकीकरण में बाधा है और यह 'एक देश में दो विधान, दो निशान और दो प्रधान' को बढ़ावा देता है। वहीं कश्मीरी नेताओं का तर्क था कि यह स्वायत्तता उनके भारत में विलय का एकमात्र संवैधानिक आधार थी।
+                <br/><b>3. केंद्र सरकार और कश्मीरी नेताओं में अविश्वास (1953 की बर्खास्तगी):</b> शेख अब्दुल्ला के बढ़ते प्रभाव और स्वायत्तता की कठोर मांगों से चिंतित होकर केंद्र सरकार ने 1953 में उन्हें बर्खास्त कर दिया। इसके बाद राज्य में कांग्रेस समर्थित कठपुतली सरकारें बनीं, जिससे कश्मीरियों में अविश्वास और लोकतंत्र के प्रति निराशा फैली।
+                <br/><b>4. 1987 के चुनाव धांधली और उग्रवाद:</b> 1987 के चुनावों में हुई कथित धांधली ने कश्मीरी युवाओं को हथियार उठाने पर मजबूर किया। पाकिस्तान की मदद से 1989 में घाटी में हिंसक आतंकवाद शुरू हुआ, जिसने कश्मीर को युद्ध क्षेत्र में बदल दिया।
+                <br/><b>5. 5 अगस्त 2019 का ऐतिहासिक निर्णय:</b> केंद्र की नरेंद्र मोदी सरकार ने अनुच्छेद 370 को निष्प्रभावी घोषित कर विशेष दर्जा समाप्त कर दिया। इसके साथ ही राज्य को जम्मू-कश्मीर और लद्दाख नामक दो केंद्र शासित प्रदेशों में विभाजित कर सीधे संघ के नियंत्रण में ला दिया गया, जिससे पूर्ण एकीकरण का लक्ष्य प्राप्त करने का दावा किया गया।</p>
+<p style=" line-height: 2.0;"><b>प्रश्न 2: भारत में क्षेत्रीय स्वायत्तता और आंदोलनों के इतिहास से हमें क्या लोकतांत्रिक सीख मिलती है? उदाहरण सहित समझाइए।</b>
+<br/><b>उत्तर:</b> भारत में क्षेत्रीय आंदोलनों और स्वायत्तता के संघर्षों (जैसे कश्मीर, पंजाब और पूर्वोत्तर) के इतिहास से हमें निम्नलिखित चार सबसे महत्वपूर्ण लोकतांत्रिक सीख मिलती हैं:
+                <br/><b>1. क्षेत्रीय आकांक्षाएं लोकतंत्र का स्वाभाविक अंग हैं:</b> भारत जैसी विशाल विविधता वाले देश में क्षेत्रीय भावनाओं और मांगों का उठना कोई देश-द्रोह या राष्ट्र-विरोधी गतिविधि नहीं है। लोकतांत्रिक राजनीति में यह अनिवार्य है कि लोग अपनी विशिष्ट पहचान के लिए संघर्ष करें।
+                <br/><b>2. दमन के बजाय बातचीत और समझौते का रास्ता सर्वोत्तम है:</b> इतिहास गवाह है कि जब-जब केंद्र सरकार ने क्षेत्रीय मांगों को सैन्य बल से दबाने की कोशिश की, आंदोलन और हिंसक व उग्र हो गया (जैसे मिज़ोरम और पंजाब का चरमपंथ)। लेकिन जब बातचीत और लोकतांत्रिक समझौतों का रास्ता अपनाया गया, तो शांति की वापसी हुई (जैसे 1985 का पंजाब समझौता, 1985 का असम समझौता और 1986 का मिज़ो शांति समझौता)।
+                <br/><b>3. सत्ता की साझेदारी (Power Sharing) अनिवार्य है:</b> केवल कानून बनाने से एकता नहीं आती। क्षेत्रीय दलों और क्षेत्रीय नेताओं को राष्ट्रीय स्तर पर सत्ता में हिस्सेदारी देना आवश्यक है। जब क्षेत्रीय दलों का केंद्र सरकार में महत्व बढ़ा, तो अलगाववादी आंदोलन स्वतः कमजोर हो गए।
+                <br/><b>4. विविधता का आदर ही एकता का आधार है:</b> भारत की एकता केवल एकरूपता थोपने से नहीं बच सकती। संघीय ढांचे को मजबूत करके, राज्यों को स्वायत्तता देकर और क्षेत्रीय भाषाओं व संस्कृतियों का सम्मान करके ही एक मजबूत अखंड भारत का निर्माण किया जा सकता है।</p>
+</div>
+<!-- SECTION 7: SUMMARY & GURUMANTRA -->
+<div style="background-color: #f0fdf4; padding: 30px; border-radius: 12px; border: 3px solid #166534; text-align: left; margin-top: 40px;">
+<h2 class="topic-header" style="font-weight: 900; text-align: center; margin-top: 0; border-bottom: 3px solid #166534; padding-bottom: 10px;">🔑 अध्याय 14 का 'गुरुमंत्र' (Master Revision Summary)</h2>
+<ul style=" line-height: 2.0; list-style-type: square; padding-left: 20px;">
+<li><b>कश्मीर विवाद:</b> 1947 में महाराजा हरि सिंह के विलय पत्र पर हस्ताक्षर, शेख अब्दुल्ला का नेशनल कॉन्फ्रेंस आंदोलन, अनुच्छेद 370 के तहत स्वायत्तता, 1987 चुनाव धांधली से उपजा उग्रवाद (1989), और अंततः 2019 में अनुच्छेद 370 का खात्मा।</li>
+<li><b>पंजाब संकट:</b> 1966 में भाषाई आधार पर नए पंजाब का गठन, 1973 का आनंदपुर साहिब प्रस्ताव, भिंडरांवाले का चरमपंथ, जून 1984 का 'ऑपरेशन ब्लू स्टार', इंदिरा गांधी की हत्या व 1984 के सिख-विरोधी दंगे, और 1985 का राजीव गांधी-लोंगोवाल समझौता।</li>
+<li><b>पूर्वोत्तर स्वायत्तता संघर्ष:</b> मिज़ोरम में लालडेंगा के MNF का विद्रोह और 1986 का शांति समझौता; नगालैंड में फिज़ो का विद्रोह; असम में बाहरी बांग्लादेशियों के खिलाफ AASU का आंदोलन (1979-1985) और 1985 का असम समझौता; तथा 1975 में लोकतांत्रिक जनमत संग्रह द्वारा सिक्किम का 22वें राज्य के रूप में भारत में विलय।</li>
+<li><b>द्रविड़ आंदोलन:</b> पेरियार का आत्म-सम्मान आंदोलन, ब्राह्मणवाद व उत्तर भारतीय वर्चस्व का विरोध, 1965 का ऐतिहासिक हिन्दी-विरोधी आंदोलन, और तमिलनाडु में DMK/AIADMK की द्रविड़ राजनीति का उदय।</li>
+<li><b>गोवा मुक्ति (1961):</b> पुर्तगाली औपनिवेशिक शासन के खिलाफ सत्याग्रह, 18 दिसंबर 1961 को भारतीय सेना का 'ऑपरेशन विजय', पुर्तगालियों का आत्मसमर्पण, और 1987 में गोवा को पूर्ण राज्य का दर्जा मिलना।</li>
+</ul>
+</div>
+</div>
+</div>
 </body>
 </html>
