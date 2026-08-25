@@ -22,7 +22,7 @@
             margin: 15px auto;
             background: white;
             color: #1a202c;
-            padding: 10px !important;
+            padding: 85px 10px 10px 10px !important;
             border-radius: 12px;
             box-shadow: 0 10px 25px rgba(0,0,0,0.25);
             text-align: justify;
@@ -53,38 +53,42 @@
             font-size: 1.5rem;
         }
 
-        /* Action Bar for Copy/Print */
+        /* Action Bar for Copy/Print - Centered & Enlarged */
         .action-bar {
             position: absolute;
-            top: 20px;
-            right: 20px;
+            top: 15px;
+            left: 50%;
+            transform: translateX(-50%);
             display: flex;
-            gap: 10px;
+            gap: 12px;
             z-index: 1100;
             flex-wrap: wrap;
-            justify-content: flex-end;
-            max-width: calc(100% - 40px);
+            justify-content: center;
+            max-width: calc(100% - 30px);
+            width: fit-content;
         }
 
         .action-btn {
-            width: 50px;
-            height: 50px;
-            border-radius: 12px;
-            border: 2px solid #3b82f6;
+            width: 60px;
+            height: 60px;
+            border-radius: 14px;
+            border: 2.5px solid #3b82f6;
             background: #1e293b;
             color: white;
-            font-size: 1.5rem;
+            font-size: 1.7rem;
+            font-weight: 700;
             display: flex;
             align-items: center;
             justify-content: center;
             cursor: pointer;
-            transition: all 0.2s;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            transition: all 0.2s ease-in-out;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.35);
         }
 
         .action-btn:hover {
-            transform: scale(1.1);
+            transform: scale(1.12);
             background: #3b82f6;
+            box-shadow: 0 8px 22px rgba(59, 130, 246, 0.5);
         }
 
         #notes-content .adjustable-text {
