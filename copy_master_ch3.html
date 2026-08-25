@@ -1,9 +1,98 @@
 <!DOCTYPE html>
+
 <html lang="hi">
 <head>
-    <meta charset="UTF-8">
-    <title>Chapter 3 COPY MASTER - Premium Notes</title>
-    <style>
+<meta charset="utf-8"/>
+<title>Chapter 3 COPY MASTER - Premium Notes</title>
+<style>
+        p, li, h1, h2, h3, h4, b, strong, td, th {
+            font-weight: 900 !important;
+            -webkit-text-stroke: 1.1px #000000;
+            text-shadow: 0 0 1px #000;
+        }
+        body, p, li, td, th, div, span {
+            font-size: 28pt !important;
+            line-height: 1.8 !important;
+        }
+        .ch3-content {
+            font-size: 28pt !important;
+            line-height: 1.8 !important;
+            padding: 10px !important;
+        }
+        /* Projector Banner Styles for Headings */
+        .hero-title, h1.section-header {
+            text-align: center !important;
+            color: #ffffff !important;
+            background-color: #064e3b !important; /* Dark Green Background */
+            border: 5px solid #10b981 !important;
+            border-radius: 20px !important;
+            padding: 30px !important;
+            margin-bottom: 50px !important;
+            font-size: 60pt !important;
+            font-weight: 900 !important;
+            box-shadow: 0 8px 25px rgba(6, 78, 59, 0.4) !important;
+        }
+        .part-header {
+            color: #7f1d1d !important;
+            background-color: #fee2e2 !important;
+            border-left: 18px solid #b91c1c !important;
+            padding: 22px 28px !important;
+            border-radius: 14px !important;
+            font-size: 46pt !important;
+            font-weight: 900 !important;
+            margin-top: 40px !important;
+            margin-bottom: 35px !important;
+            box-shadow: 0 6px 15px rgba(0,0,0,0.08) !important;
+        }
+        .topic-header, h2.sub-header {
+            color: #1e3a8a !important;
+            background-color: #eff6ff !important;
+            border-left: 16px solid #2563eb !important;
+            padding: 20px 26px !important;
+            border-radius: 12px !important;
+            font-size: 38pt !important;
+            font-weight: 900 !important;
+            margin-top: 45px !important;
+            margin-bottom: 30px !important;
+        }
+        .subtopic-header {
+            color: #4c1d95 !important;
+            background-color: #f3e8ff !important;
+            border-left: 14px solid #7c3aed !important;
+            padding: 18px 24px !important;
+            border-radius: 10px !important;
+            font-size: 32pt !important;
+            font-weight: 900 !important;
+            margin-top: 40px !important;
+            margin-bottom: 25px !important;
+        }
+        .box-header {
+            color: #166534 !important;
+            background-color: #f0fdf4 !important;
+            border-left: 12px solid #16a34a !important;
+            padding: 16px 20px !important;
+            border-radius: 10px !important;
+            font-size: 30pt !important;
+            font-weight: 900 !important;
+        }
+        /* Highlights */
+        b, strong {
+            color: #b91c1c !important; /* Dark Red */
+            font-weight: 900 !important;
+        }
+        .blue-highlight, b.blue-text, strong.blue-text {
+            color: #1e3a8a !important;
+        }
+        .keyword-box, .culture-box, .highlight-box {
+            font-size: 28pt !important;
+            line-height: 1.8 !important;
+            padding: 25px !important;
+            margin: 30px 0 !important;
+        }
+        .illustration-box { border: 4px solid #cbd5e1 !important; border-radius: 12px; padding: 20px; background-color: #ffffff; margin-top: 25px; }
+        .illustration-explanation { border-left: 6px solid #cbd5e1 !important; padding-left: 15px; font-size: 28pt !important; line-height: 1.6 !important; text-align: left; margin-top: 15px; }
+
+
         body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f1f5f9; margin: 0; padding: 20px; text-align: center; }
         .header { background: #1e293b; color: white; padding: 20px; border-radius: 10px; margin-bottom: 30px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
         .copy-btn { background-color: #2563eb; color: white; padding: 20px 40px; font-size: 24pt; border: none; border-radius: 50px; cursor: pointer; font-weight: 900; transition: all 0.3s; box-shadow: 0 10px 20px rgba(37, 99, 235, 0.4); }
@@ -24,21 +113,107 @@
     </style>
 </head>
 <body>
+<div class="header">
+<h1>🚀 Chapter 3 (Full-Proof Copy Master)</h1>
+<p>100% Google Docs Compatible with Images (Localhost-Sync)</p>
+</div>
+<button class="copy-btn" id="mainCopyBtn" onclick="copyToGoogleDoc()">📋 COPY EVERYTHING FOR GOOGLE DOCS</button>
+<p id="status">✅ Copied Successfully! Now go to your Google Doc and Press Ctrl+V</p>
+<div class="preview" id="contentToCopy">
+<!DOCTYPE html>
 
-    <div class="header">
-        <h1>🚀 Chapter 3 (Full-Proof Copy Master)</h1>
-        <p>100% Google Docs Compatible with Images (Localhost-Sync)</p>
-    </div>
-
-    <button id="mainCopyBtn" class="copy-btn" onclick="copyToGoogleDoc()">📋 COPY EVERYTHING FOR GOOGLE DOCS</button>
-    <p id="status">✅ Copied Successfully! Now go to your Google Doc and Press Ctrl+V</p>
-
-    <div class="preview" id="contentToCopy">
-        <!DOCTYPE html>
 <html lang="hi">
 <head>
-    <meta charset="UTF-8">
-    <style>
+<meta charset="utf-8"/>
+<style>
+        p, li, h1, h2, h3, h4, b, strong, td, th {
+            font-weight: 900 !important;
+            -webkit-text-stroke: 1.1px #000000;
+            text-shadow: 0 0 1px #000;
+        }
+        body, p, li, td, th, div, span {
+            font-size: 28pt !important;
+            line-height: 1.8 !important;
+        }
+        .ch3-content {
+            font-size: 28pt !important;
+            line-height: 1.8 !important;
+            padding: 10px !important;
+        }
+        /* Projector Banner Styles for Headings */
+        .hero-title, h1.section-header {
+            text-align: center !important;
+            color: #ffffff !important;
+            background-color: #064e3b !important; /* Dark Green Background */
+            border: 5px solid #10b981 !important;
+            border-radius: 20px !important;
+            padding: 30px !important;
+            margin-bottom: 50px !important;
+            font-size: 60pt !important;
+            font-weight: 900 !important;
+            box-shadow: 0 8px 25px rgba(6, 78, 59, 0.4) !important;
+        }
+        .part-header {
+            color: #7f1d1d !important;
+            background-color: #fee2e2 !important;
+            border-left: 18px solid #b91c1c !important;
+            padding: 22px 28px !important;
+            border-radius: 14px !important;
+            font-size: 46pt !important;
+            font-weight: 900 !important;
+            margin-top: 40px !important;
+            margin-bottom: 35px !important;
+            box-shadow: 0 6px 15px rgba(0,0,0,0.08) !important;
+        }
+        .topic-header, h2.sub-header {
+            color: #1e3a8a !important;
+            background-color: #eff6ff !important;
+            border-left: 16px solid #2563eb !important;
+            padding: 20px 26px !important;
+            border-radius: 12px !important;
+            font-size: 38pt !important;
+            font-weight: 900 !important;
+            margin-top: 45px !important;
+            margin-bottom: 30px !important;
+        }
+        .subtopic-header {
+            color: #4c1d95 !important;
+            background-color: #f3e8ff !important;
+            border-left: 14px solid #7c3aed !important;
+            padding: 18px 24px !important;
+            border-radius: 10px !important;
+            font-size: 32pt !important;
+            font-weight: 900 !important;
+            margin-top: 40px !important;
+            margin-bottom: 25px !important;
+        }
+        .box-header {
+            color: #166534 !important;
+            background-color: #f0fdf4 !important;
+            border-left: 12px solid #16a34a !important;
+            padding: 16px 20px !important;
+            border-radius: 10px !important;
+            font-size: 30pt !important;
+            font-weight: 900 !important;
+        }
+        /* Highlights */
+        b, strong {
+            color: #b91c1c !important; /* Dark Red */
+            font-weight: 900 !important;
+        }
+        .blue-highlight, b.blue-text, strong.blue-text {
+            color: #1e3a8a !important;
+        }
+        .keyword-box, .culture-box, .highlight-box {
+            font-size: 28pt !important;
+            line-height: 1.8 !important;
+            padding: 25px !important;
+            margin: 30px 0 !important;
+        }
+        .illustration-box { border: 4px solid #cbd5e1 !important; border-radius: 12px; padding: 20px; background-color: #ffffff; margin-top: 25px; }
+        .illustration-explanation { border-left: 6px solid #cbd5e1 !important; padding-left: 15px; font-size: 28pt !important; line-height: 1.6 !important; text-align: left; margin-top: 15px; }
+
+
         .ch3-content { font-family: 'Arial', sans-serif; line-height: 2.2; font-size: 18pt; color: #1a202c; padding: 40px; }
         .section-header { color: #854d0e; border-bottom: 5px solid #fbbf24; padding-bottom: 15px; font-size: 34pt; margin-bottom: 30px; }
         .sub-header { color: #b45309; font-size: 28pt; margin-top: 50px; }
@@ -50,46 +225,130 @@
 </head>
 <body>
 <div class="ch3-content">
-    <h1 class="section-header">अध्याय 3: समकालीन दक्षिण एशिया (Contemporary South Asia)</h1>
-    
-    <p><b>1.1 परिचय और भौगोलिक पहचान:</b><br/>
+<h1 class="section-header hero-title">अध्याय 3: समकालीन दक्षिण एशिया (Contemporary South Asia)</h1>
+<p><b>1.1 परिचय और भौगोलिक पहचान:</b><br/>
     विश्व राजनीति के मानचित्र पर 'दक्षिण एशिया' (South Asia) एक अनूठी भौगोलिक, सांस्कृतिक और राजनीतिक इकाई है। इस क्षेत्र में मुख्य रूप से सात देश शामिल हैं—<b>भारत, पाकिस्तान, बांग्लादेश, नेपाल, भूटान, श्रीलंका और मालदीव</b>। 2007 में **अफगानिस्तान** को भी इसमें शामिल कर लिया गया, जिससे सदस्यों की संख्या आठ हो गई है। उत्तर में विशाल हिमालय पर्वत, पश्चिम में अरब सागर, पूर्व में बंगाल की खाड़ी और दक्षिण में हिंद महासागर इस क्षेत्र को प्राकृतिक रूप से शेष एशिया से अलग करते हैं।</p>
-
-    <!-- South Asia Map -->
-    <div class="illustration-box" style="border-color: #854d0e !important; margin-top: 35px; margin-bottom: 35px;">
-        <img alt="South Asia Map" src="images/ch3/south_asia_map.webp" style="width: 100%; max-width: 850px; height: auto; max-height: 450px; object-fit: contain; display: block; margin: 0 auto; border: 4px solid #cbd5e1; border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.15);" class="illustration-img"/>
-        <div class="illustration-explanation" style="border-left-color: #854d0e !important;">
-            <b>मानचित्र: दक्षिण एशिया की भौगोलिक स्थिति (Map of South Asia on Globe):</b><br/>
+<!-- South Asia Map -->
+<div class="illustration-box" style="border-color: #854d0e !important; margin-top: 35px; margin-bottom: 35px;">
+<img alt="South Asia Map" class="illustration-img" src="images/ch3/south_asia_map.webp" style="width: 100%; max-width: 850px; height: auto; max-height: 450px; object-fit: contain; display: block; margin: 0 auto; border: 4px solid #cbd5e1; border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.15);"/>
+<div class="illustration-explanation" style="border-left-color: #854d0e !important;">
+<b>मानचित्र: दक्षिण एशिया की भौगोलिक स्थिति (Map of South Asia on Globe):</b><br/>
             वैश्विक मानचित्र पर दक्षिण एशिया की भौगोलिक स्थिति और पड़ोसी सीमाओं का आरेख।
         </div>
+</div>
+<div class="keyword-box">
+<b>दक्षिण एशिया (South Asia):</b> यह क्षेत्र अपनी साझी सीमाओं, विविधतापूर्ण संस्कृतियों और संवेदनशील भू-राजनीतिक इतिहास के कारण पूरी दुनिया में विशेष स्थान रखता है।
     </div>
-
-    <div class="keyword-box">
-        <b>दक्षिण एशिया (South Asia):</b> यह क्षेत्र अपनी साझी सीमाओं, विविधतापूर्ण संस्कृतियों और संवेदनशील भू-राजनीतिक इतिहास के कारण पूरी दुनिया में विशेष स्थान रखता है।
-    </div>
-
-    <h2 class="sub-header">2. राजनीतिक शासन प्रणालियों की विविधता</h2>
-    <p>दक्षिण एशिया के देशों में कोई एक जैसी शासन प्रणाली नहीं रही है। यहाँ लोकतंत्र का संघर्ष और लोकतंत्र के प्रति जनता का गहरा लगाव कूटनीति की मुख्य धुरी है:</p>
-    <ul style="list-style-type: square; margin-left: 40px; font-size: 20pt;">
-        <li><b>भारत और श्रीलंका:</b> दोनों देशों ने अपनी आजादी (क्रमशः 1947 and 1948) के बाद से लगातार लोकतांत्रिक व्यवस्था को बनाए रखा है।</li>
-        <li><b>पाकिस्तान और बांग्लादेश:</b> नागरिक लोकतंत्र और सैन्य शासन (Military Rule) के बीच झूलते रहे हैं।</li>
-        <li><b>नेपाल:</b> हिंदू राजतंत्र (Monarchy) से संघीय लोकतांत्रिक गणराज्य बनने का लंबा सफर।</li>
-        <li><b>भूटान:</b> संवैधानिक राजतंत्र और लोकतंत्र का अनूठा तालमेल।</li>
-        <li><b>मालदीव:</b> सुल्तानों के शासन से बहुदलीय लोकतांत्रिक राष्ट्रपति शासन प्रणाली का उदय।</li>
-    </ul>
-
-    <div class="culture-box" style="font-size: 20pt;">
-        <b>लोकतंत्र के प्रति साझा प्रेम:</b> दक्षिण एशिया के लोगों में लोकतांत्रिक व्यवस्था के प्रति अगाध श्रद्धा है। यहाँ की आम जनता तानाशाही की तुलना में लोकतंत्र को अपनी समस्याओं का सर्वोत्तम समाधान मानती है।
+<h2 class="sub-header topic-header">2. राजनीतिक शासन प्रणालियों की विविधता</h2>
+<p>दक्षिण एशिया के देशों में कोई एक जैसी शासन प्रणाली नहीं रही है। यहाँ लोकतंत्र का संघर्ष और लोकतंत्र के प्रति जनता का गहरा लगाव कूटनीति की मुख्य धुरी है:</p>
+<ul style="list-style-type: square; margin-left: 40px; ">
+<li><b>भारत और श्रीलंका:</b> दोनों देशों ने अपनी आजादी (क्रमशः 1947 and 1948) के बाद से लगातार लोकतांत्रिक व्यवस्था को बनाए रखा है।</li>
+<li><b>पाकिस्तान और बांग्लादेश:</b> नागरिक लोकतंत्र और सैन्य शासन (Military Rule) के बीच झूलते रहे हैं।</li>
+<li><b>नेपाल:</b> हिंदू राजतंत्र (Monarchy) से संघीय लोकतांत्रिक गणराज्य बनने का लंबा सफर।</li>
+<li><b>भूटान:</b> संवैधानिक राजतंत्र और लोकतंत्र का अनूठा तालमेल।</li>
+<li><b>मालदीव:</b> सुल्तानों के शासन से बहुदलीय लोकतांत्रिक राष्ट्रपति शासन प्रणाली का उदय।</li>
+</ul>
+<div class="culture-box" style="">
+<b>लोकतंत्र के प्रति साझा प्रेम:</b> दक्षिण एशिया के लोगों में लोकतांत्रिक व्यवस्था के प्रति अगाध श्रद्धा है। यहाँ की आम जनता तानाशाही की तुलना में लोकतंत्र को अपनी समस्याओं का सर्वोत्तम समाधान मानती है।
     </div>
 </div>
 </body>
 </html>
-<br><br><hr><br><br>
+<br/><br/><hr/><br/><br/>
 <!DOCTYPE html>
+
 <html lang="hi">
 <head>
-    <meta charset="UTF-8">
-    <style>
+<meta charset="utf-8"/>
+<style>
+        p, li, h1, h2, h3, h4, b, strong, td, th {
+            font-weight: 900 !important;
+            -webkit-text-stroke: 1.1px #000000;
+            text-shadow: 0 0 1px #000;
+        }
+        body, p, li, td, th, div, span {
+            font-size: 28pt !important;
+            line-height: 1.8 !important;
+        }
+        .ch3-content {
+            font-size: 28pt !important;
+            line-height: 1.8 !important;
+            padding: 10px !important;
+        }
+        /* Projector Banner Styles for Headings */
+        .hero-title, h1.section-header {
+            text-align: center !important;
+            color: #ffffff !important;
+            background-color: #064e3b !important; /* Dark Green Background */
+            border: 5px solid #10b981 !important;
+            border-radius: 20px !important;
+            padding: 30px !important;
+            margin-bottom: 50px !important;
+            font-size: 60pt !important;
+            font-weight: 900 !important;
+            box-shadow: 0 8px 25px rgba(6, 78, 59, 0.4) !important;
+        }
+        .part-header {
+            color: #7f1d1d !important;
+            background-color: #fee2e2 !important;
+            border-left: 18px solid #b91c1c !important;
+            padding: 22px 28px !important;
+            border-radius: 14px !important;
+            font-size: 46pt !important;
+            font-weight: 900 !important;
+            margin-top: 40px !important;
+            margin-bottom: 35px !important;
+            box-shadow: 0 6px 15px rgba(0,0,0,0.08) !important;
+        }
+        .topic-header, h2.sub-header {
+            color: #1e3a8a !important;
+            background-color: #eff6ff !important;
+            border-left: 16px solid #2563eb !important;
+            padding: 20px 26px !important;
+            border-radius: 12px !important;
+            font-size: 38pt !important;
+            font-weight: 900 !important;
+            margin-top: 45px !important;
+            margin-bottom: 30px !important;
+        }
+        .subtopic-header {
+            color: #4c1d95 !important;
+            background-color: #f3e8ff !important;
+            border-left: 14px solid #7c3aed !important;
+            padding: 18px 24px !important;
+            border-radius: 10px !important;
+            font-size: 32pt !important;
+            font-weight: 900 !important;
+            margin-top: 40px !important;
+            margin-bottom: 25px !important;
+        }
+        .box-header {
+            color: #166534 !important;
+            background-color: #f0fdf4 !important;
+            border-left: 12px solid #16a34a !important;
+            padding: 16px 20px !important;
+            border-radius: 10px !important;
+            font-size: 30pt !important;
+            font-weight: 900 !important;
+        }
+        /* Highlights */
+        b, strong {
+            color: #b91c1c !important; /* Dark Red */
+            font-weight: 900 !important;
+        }
+        .blue-highlight, b.blue-text, strong.blue-text {
+            color: #1e3a8a !important;
+        }
+        .keyword-box, .culture-box, .highlight-box {
+            font-size: 28pt !important;
+            line-height: 1.8 !important;
+            padding: 25px !important;
+            margin: 30px 0 !important;
+        }
+        .illustration-box { border: 4px solid #cbd5e1 !important; border-radius: 12px; padding: 20px; background-color: #ffffff; margin-top: 25px; }
+        .illustration-explanation { border-left: 6px solid #cbd5e1 !important; padding-left: 15px; font-size: 28pt !important; line-height: 1.6 !important; text-align: left; margin-top: 15px; }
+
+
         .ch3-content { font-family: 'Arial', sans-serif; line-height: 2.2; font-size: 18pt; color: #1a202c; padding: 40px; }
         .section-header { color: #1e3a8a; border-bottom: 5px solid #3b82f6; padding-bottom: 15px; font-size: 34pt; margin-bottom: 30px; }
         .sub-header { color: #1d4ed8; font-size: 28pt; margin-top: 50px; }
@@ -108,182 +367,247 @@
 </head>
 <body>
 <div class="ch3-content">
-    <h1 class="section-header">पाकिस्तान: सैन्य तानाशाही, नागरिक नेता, चारों युद्धों और संधियों का विस्तृत इतिहास</h1>
-    
-    <div class="keyword-box">
-        <b>भौगोलिक सीमाएं और सामरिक स्थिति:</b><br/>
+<h1 class="section-header hero-title">पाकिस्तान: सैन्य तानाशाही, नागरिक नेता, चारों युद्धों और संधियों का विस्तृत इतिहास</h1>
+<div class="keyword-box">
+<b>भौगोलिक सीमाएं और सामरिक स्थिति:</b><br>
         पाकिस्तान दक्षिण एशिया के उत्तर-पश्चिम में स्थित एक महत्वपूर्ण राष्ट्र है। इसकी सीमाएं पूर्व में भारत से, पश्चिम में ईरान और अफगानिस्तान से, और उत्तर में चीन से मिलती हैं। भारत के साथ इसकी सीमा रेखा को 'रेडक्लिफ लाइन' कहा जाता है।
-    </div>
-
-    <!-- Pakistan Map -->
-    <div class="illustration-box" style="border-color: #1e3a8a !important; margin-top: 35px; margin-bottom: 35px;">
-        <img alt="Pakistan Map" src="images/ch3/pakistan_map.webp" style="width: 100%; max-width: 850px; height: auto; max-height: 450px; object-fit: contain; display: block; margin: 0 auto; border: 4px solid #cbd5e1; border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.15);" class="illustration-img"/>
-        <div class="illustration-explanation" style="border-left-color: #1e3a8a !important;">
-            <b>मानचित्र: पाकिस्तान का प्रशासनिक राजनीतिक मानचित्र (Administrative Map of Pakistan):</b><br/>
+    </br></div>
+<!-- Pakistan Map -->
+<div class="illustration-box" style="border-color: #1e3a8a !important; margin-top: 35px; margin-bottom: 35px;">
+<img alt="Pakistan Map" class="illustration-img" src="images/ch3/pakistan_map.webp" style="width: 100%; max-width: 850px; height: auto; max-height: 450px; object-fit: contain; display: block; margin: 0 auto; border: 4px solid #cbd5e1; border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.15);"/>
+<div class="illustration-explanation" style="border-left-color: #1e3a8a !important;">
+<b>मानचित्र: पाकिस्तान का प्रशासनिक राजनीतिक मानचित्र (Administrative Map of Pakistan):</b><br>
             पाकिस्तान के प्रांतों, सीमाओं और मुख्य शहरों को स्पष्ट करता हुआ मूल राष्ट्रीय मानचित्र।
-        </div>
-    </div>
-
-    <h2 class="sub-header">1. स्वतंत्रता के बाद का राजनीतिक इतिहास (Post-Independence History)</h2>
-    <p>1947 में विभाजन के बाद पाकिस्तान की राजनीतिक यात्रा बेहद अस्थिर रही है। आजादी के तुरंत बाद राष्ट्रपिता मोहम्मद अली जिन्ना का 1948 में निधन हो गया और पहले प्रधानमंत्री लियाकत अली खान की 1951 में रावलपिंडी में गोली मारकर हत्या कर दी गई। इसके बाद पाकिस्तान में गहरी राजनीतिक अस्थिरता उत्पन्न हुई।</p>
-    
-    <p><b>पहला संविधान और सैन्य तख्तापलट (1956-1958):</b><br/>
-    पाकिस्तान को अपना पहला संविधान बनाने में 9 वर्ष का समय लगा और 1956 में पहला संविधान लागू हुआ। राष्ट्रपति इस्कंदर मिर्ज़ा ने लोकतांत्रिक व्यवस्था को निलंबित कर दिया और अक्टूबर 1958 में जनरल अय्यूब खान ने तख्तापलट कर स्वयं को मुख्य मार्शल लॉ प्रशासक घोषित कर दिया।</p>
-
-    <!-- General Ayub Khan Bio Box -->
-    <div class="leader-bio-box">
-        <img alt="Field Marshal Ayub Khan" src="images/ch3/ayub_khan.webp"/>
-        <div class="leader-bio-text">
-            <h3><b>फील्ड मार्शल अय्यूब खान (General Ayub Khan)</b></h3>
-            <p>पाकिस्तान के पहले सैन्य राष्ट्रपति (1958-1969)। इन्होंने 1958 में लोकतांत्रिक व्यवस्था को कुचलकर मार्शल लॉ लगाया और स्वयं को राष्ट्रपति घोषित किया। इनके कार्यकाल में 1965 का भारत-पाकिस्तान युद्ध लड़ा गया, जिसके बाद देशव्यापी जन-विरोध के कारण इन्हें इस्तीफा देना पड़ा।</p>
-        </div>
-    </div>
-
-    <p><b>याहिया खान का दौर और पूर्वी पाकिस्तान का नुकसान (1969-1971):</b><br/>
-    अय्यूब खान के खिलाफ जब जनता का जनाक्रोश बढ़ा, तो उन्होंने 1969 में सत्ता जनरल याहिया खान को सौंप दी। याहिया खान के समय में 1970 में पाकिस्तान में पहले आम चुनाव हुए। पूर्वी पाकिस्तान (बांग्लादेश) में अवामी लीग के शेख मुजीबुर्रहमान को बहुमत मिला, लेकिन पश्चिमी पाकिस्तानी नेताओं ने उन्हें सत्ता देने से इनकार कर दिया। इसके बाद हुए दमन और 1971 के युद्ध के बाद पूर्वी पाकिस्तान अलग होकर 'बांग्लादेश' बन गया और सैन्य सरकार गिर गई।</p>
-
-    <p><b>जुल्फिकार अली भुट्टो का नागरिक शासन (1971-1977):</b><br/>
+        </br></div>
+</div>
+<h2 class="sub-header topic-header">1. स्वतंत्रता के बाद का राजनीतिक इतिहास (Post-Independence History)</h2>
+<p>1947 में विभाजन के बाद पाकिस्तान की राजनीतिक यात्रा बेहद अस्थिर रही है। आजादी के तुरंत बाद राष्ट्रपिता मोहम्मद अली जिन्ना का 1948 में निधन हो गया और पहले प्रधानमंत्री लियाकत अली खान की 1951 में रावलपिंडी में गोली मारकर हत्या कर दी गई। इसके बाद पाकिस्तान में गहरी राजनीतिक अस्थिरता उत्पन्न हुई।</p>
+<p><b>पहला संविधान और सैन्य तख्तापलट (1956-1958):</b><br>
+    पाकिस्तान को अपना पहला संविधान बनाने में 9 वर्ष का समय लगा और 1956 में पहला संविधान लागू हुआ। राष्ट्रपति इस्कंदर मिर्ज़ा ने लोकतांत्रिक व्यवस्था को निलंबित कर दिया और अक्टूबर 1958 में जनरल अय्यूब खान ने तख्तापलट कर स्वयं को मुख्य मार्शल लॉ प्रशासक घोषित कर दिया।</br></p>
+<!-- General Ayub Khan Bio Box -->
+<div class="leader-bio-box">
+<img alt="Field Marshal Ayub Khan" src="images/ch3/ayub_khan.webp"/>
+<div class="leader-bio-text">
+<h3 class="subtopic-header"><b>फील्ड मार्शल अय्यूब खान (General Ayub Khan)</b></h3>
+<p>पाकिस्तान के पहले सैन्य राष्ट्रपति (1958-1969)। इन्होंने 1958 में लोकतांत्रिक व्यवस्था को कुचलकर मार्शल लॉ लगाया और स्वयं को राष्ट्रपति घोषित किया। इनके कार्यकाल में 1965 का भारत-पाकिस्तान युद्ध लड़ा गया, जिसके बाद देशव्यापी जन-विरोध के कारण इन्हें इस्तीफा देना पड़ा।</p>
+</div>
+</div>
+<p><b>याहिया खान का दौर और पूर्वी पाकिस्तान का नुकसान (1969-1971):</b><br>
+    अय्यूब खान के खिलाफ जब जनता का जनाक्रोश बढ़ा, तो उन्होंने 1969 में सत्ता जनरल याहिया खान को सौंप दी। याहिया खान के समय में 1970 में पाकिस्तान में पहले आम चुनाव हुए। पूर्वी पाकिस्तान (बांग्लादेश) में अवामी लीग के शेख मुजीबुर्रहमान को बहुमत मिला, लेकिन पश्चिमी पाकिस्तानी नेताओं ने उन्हें सत्ता देने से इनकार कर दिया। इसके बाद हुए दमन और 1971 के युद्ध के बाद पूर्वी पाकिस्तान अलग होकर 'बांग्लादेश' बन गया और सैन्य सरकार गिर गई।</br></p>
+<p><b>जुल्फिकार अली भुट्टो का नागरिक शासन (1971-1977):</b><br/>
     सैन्य पराजय के बाद जुल्फिकार अली भुट्टो के नेतृत्व में एक नागरिक लोकतांत्रिक सरकार बनी। 1973 में पाकिस्तान ने अपना नया लोकतांत्रिक संविधान अपनाया। भुट्टो ने समाजवादी नीतियां लागू कीं, लेकिन उन पर चुनाव में धांधली और भ्रष्टाचार के आरोप लगे, जिससे देश में गृहयुद्ध जैसी स्थिति बन गई।</p>
-
-    <p><b>जनरल जिया-उल-हक और इस्लामीकरण का दौर (1977-1988):</b><br/>
+<p><b>जनरल जिया-उल-हक और इस्लामीकरण का दौर (1977-1988):</b><br/>
     जुलाई 1977 में जनरल ज़िया-उल-हक ने तख्तापलट किया और भुट्टो को जेल भेज दिया। 1979 में भुट्टो को एक राजनीतिक मुकदमे के बाद फांसी दे दी गई। जिया-उल-हक ने पाकिस्तान का तीव्र इस्लामीकरण (Islamization) किया, शरिया कानूनों को लागू किया और सोवियत-अफगान युद्ध के दौरान अमेरिका के साथ मिलकर मुजाहिदीन को तैयार किया। 1988 में एक रहस्यमयी विमान दुर्घटना में उनकी मौत हो गई।</p>
-
-    <p><b>लोकतंत्र की पुनर्स्थापना और बेनज़ीर-नवाज़ प्रतिद्वंद्विता (1988-1999):</b><br/>
+<p><b>लोकतंत्र की पुनर्स्थापना और बेनज़ीर-नवाज़ प्रतिद्वंद्विता (1988-1999):</b><br/>
     1988 के बाद लोकतंत्र बहाल हुआ और **बेनज़ीर भुट्टो** (PPP) तथा **नवाज़ शरीफ** (PML-N) के बीच सत्ता का द्वंद्व शुरू हुआ। दोनों ने बारी-बारी से शासन किया, लेकिन राष्ट्रपति और सेना ने अनुच्छेद 58(2b) का उपयोग कर इन सरकारों को कभी भी अपना 5 वर्ष का कार्यकाल पूरा नहीं करने दिया।</p>
-
-    <!-- General Pervez Musharraf Bio Box -->
-    <div class="leader-bio-box">
-        <img alt="General Pervez Musharraf" src="images/ch3/pervez_musharraf.webp"/>
-        <div class="leader-bio-text">
-            <h3><b>जनरल परवेज़ मुशर्रफ (General Pervez Musharraf)</b></h3>
-            <p>पाकिस्तान के सेना प्रमुख जिन्होंने अक्टूबर 1999 में नवाज शरीफ का तख्तापलट किया और 2008 तक शासन किया। इनके समय में कारगिल युद्ध हुआ तथा 9/11 हमले के बाद इन्होंने आतंकवाद विरोधी अमेरिकी अभियान का खुलकर समर्थन किया।</p>
-        </div>
-    </div>
-
-    <p><b>मुशर्रफ का सैन्य शासन और 9/11 (1999-2008):</b><br/>
+<!-- General Pervez Musharraf Bio Box -->
+<div class="leader-bio-box">
+<img alt="General Pervez Musharraf" src="images/ch3/pervez_musharraf.webp"/>
+<div class="leader-bio-text">
+<h3 class="subtopic-header"><b>जनरल परवेज़ मुशर्रफ (General Pervez Musharraf)</b></h3>
+<p>पाकिस्तान के सेना प्रमुख जिन्होंने अक्टूबर 1999 में नवाज शरीफ का तख्तापलट किया और 2008 तक शासन किया। इनके समय में कारगिल युद्ध हुआ तथा 9/11 हमले के बाद इन्होंने आतंकवाद विरोधी अमेरिकी अभियान का खुलकर समर्थन किया।</p>
+</div>
+</div>
+<p><b>मुशर्रफ का सैन्य शासन और 9/11 (1999-2008):</b><br/>
     अक्टूबर 1999 में कारगिल युद्ध की विफलता के बाद जनरल परवेज मुशर्रफ ने नवाज शरीफ का तख्तापलट कर दिया। 2001 में अमेरिका में हुए 9/11 हमलों के बाद मुशर्रफ ने आतंकवाद के खिलाफ अमेरिकी युद्ध का समर्थन किया, जिसने पाकिस्तान के आंतरिक क्षेत्रों में कट्टरपंथ को और बढ़ावा दिया। 2007 में बेनज़ीर भुट्टो की एक आत्मघाती हमले में हत्या कर दी गई, जिसके बाद व्यापक जनांदोलन ने मुशर्रफ को 2008 में राष्ट्रपति पद छोड़ने पर मजबूर कर दिया।</p>
-
-    <p><b>2008 से वर्तमान: नागरिक शासन की अस्थिरता:</b><br/>
+<p><b>2008 से वर्तमान: नागरिक शासन की अस्थिरता:</b><br/>
     2008 के बाद से पाकिस्तान में नागरिक सरकारें बनी हैं (आसिफ अली जरदारी, नवाज शरीफ, इमरान खान और वर्तमान में शहबाज शरीफ)। हालांकि, आज भी पाकिस्तान गहरे ऋण संकट, मुद्रास्फीति, राजनीतिक प्रतिशोध और पर्दे के पीछे से सेना (Deep State) के नियंत्रण से जूझ रहा है।</p>
-
-    <h2 class="sub-header">2. प्रमुख राजनीतिक घराने और नागरिक प्रधानमंत्री</h2>
-    <p>पाकिस्तान की लोकतांत्रिक राजनीति मुख्य रूप से दो प्रमुख राजनीतिक परिवारों के इर्द-गिर्द घूमती रही है:</p>
-    
-    <!-- Bhutto Family Bio Box -->
-    <div class="leader-bio-box">
-        <img alt="Zulfikar Ali Bhutto" src="images/ch3/zulfikar_bhutto.webp"/>
-        <div class="leader-bio-text">
-            <h3><b>जुल्फिकार अली भुट्टो और भुट्टो घराना (PPP)</b></h3>
-            <p>पाकिस्तान पीपल्स पार्टी (PPP) के संस्थापक जुल्फिकार अली भुट्टो ने 1971 से 1977 तक देश का नेतृत्व किया। इनके बाद इनकी बेटी बेनज़ीर भुट्टो ने कमान संभाली और मुस्लिम जगत की पहली महिला प्रधानमंत्री बनीं। वर्तमान में बिलावल भुट्टो इस घराने का प्रतिनिधित्व कर रहे हैं।</p>
-        </div>
-    </div>
-
-    <!-- Sharif Family Bio Box -->
-    <div class="leader-bio-box">
-        <img alt="Nawaz Sharif" src="images/ch3/nawaz_sharif.webp"/>
-        <div class="leader-bio-text">
-            <h3><b>नवाज़ शरीफ़ और शरीफ़ घराना (PML-N)</b></h3>
-            <p>पाकिस्तान मुस्लिम लीग (N) के प्रमुख नवाज शरीफ तीन बार पाकिस्तान के प्रधानमंत्री चुने गए। यह घराना व्यापारिक नीतियों और पंजाब प्रांत में मजबूत जनाधार के लिए जाना जाता है। वर्तमान में नवाज के भाई शहबाज़ शरीफ देश के प्रधानमंत्री हैं।</p>
-        </div>
-    </div>
-
-    <h2 class="sub-header">3. भारत-पाकिस्तान के चार ऐतिहासिक युद्धों का विस्तृत विवरण</h2>
-
-    <!-- War 1: 1947-48 -->
-    <div class="war-card">
-        <div class="war-title">1. प्रथम कश्मीर युद्ध (1947 - 1948)</div>
-        <ul style="list-style-type: none; padding-left: 0; font-size: 18pt;">
-            <li><b>भारत के प्रधानमंत्री:</b> पंडित जवाहरलाल नेहरू</li>
-            <li><b>पाकिस्तान के प्रधानमंत्री:</b> लियाकत अली खान</li>
-            <li><b>युद्ध का क्षेत्र:</b> जम्मू और कश्मीर</li>
-            <li><b>युद्ध का कारण:</b> पाकिस्तान समर्थित पश्तून कबायलियों (कबीलाई लड़ाकों) की मदद से पाकिस्तान ने कश्मीर को हड़पने के लिए हमला कर दिया।</li>
-            <li><b>कैसे लड़ा गया:</b> महाराजा हरि सिंह द्वारा भारत के साथ विलय-पत्र पर हस्ताक्षर करने के बाद, भारतीय सेना विमानों से तुरंत श्रीनगर उतरी और कबीलाई घुसपैठियों को पीछे धकेला।</li>
-            <li><b>युद्ध के परिणाम:</b> संयुक्त राष्ट्र (UN) की मध्यस्थता से युद्ध विराम हुआ। कश्मीर का एक-तिहाई हिस्सा पाकिस्तान के कब्जे में चला गया (जिसे POK कहा गया) और दो-तिहाई हिस्सा भारत के पास रहा। संघर्ष रेखा नियंत्रण रेखा (LOC) कहलाई।</li>
-        </ul>
-    </div>
-
-    <!-- War 2: 1965 -->
-    <div class="war-card">
-        <div class="war-title">2. द्वितीय भारत-पाकिस्तान युद्ध (1965)</div>
-        <ul style="list-style-type: none; padding-left: 0; font-size: 18pt;">
-            <li><b>भारत के प्रधानमंत्री:</b> लाल बहादुर शास्त्री</li>
-            <li><b>पाकिस्तान के राष्ट्रपति:</b> अय्यूब खान (सैन्य प्रमुख)</li>
-            <li><b>युद्ध का क्षेत्र:</b> गुजरात में कच्छ का रन, जम्मू-कश्मीर और पंजाब सीमा (लाहौर सेक्टर)।</li>
-            <li><b>युद्ध का कारण:</b> पाकिस्तान ने कश्मीर को हथियाने के लिए 'ऑपरेशन जिब्राल्टर' चलाया, जिसके तहत हजारों घुसपैठिए घाटी में भेजे गए।</li>
-            <li><b>कैसे लड़ा गया:</b> भारतीय सेना ने कश्मीर सीमा पर पलटवार किया और साथ ही पंजाब सीमा पर लाहौर के नजदीक तक धावा बोल दिया। पैटन टैंकों की सबसे बड़ी जंग 'असल उत्तर' की लड़ाई में पाकिस्तान की भारी पराजय हुई।</li>
-            <li><b>युद्ध के परिणाम:</b> सोवियत संघ की मध्यस्थता में 1966 का 'ताशकंद समझौता' हुआ। शास्त्री जी और अय्यूब खान के बीच यह संधि हुई। दोनों देश युद्ध-पूर्व की सीमाओं पर लौटने के लिए सहमत हुए। इस ऐतिहासिक समझौते के तुरंत बाद शास्त्री जी का ताशकंद में रहस्यमयी परिस्थितियों में निधन हो गया।</li>
-        </ul>
-        
-        <!-- Lal Bahadur Shastri Bio Box -->
-        <div class="leader-bio-box">
-            <img alt="Lal Bahadur Shastri" src="images/ch3/shastri.webp"/>
-            <div class="leader-bio-text">
-                <h3><b>लाल बहादुर शास्त्री (Lal Bahadur Shastri)</b></h3>
-                <p>भारत के दूसरे प्रधानमंत्री (1964-1966)। इन्होंने 1965 के युद्ध के दौरान 'जय जवान जय किसान' का प्रसिद्ध नारा दिया और देश का कुशल नेतृत्व किया। 1966 में ताशकंद में ऐतिहासिक शांति समझौते पर हस्ताक्षर किए।</p>
-            </div>
-        </div>
-    </div>
-
-    <!-- War 3: 1971 -->
-    <div class="war-card">
-        <div class="war-title">3. बांग्लादेश मुक्ति युद्ध (1971)</div>
-        <ul style="list-style-type: none; padding-left: 0; font-size: 18pt;">
-            <li><b>भारत के प्रधानमंत्री:</b> इन्दिरा गांधी</li>
-            <li><b>पाकिस्तान के राष्ट्रपति:</b> याहिया खान</li>
-            <li><b>युद्ध का क्षेत्र:</b> पूर्वी पाकिस्तान (वर्तमान बांग्लादेश) और भारत-पाकिस्तान पश्चिमी सीमा।</li>
-            <li><b>युद्ध का कारण:</b> पूर्वी पाकिस्तान में बंगाली भाषा और संस्कृति का दमन, भीषण नरसंहार और लगभग 1 करोड़ शरणार्थियों का भारत में आना।</li>
-            <li><b>कैसे लड़ा गया:</b> भारतीय सेना, नौसेना और वायु सेना ने पूर्वी पाकिस्तान की 'मुक्ति वाहिनी' के साथ मिलकर संयुक्त हमला किया। केवल 13 दिनों के भीतर पाकिस्तानी सेना को ढाका में घुटने टेकने पर मजबूर कर दिया।</li>
-            <li><b>युद्ध के परिणाम:</b> 16 दिसंबर 1971 को पाकिस्तानी जनरल नियाजी ने 93,000 सैनिकों के साथ भारतीय जनरल अरोड़ा के समक्ष आत्मसमर्पण किया। पूर्वी पाकिस्तान स्वतंत्र होकर 'बांग्लादेश' बना। 1972 में ऐतिहासिक 'शिमला समझौता' हुआ।</li>
-        </ul>
-        
-        <!-- Indira Gandhi Bio Box -->
-        <div class="leader-bio-box">
-            <img alt="Indira Gandhi" src="images/ch3/indira.webp"/>
-            <div class="leader-bio-text">
-                <h3><b>इन्दिरा गांधी (Indira Gandhi)</b></h3>
-                <p>भारत की पहली महिला प्रधानमंत्री। इन्होंने 1971 के युद्ध में पाकिस्तान पर ऐतिहासिक विजय का नेतृत्व किया और बांग्लादेश के निर्माण में निर्णायक भूमिका निभाई। 1972 में जुल्फिकार अली भुट्टो के साथ मिलकर ऐतिहासिक 'शिमला समझौता' हस्ताक्षरित किया।</p>
-            </div>
-        </div>
-    </div>
-
-    <!-- War 4: 1999 -->
-    <div class="war-card">
-        <div class="war-title">4. कारगिल युद्ध (1999)</div>
-        <ul style="list-style-type: none; padding-left: 0; font-size: 18pt;">
-            <li><b>भारत के प्रधानमंत्री:</b> अटल बिहारी वाजपेयी</li>
-            <li><b>पाकिस्तान के प्रधानमंत्री:</b> नवाज शरीफ (तथा सैन्य प्रमुख जनरल परवेज मुशर्रफ)</li>
-            <li><b>युद्ध का क्षेत्र:</b> लद्दाख के कारगिल, द्रास, बटालिक और मुश्कोह घाटी की ऊंची चोटियां।</li>
-            <li><b>युद्ध का कारण:</b> पाकिस्तानी सैनिकों ने सर्दियों के समय खाली पड़ी भारतीय चौकियों पर अवैध कब्जा कर लिया ताकि श्रीनगर-लेह राजमार्ग को काटकर लद्दाख को भारत से अलग किया जा सके।</li>
-            <li><b>कैसे लड़ा गया:</b> भारत ने 'ऑपरेशन विजय' शुरू किया। बोफोर्स तोपों और वायु सेना (ऑपरेशन सफेद सागर) के प्रचंड प्रहार से भारतीय जांबाजों ने तोलोलिंग और टाइगर हिल जैसी ऊंची चोटियों से दुश्मनों को मार भगाया।</li>
-            <li><b>युद्ध के परिणाम:</b> भारत की ऐतिहासिक विजय हुई। 26 जुलाई 1999 को भारत ने विजय दिवस घोषित किया। पाकिस्तान को अंतरराष्ट्रीय स्तर पर शर्मिंदगी झेलनी पड़ी, जिससे नाराज होकर मुशर्रफ ने नवाज शरीफ का तख्तापलट कर दिया।</li>
-        </ul>
-        
-        <!-- Atal Bihari Vajpayee Bio Box -->
-        <div class="leader-bio-box">
-            <img alt="Atal Bihari Vajpayee" src="images/ch3/vajpayee.webp"/>
-            <div class="leader-bio-text">
-                <h3><b>अटल बिहारी वाजपेयी (Atal Bihari Vajpayee)</b></h3>
-                <p>भारत के तीन बार प्रधानमंत्री रहे। इन्होंने 1999 में कारगिल युद्ध में विजय का नेतृत्व किया। साथ ही, 1999 में दिल्ली-लाहौर बस सेवा शुरू कर पाकिस्तान के साथ शांति के ऐतिहासिक प्रयास किए और लाहौर घोषणापत्र पर हस्ताक्षर किए।</p>
-            </div>
-        </div>
-    </div>
-
-    <h2 class="sub-header">4. ऐतिहासिक शांति संधियाँ और उनके हस्ताक्षरकर्ता</h2>
-    <p>युद्धों के बाद दोनों देशों के बीच संबंधों को सुधारने के लिए तीन महत्वपूर्ण संधियाँ की गईं:</p>
-    <ul style="list-style-type: square; margin-left: 40px; font-size: 20pt;">
-        <li><b>1. ताशकंद समझौता (10 जनवरी 1966):</b> भारत के प्रधानमंत्री <b>लाल बहादुर शास्त्री</b> और पाकिस्तान के राष्ट्रपति <b>अय्यूब खान</b> के बीच उज्बेकिस्तान की राजधानी ताशकंद में सोवियत मध्यस्थता से हुआ।</li>
-        <li><b>2. शिमला समझौता (2 जुलाई 1972):</b> भारत की प्रधानमंत्री <b>इन्दिरा गांधी</b> और पाकिस्तान के राष्ट्रपति <b>जुल्फिकार अली भुट्टो</b> के बीच शिमला में हुआ। इसमें कश्मीर विवाद को द्विपक्षीय बातचीत से सुलझाने पर सहमति बनी।</li>
-        <li><b>3. लाहौर घोषणापत्र (21 फरवरी 1999):</b> भारत के प्रधानमंत्री <b>अटल बिहारी वाजपेयी</b> और पाकिस्तान के प्रधानमंत्री <b>नवाज शरीफ</b> के बीच लाहौर में हुआ, जिसका मुख्य उद्देश्य परमाणु हथियारों के जोखिम को कम करना और शांति स्थापित करना था।</li>
-    </ul>
+<h2 class="sub-header topic-header">2. प्रमुख राजनीतिक घराने और नागरिक प्रधानमंत्री</h2>
+<p>पाकिस्तान की लोकतांत्रिक राजनीति मुख्य रूप से दो प्रमुख राजनीतिक परिवारों के इर्द-गिर्द घूमती रही है:</p>
+<!-- Bhutto Family Bio Box -->
+<div class="leader-bio-box">
+<img alt="Zulfikar Ali Bhutto" src="images/ch3/zulfikar_bhutto.webp"/>
+<div class="leader-bio-text">
+<h3 class="subtopic-header"><b>जुल्फिकार अली भुट्टो और भुट्टो घराना (PPP)</b></h3>
+<p>पाकिस्तान पीपल्स पार्टी (PPP) के संस्थापक जुल्फिकार अली भुट्टो ने 1971 से 1977 तक देश का नेतृत्व किया। इनके बाद इनकी बेटी बेनज़ीर भुट्टो ने कमान संभाली और मुस्लिम जगत की पहली महिला प्रधानमंत्री बनीं। वर्तमान में बिलावल भुट्टो इस घराने का प्रतिनिधित्व कर रहे हैं।</p>
+</div>
+</div>
+<!-- Sharif Family Bio Box -->
+<div class="leader-bio-box">
+<img alt="Nawaz Sharif" src="images/ch3/nawaz_sharif.webp"/>
+<div class="leader-bio-text">
+<h3 class="subtopic-header"><b>नवाज़ शरीफ़ और शरीफ़ घराना (PML-N)</b></h3>
+<p>पाकिस्तान मुस्लिम लीग (N) के प्रमुख नवाज शरीफ तीन बार पाकिस्तान के प्रधानमंत्री चुने गए। यह घराना व्यापारिक नीतियों और पंजाब प्रांत में मजबूत जनाधार के लिए जाना जाता है। वर्तमान में नवाज के भाई शहबाज़ शरीफ देश के प्रधानमंत्री हैं।</p>
+</div>
+</div>
+<h2 class="sub-header topic-header">3. भारत-पाकिस्तान के चार ऐतिहासिक युद्धों का विस्तृत विवरण</h2>
+<!-- War 1: 1947-48 -->
+<div class="war-card">
+<div class="war-title">1. प्रथम कश्मीर युद्ध (1947 - 1948)</div>
+<ul style="list-style-type: none; padding-left: 0; ">
+<li><b>भारत के प्रधानमंत्री:</b> पंडित जवाहरलाल नेहरू</li>
+<li><b>पाकिस्तान के प्रधानमंत्री:</b> लियाकत अली खान</li>
+<li><b>युद्ध का क्षेत्र:</b> जम्मू और कश्मीर</li>
+<li><b>युद्ध का कारण:</b> पाकिस्तान समर्थित पश्तून कबायलियों (कबीलाई लड़ाकों) की मदद से पाकिस्तान ने कश्मीर को हड़पने के लिए हमला कर दिया।</li>
+<li><b>कैसे लड़ा गया:</b> महाराजा हरि सिंह द्वारा भारत के साथ विलय-पत्र पर हस्ताक्षर करने के बाद, भारतीय सेना विमानों से तुरंत श्रीनगर उतरी और कबीलाई घुसपैठियों को पीछे धकेला।</li>
+<li><b>युद्ध के परिणाम:</b> संयुक्त राष्ट्र (UN) की मध्यस्थता से युद्ध विराम हुआ। कश्मीर का एक-तिहाई हिस्सा पाकिस्तान के कब्जे में चला गया (जिसे POK कहा गया) और दो-तिहाई हिस्सा भारत के पास रहा। संघर्ष रेखा नियंत्रण रेखा (LOC) कहलाई।</li>
+</ul>
+</div>
+<!-- War 2: 1965 -->
+<div class="war-card">
+<div class="war-title">2. द्वितीय भारत-पाकिस्तान युद्ध (1965)</div>
+<ul style="list-style-type: none; padding-left: 0; ">
+<li><b>भारत के प्रधानमंत्री:</b> लाल बहादुर शास्त्री</li>
+<li><b>पाकिस्तान के राष्ट्रपति:</b> अय्यूब खान (सैन्य प्रमुख)</li>
+<li><b>युद्ध का क्षेत्र:</b> गुजरात में कच्छ का रन, जम्मू-कश्मीर और पंजाब सीमा (लाहौर सेक्टर)।</li>
+<li><b>युद्ध का कारण:</b> पाकिस्तान ने कश्मीर को हथियाने के लिए 'ऑपरेशन जिब्राल्टर' चलाया, जिसके तहत हजारों घुसपैठिए घाटी में भेजे गए।</li>
+<li><b>कैसे लड़ा गया:</b> भारतीय सेना ने कश्मीर सीमा पर पलटवार किया और साथ ही पंजाब सीमा पर लाहौर के नजदीक तक धावा बोल दिया। पैटन टैंकों की सबसे बड़ी जंग 'असल उत्तर' की लड़ाई में पाकिस्तान की भारी पराजय हुई।</li>
+<li><b>युद्ध के परिणाम:</b> सोवियत संघ की मध्यस्थता में 1966 का 'ताशकंद समझौता' हुआ। शास्त्री जी और अय्यूब खान के बीच यह संधि हुई। दोनों देश युद्ध-पूर्व की सीमाओं पर लौटने के लिए सहमत हुए। इस ऐतिहासिक समझौते के तुरंत बाद शास्त्री जी का ताशकंद में रहस्यमयी परिस्थितियों में निधन हो गया।</li>
+</ul>
+<!-- Lal Bahadur Shastri Bio Box -->
+<div class="leader-bio-box">
+<img alt="Lal Bahadur Shastri" src="images/ch3/shastri.webp"/>
+<div class="leader-bio-text">
+<h3 class="subtopic-header"><b>लाल बहादुर शास्त्री (Lal Bahadur Shastri)</b></h3>
+<p>भारत के दूसरे प्रधानमंत्री (1964-1966)। इन्होंने 1965 के युद्ध के दौरान 'जय जवान जय किसान' का प्रसिद्ध नारा दिया और देश का कुशल नेतृत्व किया। 1966 में ताशकंद में ऐतिहासिक शांति समझौते पर हस्ताक्षर किए।</p>
+</div>
+</div>
+</div>
+<!-- War 3: 1971 -->
+<div class="war-card">
+<div class="war-title">3. बांग्लादेश मुक्ति युद्ध (1971)</div>
+<ul style="list-style-type: none; padding-left: 0; ">
+<li><b>भारत के प्रधानमंत्री:</b> इन्दिरा गांधी</li>
+<li><b>पाकिस्तान के राष्ट्रपति:</b> याहिया खान</li>
+<li><b>युद्ध का क्षेत्र:</b> पूर्वी पाकिस्तान (वर्तमान बांग्लादेश) और भारत-पाकिस्तान पश्चिमी सीमा।</li>
+<li><b>युद्ध का कारण:</b> पूर्वी पाकिस्तान में बंगाली भाषा और संस्कृति का दमन, भीषण नरसंहार और लगभग 1 करोड़ शरणार्थियों का भारत में आना।</li>
+<li><b>कैसे लड़ा गया:</b> भारतीय सेना, नौसेना और वायु सेना ने पूर्वी पाकिस्तान की 'मुक्ति वाहिनी' के साथ मिलकर संयुक्त हमला किया। केवल 13 दिनों के भीतर पाकिस्तानी सेना को ढाका में घुटने टेकने पर मजबूर कर दिया।</li>
+<li><b>युद्ध के परिणाम:</b> 16 दिसंबर 1971 को पाकिस्तानी जनरल नियाजी ने 93,000 सैनिकों के साथ भारतीय जनरल अरोड़ा के समक्ष आत्मसमर्पण किया। पूर्वी पाकिस्तान स्वतंत्र होकर 'बांग्लादेश' बना। 1972 में ऐतिहासिक 'शिमला समझौता' हुआ।</li>
+</ul>
+<!-- Indira Gandhi Bio Box -->
+<div class="leader-bio-box">
+<img alt="Indira Gandhi" src="images/ch3/indira.webp"/>
+<div class="leader-bio-text">
+<h3 class="subtopic-header"><b>इन्दिरा गांधी (Indira Gandhi)</b></h3>
+<p>भारत की पहली महिला प्रधानमंत्री। इन्होंने 1971 के युद्ध में पाकिस्तान पर ऐतिहासिक विजय का नेतृत्व किया और बांग्लादेश के निर्माण में निर्णायक भूमिका निभाई। 1972 में जुल्फिकार अली भुट्टो के साथ मिलकर ऐतिहासिक 'शिमला समझौता' हस्ताक्षरित किया।</p>
+</div>
+</div>
+</div>
+<!-- War 4: 1999 -->
+<div class="war-card">
+<div class="war-title">4. कारगिल युद्ध (1999)</div>
+<ul style="list-style-type: none; padding-left: 0; ">
+<li><b>भारत के प्रधानमंत्री:</b> अटल बिहारी वाजपेयी</li>
+<li><b>पाकिस्तान के प्रधानमंत्री:</b> नवाज शरीफ (तथा सैन्य प्रमुख जनरल परवेज मुशर्रफ)</li>
+<li><b>युद्ध का क्षेत्र:</b> लद्दाख के कारगिल, द्रास, बटालिक और मुश्कोह घाटी की ऊंची चोटियां।</li>
+<li><b>युद्ध का कारण:</b> पाकिस्तानी सैनिकों ने सर्दियों के समय खाली पड़ी भारतीय चौकियों पर अवैध कब्जा कर लिया ताकि श्रीनगर-लेह राजमार्ग को काटकर लद्दाख को भारत से अलग किया जा सके।</li>
+<li><b>कैसे लड़ा गया:</b> भारत ने 'ऑपरेशन विजय' शुरू किया। बोफोर्स तोपों और वायु सेना (ऑपरेशन सफेद सागर) के प्रचंड प्रहार से भारतीय जांबाजों ने तोलोलिंग और टाइगर हिल जैसी ऊंची चोटियों से दुश्मनों को मार भगाया।</li>
+<li><b>युद्ध के परिणाम:</b> भारत की ऐतिहासिक विजय हुई। 26 जुलाई 1999 को भारत ने विजय दिवस घोषित किया। पाकिस्तान को अंतरराष्ट्रीय स्तर पर शर्मिंदगी झेलनी पड़ी, जिससे नाराज होकर मुशर्रफ ने नवाज शरीफ का तख्तापलट कर दिया।</li>
+</ul>
+<!-- Atal Bihari Vajpayee Bio Box -->
+<div class="leader-bio-box">
+<img alt="Atal Bihari Vajpayee" src="images/ch3/vajpayee.webp"/>
+<div class="leader-bio-text">
+<h3 class="subtopic-header"><b>अटल बिहारी वाजपेयी (Atal Bihari Vajpayee)</b></h3>
+<p>भारत के तीन बार प्रधानमंत्री रहे। इन्होंने 1999 में कारगिल युद्ध में विजय का नेतृत्व किया। साथ ही, 1999 में दिल्ली-लाहौर बस सेवा शुरू कर पाकिस्तान के साथ शांति के ऐतिहासिक प्रयास किए और लाहौर घोषणापत्र पर हस्ताक्षर किए।</p>
+</div>
+</div>
+</div>
+<h2 class="sub-header topic-header">4. ऐतिहासिक शांति संधियाँ और उनके हस्ताक्षरकर्ता</h2>
+<p>युद्धों के बाद दोनों देशों के बीच संबंधों को सुधारने के लिए तीन महत्वपूर्ण संधियाँ की गईं:</p>
+<ul style="list-style-type: square; margin-left: 40px; ">
+<li><b>1. ताशकंद समझौता (10 जनवरी 1966):</b> भारत के प्रधानमंत्री <b>लाल बहादुर शास्त्री</b> और पाकिस्तान के राष्ट्रपति <b>अय्यूब खान</b> के बीच उज्बेकिस्तान की राजधानी ताशकंद में सोवियत मध्यस्थता से हुआ।</li>
+<li><b>2. शिमला समझौता (2 जुलाई 1972):</b> भारत की प्रधानमंत्री <b>इन्दिरा गांधी</b> और पाकिस्तान के राष्ट्रपति <b>जुल्फिकार अली भुट्टो</b> के बीच शिमला में हुआ। इसमें कश्मीर विवाद को द्विपक्षीय बातचीत से सुलझाने पर सहमति बनी।</li>
+<li><b>3. लाहौर घोषणापत्र (21 फरवरी 1999):</b> भारत के प्रधानमंत्री <b>अटल बिहारी वाजपेयी</b> और पाकिस्तान के प्रधानमंत्री <b>नवाज शरीफ</b> के बीच लाहौर में हुआ, जिसका मुख्य उद्देश्य परमाणु हथियारों के जोखिम को कम करना और शांति स्थापित करना था।</li>
+</ul>
 </div>
 </body>
 </html>
-<br><br><hr><br><br>
+<br/><br/><hr/><br/><br/>
 <!DOCTYPE html>
+
 <html lang="hi">
 <head>
-    <meta charset="UTF-8">
-    <style>
+<meta charset="utf-8"/>
+<style>
+        p, li, h1, h2, h3, h4, b, strong, td, th {
+            font-weight: 900 !important;
+            -webkit-text-stroke: 1.1px #000000;
+            text-shadow: 0 0 1px #000;
+        }
+        body, p, li, td, th, div, span {
+            font-size: 28pt !important;
+            line-height: 1.8 !important;
+        }
+        .ch3-content {
+            font-size: 28pt !important;
+            line-height: 1.8 !important;
+            padding: 10px !important;
+        }
+        /* Projector Banner Styles for Headings */
+        .hero-title, h1.section-header {
+            text-align: center !important;
+            color: #ffffff !important;
+            background-color: #064e3b !important; /* Dark Green Background */
+            border: 5px solid #10b981 !important;
+            border-radius: 20px !important;
+            padding: 30px !important;
+            margin-bottom: 50px !important;
+            font-size: 60pt !important;
+            font-weight: 900 !important;
+            box-shadow: 0 8px 25px rgba(6, 78, 59, 0.4) !important;
+        }
+        .part-header {
+            color: #7f1d1d !important;
+            background-color: #fee2e2 !important;
+            border-left: 18px solid #b91c1c !important;
+            padding: 22px 28px !important;
+            border-radius: 14px !important;
+            font-size: 46pt !important;
+            font-weight: 900 !important;
+            margin-top: 40px !important;
+            margin-bottom: 35px !important;
+            box-shadow: 0 6px 15px rgba(0,0,0,0.08) !important;
+        }
+        .topic-header, h2.sub-header {
+            color: #1e3a8a !important;
+            background-color: #eff6ff !important;
+            border-left: 16px solid #2563eb !important;
+            padding: 20px 26px !important;
+            border-radius: 12px !important;
+            font-size: 38pt !important;
+            font-weight: 900 !important;
+            margin-top: 45px !important;
+            margin-bottom: 30px !important;
+        }
+        .subtopic-header {
+            color: #4c1d95 !important;
+            background-color: #f3e8ff !important;
+            border-left: 14px solid #7c3aed !important;
+            padding: 18px 24px !important;
+            border-radius: 10px !important;
+            font-size: 32pt !important;
+            font-weight: 900 !important;
+            margin-top: 40px !important;
+            margin-bottom: 25px !important;
+        }
+        .box-header {
+            color: #166534 !important;
+            background-color: #f0fdf4 !important;
+            border-left: 12px solid #16a34a !important;
+            padding: 16px 20px !important;
+            border-radius: 10px !important;
+            font-size: 30pt !important;
+            font-weight: 900 !important;
+        }
+        /* Highlights */
+        b, strong {
+            color: #b91c1c !important; /* Dark Red */
+            font-weight: 900 !important;
+        }
+        .blue-highlight, b.blue-text, strong.blue-text {
+            color: #1e3a8a !important;
+        }
+        .keyword-box, .culture-box, .highlight-box {
+            font-size: 28pt !important;
+            line-height: 1.8 !important;
+            padding: 25px !important;
+            margin: 30px 0 !important;
+        }
+        .illustration-box { border: 4px solid #cbd5e1 !important; border-radius: 12px; padding: 20px; background-color: #ffffff; margin-top: 25px; }
+        .illustration-explanation { border-left: 6px solid #cbd5e1 !important; padding-left: 15px; font-size: 28pt !important; line-height: 1.6 !important; text-align: left; margin-top: 15px; }
+
+
         .ch3-content { font-family: 'Arial', sans-serif; line-height: 2.2; font-size: 18pt; color: #1a202c; padding: 40px; }
         .section-header { color: #15803d; border-bottom: 5px solid #22c55e; padding-bottom: 15px; font-size: 34pt; margin-bottom: 30px; }
         .sub-header { color: #166534; font-size: 28pt; margin-top: 50px; }
@@ -300,85 +624,161 @@
 </head>
 <body>
 <div class="ch3-content">
-    <h1 class="section-header">बांग्लादेश: मुक्ति संग्राम, राजनीतिक घराने और स्वतंत्रता के बाद का राजनीतिक इतिहास</h1>
-    
-    <div class="keyword-box">
-        <b>भौगोलिक स्थिति और पड़ोसी सीमाएं:</b><br/>
+<h1 class="section-header hero-title">बांग्लादेश: मुक्ति संग्राम, राजनीतिक घराने और स्वतंत्रता के बाद का राजनीतिक इतिहास</h1>
+<div class="keyword-box">
+<b>भौगोलिक स्थिति और पड़ोसी सीमाएं:</b><br>
         बांग्लादेश भारत के पूर्व में स्थित है। यह तीन तरफ से भारतीय राज्यों (पश्चिम बंगाल, असम, मेघालय, त्रिपुरा, मणीपुर) और दक्षिण में बंगाल की खाड़ी से घिरा है।
-    </div>
-
-    <!-- Bangladesh Map -->
-    <div class="illustration-box" style="border-color: #15803d !important; margin-top: 35px; margin-bottom: 35px;">
-        <img alt="Bangladesh Map" src="images/ch3/bangladesh_map.webp" style="width: 100%; max-width: 850px; height: auto; max-height: 450px; object-fit: contain; display: block; margin: 0 auto; border: 4px solid #cbd5e1; border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.15);" class="illustration-img"/>
-        <div class="illustration-explanation" style="border-left-color: #15803d !important;">
-            <b>मानचित्र: बांग्लादेश का प्रशासनिक विभाजन मानचित्र (Administrative Map of Bangladesh):</b><br/>
+    </br></div>
+<!-- Bangladesh Map -->
+<div class="illustration-box" style="border-color: #15803d !important; margin-top: 35px; margin-bottom: 35px;">
+<img alt="Bangladesh Map" class="illustration-img" src="images/ch3/bangladesh_map.webp" style="width: 100%; max-width: 850px; height: auto; max-height: 450px; object-fit: contain; display: block; margin: 0 auto; border: 4px solid #cbd5e1; border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.15);"/>
+<div class="illustration-explanation" style="border-left-color: #15803d !important;">
+<b>मानचित्र: बांग्लादेश का प्रशासनिक विभाजन मानचित्र (Administrative Map of Bangladesh):</b><br>
             बांग्लादेश के विभिन्न संभागों (Divisions) और सीमाओं को दर्शाता हुआ मूल राष्ट्रीय मानचित्र।
-        </div>
-    </div>
-
-    <h2 class="sub-header">1. पूर्वी पाकिस्तान का संघर्ष और 1952 का भाषा आंदोलन</h2>
-    <p>1947 से 1971 तक बांग्लादेश पाकिस्तान का हिस्सा था। पश्चिमी पाकिस्तान की सरकार ने पूर्वी पाकिस्तान पर जबरन उर्दू भाषा थोपने की कोशिश की। इसके खिलाफ 1952 में ढाका में एक विशाल **भाषा आंदोलन (Language Movement)** शुरू हुआ, जिसमें पुलिस गोलीबारी में कई छात्र शहीद हुए। इसके बाद बंगाली राष्ट्रवाद की भावना भड़क उठी। शेख मुजीबुर्रहमान ने अवामी लीग के माध्यम से बंगाली हितों के लिए 6-सूत्रीय स्वायत्तता की मांग की।</p>
-
-    <!-- Sheikh Mujib Bio Box -->
-    <div class="leader-bio-box">
-        <img alt="Sheikh Mujibur Rahman" src="images/ch3/sheikh_mujib.webp"/>
-        <div class="leader-bio-text">
-            <h3><b>शेख मुजीबुर्रहमान (Sheikh Mujibur Rahman)</b></h3>
-            <p>'बंगबंधु' के नाम से प्रसिद्ध, बांग्लादेश के राष्ट्रपिता और स्वतंत्रता आंदोलन के सर्वमान्य नेता। इन्होंने पूर्वी पाकिस्तान के हितों के लिए अवामी लीग की स्थापना की और स्वतंत्रता के बाद बांग्लादेश के पहले राष्ट्रपति बने। 15 अगस्त 1975 को एक सैन्य कूप के दौरान इनकी और इनके परिवार की हत्या कर दी गई।</p>
-        </div>
-    </div>
-
-    <h2 class="sub-header">2. 1971 का युद्ध और आजादी</h2>
-    <p>1970 के चुनावों में मुजीब की अवामी लीग को पूर्ण बहुमत मिला, लेकिन उन्हें जेल में डाल दिया गया और जनरल याहिया खान ने सैन्य कार्रवाई शुरू की। भारतीय हस्तक्षेप के बाद 16 दिसंबर 1971 को पाकिस्तानी सेना ने आत्मसमर्पण किया और नए देश का जन्म हुआ।</p>
-
-    <!-- Instrument of Surrender -->
-    <div class="illustration-box" style="border-color: #15803d !important; margin-top: 35px; margin-bottom: 35px;">
-        <img alt="Instrument of Surrender" src="images/ch3/instrument_of_surrender.webp" style="width: 100%; max-width: 850px; height: auto; max-height: 450px; object-fit: contain; display: block; margin: 0 auto; border: 4px solid #cbd5e1; border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.15);" class="illustration-img"/>
-        <div class="illustration-explanation" style="border-left-color: #15803d !important;">
-            <b>ऐतिहासिक आत्मसमर्पण (Signing of Instrument of Surrender):</b><br/>
+        </br></div>
+</div>
+<h2 class="sub-header topic-header">1. पूर्वी पाकिस्तान का संघर्ष और 1952 का भाषा आंदोलन</h2>
+<p>1947 से 1971 तक बांग्लादेश पाकिस्तान का हिस्सा था। पश्चिमी पाकिस्तान की सरकार ने पूर्वी पाकिस्तान पर जबरन उर्दू भाषा थोपने की कोशिश की। इसके खिलाफ 1952 में ढाका में एक विशाल **भाषा आंदोलन (Language Movement)** शुरू हुआ, जिसमें पुलिस गोलीबारी में कई छात्र शहीद हुए। इसके बाद बंगाली राष्ट्रवाद की भावना भड़क उठी। शेख मुजीबुर्रहमान ने अवामी लीग के माध्यम से बंगाली हितों के लिए 6-सूत्रीय स्वायत्तता की मांग की।</p>
+<!-- Sheikh Mujib Bio Box -->
+<div class="leader-bio-box">
+<img alt="Sheikh Mujibur Rahman" src="images/ch3/sheikh_mujib.webp"/>
+<div class="leader-bio-text">
+<h3 class="subtopic-header"><b>शेख मुजीबुर्रहमान (Sheikh Mujibur Rahman)</b></h3>
+<p>'बंगबंधु' के नाम से प्रसिद्ध, बांग्लादेश के राष्ट्रपिता और स्वतंत्रता आंदोलन के सर्वमान्य नेता। इन्होंने पूर्वी पाकिस्तान के हितों के लिए अवामी लीग की स्थापना की और स्वतंत्रता के बाद बांग्लादेश के पहले राष्ट्रपति बने। 15 अगस्त 1975 को एक सैन्य कूप के दौरान इनकी और इनके परिवार की हत्या कर दी गई।</p>
+</div>
+</div>
+<h2 class="sub-header topic-header">2. 1971 का युद्ध और आजादी</h2>
+<p>1970 के चुनावों में मुजीब की अवामी लीग को पूर्ण बहुमत मिला, लेकिन उन्हें जेल में डाल दिया गया और जनरल याहिया खान ने सैन्य कार्रवाई शुरू की। भारतीय हस्तक्षेप के बाद 16 दिसंबर 1971 को पाकिस्तानी सेना ने आत्मसमर्पण किया और नए देश का जन्म हुआ।</p>
+<!-- Instrument of Surrender -->
+<div class="illustration-box" style="border-color: #15803d !important; margin-top: 35px; margin-bottom: 35px;">
+<img alt="Instrument of Surrender" class="illustration-img" src="images/ch3/instrument_of_surrender.webp" style="width: 100%; max-width: 850px; height: auto; max-height: 450px; object-fit: contain; display: block; margin: 0 auto; border: 4px solid #cbd5e1; border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.15);"/>
+<div class="illustration-explanation" style="border-left-color: #15803d !important;">
+<b>ऐतिहासिक आत्मसमर्पण (Signing of Instrument of Surrender):</b><br>
             ढाका में पाकिस्तानी सेना के जनरल नियाजी भारतीय जनरल जगजीत सिंह अरोड़ा के सामने आत्मसमर्पण दस्तावेज पर हस्ताक्षर कर रहे हैं।
-        </div>
-    </div>
-
-    <h2 class="sub-header">3. स्वतंत्रता के बाद का इतिहास (Post-Independence History)</h2>
-    <p><b>संविधान निर्माण और मुजीब का तानाशाही रवैया (1972-1975):</b><br/>
-    आजादी के बाद बांग्लादेश ने धर्मनिरपेक्षता, समाजवाद और लोकतंत्र पर आधारित एक प्रगतिशील संविधान बनाया। हालांकि, देश की आर्थिक स्थिति खराब रही और 1974 में भीषण अकाल पड़ा। 1975 में शेख मुजीब ने संविधान में संशोधन कर संसदीय व्यवस्था को हटाकर राष्ट्रपति शासन प्रणाली (Presidential System) लागू कर दी और अवामी लीग को छोड़कर अन्य सभी दलों पर प्रतिबंध लगा दिया, जिसे **BAKSAL** कहा गया। इससे देश में गहरा असंतोष फैला और 15 अगस्त 1975 को सेना के कुछ युवा अधिकारियों ने तख्तापलट कर शेख मुजीबुर्रहमान और उनके परिवार के अधिकांश सदस्यों की निर्मम हत्या कर दी।</p>
-
-    <p><b>सैन्य शासन और जियाउर रहमान (1975-1981):</b><br/>
+        </br></div>
+</div>
+<h2 class="sub-header topic-header">3. स्वतंत्रता के बाद का इतिहास (Post-Independence History)</h2>
+<p><b>संविधान निर्माण और मुजीब का तानाशाही रवैया (1972-1975):</b><br>
+    आजादी के बाद बांग्लादेश ने धर्मनिरपेक्षता, समाजवाद और लोकतंत्र पर आधारित एक प्रगतिशील संविधान बनाया। हालांकि, देश की आर्थिक स्थिति खराब रही और 1974 में भीषण अकाल पड़ा। 1975 में शेख मुजीब ने संविधान में संशोधन कर संसदीय व्यवस्था को हटाकर राष्ट्रपति शासन प्रणाली (Presidential System) लागू कर दी और अवामी लीग को छोड़कर अन्य सभी दलों पर प्रतिबंध लगा दिया, जिसे **BAKSAL** कहा गया। इससे देश में गहरा असंतोष फैला और 15 अगस्त 1975 को सेना के कुछ युवा अधिकारियों ने तख्तापलट कर शेख मुजीबुर्रहमान और उनके परिवार के अधिकांश सदस्यों की निर्मम हत्या कर दी।</br></p>
+<p><b>सैन्य शासन और जियाउर रहमान (1975-1981):</b><br/>
     मुजीब की हत्या के बाद देश में सैन्य कूपों का दौर शुरू हुआ। अंततः जनरल **जियाउर रहमान** ने सत्ता संभाली। उन्होंने बांग्लादेश नेशनलिस्ट पार्टी (BNP) का गठन किया और देश को अधिक मुस्लिम-उन्मुख नीतियों की ओर मोड़ा। मई 1981 में चटगांव में एक सैन्य विद्रोह के दौरान जियाउर रहमान की भी हत्या कर दी गई।</p>
-
-    <p><b>जनरल एच.एम. इरशाद और लोकतंत्र का संघर्ष (1982-1990):</b><br/>
+<p><b>जनरल एच.एम. इरशाद और लोकतंत्र का संघर्ष (1982-1990):</b><br/>
     जियाउर रहमान की हत्या के बाद लेफ्टिनेंट जनरल **एच.एम. इरशाद** ने तख्तापलट किया। इरशाद के शासन के खिलाफ छात्रों और विपक्षी दलों (अवामी लीग और बीएनपी) ने मिलकर एक बड़ा जनांदोलन शुरू किया। अंततः 1990 में इरशाद को पद छोड़ने के लिए मजबूर होना पड़ा और 1991 में फिर से बहुदलीय संसदीय लोकतंत्र की स्थापना हुई।</p>
-
-    <p><b>"बेगमों की लड़ाई" और आधुनिक काल (1991 से वर्तमान):</b><br/>
+<p><b>"बेगमों की लड़ाई" और आधुनिक काल (1991 से वर्तमान):</b><br/>
     1991 के बाद से बांग्लादेश की राजनीति दो शक्तिशाली महिलाओं—**खालिदा जिया** (बीएनपी) और **शेख हसीना** (अवामी लीग) की प्रतिद्वंद्विता के इर्द-गिर्द घूमती रही है, जिसे मीडिया में 'बैटल ऑफ बेगम्स' (Battle of the Begums) कहा जाता है। 2009 से 2024 तक शेख हसीना के नेतृत्व वाली अवामी लीग सत्ता में रही, जिसके शासनकाल में बांग्लादेश ने वस्त्र उद्योग और मानव विकास सूचकांक में बड़ी आर्थिक प्रगति की, हालांकि हाल ही में व्यापक छात्र आंदोलनों के बाद देश में फिर से राजनीतिक संक्रमण का दौर देखा जा रहा है।</p>
-
-    <h2 class="sub-header">4. बांग्लादेश के प्रमुख राजनीतिक घराने</h2>
-    <p>बांग्लादेश की लोकतांत्रिक सत्ता दो प्रमुख घरानों के बीच बंटी रही है:</p>
-
-    <!-- Sheikh Hasina Bio Box -->
-    <div class="leader-bio-box">
-        <img alt="Sheikh Hasina" src="images/ch3/sheikh_hasina.webp"/>
-        <div class="leader-bio-text">
-            <h3><b>शेख हसीना और मुजीब-हसीना घराना (Awami League)</b></h3>
-            <p>शेख मुजीबुर्रहमान की बेटी शेख हसीना बांग्लादेश की सबसे लंबे समय तक सेवा करने वाली प्रधानमंत्री हैं। इनके कार्यकाल में बांग्लादेश ने तीव्र आर्थिक प्रगति की और भारत के साथ सुरक्षा व भूमि समझौते (LBA 2015) को सुलझाया। यह घराना धर्मनिरपेक्ष और भारत-समर्थक माना जाता है।</p>
-        </div>
-    </div>
-
-    <!-- Zia Family -->
-    <div class="bio-box" style="background: #f0fdf4; border: 4px solid #15803d; padding: 25px; border-radius: 15px; margin: 30px 0;">
-        <h3><b>जिया-खालिदा घराना (BNP):</b></h3>
-        <p>सैन्य शासक जनरल जियाउर रहमान की पत्नी <b>खालिदा जिया</b> बांग्लादेश की प्रधानमंत्री रहीं। यह घराना राष्ट्रवादी और पारंपरिक मुस्लिम नीतियों का प्रतिनिधित्व करता है तथा भारत विरोधी बयानों और पाकिस्तान समर्थक कूटनीतिक रुख के लिए जाना जाता है।</p>
-    </div>
+<h2 class="sub-header topic-header">4. बांग्लादेश के प्रमुख राजनीतिक घराने</h2>
+<p>बांग्लादेश की लोकतांत्रिक सत्ता दो प्रमुख घरानों के बीच बंटी रही है:</p>
+<!-- Sheikh Hasina Bio Box -->
+<div class="leader-bio-box">
+<img alt="Sheikh Hasina" src="images/ch3/sheikh_hasina.webp"/>
+<div class="leader-bio-text">
+<h3 class="subtopic-header"><b>शेख हसीना और मुजीब-हसीना घराना (Awami League)</b></h3>
+<p>शेख मुजीबुर्रहमान की बेटी शेख हसीना बांग्लादेश की सबसे लंबे समय तक सेवा करने वाली प्रधानमंत्री हैं। इनके कार्यकाल में बांग्लादेश ने तीव्र आर्थिक प्रगति की और भारत के साथ सुरक्षा व भूमि समझौते (LBA 2015) को सुलझाया। यह घराना धर्मनिरपेक्ष और भारत-समर्थक माना जाता है।</p>
+</div>
+</div>
+<!-- Zia Family -->
+<div class="bio-box" style="background: #f0fdf4; border: 4px solid #15803d; padding: 25px; border-radius: 15px; margin: 30px 0;">
+<h3 class="subtopic-header"><b>जिया-खालिदा घराना (BNP):</b></h3>
+<p>सैन्य शासक जनरल जियाउर रहमान की पत्नी <b>खालिदा जिया</b> बांग्लादेश की प्रधानमंत्री रहीं। यह घराना राष्ट्रवादी और पारंपरिक मुस्लिम नीतियों का प्रतिनिधित्व करता है तथा भारत विरोधी बयानों और पाकिस्तान समर्थक कूटनीतिक रुख के लिए जाना जाता है।</p>
+</div>
 </div>
 </body>
 </html>
-<br><br><hr><br><br>
+<br/><br/><hr/><br/><br/>
 <!DOCTYPE html>
+
 <html lang="hi">
 <head>
-    <meta charset="UTF-8">
-    <style>
+<meta charset="utf-8"/>
+<style>
+        p, li, h1, h2, h3, h4, b, strong, td, th {
+            font-weight: 900 !important;
+            -webkit-text-stroke: 1.1px #000000;
+            text-shadow: 0 0 1px #000;
+        }
+        body, p, li, td, th, div, span {
+            font-size: 28pt !important;
+            line-height: 1.8 !important;
+        }
+        .ch3-content {
+            font-size: 28pt !important;
+            line-height: 1.8 !important;
+            padding: 10px !important;
+        }
+        /* Projector Banner Styles for Headings */
+        .hero-title, h1.section-header {
+            text-align: center !important;
+            color: #ffffff !important;
+            background-color: #064e3b !important; /* Dark Green Background */
+            border: 5px solid #10b981 !important;
+            border-radius: 20px !important;
+            padding: 30px !important;
+            margin-bottom: 50px !important;
+            font-size: 60pt !important;
+            font-weight: 900 !important;
+            box-shadow: 0 8px 25px rgba(6, 78, 59, 0.4) !important;
+        }
+        .part-header {
+            color: #7f1d1d !important;
+            background-color: #fee2e2 !important;
+            border-left: 18px solid #b91c1c !important;
+            padding: 22px 28px !important;
+            border-radius: 14px !important;
+            font-size: 46pt !important;
+            font-weight: 900 !important;
+            margin-top: 40px !important;
+            margin-bottom: 35px !important;
+            box-shadow: 0 6px 15px rgba(0,0,0,0.08) !important;
+        }
+        .topic-header, h2.sub-header {
+            color: #1e3a8a !important;
+            background-color: #eff6ff !important;
+            border-left: 16px solid #2563eb !important;
+            padding: 20px 26px !important;
+            border-radius: 12px !important;
+            font-size: 38pt !important;
+            font-weight: 900 !important;
+            margin-top: 45px !important;
+            margin-bottom: 30px !important;
+        }
+        .subtopic-header {
+            color: #4c1d95 !important;
+            background-color: #f3e8ff !important;
+            border-left: 14px solid #7c3aed !important;
+            padding: 18px 24px !important;
+            border-radius: 10px !important;
+            font-size: 32pt !important;
+            font-weight: 900 !important;
+            margin-top: 40px !important;
+            margin-bottom: 25px !important;
+        }
+        .box-header {
+            color: #166534 !important;
+            background-color: #f0fdf4 !important;
+            border-left: 12px solid #16a34a !important;
+            padding: 16px 20px !important;
+            border-radius: 10px !important;
+            font-size: 30pt !important;
+            font-weight: 900 !important;
+        }
+        /* Highlights */
+        b, strong {
+            color: #b91c1c !important; /* Dark Red */
+            font-weight: 900 !important;
+        }
+        .blue-highlight, b.blue-text, strong.blue-text {
+            color: #1e3a8a !important;
+        }
+        .keyword-box, .culture-box, .highlight-box {
+            font-size: 28pt !important;
+            line-height: 1.8 !important;
+            padding: 25px !important;
+            margin: 30px 0 !important;
+        }
+        .illustration-box { border: 4px solid #cbd5e1 !important; border-radius: 12px; padding: 20px; background-color: #ffffff; margin-top: 25px; }
+        .illustration-explanation { border-left: 6px solid #cbd5e1 !important; padding-left: 15px; font-size: 28pt !important; line-height: 1.6 !important; text-align: left; margin-top: 15px; }
+
+
         .ch3-content { font-family: 'Arial', sans-serif; line-height: 2.2; font-size: 18pt; color: #1a202c; padding: 40px; }
         .section-header { color: #854d0e; border-bottom: 5px solid #fbbf24; padding-bottom: 15px; font-size: 34pt; margin-bottom: 30px; }
         .sub-header { color: #b45309; font-size: 28pt; margin-top: 50px; }
@@ -395,57 +795,137 @@
 </head>
 <body>
 <div class="ch3-content">
-    <h1 class="section-header">नेपाल: स्वतंत्रता के बाद की राजनीतिक यात्रा, राजपरिवार हत्याकांड और प्रचंड का उदय</h1>
-    
-    <div class="keyword-box">
-        <b>भौगोलिक स्थिति और पड़ोसी सीमाएं:</b><br/>
+<h1 class="section-header hero-title">नेपाल: स्वतंत्रता के बाद की राजनीतिक यात्रा, राजपरिवार हत्याकांड और प्रचंड का उदय</h1>
+<div class="keyword-box">
+<b>भौगोलिक स्थिति और पड़ोसी सीमाएं:</b><br>
         नेपाल एक हिमालयी देश है जो भारत के पांच राज्यों (उत्तराखंड, उत्तर प्रदेश, Bihar, पश्चिम बंगाल, सिक्किम) और उत्तर में तिब्बत (चीन) से घिरा हुआ है।
-    </div>
-
-    <!-- Nepal Map -->
-    <div class="illustration-box" style="border-color: #854d0e !important; margin-top: 35px; margin-bottom: 35px;">
-        <img alt="Nepal Map" src="images/ch3/nepal_map.webp" style="width: 100%; max-width: 850px; height: auto; max-height: 450px; object-fit: contain; display: block; margin: 0 auto; border: 4px solid #cbd5e1; border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.15);" class="illustration-img"/>
-        <div class="illustration-explanation" style="border-left-color: #854d0e !important;">
-            <b>मानचित्र: नेपाल का राजनीतिक जिला मानचित्र (Map of Nepal Districts):</b><br/>
+    </br></div>
+<!-- Nepal Map -->
+<div class="illustration-box" style="border-color: #854d0e !important; margin-top: 35px; margin-bottom: 35px;">
+<img alt="Nepal Map" class="illustration-img" src="images/ch3/nepal_map.webp" style="width: 100%; max-width: 850px; height: auto; max-height: 450px; object-fit: contain; display: block; margin: 0 auto; border: 4px solid #cbd5e1; border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.15);"/>
+<div class="illustration-explanation" style="border-left-color: #854d0e !important;">
+<b>मानचित्र: नेपाल का राजनीतिक जिला मानचित्र (Map of Nepal Districts):</b><br>
             नेपाल के विभिन्न जिलों और उसकी सीमाओं को स्पष्ट करता हुआ मूल राष्ट्रीय मानचित्र।
-        </div>
-    </div>
-
-    <h2 class="sub-header">1. स्वतंत्रता के बाद का राजनीतिक इतिहास (Post-Independence History)</h2>
-    <p>नेपाल में 100 से अधिक वर्षों तक शक्तिशाली **राणा वंश** (Rana Dynasty) के प्रधानमंत्रियों का शासन था, जबकि राजा केवल नाममात्र के थे। 1951 में भारत के सहयोग से राजा त्रिभुवन ने राणा शासन को समाप्त कर सत्ता संभाली और लोकतंत्र की नींव रखी।</p>
-    
-    <p><b>राजा महेंद्र का तख्तापलट और पंचायत प्रणाली (1960-1990):</b><br/>
-    1959 में नेपाल में पहले लोकतांत्रिक चुनाव हुए, जिसमें बी.पी. कोइराला के नेतृत्व में नेपाली कांग्रेस की सरकार बनी। लेकिन 1960 में राजा महेंद्र ने लोकतांत्रिक सरकार को बर्खास्त कर दिया, राजनीतिक दलों पर प्रतिबंध लगा दिया और 1962 में 'दल-विहीन' **पंचायत प्रणाली (Panchayat System)** की शुरुआत की, जिसके तहत राजा ही सत्ता के शीर्ष पर थे।</p>
-
-    <p><b>प्रथम जन-आंदोलन (Jan Andolan I - 1990):</b><br/>
-    1990 में नेपाल के सभी राजनीतिक दलों ने राजा के खिलाफ एक राष्ट्रव्यापी आंदोलन शुरू किया। पुलिस दमन के बावजूद आंदोलन नहीं थमा और अंततः राजा बीरेन्द्र को झुकना पड़ा। उन्होंने नेपाल को एक **संवैधानिक राजतंत्र (Constitutional Monarchy)** बनाया और बहुदलीय लोकतांत्रिक संसद की स्थापना की।</p>
-
-    <h2 class="sub-header">2. नेपाल राजदरबार हत्याकांड (Royal Massacre - 2001)</h2>
-    <p>नेपाल के इतिहास में <b>1 जून 2001</b> को एक भयानक मोड़ आया, जब नेपाल के लोकप्रिय राजा <b>बीरेन्द्र वीर विक्रम शाह</b>, रानी ऐश्वर्या और राजपरिवार के कुल 9 सदस्यों की नारायणहिटी राजमहल में अंधाधुंध गोलीबारी कर हत्या कर दी गई। आधिकारिक जांच के अनुसार, युवराज दीपेन्द्र ने स्वयं गोलीबारी की और अंत में खुद को भी गोली मार ली। इस हत्याकांड के बाद राजा बीरेन्द्र के भाई <b>ज्ञानेन्द्र</b> नेपाल के नए राजा बने, जो अत्यंत तानाशाही प्रवृत्ति के थे।</p>
-
-    <h2 class="sub-header">3. माओवादी जनयुद्ध (Maoist Movement) और हिंसक संघर्ष</h2>
-    <p>नेपाल में राजशाही और सामाजिक-आर्थिक असमानता के खिलाफ 1996 में नेपाल कम्युनिस्ट पार्टी (माओवादी) ने सशस्त्र जनयुद्ध (Armed Insurgency) शुरू किया। माओवादी चीनी साम्यवादी नेता माओ जेदांग के विचारों से प्रेरित थे और राजा की सेना के खिलाफ गुरिल्ला युद्ध लड़ रहे थे। इस संघर्ष में लगभग 17,000 लोग मारे गए।</p>
-
-    <!-- Prachanda Bio Box -->
-    <div class="leader-bio-box">
-        <img alt="Pushpa Kamal Dahal Prachanda" src="images/ch3/prachanda.webp"/>
-        <div class="leader-bio-text">
-            <h3><b>पुष्प कमल दहाल 'प्रचंड' (Pushpa Kamal Dahal 'Prachanda')</b></h3>
-            <p>नेपाल की कम्युनिस्ट पार्टी (माओवादी) के सर्वोच्च नेता और सशस्त्र जनयुद्ध के कमांडर। 2006 में शांति समझौते के बाद ये मुख्यधारा की लोकतांत्रिक राजनीति में शामिल हुए और नेपाल के प्रधानमंत्री चुने गए। ये नेपाल में राजशाही के अंत और गणतंत्र की स्थापना के प्रमुख वास्तुकार माने जाते हैं।</p>
-        </div>
-    </div>
-
-    <h2 class="sub-header">4. 2006 का जन-आंदोलन (Jan Andolan II) और राजशाही का अंत</h2>
-    <p>2005 में राजा ज्ञानेन्द्र ने प्रधानमंत्री को बर्खास्त कर फिर से पूर्ण सत्ता अपने हाथों में ले ली। इसके खिलाफ नेपाल के सात दलों के गठबंधन (SPA) और माओवादियों ने हाथ मिला लिया। अप्रैल 2006 में लाखों लोग सड़कों पर उतरे और व्यापक हड़ताल की। राजा को संसद बहाल करनी पड़ी और 28 मई 2008 को नेपाल की संविधान सभा ने राजशाही को सदा के लिए समाप्त कर देश को एक **संघीय लोकतांत्रिक गणराज्य** घोषित किया। 2015 में नेपाल ने अपना नया संविधान अपनाया, जिसके तहत माओवादी नेता प्रचंड और के.पी. शर्मा ओली वर्तमान में लोकतांत्रिक सत्ता चला रहे हैं।</p>
+        </br></div>
+</div>
+<h2 class="sub-header topic-header">1. स्वतंत्रता के बाद का राजनीतिक इतिहास (Post-Independence History)</h2>
+<p>नेपाल में 100 से अधिक वर्षों तक शक्तिशाली **राणा वंश** (Rana Dynasty) के प्रधानमंत्रियों का शासन था, जबकि राजा केवल नाममात्र के थे। 1951 में भारत के सहयोग से राजा त्रिभुवन ने राणा शासन को समाप्त कर सत्ता संभाली और लोकतंत्र की नींव रखी।</p>
+<p><b>राजा महेंद्र का तख्तापलट और पंचायत प्रणाली (1960-1990):</b><br>
+    1959 में नेपाल में पहले लोकतांत्रिक चुनाव हुए, जिसमें बी.पी. कोइराला के नेतृत्व में नेपाली कांग्रेस की सरकार बनी। लेकिन 1960 में राजा महेंद्र ने लोकतांत्रिक सरकार को बर्खास्त कर दिया, राजनीतिक दलों पर प्रतिबंध लगा दिया और 1962 में 'दल-विहीन' **पंचायत प्रणाली (Panchayat System)** की शुरुआत की, जिसके तहत राजा ही सत्ता के शीर्ष पर थे।</br></p>
+<p><b>प्रथम जन-आंदोलन (Jan Andolan I - 1990):</b><br>
+    1990 में नेपाल के सभी राजनीतिक दलों ने राजा के खिलाफ एक राष्ट्रव्यापी आंदोलन शुरू किया। पुलिस दमन के बावजूद आंदोलन नहीं थमा और अंततः राजा बीरेन्द्र को झुकना पड़ा। उन्होंने नेपाल को एक **संवैधानिक राजतंत्र (Constitutional Monarchy)** बनाया और बहुदलीय लोकतांत्रिक संसद की स्थापना की।</br></p>
+<h2 class="sub-header topic-header">2. नेपाल राजदरबार हत्याकांड (Royal Massacre - 2001)</h2>
+<p>नेपाल के इतिहास में <b>1 जून 2001</b> को एक भयानक मोड़ आया, जब नेपाल के लोकप्रिय राजा <b>बीरेन्द्र वीर विक्रम शाह</b>, रानी ऐश्वर्या और राजपरिवार के कुल 9 सदस्यों की नारायणहिटी राजमहल में अंधाधुंध गोलीबारी कर हत्या कर दी गई। आधिकारिक जांच के अनुसार, युवराज दीपेन्द्र ने स्वयं गोलीबारी की और अंत में खुद को भी गोली मार ली। इस हत्याकांड के बाद राजा बीरेन्द्र के भाई <b>ज्ञानेन्द्र</b> नेपाल के नए राजा बने, जो अत्यंत तानाशाही प्रवृत्ति के थे।</p>
+<h2 class="sub-header topic-header">3. माओवादी जनयुद्ध (Maoist Movement) और हिंसक संघर्ष</h2>
+<p>नेपाल में राजशाही और सामाजिक-आर्थिक असमानता के खिलाफ 1996 में नेपाल कम्युनिस्ट पार्टी (माओवादी) ने सशस्त्र जनयुद्ध (Armed Insurgency) शुरू किया। माओवादी चीनी साम्यवादी नेता माओ जेदांग के विचारों से प्रेरित थे और राजा की सेना के खिलाफ गुरिल्ला युद्ध लड़ रहे थे। इस संघर्ष में लगभग 17,000 लोग मारे गए।</p>
+<!-- Prachanda Bio Box -->
+<div class="leader-bio-box">
+<img alt="Pushpa Kamal Dahal Prachanda" src="images/ch3/prachanda.webp"/>
+<div class="leader-bio-text">
+<h3 class="subtopic-header"><b>पुष्प कमल दहाल 'प्रचंड' (Pushpa Kamal Dahal 'Prachanda')</b></h3>
+<p>नेपाल की कम्युनिस्ट पार्टी (माओवादी) के सर्वोच्च नेता और सशस्त्र जनयुद्ध के कमांडर। 2006 में शांति समझौते के बाद ये मुख्यधारा की लोकतांत्रिक राजनीति में शामिल हुए और नेपाल के प्रधानमंत्री चुने गए। ये नेपाल में राजशाही के अंत और गणतंत्र की स्थापना के प्रमुख वास्तुकार माने जाते हैं।</p>
+</div>
+</div>
+<h2 class="sub-header topic-header">4. 2006 का जन-आंदोलन (Jan Andolan II) और राजशाही का अंत</h2>
+<p>2005 में राजा ज्ञानेन्द्र ने प्रधानमंत्री को बर्खास्त कर फिर से पूर्ण सत्ता अपने हाथों में ले ली। इसके खिलाफ नेपाल के सात दलों के गठबंधन (SPA) और माओवादियों ने हाथ मिला लिया। अप्रैल 2006 में लाखों लोग सड़कों पर उतरे और व्यापक हड़ताल की। राजा को संसद बहाल करनी पड़ी और 28 मई 2008 को नेपाल की संविधान सभा ने राजशाही को सदा के लिए समाप्त कर देश को एक **संघीय लोकतांत्रिक गणराज्य** घोषित किया। 2015 में नेपाल ने अपना नया संविधान अपनाया, जिसके तहत माओवादी नेता प्रचंड और के.पी. शर्मा ओली वर्तमान में लोकतांत्रिक सत्ता चला रहे हैं।</p>
 </div>
 </body>
 </html>
-<br><br><hr><br><br>
+<br/><br/><hr/><br/><br/>
 <!DOCTYPE html>
+
 <html lang="hi">
 <head>
-    <meta charset="UTF-8">
-    <style>
+<meta charset="utf-8"/>
+<style>
+        p, li, h1, h2, h3, h4, b, strong, td, th {
+            font-weight: 900 !important;
+            -webkit-text-stroke: 1.1px #000000;
+            text-shadow: 0 0 1px #000;
+        }
+        body, p, li, td, th, div, span {
+            font-size: 28pt !important;
+            line-height: 1.8 !important;
+        }
+        .ch3-content {
+            font-size: 28pt !important;
+            line-height: 1.8 !important;
+            padding: 10px !important;
+        }
+        /* Projector Banner Styles for Headings */
+        .hero-title, h1.section-header {
+            text-align: center !important;
+            color: #ffffff !important;
+            background-color: #064e3b !important; /* Dark Green Background */
+            border: 5px solid #10b981 !important;
+            border-radius: 20px !important;
+            padding: 30px !important;
+            margin-bottom: 50px !important;
+            font-size: 60pt !important;
+            font-weight: 900 !important;
+            box-shadow: 0 8px 25px rgba(6, 78, 59, 0.4) !important;
+        }
+        .part-header {
+            color: #7f1d1d !important;
+            background-color: #fee2e2 !important;
+            border-left: 18px solid #b91c1c !important;
+            padding: 22px 28px !important;
+            border-radius: 14px !important;
+            font-size: 46pt !important;
+            font-weight: 900 !important;
+            margin-top: 40px !important;
+            margin-bottom: 35px !important;
+            box-shadow: 0 6px 15px rgba(0,0,0,0.08) !important;
+        }
+        .topic-header, h2.sub-header {
+            color: #1e3a8a !important;
+            background-color: #eff6ff !important;
+            border-left: 16px solid #2563eb !important;
+            padding: 20px 26px !important;
+            border-radius: 12px !important;
+            font-size: 38pt !important;
+            font-weight: 900 !important;
+            margin-top: 45px !important;
+            margin-bottom: 30px !important;
+        }
+        .subtopic-header {
+            color: #4c1d95 !important;
+            background-color: #f3e8ff !important;
+            border-left: 14px solid #7c3aed !important;
+            padding: 18px 24px !important;
+            border-radius: 10px !important;
+            font-size: 32pt !important;
+            font-weight: 900 !important;
+            margin-top: 40px !important;
+            margin-bottom: 25px !important;
+        }
+        .box-header {
+            color: #166534 !important;
+            background-color: #f0fdf4 !important;
+            border-left: 12px solid #16a34a !important;
+            padding: 16px 20px !important;
+            border-radius: 10px !important;
+            font-size: 30pt !important;
+            font-weight: 900 !important;
+        }
+        /* Highlights */
+        b, strong {
+            color: #b91c1c !important; /* Dark Red */
+            font-weight: 900 !important;
+        }
+        .blue-highlight, b.blue-text, strong.blue-text {
+            color: #1e3a8a !important;
+        }
+        .keyword-box, .culture-box, .highlight-box {
+            font-size: 28pt !important;
+            line-height: 1.8 !important;
+            padding: 25px !important;
+            margin: 30px 0 !important;
+        }
+        .illustration-box { border: 4px solid #cbd5e1 !important; border-radius: 12px; padding: 20px; background-color: #ffffff; margin-top: 25px; }
+        .illustration-explanation { border-left: 6px solid #cbd5e1 !important; padding-left: 15px; font-size: 28pt !important; line-height: 1.6 !important; text-align: left; margin-top: 15px; }
+
+
         .ch3-content { font-family: 'Arial', sans-serif; line-height: 2.2; font-size: 18pt; color: #1a202c; padding: 40px; }
         .section-header { color: #854d0e; border-bottom: 5px solid #fbbf24; padding-bottom: 15px; font-size: 34pt; margin-bottom: 30px; }
         .sub-header { color: #b45309; font-size: 28pt; margin-top: 50px; }
@@ -462,74 +942,151 @@
 </head>
 <body>
 <div class="ch3-content">
-    <h1 class="section-header">श्रीलंका: स्वतंत्रता के बाद की राजनीतिक यात्रा, जातीय संघर्ष, LTTE और राजनीतिक घराने</h1>
-    
-    <div class="keyword-box">
-        <b>भौगोलिक स्थिति:</b><br/>
+<h1 class="section-header hero-title">श्रीलंका: स्वतंत्रता के बाद की राजनीतिक यात्रा, जातीय संघर्ष, LTTE और राजनीतिक घराने</h1>
+<div class="keyword-box">
+<b>भौगोलिक स्थिति:</b><br>
         श्रीलंका हिंद महासागर में स्थित एक द्वीप राष्ट्र है जो भारत के दक्षिणी तट से मन्नार की खाड़ी द्वारा अलग होता है।
-    </div>
-
-    <!-- Sri Lanka Map -->
-    <div class="illustration-box" style="border-color: #854d0e !important; margin-top: 35px; margin-bottom: 35px;">
-        <img alt="Sri Lanka Map" src="images/ch3/sri_lanka_map.webp" style="width: 100%; max-width: 850px; height: auto; max-height: 450px; object-fit: contain; display: block; margin: 0 auto; border: 4px solid #cbd5e1; border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.15);" class="illustration-img"/>
-        <div class="illustration-explanation" style="border-left-color: #854d0e !important;">
-            <b>मानचित्र: श्रीलंका का प्रांतीय मानचित्र (Provinces Map of Sri Lanka):</b><br/>
+    </br></div>
+<!-- Sri Lanka Map -->
+<div class="illustration-box" style="border-color: #854d0e !important; margin-top: 35px; margin-bottom: 35px;">
+<img alt="Sri Lanka Map" class="illustration-img" src="images/ch3/sri_lanka_map.webp" style="width: 100%; max-width: 850px; height: auto; max-height: 450px; object-fit: contain; display: block; margin: 0 auto; border: 4px solid #cbd5e1; border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.15);"/>
+<div class="illustration-explanation" style="border-left-color: #854d0e !important;">
+<b>मानचित्र: श्रीलंका का प्रांतीय मानचित्र (Provinces Map of Sri Lanka):</b><br>
             श्रीलंका के नौ प्रांतों और सीमाओं को स्पष्ट करता हुआ मूल राष्ट्रीय मानचित्र।
-        </div>
-    </div>
-
-    <h2 class="sub-header">1. स्वतंत्रता के बाद का राजनीतिक इतिहास (Post-Independence History)</h2>
-    <p>1948 में आजादी के बाद श्रीलंका (तत्कालीन सीलोन) की सत्ता मुख्य रूप से बहुसंख्यक **सिंहली समुदाय** के नेताओं के हाथों में आ गई। सिंहली नेताओं ने अपनी बहुसंख्यकवादी (Majoritarian) नीतियों के माध्यम से तमिलों को हाशिए पर धकेल दिया:</p>
-    
-    <p><b>1956 का सिंहली-केवल अधिनियम (Sinhala Only Act):</b><br/>
-    प्रधानमंत्री एस.डब्ल्यू.आर.डी. भंडारनायके की सरकार ने 1956 में सिंहली भाषा को श्रीलंका की एकमात्र राजभाषा घोषित कर दिया। तमिलों को सरकारी नौकरियों, विश्वविद्यालयों और प्रशासन से बाहर कर दिया गया। 1972 के संविधान में बौद्ध धर्म को राज्य का मुख्य संरक्षण दिया गया, जिससे हिंदू और ईसाई तमिलों में अलगाव की भावना चरम पर पहुंच गई।</p>
-
-    <h2 class="sub-header">2. तमिल संघर्ष और LTTE का गठन</h2>
-    <p>शांतिपूर्ण आंदोलनों की विफलता के बाद तमिल युवाओं में उग्रवाद बढ़ा। 1976 में **वेलुपिल्लई प्रभाकरन** ने एक हिंसक उग्रवादी संगठन **LTTE (Liberation Tigers of Tamil Eelam)** की स्थापना की। एलटीटीई ने श्रीलंका के उत्तर और पूर्व में तमिलों के लिए एक अलग संप्रभु राष्ट्र 'तमिल ईलम' की मांग की, जिससे 1983 में श्रीलंका में भीषण गृहयुद्ध छिड़ गया।</p>
-
-    <!-- Prabhakaran Bio Box -->
-    <div class="leader-bio-box">
-        <img alt="Velupillai Prabhakaran" src="images/ch3/prabhakaran.webp"/>
-        <div class="leader-bio-text">
-            <h3><b>वेलुपिल्लई प्रभाकरन (Velupillai Prabhakaran)</b></h3>
-            <p>एलटीटीई (LTTE) का संस्थापक और सर्वोच्च कमांडर। इसने दुनिया का सबसे खूंखार गुरिल्ला और आत्मघाती उग्रवादी संगठन खड़ा किया। इसने स्वतंत्र 'तमिल ईलम' की स्थापना के लिए श्रीलंका की सेना के खिलाफ 26 वर्षों तक भीषण युद्ध लड़ा। 2009 में श्रीलंकाई सैन्य कार्रवाई के दौरान इसकी मृत्यु के साथ गृहयुद्ध समाप्त हुआ।</p>
-        </div>
-    </div>
-
-    <h2 class="sub-header">3. LTTE की कार्यप्रणाली और प्रमुख राजनीतिक हत्याएं</h2>
-    <p>एलटीटीई दुनिया के सबसे खूंखार आतंकी संगठनों में से एक था, जिसने **सुसाइड बेल्ट (आत्मघाती जैकेट)** का आविष्कार किया और आत्मघाती हमलों (Black Tigers) को अपना मुख्य हथियार बनाया। एलटीटीई ने बच्चों को सैनिक बनाया और जल व वायु शाखाएं भी विकसित कीं।</p>
-    
-    <p><b>प्रमुख राजनीतिक हत्याएं:</b></p>
-    <ul style="list-style-type: square; margin-left: 40px; font-size: 20pt;">
-        <li><b>राजीव गांधी (पूर्व प्रधानमंत्री, भारत - 1991):</b> तमिलनाडु के श्रीपेरंबदूर में एक आत्मघाती महिला बम हमलावर 'थेनमोझी राजरत्नम' (धनु) द्वारा उड़ा दिया गया।</li>
-        <li><b>रणसिंघे प्रेमदासा (राष्ट्रपति, श्रीलंका - 1993):</b> कोलंबो में एक रैली के दौरान आत्मघाती बम हमले में मारे गए।</li>
-    </ul>
-
-    <h2 class="sub-header">4. भारतीय शांति सेना (IPKF - 1987-1990) का अनुभव</h2>
-    <p>1987 के भारत-श्रीलंका समझौते के तहत प्रधानमंत्री राजीव गांधी ने तमिलों की रक्षा और शांति स्थापना के लिए **भारतीय शांति सेना (IPKF)** श्रीलंका भेजी। लेकिन आईपीकेएफ वहां एलटीटीई के साथ ही सैन्य संघर्ष में फंस गई और सिंहली राष्ट्रवादियों ने भी इसे भारत का सैन्य हस्तक्षेप माना। अंततः 1990 में भारत को बिना सफलता के भारी क्षति उठाकर सेना वापस बुलानी पड़ी।</p>
-    
-    <p><b>गृहयुद्ध का अंत (2009):</b><br/>
-    2000 के दशक में राष्ट्रपति महिंदा राजपक्षे और उनके भाई गोटाबाया राजपक्षे (तत्कालीन रक्षा सचिव) ने एलटीटीई के खिलाफ एक निर्णायक सैन्य अभियान शुरू किया। मई 2009 में मुल्लाईतीवु के जंगलों में प्रभाकरन को मार गिराया गया, जिससे 26 वर्ष लंबे गृहयुद्ध का अंत हुआ।</p>
-
-    <p><b>2022 का आर्थिक संकट (Aragalaya Protests):</b><br/>
+        </br></div>
+</div>
+<h2 class="sub-header topic-header">1. स्वतंत्रता के बाद का राजनीतिक इतिहास (Post-Independence History)</h2>
+<p>1948 में आजादी के बाद श्रीलंका (तत्कालीन सीलोन) की सत्ता मुख्य रूप से बहुसंख्यक **सिंहली समुदाय** के नेताओं के हाथों में आ गई। सिंहली नेताओं ने अपनी बहुसंख्यकवादी (Majoritarian) नीतियों के माध्यम से तमिलों को हाशिए पर धकेल दिया:</p>
+<p><b>1956 का सिंहली-केवल अधिनियम (Sinhala Only Act):</b><br>
+    प्रधानमंत्री एस.डब्ल्यू.आर.डी. भंडारनायके की सरकार ने 1956 में सिंहली भाषा को श्रीलंका की एकमात्र राजभाषा घोषित कर दिया। तमिलों को सरकारी नौकरियों, विश्वविद्यालयों और प्रशासन से बाहर कर दिया गया। 1972 के संविधान में बौद्ध धर्म को राज्य का मुख्य संरक्षण दिया गया, जिससे हिंदू और ईसाई तमिलों में अलगाव की भावना चरम पर पहुंच गई।</br></p>
+<h2 class="sub-header topic-header">2. तमिल संघर्ष और LTTE का गठन</h2>
+<p>शांतिपूर्ण आंदोलनों की विफलता के बाद तमिल युवाओं में उग्रवाद बढ़ा। 1976 में **वेलुपिल्लई प्रभाकरन** ने एक हिंसक उग्रवादी संगठन **LTTE (Liberation Tigers of Tamil Eelam)** की स्थापना की। एलटीटीई ने श्रीलंका के उत्तर और पूर्व में तमिलों के लिए एक अलग संप्रभु राष्ट्र 'तमिल ईलम' की मांग की, जिससे 1983 में श्रीलंका में भीषण गृहयुद्ध छिड़ गया।</p>
+<!-- Prabhakaran Bio Box -->
+<div class="leader-bio-box">
+<img alt="Velupillai Prabhakaran" src="images/ch3/prabhakaran.webp"/>
+<div class="leader-bio-text">
+<h3 class="subtopic-header"><b>वेलुपिल्लई प्रभाकरन (Velupillai Prabhakaran)</b></h3>
+<p>एलटीटीई (LTTE) का संस्थापक और सर्वोच्च कमांडर। इसने दुनिया का सबसे खूंखार गुरिल्ला और आत्मघाती उग्रवादी संगठन खड़ा किया। इसने स्वतंत्र 'तमिल ईलम' की स्थापना के लिए श्रीलंका की सेना के खिलाफ 26 वर्षों तक भीषण युद्ध लड़ा। 2009 में श्रीलंकाई सैन्य कार्रवाई के दौरान इसकी मृत्यु के साथ गृहयुद्ध समाप्त हुआ।</p>
+</div>
+</div>
+<h2 class="sub-header topic-header">3. LTTE की कार्यप्रणाली और प्रमुख राजनीतिक हत्याएं</h2>
+<p>एलटीटीई दुनिया के सबसे खूंखार आतंकी संगठनों में से एक था, जिसने **सुसाइड बेल्ट (आत्मघाती जैकेट)** का आविष्कार किया और आत्मघाती हमलों (Black Tigers) को अपना मुख्य हथियार बनाया। एलटीटीई ने बच्चों को सैनिक बनाया और जल व वायु शाखाएं भी विकसित कीं।</p>
+<p><b>प्रमुख राजनीतिक हत्याएं:</b></p>
+<ul style="list-style-type: square; margin-left: 40px; ">
+<li><b>राजीव गांधी (पूर्व प्रधानमंत्री, भारत - 1991):</b> तमिलनाडु के श्रीपेरंबदूर में एक आत्मघाती महिला बम हमलावर 'थेनमोझी राजरत्नम' (धनु) द्वारा उड़ा दिया गया।</li>
+<li><b>रणसिंघे प्रेमदासा (राष्ट्रपति, श्रीलंका - 1993):</b> कोलंबो में एक रैली के दौरान आत्मघाती बम हमले में मारे गए।</li>
+</ul>
+<h2 class="sub-header topic-header">4. भारतीय शांति सेना (IPKF - 1987-1990) का अनुभव</h2>
+<p>1987 के भारत-श्रीलंका समझौते के तहत प्रधानमंत्री राजीव गांधी ने तमिलों की रक्षा और शांति स्थापना के लिए **भारतीय शांति सेना (IPKF)** श्रीलंका भेजी। लेकिन आईपीकेएफ वहां एलटीटीई के साथ ही सैन्य संघर्ष में फंस गई और सिंहली राष्ट्रवादियों ने भी इसे भारत का सैन्य हस्तक्षेप माना। अंततः 1990 में भारत को बिना सफलता के भारी क्षति उठाकर सेना वापस बुलानी पड़ी।</p>
+<p><b>गृहयुद्ध का अंत (2009):</b><br>
+    2000 के दशक में राष्ट्रपति महिंदा राजपक्षे और उनके भाई गोटाबाया राजपक्षे (तत्कालीन रक्षा सचिव) ने एलटीटीई के खिलाफ एक निर्णायक सैन्य अभियान शुरू किया। मई 2009 में मुल्लाईतीवु के जंगलों में प्रभाकरन को मार गिराया गया, जिससे 26 वर्ष लंबे गृहयुद्ध का अंत हुआ।</br></p>
+<p><b>2022 का आर्थिक संकट (Aragalaya Protests):</b><br/>
     राजपक्षे घराने की गलत नीतियों (कर कटौती, रासायनिक खादों पर पूर्ण प्रतिबंध और विदेशी ऋणों) के कारण 2022 में श्रीलंका इतिहास के सबसे बड़े आर्थिक संकट में घिर गया। आवश्यक वस्तुओं (ईंधन, दवाओं, बिजली) की कमी के बाद 'अरागलया' (Aragalaya - जन संघर्ष) आंदोलन हुआ, जिसमें प्रदर्शनकारियों ने राष्ट्रपति भवन पर कब्जा कर लिया और राजपक्षे परिवार को सत्ता छोड़नी पड़ी।</p>
-
-    <h2 class="sub-header">5. श्रीलंका के प्रमुख राजनीतिक घराने</h2>
-    <p>श्रीलंका की राजनीति में तीन प्रमुख राजनीतिक घरानों का वर्चस्व रहा है:</p>
-    <ul style="list-style-type: disc; margin-left: 40px; font-size: 20pt;">
-        <li><b>सेनानायके घराना (Senanayake Family):</b> श्रीलंका के पहले प्रधानमंत्री डी.एस. सेनानायके और उनके पुत्रों का घराना, जिन्होंने यूनाइटेड नेशनल पार्टी (UNP) की स्थापना की।</li>
-        <li><b>भंडारनायके घराना (Bandaranaike Family):</b> एस.डब्ल्यू.आर.डी. भंडारनायके, उनकी पत्नी सिरिमावो भंडारनायके (विश्व की पहली महिला प्रधानमंत्री) और उनकी बेटी चंद्रिका कुमारतुंगा का घराना, जो श्रीलंका फ्रीडम पार्टी (SLFP) के कर्ता-धर्ता थे।</li>
-        <li><b>राजपक्षे घराना (Rajapaksa Family):</b> महिंदा राजपक्षे, गोटाबाया राजपक्षे, बासिल राजपक्षे और चमल राजपक्षे का परिवार, जिन्होंने तमिल विद्रोह को कुचला और श्रीलंका की राजनीति में चरम राष्ट्रवाद का प्रतिनिधित्व किया।</li>
-    </ul>
+<h2 class="sub-header topic-header">5. श्रीलंका के प्रमुख राजनीतिक घराने</h2>
+<p>श्रीलंका की राजनीति में तीन प्रमुख राजनीतिक घरानों का वर्चस्व रहा है:</p>
+<ul style="list-style-type: disc; margin-left: 40px; ">
+<li><b>सेनानायके घराना (Senanayake Family):</b> श्रीलंका के पहले प्रधानमंत्री डी.एस. सेनानायके और उनके पुत्रों का घराना, जिन्होंने यूनाइटेड नेशनल पार्टी (UNP) की स्थापना की।</li>
+<li><b>भंडारनायके घराना (Bandaranaike Family):</b> एस.डब्ल्यू.आर.डी. भंडारनायके, उनकी पत्नी सिरिमावो भंडारनायके (विश्व की पहली महिला प्रधानमंत्री) और उनकी बेटी चंद्रिका कुमारतुंगा का घराना, जो श्रीलंका फ्रीडम पार्टी (SLFP) के कर्ता-धर्ता थे।</li>
+<li><b>राजपक्षे घराना (Rajapaksa Family):</b> महिंदा राजपक्षे, गोटाबाया राजपक्षे, बासिल राजपक्षे और चमल राजपक्षे का परिवार, जिन्होंने तमिल विद्रोह को कुचला और श्रीलंका की राजनीति में चरम राष्ट्रवाद का प्रतिनिधित्व किया।</li>
+</ul>
 </div>
 </body>
 </html>
-<br><br><hr><br><br>
+<br/><br/><hr/><br/><br/>
 <!DOCTYPE html>
+
 <html lang="hi">
 <head>
-    <meta charset="UTF-8">
-    <style>
+<meta charset="utf-8"/>
+<style>
+        p, li, h1, h2, h3, h4, b, strong, td, th {
+            font-weight: 900 !important;
+            -webkit-text-stroke: 1.1px #000000;
+            text-shadow: 0 0 1px #000;
+        }
+        body, p, li, td, th, div, span {
+            font-size: 28pt !important;
+            line-height: 1.8 !important;
+        }
+        .ch3-content {
+            font-size: 28pt !important;
+            line-height: 1.8 !important;
+            padding: 10px !important;
+        }
+        /* Projector Banner Styles for Headings */
+        .hero-title, h1.section-header {
+            text-align: center !important;
+            color: #ffffff !important;
+            background-color: #064e3b !important; /* Dark Green Background */
+            border: 5px solid #10b981 !important;
+            border-radius: 20px !important;
+            padding: 30px !important;
+            margin-bottom: 50px !important;
+            font-size: 60pt !important;
+            font-weight: 900 !important;
+            box-shadow: 0 8px 25px rgba(6, 78, 59, 0.4) !important;
+        }
+        .part-header {
+            color: #7f1d1d !important;
+            background-color: #fee2e2 !important;
+            border-left: 18px solid #b91c1c !important;
+            padding: 22px 28px !important;
+            border-radius: 14px !important;
+            font-size: 46pt !important;
+            font-weight: 900 !important;
+            margin-top: 40px !important;
+            margin-bottom: 35px !important;
+            box-shadow: 0 6px 15px rgba(0,0,0,0.08) !important;
+        }
+        .topic-header, h2.sub-header {
+            color: #1e3a8a !important;
+            background-color: #eff6ff !important;
+            border-left: 16px solid #2563eb !important;
+            padding: 20px 26px !important;
+            border-radius: 12px !important;
+            font-size: 38pt !important;
+            font-weight: 900 !important;
+            margin-top: 45px !important;
+            margin-bottom: 30px !important;
+        }
+        .subtopic-header {
+            color: #4c1d95 !important;
+            background-color: #f3e8ff !important;
+            border-left: 14px solid #7c3aed !important;
+            padding: 18px 24px !important;
+            border-radius: 10px !important;
+            font-size: 32pt !important;
+            font-weight: 900 !important;
+            margin-top: 40px !important;
+            margin-bottom: 25px !important;
+        }
+        .box-header {
+            color: #166534 !important;
+            background-color: #f0fdf4 !important;
+            border-left: 12px solid #16a34a !important;
+            padding: 16px 20px !important;
+            border-radius: 10px !important;
+            font-size: 30pt !important;
+            font-weight: 900 !important;
+        }
+        /* Highlights */
+        b, strong {
+            color: #b91c1c !important; /* Dark Red */
+            font-weight: 900 !important;
+        }
+        .blue-highlight, b.blue-text, strong.blue-text {
+            color: #1e3a8a !important;
+        }
+        .keyword-box, .culture-box, .highlight-box {
+            font-size: 28pt !important;
+            line-height: 1.8 !important;
+            padding: 25px !important;
+            margin: 30px 0 !important;
+        }
+        .illustration-box { border: 4px solid #cbd5e1 !important; border-radius: 12px; padding: 20px; background-color: #ffffff; margin-top: 25px; }
+        .illustration-explanation { border-left: 6px solid #cbd5e1 !important; padding-left: 15px; font-size: 28pt !important; line-height: 1.6 !important; text-align: left; margin-top: 15px; }
+
+
         .ch3-content { font-family: 'Arial', sans-serif; line-height: 2.2; font-size: 18pt; color: #1a202c; padding: 40px; }
         .section-header { color: #b91c1c; border-bottom: 5px solid #ef4444; padding-bottom: 15px; font-size: 34pt; margin-bottom: 30px; }
         .sub-header { color: #dc2626; font-size: 28pt; margin-top: 50px; }
@@ -540,73 +1097,153 @@
 </head>
 <body>
 <div class="ch3-content">
-    <h1 class="section-header">भारत-पाकिस्तान संबंध: सीमा विवाद, सिंधु जल तंत्र और सैन्य गतिरोध</h1>
-    
-    <!-- Wagah Border -->
-    <div class="illustration-box" style="border-color: #b91c1c !important; margin-top: 35px; margin-bottom: 35px;">
-        <img alt="Wagah Border Ceremony" src="images/ch3/wagah_border.webp" style="width: 100%; max-width: 850px; height: auto; max-height: 450px; object-fit: contain; display: block; margin: 0 auto; border: 4px solid #cbd5e1; border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.15);" class="illustration-img"/>
-        <div class="illustration-explanation" style="border-left-color: #b91c1c !important;">
-            <b>वाघा बॉर्डर समारोह (Beating Retreat Ceremony at Wagah Border):</b><br/>
+<h1 class="section-header hero-title">भारत-पाकिस्तान संबंध: सीमा विवाद, सिंधु जल तंत्र और सैन्य गतिरोध</h1>
+<!-- Wagah Border -->
+<div class="illustration-box" style="border-color: #b91c1c !important; margin-top: 35px; margin-bottom: 35px;">
+<img alt="Wagah Border Ceremony" class="illustration-img" src="images/ch3/wagah_border.webp" style="width: 100%; max-width: 850px; height: auto; max-height: 450px; object-fit: contain; display: block; margin: 0 auto; border: 4px solid #cbd5e1; border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.15);"/>
+<div class="illustration-explanation" style="border-left-color: #b91c1c !important;">
+<b>वाघा बॉर्डर समारोह (Beating Retreat Ceremony at Wagah Border):</b><br>
             भारत और पाकिस्तान की साझी सीमा पर होने वाला कूटनीतिक और सैन्य प्रदर्शन का प्रतीक।
-        </div>
-    </div>
-
-    <h2 class="sub-header">1. कश्मीर सीमा विवाद और नियंत्रण रेखा (LOC)</h2>
-    <p>दोनों देशों के बीच सबसे बड़ा गतिरोध कश्मीर सीमा को लेकर है। 1947 के युद्ध के बाद से कश्मीर दो भागों में बंटा हुआ है। भारत के पास मुख्य जम्मू-कश्मीर है, जबकि एक हिस्सा पाकिस्तान के अनधिकृत नियंत्रण में है जिसे POK कहा जाता है। दोनों के बीच की अस्थाई सीमा को 'लाइन ऑफ कंट्रोल' (LOC) कहा जाता है।</p>
-
-    <!-- Kashmir map -->
-    <div class="illustration-box" style="border-color: #b91c1c !important; margin-top: 35px; margin-bottom: 35px;">
-        <img alt="Kashmir Map" src="images/ch3/kashmir_map.webp" style="width: 100%; max-width: 850px; height: auto; max-height: 450px; object-fit: contain; display: block; margin: 0 auto; border: 4px solid #cbd5e1; border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.15);" class="illustration-img"/>
-        <div class="illustration-explanation" style="border-left-color: #b91c1c !important;">
-            <b>मानचित्र: कश्मीर सीमा विवाद (Map of Kashmir Dispute):</b><br/>
+        </br></div>
+</div>
+<h2 class="sub-header topic-header">1. कश्मीर सीमा विवाद और नियंत्रण रेखा (LOC)</h2>
+<p>दोनों देशों के बीच सबसे बड़ा गतिरोध कश्मीर सीमा को लेकर है। 1947 के युद्ध के बाद से कश्मीर दो भागों में बंटा हुआ है। भारत के पास मुख्य जम्मू-कश्मीर है, जबकि एक हिस्सा पाकिस्तान के अनधिकृत नियंत्रण में है जिसे POK कहा जाता है। दोनों के बीच की अस्थाई सीमा को 'लाइन ऑफ कंट्रोल' (LOC) कहा जाता है।</p>
+<!-- Kashmir map -->
+<div class="illustration-box" style="border-color: #b91c1c !important; margin-top: 35px; margin-bottom: 35px;">
+<img alt="Kashmir Map" class="illustration-img" src="images/ch3/kashmir_map.webp" style="width: 100%; max-width: 850px; height: auto; max-height: 450px; object-fit: contain; display: block; margin: 0 auto; border: 4px solid #cbd5e1; border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.15);"/>
+<div class="illustration-explanation" style="border-left-color: #b91c1c !important;">
+<b>मानचित्र: कश्मीर सीमा विवाद (Map of Kashmir Dispute):</b><br>
             नियंत्रण रेखा (LOC) और चीन की सीमा (LAC) के साथ कश्मीर क्षेत्र का रणनीतिक मानचित्र।
-        </div>
-    </div>
-
-    <h2 class="sub-header">2. सियाचिन ग्लेशियर विवाद (Siachen Glacier Conflict)</h2>
-    <p>सियाचिन ग्लेशियर काराकोरम श्रेणी में स्थित दुनिया का सबसे ऊंचा और ठंडा युद्धक्षेत्र है। 1984 में भारत ने **'ऑपरेशन मेघदूत'** चलाकर पाकिस्तान की योजना से पहले इस पूरे ग्लेशियर पर नियंत्रण स्थापित कर लिया। तब से अब तक भारतीय सेना वहां तैनात है, और पाकिस्तान इसे खाली कराने की मांग करता आ रहा है।</p>
-
-    <!-- Siachen map -->
-    <div class="illustration-box" style="border-color: #b91c1c !important; margin-top: 35px; margin-bottom: 35px;">
-        <img alt="Siachen Glacier Map" src="images/ch3/siachen_map.webp" style="width: 100%; max-width: 850px; height: auto; max-height: 450px; object-fit: contain; display: block; margin: 0 auto; border: 4px solid #cbd5e1; border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.15);" class="illustration-img"/>
-        <div class="illustration-explanation" style="border-left-color: #b91c1c !important;">
-            <b>मानचित्र: सियाचिन ग्लेशियर सामरिक स्थिति (Map of Siachen Glacier):</b><br/>
+        </br></div>
+</div>
+<h2 class="sub-header topic-header">2. सियाचिन ग्लेशियर विवाद (Siachen Glacier Conflict)</h2>
+<p>सियाचिन ग्लेशियर काराकोरम श्रेणी में स्थित दुनिया का सबसे ऊंचा और ठंडा युद्धक्षेत्र है। 1984 में भारत ने **'ऑपरेशन मेघदूत'** चलाकर पाकिस्तान की योजना से पहले इस पूरे ग्लेशियर पर नियंत्रण स्थापित कर लिया। तब से अब तक भारतीय सेना वहां तैनात है, और पाकिस्तान इसे खाली कराने की मांग करता आ रहा है।</p>
+<!-- Siachen map -->
+<div class="illustration-box" style="border-color: #b91c1c !important; margin-top: 35px; margin-bottom: 35px;">
+<img alt="Siachen Glacier Map" class="illustration-img" src="images/ch3/siachen_map.webp" style="width: 100%; max-width: 850px; height: auto; max-height: 450px; object-fit: contain; display: block; margin: 0 auto; border: 4px solid #cbd5e1; border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.15);"/>
+<div class="illustration-explanation" style="border-left-color: #b91c1c !important;">
+<b>मानचित्र: सियाचिन ग्लेशियर सामरिक स्थिति (Map of Siachen Glacier):</b><br>
             भारत और पाकिस्तान के बीच सामरिक रूप से अत्यंत महत्वपूर्ण सियाचिन ग्लेशियर का विवादित क्षेत्र मानचित्र।
-        </div>
-    </div>
-
-    <h2 class="sub-header">3. सर क्रीक दलदली सीमा विवाद (Sir Creek Dispute)</h2>
-    <p>गुजरात के कच्छ क्षेत्र में स्थित 96 किलोमीटर लंबी एक दलदली पानी की धारा को **सर क्रीक** कहा जाता है। पाकिस्तान पूरे क्रीक पर अपना दावा ठोकता है (1914 के बॉम्बे सरकार के प्रस्ताव के तहत), जबकि भारत थलवेग सिद्धांत (Thalweg Principle) के अनुसार क्रीक के मध्य से सीमांकन चाहता है। यह विवाद दोनों देशों के समुद्री आर्थिक क्षेत्र (EEZ) और मछुआरों के अधिकारों को प्रभावित करता है।</p>
-
-    <!-- Sir Creek Map -->
-    <div class="illustration-box" style="border-color: #b91c1c !important; margin-top: 35px; margin-bottom: 35px;">
-        <img alt="Sir Creek Dispute Map" src="images/ch3/sir_creek_map.webp" style="width: 100%; max-width: 850px; height: auto; max-height: 450px; object-fit: contain; display: block; margin: 0 auto; border: 4px solid #cbd5e1; border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.15);" class="illustration-img"/>
-        <div class="illustration-explanation" style="border-left-color: #b91c1c !important;">
-            <b>मानचित्र: सर क्रीक सीमा विवाद (Map of Sir Creek Dispute):</b><br/>
+        </br></div>
+</div>
+<h2 class="sub-header topic-header">3. सर क्रीक दलदली सीमा विवाद (Sir Creek Dispute)</h2>
+<p>गुजरात के कच्छ क्षेत्र में स्थित 96 किलोमीटर लंबी एक दलदली पानी की धारा को **सर क्रीक** कहा जाता है। पाकिस्तान पूरे क्रीक पर अपना दावा ठोकता है (1914 के बॉम्बे सरकार के प्रस्ताव के तहत), जबकि भारत थलवेग सिद्धांत (Thalweg Principle) के अनुसार क्रीक के मध्य से सीमांकन चाहता है। यह विवाद दोनों देशों के समुद्री आर्थिक क्षेत्र (EEZ) और मछुआरों के अधिकारों को प्रभावित करता है।</p>
+<!-- Sir Creek Map -->
+<div class="illustration-box" style="border-color: #b91c1c !important; margin-top: 35px; margin-bottom: 35px;">
+<img alt="Sir Creek Dispute Map" class="illustration-img" src="images/ch3/sir_creek_map.webp" style="width: 100%; max-width: 850px; height: auto; max-height: 450px; object-fit: contain; display: block; margin: 0 auto; border: 4px solid #cbd5e1; border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.15);"/>
+<div class="illustration-explanation" style="border-left-color: #b91c1c !important;">
+<b>मानचित्र: सर क्रीक सीमा विवाद (Map of Sir Creek Dispute):</b><br>
             गुजरात और पाकिस्तान के सिंध प्रांत के मुहाने पर सर क्रीक की विवादित सीमा रेखा का मानचित्र।
-        </div>
-    </div>
-
-    <h2 class="sub-header">4. सिंधु जल संधि और सिंधु नदी तंत्र (Indus Water Treaty &amp; System)</h2>
-    <p>1960 में विश्व बैंक की मध्यस्थता से **सिंधु जल संधि (Indus Waters Treaty)** पर हस्ताक्षर किए गए। इसके तहत तीन पूर्वी नदियों (रावी, ब्यास, सतलुज) का नियंत्रण भारत को और तीन पश्चिमी नदियों (सिंधु, झेलम, चिनाब) का नियंत्रण पाकिस्तान को सौंपा गया। तमाम युद्धों और तनावों के बाद भी यह संधि सफलतापूर्वक चल रही है, हालांकि भारत द्वारा इन नदियों पर हाइड्रो-प्रोजेक्ट बनाने पर पाकिस्तान अक्सर आपत्ति उठाता रहता है।</p>
-
-    <!-- Indus Map -->
-    <div class="illustration-box" style="border-color: #b91c1c !important; margin-top: 35px; margin-bottom: 35px;">
-        <img alt="Indus River System Map" src="images/ch3/indus_map.webp" style="width: 100%; max-width: 850px; height: auto; max-height: 450px; object-fit: contain; display: block; margin: 0 auto; border: 4px solid #cbd5e1; border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.15);" class="illustration-img"/>
-        <div class="illustration-explanation" style="border-left-color: #b91c1c !important;">
-            <b>मानचित्र: सिंधु नदी तंत्र (Map of Indus River System):</b><br/>
+        </br></div>
+</div>
+<h2 class="sub-header topic-header">4. सिंधु जल संधि और सिंधु नदी तंत्र (Indus Water Treaty &amp; System)</h2>
+<p>1960 में विश्व बैंक की मध्यस्थता से **सिंधु जल संधि (Indus Waters Treaty)** पर हस्ताक्षर किए गए। इसके तहत तीन पूर्वी नदियों (रावी, ब्यास, सतलुज) का नियंत्रण भारत को और तीन पश्चिमी नदियों (सिंधु, झेलम, चिनाब) का नियंत्रण पाकिस्तान को सौंपा गया। तमाम युद्धों और तनावों के बाद भी यह संधि सफलतापूर्वक चल रही है, हालांकि भारत द्वारा इन नदियों पर हाइड्रो-प्रोजेक्ट बनाने पर पाकिस्तान अक्सर आपत्ति उठाता रहता है।</p>
+<!-- Indus Map -->
+<div class="illustration-box" style="border-color: #b91c1c !important; margin-top: 35px; margin-bottom: 35px;">
+<img alt="Indus River System Map" class="illustration-img" src="images/ch3/indus_map.webp" style="width: 100%; max-width: 850px; height: auto; max-height: 450px; object-fit: contain; display: block; margin: 0 auto; border: 4px solid #cbd5e1; border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.15);"/>
+<div class="illustration-explanation" style="border-left-color: #b91c1c !important;">
+<b>मानचित्र: सिंधु नदी तंत्र (Map of Indus River System):</b><br/>
             सिंधु और उसकी मुख्य सहायक नदियों (झेलम, चिनाब, रावी, ब्यास, सतलुज) का पूरा भौगोलिक प्रवाह आरेख।
         </div>
-    </div>
+</div>
 </div>
 </body>
 </html>
-<br><br><hr><br><br>
+<br/><br/><hr/><br/><br/>
 <!DOCTYPE html>
+
 <html lang="hi">
 <head>
-    <meta charset="UTF-8">
-    <style>
+<meta charset="utf-8"/>
+<style>
+        p, li, h1, h2, h3, h4, b, strong, td, th {
+            font-weight: 900 !important;
+            -webkit-text-stroke: 1.1px #000000;
+            text-shadow: 0 0 1px #000;
+        }
+        body, p, li, td, th, div, span {
+            font-size: 28pt !important;
+            line-height: 1.8 !important;
+        }
+        .ch3-content {
+            font-size: 28pt !important;
+            line-height: 1.8 !important;
+            padding: 10px !important;
+        }
+        /* Projector Banner Styles for Headings */
+        .hero-title, h1.section-header {
+            text-align: center !important;
+            color: #ffffff !important;
+            background-color: #064e3b !important; /* Dark Green Background */
+            border: 5px solid #10b981 !important;
+            border-radius: 20px !important;
+            padding: 30px !important;
+            margin-bottom: 50px !important;
+            font-size: 60pt !important;
+            font-weight: 900 !important;
+            box-shadow: 0 8px 25px rgba(6, 78, 59, 0.4) !important;
+        }
+        .part-header {
+            color: #7f1d1d !important;
+            background-color: #fee2e2 !important;
+            border-left: 18px solid #b91c1c !important;
+            padding: 22px 28px !important;
+            border-radius: 14px !important;
+            font-size: 46pt !important;
+            font-weight: 900 !important;
+            margin-top: 40px !important;
+            margin-bottom: 35px !important;
+            box-shadow: 0 6px 15px rgba(0,0,0,0.08) !important;
+        }
+        .topic-header, h2.sub-header {
+            color: #1e3a8a !important;
+            background-color: #eff6ff !important;
+            border-left: 16px solid #2563eb !important;
+            padding: 20px 26px !important;
+            border-radius: 12px !important;
+            font-size: 38pt !important;
+            font-weight: 900 !important;
+            margin-top: 45px !important;
+            margin-bottom: 30px !important;
+        }
+        .subtopic-header {
+            color: #4c1d95 !important;
+            background-color: #f3e8ff !important;
+            border-left: 14px solid #7c3aed !important;
+            padding: 18px 24px !important;
+            border-radius: 10px !important;
+            font-size: 32pt !important;
+            font-weight: 900 !important;
+            margin-top: 40px !important;
+            margin-bottom: 25px !important;
+        }
+        .box-header {
+            color: #166534 !important;
+            background-color: #f0fdf4 !important;
+            border-left: 12px solid #16a34a !important;
+            padding: 16px 20px !important;
+            border-radius: 10px !important;
+            font-size: 30pt !important;
+            font-weight: 900 !important;
+        }
+        /* Highlights */
+        b, strong {
+            color: #b91c1c !important; /* Dark Red */
+            font-weight: 900 !important;
+        }
+        .blue-highlight, b.blue-text, strong.blue-text {
+            color: #1e3a8a !important;
+        }
+        .keyword-box, .culture-box, .highlight-box {
+            font-size: 28pt !important;
+            line-height: 1.8 !important;
+            padding: 25px !important;
+            margin: 30px 0 !important;
+        }
+        .illustration-box { border: 4px solid #cbd5e1 !important; border-radius: 12px; padding: 20px; background-color: #ffffff; margin-top: 25px; }
+        .illustration-explanation { border-left: 6px solid #cbd5e1 !important; padding-left: 15px; font-size: 28pt !important; line-height: 1.6 !important; text-align: left; margin-top: 15px; }
+
+
         .ch3-content { font-family: 'Arial', sans-serif; line-height: 2.2; font-size: 18pt; color: #1a202c; padding: 40px; }
         .section-header { color: #0f766e; border-bottom: 5px solid #0d9488; padding-bottom: 15px; font-size: 34pt; margin-bottom: 30px; }
         .sub-header { color: #0d9488; font-size: 28pt; margin-top: 50px; }
@@ -617,84 +1254,162 @@
 </head>
 <body>
 <div class="ch3-content">
-    <h1 class="section-header">भारत और अन्य पड़ोसी देश: सहयोग, विवाद और द्विपक्षीय नीतियां</h1>
-    
-    <h2 class="sub-header">1. भारत-बांग्लादेश संबंध</h2>
-    <div class="keyword-box">
-        <b>सहयोग के क्षेत्र:</b>
-        <p>भारत और बांग्लादेश के बीच आर्थिक और व्यापारिक संबंध बेहद मजबूत हैं। 2015 में दोनों देशों के बीच ऐतिहासिक भूमि सीमा समझौता (LBA) हुआ, जिसके तहत बस्तियों (Enclaves) का आदान-प्रदान कर 40 वर्ष पुराना सीमा विवाद सुलझाया गया। इसके अलावा, 1996 का ऐतिहासिक गंगा नदी जल बंटवारा समझौता, आपदा प्रबंधन सहयोग, और रेल व सड़क संपर्कों (जैसे मैत्री एक्सप्रेस) का विकास आपसी विश्वास के स्तंभ हैं। पूर्वोत्तर राज्यों के उग्रवादियों के खिलाफ बांग्लादेश द्वारा भारतीय सुरक्षा एजेंसियों को दिया गया सहयोग अत्यंत महत्वपूर्ण रहा है।</p>
-    </div>
-    <div class="keyword-box" style="border-left-color: #ef4444 !important; background: #fff5f5; color: #7f1d1d;">
-        <b>तनाव और टकराव के क्षेत्र:</b>
-        <p>तीस्ता नदी जल बंटवारे का मुद्दा पश्चिम बंगाल सरकार की असहमति के कारण अभी भी लंबित है। इसके अलावा, भारत में बंगाली नागरिकों का अवैध प्रवेश (Illegal Migration), सीमा सुरक्षा बल (BSF) द्वारा सीमा पार तस्करी रोकने के दौरान की जाने वाली कार्रवाई, म्यांमार से आए रोहिंग्या शरणार्थियों का संकट, और हाल के वर्षों में बांग्लादेश में चीनी रक्षा सौदों व बेल्ट एंड रोड इनिशिएटिव (BRI) के तहत बढ़ता चीनी रणनीतिक प्रभाव भारत के लिए मुख्य चिंताएं हैं।</p>
-    </div>
-
-    <hr/>
-
-    <h2 class="sub-header">2. भारत-नेपाल संबंध</h2>
-    <div class="keyword-box">
-        <b>सहयोग के क्षेत्र:</b>
-        <p>1950 की भारत-नेपाल शांति और मैत्री संधि के तहत दोनों देशों के बीच एक खुली सीमा (Open Border) है, जिससे नागरिक बिना पासपोर्ट और वीजा के एक-दूसरे के यहाँ काम और यात्रा कर सकते हैं। नेपाल के पारगमन व्यापार को भारतीय बंदरगाहों (जैसे कोलकाता और विशाखापत्तनम) द्वारा पूर्ण सुविधाएं प्राप्त हैं। भारत नेपाल में विभिन्न पनबिजली परियोजनाओं, राजमार्गों के निर्माण, और भूकंप पुनर्निर्माण जैसी विकास परियोजनाओं में बड़ी वित्तीय सहायता प्रदान करता है। दोनों देशों के बीच संयुक्त सैन्य अभ्यास 'सूर्य किरण' नियमित रूप से आयोजित किया जाता है।</p>
-    </div>
-    <div class="keyword-box" style="border-left-color: #ef4444 !important; background: #fff5f5; color: #7f1d1d;">
-        <b>तनाव और टकराव के क्षेत्र:</b>
-        <p>हाल ही में नेपाल सरकार द्वारा कालापानी, लिपुलेख और लिम्पियाधुरा को अपने आधिकारिक राजनीतिक नक्शे में शामिल करने के कारण गंभीर सीमा विवाद खड़ा हो गया है। इसके अलावा, नेपाल के राष्ट्रवादियों द्वारा 1950 की संधि को असमान मानकर उसमें संशोधन की मांग, नेपाल का चीन की ओर बढ़ता झुकाव व चीनी बुनियादी ढांचा परियोजनाओं का स्वागत, खुली सीमा का दुरुपयोग कर असामाजिक तत्वों का प्रवेश, और नेपाल के नेताओं द्वारा भारत पर उनकी आंतरिक राजनीति में हस्तक्षेप व आर्थिक नाकेबंदी का आरोप लगाने से संबंधों में कड़वाहट आई है।</p>
-    </div>
-
-    <hr/>
-
-    <h2 class="sub-header">3. भारत-श्रीलंका संबंध</h2>
-    <div class="keyword-box">
-        <b>सहयोग के क्षेत्र:</b>
-        <p>भारत और श्रीलंका के बीच 1998 में मुक्त व्यापार समझौता (FTA) हस्ताक्षरित हुआ, जिससे व्यापारिक गतिशीलता बढ़ी। 2022 के गंभीर आर्थिक संकट के दौरान भारत ने श्रीलंका को ईंधन, खाद्य सामग्री और ऋण के रूप में 4 अरब डॉलर की रिकॉर्ड वित्तीय मदद दी। भारत द्वारा श्रीलंका के गृहयुद्ध प्रभावित उत्तरी और पूर्वी (तमिल बहुल) प्रांतों में 50,000 से अधिक घरों का निर्माण और रेलवे लाइनों का पुनर्निर्माण किया गया है। दोनों देश कोलंबो सुरक्षा त्रिपक्षीय समूह के तहत हिंद महासागर में समुद्री सुरक्षा साझा करते हैं।</p>
-    </div>
-    <div class="keyword-box" style="border-left-color: #ef4444 !important; background: #fff5f5; color: #7f1d1d;">
-        <b>तनाव और टकराव के क्षेत्र:</b>
-        <p>मन्नार की खाड़ी और पाक जलडमरूमध्य में भारतीय मछुआरों द्वारा श्रीलंकाई जल सीमा में प्रवेश करने पर श्रीलंकाई नौसेना द्वारा उनकी गिरफ्तारी और नावों की जब्ती एक सतत विवाद है। इसके अतिरिक्त, 1974 में भारत द्वारा श्रीलंका को सौंपे गए कच्छाथीवू (Katchatheevu) द्वीप पर भारतीय मछुआरों के पारंपरिक अधिकारों का मुद्दा चर्चा में रहता है। श्रीलंका सरकार द्वारा तमिलों को स्वायत्तता देने वाले 13वें संविधान संशोधन को पूर्णतः लागू करने में आनाकानी करना, और श्रीलंका के हंबनटोटा बंदरगाह पर चीनी नौसेना व जासूसी जहाजों की डॉकिंग की अनुमति देना भारत की राष्ट्रीय सुरक्षा के लिए गंभीर खतरा माना जाता है।</p>
-    </div>
-
-    <hr/>
-
-    <h2 class="sub-header">4. भारत-भूटान संबंध</h2>
-    
-    <!-- Bhutan Map -->
-    <div class="illustration-box" style="border-color: #0d9488 !important; margin-top: 35px; margin-bottom: 35px;">
-        <img alt="Bhutan Map" src="images/ch3/bhutan_map.webp" style="width: 100%; max-width: 850px; height: auto; max-height: 450px; object-fit: contain; display: block; margin: 0 auto; border: 4px solid #cbd5e1; border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.15);" class="illustration-img"/>
-        <div class="illustration-explanation" style="border-left-color: #0d9488 !important;">
-            <b>मानचित्र: भूटान का प्रशासनिक जिला मानचित्र (Map of Bhutan Districts):</b><br/>
-            भूटान के विभिन्न जिलों और पड़ोसी सीमाओं का रंगीन और विस्तृत मानचित्र।
-        </div>
-    </div>
-
-    <div class="keyword-box">
-        <b>सहयोग के क्षेत्र:</b>
-        <p>भूटान भारत का सबसे विश्वसनीय और घनिष्ठ पड़ोसी देश है। दोनों देशों के बीच 1949 की संधि (2007 में संशोधित) के तहत विशेष संबंध हैं। भारत भूटान की पनबिजली परियोजनाओं (जैसे ताला, चूखा, कुरिछू) में भारी निवेश करता है और भूटान की अतिरिक्त बिजली खरीदता है, जो भूटान के राजस्व का सबसे बड़ा स्रोत है। भारत भूटान का सबसे बड़ा व्यापारिक साझेदार है और वहां के नागरिकों को भारत में कार्य करने व खुली सीमा पारगमन की छूट है। 2003 में भूटान की शाही सेना ने सैन्य कार्रवाई कर अपनी सीमा से असम के उल्फा उग्रवादियों को खदेड़कर भारत की सुरक्षा में मदद की थी।</p>
-    </div>
-    <div class="keyword-box" style="border-left-color: #ef4444 !important; background: #fff5f5; color: #7f1d1d;">
-        <b>तनाव और चुनौतियां:</b>
-        <p>चीन और भूटान के बीच सीधे होने वाली सीमा वार्ता पर भारत की गहरी चिंताएं हैं, विशेषकर सामरिक रूप से संवेदनशील 'डोकलाम' (Doklam) क्षेत्र को लेकर, जो भारत के सिलिगुड़ी कॉरिडोर (Chickens Neck) के बिल्कुल समीप है। भूटान के भीतर भी कुछ समूहों में भारतीय पनबिजली परियोजनाओं के बढ़ते ऋण बोझ और टैरिफ दरों को लेकर आपत्तियां उठी हैं। इसके अतिरिक्त, भूटान द्वारा भारतीय पर्यटकों पर दैनिक सतत विकास शुल्क (SDF) लगाने के फैसले से सीमावर्ती क्षेत्रों के स्थानीय व्यापार में कतिपय मतभेद देखे गए हैं।</p>
-    </div>
-
-    <hr/>
-
-    <h2 class="sub-header">5. भारत-मालदीव संबंध</h2>
-    <div class="keyword-box">
-        <b>सहयोग के क्षेत्र:</b>
-        <p>भारत ने 1988 में 'ऑपरेशन कैक्टस' के तहत मालदीव में हुए तख्तापलट के प्रयास को तुरंत अपनी सेना भेजकर नाकाम किया था। 2014 के पेयजल संकट और कोरोना काल में चिकित्सा सहायता के समय भारत सबसे पहले मदद के लिए आगे आया। वर्तमान में भारत मालदीव की सबसे बड़ी बुनियादी ढांचा परियोजना 'ग्रेटर माले कनेक्टिविटी' का वित्तपोषण कर रहा है। हिंद महासागर में समुद्री डकैती और रक्षा गश्ती में दोनों देशों की नौसेनाएं मिलकर काम करती हैं।</p>
-    </div>
-    <div class="keyword-box" style="border-left-color: #ef4444 !important; background: #fff5f5; color: #7f1d1d;">
-        <b>तनाव और टकराव के क्षेत्र:</b>
-        <p>मालदीव की राजनीति में समय-समय पर चलने वाले "इंडिया आउट" (India Out) अभियान और वर्तमान राष्ट्रपति मोहम्मद मुइज्जू के नेतृत्व में चीन समर्थक नीतियों का अनुसरण कूटनीतिक कड़वाहट पैदा करता है। मालदीव से भारतीय सैन्य कर्मियों और हेलीकॉप्टरों को वापस भेजे जाने की मांग, भारत के साथ हाइड्रोग्राफी सर्वेक्षण समझौतों को रद्द करना, मालदीव द्वारा चीनी जासूसी जहाजों को अपने जल क्षेत्र में प्रवेश की अनुमति देना, और सोशल मीडिया पर मालदीव के मंत्रियों द्वारा भारतीय नेतृत्व पर की गई अभद्र टिप्पणियों के बाद भारत में पर्यटकों द्वारा मालदीव यात्रा के बहिष्कार का अभियान आपसी संबंधों में हालिया चुनौतियां हैं।</p>
-    </div>
+<h1 class="section-header hero-title">भारत और अन्य पड़ोसी देश: सहयोग, विवाद और द्विपक्षीय नीतियां</h1>
+<h2 class="sub-header topic-header">1. भारत-बांग्लादेश संबंध</h2>
+<div class="keyword-box">
+<b>सहयोग के क्षेत्र:</b>
+<p>भारत और बांग्लादेश के बीच आर्थिक और व्यापारिक संबंध बेहद मजबूत हैं। 2015 में दोनों देशों के बीच ऐतिहासिक भूमि सीमा समझौता (LBA) हुआ, जिसके तहत बस्तियों (Enclaves) का आदान-प्रदान कर 40 वर्ष पुराना सीमा विवाद सुलझाया गया। इसके अलावा, 1996 का ऐतिहासिक गंगा नदी जल बंटवारा समझौता, आपदा प्रबंधन सहयोग, और रेल व सड़क संपर्कों (जैसे मैत्री एक्सप्रेस) का विकास आपसी विश्वास के स्तंभ हैं। पूर्वोत्तर राज्यों के उग्रवादियों के खिलाफ बांग्लादेश द्वारा भारतीय सुरक्षा एजेंसियों को दिया गया सहयोग अत्यंत महत्वपूर्ण रहा है।</p>
 </div>
+<div class="keyword-box" style="border-left-color: #ef4444 !important; background: #fff5f5; color: #7f1d1d;">
+<b>तनाव और टकराव के क्षेत्र:</b>
+<p>तीस्ता नदी जल बंटवारे का मुद्दा पश्चिम बंगाल सरकार की असहमति के कारण अभी भी लंबित है। इसके अलावा, भारत में बंगाली नागरिकों का अवैध प्रवेश (Illegal Migration), सीमा सुरक्षा बल (BSF) द्वारा सीमा पार तस्करी रोकने के दौरान की जाने वाली कार्रवाई, म्यांमार से आए रोहिंग्या शरणार्थियों का संकट, और हाल के वर्षों में बांग्लादेश में चीनी रक्षा सौदों व बेल्ट एंड रोड इनिशिएटिव (BRI) के तहत बढ़ता चीनी रणनीतिक प्रभाव भारत के लिए मुख्य चिंताएं हैं।</p>
+</div>
+<hr>
+<h2 class="sub-header topic-header">2. भारत-नेपाल संबंध</h2>
+<div class="keyword-box">
+<b>सहयोग के क्षेत्र:</b>
+<p>1950 की भारत-नेपाल शांति और मैत्री संधि के तहत दोनों देशों के बीच एक खुली सीमा (Open Border) है, जिससे नागरिक बिना पासपोर्ट और वीजा के एक-दूसरे के यहाँ काम और यात्रा कर सकते हैं। नेपाल के पारगमन व्यापार को भारतीय बंदरगाहों (जैसे कोलकाता और विशाखापत्तनम) द्वारा पूर्ण सुविधाएं प्राप्त हैं। भारत नेपाल में विभिन्न पनबिजली परियोजनाओं, राजमार्गों के निर्माण, और भूकंप पुनर्निर्माण जैसी विकास परियोजनाओं में बड़ी वित्तीय सहायता प्रदान करता है। दोनों देशों के बीच संयुक्त सैन्य अभ्यास 'सूर्य किरण' नियमित रूप से आयोजित किया जाता है।</p>
+</div>
+<div class="keyword-box" style="border-left-color: #ef4444 !important; background: #fff5f5; color: #7f1d1d;">
+<b>तनाव और टकराव के क्षेत्र:</b>
+<p>हाल ही में नेपाल सरकार द्वारा कालापानी, लिपुलेख और लिम्पियाधुरा को अपने आधिकारिक राजनीतिक नक्शे में शामिल करने के कारण गंभीर सीमा विवाद खड़ा हो गया है। इसके अलावा, नेपाल के राष्ट्रवादियों द्वारा 1950 की संधि को असमान मानकर उसमें संशोधन की मांग, नेपाल का चीन की ओर बढ़ता झुकाव व चीनी बुनियादी ढांचा परियोजनाओं का स्वागत, खुली सीमा का दुरुपयोग कर असामाजिक तत्वों का प्रवेश, और नेपाल के नेताओं द्वारा भारत पर उनकी आंतरिक राजनीति में हस्तक्षेप व आर्थिक नाकेबंदी का आरोप लगाने से संबंधों में कड़वाहट आई है।</p>
+</div>
+<hr>
+<h2 class="sub-header topic-header">3. भारत-श्रीलंका संबंध</h2>
+<div class="keyword-box">
+<b>सहयोग के क्षेत्र:</b>
+<p>भारत और श्रीलंका के बीच 1998 में मुक्त व्यापार समझौता (FTA) हस्ताक्षरित हुआ, जिससे व्यापारिक गतिशीलता बढ़ी। 2022 के गंभीर आर्थिक संकट के दौरान भारत ने श्रीलंका को ईंधन, खाद्य सामग्री और ऋण के रूप में 4 अरब डॉलर की रिकॉर्ड वित्तीय मदद दी। भारत द्वारा श्रीलंका के गृहयुद्ध प्रभावित उत्तरी और पूर्वी (तमिल बहुल) प्रांतों में 50,000 से अधिक घरों का निर्माण और रेलवे लाइनों का पुनर्निर्माण किया गया है। दोनों देश कोलंबो सुरक्षा त्रिपक्षीय समूह के तहत हिंद महासागर में समुद्री सुरक्षा साझा करते हैं।</p>
+</div>
+<div class="keyword-box" style="border-left-color: #ef4444 !important; background: #fff5f5; color: #7f1d1d;">
+<b>तनाव और टकराव के क्षेत्र:</b>
+<p>मन्नार की खाड़ी और पाक जलडमरूमध्य में भारतीय मछुआरों द्वारा श्रीलंकाई जल सीमा में प्रवेश करने पर श्रीलंकाई नौसेना द्वारा उनकी गिरफ्तारी और नावों की जब्ती एक सतत विवाद है। इसके अतिरिक्त, 1974 में भारत द्वारा श्रीलंका को सौंपे गए कच्छाथीवू (Katchatheevu) द्वीप पर भारतीय मछुआरों के पारंपरिक अधिकारों का मुद्दा चर्चा में रहता है। श्रीलंका सरकार द्वारा तमिलों को स्वायत्तता देने वाले 13वें संविधान संशोधन को पूर्णतः लागू करने में आनाकानी करना, और श्रीलंका के हंबनटोटा बंदरगाह पर चीनी नौसेना व जासूसी जहाजों की डॉकिंग की अनुमति देना भारत की राष्ट्रीय सुरक्षा के लिए गंभीर खतरा माना जाता है।</p>
+</div>
+<hr>
+<h2 class="sub-header topic-header">4. भारत-भूटान संबंध</h2>
+<!-- Bhutan Map -->
+<div class="illustration-box" style="border-color: #0d9488 !important; margin-top: 35px; margin-bottom: 35px;">
+<img alt="Bhutan Map" class="illustration-img" src="images/ch3/bhutan_map.webp" style="width: 100%; max-width: 850px; height: auto; max-height: 450px; object-fit: contain; display: block; margin: 0 auto; border: 4px solid #cbd5e1; border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.15);"/>
+<div class="illustration-explanation" style="border-left-color: #0d9488 !important;">
+<b>मानचित्र: भूटान का प्रशासनिक जिला मानचित्र (Map of Bhutan Districts):</b><br>
+            भूटान के विभिन्न जिलों और पड़ोसी सीमाओं का रंगीन और विस्तृत मानचित्र।
+        </br></div>
+</div>
+<div class="keyword-box">
+<b>सहयोग के क्षेत्र:</b>
+<p>भूटान भारत का सबसे विश्वसनीय और घनिष्ठ पड़ोसी देश है। दोनों देशों के बीच 1949 की संधि (2007 में संशोधित) के तहत विशेष संबंध हैं। भारत भूटान की पनबिजली परियोजनाओं (जैसे ताला, चूखा, कुरिछू) में भारी निवेश करता है और भूटान की अतिरिक्त बिजली खरीदता है, जो भूटान के राजस्व का सबसे बड़ा स्रोत है। भारत भूटान का सबसे बड़ा व्यापारिक साझेदार है और वहां के नागरिकों को भारत में कार्य करने व खुली सीमा पारगमन की छूट है। 2003 में भूटान की शाही सेना ने सैन्य कार्रवाई कर अपनी सीमा से असम के उल्फा उग्रवादियों को खदेड़कर भारत की सुरक्षा में मदद की थी।</p>
+</div>
+<div class="keyword-box" style="border-left-color: #ef4444 !important; background: #fff5f5; color: #7f1d1d;">
+<b>तनाव और चुनौतियां:</b>
+<p>चीन और भूटान के बीच सीधे होने वाली सीमा वार्ता पर भारत की गहरी चिंताएं हैं, विशेषकर सामरिक रूप से संवेदनशील 'डोकलाम' (Doklam) क्षेत्र को लेकर, जो भारत के सिलिगुड़ी कॉरिडोर (Chickens Neck) के बिल्कुल समीप है। भूटान के भीतर भी कुछ समूहों में भारतीय पनबिजली परियोजनाओं के बढ़ते ऋण बोझ और टैरिफ दरों को लेकर आपत्तियां उठी हैं। इसके अतिरिक्त, भूटान द्वारा भारतीय पर्यटकों पर दैनिक सतत विकास शुल्क (SDF) लगाने के फैसले से सीमावर्ती क्षेत्रों के स्थानीय व्यापार में कतिपय मतभेद देखे गए हैं।</p>
+</div>
+<hr>
+<h2 class="sub-header topic-header">5. भारत-मालदीव संबंध</h2>
+<div class="keyword-box">
+<b>सहयोग के क्षेत्र:</b>
+<p>भारत ने 1988 में 'ऑपरेशन कैक्टस' के तहत मालदीव में हुए तख्तापलट के प्रयास को तुरंत अपनी सेना भेजकर नाकाम किया था। 2014 के पेयजल संकट और कोरोना काल में चिकित्सा सहायता के समय भारत सबसे पहले मदद के लिए आगे आया। वर्तमान में भारत मालदीव की सबसे बड़ी बुनियादी ढांचा परियोजना 'ग्रेटर माले कनेक्टिविटी' का वित्तपोषण कर रहा है। हिंद महासागर में समुद्री डकैती और रक्षा गश्ती में दोनों देशों की नौसेनाएं मिलकर काम करती हैं।</p>
+</div>
+<div class="keyword-box" style="border-left-color: #ef4444 !important; background: #fff5f5; color: #7f1d1d;">
+<b>तनाव और टकराव के क्षेत्र:</b>
+<p>मालदीव की राजनीति में समय-समय पर चलने वाले "इंडिया आउट" (India Out) अभियान और वर्तमान राष्ट्रपति मोहम्मद मुइज्जू के नेतृत्व में चीन समर्थक नीतियों का अनुसरण कूटनीतिक कड़वाहट पैदा करता है। मालदीव से भारतीय सैन्य कर्मियों और हेलीकॉप्टरों को वापस भेजे जाने की मांग, भारत के साथ हाइड्रोग्राफी सर्वेक्षण समझौतों को रद्द करना, मालदीव द्वारा चीनी जासूसी जहाजों को अपने जल क्षेत्र में प्रवेश की अनुमति देना, और सोशल मीडिया पर मालदीव के मंत्रियों द्वारा भारतीय नेतृत्व पर की गई अभद्र टिप्पणियों के बाद भारत में पर्यटकों द्वारा मालदीव यात्रा के बहिष्कार का अभियान आपसी संबंधों में हालिया चुनौतियां हैं।</p>
+</div>
+</hr></hr></hr></hr></div>
 </body>
 </html>
-<br><br><hr><br><br>
+<br/><br/><hr/><br/><br/>
 <!DOCTYPE html>
+
 <html lang="hi">
 <head>
-    <meta charset="UTF-8">
-    <style>
+<meta charset="utf-8"/>
+<style>
+        p, li, h1, h2, h3, h4, b, strong, td, th {
+            font-weight: 900 !important;
+            -webkit-text-stroke: 1.1px #000000;
+            text-shadow: 0 0 1px #000;
+        }
+        body, p, li, td, th, div, span {
+            font-size: 28pt !important;
+            line-height: 1.8 !important;
+        }
+        .ch3-content {
+            font-size: 28pt !important;
+            line-height: 1.8 !important;
+            padding: 10px !important;
+        }
+        /* Projector Banner Styles for Headings */
+        .hero-title, h1.section-header {
+            text-align: center !important;
+            color: #ffffff !important;
+            background-color: #064e3b !important; /* Dark Green Background */
+            border: 5px solid #10b981 !important;
+            border-radius: 20px !important;
+            padding: 30px !important;
+            margin-bottom: 50px !important;
+            font-size: 60pt !important;
+            font-weight: 900 !important;
+            box-shadow: 0 8px 25px rgba(6, 78, 59, 0.4) !important;
+        }
+        .part-header {
+            color: #7f1d1d !important;
+            background-color: #fee2e2 !important;
+            border-left: 18px solid #b91c1c !important;
+            padding: 22px 28px !important;
+            border-radius: 14px !important;
+            font-size: 46pt !important;
+            font-weight: 900 !important;
+            margin-top: 40px !important;
+            margin-bottom: 35px !important;
+            box-shadow: 0 6px 15px rgba(0,0,0,0.08) !important;
+        }
+        .topic-header, h2.sub-header {
+            color: #1e3a8a !important;
+            background-color: #eff6ff !important;
+            border-left: 16px solid #2563eb !important;
+            padding: 20px 26px !important;
+            border-radius: 12px !important;
+            font-size: 38pt !important;
+            font-weight: 900 !important;
+            margin-top: 45px !important;
+            margin-bottom: 30px !important;
+        }
+        .subtopic-header {
+            color: #4c1d95 !important;
+            background-color: #f3e8ff !important;
+            border-left: 14px solid #7c3aed !important;
+            padding: 18px 24px !important;
+            border-radius: 10px !important;
+            font-size: 32pt !important;
+            font-weight: 900 !important;
+            margin-top: 40px !important;
+            margin-bottom: 25px !important;
+        }
+        .box-header {
+            color: #166534 !important;
+            background-color: #f0fdf4 !important;
+            border-left: 12px solid #16a34a !important;
+            padding: 16px 20px !important;
+            border-radius: 10px !important;
+            font-size: 30pt !important;
+            font-weight: 900 !important;
+        }
+        /* Highlights */
+        b, strong {
+            color: #b91c1c !important; /* Dark Red */
+            font-weight: 900 !important;
+        }
+        .blue-highlight, b.blue-text, strong.blue-text {
+            color: #1e3a8a !important;
+        }
+        .keyword-box, .culture-box, .highlight-box {
+            font-size: 28pt !important;
+            line-height: 1.8 !important;
+            padding: 25px !important;
+            margin: 30px 0 !important;
+        }
+        .illustration-box { border: 4px solid #cbd5e1 !important; border-radius: 12px; padding: 20px; background-color: #ffffff; margin-top: 25px; }
+        .illustration-explanation { border-left: 6px solid #cbd5e1 !important; padding-left: 15px; font-size: 28pt !important; line-height: 1.6 !important; text-align: left; margin-top: 15px; }
+
+
         .ch3-content { font-family: 'Arial', sans-serif; line-height: 2.2; font-size: 18pt; color: #1a202c; padding: 40px; }
         .section-header { color: #065f46; border-bottom: 5px solid #10b981; padding-bottom: 15px; font-size: 34pt; margin-bottom: 30px; }
         .sub-header { color: #047857; font-size: 28pt; margin-top: 50px; }
@@ -705,43 +1420,125 @@
 </head>
 <body>
 <div class="ch3-content">
-    <h1 class="section-header">दक्षिण एशिया में शांति और सहयोग - सार्क और साफ्टा (SAARC &amp; SAFTA)</h1>
-    
-    <p>दक्षिण एशिया संघर्षों का क्षेत्र होने के साथ-साथ आपसी सहयोग और शांति प्रयासों का गवाह भी रहा है। क्षेत्र के देशों ने यह महसूस किया है कि केवल युद्धों से समस्याओं का समाधान संभव नहीं है, बल्कि आर्थिक एकीकरण और साझा विकास ही एकमात्र रास्ता है।</p>
-
-    <!-- SAARC Summit Portrait -->
-    <div class="illustration-box" style="border-color: #065f46 !important; margin-top: 35px; margin-bottom: 35px;">
-        <img alt="SAARC Summit Leaders" src="images/ch3/saarc_summit_portrait.webp" style="width: 100%; max-width: 850px; height: auto; max-height: 450px; object-fit: contain; display: block; margin: 0 auto; border: 4px solid #cbd5e1; border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.15);" class="illustration-img"/>
-        <div class="illustration-explanation" style="border-left-color: #065f46 !important;">
-            <b>सार्क शिखर सम्मेलन की समूह तस्वीर (SAARC Leaders Family Photo):</b><br/>
+<h1 class="section-header hero-title">दक्षिण एशिया में शांति और सहयोग - सार्क और साफ्टा (SAARC &amp; SAFTA)</h1>
+<p>दक्षिण एशिया संघर्षों का क्षेत्र होने के साथ-साथ आपसी सहयोग और शांति प्रयासों का गवाह भी रहा है। क्षेत्र के देशों ने यह महसूस किया है कि केवल युद्धों से समस्याओं का समाधान संभव नहीं है, बल्कि आर्थिक एकीकरण और साझा विकास ही एकमात्र रास्ता है।</p>
+<!-- SAARC Summit Portrait -->
+<div class="illustration-box" style="border-color: #065f46 !important; margin-top: 35px; margin-bottom: 35px;">
+<img alt="SAARC Summit Leaders" class="illustration-img" src="images/ch3/saarc_summit_portrait.webp" style="width: 100%; max-width: 850px; height: auto; max-height: 450px; object-fit: contain; display: block; margin: 0 auto; border: 4px solid #cbd5e1; border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.15);"/>
+<div class="illustration-explanation" style="border-left-color: #065f46 !important;">
+<b>सार्क शिखर सम्मेलन की समूह तस्वीर (SAARC Leaders Family Photo):</b><br>
             सार्क देशों के राष्ट्राध्यक्षों की ऐतिहासिक बैठक, जो दक्षिण एशियाई क्षेत्र के देशों के बीच कूटनीतिक और आर्थिक एकीकरण के प्रयासों का प्रतिनिधित्व करती है।
-        </div>
+        </br></div>
+</div>
+<h2 class="sub-header topic-header">1. सार्क (SAARC - दक्षिण एशियाई क्षेत्रीय सहयोग संगठन)</h2>
+<p>सार्क की स्थापना **8 दिसंबर 1985** को ढाका (बांग्लादेश) में की गई थी। इसके संस्थापक सदस्यों में भारत, पाकिस्तान, बांग्लादेश, नेपाल, भूटान, श्रीलंका और मालदीव शामिल थे। इसका मुख्य उद्देश्य दक्षिण एशिया के लोगों के कल्याण को बढ़ावा देना, जीवन स्तर में सुधार करना और आर्थिक व सांस्कृतिक विकास को तीव्र करना था।</p>
+<p><b>सार्क की विफलता के कारण:</b><br>
+    भारत और पाकिस्तान के बीच लगातार बने रहने वाले सीमा विवादों, कश्मीर के मुद्दे और पाकिस्तान द्वारा सीमा पार आतंकवाद को बढ़ावा देने के कारण सार्क पूरी तरह से निष्क्रिय हो चुका है। 2016 के बाद से कोई भी सार्क शिखर सम्मेलन आयोजित नहीं हो पाया है।</br></p>
+<h2 class="sub-header topic-header">2. साफ्टा (SAFTA - दक्षिण एशियाई मुक्त व्यापार क्षेत्र)</h2>
+<p>सार्क देशों ने 2004 में इस्लामाबाद में **साफ्टा (SAFTA)** समझौते पर हस्ताक्षर किए, जो 1 जनवरी 2006 से प्रभावी हुआ।</p>
+<div class="keyword-box">
+<b>साफ्टा (SAFTA):</b> इसका मुख्य उद्देश्य दक्षिण एशियाई देशों के बीच आपसी व्यापार पर लगने वाले सीमा शुल्क (Tariffs) को 20% तक कम करना था, ताकि वस्तुओं और सेवाओं का मुक्त प्रवाह हो सके।
     </div>
-
-    <h2 class="sub-header">1. सार्क (SAARC - दक्षिण एशियाई क्षेत्रीय सहयोग संगठन)</h2>
-    <p>सार्क की स्थापना **8 दिसंबर 1985** को ढाका (बांग्लादेश) में की गई थी। इसके संस्थापक सदस्यों में भारत, पाकिस्तान, बांग्लादेश, नेपाल, भूटान, श्रीलंका और मालदीव शामिल थे। इसका मुख्य उद्देश्य दक्षिण एशिया के लोगों के कल्याण को बढ़ावा देना, जीवन स्तर में सुधार करना और आर्थिक व सांस्कृतिक विकास को तीव्र करना था।</p>
-    
-    <p><b>सार्क की विफलता के कारण:</b><br/>
-    भारत और पाकिस्तान के बीच लगातार बने रहने वाले सीमा विवादों, कश्मीर के मुद्दे और पाकिस्तान द्वारा सीमा पार आतंकवाद को बढ़ावा देने के कारण सार्क पूरी तरह से निष्क्रिय हो चुका है। 2016 के बाद से कोई भी सार्क शिखर सम्मेलन आयोजित नहीं हो पाया है।</p>
-
-    <h2 class="sub-header">2. साफ्टा (SAFTA - दक्षिण एशियाई मुक्त व्यापार क्षेत्र)</h2>
-    <p>सार्क देशों ने 2004 में इस्लामाबाद में **साफ्टा (SAFTA)** समझौते पर हस्ताक्षर किए, जो 1 जनवरी 2006 से प्रभावी हुआ।</p>
-
-    <div class="keyword-box">
-        <b>साफ्टा (SAFTA):</b> इसका मुख्य उद्देश्य दक्षिण एशियाई देशों के बीच आपसी व्यापार पर लगने वाले सीमा शुल्क (Tariffs) को 20% तक कम करना था, ताकि वस्तुओं और सेवाओं का मुक्त प्रवाह हो सके।
-    </div>
-
-    <p><b>साफ्टा की चुनौतियां:</b><br/>
-    पाकिस्तान और कुछ अन्य पड़ोसी देशों को यह डर सताता है कि साफ्टा के माध्यम से भारत उनके बाजारों पर पूरी तरह कब्जा कर लेगा और उनके राजनीतिक हितों को प्रभावित करेगा। वहीं भारत का मानना है कि साफ्टा के बिना क्षेत्र का सर्वांगीण आर्थिक विकास संभव नहीं है।</p>
+<p><b>साफ्टा की चुनौतियां:</b><br>
+    पाकिस्तान और कुछ अन्य पड़ोसी देशों को यह डर सताता है कि साफ्टा के माध्यम से भारत उनके बाजारों पर पूरी तरह कब्जा कर लेगा और उनके राजनीतिक हितों को प्रभावित करेगा। वहीं भारत का मानना है कि साफ्टा के बिना क्षेत्र का सर्वांगीण आर्थिक विकास संभव नहीं है।</br></p>
 </div>
 </body>
 </html>
-<br><br><hr><br><br>
+<br/><br/><hr/><br/><br/>
 <!DOCTYPE html>
+
 <html lang="hi">
 <head>
-    <meta charset="UTF-8">
-    <style>
+<meta charset="utf-8"/>
+<style>
+        p, li, h1, h2, h3, h4, b, strong, td, th {
+            font-weight: 900 !important;
+            -webkit-text-stroke: 1.1px #000000;
+            text-shadow: 0 0 1px #000;
+        }
+        body, p, li, td, th, div, span {
+            font-size: 28pt !important;
+            line-height: 1.8 !important;
+        }
+        .ch3-content {
+            font-size: 28pt !important;
+            line-height: 1.8 !important;
+            padding: 10px !important;
+        }
+        /* Projector Banner Styles for Headings */
+        .hero-title, h1.section-header {
+            text-align: center !important;
+            color: #ffffff !important;
+            background-color: #064e3b !important; /* Dark Green Background */
+            border: 5px solid #10b981 !important;
+            border-radius: 20px !important;
+            padding: 30px !important;
+            margin-bottom: 50px !important;
+            font-size: 60pt !important;
+            font-weight: 900 !important;
+            box-shadow: 0 8px 25px rgba(6, 78, 59, 0.4) !important;
+        }
+        .part-header {
+            color: #7f1d1d !important;
+            background-color: #fee2e2 !important;
+            border-left: 18px solid #b91c1c !important;
+            padding: 22px 28px !important;
+            border-radius: 14px !important;
+            font-size: 46pt !important;
+            font-weight: 900 !important;
+            margin-top: 40px !important;
+            margin-bottom: 35px !important;
+            box-shadow: 0 6px 15px rgba(0,0,0,0.08) !important;
+        }
+        .topic-header, h2.sub-header {
+            color: #1e3a8a !important;
+            background-color: #eff6ff !important;
+            border-left: 16px solid #2563eb !important;
+            padding: 20px 26px !important;
+            border-radius: 12px !important;
+            font-size: 38pt !important;
+            font-weight: 900 !important;
+            margin-top: 45px !important;
+            margin-bottom: 30px !important;
+        }
+        .subtopic-header {
+            color: #4c1d95 !important;
+            background-color: #f3e8ff !important;
+            border-left: 14px solid #7c3aed !important;
+            padding: 18px 24px !important;
+            border-radius: 10px !important;
+            font-size: 32pt !important;
+            font-weight: 900 !important;
+            margin-top: 40px !important;
+            margin-bottom: 25px !important;
+        }
+        .box-header {
+            color: #166534 !important;
+            background-color: #f0fdf4 !important;
+            border-left: 12px solid #16a34a !important;
+            padding: 16px 20px !important;
+            border-radius: 10px !important;
+            font-size: 30pt !important;
+            font-weight: 900 !important;
+        }
+        /* Highlights */
+        b, strong {
+            color: #b91c1c !important; /* Dark Red */
+            font-weight: 900 !important;
+        }
+        .blue-highlight, b.blue-text, strong.blue-text {
+            color: #1e3a8a !important;
+        }
+        .keyword-box, .culture-box, .highlight-box {
+            font-size: 28pt !important;
+            line-height: 1.8 !important;
+            padding: 25px !important;
+            margin: 30px 0 !important;
+        }
+        .illustration-box { border: 4px solid #cbd5e1 !important; border-radius: 12px; padding: 20px; background-color: #ffffff; margin-top: 25px; }
+        .illustration-explanation { border-left: 6px solid #cbd5e1 !important; padding-left: 15px; font-size: 28pt !important; line-height: 1.6 !important; text-align: left; margin-top: 15px; }
+
+
         .ch3-content { font-family: 'Arial', sans-serif; line-height: 2.2; font-size: 18pt; color: #1a202c; padding: 40px; }
         .section-header { color: #b91c1c; border-bottom: 5px solid #ef4444; padding-bottom: 15px; font-size: 34pt; margin-bottom: 30px; }
         .sub-header { color: #991b1b; font-size: 26pt; margin-top: 50px; background: #fee2e2; padding: 10px 20px; border-radius: 8px; }
@@ -752,88 +1549,162 @@
     </style>
 </head>
 <body>
-    <div class="ch3-content">
-        <h1 class="section-header">अध्याय 3: मेगा प्रश्न बैंक (50+ Q&A)</h1>
-        
-        <h2 class="sub-header">महत्वपूर्ण बहुविकल्पीय प्रश्न (MCQs)</h2>
-        
-        <div class="qa-box">
-            <p class="question">Q1. दक्षिण एशिया के किन दो देशों में आज़ादी के बाद से लगातार लोकतंत्र रहा है?</p>
-            <p class="answer"><b>उत्तर:</b> भारत और श्रीलंका।</p>
-        </div>
-
-        <div class="qa-box">
-            <p class="question">Q2. सार्क (SAARC) की स्थापना किस वर्ष हुई?</p>
-            <p class="answer"><b>उत्तर:</b> 1985 में ढाका (Dhaka) में।</p>
-        </div>
-
-        <div class="qa-box">
-            <p class="question">Q3. 'एलटीटीई' (LTTE) का संबंध किस देश से था?</p>
-            <p class="answer"><b>उत्तर:</b> श्रीलंका (जातीय संघर्ष के लिए)।</p>
-        </div>
-
-        <div class="qa-box">
-            <p class="question">Q4. पाकिस्तान में 1999 में तख्तापलट करने वाले सैन्य शासक कौन थे?</p>
-            <p class="answer"><b>उत्तर:</b> जनरल परवेज़ मुशर्रफ।</p>
-        </div>
-
-        <div class="qa-box">
-            <p class="question">Q5. नेपाल में राजतंत्र को कब समाप्त किया गया?</p>
-            <p class="answer"><b>उत्तर:</b> 2008 में नेपाल एक लोकतान्त्रिक गणराज्य बना।</p>
-        </div>
-
-        <h2 class="sub-header">लघु उत्तरीय प्रश्न (Short Answer Questions)</h2>
-
-        <div class="qa-box-alt">
-            <p class="question">Q6. 'सिंधु जल संधि' (Indus Water Treaty) क्या है?</p>
-            <p class="answer"><b>उत्तर:</b> 1960 में भारत और पाकिस्तान के बीच सिंधु और उसकी सहायक नदियों के पानी के बंटवारे के लिए विश्व बैंक की मध्यस्थता में किया गया समझौता।</p>
-        </div>
-
-        <div class="qa-box-alt">
-            <p class="question">Q7. शेख मुजीबुर्रहमान (Sheikh Mujibur Rahman) कौन थे?</p>
-            <p class="answer"><b>उत्तर:</b> वे अवामी लीग के नेता और 'बांग्लादेश' के संस्थापक माने जाते हैं। उन्होंने पाकिस्तान के खिलाफ मुक्ति संग्राम का नेतृत्व किया।</p>
-        </div>
-
-        <div class="qa-box-alt">
-            <p class="question">Q8. साफ्टा (SAFTA) का मुख्य उद्देश्य क्या है?</p>
-            <p class="answer"><b>उत्तर:</b> दक्षिण एशिया को एक मुक्त व्यापार क्षेत्र बनाना ताकि सदस्य देशों के बीच व्यापारिक बाधाएं और शुल्क (Tax) कम हो सकें।</p>
-        </div>
-
-        <div class="qa-box-alt">
-            <p class="question">Q9. श्रीलंका में सिंहली-तमिल संघर्ष का मुख्य कारण क्या था?</p>
-            <p class="answer"><b>उत्तर:</b> बहुसंख्यक सिंहलियों द्वारा तमिलों के अधिकारों की उपेक्षा करना और सिंहली भाषा व बौद्ध धर्म को थोपना।</p>
-        </div>
-
-        <h2 class="sub-header">दीर्घ उत्तरीय प्रश्न (Long Answer Questions - 6 Marks)</h2>
-
-        <div class="qa-box">
-            <p class="question">Q10. पाकिस्तान में लोकतंत्र के स्थिर न हो पाने के मुख्य कारणों का विस्तार से वर्णन करें।</p>
-            <p class="answer"><b>उत्तर:</b> <br>
-            1. **सेना का हस्तक्षेप:** सेना का राजनीति में बहुत गहरा दखल है। <br>
-            2. **धार्मिक प्रभाव:** कट्टरपंथी धर्मगुरुओं का दबाव। <br>
-            3. **अंतरराष्ट्रीय स्वार्थ:** अमेरिकी और पश्चिमी देशों द्वारा सुरक्षा के नाम पर सैन्य शासन को समर्थन। <br>
+<div class="ch3-content">
+<h1 class="section-header hero-title">अध्याय 3: मेगा प्रश्न बैंक (50+ Q&amp;A)</h1>
+<h2 class="sub-header topic-header">महत्वपूर्ण बहुविकल्पीय प्रश्न (MCQs)</h2>
+<div class="qa-box">
+<p class="question">Q1. दक्षिण एशिया के किन दो देशों में आज़ादी के बाद से लगातार लोकतंत्र रहा है?</p>
+<p class="answer"><b>उत्तर:</b> भारत और श्रीलंका।</p>
+</div>
+<div class="qa-box">
+<p class="question">Q2. सार्क (SAARC) की स्थापना किस वर्ष हुई?</p>
+<p class="answer"><b>उत्तर:</b> 1985 में ढाका (Dhaka) में।</p>
+</div>
+<div class="qa-box">
+<p class="question">Q3. 'एलटीटीई' (LTTE) का संबंध किस देश से था?</p>
+<p class="answer"><b>उत्तर:</b> श्रीलंका (जातीय संघर्ष के लिए)।</p>
+</div>
+<div class="qa-box">
+<p class="question">Q4. पाकिस्तान में 1999 में तख्तापलट करने वाले सैन्य शासक कौन थे?</p>
+<p class="answer"><b>उत्तर:</b> जनरल परवेज़ मुशर्रफ।</p>
+</div>
+<div class="qa-box">
+<p class="question">Q5. नेपाल में राजतंत्र को कब समाप्त किया गया?</p>
+<p class="answer"><b>उत्तर:</b> 2008 में नेपाल एक लोकतान्त्रिक गणराज्य बना।</p>
+</div>
+<h2 class="sub-header topic-header">लघु उत्तरीय प्रश्न (Short Answer Questions)</h2>
+<div class="qa-box-alt">
+<p class="question">Q6. 'सिंधु जल संधि' (Indus Water Treaty) क्या है?</p>
+<p class="answer"><b>उत्तर:</b> 1960 में भारत और पाकिस्तान के बीच सिंधु और उसकी सहायक नदियों के पानी के बंटवारे के लिए विश्व बैंक की मध्यस्थता में किया गया समझौता।</p>
+</div>
+<div class="qa-box-alt">
+<p class="question">Q7. शेख मुजीबुर्रहमान (Sheikh Mujibur Rahman) कौन थे?</p>
+<p class="answer"><b>उत्तर:</b> वे अवामी लीग के नेता और 'बांग्लादेश' के संस्थापक माने जाते हैं। उन्होंने पाकिस्तान के खिलाफ मुक्ति संग्राम का नेतृत्व किया।</p>
+</div>
+<div class="qa-box-alt">
+<p class="question">Q8. साफ्टा (SAFTA) का मुख्य उद्देश्य क्या है?</p>
+<p class="answer"><b>उत्तर:</b> दक्षिण एशिया को एक मुक्त व्यापार क्षेत्र बनाना ताकि सदस्य देशों के बीच व्यापारिक बाधाएं और शुल्क (Tax) कम हो सकें।</p>
+</div>
+<div class="qa-box-alt">
+<p class="question">Q9. श्रीलंका में सिंहली-तमिल संघर्ष का मुख्य कारण क्या था?</p>
+<p class="answer"><b>उत्तर:</b> बहुसंख्यक सिंहलियों द्वारा तमिलों के अधिकारों की उपेक्षा करना और सिंहली भाषा व बौद्ध धर्म को थोपना।</p>
+</div>
+<h2 class="sub-header topic-header">दीर्घ उत्तरीय प्रश्न (Long Answer Questions - 6 Marks)</h2>
+<div class="qa-box">
+<p class="question">Q10. पाकिस्तान में लोकतंत्र के स्थिर न हो पाने के मुख्य कारणों का विस्तार से वर्णन करें।</p>
+<p class="answer"><b>उत्तर:</b> <br/>
+            1. **सेना का हस्तक्षेप:** सेना का राजनीति में बहुत गहरा दखल है। <br/>
+            2. **धार्मिक प्रभाव:** कट्टरपंथी धर्मगुरुओं का दबाव। <br/>
+            3. **अंतरराष्ट्रीय स्वार्थ:** अमेरिकी और पश्चिमी देशों द्वारा सुरक्षा के नाम पर सैन्य शासन को समर्थन। <br/>
             4. **राजनीतिक अस्थिरता:** भ्रष्टाचार और नेताओं के बीच आपसी खींचतान।</p>
-        </div>
-
-        <div class="qa-box">
-            <p class="question">Q11. भारत के अपने पड़ोसियों के साथ संबंधों की वर्तमान स्थिति की चर्चा करें।</p>
-            <p class="answer"><b>उत्तर:</b> <br>
-            1. **पाकिस्तान:** कश्मीर और आतंकवाद के मुद्दे पर भारी तनाव। <br>
-            2. **बांग्लादेश:** आर्थिक सहयोग बढ़ा है, लेकिन जल विवाद और अवैध प्रवासियों का मुद्दा बना हुआ है। <br>
-            3. **नेपाल:** साझी संस्कृति, लेकिन सीमा विवाद और चीन का प्रभाव चिंता का विषय। <br>
+</div>
+<div class="qa-box">
+<p class="question">Q11. भारत के अपने पड़ोसियों के साथ संबंधों की वर्तमान स्थिति की चर्चा करें।</p>
+<p class="answer"><b>उत्तर:</b> <br/>
+            1. **पाकिस्तान:** कश्मीर और आतंकवाद के मुद्दे पर भारी तनाव। <br/>
+            2. **बांग्लादेश:** आर्थिक सहयोग बढ़ा है, लेकिन जल विवाद और अवैध प्रवासियों का मुद्दा बना हुआ है। <br/>
+            3. **नेपाल:** साझी संस्कृति, लेकिन सीमा विवाद और चीन का प्रभाव चिंता का विषय। <br/>
             4. **श्रीलंका और मालदीव:** भारत ने संकट के समय भरपूर आर्थिक और सुरक्षा सहयोग दिया है।</p>
-        </div>
-
-        <p>अगले भाग में हम **बोर्ड परीक्षा विशेष (Previous Year Questions)** और नक्शों (Maps) को देखेंगे।</p>
-    </div>
+</div>
+<p>अगले भाग में हम **बोर्ड परीक्षा विशेष (Previous Year Questions)** और नक्शों (Maps) को देखेंगे।</p>
+</div>
 </body>
 </html>
-<br><br><hr><br><br>
+<br/><br/><hr/><br/><br/>
 <!DOCTYPE html>
+
 <html lang="hi">
 <head>
-    <meta charset="UTF-8">
-    <style>
+<meta charset="utf-8"/>
+<style>
+        p, li, h1, h2, h3, h4, b, strong, td, th {
+            font-weight: 900 !important;
+            -webkit-text-stroke: 1.1px #000000;
+            text-shadow: 0 0 1px #000;
+        }
+        body, p, li, td, th, div, span {
+            font-size: 28pt !important;
+            line-height: 1.8 !important;
+        }
+        .ch3-content {
+            font-size: 28pt !important;
+            line-height: 1.8 !important;
+            padding: 10px !important;
+        }
+        /* Projector Banner Styles for Headings */
+        .hero-title, h1.section-header {
+            text-align: center !important;
+            color: #ffffff !important;
+            background-color: #064e3b !important; /* Dark Green Background */
+            border: 5px solid #10b981 !important;
+            border-radius: 20px !important;
+            padding: 30px !important;
+            margin-bottom: 50px !important;
+            font-size: 60pt !important;
+            font-weight: 900 !important;
+            box-shadow: 0 8px 25px rgba(6, 78, 59, 0.4) !important;
+        }
+        .part-header {
+            color: #7f1d1d !important;
+            background-color: #fee2e2 !important;
+            border-left: 18px solid #b91c1c !important;
+            padding: 22px 28px !important;
+            border-radius: 14px !important;
+            font-size: 46pt !important;
+            font-weight: 900 !important;
+            margin-top: 40px !important;
+            margin-bottom: 35px !important;
+            box-shadow: 0 6px 15px rgba(0,0,0,0.08) !important;
+        }
+        .topic-header, h2.sub-header {
+            color: #1e3a8a !important;
+            background-color: #eff6ff !important;
+            border-left: 16px solid #2563eb !important;
+            padding: 20px 26px !important;
+            border-radius: 12px !important;
+            font-size: 38pt !important;
+            font-weight: 900 !important;
+            margin-top: 45px !important;
+            margin-bottom: 30px !important;
+        }
+        .subtopic-header {
+            color: #4c1d95 !important;
+            background-color: #f3e8ff !important;
+            border-left: 14px solid #7c3aed !important;
+            padding: 18px 24px !important;
+            border-radius: 10px !important;
+            font-size: 32pt !important;
+            font-weight: 900 !important;
+            margin-top: 40px !important;
+            margin-bottom: 25px !important;
+        }
+        .box-header {
+            color: #166534 !important;
+            background-color: #f0fdf4 !important;
+            border-left: 12px solid #16a34a !important;
+            padding: 16px 20px !important;
+            border-radius: 10px !important;
+            font-size: 30pt !important;
+            font-weight: 900 !important;
+        }
+        /* Highlights */
+        b, strong {
+            color: #b91c1c !important; /* Dark Red */
+            font-weight: 900 !important;
+        }
+        .blue-highlight, b.blue-text, strong.blue-text {
+            color: #1e3a8a !important;
+        }
+        .keyword-box, .culture-box, .highlight-box {
+            font-size: 28pt !important;
+            line-height: 1.8 !important;
+            padding: 25px !important;
+            margin: 30px 0 !important;
+        }
+        .illustration-box { border: 4px solid #cbd5e1 !important; border-radius: 12px; padding: 20px; background-color: #ffffff; margin-top: 25px; }
+        .illustration-explanation { border-left: 6px solid #cbd5e1 !important; padding-left: 15px; font-size: 28pt !important; line-height: 1.6 !important; text-align: left; margin-top: 15px; }
+
+
         .ch3-content { font-family: 'Arial', sans-serif; line-height: 2.2; font-size: 18pt; color: #1a202c; padding: 40px; }
         .section-header { color: #854d0e; border-bottom: 5px solid #fbbf24; padding-bottom: 15px; font-size: 34pt; margin-bottom: 30px; }
         .sub-header { color: #b45309; font-size: 28pt; margin-top: 50px; }
@@ -844,61 +1715,53 @@
     </style>
 </head>
 <body>
-    <div class="ch3-content">
-        <h1 class="section-header">अध्याय 3: बोर्ड परीक्षा विशेष (Board Exam Special)</h1>
-        
-        <h2 class="sub-header">1. मानचित्र कार्य (Map Work) - अत्यंत महत्वपूर्ण</h2>
-        <p>बोर्ड परीक्षा में दक्षिण एशिया के नक्शे पर निम्नलिखित को पहचानने और भरने के लिए कहा जा सकता है:</p>
-        
-        <div class="map-box">
-            <b>मैप पर पहचानें:</b> 
-            <ul class="qa-list">
-                <li><b>वह देश जहाँ 1948 से आज़ादी के बाद लोकतंत्र कायम रहा:</b> भारत / श्रीलंका</li>
-                <li><b>वह देश जहाँ राजतंत्र (Monarchy) 2008 में समाप्त हुआ:</b> नेपाल</li>
-                <li><b>1971 में निर्मित नया राष्ट्र:</b> बांग्लादेश</li>
-                <li><b>सिंधु जल संधि से संबंधित दो देश:</b> भारत और पाकिस्तान</li>
-                <li><b>वह देश जो सार्क का सबसे छोटा सदस्य है:</b> मालदीव</li>
-            </ul>
-        </div>
-
-        <h2 class="sub-header">2. पिछले 10 वर्षों के बोर्ड प्रश्न (Previous Year Questions)</h2>
-        <p>इन प्रश्नों का अभ्यास आपको बोर्ड परीक्षा में सर्वोत्तम अंक दिलाएगा:</p>
-
-        <div class="pyq-box">
-            <b>2018-2023 के प्रमुख प्रश्न:</b>
-            <ul class="qa-list">
-                <li>Q1. 'बांग्लादेश के मुक्ति संग्राम' (1971) में भारत की भूमिका की विवेचना करें। (6 अंक)</li>
-                <li>Q2. श्रीलंका में जातीय संघर्ष के कारणों और उसके समाधान की दिशा में प्रयासों को समझाएं। (4 अंक)</li>
-                <li>Q3. दक्षिण एशिया के लोगों में लोकतंत्र के प्रति गहरे विश्वास के क्या कारण हैं? (2 अंक)</li>
-                <li>Q4. 'सार्क' को और अधिक प्रभावी बनाने के लिए सुझाव दें। (4 अंक)</li>
-            </ul>
-        </div>
-
-        <div class="pyq-box">
-            <b>2013-2017 के प्रमुख प्रश्न:</b>
-            <ul class="qa-list">
-                <li>Q5. पाकिस्तान में सेना के प्रभाव के मुख्य कारण क्या हैं? विस्तार से वर्णन करें। (6 अंक)</li>
-                <li>Q6. 'साफ्टा' (SAFTA) के महत्व और इसके सामने आने वाली चुनौतियों की चर्चा करें। (4 अंक)</li>
-                <li>Q7. नेपाल में लोकतंत्र की बहाली के लिए हुए 2006 के जन-आंदोलन की मुख्य बातें बताएं। (4 अंक)</li>
-                <li>Q8. भारत और पाकिस्तान के बीच शांति के प्रमुख प्रयासों (जैसे शिमला समझौता) की सूची बनाएं। (2 अंक)</li>
-            </ul>
-        </div>
-
-        <h2 class="sub-header">3. मास्टर गुरुमन्त्र (Final Tips)</h2>
-        <ul class="qa-list" style="list-style-type: square;">
-            <li><b>पाकिस्तान:</b> हमेशा जुल्फिकार अली भुट्टो, बेनज़ीर भुट्टो और मुशर्रफ के नामों को याद रखें।</li>
-            <li><b>बांग्लादेश:</b> 1971 का युद्ध और 'अवामी लीग' सबसे महत्वपूर्ण टॉपिक्स हैं।</li>
-            <li><b>श्रीलंका:</b> सिंहली-तमिल संघर्ष और 'एलटीटीई' (LTTE) को रट लें।</li>
-            <li><b>सार्क/साफ्टा:</b> सदस्य देशों और उनके स्थापना वर्षों पर विशेष ध्यान दें।</li>
-        </ul>
-
-        <p style="text-align: center; color: #854d0e; font-weight: bold; margin-top: 50px;">अध्याय 3 का मास्टर कोर्स संपन्न। अब आप बोर्ड परीक्षा के लिए 100% तैयार हैं!</p>
-    </div>
+<div class="ch3-content">
+<h1 class="section-header hero-title">अध्याय 3: बोर्ड परीक्षा विशेष (Board Exam Special)</h1>
+<h2 class="sub-header topic-header">1. मानचित्र कार्य (Map Work) - अत्यंत महत्वपूर्ण</h2>
+<p>बोर्ड परीक्षा में दक्षिण एशिया के नक्शे पर निम्नलिखित को पहचानने और भरने के लिए कहा जा सकता है:</p>
+<div class="map-box">
+<b>मैप पर पहचानें:</b>
+<ul class="qa-list">
+<li><b>वह देश जहाँ 1948 से आज़ादी के बाद लोकतंत्र कायम रहा:</b> भारत / श्रीलंका</li>
+<li><b>वह देश जहाँ राजतंत्र (Monarchy) 2008 में समाप्त हुआ:</b> नेपाल</li>
+<li><b>1971 में निर्मित नया राष्ट्र:</b> बांग्लादेश</li>
+<li><b>सिंधु जल संधि से संबंधित दो देश:</b> भारत और पाकिस्तान</li>
+<li><b>वह देश जो सार्क का सबसे छोटा सदस्य है:</b> मालदीव</li>
+</ul>
+</div>
+<h2 class="sub-header topic-header">2. पिछले 10 वर्षों के बोर्ड प्रश्न (Previous Year Questions)</h2>
+<p>इन प्रश्नों का अभ्यास आपको बोर्ड परीक्षा में सर्वोत्तम अंक दिलाएगा:</p>
+<div class="pyq-box">
+<b>2018-2023 के प्रमुख प्रश्न:</b>
+<ul class="qa-list">
+<li>Q1. 'बांग्लादेश के मुक्ति संग्राम' (1971) में भारत की भूमिका की विवेचना करें। (6 अंक)</li>
+<li>Q2. श्रीलंका में जातीय संघर्ष के कारणों और उसके समाधान की दिशा में प्रयासों को समझाएं। (4 अंक)</li>
+<li>Q3. दक्षिण एशिया के लोगों में लोकतंत्र के प्रति गहरे विश्वास के क्या कारण हैं? (2 अंक)</li>
+<li>Q4. 'सार्क' को और अधिक प्रभावी बनाने के लिए सुझाव दें। (4 अंक)</li>
+</ul>
+</div>
+<div class="pyq-box">
+<b>2013-2017 के प्रमुख प्रश्न:</b>
+<ul class="qa-list">
+<li>Q5. पाकिस्तान में सेना के प्रभाव के मुख्य कारण क्या हैं? विस्तार से वर्णन करें। (6 अंक)</li>
+<li>Q6. 'साफ्टा' (SAFTA) के महत्व और इसके सामने आने वाली चुनौतियों की चर्चा करें। (4 अंक)</li>
+<li>Q7. नेपाल में लोकतंत्र की बहाली के लिए हुए 2006 के जन-आंदोलन की मुख्य बातें बताएं। (4 अंक)</li>
+<li>Q8. भारत और पाकिस्तान के बीच शांति के प्रमुख प्रयासों (जैसे शिमला समझौता) की सूची बनाएं। (2 अंक)</li>
+</ul>
+</div>
+<h2 class="sub-header topic-header">3. मास्टर गुरुमन्त्र (Final Tips)</h2>
+<ul class="qa-list" style="list-style-type: square;">
+<li><b>पाकिस्तान:</b> हमेशा जुल्फिकार अली भुट्टो, बेनज़ीर भुट्टो और मुशर्रफ के नामों को याद रखें।</li>
+<li><b>बांग्लादेश:</b> 1971 का युद्ध और 'अवामी लीग' सबसे महत्वपूर्ण टॉपिक्स हैं।</li>
+<li><b>श्रीलंका:</b> सिंहली-तमिल संघर्ष और 'एलटीटीई' (LTTE) को रट लें।</li>
+<li><b>सार्क/साफ्टा:</b> सदस्य देशों और उनके स्थापना वर्षों पर विशेष ध्यान दें।</li>
+</ul>
+<p style="text-align: center; color: #854d0e; font-weight: bold; margin-top: 50px;">अध्याय 3 का मास्टर कोर्स संपन्न। अब आप बोर्ड परीक्षा के लिए 100% तैयार हैं!</p>
+</div>
 </body>
 </html>
-    </div>
-
-    <script>
+</div>
+<script>
     async function copyToGoogleDoc() {
         const btn = document.getElementById('mainCopyBtn');
         const status = document.getElementById('status');
@@ -923,6 +1786,5 @@
         }
     }
     </script>
-
 </body>
 </html>
