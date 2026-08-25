@@ -1,9 +1,98 @@
 <!DOCTYPE html>
+
 <html lang="hi">
 <head>
-    <meta charset="UTF-8">
-    <title>Chapter 7 COPY MASTER - Premium Notes</title>
-    <style>
+<meta charset="utf-8"/>
+<title>Chapter 7 COPY MASTER - Premium Notes</title>
+<style>
+        p, li, h1, h2, h3, h4, b, strong, td, th {
+            font-weight: 900 !important;
+            -webkit-text-stroke: 1.1px #000000;
+            text-shadow: 0 0 1px #000;
+        }
+        body, p, li, td, th, div, span {
+            font-size: 28pt !important;
+            line-height: 1.8 !important;
+        }
+        .ch7-content {
+            font-size: 28pt !important;
+            line-height: 1.8 !important;
+            padding: 10px !important;
+        }
+        /* Projector Banner Styles for Headings */
+        .hero-title, h1.section-header {
+            text-align: center !important;
+            color: #ffffff !important;
+            background-color: #064e3b !important; /* Dark Green Background */
+            border: 5px solid #10b981 !important;
+            border-radius: 20px !important;
+            padding: 30px !important;
+            margin-bottom: 50px !important;
+            font-size: 60pt !important;
+            font-weight: 900 !important;
+            box-shadow: 0 8px 25px rgba(6, 78, 59, 0.4) !important;
+        }
+        .part-header {
+            color: #7f1d1d !important;
+            background-color: #fee2e2 !important;
+            border-left: 18px solid #b91c1c !important;
+            padding: 22px 28px !important;
+            border-radius: 14px !important;
+            font-size: 46pt !important;
+            font-weight: 900 !important;
+            margin-top: 40px !important;
+            margin-bottom: 35px !important;
+            box-shadow: 0 6px 15px rgba(0,0,0,0.08) !important;
+        }
+        .topic-header, h2.sub-header {
+            color: #1e3a8a !important;
+            background-color: #eff6ff !important;
+            border-left: 16px solid #2563eb !important;
+            padding: 20px 26px !important;
+            border-radius: 12px !important;
+            font-size: 38pt !important;
+            font-weight: 900 !important;
+            margin-top: 45px !important;
+            margin-bottom: 30px !important;
+        }
+        .subtopic-header {
+            color: #4c1d95 !important;
+            background-color: #f3e8ff !important;
+            border-left: 14px solid #7c3aed !important;
+            padding: 18px 24px !important;
+            border-radius: 10px !important;
+            font-size: 32pt !important;
+            font-weight: 900 !important;
+            margin-top: 40px !important;
+            margin-bottom: 25px !important;
+        }
+        .box-header {
+            color: #166534 !important;
+            background-color: #f0fdf4 !important;
+            border-left: 12px solid #16a34a !important;
+            padding: 16px 20px !important;
+            border-radius: 10px !important;
+            font-size: 30pt !important;
+            font-weight: 900 !important;
+        }
+        /* Highlights */
+        b, strong {
+            color: #b91c1c !important; /* Dark Red */
+            font-weight: 900 !important;
+        }
+        .blue-highlight, b.blue-text, strong.blue-text {
+            color: #1e3a8a !important;
+        }
+        .keyword-box, .story-box, .highlight-box {
+            font-size: 28pt !important;
+            line-height: 1.8 !important;
+            padding: 25px !important;
+            margin: 30px 0 !important;
+        }
+        .illustration-box { border: 4px solid #cbd5e1 !important; border-radius: 12px; padding: 20px; background-color: #ffffff; margin-top: 25px; }
+        .illustration-explanation { border-left: 6px solid #cbd5e1 !important; padding-left: 15px; font-size: 28pt !important; line-height: 1.6 !important; text-align: left; margin-top: 15px; }
+
+
         body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f1f5f9; margin: 0; padding: 20px; text-align: center; }
         .header { background: #b91c1c; color: white; padding: 20px; border-radius: 10px; margin-bottom: 30px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
         .copy-btn { background-color: #b91c1c; color: white; padding: 20px 40px; font-size: 24pt; border: none; border-radius: 50px; cursor: pointer; font-weight: 900; transition: all 0.3s; box-shadow: 0 10px 20px rgba(185, 28, 28, 0.4); }
@@ -23,21 +112,107 @@
     </style>
 </head>
 <body>
-
-    <div class="header">
-        <h1>🚀 Chapter 7: वैश्वीकरण (Full-Proof Copy Master)</h1>
-        <p>100% Google Docs Compatible with Images (Localhost-Sync)</p>
-    </div>
-
-    <button id="mainCopyBtn" class="copy-btn" onclick="copyToGoogleDoc()">📋 COPY EVERYTHING FOR GOOGLE DOCS</button>
-    <p id="status">✅ Copied Successfully! Now go to your Google Doc and Press Ctrl+V</p>
-
-    <div class="preview" id="contentToCopy">
+<div class="header">
+<h1 class="hero-title">🚀 Chapter 7: वैश्वीकरण (Full-Proof Copy Master)</h1>
+<p>100% Google Docs Compatible with Images (Localhost-Sync)</p>
+</div>
+<button class="copy-btn" id="mainCopyBtn" onclick="copyToGoogleDoc()">📋 COPY EVERYTHING FOR GOOGLE DOCS</button>
+<p id="status">✅ Copied Successfully! Now go to your Google Doc and Press Ctrl+V</p>
+<div class="preview" id="contentToCopy">
 <!DOCTYPE html>
+
 <html lang="hi">
 <head>
-    <meta charset="UTF-8">
-    <style>
+<meta charset="utf-8"/>
+<style>
+        p, li, h1, h2, h3, h4, b, strong, td, th {
+            font-weight: 900 !important;
+            -webkit-text-stroke: 1.1px #000000;
+            text-shadow: 0 0 1px #000;
+        }
+        body, p, li, td, th, div, span {
+            font-size: 28pt !important;
+            line-height: 1.8 !important;
+        }
+        .ch7-content {
+            font-size: 28pt !important;
+            line-height: 1.8 !important;
+            padding: 10px !important;
+        }
+        /* Projector Banner Styles for Headings */
+        .hero-title, h1.section-header {
+            text-align: center !important;
+            color: #ffffff !important;
+            background-color: #064e3b !important; /* Dark Green Background */
+            border: 5px solid #10b981 !important;
+            border-radius: 20px !important;
+            padding: 30px !important;
+            margin-bottom: 50px !important;
+            font-size: 60pt !important;
+            font-weight: 900 !important;
+            box-shadow: 0 8px 25px rgba(6, 78, 59, 0.4) !important;
+        }
+        .part-header {
+            color: #7f1d1d !important;
+            background-color: #fee2e2 !important;
+            border-left: 18px solid #b91c1c !important;
+            padding: 22px 28px !important;
+            border-radius: 14px !important;
+            font-size: 46pt !important;
+            font-weight: 900 !important;
+            margin-top: 40px !important;
+            margin-bottom: 35px !important;
+            box-shadow: 0 6px 15px rgba(0,0,0,0.08) !important;
+        }
+        .topic-header, h2.sub-header {
+            color: #1e3a8a !important;
+            background-color: #eff6ff !important;
+            border-left: 16px solid #2563eb !important;
+            padding: 20px 26px !important;
+            border-radius: 12px !important;
+            font-size: 38pt !important;
+            font-weight: 900 !important;
+            margin-top: 45px !important;
+            margin-bottom: 30px !important;
+        }
+        .subtopic-header {
+            color: #4c1d95 !important;
+            background-color: #f3e8ff !important;
+            border-left: 14px solid #7c3aed !important;
+            padding: 18px 24px !important;
+            border-radius: 10px !important;
+            font-size: 32pt !important;
+            font-weight: 900 !important;
+            margin-top: 40px !important;
+            margin-bottom: 25px !important;
+        }
+        .box-header {
+            color: #166534 !important;
+            background-color: #f0fdf4 !important;
+            border-left: 12px solid #16a34a !important;
+            padding: 16px 20px !important;
+            border-radius: 10px !important;
+            font-size: 30pt !important;
+            font-weight: 900 !important;
+        }
+        /* Highlights */
+        b, strong {
+            color: #b91c1c !important; /* Dark Red */
+            font-weight: 900 !important;
+        }
+        .blue-highlight, b.blue-text, strong.blue-text {
+            color: #1e3a8a !important;
+        }
+        .keyword-box, .story-box, .highlight-box {
+            font-size: 28pt !important;
+            line-height: 1.8 !important;
+            padding: 25px !important;
+            margin: 30px 0 !important;
+        }
+        .illustration-box { border: 4px solid #cbd5e1 !important; border-radius: 12px; padding: 20px; background-color: #ffffff; margin-top: 25px; }
+        .illustration-explanation { border-left: 6px solid #cbd5e1 !important; padding-left: 15px; font-size: 28pt !important; line-height: 1.6 !important; text-align: left; margin-top: 15px; }
+
+
         .ch7-content { font-family: 'Arial', sans-serif; line-height: 2.2; font-size: 24pt; color: #000000; padding: 40px; }
         .section-header { color: #b91c1c; border-bottom: 5px solid #ef4444; padding-bottom: 15px; font-size: 40pt; margin-bottom: 30px; font-weight: 900; }
         .sub-header { color: #1e3a8a; font-size: 38pt; margin-top: 50px; font-weight: 900; }
@@ -54,123 +229,197 @@
     </style>
 </head>
 <body>
-    <div class="ch7-content">
-        <h1 class="section-header">अध्याय 7: वैश्वीकरण - भाग 1 (परिचय, ऐतिहासिक पृष्ठभूमि एवं वैश्विक प्रवाह)</h1>
-        
-        <p>समकालीन विश्व-राजनीति का सबसे प्रभावशाली, जटिल और बहुचर्चित आयाम <span class="highlight-red">वैश्वीकरण (Globalization)</span> है। यह एक ऐसी प्रक्रिया है जिसने भौगोलिक सीमाओं, राष्ट्रीय दूरियों और राजनीतिक दीवारों को समेटकर पूरी दुनिया को एक <span class="highlight-blue">'वैश्विक गाँव' (Global Village)</span> में तब्दील कर दिया है।</p>
-
-        <!-- NCERT Intro Collage Box -->
-        <div class="illustration-box" style="border: 10px solid #000000 !important; margin-top: 35px; margin-bottom: 35px; border-radius: 12px; text-align: center; background-color: #ffffff;">
-            <img alt="Globalization Intro Collage" src="images/ch7/page_1_intro_collage.webp" style="width: 100%; max-width: 550px; height: auto; display: block; margin: 20px auto; border: 10px solid #cbd5e1 !important; border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.15);" class="illustration-img"/>
-            <div class="illustration-explanation" style="border-left: 20px solid #b91c1c !important; background: #fff5f5; padding: 25px; font-size: 24pt !important; text-align: justify; line-height: 1.8;">
+<div class="ch7-content">
+<h1 class="section-header hero-title">अध्याय 7: वैश्वीकरण - भाग 1 (परिचय, ऐतिहासिक पृष्ठभूमि एवं वैश्विक प्रवाह)</h1>
+<p>समकालीन विश्व-राजनीति का सबसे प्रभावशाली, जटिल और बहुचर्चित आयाम <span class="highlight-red">वैश्वीकरण (Globalization)</span> है। यह एक ऐसी प्रक्रिया है जिसने भौगोलिक सीमाओं, राष्ट्रीय दूरियों और राजनीतिक दीवारों को समेटकर पूरी दुनिया को एक <span class="highlight-blue">'वैश्विक गाँव' (Global Village)</span> में तब्दील कर दिया है।</p>
+<!-- NCERT Intro Collage Box -->
+<div class="illustration-box" style="border: 10px solid #000000 !important; margin-top: 35px; margin-bottom: 35px; border-radius: 12px; text-align: center; background-color: #ffffff;">
+<img alt="Globalization Intro Collage" class="illustration-img" src="images/ch7/page_1_intro_collage.webp" style="width: 100%; max-width: 550px; height: auto; display: block; margin: 20px auto; border: 10px solid #cbd5e1 !important; border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.15);"/>
+<div class="illustration-explanation" style="border-left: 20px solid #b91c1c !important; background: #fff5f5; padding: 25px;  text-align: justify; line-height: 1.8;">
                 चित्र में अंतर्राष्ट्रीय संचार तकनीकों, बहुराष्ट्रीय कंपनियों के वैश्विक नेटवर्क, शेयर बाजारों की धड़कन और दुनिया भर में माल, सेवाओं व विचारों के त्वरित आदान-प्रदान को दर्शाया गया है। यह स्पष्ट करता है कि वैश्वीकरण ने संपूर्ण पृथ्वी को एक एकीकृत 'वैश्विक गाँव' (Global Village) में बदल दिया है जहाँ दुनिया के किसी भी कोने में घटित घटना का असर वैश्विक स्तर पर पड़ता है।
             </div>
-        </div>
-
-        <h2 class="sub-header">1. वैश्वीकरण की अवधारणा: बहु-आयामी प्रक्रिया</h2>
-        <p>वैश्वीकरण कोई एकांकी घटना या केवल आर्थिक लेनदेन नहीं है, बल्कि यह एक <b class="highlight-red">बहु-आयामी (Multi-dimensional)</b> प्रक्रिया है। इसके मुख्य तीन आयाम हैं:</p>
-        <ul style="list-style-type: square; margin-left: 40px; font-size: 24pt;">
-            <li><b class="highlight-red">1. राजनीतिक आयाम (Political Dimension):</b> राज्य की संप्रभुता, कल्याणकारी भूमिका और शासन क्षमता में परिवर्तन।</li>
-            <li><b class="highlight-blue">2. आर्थिक आयाम (Economic Dimension):</b> अंतर्राष्ट्रीय व्यापार, निवेश, बहुराष्ट्रीय कंपनियों और पूंजी का प्रवाह।</li>
-            <li><b class="highlight-red">3. सांस्कृतिक आयाम (Cultural Dimension):</b> खान-पान, पहनावे, संगीत और जीवनशैली में वैश्विक समरूपता व सम्मिश्रण।</li>
-        </ul>
-
-        <h2 class="sub-header">2. वैश्वीकरण को समझने के लिए तीन NCERT केस स्टडी (व्यावहारिक उदाहरण)</h2>
-        <p>एनसीईआरटी पाठ्यपुस्तक में वैश्वीकरण के विभिन्न प्रभावों को स्पष्ट करने के लिए तीन जीवन-केस प्रस्तुत किए गए हैं:</p>
-        
-        <div class="story-box">
-            <ol style="margin-left: 30px; line-height: 2.0;">
-                <li><b class="highlight-blue">जनार्दन की कहानी (आउटसोर्सिंग व कॉल सेंटर सेवा):</b> जनार्दन एक कॉल सेंटर में कार्य करता है। वह रात में अमेरिकी ग्राहकों को सेवा देने के लिए अपना नाम 'जॉन' रख लेता है और अमेरिकी लहजे में अंग्रेजी बोलता है। वह भारत में बैठकर हजारों मील दूर अमेरिका के उपभोक्ताओं की तकनीकी समस्याएं सुलझाता है। यह सेवाओं और अंतर्राष्ट्रीय श्रम के वैश्वीकरण का प्रत्यक्ष उदाहरण है।</li>
-                <li><b class="highlight-red">रामधारी की कहानी (वैश्विक वस्तुएं व बाजार एकीकरण):</b> रामधारी अपनी बेटी के जन्मदिन पर एक साइकिल उपहार में देना चाहता है। वह बाजार में जाकर चीन में बनी साइकिल खरीदता है जो गुणवत्ता में अच्छी और भारतीय बाजार में काफी सस्ती दर पर उपलब्ध है। यह वस्तुओं और अंतर्राष्ट्रीय व्यापार के प्रवाह का उदाहरण है।</li>
-                <li><b class="highlight-blue">बालिका की कहानी (सांस्कृतिक पसंद व वैश्वीकरण):</b> एक नवयुवती स्कूली परीक्षा में अव्वल आने की खुशी में अपनी पारंपरिक पोशाक के बजाय जींस और टी-शर्ट पहनकर उत्सव मनाती है। यह सांस्कृतिक प्राथमिकताओं और पश्चिमी जीवनशैली के वैश्विक प्रभाव को दर्शाता है।</li>
-            </ol>
-        </div>
-
-        <!-- User Uploaded Call Center Story Box -->
-        <div class="illustration-box" style="border: 10px solid #000000 !important; margin-top: 35px; margin-bottom: 35px; border-radius: 12px; text-align: center; background-color: #ffffff;">
-            <img alt="Call Center Night Shift Outsourcing Illustration" src="images/ch7/call_center_outsourcing_user.webp" style="width: 100%; max-width: 650px; height: auto; display: block; margin: 20px auto; border: 10px solid #cbd5e1 !important; border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.15);" class="illustration-img"/>
-            <div class="illustration-explanation" style="border-left: 20px solid #1e3a8a !important; background: #eff6ff; padding: 25px; font-size: 24pt !important; text-align: justify; line-height: 1.8;">
+</div>
+<h2 class="sub-header topic-header">1. वैश्वीकरण की अवधारणा: बहु-आयामी प्रक्रिया</h2>
+<p>वैश्वीकरण कोई एकांकी घटना या केवल आर्थिक लेनदेन नहीं है, बल्कि यह एक <b class="highlight-red">बहु-आयामी (Multi-dimensional)</b> प्रक्रिया है। इसके मुख्य तीन आयाम हैं:</p>
+<ul style="list-style-type: square; margin-left: 40px; ">
+<li><b class="highlight-red">1. राजनीतिक आयाम (Political Dimension):</b> राज्य की संप्रभुता, कल्याणकारी भूमिका और शासन क्षमता में परिवर्तन।</li>
+<li><b class="highlight-blue">2. आर्थिक आयाम (Economic Dimension):</b> अंतर्राष्ट्रीय व्यापार, निवेश, बहुराष्ट्रीय कंपनियों और पूंजी का प्रवाह।</li>
+<li><b class="highlight-red">3. सांस्कृतिक आयाम (Cultural Dimension):</b> खान-पान, पहनावे, संगीत और जीवनशैली में वैश्विक समरूपता व सम्मिश्रण।</li>
+</ul>
+<h2 class="sub-header topic-header">2. वैश्वीकरण को समझने के लिए तीन NCERT केस स्टडी (व्यावहारिक उदाहरण)</h2>
+<p>एनसीईआरटी पाठ्यपुस्तक में वैश्वीकरण के विभिन्न प्रभावों को स्पष्ट करने के लिए तीन जीवन-केस प्रस्तुत किए गए हैं:</p>
+<div class="story-box">
+<ol style="margin-left: 30px; line-height: 2.0;">
+<li><b class="highlight-blue">जनार्दन की कहानी (आउटसोर्सिंग व कॉल सेंटर सेवा):</b> जनार्दन एक कॉल सेंटर में कार्य करता है। वह रात में अमेरिकी ग्राहकों को सेवा देने के लिए अपना नाम 'जॉन' रख लेता है और अमेरिकी लहजे में अंग्रेजी बोलता है। वह भारत में बैठकर हजारों मील दूर अमेरिका के उपभोक्ताओं की तकनीकी समस्याएं सुलझाता है। यह सेवाओं और अंतर्राष्ट्रीय श्रम के वैश्वीकरण का प्रत्यक्ष उदाहरण है।</li>
+<li><b class="highlight-red">रामधारी की कहानी (वैश्विक वस्तुएं व बाजार एकीकरण):</b> रामधारी अपनी बेटी के जन्मदिन पर एक साइकिल उपहार में देना चाहता है। वह बाजार में जाकर चीन में बनी साइकिल खरीदता है जो गुणवत्ता में अच्छी और भारतीय बाजार में काफी सस्ती दर पर उपलब्ध है। यह वस्तुओं और अंतर्राष्ट्रीय व्यापार के प्रवाह का उदाहरण है।</li>
+<li><b class="highlight-blue">बालिका की कहानी (सांस्कृतिक पसंद व वैश्वीकरण):</b> एक नवयुवती स्कूली परीक्षा में अव्वल आने की खुशी में अपनी पारंपरिक पोशाक के बजाय जींस और टी-शर्ट पहनकर उत्सव मनाती है। यह सांस्कृतिक प्राथमिकताओं और पश्चिमी जीवनशैली के वैश्विक प्रभाव को दर्शाता है।</li>
+</ol>
+</div>
+<!-- User Uploaded Call Center Story Box -->
+<div class="illustration-box" style="border: 10px solid #000000 !important; margin-top: 35px; margin-bottom: 35px; border-radius: 12px; text-align: center; background-color: #ffffff;">
+<img alt="Call Center Night Shift Outsourcing Illustration" class="illustration-img" src="images/ch7/call_center_outsourcing_user.webp" style="width: 100%; max-width: 650px; height: auto; display: block; margin: 20px auto; border: 10px solid #cbd5e1 !important; border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.15);"/>
+<div class="illustration-explanation" style="border-left: 20px solid #1e3a8a !important; background: #eff6ff; padding: 25px;  text-align: justify; line-height: 1.8;">
                 इस डिजिटल चित्र में भारतीय युवा रात के समय कॉल सेंटर में काम करते दिखाए गए हैं —
-                <br>• कंप्यूटर स्क्रीन की रोशनी में ध्यानपूर्वक काम करते कर्मचारी
-                <br>• दीवार पर विश्व‑घड़ी और टाइम‑ज़ोन चार्ट (न्यूयॉर्क, लंदन, सिडनी)
-                <br>• खिड़की के बाहर जगमगाता शहर और आसमान में उड़ता विमान
-                <br>यह दृश्य वैश्वीकरण और आउटसोर्सिंग के युग में भारत की नई भूमिका को दर्शाता है — जहाँ भारतीय युवा विश्व सेवा व्यापार का अहम हिस्सा बन चुके हैं।
+                <br/>• कंप्यूटर स्क्रीन की रोशनी में ध्यानपूर्वक काम करते कर्मचारी
+                <br/>• दीवार पर विश्व‑घड़ी और टाइम‑ज़ोन चार्ट (न्यूयॉर्क, लंदन, सिडनी)
+                <br/>• खिड़की के बाहर जगमगाता शहर और आसमान में उड़ता विमान
+                <br/>यह दृश्य वैश्वीकरण और आउटसोर्सिंग के युग में भारत की नई भूमिका को दर्शाता है — जहाँ भारतीय युवा विश्व सेवा व्यापार का अहम हिस्सा बन चुके हैं।
             </div>
-        </div>
-
-        <h2 class="sub-header">3. वैश्वीकरण का मूल अर्थ और 'विश्वसनीय प्रवाह के चार रूप'</h2>
-        <p>वैश्वीकरण की मूल आत्मा <b class="highlight-red">विश्वसनीय प्रवाह (Interconnected Flows)</b> में निहित है। जब ये प्रवाह निरंतर और व्यापक पैमाने पर होते हैं, तो यह वैश्वीकरण का निर्माण करते हैं:</p>
-        
-        <div class="keyword-box">
-            <b class="highlight-red">वैश्विक प्रवाह के चार प्रमुख रूप:</b>
-            <ul style="margin-left: 30px; line-height: 2.0; font-size: 24pt;">
-                <li><b class="highlight-blue">1. विचारों का प्रवाह (Flow of Ideas):</b> इंटरनेट, सोशल मीडिया और संचार नेटवर्क के माध्यम से विचारों, सिद्धांतों और ज्ञान का दुनिया भर में त्वरित प्रसार।</li>
-                <li><b class="highlight-red">2. पूंजी का प्रवाह (Flow of Capital):</b> अंतर्राष्ट्रीय निवेशकों, बैंकों और शेयर बाजारों के जरिए पैसे और निवेश (FDI & FII) का एक देश से दूसरे देश में हस्तांतरण।</li>
-                <li><b class="highlight-blue">3. वस्तुओं का प्रवाह (Flow of Goods):</b> विभिन्न देशों में बनी निर्मित वस्तुओं और कच्चे माल का अंतर्राष्ट्रीय सीमाओं के पार व्यापार।</li>
-                <li><b class="highlight-red">4. लोगों का प्रवाह (Flow of People):</b> बेहतर आजीविका, रोजगार, शिक्षा और सुरक्षा की तलाश में व्यक्तियों का एक देश से दूसरे देश में आव्रजन (Migration)।</li>
-            </ul>
-        </div>
-
-        <!-- NEW HD HISTORICAL TRADE SILK ROUTE ILLUSTRATION -->
-        <div class="illustration-box" style="border: 10px solid #000000 !important; margin-top: 35px; margin-bottom: 35px; border-radius: 12px; text-align: center; background-color: #ffffff;">
-            <img alt="Historical Trade Silk Route HD Illustration" src="images/ch7/ch7_hd_historical_trade_silkroute.webp" style="width: 100%; max-width: 650px; height: auto; display: block; margin: 20px auto; border: 10px solid #cbd5e1 !important; border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.15);" class="illustration-img"/>
-            <div class="illustration-explanation" style="border-left: 20px solid #b91c1c !important; background: #fff5f5; padding: 25px; font-size: 24pt !important; text-align: justify; line-height: 1.8;">
+</div>
+<h2 class="sub-header topic-header">3. वैश्वीकरण का मूल अर्थ और 'विश्वसनीय प्रवाह के चार रूप'</h2>
+<p>वैश्वीकरण की मूल आत्मा <b class="highlight-red">विश्वसनीय प्रवाह (Interconnected Flows)</b> में निहित है। जब ये प्रवाह निरंतर और व्यापक पैमाने पर होते हैं, तो यह वैश्वीकरण का निर्माण करते हैं:</p>
+<div class="keyword-box">
+<b class="highlight-red">वैश्विक प्रवाह के चार प्रमुख रूप:</b>
+<ul style="margin-left: 30px; line-height: 2.0; ">
+<li><b class="highlight-blue">1. विचारों का प्रवाह (Flow of Ideas):</b> इंटरनेट, सोशल मीडिया और संचार नेटवर्क के माध्यम से विचारों, सिद्धांतों और ज्ञान का दुनिया भर में त्वरित प्रसार।</li>
+<li><b class="highlight-red">2. पूंजी का प्रवाह (Flow of Capital):</b> अंतर्राष्ट्रीय निवेशकों, बैंकों और शेयर बाजारों के जरिए पैसे और निवेश (FDI &amp; FII) का एक देश से दूसरे देश में हस्तांतरण।</li>
+<li><b class="highlight-blue">3. वस्तुओं का प्रवाह (Flow of Goods):</b> विभिन्न देशों में बनी निर्मित वस्तुओं और कच्चे माल का अंतर्राष्ट्रीय सीमाओं के पार व्यापार।</li>
+<li><b class="highlight-red">4. लोगों का प्रवाह (Flow of People):</b> बेहतर आजीविका, रोजगार, शिक्षा और सुरक्षा की तलाश में व्यक्तियों का एक देश से दूसरे देश में आव्रजन (Migration)।</li>
+</ul>
+</div>
+<!-- NEW HD HISTORICAL TRADE SILK ROUTE ILLUSTRATION -->
+<div class="illustration-box" style="border: 10px solid #000000 !important; margin-top: 35px; margin-bottom: 35px; border-radius: 12px; text-align: center; background-color: #ffffff;">
+<img alt="Historical Trade Silk Route HD Illustration" class="illustration-img" src="images/ch7/ch7_hd_historical_trade_silkroute.webp" style="width: 100%; max-width: 650px; height: auto; display: block; margin: 20px auto; border: 10px solid #cbd5e1 !important; border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.15);"/>
+<div class="illustration-explanation" style="border-left: 20px solid #b91c1c !important; background: #fff5f5; padding: 25px;  text-align: justify; line-height: 1.8;">
                 वैश्वीकरण का ऐतिहासिक विकासक्रम आरेख — प्राचीन काल के रेशम मार्ग (Silk Route) के ऊँट कारवां व्यापार, मसालों के अंतर्राष्ट्रीय व्यापार और औपनिवेशिक काल के संसाधनों के दोहन से लेकर 21वीं सदी के विशाल मालवाहक जहाजों, आधुनिक सैटेलाइट्स और फाइबर-ऑप्टिक इंटरनेट नेटवर्क तक के बदलाव का चित्रांकन। यह दर्शाता है कि वैश्वीकरण की जड़ें इतिहास में बहुत पुरानी हैं, लेकिन आज इसकी गति और सीमा अभूतपूर्व है।
             </div>
-        </div>
-
-        <h2 class="sub-header">4. वैश्वीकरण की ऐतिहासिक पृष्ठभूमि (Historical Roots)</h2>
-        <p>वैश्वीकरण कोई 21वीं सदी की अचानक उत्पन्न हुई परिघटना नहीं है:</p>
-        <ul style="list-style-type: disc; margin-left: 40px; font-size: 24pt;">
-            <li><b class="highlight-red">प्राचीन व मध्यकालीन रेशम मार्ग (Silk Route):</b> प्राचीन काल में एशिया, यूरोप और अफ्रीका के बीच मसालों, रेशम और विचारों का व्यापार होता था।</li>
-            <li><b class="highlight-blue">औपनिवेशिक काल:</b> ब्रिटेन ने भारत से कच्चा माल (कपास, नील) इंग्लैंड भेजा और वहाँ से बने कपड़ों को भारतीय बाजारों में बेचा।</li>
-            <li><b class="highlight-red">समकालीन वैश्वीकरण की विशिष्टता:</b> आज का वैश्वीकरण अतीत से अलग इसलिए है क्योंकि इसमें प्रवाह की <i class="highlight-blue">गति (Speed)</i> और <i class="highlight-blue">व्यापकता (Scale)</i> अभूतपूर्व है।</li>
-        </ul>
-
-        <!-- Generated HD Global Flows Illustration -->
-        <div class="illustration-box" style="border: 10px solid #000000 !important; margin-top: 35px; margin-bottom: 35px; border-radius: 12px; text-align: center; background-color: #ffffff;">
-            <img alt="Global Flows HD Illustration" src="images/ch7/ch7_hd_global_flows.webp" style="width: 100%; max-width: 650px; height: auto; display: block; margin: 20px auto; border: 10px solid #cbd5e1 !important; border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.15);" class="illustration-img"/>
-            <div class="illustration-explanation" style="border-left: 20px solid #b91c1c !important; background: #fff5f5; padding: 25px; font-size: 24pt !important; text-align: justify; line-height: 1.8;">
+</div>
+<h2 class="sub-header topic-header">4. वैश्वीकरण की ऐतिहासिक पृष्ठभूमि (Historical Roots)</h2>
+<p>वैश्वीकरण कोई 21वीं सदी की अचानक उत्पन्न हुई परिघटना नहीं है:</p>
+<ul style="list-style-type: disc; margin-left: 40px; ">
+<li><b class="highlight-red">प्राचीन व मध्यकालीन रेशम मार्ग (Silk Route):</b> प्राचीन काल में एशिया, यूरोप और अफ्रीका के बीच मसालों, रेशम और विचारों का व्यापार होता था।</li>
+<li><b class="highlight-blue">औपनिवेशिक काल:</b> ब्रिटेन ने भारत से कच्चा माल (कपास, नील) इंग्लैंड भेजा और वहाँ से बने कपड़ों को भारतीय बाजारों में बेचा।</li>
+<li><b class="highlight-red">समकालीन वैश्वीकरण की विशिष्टता:</b> आज का वैश्वीकरण अतीत से अलग इसलिए है क्योंकि इसमें प्रवाह की <i class="highlight-blue">गति (Speed)</i> और <i class="highlight-blue">व्यापकता (Scale)</i> अभूतपूर्व है।</li>
+</ul>
+<!-- Generated HD Global Flows Illustration -->
+<div class="illustration-box" style="border: 10px solid #000000 !important; margin-top: 35px; margin-bottom: 35px; border-radius: 12px; text-align: center; background-color: #ffffff;">
+<img alt="Global Flows HD Illustration" class="illustration-img" src="images/ch7/ch7_hd_global_flows.webp" style="width: 100%; max-width: 650px; height: auto; display: block; margin: 20px auto; border: 10px solid #cbd5e1 !important; border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.15);"/>
+<div class="illustration-explanation" style="border-left: 20px solid #b91c1c !important; background: #fff5f5; padding: 25px;  text-align: justify; line-height: 1.8;">
                 डिजिटल पृथ्वी के चारों ओर वैश्वीकरण के चार मुख्य प्रवाहों का विस्तृत चित्रांकन —
-                <br>1. **विचारों का प्रवाह:** ज्ञान, तकनीकी जानकारी और डेटा का वैश्विक प्रसार।
-                <br>2. **पूंजी का प्रवाह:** अंतर्राष्ट्रीय बैंकों, निवेशकों और शेयर बाजारों द्वारा विदेशी प्रत्यक्ष निवेश (FDI)।
-                <br>3. **वस्तुओं का प्रवाह:** विभिन्न देशों में निर्मित उत्पादों का अंतर्राष्ट्रीय सीमाओं के पार व्यापार।
-                <br>4. **जन-समूह का प्रवाह:** आजीविका, उच्च शिक्षा और अवसरों के लिए अंतर्राष्ट्रीय प्रवास।
+                <br/>1. **विचारों का प्रवाह:** ज्ञान, तकनीकी जानकारी और डेटा का वैश्विक प्रसार।
+                <br/>2. **पूंजी का प्रवाह:** अंतर्राष्ट्रीय बैंकों, निवेशकों और शेयर बाजारों द्वारा विदेशी प्रत्यक्ष निवेश (FDI)।
+                <br/>3. **वस्तुओं का प्रवाह:** विभिन्न देशों में निर्मित उत्पादों का अंतर्राष्ट्रीय सीमाओं के पार व्यापार।
+                <br/>4. **जन-समूह का प्रवाह:** आजीविका, उच्च शिक्षा और अवसरों के लिए अंतर्राष्ट्रीय प्रवास।
             </div>
-        </div>
-
-        <!-- NCERT Global Flows Cartoon Box -->
-        <div class="illustration-box" style="border: 10px solid #000000 !important; margin-top: 35px; margin-bottom: 35px; border-radius: 12px; text-align: center; background-color: #ffffff;">
-            <img alt="NCERT Global Flows Cartoon" src="images/ch7/page_3_global_flows.webp" style="width: 100%; max-width: 550px; height: auto; display: block; margin: 20px auto; border: 10px solid #cbd5e1 !important; border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.15);" class="illustration-img"/>
-            <div class="illustration-explanation" style="border-left: 20px solid #1e3a8a !important; background: #eff6ff; padding: 25px; font-size: 24pt !important; text-align: justify; line-height: 1.8;">
+</div>
+<!-- NCERT Global Flows Cartoon Box -->
+<div class="illustration-box" style="border: 10px solid #000000 !important; margin-top: 35px; margin-bottom: 35px; border-radius: 12px; text-align: center; background-color: #ffffff;">
+<img alt="NCERT Global Flows Cartoon" class="illustration-img" src="images/ch7/page_3_global_flows.webp" style="width: 100%; max-width: 550px; height: auto; display: block; margin: 20px auto; border: 10px solid #cbd5e1 !important; border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.15);"/>
+<div class="illustration-explanation" style="border-left: 20px solid #1e3a8a !important; background: #eff6ff; padding: 25px;  text-align: justify; line-height: 1.8;">
                 एनसीईआरटी चित्र विश्लेषण — बाजार में बिक रहे चीन निर्मित खिलौने और इलेक्ट्रॉनिक्स उत्पाद जो वैश्वीकरण के अंतर्गत वस्तुओं और अंतर्राष्ट्रीय व्यापार के अबाध प्रवाह को दर्शाते हैं। यह दिखाता है कि कैसे विदेशी उत्पाद स्थानीय बाजारों में पहुंचकर उपभोक्ताओं को विकल्प प्रदान करते हैं, भले ही इससे स्थानीय उद्योगों के सामने प्रतिस्पर्धा की चुनौती खड़ी होती है।
             </div>
-        </div>
-
-        <h2 class="sub-header">5. वैश्वीकरण के मुख्य प्रेरक कारण (Causes of Globalization)</h2>
-        <p>वैश्वीकरण के विस्तार के पीछे निम्नलिखित निर्णायक कारक जिम्मेदार हैं:</p>
-        <ul style="list-style-type: square; margin-left: 40px; font-size: 24pt;">
-            <li><b class="highlight-red">प्रौद्योगिकी और संचार क्रांति:</b> टेलीग्राफ, टेलीफोन, माइक्रोचिप, कंप्यूटर और इंटरनेट के आविष्कार ने दूरियों को अर्थहीन कर दिया।</li>
-            <li><b class="highlight-blue">विश्वव्यापी पारस्परिक जुड़ाव (Interconnectedness):</b> एक देश में घटने वाली घटना (जैसे महामारी या आर्थिक मंदी) का प्रभाव तुरंत दुनिया के दूसरे हिस्से में महसूस किया जाता है।</li>
-            <li><b class="highlight-red">परिवहन क्रांति:</b> बड़े मालवाहक जहाजों (Container Ships) और जेट उड़ानों ने माल ढुलाई की समय सीमा और लागत को न्यूनतम कर दिया।</li>
-        </ul>
-
-        <!-- NCERT Imperialism Cartoon Box -->
-        <div class="illustration-box" style="border: 10px solid #000000 !important; margin-top: 35px; margin-bottom: 35px; border-radius: 12px; text-align: center; background-color: #ffffff;">
-            <img alt="Imperialism vs Globalization Cartoon" src="images/ch7/page_4_imperialism_cartoon.webp" style="width: 100%; max-width: 550px; height: auto; display: block; margin: 20px auto; border: 10px solid #cbd5e1 !important; border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.15);" class="illustration-img"/>
-            <div class="illustration-explanation" style="border-left: 20px solid #b91c1c !important; background: #fff5f5; padding: 25px; font-size: 24pt !important; text-align: justify; line-height: 1.8;">
+</div>
+<h2 class="sub-header topic-header">5. वैश्वीकरण के मुख्य प्रेरक कारण (Causes of Globalization)</h2>
+<p>वैश्वीकरण के विस्तार के पीछे निम्नलिखित निर्णायक कारक जिम्मेदार हैं:</p>
+<ul style="list-style-type: square; margin-left: 40px; ">
+<li><b class="highlight-red">प्रौद्योगिकी और संचार क्रांति:</b> टेलीग्राफ, टेलीफोन, माइक्रोचिप, कंप्यूटर और इंटरनेट के आविष्कार ने दूरियों को अर्थहीन कर दिया।</li>
+<li><b class="highlight-blue">विश्वव्यापी पारस्परिक जुड़ाव (Interconnectedness):</b> एक देश में घटने वाली घटना (जैसे महामारी या आर्थिक मंदी) का प्रभाव तुरंत दुनिया के दूसरे हिस्से में महसूस किया जाता है।</li>
+<li><b class="highlight-red">परिवहन क्रांति:</b> बड़े मालवाहक जहाजों (Container Ships) और जेट उड़ानों ने माल ढुलाई की समय सीमा और लागत को न्यूनतम कर दिया।</li>
+</ul>
+<!-- NCERT Imperialism Cartoon Box -->
+<div class="illustration-box" style="border: 10px solid #000000 !important; margin-top: 35px; margin-bottom: 35px; border-radius: 12px; text-align: center; background-color: #ffffff;">
+<img alt="Imperialism vs Globalization Cartoon" class="illustration-img" src="images/ch7/page_4_imperialism_cartoon.webp" style="width: 100%; max-width: 550px; height: auto; display: block; margin: 20px auto; border: 10px solid #cbd5e1 !important; border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.15);"/>
+<div class="illustration-explanation" style="border-left: 20px solid #b91c1c !important; background: #fff5f5; padding: 25px;  text-align: justify; line-height: 1.8;">
                 "क्या साम्राज्यवाद का ही नया नाम वैश्वीकरण है?"—यह व्यंग्यात्मक कार्टून पश्चिमी शक्तियों और विकसित देशों द्वारा बहुराष्ट्रीय निगमों (MNCs) के माध्यम से गरीब और विकासशील देशों पर स्थापित किए जा रहे आर्थिक व सांस्कृतिक नव-औपनिवेशिक नियंत्रण पर तीखा कटाक्ष करता है।
             </div>
-        </div>
-    </div>
+</div>
+</div>
 </body>
 </html>
-
 <!DOCTYPE html>
+
 <html lang="hi">
 <head>
-    <meta charset="UTF-8">
-    <style>
+<meta charset="utf-8"/>
+<style>
+        p, li, h1, h2, h3, h4, b, strong, td, th {
+            font-weight: 900 !important;
+            -webkit-text-stroke: 1.1px #000000;
+            text-shadow: 0 0 1px #000;
+        }
+        body, p, li, td, th, div, span {
+            font-size: 28pt !important;
+            line-height: 1.8 !important;
+        }
+        .ch7-content {
+            font-size: 28pt !important;
+            line-height: 1.8 !important;
+            padding: 10px !important;
+        }
+        /* Projector Banner Styles for Headings */
+        .hero-title, h1.section-header {
+            text-align: center !important;
+            color: #ffffff !important;
+            background-color: #064e3b !important; /* Dark Green Background */
+            border: 5px solid #10b981 !important;
+            border-radius: 20px !important;
+            padding: 30px !important;
+            margin-bottom: 50px !important;
+            font-size: 60pt !important;
+            font-weight: 900 !important;
+            box-shadow: 0 8px 25px rgba(6, 78, 59, 0.4) !important;
+        }
+        .part-header {
+            color: #7f1d1d !important;
+            background-color: #fee2e2 !important;
+            border-left: 18px solid #b91c1c !important;
+            padding: 22px 28px !important;
+            border-radius: 14px !important;
+            font-size: 46pt !important;
+            font-weight: 900 !important;
+            margin-top: 40px !important;
+            margin-bottom: 35px !important;
+            box-shadow: 0 6px 15px rgba(0,0,0,0.08) !important;
+        }
+        .topic-header, h2.sub-header {
+            color: #1e3a8a !important;
+            background-color: #eff6ff !important;
+            border-left: 16px solid #2563eb !important;
+            padding: 20px 26px !important;
+            border-radius: 12px !important;
+            font-size: 38pt !important;
+            font-weight: 900 !important;
+            margin-top: 45px !important;
+            margin-bottom: 30px !important;
+        }
+        .subtopic-header {
+            color: #4c1d95 !important;
+            background-color: #f3e8ff !important;
+            border-left: 14px solid #7c3aed !important;
+            padding: 18px 24px !important;
+            border-radius: 10px !important;
+            font-size: 32pt !important;
+            font-weight: 900 !important;
+            margin-top: 40px !important;
+            margin-bottom: 25px !important;
+        }
+        .box-header {
+            color: #166534 !important;
+            background-color: #f0fdf4 !important;
+            border-left: 12px solid #16a34a !important;
+            padding: 16px 20px !important;
+            border-radius: 10px !important;
+            font-size: 30pt !important;
+            font-weight: 900 !important;
+        }
+        /* Highlights */
+        b, strong {
+            color: #b91c1c !important; /* Dark Red */
+            font-weight: 900 !important;
+        }
+        .blue-highlight, b.blue-text, strong.blue-text {
+            color: #1e3a8a !important;
+        }
+        .keyword-box, .story-box, .highlight-box {
+            font-size: 28pt !important;
+            line-height: 1.8 !important;
+            padding: 25px !important;
+            margin: 30px 0 !important;
+        }
+        .illustration-box { border: 4px solid #cbd5e1 !important; border-radius: 12px; padding: 20px; background-color: #ffffff; margin-top: 25px; }
+        .illustration-explanation { border-left: 6px solid #cbd5e1 !important; padding-left: 15px; font-size: 28pt !important; line-height: 1.6 !important; text-align: left; margin-top: 15px; }
+
+
         .ch7-content { font-family: 'Arial', sans-serif; line-height: 2.2; font-size: 24pt; color: #000000; padding: 40px; }
         .section-header { color: #b91c1c; border-bottom: 5px solid #ef4444; padding-bottom: 15px; font-size: 40pt; margin-bottom: 30px; font-weight: 900; }
         .sub-header { color: #1e3a8a; font-size: 38pt; margin-top: 50px; font-weight: 900; }
@@ -186,53 +435,134 @@
     </style>
 </head>
 <body>
-    <div class="ch7-content">
-        <h1 class="section-header">अध्याय 7: वैश्वीकरण - भाग 2 (वैश्वीकरण के राजनीतिक प्रभाव)</h1>
-        
-        <p>वैश्वीकरण का प्रभाव केवल अर्थव्यवस्था तक सीमित नहीं है, बल्कि इसने राष्ट्र-राज्यों की राजनीतिक व्यवस्था, सरकार के कार्यों और राज्य की संप्रभुता को गहराई से प्रभावित किया है।</p>
-
-        <!-- Generated HD Political Impact Illustration -->
-        <div class="illustration-box" style="border: 10px solid #000000 !important; margin-top: 35px; margin-bottom: 35px; border-radius: 12px; text-align: center; background-color: #ffffff;">
-            <img alt="Political Impact HD Illustration" src="images/ch7/ch7_hd_political_impact.webp" style="width: 100%; max-width: 650px; height: auto; display: block; margin: 20px auto; border: 10px solid #cbd5e1 !important; border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.15);" class="illustration-img"/>
-            <div class="illustration-explanation" style="border-left: 20px solid #b91c1c !important; background: #fff5f5; padding: 25px; font-size: 24pt !important; text-align: justify; line-height: 1.8;">
+<div class="ch7-content">
+<h1 class="section-header hero-title">अध्याय 7: वैश्वीकरण - भाग 2 (वैश्वीकरण के राजनीतिक प्रभाव)</h1>
+<p>वैश्वीकरण का प्रभाव केवल अर्थव्यवस्था तक सीमित नहीं है, बल्कि इसने राष्ट्र-राज्यों की राजनीतिक व्यवस्था, सरकार के कार्यों और राज्य की संप्रभुता को गहराई से प्रभावित किया है।</p>
+<!-- Generated HD Political Impact Illustration -->
+<div class="illustration-box" style="border: 10px solid #000000 !important; margin-top: 35px; margin-bottom: 35px; border-radius: 12px; text-align: center; background-color: #ffffff;">
+<img alt="Political Impact HD Illustration" class="illustration-img" src="images/ch7/ch7_hd_political_impact.webp" style="width: 100%; max-width: 650px; height: auto; display: block; margin: 20px auto; border: 10px solid #cbd5e1 !important; border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.15);"/>
+<div class="illustration-explanation" style="border-left: 20px solid #b91c1c !important; background: #fff5f5; padding: 25px;  text-align: justify; line-height: 1.8;">
                 वैश्वीकरण के राजनीतिक प्रभावों का विस्तृत तुलनात्मक चित्रांकन —
-                <br>• **कल्याणकारी राज्य का पीछे हटना:** स्वास्थ्य, शिक्षा और सामाजिक सुरक्षा की जिम्मेदारियों से राज्य का हटना और 'न्यूनतम हस्तक्षेपकारी राज्य' (Minimalist State) का बनना।
-                <br>• **तकनीक द्वारा राज्य की क्षमता में वृद्धि:** आधुनिक सूचना तकनीक, बायोमेट्रिक डेटा (जैसे आधार) और डिजिटल निगरानी के माध्यम से सरकारों की नागरिक प्रशासन और राष्ट्रीय सुरक्षा क्षमता का अधिक शक्तिशाली होना।
+                <br/>• **कल्याणकारी राज्य का पीछे हटना:** स्वास्थ्य, शिक्षा और सामाजिक सुरक्षा की जिम्मेदारियों से राज्य का हटना और 'न्यूनतम हस्तक्षेपकारी राज्य' (Minimalist State) का बनना।
+                <br/>• **तकनीक द्वारा राज्य की क्षमता में वृद्धि:** आधुनिक सूचना तकनीक, बायोमेट्रिक डेटा (जैसे आधार) और डिजिटल निगरानी के माध्यम से सरकारों की नागरिक प्रशासन और राष्ट्रीय सुरक्षा क्षमता का अधिक शक्तिशाली होना।
             </div>
-        </div>
-
-        <h2 class="sub-header">1. कल्याणकारी राज्य का ह्रास और 'न्यूनतम हस्तक्षेपकारी राज्य'</h2>
-        <p>वैश्वीकरण के कारण राज्य की अवधारणा में निम्नलिखित मुख्य राजनीतिक बदलाव आए हैं:</p>
-        
-        <ul style="list-style-type: square; margin-left: 40px; font-size: 24pt;">
-            <li><b class="highlight-red">कल्याणकारी राज्य का पीछे हटना:</b> पहले राज्य का मुख्य काम अपने नागरिकों के स्वास्थ्य, शिक्षा और सामाजिक सुरक्षा की जिम्मेदारी उठाना (Welfare State) था। वैश्वीकरण के दौर में अब राज्य कल्याणकारी कार्यों से पीछे हट रहा है।</li>
-            <li><b class="highlight-blue">न्यूनतम हस्तक्षेपकारी राज्य (Minimalist State):</b> अब राज्य की भूमिका केवल कानून-व्यवस्था बनाए रखने और आंतरिक व बाह्य सुरक्षा प्रदान करने तक सीमित होती जा रही है।</li>
-            <li><b class="highlight-red">बाजार की शक्तियों का वर्चस्व:</b> आर्थिक और सामाजिक प्राथमिकताओं का निर्धारण अब राज्य की बजाय 'बाजार की शक्तियां' (Market Forces) करती हैं।</li>
-        </ul>
-
-        <!-- NCERT Political State Cartoon Box -->
-        <div class="illustration-box" style="border: 10px solid #000000 !important; margin-top: 35px; margin-bottom: 35px; border-radius: 12px; text-align: center; background-color: #ffffff;">
-            <img alt="Political State Cartoon" src="images/ch7/page_6_political_state_cartoon.webp" style="width: 100%; max-width: 550px; height: auto; display: block; margin: 20px auto; border: 10px solid #cbd5e1 !important; border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.15);" class="illustration-img"/>
-            <div class="illustration-explanation" style="border-left: 20px solid #1e3a8a !important; background: #eff6ff; padding: 25px; font-size: 24pt !important; text-align: justify; line-height: 1.8;">
+</div>
+<h2 class="sub-header topic-header">1. कल्याणकारी राज्य का ह्रास और 'न्यूनतम हस्तक्षेपकारी राज्य'</h2>
+<p>वैश्वीकरण के कारण राज्य की अवधारणा में निम्नलिखित मुख्य राजनीतिक बदलाव आए हैं:</p>
+<ul style="list-style-type: square; margin-left: 40px; ">
+<li><b class="highlight-red">कल्याणकारी राज्य का पीछे हटना:</b> पहले राज्य का मुख्य काम अपने नागरिकों के स्वास्थ्य, शिक्षा और सामाजिक सुरक्षा की जिम्मेदारी उठाना (Welfare State) था। वैश्वीकरण के दौर में अब राज्य कल्याणकारी कार्यों से पीछे हट रहा है।</li>
+<li><b class="highlight-blue">न्यूनतम हस्तक्षेपकारी राज्य (Minimalist State):</b> अब राज्य की भूमिका केवल कानून-व्यवस्था बनाए रखने और आंतरिक व बाह्य सुरक्षा प्रदान करने तक सीमित होती जा रही है।</li>
+<li><b class="highlight-red">बाजार की शक्तियों का वर्चस्व:</b> आर्थिक और सामाजिक प्राथमिकताओं का निर्धारण अब राज्य की बजाय 'बाजार की शक्तियां' (Market Forces) करती हैं।</li>
+</ul>
+<!-- NCERT Political State Cartoon Box -->
+<div class="illustration-box" style="border: 10px solid #000000 !important; margin-top: 35px; margin-bottom: 35px; border-radius: 12px; text-align: center; background-color: #ffffff;">
+<img alt="Political State Cartoon" class="illustration-img" src="images/ch7/page_6_political_state_cartoon.webp" style="width: 100%; max-width: 550px; height: auto; display: block; margin: 20px auto; border: 10px solid #cbd5e1 !important; border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.15);"/>
+<div class="illustration-explanation" style="border-left: 20px solid #1e3a8a !important; background: #eff6ff; padding: 25px;  text-align: justify; line-height: 1.8;">
                 एनसीईआरटी कार्टून विश्लेषण — "कल और आज" के रूप में राज्य की बदलती प्राथमिकताओं का चित्रांकन। यह दर्शाता है कि पहले जहाँ राज्य अपने नागरिकों के सामाजिक कल्याण, मुफ्त शिक्षा और स्वास्थ्य पर ध्यान केंद्रित करता था, वहीं अब वैश्वीकरण के दौर में बाजार की शक्तियों के दबाव में राज्य अपनी जिम्मेदारियों को समेट रहा है।
             </div>
+</div>
+<h2 class="sub-header topic-header">2. क्या राज्य की संप्रभुता समाप्त हो गई है? (दूसरा दृष्टिकोण)</h2>
+<p>वैश्वीकरण के आलोचकों का मानना है कि राज्य कमजोर हुआ है, लेकिन एनसीईआरटी पाठ्यपुस्तक के अनुसार वैश्वीकरण के कारण राज्य समाप्त नहीं हुआ है बल्कि उसकी कार्यप्रणाली में बदलाव आया है:</p>
+<div class="keyword-box">
+<b class="highlight-red">तकनीक द्वारा राज्य की क्षमता में वृद्धि (State Capacity Enhancement):</b> आधुनिक सूचना तकनीक, बायोमेट्रिक डेटा (जैसे आधार), सैटेलाइट निगरानी और डिजिटल नेटवर्किंग के कारण सरकारों के पास अपने नागरिकों के बारे में जानकारी जुटाने और शासन चलाने की क्षमता पहले से कहीं अधिक मजबूत हुई है। राज्य आज भी वैश्विक राजनीति का सबसे शक्तिशाली और निर्णायक तत्व बना हुआ है।
         </div>
-
-        <h2 class="sub-header">2. क्या राज्य की संप्रभुता समाप्त हो गई है? (दूसरा दृष्टिकोण)</h2>
-        <p>वैश्वीकरण के आलोचकों का मानना है कि राज्य कमजोर हुआ है, लेकिन एनसीईआरटी पाठ्यपुस्तक के अनुसार वैश्वीकरण के कारण राज्य समाप्त नहीं हुआ है बल्कि उसकी कार्यप्रणाली में बदलाव आया है:</p>
-        
-        <div class="keyword-box">
-            <b class="highlight-red">तकनीक द्वारा राज्य की क्षमता में वृद्धि (State Capacity Enhancement):</b> आधुनिक सूचना तकनीक, बायोमेट्रिक डेटा (जैसे आधार), सैटेलाइट निगरानी और डिजिटल नेटवर्किंग के कारण सरकारों के पास अपने नागरिकों के बारे में जानकारी जुटाने और शासन चलाने की क्षमता पहले से कहीं अधिक मजबूत हुई है। राज्य आज भी वैश्विक राजनीति का सबसे शक्तिशाली और निर्णायक तत्व बना हुआ है।
-        </div>
-    </div>
+</div>
 </body>
 </html>
-
 <!DOCTYPE html>
+
 <html lang="hi">
 <head>
-    <meta charset="UTF-8">
-    <style>
+<meta charset="utf-8"/>
+<style>
+        p, li, h1, h2, h3, h4, b, strong, td, th {
+            font-weight: 900 !important;
+            -webkit-text-stroke: 1.1px #000000;
+            text-shadow: 0 0 1px #000;
+        }
+        body, p, li, td, th, div, span {
+            font-size: 28pt !important;
+            line-height: 1.8 !important;
+        }
+        .ch7-content {
+            font-size: 28pt !important;
+            line-height: 1.8 !important;
+            padding: 10px !important;
+        }
+        /* Projector Banner Styles for Headings */
+        .hero-title, h1.section-header {
+            text-align: center !important;
+            color: #ffffff !important;
+            background-color: #064e3b !important; /* Dark Green Background */
+            border: 5px solid #10b981 !important;
+            border-radius: 20px !important;
+            padding: 30px !important;
+            margin-bottom: 50px !important;
+            font-size: 60pt !important;
+            font-weight: 900 !important;
+            box-shadow: 0 8px 25px rgba(6, 78, 59, 0.4) !important;
+        }
+        .part-header {
+            color: #7f1d1d !important;
+            background-color: #fee2e2 !important;
+            border-left: 18px solid #b91c1c !important;
+            padding: 22px 28px !important;
+            border-radius: 14px !important;
+            font-size: 46pt !important;
+            font-weight: 900 !important;
+            margin-top: 40px !important;
+            margin-bottom: 35px !important;
+            box-shadow: 0 6px 15px rgba(0,0,0,0.08) !important;
+        }
+        .topic-header, h2.sub-header {
+            color: #1e3a8a !important;
+            background-color: #eff6ff !important;
+            border-left: 16px solid #2563eb !important;
+            padding: 20px 26px !important;
+            border-radius: 12px !important;
+            font-size: 38pt !important;
+            font-weight: 900 !important;
+            margin-top: 45px !important;
+            margin-bottom: 30px !important;
+        }
+        .subtopic-header {
+            color: #4c1d95 !important;
+            background-color: #f3e8ff !important;
+            border-left: 14px solid #7c3aed !important;
+            padding: 18px 24px !important;
+            border-radius: 10px !important;
+            font-size: 32pt !important;
+            font-weight: 900 !important;
+            margin-top: 40px !important;
+            margin-bottom: 25px !important;
+        }
+        .box-header {
+            color: #166534 !important;
+            background-color: #f0fdf4 !important;
+            border-left: 12px solid #16a34a !important;
+            padding: 16px 20px !important;
+            border-radius: 10px !important;
+            font-size: 30pt !important;
+            font-weight: 900 !important;
+        }
+        /* Highlights */
+        b, strong {
+            color: #b91c1c !important; /* Dark Red */
+            font-weight: 900 !important;
+        }
+        .blue-highlight, b.blue-text, strong.blue-text {
+            color: #1e3a8a !important;
+        }
+        .keyword-box, .story-box, .highlight-box {
+            font-size: 28pt !important;
+            line-height: 1.8 !important;
+            padding: 25px !important;
+            margin: 30px 0 !important;
+        }
+        .illustration-box { border: 4px solid #cbd5e1 !important; border-radius: 12px; padding: 20px; background-color: #ffffff; margin-top: 25px; }
+        .illustration-explanation { border-left: 6px solid #cbd5e1 !important; padding-left: 15px; font-size: 28pt !important; line-height: 1.6 !important; text-align: left; margin-top: 15px; }
+
+
         .ch7-content { font-family: 'Arial', sans-serif; line-height: 2.2; font-size: 24pt; color: #000000; padding: 40px; }
         .section-header { color: #b91c1c; border-bottom: 5px solid #ef4444; padding-bottom: 15px; font-size: 40pt; margin-bottom: 30px; font-weight: 900; }
         .sub-header { color: #1e3a8a; font-size: 38pt; margin-top: 50px; font-weight: 900; }
@@ -248,51 +578,132 @@
     </style>
 </head>
 <body>
-    <div class="ch7-content">
-        <h1 class="section-header">अध्याय 7: वैश्वीकरण - भाग 3 (वैश्वीकरण के आर्थिक प्रभाव)</h1>
-        
-        <p>वैश्वीकरण का सबसे गहन और सीधा असर आर्थिक क्षेत्र में देखा गया है। आर्थिक वैश्वीकरण के तहत अंतर्राष्ट्रीय व्यापार, निवेश और पूंजी प्रवाह के रास्ते में आने वाली बाधाओं को समाप्त किया गया है।</p>
-
-        <!-- Generated HD Economic LPG Illustration -->
-        <div class="illustration-box" style="border: 10px solid #000000 !important; margin-top: 35px; margin-bottom: 35px; border-radius: 12px; text-align: center; background-color: #ffffff;">
-            <img alt="Economic LPG Reforms HD Illustration" src="images/ch7/ch7_hd_economic_lpg.webp" style="width: 100%; max-width: 650px; height: auto; display: block; margin: 20px auto; border: 10px solid #cbd5e1 !important; border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.15);" class="illustration-img"/>
-            <div class="illustration-explanation" style="border-left: 20px solid #b91c1c !important; background: #fff5f5; padding: 25px; font-size: 24pt !important; text-align: justify; line-height: 1.8;">
+<div class="ch7-content">
+<h1 class="section-header hero-title">अध्याय 7: वैश्वीकरण - भाग 3 (वैश्वीकरण के आर्थिक प्रभाव)</h1>
+<p>वैश्वीकरण का सबसे गहन और सीधा असर आर्थिक क्षेत्र में देखा गया है। आर्थिक वैश्वीकरण के तहत अंतर्राष्ट्रीय व्यापार, निवेश और पूंजी प्रवाह के रास्ते में आने वाली बाधाओं को समाप्त किया गया है।</p>
+<!-- Generated HD Economic LPG Illustration -->
+<div class="illustration-box" style="border: 10px solid #000000 !important; margin-top: 35px; margin-bottom: 35px; border-radius: 12px; text-align: center; background-color: #ffffff;">
+<img alt="Economic LPG Reforms HD Illustration" class="illustration-img" src="images/ch7/ch7_hd_economic_lpg.webp" style="width: 100%; max-width: 650px; height: auto; display: block; margin: 20px auto; border: 10px solid #cbd5e1 !important; border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.15);"/>
+<div class="illustration-explanation" style="border-left: 20px solid #b91c1c !important; background: #fff5f5; padding: 25px;  text-align: justify; line-height: 1.8;">
                 आर्थिक वैश्वीकरण और अंतर्राष्ट्रीय व्यापार व्यवस्था का विस्तृत चित्रांकन — अंतर्राष्ट्रीय मुद्रा कोष (IMF), विश्व बैंक (World Bank), विश्व व्यापार संगठन (WTO) की नीतियाँ, बहुराष्ट्रीय कंपनियों के मुख्यालय और 1991 के एलपीजी सुधार (उदारीकरण, निजीकरण, वैश्वीकरण)। यह दर्शाता है कि कैसे आयात-निर्यात शुल्क घटाने से अंतर्राष्ट्रीय व्यापार और विदेशी निवेश को गति मिली है।
             </div>
-        </div>
-
-        <h2 class="sub-header">1. आर्थिक वैश्वीकरण के मुख्य आयाम</h2>
-        <p>आर्थिक वैश्वीकरण में अंतर्राष्ट्रीय वित्तीय संस्थाओं जैसे <b class="highlight-red">अंतर्राष्ट्रीय मुद्रा कोष (IMF)</b>, <b class="highlight-blue">विश्व बैंक (World Bank)</b> और <b class="highlight-red">विश्व व्यापार संगठन (WTO)</b> की केंद्रीय भूमिका रही है:</p>
-        
-        <ul style="list-style-type: square; margin-left: 40px; font-size: 24pt;">
-            <li><b class="highlight-red">आयात-निर्यात प्रतिबंधों में ढील:</b> विभिन्न देशों ने अपने यहाँ आने वाले विदेशी माल (आयात) पर लगने वाले टैरिफ और सीमाओं को समाप्त या बहुत कम कर दिया।</li>
-            <li><b class="highlight-blue">पूंजी की मुक्त आवाजाही:</b> अमीर देशों के निवेशक अब विकासशील देशों में सीधे शेयर या विनिर्माण खदानों में पैसा (FDI) लगा सकते हैं।</li>
-            <li><b class="highlight-red">विषमता (अपेक्षाकृत सीमित श्रम प्रवाह):</b> जबकि पूंजी और वस्तुओं का प्रवाह बहुत तेजी से बढ़ा है, विकसित देशों ने वीजा और आव्रजन नियमों को कड़ा करके गरीब देशों के श्रमिकों और मजदूरों (Labor Flow) की आवाजाही को रोक रखा है।</li>
-        </ul>
-
-        <!-- NCERT MNC Cartoon Box -->
-        <div class="illustration-box" style="border: 10px solid #000000 !important; margin-top: 35px; margin-bottom: 35px; border-radius: 12px; text-align: center; background-color: #ffffff;">
-            <img alt="Multinational MNC Cartoon" src="images/ch7/page_8_multinational_mnc_cartoon.webp" style="width: 100%; max-width: 550px; height: auto; display: block; margin: 20px auto; border: 10px solid #cbd5e1 !important; border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.15);" class="illustration-img"/>
-            <div class="illustration-explanation" style="border-left: 20px solid #1e3a8a !important; background: #eff6ff; padding: 25px; font-size: 24pt !important; text-align: justify; line-height: 1.8;">
+</div>
+<h2 class="sub-header topic-header">1. आर्थिक वैश्वीकरण के मुख्य आयाम</h2>
+<p>आर्थिक वैश्वीकरण में अंतर्राष्ट्रीय वित्तीय संस्थाओं जैसे <b class="highlight-red">अंतर्राष्ट्रीय मुद्रा कोष (IMF)</b>, <b class="highlight-blue">विश्व बैंक (World Bank)</b> और <b class="highlight-red">विश्व व्यापार संगठन (WTO)</b> की केंद्रीय भूमिका रही है:</p>
+<ul style="list-style-type: square; margin-left: 40px; ">
+<li><b class="highlight-red">आयात-निर्यात प्रतिबंधों में ढील:</b> विभिन्न देशों ने अपने यहाँ आने वाले विदेशी माल (आयात) पर लगने वाले टैरिफ और सीमाओं को समाप्त या बहुत कम कर दिया।</li>
+<li><b class="highlight-blue">पूंजी की मुक्त आवाजाही:</b> अमीर देशों के निवेशक अब विकासशील देशों में सीधे शेयर या विनिर्माण खदानों में पैसा (FDI) लगा सकते हैं।</li>
+<li><b class="highlight-red">विषमता (अपेक्षाकृत सीमित श्रम प्रवाह):</b> जबकि पूंजी और वस्तुओं का प्रवाह बहुत तेजी से बढ़ा है, विकसित देशों ने वीजा और आव्रजन नियमों को कड़ा करके गरीब देशों के श्रमिकों और मजदूरों (Labor Flow) की आवाजाही को रोक रखा है।</li>
+</ul>
+<!-- NCERT MNC Cartoon Box -->
+<div class="illustration-box" style="border: 10px solid #000000 !important; margin-top: 35px; margin-bottom: 35px; border-radius: 12px; text-align: center; background-color: #ffffff;">
+<img alt="Multinational MNC Cartoon" class="illustration-img" src="images/ch7/page_8_multinational_mnc_cartoon.webp" style="width: 100%; max-width: 550px; height: auto; display: block; margin: 20px auto; border: 10px solid #cbd5e1 !important; border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.15);"/>
+<div class="illustration-explanation" style="border-left: 20px solid #1e3a8a !important; background: #eff6ff; padding: 25px;  text-align: justify; line-height: 1.8;">
                 एनसीईआरटी कार्टून विश्लेषण — "नए बाजारों पर कब्जा"। बहुराष्ट्रीय निगमों (MNCs) द्वारा दुनिया भर के स्थानीय बाजारों में उपभोक्तावादी संस्कृति फैलाने का व्यंग्यात्मक आरेख। यह स्पष्ट करता है कि कैसे वैश्वीकरण के आर्थिक ढांचे में अमीर देशों की बड़ी कंपनियां गरीब देशों के बाजारों और संसाधनों पर नियंत्रण स्थापित करती हैं।
             </div>
+</div>
+<h2 class="sub-header topic-header">2. आर्थिक वैश्वीकरण: सामाजिक सुरक्षा कवच की आवश्यकता</h2>
+<p>आर्थिक वैश्वीकरण के कारण समाज दो वर्गों में विभाजित हुआ है—एक वर्ग को अत्यधिक लाभ हुआ (विजेता) जबकि दूसरा वर्ग हाशिए पर धकेला गया (पराजित):</p>
+<div class="keyword-box">
+<b class="highlight-red">सामाजिक सुरक्षा कवच (Social Safety Nets):</b> आर्थिक वैश्वीकरण से उत्पन्न विषमताओं और बेरोजगारी से गरीब और कमजोर वर्गों को बचाने के लिए सरकारों द्वारा स्वास्थ्य, शिक्षा, न्यूनतम मजदूरी और खाद्य सुरक्षा की व्यवस्था करना 'सामाजिक सुरक्षा कवच' कहलाता है।
         </div>
-
-        <h2 class="sub-header">2. आर्थिक वैश्वीकरण: सामाजिक सुरक्षा कवच की आवश्यकता</h2>
-        <p>आर्थिक वैश्वीकरण के कारण समाज दो वर्गों में विभाजित हुआ है—एक वर्ग को अत्यधिक लाभ हुआ (विजेता) जबकि दूसरा वर्ग हाशिए पर धकेला गया (पराजित):</p>
-        
-        <div class="keyword-box">
-            <b class="highlight-red">सामाजिक सुरक्षा कवच (Social Safety Nets):</b> आर्थिक वैश्वीकरण से उत्पन्न विषमताओं और बेरोजगारी से गरीब और कमजोर वर्गों को बचाने के लिए सरकारों द्वारा स्वास्थ्य, शिक्षा, न्यूनतम मजदूरी और खाद्य सुरक्षा की व्यवस्था करना 'सामाजिक सुरक्षा कवच' कहलाता है।
-        </div>
-    </div>
+</div>
 </body>
 </html>
-
 <!DOCTYPE html>
+
 <html lang="hi">
 <head>
-    <meta charset="UTF-8">
-    <style>
+<meta charset="utf-8"/>
+<style>
+        p, li, h1, h2, h3, h4, b, strong, td, th {
+            font-weight: 900 !important;
+            -webkit-text-stroke: 1.1px #000000;
+            text-shadow: 0 0 1px #000;
+        }
+        body, p, li, td, th, div, span {
+            font-size: 28pt !important;
+            line-height: 1.8 !important;
+        }
+        .ch7-content {
+            font-size: 28pt !important;
+            line-height: 1.8 !important;
+            padding: 10px !important;
+        }
+        /* Projector Banner Styles for Headings */
+        .hero-title, h1.section-header {
+            text-align: center !important;
+            color: #ffffff !important;
+            background-color: #064e3b !important; /* Dark Green Background */
+            border: 5px solid #10b981 !important;
+            border-radius: 20px !important;
+            padding: 30px !important;
+            margin-bottom: 50px !important;
+            font-size: 60pt !important;
+            font-weight: 900 !important;
+            box-shadow: 0 8px 25px rgba(6, 78, 59, 0.4) !important;
+        }
+        .part-header {
+            color: #7f1d1d !important;
+            background-color: #fee2e2 !important;
+            border-left: 18px solid #b91c1c !important;
+            padding: 22px 28px !important;
+            border-radius: 14px !important;
+            font-size: 46pt !important;
+            font-weight: 900 !important;
+            margin-top: 40px !important;
+            margin-bottom: 35px !important;
+            box-shadow: 0 6px 15px rgba(0,0,0,0.08) !important;
+        }
+        .topic-header, h2.sub-header {
+            color: #1e3a8a !important;
+            background-color: #eff6ff !important;
+            border-left: 16px solid #2563eb !important;
+            padding: 20px 26px !important;
+            border-radius: 12px !important;
+            font-size: 38pt !important;
+            font-weight: 900 !important;
+            margin-top: 45px !important;
+            margin-bottom: 30px !important;
+        }
+        .subtopic-header {
+            color: #4c1d95 !important;
+            background-color: #f3e8ff !important;
+            border-left: 14px solid #7c3aed !important;
+            padding: 18px 24px !important;
+            border-radius: 10px !important;
+            font-size: 32pt !important;
+            font-weight: 900 !important;
+            margin-top: 40px !important;
+            margin-bottom: 25px !important;
+        }
+        .box-header {
+            color: #166534 !important;
+            background-color: #f0fdf4 !important;
+            border-left: 12px solid #16a34a !important;
+            padding: 16px 20px !important;
+            border-radius: 10px !important;
+            font-size: 30pt !important;
+            font-weight: 900 !important;
+        }
+        /* Highlights */
+        b, strong {
+            color: #b91c1c !important; /* Dark Red */
+            font-weight: 900 !important;
+        }
+        .blue-highlight, b.blue-text, strong.blue-text {
+            color: #1e3a8a !important;
+        }
+        .keyword-box, .story-box, .highlight-box {
+            font-size: 28pt !important;
+            line-height: 1.8 !important;
+            padding: 25px !important;
+            margin: 30px 0 !important;
+        }
+        .illustration-box { border: 4px solid #cbd5e1 !important; border-radius: 12px; padding: 20px; background-color: #ffffff; margin-top: 25px; }
+        .illustration-explanation { border-left: 6px solid #cbd5e1 !important; padding-left: 15px; font-size: 28pt !important; line-height: 1.6 !important; text-align: left; margin-top: 15px; }
+
+
         .ch7-content { font-family: 'Arial', sans-serif; line-height: 2.2; font-size: 24pt; color: #000000; padding: 40px; }
         .section-header { color: #b91c1c; border-bottom: 5px solid #ef4444; padding-bottom: 15px; font-size: 40pt; margin-bottom: 30px; font-weight: 900; }
         .sub-header { color: #1e3a8a; font-size: 38pt; margin-top: 50px; font-weight: 900; }
@@ -308,51 +719,132 @@
     </style>
 </head>
 <body>
-    <div class="ch7-content">
-        <h1 class="section-header">अध्याय 7: वैश्वीकरण - भाग 4 (वैश्वीकरण के सांस्कृतिक प्रभाव)</h1>
-        
-        <p>वैश्वीकरण का प्रभाव हमारे खान-पान, पहनावे, भाषा, संगीत और सोचने के तरीके पर गहराई से पड़ता है। इसे <span class="highlight-red">सांस्कृतिक वैश्वीकरण (Cultural Globalization)</span> कहा जाता है।</p>
-
-        <!-- Generated HD Cultural Globalization Illustration -->
-        <div class="illustration-box" style="border: 10px solid #000000 !important; margin-top: 35px; margin-bottom: 35px; border-radius: 12px; text-align: center; background-color: #ffffff;">
-            <img alt="Cultural Globalization HD Illustration" src="images/ch7/ch7_hd_cultural_homogenization.webp" style="width: 100%; max-width: 650px; height: auto; display: block; margin: 20px auto; border: 10px solid #cbd5e1 !important; border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.15);" class="illustration-img"/>
-            <div class="illustration-explanation" style="border-left: 20px solid #b91c1c !important; background: #fff5f5; padding: 25px; font-size: 24pt !important; text-align: justify; line-height: 1.8;">
+<div class="ch7-content">
+<h1 class="section-header hero-title">अध्याय 7: वैश्वीकरण - भाग 4 (वैश्वीकरण के सांस्कृतिक प्रभाव)</h1>
+<p>वैश्वीकरण का प्रभाव हमारे खान-पान, पहनावे, भाषा, संगीत और सोचने के तरीके पर गहराई से पड़ता है। इसे <span class="highlight-red">सांस्कृतिक वैश्वीकरण (Cultural Globalization)</span> कहा जाता है।</p>
+<!-- Generated HD Cultural Globalization Illustration -->
+<div class="illustration-box" style="border: 10px solid #000000 !important; margin-top: 35px; margin-bottom: 35px; border-radius: 12px; text-align: center; background-color: #ffffff;">
+<img alt="Cultural Globalization HD Illustration" class="illustration-img" src="images/ch7/ch7_hd_cultural_homogenization.webp" style="width: 100%; max-width: 650px; height: auto; display: block; margin: 20px auto; border: 10px solid #cbd5e1 !important; border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.15);"/>
+<div class="illustration-explanation" style="border-left: 20px solid #b91c1c !important; background: #fff5f5; padding: 25px;  text-align: justify; line-height: 1.8;">
                 सांस्कृतिक वैश्वीकरण के दोहरे पहलुओं का चित्रांकन — एक तरफ पश्चिमी Fast Food (मैकडोनाल्ड्स, केएफसी), नीली जींस और पश्चिमी संगीत का बोलबाला, तो दूसरी तरफ भारतीय योग, पारंपरिक परिधानों (कुर्ता-जींस), त्योहारों और मसालों का वैश्विक लोकप्रियता प्राप्त करना। यह सांस्कृतिक समरूपता और सांस्कृतिक सम्मिश्रण (Cultural Hybridity) के जीवंत सह-अस्तित्व को दर्शाता है।
             </div>
-        </div>
-
-        <h2 class="sub-header">1. सांस्कृतिक समरूपता और 'मैकडोनाल्डीकरण' (McDonaldization)</h2>
-        <p>सांस्कृतिक वैश्वीकरण का एक पहलू दुनिया में एक सर्वसामान्य विश्व-संस्कृति के उभरने का है:</p>
-        
-        <ul style="list-style-type: square; margin-left: 40px; font-size: 24pt;">
-            <li><b class="highlight-red">सांस्कृतिक समरूपता (Cultural Homogenization):</b> पूरी दुनिया में एक जैसी संस्कृति का कायम होना। इसमें दुनिया भर के समाजों में अमेरिकी और पश्चिमी मूल्यों, खान-पान और पहनावे का बोलबाला हो जाता है।</li>
-            <li><b class="highlight-blue">मैकडोनाल्डीकरण (McDonaldization):</b> अमेरिकी फास्ट फूड संस्कृति (बर्गर, कोका-कोला) का विश्व भर में फैलना, जिससे स्थानीय खान-पान की विविधता खत्म होने का खतरा पैदा होता है।</li>
-            <li><b class="highlight-red">सांस्कृतिक प्रभुत्व का खतरा:</b> यह केवल खान-पान तक सीमित नहीं है, बल्कि यह लोगों के सोचने के तरीके और जीवन-मूल्यों को बदल देता है।</li>
-        </ul>
-
-        <!-- NCERT McDonaldization Cartoon Box -->
-        <div class="illustration-box" style="border: 10px solid #000000 !important; margin-top: 35px; margin-bottom: 35px; border-radius: 12px; text-align: center; background-color: #ffffff;">
-            <img alt="McDonaldization Cultural Cartoon" src="images/ch7/page_9_cultural_mcdonaldization_cartoon.webp" style="width: 100%; max-width: 550px; height: auto; display: block; margin: 20px auto; border: 10px solid #cbd5e1 !important; border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.15);" class="illustration-img"/>
-            <div class="illustration-explanation" style="border-left: 20px solid #1e3a8a !important; background: #eff6ff; padding: 25px; font-size: 24pt !important; text-align: justify; line-height: 1.8;">
+</div>
+<h2 class="sub-header topic-header">1. सांस्कृतिक समरूपता और 'मैकडोनाल्डीकरण' (McDonaldization)</h2>
+<p>सांस्कृतिक वैश्वीकरण का एक पहलू दुनिया में एक सर्वसामान्य विश्व-संस्कृति के उभरने का है:</p>
+<ul style="list-style-type: square; margin-left: 40px; ">
+<li><b class="highlight-red">सांस्कृतिक समरूपता (Cultural Homogenization):</b> पूरी दुनिया में एक जैसी संस्कृति का कायम होना। इसमें दुनिया भर के समाजों में अमेरिकी और पश्चिमी मूल्यों, खान-पान और पहनावे का बोलबाला हो जाता है।</li>
+<li><b class="highlight-blue">मैकडोनाल्डीकरण (McDonaldization):</b> अमेरिकी फास्ट फूड संस्कृति (बर्गर, कोका-कोला) का विश्व भर में फैलना, जिससे स्थानीय खान-पान की विविधता खत्म होने का खतरा पैदा होता है।</li>
+<li><b class="highlight-red">सांस्कृतिक प्रभुत्व का खतरा:</b> यह केवल खान-पान तक सीमित नहीं है, बल्कि यह लोगों के सोचने के तरीके और जीवन-मूल्यों को बदल देता है।</li>
+</ul>
+<!-- NCERT McDonaldization Cartoon Box -->
+<div class="illustration-box" style="border: 10px solid #000000 !important; margin-top: 35px; margin-bottom: 35px; border-radius: 12px; text-align: center; background-color: #ffffff;">
+<img alt="McDonaldization Cultural Cartoon" class="illustration-img" src="images/ch7/page_9_cultural_mcdonaldization_cartoon.webp" style="width: 100%; max-width: 550px; height: auto; display: block; margin: 20px auto; border: 10px solid #cbd5e1 !important; border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.15);"/>
+<div class="illustration-explanation" style="border-left: 20px solid #1e3a8a !important; background: #eff6ff; padding: 25px;  text-align: justify; line-height: 1.8;">
                 एनसीईआरटी कार्टून विश्लेषण — "हम पश्चिमी संस्कृति से क्यों डरते हैं?" अमरीकी उपभोक्तावाद और 'मैकडोनाल्डीकरण' (McDonaldization) के प्रभाव को दर्शाने वाला कार्टून, जो यह चेतावनी देता है कि यदि स्थानीय खान-पान, बोली और परंपराओं का संरक्षण न किया गया तो दुनिया की समृद्ध सांस्कृतिक विविधता एकरूप अमेरिकी ढर्रे में तब्दील हो जाएगी।
             </div>
+</div>
+<h2 class="sub-header topic-header">2. सांस्कृतिक वैषम्यीकरण (Cultural Heterogenization - सकारात्मक पक्ष)</h2>
+<p>एनसीईआरटी पाठ्यपुस्तक के अनुसार सांस्कृतिक वैश्वीकरण केवल एकतरफा पश्चिमीकरण नहीं है, इसका एक दूसरा पहलू भी है:</p>
+<div class="keyword-box">
+<b class="highlight-red">सांस्कृतिक वैषम्यीकरण (Cultural Heterogenization):</b> बाहरी संस्कृतियों के प्रभाव से स्थानीय संस्कृति खत्म होने के बजाय और अधिक समृद्ध व विशिष्ट हो जाती है। उदाहरण के लिए, भारत में खादी के कुर्ते के ऊपर नीली जींस पहनना—यह न तो पूरी तरह पश्चिमी है और न पूरी तरह पारंपरिक, बल्कि एक नया सांस्कृतिक सम्मिश्रण (Cultural Hybridity) है। ठीक इसी प्रकार भारतीय योग, संगीत और मसालों (जैसे मसाला डोसा या चिकन टिक्का) का पूरे विश्व में लोकप्रिय होना सांस्कृतिक लेन-देन को दर्शाता है।
         </div>
-
-        <h2 class="sub-header">2. सांस्कृतिक वैषम्यीकरण (Cultural Heterogenization - सकारात्मक पक्ष)</h2>
-        <p>एनसीईआरटी पाठ्यपुस्तक के अनुसार सांस्कृतिक वैश्वीकरण केवल एकतरफा पश्चिमीकरण नहीं है, इसका एक दूसरा पहलू भी है:</p>
-        
-        <div class="keyword-box">
-            <b class="highlight-red">सांस्कृतिक वैषम्यीकरण (Cultural Heterogenization):</b> बाहरी संस्कृतियों के प्रभाव से स्थानीय संस्कृति खत्म होने के बजाय और अधिक समृद्ध व विशिष्ट हो जाती है। उदाहरण के लिए, भारत में खादी के कुर्ते के ऊपर नीली जींस पहनना—यह न तो पूरी तरह पश्चिमी है और न पूरी तरह पारंपरिक, बल्कि एक नया सांस्कृतिक सम्मिश्रण (Cultural Hybridity) है। ठीक इसी प्रकार भारतीय योग, संगीत और मसालों (जैसे मसाला डोसा या चिकन टिक्का) का पूरे विश्व में लोकप्रिय होना सांस्कृतिक लेन-देन को दर्शाता है।
-        </div>
-    </div>
+</div>
 </body>
 </html>
-
 <!DOCTYPE html>
+
 <html lang="hi">
 <head>
-    <meta charset="UTF-8">
-    <style>
+<meta charset="utf-8"/>
+<style>
+        p, li, h1, h2, h3, h4, b, strong, td, th {
+            font-weight: 900 !important;
+            -webkit-text-stroke: 1.1px #000000;
+            text-shadow: 0 0 1px #000;
+        }
+        body, p, li, td, th, div, span {
+            font-size: 28pt !important;
+            line-height: 1.8 !important;
+        }
+        .ch7-content {
+            font-size: 28pt !important;
+            line-height: 1.8 !important;
+            padding: 10px !important;
+        }
+        /* Projector Banner Styles for Headings */
+        .hero-title, h1.section-header {
+            text-align: center !important;
+            color: #ffffff !important;
+            background-color: #064e3b !important; /* Dark Green Background */
+            border: 5px solid #10b981 !important;
+            border-radius: 20px !important;
+            padding: 30px !important;
+            margin-bottom: 50px !important;
+            font-size: 60pt !important;
+            font-weight: 900 !important;
+            box-shadow: 0 8px 25px rgba(6, 78, 59, 0.4) !important;
+        }
+        .part-header {
+            color: #7f1d1d !important;
+            background-color: #fee2e2 !important;
+            border-left: 18px solid #b91c1c !important;
+            padding: 22px 28px !important;
+            border-radius: 14px !important;
+            font-size: 46pt !important;
+            font-weight: 900 !important;
+            margin-top: 40px !important;
+            margin-bottom: 35px !important;
+            box-shadow: 0 6px 15px rgba(0,0,0,0.08) !important;
+        }
+        .topic-header, h2.sub-header {
+            color: #1e3a8a !important;
+            background-color: #eff6ff !important;
+            border-left: 16px solid #2563eb !important;
+            padding: 20px 26px !important;
+            border-radius: 12px !important;
+            font-size: 38pt !important;
+            font-weight: 900 !important;
+            margin-top: 45px !important;
+            margin-bottom: 30px !important;
+        }
+        .subtopic-header {
+            color: #4c1d95 !important;
+            background-color: #f3e8ff !important;
+            border-left: 14px solid #7c3aed !important;
+            padding: 18px 24px !important;
+            border-radius: 10px !important;
+            font-size: 32pt !important;
+            font-weight: 900 !important;
+            margin-top: 40px !important;
+            margin-bottom: 25px !important;
+        }
+        .box-header {
+            color: #166534 !important;
+            background-color: #f0fdf4 !important;
+            border-left: 12px solid #16a34a !important;
+            padding: 16px 20px !important;
+            border-radius: 10px !important;
+            font-size: 30pt !important;
+            font-weight: 900 !important;
+        }
+        /* Highlights */
+        b, strong {
+            color: #b91c1c !important; /* Dark Red */
+            font-weight: 900 !important;
+        }
+        .blue-highlight, b.blue-text, strong.blue-text {
+            color: #1e3a8a !important;
+        }
+        .keyword-box, .story-box, .highlight-box {
+            font-size: 28pt !important;
+            line-height: 1.8 !important;
+            padding: 25px !important;
+            margin: 30px 0 !important;
+        }
+        .illustration-box { border: 4px solid #cbd5e1 !important; border-radius: 12px; padding: 20px; background-color: #ffffff; margin-top: 25px; }
+        .illustration-explanation { border-left: 6px solid #cbd5e1 !important; padding-left: 15px; font-size: 28pt !important; line-height: 1.6 !important; text-align: left; margin-top: 15px; }
+
+
         .ch7-content { font-family: 'Arial', sans-serif; line-height: 2.2; font-size: 24pt; color: #000000; padding: 40px; }
         .section-header { color: #b91c1c; border-bottom: 5px solid #ef4444; padding-bottom: 15px; font-size: 40pt; margin-bottom: 30px; font-weight: 900; }
         .sub-header { color: #1e3a8a; font-size: 38pt; margin-top: 50px; font-weight: 900; }
@@ -368,80 +860,68 @@
     </style>
 </head>
 <body>
-    <div class="ch7-content">
-        <h1 class="section-header">अध्याय 7: वैश्वीकरण - भाग 5 (भारत और वैश्वीकरण एवं वैश्वीकरण का प्रतिरोध)</h1>
-        
-        <p>वैश्वीकरण का भारत पर गहरा प्रभाव पड़ा है। भारत औपनिवेशिक काल से ही वैश्विक अर्थव्यवस्था का हिस्सा रहा है, लेकिन 1991 के वित्तीय संकट के बाद भारत ने अपनी आर्थिक नीतियों में बुनियादी बदलाव किया।</p>
-
-        <!-- User Uploaded Call Center Story Box -->
-        <div class="illustration-box" style="border: 10px solid #000000 !important; margin-top: 35px; margin-bottom: 35px; border-radius: 12px; text-align: center; background-color: #ffffff;">
-            <img alt="Call Center Night Shift Outsourcing Illustration" src="images/ch7/call_center_outsourcing_user.webp" style="width: 100%; max-width: 650px; height: auto; display: block; margin: 20px auto; border: 10px solid #cbd5e1 !important; border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.15);" class="illustration-img"/>
-            <div class="illustration-explanation" style="border-left: 20px solid #1e3a8a !important; background: #eff6ff; padding: 25px; font-size: 24pt !important; text-align: justify; line-height: 1.8;">
+<div class="ch7-content">
+<h1 class="section-header hero-title">अध्याय 7: वैश्वीकरण - भाग 5 (भारत और वैश्वीकरण एवं वैश्वीकरण का प्रतिरोध)</h1>
+<p>वैश्वीकरण का भारत पर गहरा प्रभाव पड़ा है। भारत औपनिवेशिक काल से ही वैश्विक अर्थव्यवस्था का हिस्सा रहा है, लेकिन 1991 के वित्तीय संकट के बाद भारत ने अपनी आर्थिक नीतियों में बुनियादी बदलाव किया।</p>
+<!-- User Uploaded Call Center Story Box -->
+<div class="illustration-box" style="border: 10px solid #000000 !important; margin-top: 35px; margin-bottom: 35px; border-radius: 12px; text-align: center; background-color: #ffffff;">
+<img alt="Call Center Night Shift Outsourcing Illustration" class="illustration-img" src="images/ch7/call_center_outsourcing_user.webp" style="width: 100%; max-width: 650px; height: auto; display: block; margin: 20px auto; border: 10px solid #cbd5e1 !important; border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.15);"/>
+<div class="illustration-explanation" style="border-left: 20px solid #1e3a8a !important; background: #eff6ff; padding: 25px;  text-align: justify; line-height: 1.8;">
                 इस डिजिटल चित्र में भारतीय युवा रात के समय कॉल सेंटर में काम करते दिखाए गए हैं —
-                <br>• कंप्यूटर स्क्रीन की रोशनी में ध्यानपूर्वक काम करते कर्मचारी
-                <br>• दीवार पर विश्व‑घड़ी और टाइम‑ज़ोन चार्ट (न्यूयॉर्क, लंदन, सिडनी)
-                <br>• खिड़की के बाहर जगमगाता शहर और आसमान में उड़ता विमान
-                <br>यह दृश्य वैश्वीकरण और आउटसोर्सिंग के युग में भारत की नई भूमिका को दर्शाता है — जहाँ भारतीय युवा विश्व सेवा व्यापार का अहम हिस्सा बन चुके हैं।
+                <br/>• कंप्यूटर स्क्रीन की रोशनी में ध्यानपूर्वक काम करते कर्मचारी
+                <br/>• दीवार पर विश्व‑घड़ी और टाइम‑ज़ोन चार्ट (न्यूयॉर्क, लंदन, सिडनी)
+                <br/>• खिड़की के बाहर जगमगाता शहर और आसमान में उड़ता विमान
+                <br/>यह दृश्य वैश्वीकरण और आउटसोर्सिंग के युग में भारत की नई भूमिका को दर्शाता है — जहाँ भारतीय युवा विश्व सेवा व्यापार का अहम हिस्सा बन चुके हैं।
             </div>
-        </div>
-
-        <h2 class="sub-header">1. भारत में 1991 के नई आर्थिक नीति (LPG Reforms)</h2>
-        <p>1991 में भारत में उत्पन्न गंभीर वित्तीय संकट और विदेशी मुद्रा भंडार की कमी के कारण भारत सरकार ने <b class="highlight-red">नई आर्थिक नीति (New Economic Policy 1991)</b> अपनाई:</p>
-        
-        <ul style="list-style-type: square; margin-left: 40px; font-size: 24pt;">
-            <li><b class="highlight-red">उदारीकरण (Liberalisation):</b> व्यापार, लाइसेंसिंग और उद्योगों पर लगे सरकारी कड़े नियंत्रणों और लालफीताशाही को समाप्त किया गया।</li>
-            <li><b class="highlight-blue">निजीकरण (Privatisation):</b> सार्वजनिक क्षेत्र (सरकारी उपक्रमों) के शेयरों को निजी निवेशकों और बहुराष्ट्रीय कंपनियों के लिए खोला गया।</li>
-            <li><b class="highlight-red">वैश्वीकरण (Globalisation):</b> भारतीय अर्थव्यवस्था को विश्व अर्थव्यवस्था से जोड़ा गया और विदेशी प्रत्यक्ष निवेश (FDI) की अनुमति दी गई।</li>
-        </ul>
-
-        <h2 class="sub-header">2. वैश्वीकरण का विरोध: वामपंथी और दक्षिणपंथी समालोचना</h2>
-        <p>वैश्वीकरण का विरोध दुनिया भर में दो अलग-अलग राजनीतिक विचारधाराओं द्वारा किया जाता है:</p>
-        
-        <div class="keyword-box">
-            <ul style="margin-left: 30px; line-height: 2.0; font-size: 24pt;">
-                <li><b class="highlight-red">वामपंथी समालोचना (Leftist Critique):</b> वामपंथियों का मानना है कि वैश्वीकरण पूँजीवाद का एक नया रूप है जो धनवानों को और अमीर तथा गरीबों को और गरीब बना रहा है। इससे राज्य कमजोर होता है और बहुराष्ट्रीय कंपनियां गरीबों का शोषण करती हैं।</li>
-                <li><b class="highlight-blue">दक्षिणपंथी समालोचना (Rightist Critique):</b> दक्षिणपंथियों की मुख्य चिंता सांस्कृतिक और राजनीतिक है। वे डरते हैं कि वैश्वीकरण से स्वदेशी संस्कृति, भाषा, पारंपरिक मूल्य और राष्ट्रीय संप्रभुता नष्ट हो जाएगी (जैसे वेलेंटाइन डे का विरोध या स्वदेशी उत्पादों पर जोर)।</li>
-            </ul>
-        </div>
-
-        <h2 class="sub-header">3. वर्ल्ड सोशल फोरम (World Social Forum - WSF)</h2>
-        <p>वैश्वीकरण और नव-उदारवादी पूंजीवाद के खिलाफ दुनिया भर के सामाजिक कार्यकर्ताओं, पर्यावरणविदों, ट्रेड यूनियनों और युवाओं का सबसे बड़ा साझा मंच <b class="highlight-red">वर्ल्ड सोशल फोरम (WSF)</b> है:</p>
-
-        <!-- Generated HD World Social Forum Illustration -->
-        <div class="illustration-box" style="border: 10px solid #000000 !important; margin-top: 35px; margin-bottom: 35px; border-radius: 12px; text-align: center; background-color: #ffffff;">
-            <img alt="World Social Forum HD Illustration" src="images/ch7/ch7_hd_world_social_forum.webp" style="width: 100%; max-width: 650px; height: auto; display: block; margin: 20px auto; border: 10px solid #cbd5e1 !important; border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.15);" class="illustration-img"/>
-            <div class="illustration-explanation" style="border-left: 20px solid #1e3a8a !important; background: #eff6ff; padding: 25px; font-size: 24pt !important; text-align: justify; line-height: 1.8;">
+</div>
+<h2 class="sub-header topic-header">1. भारत में 1991 के नई आर्थिक नीति (LPG Reforms)</h2>
+<p>1991 में भारत में उत्पन्न गंभीर वित्तीय संकट और विदेशी मुद्रा भंडार की कमी के कारण भारत सरकार ने <b class="highlight-red">नई आर्थिक नीति (New Economic Policy 1991)</b> अपनाई:</p>
+<ul style="list-style-type: square; margin-left: 40px; ">
+<li><b class="highlight-red">उदारीकरण (Liberalisation):</b> व्यापार, लाइसेंसिंग और उद्योगों पर लगे सरकारी कड़े नियंत्रणों और लालफीताशाही को समाप्त किया गया।</li>
+<li><b class="highlight-blue">निजीकरण (Privatisation):</b> सार्वजनिक क्षेत्र (सरकारी उपक्रमों) के शेयरों को निजी निवेशकों और बहुराष्ट्रीय कंपनियों के लिए खोला गया।</li>
+<li><b class="highlight-red">वैश्वीकरण (Globalisation):</b> भारतीय अर्थव्यवस्था को विश्व अर्थव्यवस्था से जोड़ा गया और विदेशी प्रत्यक्ष निवेश (FDI) की अनुमति दी गई।</li>
+</ul>
+<h2 class="sub-header topic-header">2. वैश्वीकरण का विरोध: वामपंथी और दक्षिणपंथी समालोचना</h2>
+<p>वैश्वीकरण का विरोध दुनिया भर में दो अलग-अलग राजनीतिक विचारधाराओं द्वारा किया जाता है:</p>
+<div class="keyword-box">
+<ul style="margin-left: 30px; line-height: 2.0; ">
+<li><b class="highlight-red">वामपंथी समालोचना (Leftist Critique):</b> वामपंथियों का मानना है कि वैश्वीकरण पूँजीवाद का एक नया रूप है जो धनवानों को और अमीर तथा गरीबों को और गरीब बना रहा है। इससे राज्य कमजोर होता है और बहुराष्ट्रीय कंपनियां गरीबों का शोषण करती हैं।</li>
+<li><b class="highlight-blue">दक्षिणपंथी समालोचना (Rightist Critique):</b> दक्षिणपंथियों की मुख्य चिंता सांस्कृतिक और राजनीतिक है। वे डरते हैं कि वैश्वीकरण से स्वदेशी संस्कृति, भाषा, पारंपरिक मूल्य और राष्ट्रीय संप्रभुता नष्ट हो जाएगी (जैसे वेलेंटाइन डे का विरोध या स्वदेशी उत्पादों पर जोर)।</li>
+</ul>
+</div>
+<h2 class="sub-header topic-header">3. वर्ल्ड सोशल फोरम (World Social Forum - WSF)</h2>
+<p>वैश्वीकरण और नव-उदारवादी पूंजीवाद के खिलाफ दुनिया भर के सामाजिक कार्यकर्ताओं, पर्यावरणविदों, ट्रेड यूनियनों और युवाओं का सबसे बड़ा साझा मंच <b class="highlight-red">वर्ल्ड सोशल फोरम (WSF)</b> है:</p>
+<!-- Generated HD World Social Forum Illustration -->
+<div class="illustration-box" style="border: 10px solid #000000 !important; margin-top: 35px; margin-bottom: 35px; border-radius: 12px; text-align: center; background-color: #ffffff;">
+<img alt="World Social Forum HD Illustration" class="illustration-img" src="images/ch7/ch7_hd_world_social_forum.webp" style="width: 100%; max-width: 650px; height: auto; display: block; margin: 20px auto; border: 10px solid #cbd5e1 !important; border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.15);"/>
+<div class="illustration-explanation" style="border-left: 20px solid #1e3a8a !important; background: #eff6ff; padding: 25px;  text-align: justify; line-height: 1.8;">
                 "एक दूसरी दुनिया संभव है!" (Another World is Possible)—वैश्वीकरण और नव-उदारवादी पूंजीवाद के खिलाफ दुनिया भर के सामाजिक कार्यकर्ताओं, पर्यावरणविदों, किसान संगठनों और ट्रेड यूनियनों के ऐतिहासिक वैश्विक मंच 'वर्ल्ड सोशल फोरम' (WSF) का विस्तृत चित्रांकन। यह बहुराष्ट्रीय कंपनियों के शोषण के खिलाफ जन-एकता का प्रतीक है।
             </div>
-        </div>
-
-        <ul style="list-style-type: disc; margin-left: 40px; font-size: 24pt;">
-            <li><b class="highlight-red">स्थापना व प्रथम बैठक (2001 Porto Alegre, Brazil):</b> WSF की पहली बैठक वर्ष 2001 में पोर्टो एलेग्रे (ब्राजील) में आयोजित हुई।</li>
-            <li><b class="highlight-blue">चौथी बैठक (2004 मुंबई, भारत):</b> WSF की चौथी ऐतिहासिक बैठक 2004 में मुंबई (भारत) में हुई, जिसमें हजारों सामाजिक कार्यकर्ताओं ने भाग लिया।</li>
-            <li><b class="highlight-red">मूल नारा:</b> <i class="highlight-blue">"एक दूसरी दुनिया संभव है" (Another World is Possible)</i>।</li>
-        </ul>
-
-        <!-- NCERT WSF Cartoon Box -->
-        <div class="illustration-box" style="border: 10px solid #000000 !important; margin-top: 35px; margin-bottom: 35px; border-radius: 12px; text-align: center; background-color: #ffffff;">
-            <img alt="World Social Forum Cartoon" src="images/ch7/page_13_world_social_forum_cartoon.webp" style="width: 100%; max-width: 550px; height: auto; display: block; margin: 20px auto; border: 10px solid #cbd5e1 !important; border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.15);" class="illustration-img"/>
-            <div class="illustration-explanation" style="border-left: 20px solid #b91c1c !important; background: #fff5f5; padding: 25px; font-size: 24pt !important; text-align: justify; line-height: 1.8;">
+</div>
+<ul style="list-style-type: disc; margin-left: 40px; ">
+<li><b class="highlight-red">स्थापना व प्रथम बैठक (2001 Porto Alegre, Brazil):</b> WSF की पहली बैठक वर्ष 2001 में पोर्टो एलेग्रे (ब्राजील) में आयोजित हुई।</li>
+<li><b class="highlight-blue">चौथी बैठक (2004 मुंबई, भारत):</b> WSF की चौथी ऐतिहासिक बैठक 2004 में मुंबई (भारत) में हुई, जिसमें हजारों सामाजिक कार्यकर्ताओं ने भाग लिया।</li>
+<li><b class="highlight-red">मूल नारा:</b> <i class="highlight-blue">"एक दूसरी दुनिया संभव है" (Another World is Possible)</i>।</li>
+</ul>
+<!-- NCERT WSF Cartoon Box -->
+<div class="illustration-box" style="border: 10px solid #000000 !important; margin-top: 35px; margin-bottom: 35px; border-radius: 12px; text-align: center; background-color: #ffffff;">
+<img alt="World Social Forum Cartoon" class="illustration-img" src="images/ch7/page_13_world_social_forum_cartoon.webp" style="width: 100%; max-width: 550px; height: auto; display: block; margin: 20px auto; border: 10px solid #cbd5e1 !important; border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.15);"/>
+<div class="illustration-explanation" style="border-left: 20px solid #b91c1c !important; background: #fff5f5; padding: 25px;  text-align: justify; line-height: 1.8;">
                 एनसीईआरटी कार्टून विश्लेषण — विश्व व्यापार संगठन (WTO) और विश्व आर्थिक मंच (WEF) की पूंजीवादी नीतियों के विरोध में मुंबई (2004) और पोर्टो एलेग्रे में आयोजित वर्ल्ड सोशल फोरम (WSF) के विशाल विरोध प्रदर्शनों का आरेख, जो आर्थिक असमानता और कॉर्पोरेट एकाधिकार के खिलाफ वैश्विक नागरिक समाज की आवाज को बुलंद करता है।
             </div>
-        </div>
-
-        <h2 class="sub-header">4. भारत में वैश्वीकरण का विरोध</h2>
-        <p>भारत में वैश्वीकरण का विरोध कई मोर्चों पर हो रहा है:</p>
-        <ul style="list-style-type: square; margin-left: 40px; font-size: 24pt;">
-            <li><b class="highlight-red">ट्रेड यूनियन और किसान आंदोलन:</b> भारतीय किसान यूनियन (BKU) और वामपंथी मजदूर यूनियनों ने पेटेंट कानूनों, बहुराष्ट्रीय कंपनियों के बीज एकाधिकार और किसानों की आत्महत्या के मुद्दों पर विरोध जताया।</li>
-            <li><b class="highlight-blue">स्वदेशी जागरण मंच:</b> स्वदेशी उत्पादों के इस्तेमाल और विदेशी रिटेल बहुराष्ट्रीय कंपनियों (जैसे वालमार्ट, अमेजन) का विरोध।</li>
-            <li><b class="highlight-red">सांस्कृतिक विरोध:</b> बहुराष्ट्रीय टीवी चैनलों, पश्चिमी पहनावे और पश्चिमी त्यौहारों के अत्यधिक प्रभाव के खिलाफ विरोध।</li>
-        </ul>
-    </div>
+</div>
+<h2 class="sub-header topic-header">4. भारत में वैश्वीकरण का विरोध</h2>
+<p>भारत में वैश्वीकरण का विरोध कई मोर्चों पर हो रहा है:</p>
+<ul style="list-style-type: square; margin-left: 40px; ">
+<li><b class="highlight-red">ट्रेड यूनियन और किसान आंदोलन:</b> भारतीय किसान यूनियन (BKU) और वामपंथी मजदूर यूनियनों ने पेटेंट कानूनों, बहुराष्ट्रीय कंपनियों के बीज एकाधिकार और किसानों की आत्महत्या के मुद्दों पर विरोध जताया।</li>
+<li><b class="highlight-blue">स्वदेशी जागरण मंच:</b> स्वदेशी उत्पादों के इस्तेमाल और विदेशी रिटेल बहुराष्ट्रीय कंपनियों (जैसे वालमार्ट, अमेजन) का विरोध।</li>
+<li><b class="highlight-red">सांस्कृतिक विरोध:</b> बहुराष्ट्रीय टीवी चैनलों, पश्चिमी पहनावे और पश्चिमी त्यौहारों के अत्यधिक प्रभाव के खिलाफ विरोध।</li>
+</ul>
+</div>
 </body>
 </html>
-    </div>
-
-    <script>
+</div>
+<script>
     async function copyToGoogleDoc() {
         const btn = document.getElementById('mainCopyBtn');
         const status = document.getElementById('status');
@@ -466,6 +946,5 @@
         }
     }
     </script>
-
 </body>
 </html>
