@@ -16,11 +16,11 @@ Each chapter is structured as a self-contained, copy-ready HTML master file (`co
 
 ```
 political-science/
-├── copy_master_ch1.html to copy_master_ch18.html  # Chapter HTML master files
-├── qa_master_ch1.html to qa_master_ch18.html      # Question-Answer master files
+├── copy_master_ch1.html to copy_master_ch15.html  # Chapter HTML master files (Class 12)
+├── qa_master_ch1.html to qa_master_ch15.html      # Question-Answer master files (Class 12)
 ├── index.html                                    # Main portal / dashboard
 ├── images/                                        # Chapter visual assets (WebP format)
-│   ├── ch1/ ... ch18/
+│   ├── ch1/ ... ch15/
 ├── scripts/
 │   └── generate_educational_visuals.py            # Image generation automation script
 └── BRAIN_STRUCTURE.md                             # Repository architecture and prompts guide
