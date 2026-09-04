@@ -1,459 +1,730 @@
 <!DOCTYPE html>
+
 <html lang="hi">
 <head>
-    <meta charset="UTF-8">
-    <title>Chapter 11 COPY MASTER - Premium Notes (Political Theory)</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;700;900&family=Outfit:wght@400;700;900&display=swap" rel="stylesheet">
-    <style>
-        #control-header {
-            position: fixed; top: 0; left: 0; width: 100%; background-color: #0f172a; color: #ffffff;
-            padding: 15px 20px; display: flex; justify-content: space-between; align-items: center;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); z-index: 1000; font-family: 'Outfit', sans-serif; box-sizing: border-box;
-        }
-        #control-header h1 { margin: 0; font-size: 1.4rem; font-weight: 900; }
-        body {
-            margin-top: 80px;
-            background-color: #ffffff;
-            font-family: 'Outfit', 'Noto Sans Devanagari', sans-serif;
-            font-size: 20pt;
-            font-weight: 800;
-            line-height: 2.2;
-            color: #000000;
-        }
-        p, li, div, td, th {
-            font-weight: 800 !important;
-            color: #000000 !important;
-        }
-        b, strong {
+<meta charset="utf-8"/>
+<title>Chapter 11 COPY MASTER - Premium Notes</title>
+<style>
+        p, li, h1, h2, h3, h4, b, strong, td, th {
             font-weight: 900 !important;
-            color: #000000 !important;
+            -webkit-text-stroke: 1.1px #000000;
+            text-shadow: 0 0 1px #000;
         }
-        ul, ol { padding-left: 60px !important; margin-left: 20px !important; }
-        li {
-            padding-left: 15px;
-            margin-bottom: 25px;
-            text-align: justify;
-            line-height: 2.2;
-            font-size: 20pt;
-            font-weight: 800 !important;
+        body, p, li, td, th, div, span {
+            font-size: 28pt !important;
+            line-height: 1.8 !important;
         }
-        /* Heavy text thickness for projector visibility */
+        .ch11-content {
+            font-size: 28pt !important;
+            line-height: 1.8 !important;
+            padding: 10px !important;
+        }
+        /* Projector Banner Styles for Headings */
+        .hero-title, h1.section-header {
+            text-align: center !important;
+            color: #ffffff !important;
+            background-color: #064e3b !important; /* Dark Green Background */
+            border: 5px solid #10b981 !important;
+            border-radius: 20px !important;
+            padding: 30px !important;
+            margin-bottom: 50px !important;
+            font-size: 60pt !important;
+            font-weight: 900 !important;
+            box-shadow: 0 8px 25px rgba(6, 78, 59, 0.4) !important;
+        }
+        .part-header {
+            color: #7f1d1d !important;
+            background-color: #fee2e2 !important;
+            border-left: 18px solid #b91c1c !important;
+            padding: 22px 28px !important;
+            border-radius: 14px !important;
+            font-size: 46pt !important;
+            font-weight: 900 !important;
+            margin-top: 40px !important;
+            margin-bottom: 35px !important;
+            box-shadow: 0 6px 15px rgba(0,0,0,0.08) !important;
+        }
+        .topic-header, h2.sub-header {
+            color: #1e3a8a !important;
+            background-color: #eff6ff !important;
+            border-left: 16px solid #2563eb !important;
+            padding: 20px 26px !important;
+            border-radius: 12px !important;
+            font-size: 38pt !important;
+            font-weight: 900 !important;
+            margin-top: 45px !important;
+            margin-bottom: 30px !important;
+        }
+        .subtopic-header {
+            color: #4c1d95 !important;
+            background-color: #f3e8ff !important;
+            border-left: 14px solid #7c3aed !important;
+            padding: 18px 24px !important;
+            border-radius: 10px !important;
+            font-size: 32pt !important;
+            font-weight: 900 !important;
+            margin-top: 40px !important;
+            margin-bottom: 25px !important;
+        }
+        .box-header {
+            color: #166534 !important;
+            background-color: #f0fdf4 !important;
+            border-left: 12px solid #16a34a !important;
+            padding: 16px 20px !important;
+            border-radius: 10px !important;
+            font-size: 30pt !important;
+            font-weight: 900 !important;
+        }
+        /* Highlights */
+        b, strong {
+            color: #b91c1c !important; /* Dark Red */
+            font-weight: 900 !important;
+        }
+        .blue-highlight, b.blue-text, strong.blue-text {
+            color: #1e3a8a !important;
+        }
+        .keyword-box, .story-box, .highlight-box {
+            font-size: 28pt !important;
+            line-height: 1.8 !important;
+            padding: 25px !important;
+            margin: 30px 0 !important;
+        }
+        .illustration-box { border: 4px solid #cbd5e1 !important; border-radius: 12px; padding: 20px; background-color: #ffffff; margin-top: 25px; }
+        .illustration-explanation { border-left: 6px solid #cbd5e1 !important; padding-left: 15px; font-size: 28pt !important; line-height: 1.6 !important; text-align: left; margin-top: 15px; }
+
+
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f1f5f9; margin: 0; padding: 20px; text-align: center; }
+        .header { background: #1e293b; color: white; padding: 20px; border-radius: 10px; margin-bottom: 30px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+        .copy-btn { background-color: #2563eb; color: white; padding: 20px 40px; font-size: 24pt; border: none; border-radius: 50px; cursor: pointer; font-weight: 900; transition: all 0.3s; box-shadow: 0 10px 20px rgba(37, 99, 235, 0.4); }
+        .copy-btn:hover { background-color: #1d4ed8; transform: scale(1.05); }
+        .preview { background: white; padding: 40px; border-radius: 15px; margin-top: 30px; text-align: justify; max-width: 1400px; margin-left: auto; margin-right: auto; border: 3px solid #e2e8f0; }
+        #status { margin-top: 20px; font-weight: 900; color: #059669; font-size: 24pt; display: none; }
+    
+        /* Extra Heavy Text Thickness */
         p, li, h1, h2, h3, h4, b, strong {
             font-weight: 900 !important;
-            -webkit-text-stroke: 0.5px #000000;
+            -webkit-text-stroke: 1.2px #000000; text-shadow: 0 0 1px #000;
         }
+        .bio-box { border: 10px solid #000000 !important; }
+        .illustration-box { border: 10px solid #000000 !important; }
+        .illustration-img { border: 10px solid #000000 !important; }
+        .illustration-explanation { border-left: 20px solid #000000 !important; font-size: 24pt !important; }
         
-        .part-container {
-            margin-bottom: 80px; padding: 50px 60px; background-color: #ffffff;
-            border-radius: 15px; box-shadow: 0 15px 25px -5px rgba(0,0,0,0.05);
-            border-top: 12px solid #1e3a8a;
-        }
-        .info-box {
-            background-color: #f8fafc; padding: 30px; border-left: 14px solid #1e3a8a; 
-            margin: 30px 0; border-radius: 8px; font-size: 19pt; line-height: 2.2; font-weight: 900;
-        }
-        .debate-box {
-            background-color: #fffbeb; padding: 30px; border: 6px solid #b45309; 
-            border-radius: 15px; margin: 40px 0; line-height: 2.2; font-size: 19pt; font-weight: 900;
-        }
     </style>
-    <script>
-        function copyToGoogleDoc() {
-            var content = document.getElementById('contentToCopy').innerHTML;
-            var blob = new Blob([content], { type: 'text/html' });
-            var data = [new ClipboardItem({ 'text/html': blob })];
-            
-            navigator.clipboard.write(data).then(function() {
-                var status = document.getElementById('status');
-                status.style.display = 'block';
-                setTimeout(function() {
-                    status.style.display = 'none';
-                }, 5000);
-            }).catch(function(err) {
-                alert('Copy failed: ' + err);
-            });
-        }
-    </script>
 </head>
 <body>
+<div class="header">
+<h1>🚀 Chapter 11 (Full-Proof Copy Master)</h1>
+<p>100% Google Docs Compatible with Images (Localhost-Sync)</p>
+</div>
+<button class="copy-btn" id="mainCopyBtn" onclick="copyToGoogleDoc()">📋 COPY EVERYTHING FOR GOOGLE DOCS</button>
+<p id="status">✅ Copied Successfully! Now go to your Google Doc and Press Ctrl+V</p>
+<div class="preview" id="contentToCopy">
+<div style="font-family: 'Arial', verdana, sans-serif;  line-height: 2.0; color: #000000; font-weight: 900; -webkit-text-stroke: 1.2px #000000; text-shadow: 0 0 1px #000; padding: 20px;">
+<!-- BIG HERO HEADER -->
+<h1 class="hero-title" style="text-align: center;   font-weight: 900; border-bottom: 5px solid #3b82f6; padding-bottom: 30px; margin-bottom: 40px;">
+        अध्याय 11: भारत के विदेश संबंध<br/>
+<span style=" color:#6b7280; font-weight: normal;">(India's External Relations) - भाग 1: ऐतिहासिक संदर्भ</span>
+</h1>
+<!-- PART 1 SECTION: Historical Context -->
+<div style="background-color: #f8fafc; padding: 40px; border-radius: 12px; margin-bottom: 40px; border: 6px solid #cbd5e1;">
+<h2 class="topic-header" style="font-weight: 900; margin-top: 0;">1. विदेश नीति का जन्म: चुनौतीपूर्ण समय</h2>
+<p><i>प्रिय विद्यार्थियों,</i> भारत की आजादी एक ऐसे समय में हुई जब पूरी दुनिया दो गुटों—अमेरिका और सोवियत संघ—में बंटी हुई थी। इसे **'शीत युद्ध'** (Cold War) का दौर कहा जाता है।</p>
+<p>आजाद भारत के सामने सबसे बड़ी चुनौती यह थी कि वह अपनी विदेश नीति को कैसे स्वतंत्र रखे ताकि वह फिर से किसी का गुलाम न बने।</p>
 
-    <!-- Persistent Control Header -->
-    <div id="control-header">
-        <h1>📖 अध्याय 11: राजनीतिक सिद्धांत (POLITICAL THEORY) - 100-PAGE MASTER NOTES</h1>
-        <button id="mainCopyBtn" onclick="copyToGoogleDoc()">
-            📋 COPY EVERYTHING FOR GOOGLE DOCS
-        </button>
+
+<div class="illustration-box" style="margin-top: 30px; border: 6px solid #2563eb; border-radius: 12px; padding: 20px; background-color: #ffffff;">
+<img alt="संवैधानिक सिद्धांत - अनुच्छेद 51" src="images/ch11/article_51_box.webp" style="width: 85%; max-width: 750px; display: block; margin: 0 auto; border: 4px solid #cbd5e1; border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.15);"/>
+<div class="illustration-explanation" style="margin-top: 15px; border-left: 8px solid #2563eb; padding-left: 15px; line-height: 1.6; text-align: left;">
+<b><b>संवैधानिक सिद्धांत: अनुच्छेद 51</b></b><br/>
+<b>विवरण:</b> भारतीय संविधान के **अनुच्छेद 51** में राज्य के नीति-निर्देशक सिद्धांतों (DPSP) के तहत अंतर्राष्ट्रीय शांति और सुरक्षा की अभिवृद्धि के प्रावधान दिए गए हैं।<br/>
+<b>प्रमुख 4 बिंदु (Article 51 Provisions):</b><br/>
+                    • (क) अंतर्राष्ट्रीय शांति और सुरक्षा की अभिवृद्धि करना।<br/>
+                    • (ख) राष्ट्रों के बीच न्यायसंगत और सम्मानपूर्ण संबंधों को बनाए रखना।<br/>
+                    • (ग) अंतर्राष्ट्रीय विधि और संधि-बाध्यताओं के प्रति आदर बढ़ाना।<br/>
+                    • (घ) अंतर्राष्ट्रीय विवादों को मध्यस्थता द्वारा निपटाने के लिए प्रोत्साहन देना।
+                </div>
+</div>
+</div>
+<!-- NEHRU'S ROLE BOX -->
+<div style="background-color: #f0fdf4; padding: 30px; border-left: 14px solid #22c55e; margin-bottom: 50px; border-radius: 8px;">
+<h2 class="topic-header" style="margin-top: 0;">2. नेहरू की भूमिका (Nehru's Vision)</h2>
+<p>भारत के पहले प्रधानमंत्री **जवाहरलाल नेहरू** ने खुद ही विदेश मंत्री के रूप में देश की विदेश नीति की नींव रखी। उनके तीन मुख्य उद्देश्य थे:</p>
+<ul style=" line-height: 2.2;">
+<li><b>1. कठिन संघर्ष से प्राप्त संप्रभुता (Sovereignty) को बचाना:</b> किसी बाहरी शक्ति का दबाव न मानना।</li>
+<li><b>2. क्षेत्रीय अखंडता (Territorial Integrity) को बनाए रखना:</b> सीमाओं की सुरक्षा सुनिश्चित करना।</li>
+<li><b>3. तीव्र आर्थिक विकास:</b> विदेश नीति ऐसी हो जो देश के विकास में मदद करे।</li>
+</ul>
+<!-- Biography Card: Jawaharlal Nehru -->
+<div style="background-color: #fffbeb; border: 4px dashed #d97706; border-radius: 12px; padding: 25px; margin-top: 25px; display: flex; flex-direction: column;">
+<h4 style="font-weight: 900; margin-top: 0; margin-bottom: 15px; border-bottom: 2px solid #fde047; padding-bottom: 10px; text-align: center;">
+                    जवाहरलाल नेहरू (1889 - 1964)
+                </h4>
+<p style=" line-height: 1.6; color: #78350f; margin: 0;">
+                    • <b>उपाधि:</b> स्वतंत्र भारत के पहले प्रधानमंत्री और विदेश मंत्री।<br/>
+                    • <b>विदेश नीति के शिल्पी:</b> इन्होंने 1947 से 1964 तक भारत की विदेश नीति का नेतृत्व स्वयं किया।<br/>
+                    • <b>मूल तीन उद्देश्य:</b> (1) कठिन संघर्ष से प्राप्त संप्रभुता को बचाए रखना, (2) देश की क्षेत्रीय अखंडता को सुरक्षित रखना, और (3) योजनाबद्ध तरीके से तीव्र आर्थिक विकास करना।<br/>
+                    • <b>दृष्टिकोण:</b> ये साम्राज्यवाद, उपनिवेशवाद और जातिवाद के कट्टर विरोधी थे और गुटनिरपेक्ष आंदोलन के पांच प्रमुख संस्थापकों में से एक थे।
+                </p>
+</div>
+
+<!-- Topic-wise Visual Notes Card: Foreign Policy Pillars -->
+<div class="illustration-box" style="margin-top: 35px; border: 6px solid #059669; border-radius: 12px; padding: 20px; background-color: #ffffff;">
+<img alt="भारतीय विदेश नीति के मुख्य स्तंभ" src="images/ch11/visual_foreign_policy_pillars.webp" style="width: 90%; max-width: 800px; display: block; margin: 0 auto; border: 4px solid #cbd5e1; border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.15);"/>
+<div class="illustration-explanation" style="margin-top: 15px; border-left: 8px solid #059669; padding-left: 15px; line-height: 1.6; text-align: left;">
+<b><b>भारतीय विदेश नीति के मुख्य स्तंभ:</b></b><br/>
+<b>विवरण:</b> भारतीय विदेश नीति के तीन मुख्य स्तंभों—संप्रभुता की रक्षा, सीमा सुरक्षा (अखंडता) और तीव्र आर्थिक विकास—के बीच संतुलन को प्रदर्शित करता है।
+</div>
+</div>
+</div>
+<!-- THE AFRO-ASIAN UNITY -->
+<div style="background-color: #fffbeb; padding: 30px; border-radius: 12px; border: 6px solid #fde047; margin-bottom: 50px;">
+<h2 class="topic-header" style="font-weight: 900; margin-top: 0;">3. अफ़्रीकी-एशियाई एकता (Afro-Asian Unity)</h2>
+<p>नेहरू चाहते थे कि एशिया और अफ्रीका के देश जो अभी-अभी आजाद हुए हैं, वे एकजुट हों। इसी उद्देश्य से **1955 में बांडुंग सम्मेलन** (Bandung Conference) हुआ।</p>
+<ul style="">
+<li><b>बांडुंग सम्मेलन:</b> इस सम्मेलन ने 'गुटनिरपेक्ष आंदोलन' (NAM) की नींव रखी।</li>
+<li><b>एशियाई संबंध सम्मेलन (1947):</b> आजादी से पहले ही नेहरू ने एशियाई एकता के लिए कोशिशें शुरू कर दी थीं।</li>
+</ul>
+
+<div class="illustration-box" style="margin-top: 30px; border: 6px solid #d97706; border-radius: 12px; padding: 20px; background-color: #ffffff;">
+<img alt="Bandung Conference 1955" src="images/ch11/bandung_conference.webp" style="width: 80%; max-width: 600px; display: block; margin: 0 auto; border: 4px solid #cbd5e1; border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.15);"/>
+<div class="illustration-explanation" style="margin-top: 15px; border-left: 8px solid #d97706; padding-left: 15px;  line-height: 1.6; text-align: left;">
+<b><b>ऐतिहासिक चित्र: बांडुंग सम्मेलन (1955)</b></b><br/>
+<b>विवरण:</b> इंडोनेशिया के शहर बांडुंग में आयोजित ऐतिहासिक एशियाई-अफ़्रीकी सम्मेलन में भाग लेते हुए भारतीय प्रधानमंत्री जवाहरलाल नेहरू, मिस्र के राष्ट्रपति गमाल अब्देल नासिर और अन्य राष्ट्राध्यक्ष।<br/>
+<b>बोर्ड परीक्षा विशेष प्रश्नोत्तर (CBSE Board Q&amp;A):</b><br/>
+                    • <b>प्रश्न 1: बांडुंग सम्मेलन कब हुआ था और इसका क्या ऐतिहासिक महत्त्व है?</b><br/>
+                    • <b>उत्तर:</b> बांडुंग सम्मेलन **अप्रैल 1955** में इंडोनेशिया में हुआ था। यह सम्मेलन नव-स्वतंत्र एशियाई और अफ़्रीकी देशों के बीच आपसी सहयोग और उपनिवेशवाद के विरोध का सबसे बड़ा मंच था। इसी सम्मेलन में **गुटनिरपेक्ष आंदोलन (NAM)** की औपचारिक नींव पड़ी थी।<br/>
+                    • <b>प्रश्न 2: एशियाई संबंध सम्मेलन (Asian Relations Conference) कब हुआ था?</b><br/>
+                    • <b>उत्तर:</b> भारत की आजादी से पांच महीने पहले, **मार्च 1947** में नई दिल्ली में जवाहरलाल नेहरू के नेतृत्व में एशियाई संबंध सम्मेलन आयोजित किया गया था, जो एशियाई एकता का शुरुआती प्रयास था।
+                </div>
+</div>
+
+<div class="illustration-box" style="margin-top: 30px; border: 6px solid #1e3a8a; border-radius: 12px; padding: 20px; background-color: #ffffff;">
+<img alt="Nehru balancing between USA and USSR" src="images/ch11/nehru_tightrope_cartoon.webp" style="width: 80%; max-width: 600px; display: block; margin: 0 auto; border: 4px solid #cbd5e1; border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.15);"/>
+<div class="illustration-explanation" style="margin-top: 15px; border-left: 8px solid #1e3a8a; padding-left: 15px;  line-height: 1.6; text-align: left;">
+<b>ऐतिहासिक कार्टून विजुअल</b><br/>
+<b>विवरण:</b> इस प्रसिद्ध कार्टून में प्रधानमंत्री जवाहरलाल नेहरू को अमेरिका (USA) और सोवियत संघ (USSR) नामक दो बड़ी महाशक्तियों के बीच एक तंग रस्सी पर संतुलन बनाते हुए दिखाया गया है, जबकि उनके सहयोगी उन्हें घबराहट से देख रहे हैं।<br/>
+<b>बोर्ड परीक्षा विशेष कार्टून आधारित प्रश्नोत्तर (CBSE Board Q&amp;A):</b><br/>
+                    • <b>प्रश्न 1: यह कार्टून भारत की विदेश नीति की किस प्रमुख रणनीति को दर्शाता है?</b><br/>
+                    • <b>उत्तर:</b>  यह कार्टून भारत की **गुटनिरपेक्षता की नीति (Policy of Non-Alignment)** को दर्शाता है, जिसमें भारत दोनों महाशक्तियों के सैन्य गुटों से अलग रहकर अपनी स्वतंत्र नीति और दोनों पक्षों से अच्छे संबंध संतुलित रखने का प्रयास कर रहा था।<br/>
+                    • <b>प्रश्न 2: आलोचक इस संतुलन बनाने की नीति को 'सिद्धांतहीन' क्यों कहते थे?</b><br/>
+                    • <b>उत्तर:</b> आलोचकों का तर्क था कि भारत का संतुलन हमेशा एक समान नहीं रहता था। उदाहरण के लिए, जब 1956 में सोवियत संघ ने हंगरी पर हमला किया, तो भारत ने इसकी सार्वजनिक आलोचना नहीं की, जबकि पश्चिमी देशों के हमलों (जैसे स्वेज नहर संकट) पर भारत बहुत मुखर था।
+                </div>
+</div>
+
+<div class="illustration-box" style="margin-top: 30px; border: 6px solid #db2777; border-radius: 12px; padding: 20px; background-color: #ffffff;">
+<img alt="1950s Moral Prestige Cartoon" src="images/ch11/page_58_girl_cartoon.webp" style="width: 85%; max-width: 700px; display: block; margin: 0 auto; border: 4px solid #cbd5e1; border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.15);"/>
+<div class="illustration-explanation" style="margin-top: 15px; border-left: 8px solid #db2777; padding-left: 15px; line-height: 1.6; text-align: left;">
+<b>विदेश नीति कूटनीतिक विश्लेषण (Page 58 कार्टून)</b><br/>
+<b>विवरण:</b> इस कार्टून में एक बालिका सवाल पूछती है: <i>"हम लोग आज की बनिस्बत जब ज्यादा गरीब, कमज़ोर और नए थे तो शायद दुनिया में हमारी पहचान कहीं ज्यादा थी। है ना विचित्र बात?"</i><br/>
+<b>बोर्ड परीक्षा विशेष कार्टून आधारित प्रश्नोत्तर (CBSE Board Q&amp;A):</b><br/>
+                    • <b>प्रश्न 1: यह कार्टून 1950 के दशक में भारत की नैतिक छवि को किस प्रकार रेखांकित करता है?</b><br/>
+                    • <b>उत्तर:</b> 1950 के दशक में भारत भले ही आर्थिक और सैन्य रूप से नया और गरीब देश था, लेकिन पंडित नेहरू के गुटनिरपेक्ष आंदोलन और शांतिपूर्ण कूटनीति के कारण अंतरराष्ट्रीय राजनीति में भारत का नैतिक कद और दबदबा अत्यंत ऊँचा था।
+                </div>
+</div>
+</div>
+<div class="keyword-box" style="background-color: #fef2f2; padding: 20px; border: 6px solid #ef4444; border-radius: 10px; margin-top: 20px;">
+<b style="color: #b91c1c;">संप्रभुता (Sovereignty):</b> किसी देश की वह सर्वोच्च शक्ति जो उसे अपने मामलों में स्वतंत्र रूप से निर्णय लेने का अधिकार देती है।
     </div>
-    
-    <div id="status" style="display: none; position: fixed; top: 70px; right: 20px; background-color: #059669; color: white; padding: 12px 24px; border-radius: 6px; z-index: 1000; font-family: sans-serif; font-size: 14px; font-weight: bold; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
-        ✨ SUCCESS! Content copied to clipboard in rich format. Now open Google Docs and press Ctrl+V.
-    </div>
+</div>
+<br/><br/><hr/><br/><br/>
+<div style="font-family: 'Arial', verdana, sans-serif;  line-height: 2.0; color: #000000; font-weight: 900; -webkit-text-stroke: 1.2px #000000; text-shadow: 0 0 1px #000; padding: 20px;">
+<!-- PART 2 SECTION: NAM -->
+<h1 class="part-header" style="border-bottom: 4px solid #3b82f6; padding-bottom: 10px; padding-top: 40px;">
+        भाग 2: गुटनिरपेक्षता की नीति (Policy of Non-Alignment)
+    </h1>
+<p>जब पूरी दुनिया दो महाशक्तियों—अमेरिका और सोवियत संघ—के बीच बंटी हुई थी, तब भारत ने एक साहसिक फैसला लिया। भारत ने किसी भी गुट में शामिल होने से मना कर दिया और एक स्वतंत्र रास्ता चुना।</p>
+<div style="background-color: #eff6ff; padding: 30px; border-radius: 12px; margin-top: 30px; border-left: 12px solid #3b82f6;">
+<h2 class="topic-header" style="margin-top: 0;">1. गुटनिरपेक्षता क्या है? (What is NAM?)</h2>
+<p>गुटनिरपेक्षता का मतलब यह नहीं है कि भारत दुनिया की समस्याओं से दूर रहेगा। इसका अर्थ है कि भारत सैन्य गुटबाजी से अलग रहकर हर मुद्दे पर अपनी स्वतंत्र राय रखेगा।</p>
+<ul style=" line-height: 2.2;">
+<li><b>मुख्य संस्थापक:</b> जवाहरलाल नेहरू (भारत), नासिर (मिस्र), और टीटो (युगोस्लाविया)।</li>
+<li><b>पहला सम्मेलन:</b> बेलग्रेड (युगोस्लाविया) में 1961 में। </li>
+<li><b>उद्देश्य:</b> नव-स्वतंत्र देशों की आजादी को बचाना और विश्व शांति के लिए काम करना।</li>
+</ul>
+</div>
+<!-- WHY NAM BOX -->
+<div style="background-color: #f0fdf4; padding: 30px; border: 6px solid #22c55e; border-radius: 15px; margin-top: 40px;">
+<h2 class="topic-header" style="font-weight: 900; text-align: center;">गुटनिरपेक्षता के मुख्य लाभ</h2>
+<p style=" line-height: 2;">भारत ने इस नीति को क्यों अपनाया? इसके प्रमुख कारण निम्नलिखित थे:</p>
+<ul style=" font-weight: 900; color: #166534; line-height: 2.2;">
+<li><b>1. राष्ट्रीय संप्रभुता और स्वतंत्र निर्णय:</b> भारत किसी भी महाशक्ति के दबाव में आए बिना वैश्विक मंच पर अपने फैसले देशहित में स्वतंत्र रूप से ले सकता था।</li>
+<li><b>2. संतुलित आर्थिक व तकनीकी सहायता:</b> भारत दोनों महाशक्ति गुटों (अमेरिका और सोवियत संघ) से अपनी विकासात्मक आवश्यकताओं के अनुसार ऋण, तकनीक और खाद्य सहायता ले सकता था।</li>
+<li><b>3. वैश्विक मध्यस्थता और शांति स्थापना:</b> भारत ने कोरियाई युद्ध (1950-53) और स्वेज नहर संकट (1956) में दोनों गुटों के बीच मध्यस्थता (Mediation) कर विश्व शांति को बनाए रखने में बड़ी भूमिका निभाई।</li>
+<li><b>4. अंतरराष्ट्रीय स्तर पर नेतृत्व और प्रतिष्ठा:</b> नव-स्वतंत्र देशों (तीसरी दुनिया - Third World) को एक संगठित मंच प्रदान कर भारत अंतरराष्ट्रीय राजनीति में एक महत्वपूर्ण ताकत बनकर उभरा।</li>
+<li><b>5. राष्ट्रीय सुरक्षा का संतुलन:</b> एक गुट में शामिल होने से दूसरा गुट भारत का शत्रु बन जाता। गुटनिरपेक्ष रहकर भारत ने अपने सुरक्षा हितों को दोनों पक्षों से सुरक्षित रखा।</li>
+</ul>
 
-    <div id="contentToCopy">
-        <div style="font-family: 'Outfit', 'Noto Sans Devanagari', sans-serif; font-size: 20pt; line-height: 2.2; color: #000000; max-width: 1400px; margin: auto; padding: 20px;">
+<!-- Topic-wise Visual Notes Card: NAM Principles -->
+<div class="illustration-box" style="margin-top: 30px; border: 6px solid #2563eb; border-radius: 12px; padding: 20px; background-color: #ffffff;">
+<img alt="गुटनिरपेक्षता के मूल सिद्धांत" src="images/ch11/visual_nam_principles.webp" style="width: 90%; max-width: 800px; display: block; margin: 0 auto; border: 4px solid #cbd5e1; border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.15);"/>
+<div class="illustration-explanation" style="margin-top: 15px; border-left: 8px solid #2563eb; padding-left: 15px; line-height: 1.6; text-align: left;">
+<b><b>गुटनिरपेक्षता के मूल सिद्धांत:</b></b><br/>
+<b>विवरण:</b> गुटनिरपेक्षता के दो मूल आयामों—स्वतंत्र वैश्विक निर्णय मार्ग और शांतिपूर्ण अंतरराष्ट्रीय सहयोग—को रेखांकित करता है।
+</div>
+</div>
+</div>
+<h2 class="topic-header" style="margin-top: 50px;">2. आलोचना और वास्तविकता</h2>
+<div style="background-color: #fffbeb; padding: 25px; border-left: 14px solid #fde047; margin-bottom: 30px; border-radius: 8px;">
+<p>आलोचकों का तर्क था कि भारत की नीति 'सिद्धांतहीन' (Unprincipled) is। 1971 में सोवियत संघ के साथ की गई **'मैत्री संधि'** (Friendship Treaty) को लेकर कुछ लोगों ने कहा कि भारत गुटनिरपेक्षता से हटकर रूस के करीब चला गया है। लेकिन भारत का कहना था कि यह केवल अपनी सुरक्षा के लिए था। </p>
+</div>
 
-            <!-- Title Section (Projector Friendly) -->
-            <div style="text-align: center; margin-bottom: 80px; padding: 75px; border: 15px double #1e3a8a; background-color: #eff6ff; border-radius: 30px;">
-                <h1 style="color: #1e3a8a !important; font-size: 58pt; font-weight: 950 !important; margin-bottom: 20px; -webkit-text-stroke: 1.5px #1e3a8a;">
-                    अध्याय 11: राजनीतिक सिद्धांत<br/>
-                    <span style="font-size: 30pt; color:#475569; font-weight: 900;">(POLITICAL THEORY: AN INTRODUCTION)</span>
-                </h1>
-                <p style="font-size: 26pt; color: #000000; margin-top: 10px; font-weight: 900;">कक्षा 11 राजनीति विज्ञान - अति-गहन शैक्षणिक मास्टर नोट्स</p>
-                <p style="font-size: 20pt; color: #b91c1c; font-style: italic; font-weight: 900;">(विशेष फोकस: राजनीति की सूक्ष्म परिभाषा, सुकरात, प्लेटो व गांधी के विचार, तार्किक सोच, और जागरूक नागरिकता)</p>
-            </div>
+<div class="illustration-box" style="margin-top: 30px; border: 6px solid #be123c; border-radius: 12px; padding: 20px; background-color: #ffffff;">
+<img alt="Indo-Soviet Friendship Treaty Cartoon" src="images/ch11/soviet_friendship_treaty_cartoon.webp" style="width: 80%; max-width: 600px; display: block; margin: 0 auto; border: 4px solid #cbd5e1; border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.15);"/>
+<div class="illustration-explanation" style="margin-top: 15px; border-left: 8px solid #be123c; padding-left: 15px;  line-height: 1.6; text-align: left;">
+<b><b>ऐतिहासिक कार्टून: भारत-सोवियत मैत्री संधि (1971)</b></b><br>
+<b>विवरण:</b> इस व्यंग्यात्मक कार्टून में भारतीय विदेश नीति को एक हाथ में "WE'RE NON-ALIGNED" (हम गुटनिरपेक्ष हैं) की तख्ती पकड़े हुए दिखाया गया है, जबकि पीठ के पीछे दूसरे हाथ में सोवियत संघ (USSR) का झंडा छिपा रखा है। यह भारत-सोवियत 1971 मैत्री संधि पर बाहरी दुनिया की आलोचना को दर्शाता है।<br>
+<b>बोर्ड परीक्षा विशेष कार्टून आधारित प्रश्नोत्तर (CBSE Board Q&amp;A):</b><br>
+                    • <b>प्रश्न 1: यह कार्टून किस ऐतिहासिक समझौते की आलोचना करता है?</b><br>
+                    • <b>उत्तर:</b>  यह कार्टून अगस्त 1971 में भारत और सोवियत संघ के बीच हस्ताक्षरित **20-वर्षीय शांति, मैत्री और सहयोग संधि (Treaty of Peace, Friendship and Cooperation)** की आलोचना करता है।<br/>
+                    • <b>प्रश्न 2: आलोचक इस संधि को गुटनिरपेक्षता की नीति के खिलाफ क्यों मानते थे?</b><br/>
+                    • <b>उत्तर:</b> आलोचकों का मानना था कि इस संधि पर हस्ताक्षर करके भारत अनौपचारिक रूप से सोवियत संघ के सैन्य और राजनीतिक गुट में शामिल हो गया है, जिससे उसकी निष्पक्ष गुटनिरपेक्षता की छवि समाप्त हो गई है।<br/>
+                    • <b>प्रश्न 3: इस संधि पर भारत सरकार का क्या रुख था?</b><br/>
+                    • <b>उत्तर:</b> भारत सरकार का तर्क था कि यह कोई सैन्य गठबंधन नहीं था। 1971 के बांग्लादेश संकट और पाकिस्तान-अमेरिका-चीन के आपसी गठजोड़ के कारण भारत को अपनी सुरक्षा और सैन्य सहायता सुनिश्चित करने के लिए सोवियत संघ के कूटनीतिक समर्थन की सख्त जरूरत थी।
+                </br></br></br></br></div>
+</div>
+<div style="background-color: #fdf2f2; padding: 30px; border-radius: 15px; margin-top: 10px; border: 6px solid #ef4444;">
+<h3 class="subtopic-header" style="">मुख्य विचार:</h3>
+<p>गुटनिरपेक्षता केवल एक नीति नहीं थी, बल्कि यह **'आत्मसम्मान'** का प्रतीक थी। आज भले ही शीत युद्ध खत्म हो गया हो, लेकिन स्वतंत्र विदेश नीति की जरूरत आज भी उतनी ही है।</p>
+</div>
+</div>
+<br/><br/><hr/><br/><br/>
+<div style="font-family: 'Arial', verdana, sans-serif;  line-height: 2.0; color: #000000; font-weight: 900; -webkit-text-stroke: 1.2px #000000; text-shadow: 0 0 1px #000; padding: 20px;">
+<!-- PART 3 SECTION: China Relations -->
+<h1 class="part-header" style="font-weight: 900; border-bottom: 4px solid #f59e0b; padding-bottom: 20px; padding-top: 40px;">
+        भाग 3: चीन के साथ संबंध और 1962 का युद्ध (The China Conflict)
+    </h1>
+<p>भारत और चीन दो बड़े एशियाई पड़ोसी हैं। नेहरु चाहते थे कि भारत और चीन मिलकर एशिया का भविष्य तय करें, लेकिन इतिहास ने एक अलग ही रास्ता चुन रखा था।</p>
+<div style="background-color: #fffbeb; padding: 30px; border-radius: 12px; margin-bottom: 40px; border-left: 12px solid #d97706;">
+<h2 class="topic-header" style="margin-top: 0;">1. पंचशील के पाँच सिद्धांत (1954)</h2>
+<p>नेहरू और चीन के प्रधानमंत्री **चाऊ एन-लाई** (Zhou Enlai) ने शांति के पाँच सिद्धांतों पर आधारित 'पंचशील' समझौता किया।</p>
+<ul style=" line-height: 2.2;">
+<li><b>हिंदी-चीनी भाई-भाई:</b> उस समय यह नारा बहुत लोकप्रिय हुआ था। भारत ने चीन के साथ दोस्ती की हर संभव कोशिश की।</li>
+<li><b>पाँच सिद्धांत:</b> (i) संप्रभुता का सम्मान, (ii) अनाक्रमण, (iii) आंतरिक मामलों में अहस्तक्षेप, (iv) समानता, (v) शांतिपूर्ण सह-अस्तित्व।</li>
+</ul>
+<!-- Educational Visual Card: Panchsheel 1954 Agreement -->
+<div class="illustration-box" style="margin-top: 30px; border: 6px solid #d97706; border-radius: 12px; padding: 20px; background-color: #ffffff;">
+<img alt="पंचशील समझौता 1954" src="images/ch11/nehru_zhou_talks.webp" style="width: 90%; max-width: 800px; display: block; margin: 0 auto; border: 4px solid #cbd5e1; border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.15);"/>
+<div class="illustration-explanation" style="margin-top: 15px; border-left: 8px solid #d97706; padding-left: 15px; line-height: 1.6; text-align: left;">
+<b><b>ऐतिहासिक विजुअल विश्लेषण: पंचशील समझौता (1954)</b></b><br/>
+<b>विवरण:</b> 29 अप्रैल 1954 को भारतीय प्रधानमंत्री जवाहरलाल नेहरू और चीनी प्रधानमंत्री चाऊ एन-लाई के बीच हस्ताक्षरित ऐतिहासिक 'पंचशील समझौते' के पांचों शांतिपूर्ण स्तंभों को प्रदर्शित करता है:<br/>
+• 1. <b>क्षेत्रीय अखंडता और संप्रभुता का सम्मान</b><br/>
+• 2. <b>आपसी अनाक्रमण (Non-aggression)</b><br/>
+• 3. <b>एक-दूसरे के आंतरिक मामलों में गैर-हस्तक्षेप</b><br/>
+• 4. <b>समानता और परस्पर लाभ</b><br/>
+• 5. <b>शांतिपूर्ण सह-अस्तित्व (Peaceful Co-existence)</b><br/>
+<b>बोर्ड परीक्षा विशेष प्रश्नोत्तर (CBSE Board Q&amp;A):</b><br/>
+                    • <b>प्रश्न 1: पंचशील समझौते पर किन नेताओं ने और कब हस्ताक्षर किए थे?</b><br/>
+                    • <b>उत्तर:</b> इस समझौते पर भारत के प्रधानमंत्री जवाहरलाल नेहरू और चीन के प्रधानमंत्री चाऊ एन-लाई ने **29 अप्रैल 1954** को हस्ताक्षर किए थे।<br/>
+                    • <b>प्रश्न 2: पंचशील समझौते का मुख्य उद्देश्य क्या था?</b><br/>
+                    • <b>उत्तर:</b> इसका मुख्य उद्देश्य दोनों पड़ोसी देशों के बीच शांतिपूर्ण सह-अस्तित्व, क्षेत्रीय अखंडता का सम्मान और अनाक्रमण की नीति अपनाकर आपसी संबंधों को मजबूत करना था।
+                </div>
+</div>
+</div>
+<!-- THE TIBET ISSUE BOX -->
+<div style="background-color: #fefce8; padding: 30px; border: 6px solid #fde047; border-radius: 15px; margin-top: 40px;">
+<h2 class="topic-header" style="font-weight: 900; text-align: center;">तिब्बत और दलाई लामा का मामला (1959)</h2>
+<p style=" line-height: 2;">चीन ने तिब्बत पर कब्जा कर लिया और वहां दमन शुरू किया। 1959 में तिब्बती आध्यात्मिक गुरु **दलाई लामा** ने भारत में शरण मांगी। भारत ने उन्हें शरण दी, जिसे चीन ने अपने आंतरिक मामलों में 'दखल' माना। यहीं से भारत और चीन के बीच दरार पैदा हुई।</p>
 
+<div class="illustration-box" style="margin-top: 30px; border: 6px solid #b45309; border-radius: 12px; padding: 20px; background-color: #ffffff;">
+<img alt="Dalai Lama escaping Tibet" src="images/ch11/dalai_lama_escape.webp" style="width: 80%; max-width: 600px; display: block; margin: 0 auto; border: 4px solid #cbd5e1; border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.15);"/>
+<div class="illustration-explanation" style="margin-top: 15px; border-left: 8px solid #b45309; padding-left: 15px;  line-height: 1.6; text-align: left;">
+<b><b>ऐतिहासिक चित्र: दलाई लामा का भारत आगमन (1959)</b></b><br/>
+<b>विवरण:</b> तिब्बत पर चीनी सेना के कब्जे और सांस्कृतिक दमन के बाद अपने अनुयायियों के साथ सीमा पार कर भारत में प्रवेश करते हुए तिब्बती धर्मगुरु दलाई लामा।<br/>
+<b>बोर्ड परीक्षा विशेष प्रश्नोत्तर (CBSE Board Q&amp;A):</b><br/>
+                    • <b>प्रश्न 1: दलाई लामा ने भारत से राजनीतिक शरण कब मांगी और भारत सरकार का क्या निर्णय था?</b><br/>
+                    • <b>उत्तर:</b> दलाई लामा ने **1959** में भारत से राजनीतिक शरण मांगी। भारत सरकार ने मानवीय आधार पर उन्हें और उनके हजारों अनुयायियों को शरण प्रदान की और वे धर्मशाला (हिमाचल प्रदेश) में बस गए।<br/>
+                    • <b>प्रश्न 2: तिब्बत मुद्दे को लेकर चीन ने भारत पर क्या आरोप लगाया?</b><br/>
+                    • <b>उत्तर:</b> चीन ने आरोप लगाया कि दलाई लामा को शरण देकर भारत चीन विरोधी गतिविधियों को बढ़ावा दे रहा है और 1954 के पंचशील समझौते (आंतरिक मामलों में अहस्तक्षेप) का उल्लंघन कर रहा है।
+                </div>
+</div>
+</div>
+<h2 class="topic-header" style="margin-top: 50px;">2. 1962 का युद्ध (The Border Conflict)</h2>
+<div style="background-color: #f8fafc; padding: 25px; border-left: 14px solid #cbd5e1; margin-bottom: 30px; border-radius: 8px;">
+<p>चीन ने अचानक अक्टूबर 1962 में भारत पर आक्रमण कर दिया। भारत दो मोर्चों पर संकट में था—पहला <b>अरुणाचल प्रदेश</b> (नेफ़ा - NEFA) और दूसरा <b>लद्दाख</b> (अक्साई चिन)।</p>
+<ul style="">
+<li><b>परिणाम:</b> भारतीय सेना इस हमले के लिए तैयार नहीं थी। चीन ने बहुत सा इलाका कब्जा लिया और अचानक युद्ध विराम की घोषणा कर दी।</li>
+<li><b>धक्का:</b> इस हार ने भारत की छवि को वैश्विक स्तर पर धक्का पहुँचाया और नेहरू की विदेश नीति की बहुत आलोचना हुई।</li>
+</ul>
+
+<div class="illustration-box" style="margin-top: 30px; border: 6px solid #cbd5e1; border-radius: 12px; padding: 20px; background-color: #ffffff;">
+<img alt="India China Border Map" src="images/ch11/india_china_border_map.webp" style="width: 80%; max-width: 600px; display: block; margin: 0 auto; border: 4px solid #cbd5e1; border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.15);"/>
+<div class="illustration-explanation" style="margin-top: 15px; border-left: 8px solid #cbd5e1; padding-left: 15px;  line-height: 1.6; text-align: left;">
+<b><b>मानचित्र विश्लेषण: भारत-चीन सीमा विवाद</b></b><br/>
+<b>विवरण:</b> भारत और चीन के बीच विवादित सीमा क्षेत्रों को दर्शाता मानचित्र। इसमें मुख्य रूप से पश्चिमी क्षेत्र (अक्साई चिन) और पूर्वी क्षेत्र (अरुणाचल प्रदेश/नेफा) के विवादित हिस्सों को दर्शाया गया है।<br/>
+<b>बोर्ड परीक्षा विशेष प्रश्नोत्तर (CBSE Board Q&amp;A):</b><br/>
+                    • <b>प्रश्न 1: 1962 के युद्ध में चीन ने भारत के किन दो प्रमुख क्षेत्रों पर हमला किया था?</b><br/>
+                    • <b>उत्तर:</b> चीन ने भारत के दो क्षेत्रों पर हमला किया: (1) **पश्चिमी क्षेत्र (लद्दाख का अक्साई चिन)**, और (2) **पूर्वी क्षेत्र (अरुणाचल प्रदेश, जिसे तब नेफ़ा - NEFA - उत्तर-पूर्वी सीमांत एजेंसी कहा जाता था)**।<br/>
+                    • <b>प्रश्न 2: मैकमोहन रेखा (McMahon Line) क्या है और विवाद में इसकी क्या भूमिका है?</b><br/>
+                    • <b>उत्तर:</b> मैकमोहन रेखा ब्रिटिश शासन के दौरान 1914 में शिमला समझौते के तहत तय की गई भारत और तिब्बत की सीमा रेखा है। चीन इस रेखा को औपनिवेशिक काल का समझौता मानकर स्वीकार नहीं करता है और अरुणाचल प्रदेश के बड़े हिस्से पर अपना दावा जताता है।
+                </div>
+</div>
+
+<div class="illustration-box" style="margin-top: 30px; border: 6px solid #be123c; border-radius: 12px; padding: 20px; background-color: #ffffff;">
+<img alt="Nehru lassoing Chinese soldier cartoon" src="images/ch11/china_intrusion_cartoon.webp" style="width: 80%; max-width: 600px; display: block; margin: 0 auto; border: 4px solid #cbd5e1; border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.15);"/>
+<div class="illustration-explanation" style="margin-top: 15px; border-left: 8px solid #be123c; padding-left: 15px;  line-height: 1.6; text-align: left;">
+<b><b>ऐतिहासिक कार्टून: सीमा पर चीनी घुसपैठ (शंकर का कार्टून)</b></b><br/>
+<b>विवरण:</b> इस व्यंग्यात्मक कार्टून में प्रधानमंत्री नेहरू को एक रस्सी (फांस) लेकर सीमा पार करने वाले चीनी सैनिक को पकड़ने का प्रयास करते दिखाया गया है, जो चीनी घुसपैठ पर भारतीय विदेश नीति के प्रतिक्रियात्मक रवैये को दर्शाता है।<br/>
+<b>बोर्ड परीक्षा विशेष कार्टून आधारित प्रश्नोत्तर (CBSE Board Q&amp;A):</b><br/>
+                    • <b>प्रश्न 1: यह कार्टून 1962 के युद्ध से पहले सीमा पर किस स्थिति को दर्शाता है?</b><br/>
+                    • <b>उत्तर:</b>  यह कार्टून 1950 के दशक के उत्तरार्ध में चीनी घुसपैठ की घटनाओं और भारत सरकार द्वारा कूटनीतिक रूप से उन्हें रोकने के असफल और ढीले प्रयासों को दर्शाता है। नेहरू का मानना था कि बातचीत से विवाद सुलझ जाएगा और चीन कभी बड़ा हमला नहीं करेगा।
+                </div>
+</div>
+
+<div class="illustration-box" style="margin-top: 30px; border: 6px solid #991b1b; border-radius: 12px; padding: 20px; background-color: #ffffff;">
+<img alt="1962 Sino-Indian War clippings" src="images/ch11/china_war_clippings.webp" style="width: 80%; max-width: 600px; display: block; margin: 0 auto; border: 4px solid #cbd5e1; border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.15);"/>
+<div class="illustration-explanation" style="margin-top: 15px; border-left: 8px solid #991b1b; padding-left: 15px;  line-height: 1.6; text-align: left;">
+<b><b>ऐतिहासिक समाचार कतरन: 1962 भारत-चीन युद्ध</b></b><br/>
+<b>विवरण:</b> 1962 के भारत-चीन युद्ध के समय के समाचार पत्रों की कतरनें और एक कार्टून जिसमें चीनी हमले के कारण नेहरू सरकार पर संसद और जनता के दबाव को दर्शाया गया है।<br/>
+<b>बोर्ड परीक्षा विशेष प्रश्नोत्तर (CBSE Board Q&amp;A):</b><br/>
+                    • <b>प्रश्न 1: 1962 के युद्ध के क्या राजनीतिक परिणाम हुए?</b><br/>
+                    • <b>उत्तर:</b> (1) रक्षा मंत्री वी.के. कृष्ण मेनन को इस्तीफा देना पड़ा। (2) नेहरू जी के नेतृत्व को गहरा धक्का लगा। (3) पहली बार संसद में कांग्रेस सरकार के खिलाफ **अविश्वास प्रस्ताव (No-Confidence Motion)** लाया गया। (4) कम्युनिस्ट पार्टी (CPI) में दरार पड़ गई और सोवियत समर्थक और चीन समर्थक धड़े अलग हो गए (CPI-M का गठन)।
+                </div>
+</div>
+
+<div class="illustration-box" style="margin-top: 30px; border: 6px solid #b45309; border-radius: 12px; padding: 20px; background-color: #ffffff;">
+<img alt="Amul Hindi Chini Bye Bye Cartoon" src="images/ch11/amul_bye_bye_cartoon.webp" style="width: 80%; max-width: 600px; display: block; margin: 0 auto; border: 4px solid #cbd5e1; border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.15);"/>
+<div class="illustration-explanation" style="margin-top: 15px; border-left: 8px solid #b45309; padding-left: 15px;  line-height: 1.6; text-align: left;">
+<b><b>ऐतिहासिक विज्ञापन कार्टून: अमूल 'Hindi Chini Bye Bye?' (1962)</b></b><br/>
+<b>विवरण:</b> 1962 के भारत-चीन युद्ध के दौरान जारी किया गया अमूल (Amul) का एक प्रसिद्ध विज्ञापन कार्टून। इसमें ऊपर "Hindi Chini Bye Bye?" लिखा है, और नीचे "Attack this Instead" (इस पर आक्रमण करने की बजाय इस पर टूट पड़ो) लिखकर मक्खन के पैकेट को दिखाया गया है, जो युद्धकालीन परिस्थितियों पर एक व्यंग्यपूर्ण प्रतिक्रिया है।<br/>
+<b>बोर्ड परीक्षा विशेष कार्टून आधारित प्रश्नोत्तर (CBSE Board Q&amp;A):</b><br/>
+                    • <b>प्रश्न 1: यह विज्ञापन किस ऐतिहासिक घटना और नारे पर व्यंग्य करता है?</b><br/>
+                    • <b>उत्तर:</b>  यह विज्ञापन 1950 के दशक के प्रसिद्ध भाईचारे के नारे **"हिंदी-चीनी भाई-भाई"** पर व्यंग्य करता है, जो 1962 के चीन के आक्रमण और विश्वासघात के बाद **"हिंदी-चीनी बाय-बाय"** (सदा के लिए दूरी) में बदल गया।<br/>
+                    • <b>प्रश्न 2: "Attack this Instead" का कार्टूनिस्ट ने यहाँ क्या संदेश देने का प्रयास किया है?</b><br/>
+                    • <b>उत्तर:</b>  इसका संदेश है कि युद्ध की विनाशकारी सैन्य हिंसा ("Attack") के स्थान पर लोगों को शांतिपूर्ण और स्वास्थ्यवर्धक खाद्य उत्पादों (जैसे मक्खन) की ओर ध्यान देना चाहिए। यह युद्धकालीन तनाव के समय जनता का मनोबल बढ़ाने और शांतिप्रियता को बढ़ावा देने का एक रचनात्मक तरीका था।
+                </div>
+</div>
+<!-- Biography Card: V. K. Krishna Menon -->
+<div style="background-color: #eff6ff; border: 4px dashed #2563eb; border-radius: 12px; padding: 25px; margin-top: 35px; display: flex; flex-direction: column;">
+<div style="display: flex; gap: 20px; align-items: center; justify-content: center; margin-bottom: 15px; border-bottom: 2px solid #bfdbfe; padding-bottom: 10px;">
+<img alt="वी. के. कृष्ण मेनन डाक टिकट" src="images/ch11/krishna_menon_stamp.webp" style="width: 120px; border: 2px solid #cbd5e1; border-radius: 6px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);"/>
+<h4 style="font-weight: 900; margin: 0;">
+                        वी. के. कृष्ण मेनन (1896 - 1974)
+                    </h4>
+</div>
+<p style=" line-height: 1.6; color: #1e3a8a; margin: 0;">
+                    • <b>उपाधि:</b> भारत के प्रसिद्ध राजनयिक, राजनेता और **तत्कालीन रक्षा मंत्री (1957 - 1962)**।<br/>
+                    • <b>कूटनीतिक भूमिका:</b> संयुक्त राष्ट्र (UN) में कश्मीर मुद्दे पर भारत का ऐतिहासिक रूप से जोरदार पक्ष रखने वाले प्रखर वक्ता। इन्होंने ब्रिटेन में भारत के उच्चायुक्त के रूप में भी सेवा की।<br/>
+                    • <b>1962 की हार का प्रभाव:</b> चीन के साथ युद्ध में भारतीय सेना की तैयारियों की कमी और विफलता के कारण इनकी कड़ी आलोचना हुई, जिसके बाद इन्हें अपने पद से इस्तीफा देना पड़ा।<br/>
+                    • <b>महत्त्व:</b> ये नेहरू के सबसे करीबी दोस्तों और सलाहकारों में से एक थे।
+                </p>
+</div>
+
+<div class="illustration-box" style="margin-top: 30px; border: 6px solid #4b5563; border-radius: 12px; padding: 20px; background-color: #ffffff;">
+<img alt="Haqeeqat 1964 Movie Still" src="images/ch11/haqeeqat_movie.webp" style="width: 80%; max-width: 600px; display: block; margin: 0 auto; border: 4px solid #cbd5e1; border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.15);"/>
+<div class="illustration-explanation" style="margin-top: 15px; border-left: 8px solid #4b5563; padding-left: 15px;  line-height: 1.6; text-align: left;">
+<b><b>चित्रपट (फ़िल्म) विश्लेषण: हक़ीक़त (1964)</b></b><br/>
+                    • <b>निर्देशन:</b> चेतन आनंद<br/>
+                    • <b>मुख्य कलाकार:</b> धर्मेंद्र, बलराज साहनी, विजय आनंद, संजय खान, प्रिया राजवंश<br/>
+                    • <b>मुख्य विषयवस्तु:</b> यह फिल्म **1962 के भारत-चीन युद्ध** की पृष्ठभूमि पर आधारित है। इसमें लद्दाख के विवादित क्षेत्र में तैनात भारतीय सैनिकों के मानवीय संघर्ष, वीरता और विपरीत परिस्थितियों में उनके अदम्य साहस को यथार्थवादी ढंग से दर्शाया गया है।<br/>
+                    • <b>ऐतिहासिक व राजनीतिक महत्व :</b><br/>
+                    यह फिल्म युद्ध की विभीषिका, सरकार की सैन्य तैयारियों में कमी के दर्द और उस समय के राष्ट्रीय मनोभावों (National Sentiment) को रेखांकित करती है। चेतन आनंद ने इस फिल्म को तत्कालीन प्रधानमंत्री जवाहरलाल नेहरू और लद्दाख के सैनिकों को समर्पित किया था। फिल्म का प्रसिद्ध देशभक्ति गीत **"कर चले हम फ़िदा जान-ओ-तन साथियों, अब तुम्हारे हवाले वतन साथियों"** (गीतकार: कैफ़ी आज़मी, संगीत: मदन मोहन) आज भी राष्ट्रीय गौरव और सैनिकों के बलिदान का अमर प्रतीक माना जाता है।<br/>
+<b>बोर्ड परीक्षा विशेष प्रश्नोत्तर (CBSE Board Q&amp;A):</b><br/>
+                    • <b>प्रश्न 1: 1962 के युद्ध पर आधारित किस प्रसिद्ध फिल्म का उल्लेख सुरक्षा चुनौतियों को समझने के लिए किया गया है?</b><br/>
+                    • <b>उत्तर:</b> इस फिल्म का नाम **"हक़ीक़त" (1964)** है, जिसका निर्देशन **चेतन आनंद** ने किया था।
+                </div>
+</div>
+</div>
+<div style="background-color: #fdf2f2; padding: 30px; border-radius: 12px; margin-top: 40px; border: 2px dashed #dc2626;">
+<h3 class="subtopic-header" style="">मुख्य विचार:</h3>
+<p>1962 के युद्ध ने भारत को यह सिखाया कि **'आदर्शवाद'** (Idealism) और **'यथार्थवाद'** (Realism) के बीच संतुलन जरूरी है। इसके बाद भारत ने अपनी सैन्य शक्ति को बढ़ाने पर ध्यान दिया।</p>
+</div>
+</div>
+<br/><br/><hr/><br/><br/>
+<div style="font-family: 'Arial', verdana, sans-serif;  line-height: 2.0; color: #000000; font-weight: 900; -webkit-text-stroke: 1.2px #000000; text-shadow: 0 0 1px #000; padding: 20px;">
+<!-- PART 4 SECTION: Pakistan Conflict -->
+<h1 class="part-header" style="font-weight: 900; border-bottom: 5px solid #f43f5e; padding-bottom: 15px; padding-top: 40px;">
+        भाग 4: पाकिस्तान के साथ युद्ध और शांति (Wars and Peace)
+    </h1>
+<p>भारत और पाकिस्तान का इतिहास ऐतिहासिक संघर्षों, सीमाओं के विवादों और शांति समझौतों का रहा है। 1947 के कश्मीर विभाजन से लेकर 1999 के कारगिल युद्ध तक दोनों देशों के बीच चार बड़े युद्ध हुए।</p>
+
+<!-- Visual Notes Card: 1947 Kashmir Accession -->
+<div class="illustration-box" style="margin-top: 30px; border: 6px solid #1e3a8a; border-radius: 12px; padding: 20px; background-color: #ffffff;">
+<img alt="1947 कश्मीर विलय एवं सुरक्षा समझौता" src="images/ch11/visual_1947_kashmir_accession.webp" style="width: 90%; max-width: 800px; display: block; margin: 0 auto; border: 4px solid #cbd5e1; border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.15);"/>
+<div class="illustration-explanation" style="margin-top: 15px; border-left: 8px solid #1e3a8a; padding-left: 15px; line-height: 1.6; text-align: left;">
+<b><b>1947 कश्मीर विलय एवं सुरक्षा समझौता:</b></b><br/>
+<b>विवरण:</b> 1947 में पाकिस्तानी कबाइलियों के आक्रमण के बाद महाराजा हरि सिंह द्वारा इंस्ट्रूमेंट ऑफ एक्सेसिबिलिटी पर हस्ताक्षर और भारतीय सेना का श्रीनगर हवाई अड्डे पर उतरकर कश्मीर की सुरक्षा सुनिश्चित करने का ऐतिहासिक दृश्य।
+</div>
+</div>
+
+<!-- Visual Notes Card: India Pakistan Conflicts Map -->
+<div class="illustration-box" style="margin-top: 30px; border: 6px solid #e11d48; border-radius: 12px; padding: 20px; background-color: #ffffff;">
+<img alt="भारत-पाकिस्तान संघर्ष एवं सीमा विवाद मानचित्र" src="images/ch11/visual_india_pak_conflicts_map.webp" style="width: 90%; max-width: 800px; display: block; margin: 0 auto; border: 4px solid #cbd5e1; border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.15);"/>
+<div class="illustration-explanation" style="margin-top: 15px; border-left: 8px solid #e11d48; padding-left: 15px; line-height: 1.6; text-align: left;">
+<b><b>भारत-पाकिस्तान संघर्ष एवं सीमा विवाद (1947-1999):</b></b><br/>
+<b>विवरण:</b> यह मानचित्र विजुअल कार्ड भारत और पाकिस्तान के बीच चार प्रमुख ऐतिहासिक संघर्ष क्षेत्रों—1947 का कश्मीर विवाद व नियंत्रण रेखा (LoC), 1965 का रन ऑफ कच्छ, 1971 का बांग्लादेश मुक्ति संग्राम और 1999 का कारगिल युद्ध—को प्रदर्शित करता है।
+</div>
+</div>
+
+<div style="background-color: #fef2f2; padding: 30px; border-radius: 12px; margin-bottom: 40px; border-left: 12px solid #e11d48; margin-top: 30px;">
+<h2 class="topic-header" style="font-weight: 900; margin-top: 0;">1. 1965 का भारत-पाक युद्ध</h2>
+<p>1965 में पाकिस्तान ने गुजरात के **कच्छ के रण (Rann of Kutch)** और कश्मीर में हमला कर दिया।</p>
+<ul style=" line-height: 2.2;">
+<li><b>नेतृत्व:</b> लाल बहादुर शास्त्री। उन्होंने भारतीय सेना को लाहौर तक बढ़ने का आदेश दिया।</li>
+<li><b>ताशकंद समझौता (Tashkent Agreement, 1966):</b> सोवियत संघ की मध्यस्थता में यह समझौता हुआ। दुर्भाग्य से, इसी दौरान शास्त्रीजी का निधन हो गया। </li>
+</ul>
+
+<div class="illustration-box" style="margin-top: 30px; border: 6px solid #cbd5e1; border-radius: 12px; padding: 20px; background-color: #ffffff;">
+<img alt="Indian soldiers on tank 1965 war" src="images/ch11/pak_war_1965_tank.webp" style="width: 80%; max-width: 600px; display: block; margin: 0 auto; border: 4px solid #cbd5e1; border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.15);"/>
+<div class="illustration-explanation" style="margin-top: 15px; border-left: 8px solid #cbd5e1; padding-left: 15px;  line-height: 1.6; text-align: left;">
+<b><b>ऐतिहासिक चित्र: 1965 भारत-पाकिस्तान युद्ध</b></b><br/>
+<b>विवरण:</b> 1965 के भारत-पाकिस्तान युद्ध के दौरान एक पाकिस्तानी टैंक पर तिरंगा फहराते और शौर्य का प्रदर्शन करते हुए भारतीय सेना के वीर जवान।<br/>
+<b>बोर्ड परीक्षा विशेष प्रश्नोत्तर (CBSE Board Q&amp;A):</b><br/>
+                    • <b>प्रश्न 1: 1965 के युद्ध के समय भारत के प्रधानमंत्री कौन थे और उन्होंने कौन सा प्रसिद्ध नारा दिया था?</b><br/>
+                    • <b>उत्तर:</b>  इस युद्ध के समय भारत के प्रधानमंत्री **लाल बहादुर शास्त्री** थे। उन्होंने देश के जवानों और किसानों का मनोबल बढ़ाने के लिए प्रसिद्ध नारा **"जय जवान, जय किसान"** दिया था।<br/>
+                    • <b>प्रश्न 2: 1965 के युद्ध का अंत किस समझौते से हुआ?</b><br/>
+                    • <b>उत्तर:</b>  इस युद्ध का अंत जनवरी 1966 में सोवियत संघ की मध्यस्थता से हुए **ताशकंद समझौते** (Tashkent Agreement) के द्वारा हुआ, जिस पर लाल बहादुर शास्त्री और पाकिस्तान के राष्ट्रपति अयूब खान ने हस्ताक्षर किए थे।
+                </div>
+</div>
+
+<div style="display: flex; gap: 20px; justify-content: center; margin-top: 30px; flex-wrap: wrap; margin-bottom: 20px;">
+<div class="stamp-container" style="border: 4px solid #cbd5e1; padding: 10px; border-radius: 8px; background: white; text-align: center; width: 45%;">
+<img alt="जय जवान डाक टिकट" src="images/ch11/jai_jawan_stamp.webp" style="width: 80%; border-radius: 4px;"/>
+<p style=" color: #4b5563; font-weight: bold; margin-top: 5px;">जय जवान डाक टिकट</p>
+</div>
+<div class="stamp-container" style="border: 4px solid #cbd5e1; padding: 10px; border-radius: 8px; background: white; text-align: center; width: 45%;">
+<img alt="जय किसान डाक टिकट" src="images/ch11/jai_kisan_stamp.webp" style="width: 80%; border-radius: 4px;"/>
+<p style=" color: #4b5563; font-weight: bold; margin-top: 5px;">जय किसान डाक टिकट</p>
+</div>
+</div>
+</div>
+<!-- THE 1971 WAR BOX -->
+<div style="background-color: #f0fdf4; padding: 30px; border: 6px solid #10b981; border-radius: 15px; margin-top: 40px;">
+<h2 class="topic-header" style="text-align: center;">1971 का युद्ध और बांग्लादेश का उदय</h2>
+<p style=" line-height: 2;">यह युद्ध भारत की सबसे बड़ी सैन्य और कूटनीतिक जीत थी। इसके दो मुख्य पहलू थे:</p>
+<ul style=" font-weight: 900; color: #064e3b; line-height: 2.2;">
+<li>1. शरणार्थी संकट: पूर्वी पाकिस्तान (आज का बांग्लादेश) के दमन से परेशान होकर करोड़ों लोग भारत में घुस आए।</li>
+<li>2. भारत की मदद: भारत ने 'मुक्ति वाहिनी' की मदद की और पाकिस्तान को 13 दिनों के युद्ध में हरा दिया।</li>
+<li>3. ऐतिहासिक समर्पण: 93,000 पाकिस्तानी सैनिकों ने आत्मसमर्पण किया।</li>
+<li>4. शिमला समझौता (Simla Agreement, 1972): इंदिरा गांधी और जुल्फिकार अली भुट्टो के बीच शांति के लिए यह समझौता हुआ।</li>
+</ul>
+
+<div class="illustration-box" style="margin-top: 30px; border: 6px solid #b91c1c; border-radius: 12px; padding: 20px; background-color: #ffffff;">
+<img alt="Emergency Declared 1971 Clipping" src="images/ch11/emergency_1971_clipping.webp" style="width: 80%; max-width: 600px; display: block; margin: 0 auto; border: 4px solid #cbd5e1; border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.15);"/>
+<div class="illustration-explanation" style="margin-top: 15px; border-left: 8px solid #b91c1c; padding-left: 15px;  line-height: 1.6; text-align: left;">
+<b><b>ऐतिहासिक समाचार पत्र: 1971 युद्ध एवं आपातकाल घोषणा</b></b><br/>
+<b>विवरण:</b> दिसंबर 1971 में पाकिस्तान द्वारा भारत पर हवाई हमला करने के बाद भारत में राष्ट्रीय आपातकाल लागू होने की घोषणा करने वाला समाचार पत्र।<br/>
+<b>बोर्ड परीक्षा विशेष प्रश्नोत्तर (CBSE Board Q&amp;A):</b><br/>
+                    • <b>प्रश्न 1: 1971 का युद्ध किस घटना से शुरू हुआ था?</b><br/>
+                    • <b>उत्तर:</b>  3 दिसंबर 1971 को पाकिस्तानी लड़ाकू विमानों ने भारत के कई हवाई अड्डों पर हमले किए। इसके जवाब में भारत ने पाकिस्तान के खिलाफ युद्ध की घोषणा कर दी और पूर्वी व पश्चिमी दोनों मोर्चों पर कार्रवाई शुरू की।
+                </div>
+</div>
+
+<div class="illustration-box" style="margin-top: 30px; border: 6px solid #10b981; border-radius: 12px; padding: 20px; background-color: #ffffff;">
+<img alt="Instrument of Surrender Dacca 1971" src="images/ch11/instrument_of_surrender_1971.webp" style="width: 80%; max-width: 600px; display: block; margin: 0 auto; border: 4px solid #cbd5e1; border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.15);"/>
+<div class="illustration-explanation" style="margin-top: 15px; border-left: 8px solid #10b981; padding-left: 15px;  line-height: 1.6; text-align: left;">
+<b><b>ऐतिहासिक चित्र: ढाका में पाकिस्तानी सेना का आत्मसमर्पण (16 दिसंबर 1971)</b></b><br/>
+<b>विवरण:</b> ढाका में पाकिस्तानी सेना के पूर्वी कमान के प्रमुख लेफ्टिनेंट जनरल ए. ए. के. नियाज़ी को भारतीय सेना के लेफ्टिनेंट जनरल जगजीत सिंह अरोड़ा के सामने आत्मसमर्पण के दस्तावेजों (Instrument of Surrender) पर हस्ताक्षर करते हुए।<br/>
+<b>बोर्ड परीक्षा विशेष प्रश्नोत्तर (CBSE Board Q&amp;A):</b><br/>
+                    • <b>प्रश्न 1: 1971 के युद्ध का परिणाम क्या हुआ?</b><br/>
+                    • <b>उत्तर:</b>  इस युद्ध में पाकिस्तान की करारी हार हुई और पूर्वी पाकिस्तान आज़ाद होकर **बांग्लादेश** के रूप में विश्व मानचित्र पर उभरा। 93,000 से अधिक पाकिस्तानी सैनिकों ने आत्मसमर्पण किया था, जो द्वितीय विश्व युद्ध के बाद सबसे बड़ा सैन्य आत्मसमर्पण था।<br/>
+                    • <b>प्रश्न 2: शिमला समझौता (Simla Agreement) कब और किनके बीच हुआ था?</b><br/>
+                    • <b>उत्तर:</b>  यह समझौता **3 जुलाई 1972** को भारत की प्रधानमंत्री इंदिरा गांधी और पाकिस्तान के राष्ट्रपति जुल्फिकार अली भुट्टो के बीच हुआ था। इसके तहत कश्मीर मुद्दे को द्विपक्षीय बातचीत से सुलझाने और नियंत्रण रेखा (LoC) का सम्मान करने पर सहमति बनी।
+                </div>
+</div>
+
+<!-- Visual Notes Card: Tashkent & Simla Peace Agreements -->
+<div class="illustration-box" style="margin-top: 30px; border: 6px solid #10b981; border-radius: 12px; padding: 20px; background-color: #ffffff;">
+<img alt="ताशकंद एवं शिमला शांति समझौते" src="images/ch11/visual_tashkent_simla_agreements.webp" style="width: 90%; max-width: 800px; display: block; margin: 0 auto; border: 4px solid #cbd5e1; border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.15);"/>
+<div class="illustration-explanation" style="margin-top: 15px; border-left: 8px solid #10b981; padding-left: 15px; line-height: 1.6; text-align: left;">
+<b><b>भारत-पाक शांति समझौते: ताशकंद घोषणापत्र एवं शिमला समझौता:</b></b><br/>
+<b>विवरण:</b> यह विजुअल कार्ड 1965 के युद्ध के बाद हुए 'ताशकंद समझौते (1966)' (लाल बहादुर शास्त्री और अयूब खान) तथा 1971 के युद्ध के बाद हुए 'शिमला समझौते (1972)' (इंदिरा गांधी और जुल्फिकार अली भुट्टो) के मुख्य शांति सिद्धांतों—द्विपक्षीय वार्ता, नियंत्रण रेखा का सम्मान, युद्धबंदियों की वापसी और आपसी संप्रभुता—को प्रदर्शित करता है।
+</div>
+</div>
+</div>
+<h2 class="topic-header" style="font-weight: 900; margin-top: 50px;">2. कारगिल युद्ध (Kargil War, 1999)</h2>
+<div style="background-color: #f8fafc; padding: 25px; border-left: 14px solid #cbd5e1; margin-bottom: 30px; border-radius: 8px;">
+<p>मई-जुलाई 1999 में पाकिस्तानी सैनिकों ने कारगिल की ऊँची चोटियों पर कब्ज़ा कर लिया था। भारत ने **'ऑपरेशन विजय'** शुरू किया और अपनी चौकियों को वापस हासिल किया। यह युद्ध दिखा चुका था कि परमाणु हथियार होने के बावजूद युद्ध की संभावना खत्म नहीं होती। </p>
+
+<!-- Visual Notes Card: 1999 Kargil Conflict / Operation Vijay -->
+<div class="illustration-box" style="margin-top: 30px; border: 6px solid #991b1b; border-radius: 12px; padding: 20px; background-color: #ffffff;">
+<img alt="1999 कारगिल संघर्ष एवं ऑपरेशन विजय" src="images/ch11/visual_1999_kargil_operation_vijay.webp" style="width: 90%; max-width: 800px; display: block; margin: 0 auto; border: 4px solid #cbd5e1; border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.15);"/>
+<div class="illustration-explanation" style="margin-top: 15px; border-left: 8px solid #991b1b; padding-left: 15px; line-height: 1.6; text-align: left;">
+<b><b>1999 कारगिल संघर्ष एवं ऑपरेशन विजय:</b></b><br/>
+<b>विवरण:</b> 1999 में कारगिल की ऊंची चोटियों (टाइगर हिल, तोलोलिंग) पर पाकिस्तानी घुसपैठियों को खदेड़ने के लिए भारतीय सशस्त्र बलों द्वारा संचालित 'ऑपरेशन विजय' और अंतरराष्ट्रीय कूटनीतिक जीत।
+</div>
+</div>
+</div>
+<div style="background-color: #fdf2f8; padding: 30px; border-radius: 12px; margin-top: 40px; border: 2px dashed #db2777;">
+<h3 class="subtopic-header" style="">मुख्य विचार:</h3>
+<p>भारत और पाकिस्तान के युद्धों ने दक्षिण एशिया की राजनीति को पूरी तरह बदल दिया। भारत ने हमेशा **'शांतिपूर्ण सह-अस्तित्व'** (Peaceful Co-existence) की कोशिश की, लेकिन अपनी संप्रभुता के साथ कभी समझौता नहीं किया।</p>
+</div>
+</div>
+<br/><br/><hr/><br/><br/>
+<div style="font-family: 'Arial', verdana, sans-serif;  line-height: 2.0; color: #000000; font-weight: 900; -webkit-text-stroke: 1.2px #000000; text-shadow: 0 0 1px #000; padding: 20px;">
+<!-- PART 5 SECTION: Nuclear Policy -->
+<h1 class="part-header" style="font-weight: 900; border-bottom: 5px solid #fdba74; padding-bottom: 20px; padding-top: 40px;">
+        भाग 5: भारत की परमाणु नीति (Nuclear Policy)
+    </h1>
+<p>भारत की परमाणु नीति का मुख्य आधार **'आत्मनिर्भरता'** और **'शांतिपूर्ण उपयोग'** (Peaceful Use) रहा है। भारत कभी भी परमाणु हथियारों की दौड़ में शामिल नहीं होना चाहता था, लेकिन सुरक्षा कारणों से उसे यह कदम उठाना पड़ा।</p>
+<div style="background-color: #fff7ed; padding: 30px; border-radius: 12px; margin-bottom: 40px; border-left: 12px solid #f97316;">
+<h2 class="topic-header" style="margin-top: 0;">1. परमाणु कार्यक्रम की शुरुआत</h2>
+<p>भारत ने 1940 के दशक के उत्तरार्ध में **होमी जे. भाभा** (Homi J. Bhabha) के नेतृत्व में अपना परमाणु कार्यक्रम शुरू किया। इसके मुख्य बिंदु निम्नलिखित हैं:</p>
+<ul style=" line-height: 2.2;">
+<li><b>होमी जे. भाभा का योगदान:</b> भारत के परमाणु ऊर्जा कार्यक्रम के जनक डॉ. होमी जहांगीर भाभा थे, जिन्होंने भारत को परमाणु तकनीक में आत्मनिर्भर बनाने की नींव रखी।</li>
+<li><b>पहला परीक्षण (Pokhran-I, 1974):</b> मई 1974 में भारत ने **'स्माइलिंग बुद्धा'** (Smiling Buddha) के गुप्त नाम से राजस्थान के पोखरण में अपना पहला शांतिपूर्ण परमाणु विस्फोट परीक्षण किया।</li>
+<li><b>विश्व की प्रतिक्रिया और प्रतिबंध:</b> इस परीक्षण के बाद अमेरिका सहित पश्चिमी देशों ने भारत पर कड़े आर्थिक व तकनीकी प्रतिबंध लगा दिए।</li>
+<li><b>शांतिपूर्ण उद्देश्यों का दावा:</b> भारत ने स्पष्ट रूप से घोषणा की कि उसका परमाणु कार्यक्रम केवल शांतिपूर्ण उद्देश्यों (जैसे बिजली उत्पादन) के लिए है।</li>
+<li><b>शीत युद्ध कालीन विदेश नीति का हिस्सा:</b> यह परीक्षण दर्शाता था कि भारत बिना किसी बाहरी गुट के दबाव में आए तकनीकी और सैन्य रूप से मजबूत होने की संप्रभु क्षमता रखता है।</li>
+</ul>
+
+<!-- Visual Notes Card: Pokhran-I 1974 -->
+<div class="illustration-box" style="margin-top: 30px; border: 6px solid #065f46; border-radius: 12px; padding: 20px; background-color: #ffffff;">
+<img alt="पोखरण-I (1974): स्माइलिंग बुद्धा परमाणु परीक्षण" src="images/ch11/visual_1974_pokhran1_smiling_buddha.webp" style="width: 90%; max-width: 800px; display: block; margin: 0 auto; border: 4px solid #cbd5e1; border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.15);"/>
+<div class="illustration-explanation" style="margin-top: 15px; border-left: 8px solid #065f46; padding-left: 15px; line-height: 1.6; text-align: left;">
+<b><b>पोखरण-I (1974): स्माइलिंग बुद्धा परमाणु परीक्षण:</b></b><br/>
+<b>विवरण:</b> 18 मई 1974 को राजस्थान के पोखरण में भारत का पहला शांतिपूर्ण भूमिगत परमाणु परीक्षण। इसके बाद पश्चिमी देशों द्वारा भारत पर कड़े तकनीकी और आर्थिक प्रतिबंध लगाए गए।
+</div>
+</div>
+</div>
+<!-- POKHRAN II BOX -->
+<div style="background-color: #fefce8; padding: 30px; border: 6px solid #fde047; border-radius: 15px; margin-top: 40px;">
+<h2 class="topic-header" style="font-weight: 900; text-align: center;">पोखरण-II (1998) और परमाणु सिद्धांत</h2>
+<p style=" line-height: 2;">मई 1998 में प्रधानमंत्री अटल बिहारी वाजपेयी के कार्यकाल में भारत ने पोखरण में पांच और परमाणु परीक्षण (Operation Shakti) किए। इसके साथ ही भारत ने खुद को एक **'परमाणु हथियार संपन्न देश'** घोषित कर दिया। भारत के परमाणु सिद्धांत (Nuclear Doctrine) की मुख्य विशेषताएं निम्नलिखित हैं:</p>
+<ul style=" font-weight: 900; color: #854d0e; line-height: 2.2;">
+<li><b>1. नो फर्स्ट यूज़ (No First Use - NFU):</b> भारत की सबसे प्रमुख नीति है कि वह किसी भी देश पर पहले परमाणु हमला नहीं करेगा। वह केवल आत्मरक्षा में जवाबी कार्रवाई करेगा।</li>
+<li><b>2. गैर-परमाणु संपन्न देशों के खिलाफ उपयोग नहीं:</b> भारत उन देशों के खिलाफ कभी भी परमाणु हथियारों का उपयोग नहीं करेगा जिनके पास परमाणु हथियार नहीं हैं।</li>
+<li><b>3. विश्वसनीय न्यूनतम प्रतिरोध (Credible Minimum Deterrence):</b> भारत उतने ही परमाणु हथियार विकसित करेगा जो शत्रुओं को डराने और भारत की रक्षा करने के लिए पर्याप्त हों।</li>
+<li><b>4. असैन्य कूटनीतिक नियंत्रण (Civilian Control):</b> परमाणु हथियारों के इस्तेमाल की अनुमति केवल राजनीतिक नेतृत्व (प्रधानमंत्री और कैबिनेट) द्वारा गठित राष्ट्रीय सुरक्षा परिषद (Nuclear Command Authority) ही दे सकती है।</li>
+<li><b>5. वैश्विक निरस्त्रीकरण का समर्थक:</b> भारत सार्वभौमिक और भेदभाव रहित वैश्विक परमाणु निरस्त्रीकरण का पक्षधर है, लेकिन वह NPT और CTBT जैसी भेदभावपूर्ण संधियों पर हस्ताक्षर नहीं करेगा।</li>
+</ul>
+
+<!-- Topic-wise Visual Notes Card: Nuclear Policy NFU -->
+<div class="illustration-box" style="margin-top: 30px; border: 6px solid #f97316; border-radius: 12px; padding: 20px; background-color: #ffffff;">
+<img alt="भारत की परमाणु नीति नो फर्स्ट यूज़" src="images/ch11/visual_nuclear_policy_nfu.webp" style="width: 90%; max-width: 800px; display: block; margin: 0 auto; border: 4px solid #cbd5e1; border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.15);"/>
+<div class="illustration-explanation" style="margin-top: 15px; border-left: 8px solid #f97316; padding-left: 15px; line-height: 1.6; text-align: left;">
+<b><b>भारत की परमाणु नीति:</b></b><br/>
+<b>विवरण:</b> भारत की परमाणु नीति के दो मुख्य पहलुओं—'नो फर्स्ट यूज़' रक्षा ढाल और शांतिपूर्ण उद्देश्यों के लिए परमाणु ऊर्जा का उपयोग—को प्रदर्शित करता है।
+</div>
+</div>
+</div>
+<h2 class="topic-header" style="font-weight: 900; margin-top: 50px;">2. परमाणु ऊर्जा का शांतिपूर्ण उपयोग</h2>
+<div style="background-color: #f8fafc; padding: 25px; border-left: 14px solid #cbd5e1; margin-bottom: 30px; border-radius: 8px;">
+<p>भारत ने हमेशा इस बात पर जोर दिया है कि वह परमाणु ऊर्जा का उपयोग बिजली बनाने (Power Generation), चिकित्सा (Medicine) और कृषि (Agriculture) के क्षेत्र में करेगा। भारत का रिकॉर्ड पूरी दुनिया में बेदाग रहा है। </p>
+</div>
+<div style="background-color: #fdf2f2; padding: 30px; border-radius: 12px; margin-top: 40px; border: 2px dashed #dc2626;">
+<h3 class="subtopic-header" style="">मुख्य विचार:</h3>
+<p>भारत की परमाणु नीति **'शक्ति'** और **'शांति'** का अद्भुत संगम है। हमने दिखाया है कि परमाणु शक्ति होने का मतलब युद्ध करना नहीं, बल्कि देश की सुरक्षा और सम्मान को सुरक्षित रखना है।</p>
+</div>
+</div>
+<br/><br/><hr/><br/><br/>
+<div style="font-family: 'Arial', verdana, sans-serif;  line-height: 2.0; color: #000000; font-weight: 900; -webkit-text-stroke: 1.2px #000000; text-shadow: 0 0 1px #000; padding: 20px;">
+<!-- PART 6 SECTION: Global Relations -->
+<h1 class="part-header" style="font-weight: 900; border-bottom: 4px solid #a78bfa; padding-bottom: 20px; padding-top: 40px;">
+        भाग 6: रूस और अमेरिका के साथ संबंध (Global Relations)
+    </h1>
+<p>भारत की विदेश नीति हमेशा गतिशील रही है। शीत युद्ध के दौरान भारत ने दोनों महाशक्तियों के साथ अपने संबंधों को बहुत ही सावधानी से संतुलित किया।</p>
+<div style="background-color: #f5f3ff; padding: 30px; border-radius: 12px; margin-bottom: 40px; border-left: 12px solid #7c3aed;">
+<h2 class="topic-header" style="margin-top: 0;">1. सोवियत संघ (रूस) के साथ संबंध</h2>
+<p>भारत और सोवियत संघ की दोस्ती इतिहास की सबसे गहरी दोस्तियों में से एक रही है। इसके प्रमुख आयाम निम्नलिखित हैं:</p>
+<ul style=" line-height: 2.2;">
+<li><b>1971 की मैत्री संधि (Friendship Treaty):</b> जब पाकिस्तान ने हमला किया, तब सोवियत संघ ने भारत का साथ दिया। यह संधि भारत की सुरक्षा के लिए एक मजबूत गारंटी थी।</li>
+<li><b>आर्थिक मदद:</b> भिलाई, बोकारो और विशाखापत्तनम जैसे स्टील प्लांट और भारी उद्योगों को लगाने में सोवियत संघ ने भारत की बड़ी मदद की।</li>
+<li><b>सैनिक साज-सामान:</b> आज भी भारत के पास मौजूद अधिकांश युद्धक विमान (जैसे सुखोई, मिग) और हथियार रूसी तकनीक के हैं और रूस हमारा सबसे भरोसेमंद रक्षा साझेदार है।</li>
+<li><b>कश्मीर मुद्दे पर वीटो (Veto):</b> संयुक्त राष्ट्र संघ (UN) में जब भी पश्चिमी देशों ने कश्मीर मुद्दे पर भारत के खिलाफ प्रस्ताव लाने की कोशिश की, सोवियत संघ ने भारत के पक्ष में वीटो का उपयोग किया।</li>
+<li><b>अंतरिक्ष व वैज्ञानिक सहयोग:</b> भारत के पहले उपग्रह 'आर्यभट्ट' के प्रक्षेपण और भारत के पहले अंतरिक्ष यात्री राकेश शर्मा की अंतरिक्ष यात्रा में सोवियत संघ ने प्रमुख भूमिका निभाई।</li>
+</ul>
+
+<!-- Visual Notes Card: India-USSR Relations -->
+<div class="illustration-box" style="margin-top: 30px; border: 6px solid #7c3aed; border-radius: 12px; padding: 20px; background-color: #ffffff;">
+<img alt="भारत-सोवियत रूस संबंध" src="images/ch11/visual_india_ussr_relations.webp" style="width: 90%; max-width: 800px; display: block; margin: 0 auto; border: 4px solid #cbd5e1; border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.15);"/>
+<div class="illustration-explanation" style="margin-top: 15px; border-left: 8px solid #7c3aed; padding-left: 15px; line-height: 1.6; text-align: left;">
+<b><b>भारत-सोवियत (रूस) संबंध: मैत्री एवं सामरिक साझेदारी:</b></b><br/>
+<b>विवरण:</b> यह विजुअल कार्ड 1971 की 20-वर्षीय शांति व मैत्री संधि, कठिन वैश्विक समय में सोवियत वीटो का समर्थन, भिलाई व बोकारो स्टील प्लांट सहयोग, तथा अंतरिक्ष एवं रक्षा सामरिक साझेदारी को प्रदर्शित करता है।
+</div>
+</div>
+</div>
+
+<!-- USA RELATIONS BOX -->
+<div style="background-color: #eff6ff; padding: 30px; border: 6px solid #3b82f6; border-radius: 15px; margin-top: 40px;">
+<h2 class="topic-header" style="font-weight: 900; text-align: center;">अमेरिका के साथ बदलते संबंध (Relations with USA)</h2>
+<p style=" line-height: 2;">शीत युद्ध के समय भारत और अमेरिका के बीच दूरियाँ थीं, लेकिन 1991 के बाद यह तस्वीर पूरी तरह बदल गई है। इसके मुख्य आयाम निम्नलिखित हैं:</p>
+<ul style=" font-weight: 900; color: #1e3a8a; line-height: 2.2;">
+<li><b>1. सॉफ्टवेयर और आईटी निर्यात:</b> भारत के कुल सॉफ्टवेयर निर्यात का लगभग 65% हिस्सा अमेरिकी बाजार में जाता है।</li>
+<li><b>2. प्रवासी भारतीय (Indian Diaspora):</b> अमेरिका में रहने वाले लगभग 40 लाख कुशल और समृद्ध भारतीय आज वहां की राजनीति, अर्थव्यवस्था और सिलिकॉन वैली को प्रभावित करते हैं।</li>
+<li><b>3. नागरिक परमाणु समझौता (Civil Nuclear Deal, 2008):</b> डॉ. मनमोहन सिंह और अमेरिकी राष्ट्रपति जॉर्ज बुश के समय हुआ ऐतिहासिक 123 समझौता, जिसने भारत को वैश्विक न्यूक्लियर क्लब में स्थान दिलाया।</li>
+<li><b>4. कूटनीतिक सामरिक साझेदारी:</b> आज भारत और अमेरिका क्वाड (QUAD) के जरिए मिलकर हिंद-प्रशांत (Indo-Pacific) क्षेत्र में शांति और सुरक्षा स्थापित करने के लिए काम कर रहे हैं।</li>
+<li><b>5. रक्षा और सैन्य सहयोग:</b> भारत और अमेरिका के बीच आज मालाबार (Malabar) और युद्ध अभ्यास जैसे बड़े संयुक्त सैन्य अभ्यास आयोजित होते हैं।</li>
+</ul>
+
+<!-- Visual Notes Card: India-USA Relations -->
+<div class="illustration-box" style="margin-top: 30px; border: 6px solid #3b82f6; border-radius: 12px; padding: 20px; background-color: #ffffff;">
+<img alt="भारत-अमेरिका संबंध" src="images/ch11/visual_india_usa_relations.webp" style="width: 90%; max-width: 800px; display: block; margin: 0 auto; border: 4px solid #cbd5e1; border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.15);"/>
+<div class="illustration-explanation" style="margin-top: 15px; border-left: 8px solid #3b82f6; padding-left: 15px; line-height: 1.6; text-align: left;">
+<b><b>भारत-अमेरिका संबंध: शीत युद्ध की दूरी से रणनीतिक साझेदारी तक:</b></b><br/>
+<b>विवरण:</b> यह विजुअल कार्ड शीत युद्ध काल में अमेरिकी दूरी व पाकिस्तान की ओर झुकाव से लेकर 1990 के बाद के आर्थिक व IT जुड़ाव, 2008 के असैन्य परमाणु समझौते तथा 21वीं सदी की क्वाड (QUAD) व रक्षा वैश्विक साझेदारी को प्रदर्शित करता है।
+</div>
+</div>
+</div>
+
+<!-- 1977 GENUINE NON-ALIGNMENT & 21ST CENTURY MULTIPOLAR POLICY -->
+<h2 class="topic-header" style="font-weight: 900; margin-top: 50px;">2. 1977 की 'सच्ची गुटनिरपेक्षता' और 21वीं सदी की बहुध्रुवीय विदेश नीति</h2>
+<div style="background-color: #f8fafc; padding: 25px; border-left: 14px solid #cbd5e1; margin-bottom: 30px; border-radius: 8px;">
+<p><b>1977 जनता पार्टी सरकार की 'सच्ची गुटनिरपेक्षता' (Genuine Non-Alignment):</b> 1977 में जनता पार्टी की सरकार बनने पर मोरारजी देसाई ने घोषणा की कि भारत 'सच्ची गुटनिरपेक्षता' का पालन करेगा, ताकि भारत का झुकाव केवल सोवियत संघ की ओर न दिखे और अमेरिका व पश्चिमी देशों के साथ भी संतुलित संबंध स्थापित हो सकें।</p>
+<p><b>1991 के बाद बहु-गठबंधन (Multi-Alignment):</b> 1991 में सोवियत संघ के विघटन के बाद, भारत ने अपनी विदेश नीति को **'बहुध्रुवीय'** (Multipolar) बनाया। आज भारत न केवल अमेरिका और रूस, बल्कि इजराइल, फ्रांस, खाड़ी देशों और आसियान (ASEAN) के साथ भी मजबूत कूटनीतिक संबंध रखता है।</p>
+
+<!-- Visual Notes Card: Israel-Palestine & West Asia Policy -->
+<div class="illustration-box" style="margin-top: 30px; border: 6px solid #f97316; border-radius: 12px; padding: 20px; background-color: #ffffff;">
+<img alt="पश्चिम एशिया नीति: इज़राइल-फ़िलिस्तीन संतुलन" src="images/ch11/visual_israel_palestine_policy.webp" style="width: 90%; max-width: 800px; display: block; margin: 0 auto; border: 4px solid #cbd5e1; border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.15);"/>
+<div class="illustration-explanation" style="margin-top: 15px; border-left: 8px solid #f97316; padding-left: 15px; line-height: 1.6; text-align: left;">
+<b><b>पश्चिम एशिया नीति: इज़राइल-फ़िलिस्तीन संतुलन:</b></b><br/>
+<b>विवरण:</b> भारत की बहु-आयामी पश्चिम एशिया रणनीति: फ़िलिस्तीन के लिए ऐतिहासिक नैतिक समर्थन के साथ-साथ इज़राइल के साथ रक्षा/प्रौद्योगिकी रणनीतिक साझेदारी और अरब खाड़ी देशों के साथ आर्थिक संबंधों का संतुलन (De-hyphenation Policy)।
+</div>
+</div>
+
+<p><b>21वीं सदी की नई पहलें:</b> भारत आज **ग्लोबल साउथ (Global South)** की आवाज बनकर उभरा है। इसके अलावा G20 की अध्यक्षता, ब्रिक्स (BRICS), शंघाई सहयोग संगठन (SCO), क्वाड (QUAD) तथा अंतरराष्ट्रीय सौर गठबंधन (ISA) जैसे वैश्विक मंचों का सफल नेतृत्व कर रहा है।</p>
+
+<!-- Visual Notes Card: Multipolar Foreign Policy -->
+<div class="illustration-box" style="margin-top: 30px; border: 6px solid #0284c7; border-radius: 12px; padding: 20px; background-color: #ffffff;">
+<img alt="21वीं सदी में भारत की बहुध्रुवीय विदेश नीति" src="images/ch11/visual_multipolar_foreign_policy.webp" style="width: 90%; max-width: 800px; display: block; margin: 0 auto; border: 4px solid #cbd5e1; border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.15);"/>
+<div class="illustration-explanation" style="margin-top: 15px; border-left: 8px solid #0284c7; padding-left: 15px; line-height: 1.6; text-align: left;">
+<b><b>21वीं सदी में भारत की बहुध्रुवीय विदेश नीति:</b></b><br/>
+<b>विवरण:</b> यह विजुअल कार्ड बहु-गठबंधन (Multi-Alignment), ग्लोबल साउथ का वैश्विक नेतृत्व, एक्ट ईस्ट व पश्चिम एशिया नीति, तथा G20, BRICS, QUAD, SCO एवं अंतरराष्ट्रीय सौर गठबंधन (ISA) में भारत की अग्रणी भूमिका को प्रदर्शित करता है।
+</div>
+</div>
+
+<!-- Visual Notes Card: BRICS, G20 & Global South Leadership -->
+<div class="illustration-box" style="margin-top: 30px; border: 6px solid #8b5cf6; border-radius: 12px; padding: 20px; background-color: #ffffff;">
+<img alt="21वीं सदी में भारत: BRICS, G20 एवं ग्लोबल साउथ नेतृत्व" src="images/ch11/visual_brics_g20_global_south.webp" style="width: 90%; max-width: 800px; display: block; margin: 0 auto; border: 4px solid #cbd5e1; border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.15);"/>
+<div class="illustration-explanation" style="margin-top: 15px; border-left: 8px solid #8b5cf6; padding-left: 15px; line-height: 1.6; text-align: left;">
+<b><b>21वीं सदी में भारत: BRICS, G20 एवं ग्लोबल साउथ नेतृत्व:</b></b><br/>
+<b>विवरण:</b> 21वीं सदी के बहुध्रुवीय विश्व में भारत का बढ़ता कद: G20 नई दिल्ली शिखर सम्मेलन की अध्यक्षता, BRICS मंच पर प्रभाव और विकासशील देशों (ग्लोबल साउथ) की सशक्त आवाज के रूप में उभरना।
+</div>
+</div>
+</div>
+<div style="background-color: #fdf2fb; padding: 30px; border-radius: 12px; margin-top: 40px; border: 2px dashed #db2777;">
+<h3 class="subtopic-header" style="">मुख्य विचार:</h3>
+<p>भारत की विदेश नीति ने **'गुटनिरपेक्षता'** से **'सच्ची गुटनिरपेक्षता'** और आज **'बहु-गठबंधन'** (Multi-alignment) तक का लंबा व गौरवशाली सफर तय किया है। आज भारत एक ऐसी वैश्विक महाशक्ति है जो शांति, सुरक्षा और समृद्धि के साथ पूरी दुनिया का नेतृत्व कर रही है।</p>
+</div>
+</div>
+</div>
+</div>
+<br/><br/><hr/><br/><br/>
+</div>
+<script>
+    async function copyToGoogleDoc() {
+        const btn = document.getElementById('mainCopyBtn');
+        const status = document.getElementById('status');
+        const content = document.getElementById('contentToCopy').innerHTML;
+        
+        try {
+            const blob = new Blob([content], { type: 'text/html' });
+            const item = new ClipboardItem({ 'text/html': blob });
+            await navigator.clipboard.write([item]);
             
-            <!-- PART 1 -->
-            <div class="part-container" style="border-top-color: #0284c7;">
-                <h2 style="color: #0369a1 !important; background-color: #f0f9ff; border-left: 10px solid #0284c7; padding: 20px 25px; border-radius: 10px; font-size: 32pt; font-weight: 900 !important; margin-top: 0; -webkit-text-stroke: 1px #0369a1;">1. राजनीति की सूक्ष्म परिभाषा और उसका सभ्यतागत आधार</h2>
-                <p style="font-size: 18pt; text-align: justify;">राजनीति (Politics) मानव समाज का वह बुनियादी और रचनात्मक हिस्सा है जो सामूहिक निर्णयों, नीति-निर्माण और सत्ता के तार्किक संचालन को नियंत्रित करता है।</p>
-
-                <h3 style="color: #0369a1; font-size: 24pt;">1.1 राजनीति की परिभाषा और सभ्यतागत महत्व:</h3>
-                <ul style="font-size: 18pt; line-height: 1.8; color: #000000; list-style-type: square;">
-                    <li><b>सामूहिक निर्णयों का माध्यम:</b> समाज में विभिन्न विचारों और हितों के लोगों को एक साथ रहने और निर्णय लेने के लिए नियम बनाने की कला।</li>
-                    <li><b>सत्ता और शक्ति का संतुलन:</b> विभिन्न वर्गों के बीच शक्ति के बँटवारे, अधिकारों के संरक्षण और संघर्षों के शांतिपूर्ण निपटारे का वैज्ञानिक मार्ग।</li>
-                    <li><b>विविधता का प्रबंधन:</b> समाज की सांस्कृतिक, सामाजिक और आर्थिक विविधताओं के बीच सामंजस्य स्थापित करने की सर्वोच्च कला।</li>
-                    <li><b>संसाधनों का न्यायपूर्ण वितरण:</b> देश के भौतिक और वित्तीय संसाधनों को किस प्रकार जन-कल्याण के लिए उपयोग किया जाए, यह तय करना।</li>
-                    <li><b>सभ्यता की रीढ़:</b> राजनीति के बिना कोई भी सभ्य मानव समाज अराजकता और जंगलराज का शिकार होने से नहीं बच सकता।</li>
-                </ul>
-            </div>
-
-
-            <!-- PART 2 -->
-            <div class="part-container" style="border-top-color: #059669;">
-                <h2 style="color: #065f46 !important; background-color: #f0fdf4; border-left: 10px solid #059669; padding: 20px 25px; border-radius: 10px; font-size: 32pt; font-weight: 900 !important; margin-top: 0; -webkit-text-stroke: 1px #065f46;">2. शासन करने की कला और सुशासन का विज्ञान</h2>
-                <p style="font-size: 18pt; text-align: justify;">राजनीति केवल चुनाव लड़ना या नारेबाजी नहीं है; यह एक अत्यंत जटिल और वैज्ञानिक अनुशासन है जिसका अंतिम लक्ष्य 'सुशासन' (Good Governance) स्थापित करना है।</p>
-
-                <h3 style="color: #065f46; font-size: 24pt;">2.1 शासन कला और सुशासन के प्रमुख आयाम:</h3>
-                <ul style="font-size: 18pt; line-height: 1.8; color: #000000; list-style-type: square;">
-                    <li><b>पारदर्शिता और जवाबदेही:</b> सुशासन में सरकार के हर फैसले में पारदर्शिता और जनता के प्रति पूर्ण उत्तरदायित्व होना आवश्यक है।</li>
-                    <li><b>कानून का शासन (Rule of Law):</b> शासन की सभी नीतियाँ संविधान और कानून के अनुसार चलें, न कि किसी शासक की व्यक्तिगत मर्जी से।</li>
-                    <li><b>नीति-निर्माण की वैज्ञानिक पद्धति:</b> जनता की समस्याओं का वैज्ञानिक विश्लेषण करके उनके लिए दीर्घकालिक और स्थायी समाधान खोजना।</li>
-                    <li><b>कल्याणकारी प्रशासनिक नीतियां:</b> शिक्षा, स्वास्थ्य और बुनियादी ढांचे का विकास करके नागरिकों के जीवन स्तर को ऊंचा उठाना।</li>
-                    <li><b>नागरिक सहभागिता:</b> नीतियों के निर्माण और उन्हें लागू करने में देश के आम नागरिकों की सक्रिय राय और योगदान को शामिल करना।</li>
-                </ul>
-            </div>
-
-
-            <!-- PART 3 -->
-            <div class="part-container" style="border-top-color: #d97706;">
-                <h2 style="color: #92400e !important; background-color: #fff7ed; border-left: 10px solid #d97706; padding: 20px 25px; border-radius: 10px; font-size: 32pt; font-weight: 900 !important; margin-top: 0; -webkit-text-stroke: 1px #92400e;">3. राजनीति—समाज का एक अविभाज्य अंग</h2>
-                <p style="font-size: 18pt; text-align: justify;">कोई भी व्यक्ति या समाज राजनीति से पूरी तरह अछूता नहीं रह सकता। यह हमारी हर दैनिक सांस, शिक्षा, रोजगार और अधिकारों में गहराई से रची-बसी है।</p>
-
-                <h3 style="color: #92400e; font-size: 24pt;">3.1 समाज और राजनीति के आपसी संबंध:</h3>
-                <ul style="font-size: 18pt; line-height: 1.8; color: #000000; list-style-type: square;">
-                    <li><b>अविभाज्य संबंध:</b> जैसे मनुष्य बिना हवा के नहीं रह सकता, वैसे ही समाज बिना किसी राजनैतिक व्यवस्था और नियमों के काम नहीं कर सकता।</li>
-                    <li><b>दैनिक जीवन पर प्रभाव:</b> हम स्कूल की फीस, सड़क की सुरक्षा या अस्पतालों के इलाज को जो देखते हैं, वे सब राजनैतिक निर्णयों के परिणाम हैं।</li>
-                    <li><b>सामूहिक संस्थाओं का निर्माण:</b> परिवार, विवाह और संपत्तियों जैसे सामाजिक संस्थानों के अधिकारों को कानूनी मान्यता देना।</li>
-                    <li><b>टकरावों का समाधान:</b> समाज के विभिन्न समूहों (अमीर-गरीब, विभिन्न जातियों) के बीच उठने वाले आर्थिक संघर्षों को शांतिपूर्वक सुलझाना।</li>
-                    <li><b>राजनैतिक उदासीनता का खतरा:</b> यदि अच्छे लोग राजनीति से उदासीन हो जाएंगे, तो बुरे और भ्रष्ट लोग समाज पर शासन करने के लिए स्वतंत्र हो जाएंगे।</li>
-                </ul>
-            </div>
-
-
-            <!-- PART 4 -->
-            <div class="part-container" style="border-top-color: #7c3aed;">
-                <h2 style="color: #5b21b6 !important; background-color: #f5f3ff; border-left: 10px solid #7c3aed; padding: 20px 25px; border-radius: 10px; font-size: 32pt; font-weight: 900 !important; margin-top: 0; -webkit-text-stroke: 1px #5b21b6;">4. राजनीतिक सिद्धांत का उदय और उसका महत्त्व</h2>
-                <p style="font-size: 18pt; text-align: justify;">राजनीतिक सिद्धांत (Political Theory) वह दार्शनिक और बौद्धिक अनुशासन है जो हमारे राजनीतिक जीवन के बुनियादी मूल्यों, विचारों और संस्थाओं का व्यवस्थित अध्ययन करता है।</p>
-
-                <h3 style="color: #5b21b6; font-size: 24pt;">4.1 राजनीतिक सिद्धांत के उदय और महत्व के आयाम:</h3>
-                <ul style="font-size: 18pt; line-height: 1.8; color: #000000; list-style-type: square;">
-                    <li><b>मूलभूत प्रश्नों की खोज:</b> सरकार का रूप कैसा होना चाहिए? न्याय क्या है? स्वतंत्रता की सीमाएं क्या हैं? जैसे दार्शनिक प्रश्नों का हल खोजना।</li>
-                    <li><b>मूल्यों का मानकीकरण:</b> समाज में स्वतंत्रता, समानता और न्याय जैसी अमूर्त अवधारणाओं को स्पष्ट और तर्कपूर्ण रूप देना।</li>
-                    <li><b>राजनैतिक जागरूकता का विकास:</b> नागरिकों को केवल नारे लगाने के बजाय राजनैतिक फैसलों के दूरगामी परिणामों को समझने योग्य बनाना।</li>
-                    <li><b>संवैधानिक आदर्शों का निर्माण:</b> हमारे देश के संविधान की प्रस्तावना में लिखे महान विज़न को दार्शनिक बौद्धिकता प्रदान करना।</li>
-                    <li><b>भविष्य की नीतियों की नींव:</b> बदलती परिस्थितियों (जैसे डेटा प्राइवेसी, मानवाधिकार) के लिए नए नैतिक और कानूनी मापदंड तय करना।</li>
-                </ul>
-            </div>
-
-
-            <!-- PART 5 -->
-            <div class="part-container" style="border-top-color: #4c1d95;">
-                <h2 style="color: #4c1d95 !important; background-color: #faf5ff; border-left: 10px solid #4c1d95; padding: 20px 25px; border-radius: 10px; font-size: 32pt; font-weight: 900 !important; margin-top: 0; -webkit-text-stroke: 1px #4c1d95;">5. राजनीति—सभ्यता की अनिवार्य जकड़न (The Snake Coils)</h2>
-                <p style="font-size: 18pt; text-align: justify;">महात्मा गांधी ने एक बार कहा था कि "राजनीति ने हमें सांप की कुंडली की तरह जकड़ रखा है और इससे जूझने के अलावा कोई दूसरा रास्ता नहीं है।" यह कथन आज भी प्रासंगिक है।</p>
-
-                <h3 style="color: #4c1d95; font-size: 24pt;">5.1 सांप की कुंडली की अवधारणा और तार्किक व्याख्या:</h3>
-                <ul style="font-size: 18pt; line-height: 1.8; color: #000000; list-style-type: square;">
-                    <li><b>अनिवार्य जकड़न:</b> हम राजनीति को चाहे कितना भी बुरा कहें या इससे दूर भागने का प्रयास करें, यह हमारे जीवन की प्रत्येक नीति को नियंत्रित करती है।</li>
-                    <li><b>पलायनवाद का अंत:</b> यह समझना कि राजनीति से दूर भागना कोई समाधान नहीं है; बल्कि इसके भीतर सुधार करने के लिए संघर्ष करना ही एकमात्र उपाय है।</li>
-                    <li><b>राजनैतिक संवाद में भाग लेना:</b> मतदान, विरोध प्रदर्शनों और बहसों के माध्यम से शासन को सुधारने का निरंतर और सक्रिय प्रयास।</li>
-                    <li><b>लोकतांत्रिक सक्रियता:</b> यदि सभ्य और बुद्धिजीवी नागरिक राजनीति में भाग नहीं लेंगे, तो अयोग्य लोगों के शासन को झेलने के लिए अभिशप्त होंगे।</li>
-                    <li><b>संघर्ष ही जीवन है:</b> राजनीति से घृणा करने के बजाय उसकी तार्किक समझ विकसित करके उसे लोक-कल्याण का माध्यम बनाना।</li>
-                </ul>
-            </div>
-
-
-            <!-- PART 6 -->
-            <div class="part-container" style="border-top-color: #0d9488;">
-                <h2 style="color: #0f766e !important; background-color: #f0fdf4; border-left: 10px solid #0d9488; padding: 20px 25px; border-radius: 10px; font-size: 32pt; font-weight: 900 !important; margin-top: 0; -webkit-text-stroke: 1px #0f766e;">6. राजनीतिक सिद्धांत: वैज्ञानिक जाँच और दार्शनिक आधार</h2>
-                <p style="font-size: 18pt; text-align: justify;">राजनीतिक सिद्धांत दो परस्पर जुड़े स्तंभों पर खड़ा है—एक उसका वैज्ञानिक/तथ्यात्मक जाँच का पहलू और दूसरा उसका दार्शनिक/नैतिक मूल्यों का आधार।</p>
-
-                <h3 style="color: #0f766e; font-size: 24pt;">6.1 वैज्ञानिक और दार्शनिक आधार के प्रमुख सिद्धांत:</h3>
-                <ul style="font-size: 18pt; line-height: 1.8; color: #000000; list-style-type: square;">
-                    <li><b>वैज्ञानिक जाँच (Empirical Enquiry):</b> राजनैतिक घटनाओं, मतदान के रुझानों और सरकारी नीतियों का डेटा-आधारित वस्तुनिष्ठ अध्ययन करना।</li>
-                    <li><b>दार्शनिक आधार (Normative Basis):</b> क्या सही है और क्या गलत, इसका नैतिक मूल्यांकन करना; जैसे समानता की दार्शनिक वकालत।</li>
-                    <li><b>तथ्य और मूल्यों का समन्वय:</b> तथ्यों के बिना दर्शन अंधा है, और दर्शन के बिना तथ्य निरर्थक हैं; दोनों मिलकर सिद्धांत को पूर्ण बनाते हैं।</li>
-                    <li><b>सार्वभौमिक सिद्धांतों की खोज:</b> प्लेटो और अरस्तू के समय से लेकर आज तक के राजनैतिक व्यवहारों में छिपे नियमों को खोजना।</li>
-                    <li><b>पद्धतिगत स्पष्टता:</b> राजनैतिक बहसों को व्यक्तिगत पूर्वाग्रहों से मुक्त करके तार्किक और बौद्धिक धरातल पर लाना।</li>
-                </ul>
-            </div>
-
-
-            <!-- PART 7 -->
-            <div class="part-container" style="border-top-color: #4338ca;">
-                <h2 style="color: #3730a3 !important; background-color: #eef2ff; border-left: 10px solid #4338ca; padding: 20px 25px; border-radius: 10px; font-size: 32pt; font-weight: 900 !important; margin-top: 0; -webkit-text-stroke: 1px #3730a3;">7. हम सिद्धांत में क्या पढ़ते हैं?—संस्थान और मानकीकरण</h2>
-                <p style="font-size: 18pt; text-align: justify;">राजनीतिक सिद्धांत में हम केवल राजनेताओं के भाषणों का अध्ययन नहीं करते, बल्कि उन अमूर्त राजनैतिक मूल्यों, आदर्शों और संवैधानिक संस्थाओं का गहराई से विश्लेषण करते हैं।</p>
-
-                <h3 style="color: #3730a3; font-size: 24pt;">7.1 राजनीतिक सिद्धांत के मुख्य विषय और मानकीकरण:</h3>
-                <ul style="font-size: 18pt; line-height: 1.8; color: #000000; list-style-type: square;">
-                    <li><b>संवैधानिक संस्थाएं:</b> कार्यपालिका, न्यायपालिका और विधायिका जैसी संस्थाओं की शक्तियों, सीमाओं और उनकी भूमिकाओं का अध्ययन।</li>
-                    <li><b>बुनियादी मूल्य:</b> स्वतंत्रता, समानता, न्याय, धर्मनिरपेक्षता, और लोकतंत्र जैसे अमूर्त विचारों की गहरी दार्शनिक समझ।</li>
-                    <li><b>कानून और अधिकार:</b> अधिकारों का अर्थ, उनका विकास, और नागरिकों व राज्य के आपसी कानूनी-नैतिक संबंधों का नियमन।</li>
-                    <li><b>राजनैतिक विचारधाराएं:</b> उदारवाद, समाजवाद, राष्ट्रवाद, गांधीवाद और नारीवाद जैसी बड़ी विचारधाराओं के इतिहास और प्रभावों का विश्लेषण।</li>
-                    <li><b>व्यावहारिक मानकीकरण:</b> अमूर्त आदर्शों को धरातल पर उतारने के नियमों (जैसे समानता के लिए आरक्षण की नीति) का तार्किक औचित्य सिद्ध करना।</li>
-                </ul>
-            </div>
-
-
-            <!-- PART 8 -->
-            <div class="part-container" style="border-top-color: #be123c;">
-                <h2 style="color: #9f1239 !important; background-color: #fff1f2; border-left: 10px solid #be123c; padding: 20px 25px; border-radius: 10px; font-size: 32pt; font-weight: 900 !important; margin-top: 0; -webkit-text-stroke: 1px #9f1239;">8. स्वतंत्रता, समानता और न्याय—सभ्यता के तीन स्तंभ</h2>
-                <p style="font-size: 18pt; text-align: justify;">स्वतंत्रता (Liberty), समानता (Equality) और न्याय (Justice) वे तीन बुनियादी दार्शनिक स्तंभ हैं जिन पर किसी भी सभ्य लोकतांत्रिक समाज का अस्तित्व निर्भर करता है।</p>
-
-                <h3 style="color: #9f1239; font-size: 24pt;">8.1 स्वतंत्रता (Liberty):</h3>
-                <ul style="font-size: 18pt; line-height: 1.8; color: #000000; list-style-type: square;">
-                    <li><b>विचार और कर्म की आज़ादी:</b> व्यक्ति को अपने विचारों को व्यक्त करने, अपनी पसंद का पेशा चुनने और बिना किसी अवैध बंधन के जीने का हक।</li>
-                    <li><b>तार्किक सीमाएं:</b> स्वतंत्रता का अर्थ अराजकता नहीं है; दूसरों की स्वतंत्रता और सामाजिक हित में तार्किक नियमों को स्वीकार करना।</li>
-                    <li><b>व्यक्तित्व का विकास:</b> इसके बिना कोई भी नागरिक अपनी बौद्धिक और नैतिक क्षमताओं का सर्वोच्च विकास नहीं कर सकता।</li>
-                </ul>
-
-                <h3 style="color: #9f1239; font-size: 24pt;">8.2 समानता (Equality):</h3>
-                <ul style="font-size: 18pt; line-height: 1.8; color: #000000; list-style-type: square;">
-                    <li><b>विशेषाधिकारों का अंत:</b> किसी भी व्यक्ति को जन्म, जाति या लिंग के आधार पर कोई विशेष कानूनी रियायतें या विशेषाधिकार न मिलना।</li>
-                    <li><b>अवसर की समानता:</b> प्रत्येक नागरिक को अपनी क्षमता के अनुसार शिक्षा और रोजगार के क्षेत्रों में आगे बढ़ने का समान अवसर मिलना।</li>
-                    <li><b>सकारात्मक भेदभाव:</b> पिछड़े और कमजोर वर्गों को समानता के स्तर पर लाने के लिए आरक्षण जैसी कल्याणकारी नीतियों को लागू करना।</li>
-                </ul>
-
-                <h3 style="color: #9f1239; font-size: 24pt;">8.3 न्याय (Justice):</h3>
-                <ul style="font-size: 18pt; line-height: 1.8; color: #000000; list-style-type: square;">
-                    <li><b>उचित हक दिलाना:</b> प्रत्येक व्यक्ति को उसका हक दिलाना और शोषितों को उनके मानवीय अधिकार वापस सौंपना।</li>
-                    <li><b>संसाधनों का न्यायपूर्ण वितरण:</b> देश की संपत्ति और अवसरों का इस प्रकार वितरण करना कि कोई भी नागरिक बुनियादी जरूरतों से वंचित न रहे।</li>
-                    <li><b>कानून की निष्पक्षता:</b> अमीरी-गरीबी या प्रभाव के अंतर के बिना, कानून के सामने सभी को समान कानूनी न्याय मिलना।</li>
-                </ul>
-            </div>
-
-
-            <!-- PART 9 -->
-            <div class="part-container" style="border-top-color: #1e3a8a;">
-                <h2 style="color: #1e40af !important; background-color: #eff6ff; border-left: 10px solid #1e3a8a; padding: 20px 25px; border-radius: 10px; font-size: 32pt; font-weight: 900 !important; margin-top: 0; -webkit-text-stroke: 1px #1e40af;">9. सिद्धांतों को व्यवहार में उतारना: विविधतापूर्ण समाज की चुनौतियां</h2>
-                <p style="font-size: 18pt; text-align: justify;">सिद्धांतों को किताबों में लिखना सरल है, लेकिन भारत जैसे विशाल और विविधतापूर्ण समाज के व्यावहारिक जीवन में उन्हें लागू करना अत्यंत चुनौतीपूर्ण कार्य है।</p>
-
-                <h3 style="color: #1e40af; font-size: 24pt;">9.1 सिद्धांतों की व्याख्या में बदलाव:</h3>
-                <ul style="font-size: 18pt; line-height: 1.8; color: #000000; list-style-type: square;">
-                    <li><b>समय के साथ नया अर्थ:</b> समानता का अर्थ पहले केवल कानूनी बराबरी था; आज इसमें आर्थिक सुरक्षा और सामाजिक गरिमा भी शामिल है।</li>
-                    <li><b>निजता का नया आयाम:</b> इंटरनेट और डिजिटल युग के कारण आज़ादी और निजता (Privacy) की नई परिभाषाएं लिखना आवश्यक हो गया है।</li>
-                    <li><b>अधिकारों का विस्तार:</b> सूचना के अधिकार (RTI) और शिक्षा के अधिकार (RTE) की तरह बुनियादी आदर्शों को नए कानूनी रूप देना।</li>
-                </ul>
-
-                <h3 style="color: #1e40af; font-size: 24pt;">9.2 सिद्धांतों के व्यावहारिक अनुप्रयोग की चुनौतियाँ:</h3>
-                <ul style="font-size: 18pt; line-height: 1.8; color: #000000; list-style-type: square;">
-                    <li><b>आपसी हितों का टकराव:</b> एक समूह की स्वतंत्रता (जैसे जुलूस निकालना) दूसरे की आज़ादी (जैसे शांतिपूर्ण आवागमन) को बाधित कर सकती है।</li>
-                    <li><b>कल्याण बनाम योग्यता विवाद:</b> समानता के लिए दिए जाने वाले आरक्षण को कुछ लोग योग्यता (Merit) के साथ अन्याय मानकर विरोध करते हैं।</li>
-                    <li><b>राजनैतिक लाभ के लिए दुरुपयोग:</b> राजनेताओं द्वारा इन पवित्र सिद्धांतों (जैसे धर्मनिरपेक्षता) को वोटबैंक की राजनीति का हथियार बनाना।</li>
-                </ul>
-            </div>
-
-
-            <!-- PART 10 -->
-            <div class="part-container" style="border-top-color: #be185d;">
-                <h2 style="color: #be185d !important; background-color: #fdf2f8; border-left: 10px solid #be185d; padding: 20px 25px; border-radius: 10px; font-size: 32pt; font-weight: 900 !important; margin-top: 0; -webkit-text-stroke: 1px #be185d;">10. सिद्धांत क्यों पढ़े?—कारण 1: भविष्य की समस्याओं और रुझानों की समझ</h2>
-                <p style="font-size: 18pt; text-align: justify;">भविष्य की चुनौतियों का पूर्वानुमान लगाने और उनके समाधान के लिए मज़बूत नीतियां बनाने हेतु राजनीतिक सिद्धांतों का गहरा ज्ञान होना अनिवार्य है।</p>
-
-                <h3 style="color: #be185d; font-size: 24pt;">10.1 भविष्य की चुनौतियों की समझ के आयाम:</h3>
-                <ul style="font-size: 18pt; line-height: 1.8; color: #000000; list-style-type: square;">
-                    <li><b>राजनैतिक रुझानों का विश्लेषण:</b> समाज में किस प्रकार की राजनैतिक विचारधाराएं उभर रही हैं, उनका दूरगामी प्रभाव समझना।</li>
-                    <li><b>नई समस्याओं का सामना:</b> कृत्रिम बुद्धिमत्ता (AI), रोबोटिक्स और जैव-तकनीक (Biotechnology) से उठने वाले नैतिक-राजनैतिक मुद्दों का हल ढूंढना।</li>
-                    <li><b>पर्यावरणीय संकट:</b> जलवायु परिवर्तन और संसाधनों की कमी से उत्पन्न होने वाले अंतरराष्ट्रीय संघर्षों के लिए नीतियां बनाना।</li>
-                    <li><b>वैश्विक सुरक्षा:</b> साइबर युद्ध और नई वैश्विक आतंकवाद की चुनौतियों के बीच व्यक्तिगत आज़ादी और राष्ट्रीय सुरक्षा का संतुलन बनाना।</li>
-                    <li><b>सतत विकास की योजना:</b> आने वाली पीढ़ियों के अधिकारों (Intergenerational Justice) को ध्यान में रखकर आज के विकास के नियम तय करना।</li>
-                </ul>
-            </div>
-
-
-            <!-- PART 11 -->
-            <div class="part-container" style="border-top-color: #f59e0b;">
-                <h2 style="color: #b45309 !important; background-color: #fffbeb; border-left: 10px solid #f59e0b; padding: 20px 25px; border-radius: 10px; font-size: 32pt; font-weight: 900 !important; margin-top: 0; -webkit-text-stroke: 1px #b45309;">11. कारण 2: अधिकारों और कर्तव्यों की गहरी राजनैतिक समझ</h2>
-                <p style="font-size: 18pt; text-align: justify;">बिना सिद्धांतों के ज्ञान के, नागरिकों को अपने वास्तविक अधिकारों और देश के प्रति उनके कर्तव्यों की सही और तार्किक समझ प्राप्त नहीं हो सकती।</p>
-
-                <h3 style="color: #b45309; font-size: 24pt;">11.1 अधिकारों और कर्तव्यों की समझ के दार्शनिक आयाम:</h3>
-                <ul style="font-size: 18pt; line-height: 1.8; color: #000000; list-style-type: square;">
-                    <li><b>अधिकारों का वास्तविक अर्थ:</b> अधिकार केवल मांगें नहीं हैं; ये वे परिस्थितियाँ हैं जो मानवीय गरिमा और विकास के लिए आवश्यक हैं।</li>
-                    <li><b>अधिकार और कर्तव्य का संबंध:</b> यह समझना कि मेरी आज़ादी वहीं तक है जहाँ से दूसरे की नाक शुरू होती है; दोनों एक-दूसरे के पूरक हैं।</li>
-                    <li><b>दुरुपयोग से सुरक्षा:</b> जब सरकार या कोई शक्तिशाली समूह अधिकारों का हनन करता है, तो नागरिक संवैधानिक नियमों का सहारा ले सकते हैं।</li>
-                    <li><b>नैतिक नागरिकता:</b> केवल अपने हितों की चिंता न करके, समाज के कमजोरों के अधिकारों के लिए खड़े होने का नैतिक साहस विकसित करना।</li>
-                    <li><b>संवैधानिक मर्यादा:</b> अपने अधिकारों की मांग करते समय देश की संपत्ति की रक्षा और संवैधानिक मर्यादाओं का आदर करने का कर्तव्य।</li>
-                </ul>
-            </div>
-
-
-            <!-- PART 12 -->
-            <div class="part-container" style="border-top-color: #1d4ed8;">
-                <h2 style="color: #1e40af !important; background-color: #eff6ff; border-left: 10px solid #1d4ed8; padding: 20px 25px; border-radius: 10px; font-size: 32pt; font-weight: 900 !important; margin-top: 0; -webkit-text-stroke: 1px #1e40af;">12. कारण 3: जागरूक और आलोचनात्मक नागरिकता का विकास</h2>
-                <p style="font-size: 18pt; text-align: justify;">एक मज़बूत लोकतंत्र के लिए केवल शिक्षित नहीं, बल्कि 'आलोचनात्मक' (Critical) सोच रखने वाले जागरूक नागरिकों का होना सबसे बड़ी आवश्यकता है।</p>
-
-                <h3 style="color: #1e40af; font-size: 24pt;">12.1 जागरूक और आलोचनात्मक नागरिकता के लाभ:</h3>
-                <ul style="font-size: 18pt; line-height: 1.8; color: #000000; list-style-type: square;">
-                    <li><b>सस्ती नारेबाजी से मुक्ति:</b> राजनेताओं के झूठे वादों, सांप्रदायिक भाषणों और दुष्प्रचार (Fake News) के झांसे में न आना।</li>
-                    <li><b>सरकारी नीतियों का तार्किक विश्लेषण:</b> सरकार द्वारा बनाए गए कानूनों और बजट के अच्छे-बुरे प्रभावों का बौद्धिक मूल्यांकन करना।</li>
-                    <li><b>रचनात्मक असहमति (Constructive Dissent):</b> गलत नीतियों का बिना किसी हिंसा के तार्किक और संवैधानिक रूप से पुरजोर विरोध करना।</li>
-                    <li><b>राजनैतिक सक्रियता:</b> केवल चुनाव के दिन नहीं, बल्कि हर दिन देश के लोकतांत्रिक बहसों में अपनी सक्रिय आवाज शामिल करना।</li>
-                    <li><b>विवेकपूर्ण मतदान:</b> जाति, धर्म या पैसों के प्रलोभन से ऊपर उठकर उम्मीदवार की योग्यता और नीतियों के आधार पर वोट देना।</li>
-                </ul>
-            </div>
-
-
-            <!-- PART 13 -->
-            <div class="part-container" style="border-top-color: #047857;">
-                <h2 style="color: #064e3b !important; background-color: #ecfdf5; border-left: 10px solid #047857; padding: 20px 25px; border-radius: 10px; font-size: 32pt; font-weight: 900 !important; margin-top: 0; -webkit-text-stroke: 1px #064e3b;">13. कारण 4: विविधतापूर्ण समाज में सद्भाव (Harmony) बनाए रखने हेतु</h2>
-                <p style="font-size: 18pt; text-align: justify;">भारत जैसे बहु-धार्मिक, बहु-भाषाई और बहु-सांस्कृतिक देश में आपसी सद्भाव बनाए रखने के लिए सहिष्णुता (Tolerance) और साझी समझ का होना जरूरी है।</p>
-
-                <h3 style="color: #064e3b; font-size: 24pt;">13.1 विविधता में आपसी सद्भाव के दार्शनिक आधार:</h3>
-                <ul style="font-size: 18pt; line-height: 1.8; color: #000000; list-style-type: square;">
-                    <li><b>सहिष्णुता का विकास:</b> विभिन्न धर्मों और विचारों के लोगों को एक-दूसरे के तौर-तरीकों का आदर करने की सीख देना।</li>
-                    <li><b>सांप्रदायिकता का तार्किक खंडन:</b> धार्मिक कट्टरता और नफरत फैलाने वाली विचारधाराओं के खिलाफ बौद्धिक स्तर पर लड़ना।</li>
-                    <li><b>साझा राष्ट्रीय पहचान:</b> प्रत्येक नागरिक को यह महसूस कराना कि उसकी विशिष्ट संस्कृति ही भारत की साझी पहचान की खूबसूरती है।</li>
-                    <li><b>टकरावों का शांतिपूर्ण समाधान:</b> जातिगत या भाषाई विवादों को सड़कों पर हिंसक रूप देने के बजाय अदालती और कानूनी तरीकों से हल करना।</li>
-                    <li><b>संवाद (Dialogue) को बढ़ावा:</b> विभिन्न समुदायों के बीच निरंतर बातचीत का माहौल बनाकर आपसी गलतफहमियों को दूर करना।</li>
-                </ul>
-            </div>
-
-
-            <!-- PART 14 -->
-            <div class="part-container" style="border-top-color: #4338ca;">
-                <h2 style="color: #3730a3 !important; background-color: #eef2ff; border-left: 10px solid #4338ca; padding: 20px 25px; border-radius: 10px; font-size: 32pt; font-weight: 900 !important; margin-top: 0; -webkit-text-stroke: 1px #3730a3;">14. कारण 5: लोकतांत्रिक मूल्यों और संस्थानों की मज़बूती हेतु</h2>
-                <p style="font-size: 18pt; text-align: justify;">लोकतंत्र केवल एक शासन प्रणाली नहीं है; यह एक नैतिक मूल्य है। इसके संस्थानों (जैसे सुप्रीम कोर्ट, चुनाव आयोग) की गरिमा की रक्षा करना हमारा कर्तव्य है।</p>
-
-                <h3 style="color: #3730a3; font-size: 24pt;">14.1 लोकतांत्रिक मूल्यों और संस्थानों की सुरक्षा के आयाम:</h3>
-                <ul style="font-size: 18pt; line-height: 1.8; color: #000000; list-style-type: square;">
-                    <li><b>संस्थागत स्वायत्तता का आदर:</b> न्यायपालिका, चुनाव आयोग और मीडिया जैसी संस्थाओं को राजनैतिक दबावों से मुक्त रखने का संकल्प।</li>
-                    <li><b>लोकतांत्रिक मूल्यों का आचरण:</b> अपने दैनिक व्यवहारों (जैसे सहकर्मियों और परिवार में) समतावादी और स्वतंत्र वातावरण बनाना।</li>
-                    <li><b>तानाशाही प्रवृत्तियों पर अंकुश:</b> बहुमत के नाम पर किसी भी तानाशाही कानून या अधिकारों के हनन का खुलकर शांतिपूर्ण विरोध करना।</li>
-                    <li><b>संसदीय मर्यादाओं की रक्षा:</b> संसद और विधानसभाओं के भीतर मर्यादित चर्चाओं और बहसों की परंपरा को पुनः स्थापित करना।</li>
-                    <li><b>संविधान की सर्वोच्चता:</b> यह मानना कि देश का कोई भी नेता या सरकार संविधान के नियमों और मूल्यों से ऊपर नहीं हो सकती।</li>
-                </ul>
-            </div>
-
-
-            <!-- PART 15 -->
-            <div class="part-container" style="border-top-color: #be123c;">
-                <h2 style="color: #9f1239 !important; background-color: #fff1f2; border-left: 10px solid #be123c; padding: 20px 25px; border-radius: 10px; font-size: 32pt; font-weight: 900 !important; margin-top: 0; -webkit-text-stroke: 1px #9f1239;">15. कारण 6: महान विद्वानों के विचारों को समझने हेतु (अरस्तू से आंबेडकर तक)</h2>
-                <p style="font-size: 18pt; text-align: justify;">राजनीतिक सिद्धांत हमें मानव इतिहास के उन महान दार्शनिकों के विचारों से जोड़ता है जिन्होंने अपनी बौद्धिकता से दुनिया के नक्शे और क्रांतियों को जन्म दिया है।</p>
-
-                <h3 style="color: #9f1239; font-size: 24pt;">15.1 यूनानी विचारक (सुकरात, प्लेटो, अरस्तू):</h3>
-                <ul style="font-size: 18pt; line-height: 1.8; color: #000000; list-style-type: square;">
-                    <li><b>सुकरात की तार्किकता:</b> सत्य की खोज के लिए प्रश्न पूछने (Socratic Method) और अपनी जान देकर भी सच पर अड़े रहने का साहस।</li>
-                    <li><b>प्लेटो का न्याय सिद्धांत:</b> एक आदर्श राज्य (Republic) की स्थापना और 'दार्शनिक राजा' की अवधारणा का बौद्धिक विश्लेषण।</li>
-                    <li><b>अरस्तू का राजनीति विज्ञान:</b> राजनीति को 'सर्वोच्च विज्ञान' (Master Science) मानना और विभिन्न देशों के संविधानों का तुलनात्मक अध्ययन।</li>
-                </ul>
-
-                <h3 style="color: #9f1239; font-size: 24pt;">15.2 आधुनिक पश्चिमी और यूरोपीय विचारक (रूसो, मार्क्स):</h3>
-                <ul style="font-size: 18pt; line-height: 1.8; color: #000000; list-style-type: square;">
-                    <li><b>रूसो का सामान्य इच्छा सिद्धांत:</b> 'मनुष्य स्वतंत्र जन्म लेता है पर हर जगह जंजीरों में जकड़ा है' के नारे से फ्रांसीसी क्रांति को जन्म देना।</li>
-                    <li><b>कार्ल मार्क्स का वर्ग संघर्ष:</b> दुनिया के मजदूरों को एक करने का संदेश और समाजवाद व साम्यवाद की दार्शनिक आधारशिला रखना।</li>
-                    <li><b>जॉन स्टुअर्ट मिल (J.S. Mill):</b> व्यक्तिगत स्वतंत्रता और बोलने के अधिकार की सबसे मज़बूत वकालत करने वाले उदारवादी विचारक।</li>
-                </ul>
-
-                <h3 style="color: #9f1239; font-size: 24pt;">15.3 भारतीय राजनीतिक विचारक (गांधी, आंबेडकर):</h3>
-                <ul style="font-size: 18pt; line-height: 1.8; color: #000000; list-style-type: square;">
-                    <li><b>महात्मा गांधी का सत्याग्रह और स्वदेशी:</b> राजनीति को नैतिकता और अहिंसा से जोड़ना तथा ग्राम स्वराज की अनूठी संकल्पना देना।</li>
-                    <li><b>डॉ. बी.आर. आंबेडकर का सामाजिक न्याय:</b> जाति प्रथा का उन्मूलन और शोषितों को संवैधानिक अधिकारों से सशक्त करने का मार्ग।</li>
-                    <li><b>कौटिल्य (चाणक्य) का अर्थशास्त्र:</b> प्राचीन भारत में यथार्थवादी राजनीति (Realpolitik) और राज्य के शासन संचालन के व्यावहारिक सूत्र।</li>
-                </ul>
-            </div>
-
-
-            <!-- PART 16 -->
-            <div class="part-container" style="border-top-color: #334155;">
-                <h2 style="color: #1e293b !important; background-color: #f1f5f9; border-left: 10px solid #334155; padding: 20px 25px; border-radius: 10px; font-size: 32pt; font-weight: 900 !important; margin-top: 0; -webkit-text-stroke: 1px #1e293b;">16. कारण 7: न्याय-विधान (Justice) और धर्म-निरपेक्षता (Secularism) के संरक्षण हेतु</h2>
-                <p style="font-size: 18pt; text-align: justify;">धर्मनिरपेक्षता और न्याय-विधान का संरक्षण ही भारत जैसे बहु-धार्मिक देश के बने रहने की सबसे बड़ी दार्शनिक और कानूनी गारंटी है।</p>
-
-                <h3 style="color: #1e293b; font-size: 24pt;">16.1 न्याय और धर्मनिरपेक्षता के दार्शनिक पहलू:</h3>
-                <ul style="font-size: 18pt; line-height: 1.8; color: #000000; list-style-type: square;">
-                    <li><b>धार्मिक सह-अस्तित्व:</b> राज्य का किसी एक धर्म के प्रति झुकाव न होना; सभी नागरिकों को अपने धर्म का पालन करने की बराबर आजादी।</li>
-                    <li><b>अल्पसंख्यकों की सुरक्षा:</b> बहुसंख्यक वर्ग की नीतियों से अल्पसंख्यकों के धार्मिक और सांस्कृतिक अधिकारों को संवैधानिक कवच देना।</li>
-                    <li><b>सामाजिक न्याय का संरक्षण:</b> समाज के सबसे वंचित और निर्धन नागरिक को भी न्याय (कानूनी व आर्थिक) प्राप्त करने के समान अवसर देना।</li>
-                    <li><b>सांप्रदायिक नफरत का अंत:</b> धार्मिक कट्टरता और सामाजिक विभाजन फैलाने वाली ताकतों का तार्किक स्तर पर विरोध करना।</li>
-                    <li><b>संवैधानिक देशभक्ति:</b> किसी संकीर्ण धार्मिक पहचान से ऊपर उठकर संविधान के धर्मनिरपेक्ष आदर्शों के प्रति निष्ठा रखना।</li>
-                </ul>
-            </div>
-
-
-            <!-- PART 17 -->
-            <div class="part-container" style="border-top-color: #059669;">
-                <h2 style="color: #065f46 !important; background-color: #f0fdf4; border-left: 10px solid #059669; padding: 20px 25px; border-radius: 10px; font-size: 32pt; font-weight: 900 !important; margin-top: 0; -webkit-text-stroke: 1px #065f46;">17. कारण 8: राजनैतिक सिद्धांतों की वैज्ञानिक प्रकृति और सार्वभौमिकता</h2>
-                <p style="font-size: 18pt; text-align: justify;">जैसे भौतिक विज्ञान में गुरुत्वाकर्षण के नियम सार्वभौमिक हैं, वैसे ही राजनीति में भी 'स्वतंत्रता' और 'न्याय' के कुछ ऐसे नियम हैं जो हर समाज और हर युग में लागू होते हैं।</p>
-
-                <h3 style="color: #065f46; font-size: 24pt;">17.1 राजनैतिक सिद्धांतों की वैज्ञानिक प्रकृति:</h3>
-                <ul style="font-size: 18pt; line-height: 1.8; color: #000000; list-style-type: square;">
-                    <li><b>तथ्यों और डेटा का अध्ययन:</b> राजनैतिक व्यवहारों, चुनावी आंकड़ों और समाज की समस्याओं का वैज्ञानिक विश्लेषण करना।</li>
-                    <li><b>कारण और प्रभाव का संबंध:</b> यह समझना कि किस प्रकार की राजनैतिक नीतियां (जैसे तानाशाही) समाज में असंतोष और क्रांति को जन्म देती हैं।</li>
-                    <li><b>तुलनात्मक पद्धति:</b> विभिन्न देशों के संविधानों और शासनों का तुलनात्मक अध्ययन करके सर्वोत्तम नियमों का चुनाव करना।</li>
-                    <li><b>पूर्वानुमान लगाने की क्षमता:</b> वैज्ञानिक आधार पर यह समझना कि कौन से कानून सफल होंगे और कौन से सामाजिक अशांति का कारण बनेंगे।</li>
-                    <li><b>अनुशासन के रूप में विकास:</b> राजनीति को केवल दलगत दांव-पेंच न मानकर, उसे ज्ञान की एक गंभीर वैज्ञानिक शाखा के रूप में विकसित करना।</li>
-                </ul>
-            </div>
-
-
-            <!-- PART 18 -->
-            <div class="part-container" style="border-top-color: #db2777;">
-                <h2 style="color: #9d174d !important; background-color: #fdf2f8; border-left: 10px solid #db2777; padding: 20px 25px; border-radius: 10px; font-size: 32pt; font-weight: 900 !important; margin-top: 0; -webkit-text-stroke: 1px #9d174d;">18. कारण 9: तार्किक सोच (Rationality) और बौद्धिक प्रखरता का विकास</h2>
-                <p style="font-size: 18pt; text-align: justify;">राजनीतिक सिद्धांत का अध्ययन हमारी तार्किक सोच (Rationality) को मज़बूत करता है, जिससे हम अफवाहों, भीड़-आवेगों और अंधभक्ति से मुक्त होकर बौद्धिक निर्णय ले सकें।</p>
-
-                <h3 style="color: #9d174d; font-size: 24pt;">18.1 तार्किक सोच और बौद्धिक प्रखरता के लाभ:</h3>
-                <ul style="font-size: 18pt; line-height: 1.8; color: #000000; list-style-type: square;">
-                    <li><b>भीड़-आवेगों से मुक्ति:</b> किसी राजनेता के पीछे आँख बंद करके भागने के बजाय, उसके तर्कों और नीतियों की आलोचनात्मक जांच करना।</li>
-                    <li><b>स्वतंत्र दृष्टिकोण (Independent Opinion):</b> समाज के जटिल मुद्दों (जैसे राष्ट्रवाद, आरक्षण) पर अपनी खुद की तार्किक राय का निर्माण करना।</li>
-                    <li><b>बौद्धिक वाद-विवाद की क्षमता:</b> राजनैतिक बहसों में बिना गुस्सा हुए या हिंसक हुए, मज़बूत तर्कों और तथ्यों के साथ अपनी बात रखना।</li>
-                    <li><b>विवेकपूर्ण सोच का विकास:</b> शिक्षा का असली उद्देश्य केवल जानकारी पाना नहीं, बल्कि सही-गलत का निर्णय लेने वाले विवेक (Wisdom) को जगाना है।</li>
-                    <li><b>पूर्वाग्रहों से मुक्ति:</b> अपनी जाति, धर्म या वर्ग के पूर्वाग्रहों से ऊपर उठकर, पूरी मानवता के कल्याण की सोच विकसित करना।</li>
-                </ul>
-            </div>
-
-
-            <!-- PART 19 -->
-            <div class="part-container" style="border-top-color: #0369a1;">
-                <h2 style="color: #075985 !important; background-color: #f0f9ff; border-left: 10px solid #0369a1; padding: 20px 25px; border-radius: 10px; font-size: 32pt; font-weight: 900 !important; margin-top: 0; -webkit-text-stroke: 1px #075985;">19. कारण 10: राष्ट्र निर्माण (Nation Building) और सकारात्मक सोच का संचार</h2>
-                <p style="font-size: 18pt; text-align: justify;">सिद्धांतों का अध्ययन युवाओं में एक प्रगतिशील 'सकारात्मक सोच' का संचार करता है, जो एक न्यायपूर्ण और समृद्ध राष्ट्र के निर्माण के लिए सबसे बुनियादी शर्त है।</p>
-
-                <h3 style="color: #075985; font-size: 24pt;">19.1 राष्ट्र निर्माण में सिद्धांतों का योगदान:</h3>
-                <ul style="font-size: 18pt; line-height: 1.8; color: #000000; list-style-type: square;">
-                    <li><b>लोकतांत्रिक देशभक्ति:</b> तर्क और संवैधानिक मूल्यों पर आधारित सच्ची देशभक्ति का विकास करना, न कि किसी संकीर्ण नफरत पर आधारित।</li>
-                    <li><b>सकारात्मक नागरिकता:</b> राष्ट्र की कमियों (गरीबी, भ्रष्टाचार) को पहचानना और उन्हें दूर करने के लिए रचनात्मक योगदान देना।</li>
-                    <li><b>सामाजिक समरसता:</b> विभिन्न समुदायों के बीच भाईचारे और सहयोग का माहौल बनाकर देश की आंतरिक अखंडता को मज़बूत करना।</li>
-                    <li><b>युवा नेतृत्व का निर्माण:</b> भावी पीढ़ी के नेताओं में नैतिकता, कर्तव्यपरायणता और जन-सेवा के आदर्शों का विकास करना।</li>
-                    <li><b>वैश्विक विज़न:</b> भारत को एक ऐसा गौरवशाली राष्ट्र बनाना जो दुनिया में शांति, समानता और मानवाधिकारों का सबसे मज़बूत प्रतीक बने।</li>
-                </ul>
-            </div>
-
-
-            <!-- PART 20 -->
-            <div class="part-container" style="border-top-color: #0f172a;">
-                <h2 style="color: #0f172a !important; background-color: #f1f5f9; border-left: 10px solid #0f172a; padding: 20px 25px; border-radius: 10px; font-size: 32pt; font-weight: 900 !important; margin-top: 0; -webkit-text-stroke: 1px #0f172a;">20. निष्कर्ष: राजनीतिक सिद्धांत का भविष्य और मास्टर सारांश</h2>
-                <p style="font-size: 18pt; text-align: justify;">अध्याय 11 (राजनीतिक सिद्धांत: एक परिचय) का यह गहन सफर हमें इस मूल सत्य तक ले जाता है कि राजनैतिक सिद्धांत कोई निर्जीव विषय नहीं, बल्कि हमारे सभ्य जीवन का नैतिक प्राणतत्व है।</p>
-
-                <h3 style="color: #0f172a; font-size: 24pt;">20.1 निष्कर्ष के प्रमुख स्तंभ:</h3>
-                <ul style="font-size: 18pt; line-height: 1.8; color: #000000; list-style-type: square;">
-                    <li><b>बौद्धिक जागृति:</b> राजनीतिक सिद्धांतों का अध्ययन हमारी सोचने की क्षमता को बढ़ाता है और हमें एक जिम्मेदार नागरिक बनाता है।</li>
-                    <li><b>मूल्यों की अमरता:</b> स्वतंत्रता, समानता और न्याय जैसे मूल्य कभी पुराने नहीं होते; हर युग में इनकी नई व्याख्याएं आवश्यक हैं।</li>
-                    <li><b>संवैधानिक देशभक्ति ही असली राष्ट्रवाद:</b> संविधान के धर्मनिरपेक्ष और समतावादी मूल्यों के प्रति निष्ठा ही देश की अखंडता का असली कवच है।</li>
-                    <li><b>तार्किकता का मार्ग:</b> सांप के कुंडली जैसे राजनैतिक दलदलों से निकलने के लिए तर्क, संवाद और नैतिक बौद्धिकता ही एकमात्र मार्ग है।</li>
-                    <li><b>सर्वोच्च संदेश:</b> "तार्किक नागरिक ही मज़बूत लोकतंत्र की नींव हैं" और "सिद्धांतों के बिना राजनीति विनाशकारी है"—यही इस पूरे अध्याय का अंतिम और सर्वोच्च संदेश है।</li>
-                </ul>
-            </div>
-
-        </div>
-    </div>
+            status.style.display = 'block';
+            btn.style.backgroundColor = '#059669';
+            btn.innerText = '✅ COPIED! NOW PASTE IN DOC';
+            
+            setTimeout(() => {
+                status.style.display = 'none';
+                btn.style.backgroundColor = '#2563eb';
+                btn.innerText = '📋 COPY EVERYTHING FOR GOOGLE DOCS';
+            }, 5000);
+        } catch (err) {
+            alert('Error copying: ' + err);
+        }
+    }
+    </script>
 </body>
 </html>

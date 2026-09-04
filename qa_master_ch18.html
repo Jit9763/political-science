@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <title>Chapter 18: विकास - Professional Edition (2026-27)</title>
+    <style>
+        * { box-sizing: border-box; }
+        body { margin: 0; padding: 0; background-color: #f0fdf4; font-family: 'Segoe UI', Tahoma, sans-serif; color: #064e3b; }
+        
+        .home-btn {
+            position: fixed; bottom: 30px; right: 30px; z-index: 2000;
+            background: linear-gradient(135deg, #059669 0%, #064e3b 100%);
+            color: white; width: 70px; height: 70px; border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 2.2rem; text-decoration: none; box-shadow: 0 10px 25px rgba(5, 150, 105, 0.4);
+            border: 4px solid #ffffff; transition: transform 0.3s;
+        }
+        .home-btn:hover { transform: scale(1.1) rotate(15deg); }
+
+        .master-container {
+            max-width: 1250px; margin: 50px auto; padding: 60px; background-color: #ffffff;
+            box-shadow: 0 30px 60px rgba(0,0,0,0.08); border-radius: 40px; border-top: 15px solid #059669;
+        }
+        
+        .header-box {
+            text-align: center; margin-bottom: 70px; padding: 75px; 
+            border: 10px double #059669; background: linear-gradient(135deg, #ecfdf5 0%, #d1fae5 100%); 
+            border-radius: 35px;
+        }
+        
+        .qa-block {
+            margin-bottom: 70px; padding: 45px; border: 4px solid #f0fdf4; 
+            border-radius: 30px; background-color: #ffffff;
+        }
+        .question-text { 
+            font-size: 25pt; font-weight: 900; color: #065f46; line-height: 1.5; 
+            margin-bottom: 30px; border-bottom: 5px solid #a7f3d0; padding-bottom: 20px;
+        }
+        .options-list { font-size: 20pt; list-style-type: upper-alpha; padding-left: 70px; color: #374151; font-weight: 700; }
+        .options-list li { margin-bottom: 20px; }
+
+        .answer-box {
+            margin-top: 35px; padding: 40px; border-radius: 25px; font-size: 20pt; line-height: 2.2;
+            background-color: #f9fafb; border-left: 15px solid #059669;
+        }
+        
+        /* Premium Highlights */
+        .hl-emerald { color: #059669; font-weight: 800; border-bottom: 2px solid #a7f3d0; }
+        .hl-gold { color: #b45309; font-weight: 800; }
+        .hl-rose { color: #be123c; font-weight: 800; }
+        .hl-blue { color: #2563eb; font-weight: 800; }
+        
+        .correct-ans { 
+            background: #d1fae5; color: #064e3b; padding: 12px 25px; 
+            border-radius: 12px; font-weight: 900; display: inline-block; margin-bottom: 25px;
+        }
+        .explanation-title { 
+            display: block; font-size: 22pt; font-weight: 900; color: #064e3b; 
+            margin-top: 25px; border-bottom: 3px solid #a7f3d0; width: fit-content;
+        }
+        
+        .section-divider {
+            background: linear-gradient(90deg, #064e3b, #059669); color: white; 
+            padding: 25px; border-radius: 20px; text-align: center; 
+            font-size: 28pt; font-weight: 900; margin: 90px 0 50px 0;
+            box-shadow: 0 15px 30px rgba(5, 150, 105, 0.2);
+        }
+    </style>
+head>
+<body>
+    <a href="index.html" class="home-btn" title="Home Screen">🏠</a>
+
+    <div id="contentToCopy">
+        <div class="master-container">
+
+            <div class="header-box">
+                <h1 style="color: #064e3b; font-size: 52pt; font-weight: 900; margin: 0;">अध्याय 18</h1>
+                <div style="font-size: 42pt; color: #059669; font-weight: 900; margin-top: 15px;">विकास (Development)</div>
+                <div style="height: 8px; width: 250px; background: #059669; margin: 35px auto; border-radius: 4px;"></div>
+                <p style="font-size: 22pt; color: #064e3b; font-weight: 900; text-transform: uppercase;">Academic Session 2026-27 | Professional Edition</p>
+            </div>
+
+            <div class="section-divider">भाग 1: वस्तुनिष्ठ प्रश्न (MCQs) - सेगमेंट 1</div>
+
+            <div class="qa-block">
+                <div class="question-text">Q1. राजनीति विज्ञान के संदर्भ में 'विकास' (Development) का व्यापक अर्थ क्या है?</div>
+                <ol class="options-list">
+                    <li>केवल बड़ी इमारतें बनाना</li>
+                    <li>प्रगति, कल्याण और बेहतर जीवन की इच्छा का भाव</li>
+                    <li>पैसे कमाना</li>
+                    <li>मशीनें खरीदना</li>
+                </ol>
+                <div class="answer-box">
+                    <span class="correct-ans">✅ सही उत्तर: (B) प्रगति व बेहतर जीवन की इच्छा</span>
+                    <span class="explanation-title hl-emerald">बहुआयामी प्रक्रिया:</span>
+                    विकास केवल <span class="hl-gold">"आर्थिक वृद्धि"</span> (GDP) नहीं है। यह समाज में <span class="hl-rose">"खुशहाली"</span>, शिक्षा, स्वास्थ्य और <span class="hl-blue">मानवीय गरिमा</span> में सुधार का नाम है। यह एक ऐसी प्रक्रिया है जो लोगों के <span class="hl-emerald">विकल्पों</span> को बढ़ाती है।
+                </div>
+            </div>
+
+            <div class="qa-block">
+                <div class="question-text">Q2. 'सतत पोषणीय विकास' (Sustainable Development) क्या है?</div>
+                <ol class="options-list">
+                    <li>जल्दी-जल्दी विकास करना</li>
+                    <li>पर्यावरण को बचाते हुए विकास करना ताकि आने वाली पीढ़ियों को नुकसान न हो</li>
+                    <li>केवल गाँव का विकास</li>
+                    <li>विकास को रोक देना</li>
+                </ol>
+                <div class="answer-box">
+                    <span class="correct-ans">✅ सही उत्तर: (B) भविष्य की पीढ़ियों का ध्यान रखते हुए विकास</span>
+                    <span class="explanation-title hl-emerald">पृथ्वी का संरक्षण:</span>
+                    यह विचार कहता है कि हमें संसाधनों का उपयोग इस तरह करना चाहिए कि <span class="hl-gold">"आज की ज़रूरतें"</span> भी पूरी हों और <span class="hl-rose">"भावी पीढ़ियों"</span> के लिए भी संसाधन बचे रहें। यह <span class="hl-blue">पर्यावरण और प्रगति</span> के बीच संतुलन है।
+                </div>
+            </div>
+
+            <div class="qa-block">
+                <div class="question-text">Q3. विकास के 'पश्चिमी मॉडल' (Western Model) की मुख्य आलोचना क्या है?</div>
+                <ol class="options-list">
+                    <li>यह बहुत धीमा है</li>
+                    <li>यह पर्यावरण का भारी नुकसान करता है और अमीरी-गरीबी की खाई बढ़ाता है</li>
+                    <li>यह सबको बराबर कर देता है</li>
+                    <li>यह केवल धर्म पर आधारित है</li>
+                </ol>
+                <div class="answer-box">
+                    <span class="correct-ans">✅ सही उत्तर: (B) पर्यावरण नुकसान व असमानता</span>
+                    <span class="explanation-title hl-emerald">चुनौतियां:</span>
+                    पश्चिमी मॉडल <span class="hl-gold">"उपभोक्तावाद"</span> पर आधारित है, जहाँ अधिक से अधिक वस्तुओं के उत्पादन पर ज़ोर दिया जाता है। इससे <span class="hl-rose">प्राकृतिक तेल, पानी और हवा</span> का अत्यधिक दोहन हुआ है, जिससे <span class="hl-blue">ग्लोबल वार्मिंग</span> जैसी समस्याएं पैदा हुई हैं।
+                </div>
+            </div>
+
+            <div class="qa-block">
+                <div class="question-text">Q4. 'मानव विकास सूचकांक' (HDI) किसके द्वारा जारी किया जाता है?</div>
+                <ol class="options-list">
+                    <li>विश्व बैंक</li>
+                    <li>UNDP (संयुक्त राष्ट्र विकास कार्यक्रम)</li>
+                    <li>अंतरराष्ट्रीय मुद्रा कोष</li>
+                    <li>WHO</li>
+                </ol>
+                <div class="answer-box">
+                    <span class="correct-ans">✅ सही उत्तर: (B) UNDP</span>
+                    <span class="explanation-title hl-emerald">मापन का नया तरीका:</span>
+                    HDI विकास को केवल <span class="hl-gold">"आय"</span> से नहीं मापता। यह <span class="hl-blue">"जीवन प्रत्याशा, शिक्षा और प्रति व्यक्ति आय"</span> का औसत है। यह बताता है कि असली विकास <span class="hl-rose">"इंसान के विकास"</span> में है।
+                </div>
+            </div>
+
+            <div class="qa-block">
+                <div class="question-text">Q5. 'विस्थापन' (Displacement) विकास का एक नकारात्मक पहलू क्यों माना जाता है?</div>
+                <ol class="options-list">
+                    <li>क्योंकि लोग घूमना नहीं चाहते</li>
+                    <li>क्योंकि बाँध या फैक्ट्रियों के लिए लोगों को अपनी ज़मीन और संस्कृति छोड़नी पड़ती है</li>
+                    <li>क्योंकि इससे जनसंख्या कम होती है</li>
+                    <li>कोई नकारात्मक पहलू नहीं है</li>
+                </ol>
+                <div class="answer-box">
+                    <span class="correct-ans">✅ सही उत्तर: (B) ज़मीन व संस्कृति का छिनना</span>
+                    <span class="explanation-title hl-emerald">विकास की कीमत:</span>
+                    इसे अक्सर <span class="hl-gold">"विकास का बलिदान"</span> कहा जाता है। जब तक विस्थापितों का सही <span class="hl-rose">"पुनर्वास"</span> (Rehabilitation) नहीं होता, तब तक ऐसा विकास <span class="hl-blue">"अन्यायपूर्ण"</span> माना जाता है। शांति और प्रगति साथ-साथ चलनी चाहिए।
+                </div>
+            </div>
+
+            <!-- SEGMENT 2: 6-10 (MCQs) -->
+            <div style="background-color: #059669; color: white; padding: 10px 20px; border-radius: 10px; font-size: 20pt; margin-bottom: 30px; font-weight: bold; text-align: center;">सेगमेंट 2: सामाजिक लागत व वैकल्पिक मॉडल</div>
+
+            <!-- Q6 -->
+            <div class="qa-block">
+                <div class="question-text">Q6. 'बड़े बाँधों' (Big Dams) का विरोध मुख्य रूप से किस तर्क पर किया जाता है?</div>
+                <ol class="options-list">
+                    <li>क्योंकि वे सुंदर नहीं लगते</li>
+                    <li>क्योंकि वे लाखों लोगों को विस्थापित करते हैं और पर्यावरण को स्थायी नुकसान पहुँचाते हैं</li>
+                    <li>क्योंकि उनमें बहुत पानी होता है</li>
+                    <li>कोई विरोध नहीं होता</li>
+                </ol>
+                <div class="answer-box">
+                    <span class="correct-ans">✅ सही उत्तर: (B) विस्थापन व पर्यावरण नुकसान</span>
+                    <span class="explanation-title hl-emerald">नर्मदा बचाओ आंदोलन:</span>
+                    मेधा पाटेकर जैसे कार्यकर्ताओं ने यह सवाल उठाया कि <span class="hl-gold">"विकास किसके लिए?"</span> यदि विकास बहुसंख्यक आबादी को <span class="hl-rose">"बेघर"</span> कर दे, तो वह विकास नहीं बल्कि <span class="hl-blue">"पलायनकारी संकट"</span> है। शांतिपूर्ण विकास में सबकी <span class="hl-emerald">मंजूरी</span> ज़रूरी है।
+                </div>
+            </div>
+
+            <!-- Q7 -->
+            <div class="qa-block">
+                <div class="question-text">Q7. विकास का 'बाज़ारवादी मॉडल' (Market Model) क्या मानता है?</div>
+                <ol class="options-list">
+                    <li>सरकार को सब कुछ मुफ्त देना चाहिए</li>
+                    <li>विकास केवल निजी कंपनियों और 'बाज़ार' की शक्तियों (माँग और आपूर्ति) से होना चाहिए</li>
+                    <li>बाज़ार बंद कर देने चाहिए</li>
+                    <li>केवल सरकारी दुकानें होनी चाहिए</li>
+                </ol>
+                <div class="answer-box">
+                    <span class="correct-ans">✅ सही उत्तर: (B) बाज़ार शक्तियों व निजी क्षेत्र पर ज़ोर</span>
+                    <span class="explanation-title hl-gold">कुशलता बनाम कल्याण:</span>
+                    यह मॉडल <span class="hl-emerald">"प्रतिस्पर्धा"</span> (Competition) को बढ़ावा देता है। आलोचकों का तर्क है कि यह अमीरों को और अमीर बनाता है, वहीं समर्थकों का कहना है कि इससे <span class="hl-rose">"गुणवत्ता और कार्यक्षमता"</span> बढ़ती है।
+                </div>
+            </div>
+
+            <!-- Q8 -->
+            <div class="qa-block">
+                <div class="question-text">Q8. 'सकल राष्ट्रीय खुशहाली' (Gross National Happiness - GNH) का विचार किस देश ने दिया?</div>
+                <ol class="options-list">
+                    <li>भारत</li>
+                    <li>भूटान</li>
+                    <li>अमेरिका</li>
+                    <li>जापान</li>
+                </ol>
+                <div class="answer-box">
+                    <span class="correct-ans">✅ सही उत्तर: (B) भूटान</span>
+                    <span class="explanation-title hl-emerald">आध्यात्मिक प्रगति:</span>
+                    भूटान मानता है कि विकास केवल <span class="hl-gold">"बैंक बैलेंस"</span> बढ़ाना नहीं है। GNH में <span class="hl-blue">"पर्यावरण संरक्षण, सांस्कृतिक मूल्यों की रक्षा और मानसिक शांति"</span> को भी मापा जाता है। यह दुनिया के लिए एक <span class="hl-rose">"वैकल्पिक पथ"</span> है।
+                </div>
+            </div>
+
+            <!-- Q9 -->
+            <div class="qa-block">
+                <div class="question-text">Q9. भारत ने आज़ादी के बाद 'योजना आयोग' (Planning Commission) क्यों बनाया था?</div>
+                <ol class="options-list">
+                    <li>बिना किसी कारण के</li>
+                    <li>गरीबी दूर करने और विकास के लिए संसाधनों का सही उपयोग करने के लिए</li>
+                    <li>केवल कर वसूलने के लिए</li>
+                    <li>दूसरे देशों की नकल करने के लिए</li>
+                </ol>
+                <div class="answer-box">
+                    <span class="correct-ans">✅ सही उत्तर: (B) संसाधनों का सही उपयोग व लक्ष्य प्राप्ति</span>
+                    <span class="explanation-title hl-gold">सुनियोजित विकास:</span>
+                    आज़ादी के समय भारत अत्यंत <span class="hl-rose">गरीब</span> था। सरकार ने <span class="hl-emerald">"पंचवर्षीय योजनाओं"</span> के माध्यम से कृषि और उद्योगों को खड़ा किया। अब इसकी जगह <span class="hl-blue">"नीति आयोग"</span> (NITI Aayog) ने ले ली है।
+                </div>
+            </div>
+
+            <!-- Q10 -->
+            <div class="qa-block">
+                <div class="question-text">Q10. विकास के संदर्भ में 'लोकतांत्रिक सहभागिता' (Democratic Participation) का क्या अर्थ है?</div>
+                <ol class="options-list">
+                    <li>नेताओं का ही सब कुछ तय करना</li>
+                    <li>स्थानीय लोगों और जनता को विकास की योजनाओं के निर्माण में शामिल करना</li>
+                    <li>केवल सरकारी कार्यक्रमों को देखना</li>
+                    <li>सिर्फ नारे लगाना</li>
+                </ol>
+                <div class="answer-box">
+                    <span class="correct-ans">✅ सही उत्तर: (B) जनता की योजनाओं में भागीदारी</span>
+                    <span class="explanation-title hl-emerald">जन-शक्ति:</span>
+                    असली विकास <span class="hl-gold">"ऊपर से नीचे"</span> (Top-down) नहीं, बल्कि <span class="hl-blue">"नीचे से ऊपर"</span> (Bottom-up) होना चाहिए। जब लोग खुद अपनी <span class="hl-rose">"विकास की प्राथमिकताएं"</span> तय करते हैं, तो उसे <span class="hl-emerald">"सशक्तिकरण"</span> कहते हैं।
+                </div>
+            </div>
+
+            <!-- SEGMENT 3: 11-15 (Short/Assertion) -->
+            <div style="background-color: #064e3b; color: white; padding: 10px 20px; border-radius: 10px; font-size: 20pt; margin-bottom: 30px; font-weight: bold; text-align: center;">सेगमेंट 3: लघु उत्तरीय एवं कथन-कारण पृष्ठ</div>
+
+            <!-- Q11 -->
+            <div class="qa-block">
+                <div class="question-text">Q11. विकास को केवल 'प्रति व्यक्ति आय' (Per Capita Income) से मापना अधूरा क्यों है?</div>
+                <div class="answer-box">
+                    <span class="explanation-title hl-emerald">वितरण की समस्या:</span>
+                    <ul style="list-style-type: square; margin-top: 10px;">
+                        <li><span class="hl-gold">असमानता:</span> औसत आय यह नहीं बताती कि पैसा मुट्ठी भर लोगों के पास है या सबका विकास हो रहा है।</li>
+                        <li><span class="hl-blue">गुणवत्ता:</span> यह शिक्षा, स्वास्थ्य, और <span class="hl-rose">"स्वच्छ हवा"</span> जैसे महत्वपूर्ण मानवीय पहलुओं को नज़रअंदाज़ कर देती है। इसलिए <span class="hl-emerald">मानव विकास सूचकांक</span> (HDI) को अधिक सटीक माना जाता है।</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Q12 -->
+            <div class="qa-block">
+                <div class="question-text">Q12. विकास और पर्यावरण संरक्षण के बीच 'संतुलन' बनाना क्यों ज़रूरी है?</div>
+                <div class="answer-box">
+                    <span class="explanation-title hl-emerald">अस्तित्व का आधार:</span>
+                    यदि हम विकास के नाम पर जंगलों और नदियों को नष्ट कर देंगे, तो अंततः <span class="hl-gold">"जीवन का आधार"</span> ही खत्म हो जाएगा। विकास ऐसा होना चाहिए जो <span class="hl-rose">"प्राकृतिक पूंजी"</span> को खत्म न करे। <span class="hl-blue">सतत विकास</span> ही पृथ्वी को आने वाली पीढ़ियों के रहने योग्य बना सकता है।
+                </div>
+            </div>
+
+            <!-- Q13 (Assertion-Reasoning) -->
+            <div class="qa-block" style="border-left: 12px solid #064e3b;">
+                <div class="question-text">Q13. कथन (Assertion): विकास की कीमत अक्सर समाज के गरीब और कमज़ोर वर्गों को चुकानी पड़ती है।<br>
+                कारण (Reason): बड़ी विकास परियोजनाओं (जैसे बाँध) के लिए अक्सर आदिवासियों और विस्थापितों को उनकी जल, जंगल और ज़मीन से बेदखल कर दिया जाता है।</div>
+                <div class="answer-box">
+                    <span class="correct-ans">✅ सही उत्तर: (A) कथन और कारण दोनों सही हैं, और कारण, कथन की सही व्याख्या है।</span>
+                    <span class="explanation-title hl-emerald">सामाजिक न्याय:</span>
+                    विकास तभी सार्थक है जब वह <span class="hl-gold">"समावेशी"</span> (Inclusive) हो। यदि एक का लाभ दूसरे के <span class="hl-rose">विनाश</span> पर टिका हो, तो वह विकास नहीं <span class="hl-blue">अन्याय</span> है।
+                </div>
+            </div>
+
+            <!-- Q14 -->
+            <div class="qa-block" style="border-left: 12px solid #064e3b;">
+                <div class="question-text">Q14. कथन (Assertion): 'बाज़ार' (Market) सामाजिक विकास के सभी लक्ष्यों को अकेले पूरा नहीं कर सकता।<br>
+                कारण (Reason): बाज़ार केवल 'मुनाफे' (Profit) पर ध्यान देता है, जबकि शिक्षा और स्वास्थ्य जैसे क्षेत्रों में राज्य के हस्तक्षेप और 'कल्याणकारी नीतियों' की ज़रूरत होती है।</div>
+                <div class="answer-box">
+                    <span class="correct-ans">✅ सही उत्तर: (A) कथन और कारण दोनों सही हैं, और कारण, कथन की सही व्याख्या है।</span>
+                    <span class="explanation-title hl-gold">राज्य की भूमिका:</span>
+                    बाज़ार अमीर-गरीब की खाई को दूर करने के लिए <span class="hl-rose">उत्तरदायी</span> नहीं है। यह काम केवल एक <span class="hl-blue">लोकतांत्रिक सरकार</span> ही कर सकती है।
+                </div>
+            </div>
+
+            <!-- Q15 -->
+            <div class="qa-block">
+                <div class="question-text">Q15. विकास के संदर्भ में 'परंपरागत ज्ञान' (Traditional Knowledge) का क्या महत्व है?</div>
+                <div class="answer-box">
+                    <span class="explanation-title hl-emerald">देसी तकनीक:</span>
+                    आदिवासी और ग्रामीण समुदायों के पास <span class="hl-gold">"पर्यावरण के साथ तालमेल"</span> बिठाकर जीने का गहरा अनुभव होता है। आधुनिक विकास को इस ज्ञान का सम्मान करना चाहिए। उदाहरण के लिए—<span class="hl-blue">जैविक खेती</span> या प्राकृतिक जड़ी-बूटियों का उपयोग, जो <span class="hl-rose">कम खर्चीला</span> और टिकाऊ है।
+                </div>
+            </div>
+
+            <!-- SEGMENT 4: 16-20 (Short/Assertion) -->
+            <div style="background-color: #059669; color: white; padding: 10px 20px; border-radius: 10px; font-size: 20pt; margin-bottom: 30px; font-weight: bold; text-align: center;">सेगमेंट 4: जवाबदेही, नागरिक समाज व संस्कृति</div>
+
+            <!-- Q16 -->
+            <div class="qa-block">
+                <div class="question-text">Q16. विकास की योजनाओं में 'लोकतांत्रिक जवाबदेही' क्यों आवश्यक है?</div>
+                <div class="answer-box">
+                    <span class="explanation-title hl-emerald">भ्रष्टाचार पर अंकुश:</span>
+                    <ul style="list-style-type: square; margin-top: 10px;">
+                        <li><span class="hl-gold">पारदर्शिता:</span> जब जनता को योजनाओं की जानकारी होती है, तो <span class="hl-rose">"धन का दुरुपयोग"</span> कम होता है।</li>
+                        <li><span class="hl-blue">सही लक्ष्य:</span> जवाबदेही यह सुनिश्चित करती है कि योजनाएँ कागज़ पर नहीं बल्कि <span class="hl-emerald">"जमीनी स्तर"</span> पर लोगों को लाभ पहुँचा रही हैं। बिना इसके विकास <span class="hl-blue">"निरंकुश"</span> हो जाता है।</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Q17 -->
+            <div class="qa-block">
+                <div class="question-text">Q17. विकास की प्रक्रिया में 'नागरिक समाज' (Civil Society/NGOs) क्या भूमिका निभाते हैं?</div>
+                <div class="answer-box">
+                    <span class="explanation-title hl-emerald">सेतु का कार्य:</span>
+                    नागरिक समाज सरकार और जनता के बीच <span class="hl-blue">"पुल"</span> का काम करता है। ये संगठन उन क्षेत्रों तक पहुँचते हैं जहाँ सरकारी तंत्र <span class="hl-rose">अक्षम</span> होता है। ये जनता को जागरूक करते हैं और <span class="hl-gold">"अन्यायपूर्ण विकास"</span> के खिलाफ आवाज़ उठाते हैं। ये विकास को <span class="hl-emerald">"मानवीय चेहरा"</span> (Human Face) देते हैं।
+                </div>
+            </div>
+
+            <!-- Q18 (Assertion-Reasoning) -->
+            <div class="qa-block" style="border-left: 12px solid #064e3b;">
+                <div class="question-text">Q18. कथन (Assertion): वैश्वीकरण कभी-कभी स्थानीय संस्कृतियों के लिए 'खतरा' बन जाता है।<br>
+                कारण (Reason): विकास के पश्चिमी मॉडल के अंधानुकरण से स्थानीय भाषाएँ, खान-पान और परंपरागत मूल्य लुप्त होने लगते हैं।</div>
+                <div class="answer-box">
+                    <span class="correct-ans">✅ सही उत्तर: (A) कथन और कारण दोनों सही हैं, और कारण, कथन की सही व्याख्या है।</span>
+                    <span class="explanation-title hl-emerald">सांस्कृतिक रक्षा:</span>
+                    सच्चा विकास <span class="hl-gold">"अपनी जड़ों"</span> से जुड़ा होना चाहिए। विकास का अर्थ <span class="hl-blue">"सिर्फ दूसरों जैसा बनना"</span> नहीं है।
+                </div>
+            </div>
+
+            <!-- Q19 -->
+            <div class="qa-block" style="border-left: 12px solid #064e3b;">
+                <div class="question-text">Q19. कथन (Assertion): विकास के लिए 'राजनीतिक स्थिरता' (Political Stability) अनिवार्य है।<br>
+                कारण (Reason): अस्थिर सरकारों में नीतियां बार-बार बदलती हैं, जिससे लंबे समय के निवेश और बुनियादी ढांचे के काम रुक जाते हैं।</div>
+                <div class="answer-box">
+                    <span class="correct-ans">✅ सही उत्तर: (A) कथन और कारण दोनों सही हैं, और कारण, कथन की सही व्याख्या है।</span>
+                    <span class="explanation-title hl-gold">नीतिगत निरंतरता:</span>
+                    स्थिरता विकास की योजनाओं को <span class="hl-blue">"मज़बूत आधार"</span> और <span class="hl-emerald">"भविष्य की सुरक्षा"</span> प्रदान करती है।
+                </div>
+            </div>
+
+            <!-- Q20 -->
+            <div class="qa-block">
+                <div class="question-text">Q20. 'शहरीकरण' (Urbanization) विकास का सूचक है या समस्या? विश्लेषण कीजिए।</div>
+                <div class="answer-box">
+                    <span class="explanation-title hl-emerald">संतुलन की चुनौती:</span>
+                    शहरीकरण नए <span class="hl-gold">"रोज़गार और आधुनिक सुविधाओं"</span> (शिक्षा, स्वास्थ्य) का केंद्र है, जो विकास के लिए अच्छा है। लेकिन बिना नियोजन के बढ़ते शहर <span class="hl-rose">"झुग्गी बस्तियों"</span>, प्रदूषण और अपराध जैसी समस्याएं भी पैदा करते हैं। विकास के लिए <span class="hl-blue">"स्मार्ट और टिकाऊ शहरीकरण"</span> (Smart Urbanization) की आवश्यकता है।
+                </div>
+            </div>
+
+            <!-- SEGMENT 5: 21-25 (Long/Analytical) -->
+            <div style="background-color: #064e3b; color: white; padding: 15px 30px; border-radius: 10px; font-size: 24pt; margin-bottom: 40px; font-weight: bold; text-align: center;">भाग 3: दीर्घ उत्तरीय एवं विश्लेषणात्मक प्रश्न</div>
+
+            <!-- Q21 -->
+            <div class="qa-block">
+                <div class="question-text">Q21. विकास के "पारंपरिक मॉडल" (Western/Industrial Model) की मुख्य कमियाँ क्या हैं? सविस्तार वर्णन कीजिए।</div>
+                <div class="answer-box">
+                    <span class="explanation-title hl-emerald">विकास का संकट:</span>
+                    <ul style="list-style-type: disc; margin-top: 10px;">
+                        <li><span class="hl-gold">पर्यावरण प्रदूषण:</span> यह मॉडल अंधाधुंध औद्योगिकीकरण पर ज़ोर देता है, जिससे <span class="hl-rose">वायु, जल और मृदा</span> का भारी नुकसान हुआ है।</li>
+                        <li><span class="hl-blue">असमान वितरण:</span> इसने अमीरों को और अमीर बनाया है, जबकि गरीब और हाशिए पर पड़े वर्ग विकास की धारा से <span class="hl-emerald">"बाहर"</span> रह गए हैं।</li>
+                        <li><span class="hl-slate">सांस्कृतिक क्षरण:</span> यह मॉडल स्थानीय परंपराओं और जीवन जीने के <span class="hl-rose">सहज तरीके</span> को खत्म कर 'उपभोक्तावाद' थोपता है।</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Q22 -->
+            <div class="qa-block">
+                <div class="question-text">Q22. "किसी भी बड़े विकास प्रोजेक्ट से पहले वहां के निवासियों की सहमति क्यों ज़रूरी है?" विश्लेषण कीजिए।</div>
+                <div class="answer-box">
+                    <span class="explanation-title hl-gold">नैतिक एवं संवैधानिक अधिकार:</span>
+                    लोकतंत्र में जनता केवल <span class="hl-blue">"विकास की लाभार्थी"</span> नहीं बल्कि उसकी <span class="hl-emerald">"भागीदार"</span> भी है। 
+                    <ul style="list-style-type: square; margin-top: 10px;">
+                        <li><span class="hl-slate">आजीविका का प्रश्न:</span> विस्थापन से लोगों का केवल घर नहीं, बल्कि उनकी <span class="hl-rose">रोजी-रोटी</span> छीनी जाती है।</li>
+                        <li><span class="hl-gold">प्रभावी पुनर्वास:</span> बिना सहमति के किया गया विकास <span class="hl-blue">"तानाशाही"</span> है। जनता की हिस्सेदारी से ही योजनाएँ सफल और टिकाऊ हो सकती हैं।</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Q23 -->
+            <div class="qa-block">
+                <div class="question-text">Q23. विकास के नाम पर होने वाले 'खनन' और 'वन विनाश' के राजनीतिक और सामाजिक परिणामों की विवेचना कीजिए।</div>
+                <div class="answer-box">
+                    <span class="explanation-title hl-emerald">पारिस्थितिकी बनाम अर्थशास्त्र:</span>
+                    <ul style="list-style-type: circle; margin-top: 10px;">
+                        <li><span class="hl-rose">संघर्ष का जन्म:</span> संसाधनों पर कब्ज़े के लिए सरकार, उद्योगपति और स्थानीय लोगों के बीच <span class="hl-blue">"खूनी संघर्ष"</span> होने लगते हैं (जैसे—उड़ीसा या छत्तीसगढ़ के कई क्षेत्र)।</li>
+                        <li><span class="hl-gold">स्वास्थ्य संकट:</span> खनन क्षेत्रों में रहने वाली आबादी <span class="hl-slate">गंभीर बीमारियों</span> का शिकार होती है। विकास का लाभ शहरों को मिलता है और <span class="hl-rose">कष्ट</span> ग्रामीणों को। यह विषमता सामाजिक शांति के लिए खतरा है।</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Q24 -->
+            <div class="qa-block">
+                <div class="question-text">Q24. "सतत विकास" (Sustainable Development) केवल एक नारा नहीं, बल्कि आने वाली पीढ़ियों के प्रति हमारा नैतिक कर्तव्य है।" स्पष्ट कीजिए।</div>
+                <div class="answer-box">
+                    <span class="explanation-title hl-gold">भविष्य की थाती:</span>
+                    हवा, पानी और ज़मीन हमें अपने पूर्वजों से <span class="hl-emerald">"विरासत"</span> में नहीं मिली, बल्कि बच्चों से <span class="hl-blue">"उधार"</span> ली गई है। 
+                    <ul style="list-style-type: disc; margin-top: 10px;">
+                        <li><span class="hl-blue">संसाधन सीमा:</span> पृथ्वी के संसाधन <span class="hl-rose">सीमित</span> हैं। यदि हमें आज ही सब खत्म कर दिया, तो भविष्य <span class="hl-slate">अंधकारमय</span> होगा।</li>
+                        <li><span class="hl-gold">समाधान:</span> सौर ऊर्जा, वर्षा जल संचयन और <span class="hl-emerald">"सादा जीवन"</span> ही इस समस्या का एकमात्र समाधान है।</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Q25 -->
+            <div class="qa-block">
+                <div class="question-text">Q25. विकासशील देशों (जैसे भारत) के सामने 'विकास' और 'लोकतंत्र' के बीच संतुलन बनाए रखने की क्या चुनौतियाँ हैं?</div>
+                <div class="answer-box">
+                    <span class="explanation-title hl-emerald">जटिल राह:</span>
+                    <ul style="list-style-type: square; margin-top: 10px;">
+                        <li><span class="hl-gold">धीमी गति:</span> लोकतंत्र में सबको मनाना पड़ता है, जिससे फैसले <span class="hl-rose">देरी</span> से होते हैं। तानाशाही में विकास <span class="hl-blue">तेज़</span> हो सकता है पर वह क्रूर होता है।</li>
+                        <li><span class="hl-slate">न्याय की शर्त:</span> भारत जैसे देश में जहाँ <span class="hl-rose">अत्यधिक गरीबी</span> है, वहां केवल अमीरों के विकास को प्राथमिकता नहीं दी जा सकती। हमें <span class="hl-gold">"सबका साथ, सबका विकास"</span> के मंत्र पर चलना ही होगा।</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- SEGMENT 6: 26-30 (Long/Analytical) -->
+            <div style="background-color: #064e3b; color: white; padding: 15px 30px; border-radius: 10px; font-size: 24pt; margin-bottom: 40px; font-weight: bold; text-align: center;">अंतिम खंड: भविष्य की राह एवं समग्र निष्कर्ष</div>
+
+            <!-- Q26 -->
+            <div class="qa-block">
+                <div class="question-text">Q26. विकास में 'तकनीकी नवाचार' (Technological Innovation) की क्या भूमिका है? इसके खतरों से कैसे बचें?</div>
+                <div class="answer-box">
+                    <span class="explanation-title hl-emerald">डिजिटल युग की प्रगति:</span>
+                    <ul style="list-style-type: square; margin-top: 10px;">
+                        <li><span class="hl-gold">लाभ:</span> तकनीक से उत्पादन बढ़ता है, संचार आसान होता है और <span class="hl-blue">"ई-गवर्नेंस"</span> के माध्यम से भ्रष्टाचार कम होता है।</li>
+                        <li><span class="hl-rose">खतरा (Digital Divide):</span> यदि तकनीक केवल अमीरों तक सीमित रही, तो समाज में <span class="hl-slate">"डिजिटल खाई"</span> बढ़ जाएगी। समाधान यह है कि तकनीक <span class="hl-emerald">"सस्ती और सुलभ"</span> हो ताकि अंतिम व्यक्ति तक लाभ पहुँचे।</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Q27 -->
+            <div class="qa-block">
+                <div class="question-text">Q27. "शिक्षा और स्वास्थ्य में निवेश ही असली राष्ट्र निर्माण है।" इस कथन की पुष्टि कीजिए।</div>
+                <div class="answer-box">
+                    <span class="explanation-title hl-gold">मानव पूंजी (Human Capital):</span>
+                    बड़ी मशीनें और इमारतें तब तक बेकार हैं जब तक उन्हें चलाने वाला इंसान <span class="hl-blue">"कुशल और स्वस्थ"</span> न हो। 
+                    <ul style="list-style-type: disc; margin-top: 10px;">
+                        <li><span class="hl-emerald">शिक्षा:</span> आत्मनिर्भरता और <span class="hl-gold">"सोचने की शक्ति"</span> देती है।</li>
+                        <li><span class="hl-rose">स्वास्थ्य:</span> कार्यक्षमता बढ़ाता है। जिस देश की जनता स्वस्थ और शिक्षित है, वह देश <span class="hl-blue">"बिना विदेशी मदद"</span> के भी तेजी से विकास कर सकता है। यही <span class="hl-slate">असली विकास</span> है।</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Q28 -->
+            <div class="qa-block">
+                <div class="question-text">Q28. 'सामाजिक न्याय' और 'विकास' एक-दूसरे के विरोधी हैं या पूरक? तर्क दीजिए।</div>
+                <div class="answer-box">
+                    <span class="explanation-title hl-emerald">अविभाज्य संबंध:</span>
+                    अक्सर कहा जाता है कि न्याय के चक्कर में विकास <span class="hl-rose">"धीमा"</span> हो जाता है। लेकिन सच्चाई यह है कि बिना सामाजिक न्याय के विकास <span class="hl-blue">"हिंसक विद्रोह"</span> को जन्म देता है। जब तक समाज के पिछड़े वर्गों को <span class="hl-gold">"समान अवसर"</span> नहीं मिलेंगे, तब तक विकास की इमारत <span class="hl-slate">"रेत की बुनियाद"</span> पर खड़ी रहेगी। न्यायपूर्ण विकास ही स्थायी होता है।</div>
+            </div>
+
+            <!-- Q29 -->
+            <div class="qa-block">
+                <div class="question-text">Q29. जलवायु परिवर्तन (Climate Change) के दौर में 'विकास की नई परिभाषा' क्या होनी चाहिए?</div>
+                <div class="answer-box">
+                    <span class="explanation-title hl-gold">हरित क्रांति 2.0:</span>
+                    अब विकास का अर्थ केवल <span class="hl-rose">"उत्पादन बढ़ाना"</span> नहीं, बल्कि <span class="hl-blue">"कार्बन उत्सर्जन घटाना"</span> होना चाहिए। हमें <span class="hl-emerald">"उपभोग"</span> (Consumption) के बजाय <span class="hl-gold">"संरक्षण"</span> (Conservation) पर आधारित अर्थव्यवस्था बनानी होगी। विकास का नया मंत्र—<span class="hl-slate">"प्रकृति के साथ सह-अस्तित्व"</span> होना चाहिए।</div>
+            </div>
+
+            <!-- Q30 -->
+            <div class="qa-block" style="background-color: #ecfdf5; border: 4px solid #064e3b;">
+                <div class="question-text">Q30. महा-निष्कर्ष: सत्र 2026-27 के लिए 'विकास' का अंतिम संदेश क्या है?</div>
+                <div class="answer-box" style="background-color: #ffffff; border-left-color: #059669;">
+                    <span class="explanation-title hl-emerald">समापन विचार:</span>
+                    विकास एक मंज़िल नहीं, बल्कि एक <span class="hl-blue">"निरंतर यात्रा"</span> है। 18 अध्यायों के इस सफर का सार यह है कि राजनीति विज्ञान हमें <span class="hl-gold">"जागरूक नागरिक"</span> बनाता है। विकास तभी सफल है जब वह <span class="hl-rose">"अंतिम व्यक्ति"</span> (Antyodaya) के आँसू पोंछ सके। 
+                    <br><br>
+                    <div style="text-align: center; color: #064e3b; font-weight: 900; letter-spacing: 2px;">
+                        🎉 **[मिशन पूर्ण: कक्षा 11 राजनीति विज्ञान पोर्टल - सभी 18 अध्याय संपन्न (2026-27)]** 🎉<br>
+                        <span style="font-size: 16pt; color: #059669;">ज्ञान ही शक्ति है। विकास ही जीवन है।</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
