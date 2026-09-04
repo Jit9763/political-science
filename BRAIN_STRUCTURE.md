@@ -19,9 +19,6 @@ political-science/
 ├── copy_master_ch1.html to copy_master_ch18.html  # Chapter HTML master files
 ├── qa_master_ch1.html to qa_master_ch18.html      # Question-Answer master files
 ├── index.html                                    # Main portal / dashboard
-├── class-11-pol-science/                          # Mirror directory for web deployment
-│   ├── copy_master_ch*.html
-│   └── images/
 ├── images/                                        # Chapter visual assets (WebP format)
 │   ├── ch1/ ... ch18/
 ├── scripts/
