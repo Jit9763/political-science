@@ -26,3 +26,8 @@ images/ch1_backup/
 
 # Backup directory for unused images
 backup_images/
+
+# Scratch & temporary prompt files
+scratch/
+*.json
+
