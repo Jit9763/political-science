@@ -20,8 +20,9 @@ class LLMEngine:
 
     def load_config(self):
         self.api_key = os.environ.get("GEMINI_API_KEY", "")
-        self.preferred_engine = "gemini"
+        self.is_github_actions = os.environ.get("GITHUB_ACTIONS") == "true"
         self.ollama_url = "http://localhost:11434"
+        self.preferred_engine = "gemini" if self.is_github_actions else "ollama"
 
         if os.path.exists(self.config_path):
             try:
@@ -29,7 +30,8 @@ class LLMEngine:
                     cfg = json.load(f)
                     if not self.api_key:
                         self.api_key = cfg.get("gemini_api_key", "")
-                    self.preferred_engine = cfg.get("preferred_engine", "gemini")
+                    if not self.is_github_actions and "preferred_engine" in cfg:
+                        self.preferred_engine = cfg.get("preferred_engine", "ollama")
                     self.ollama_url = cfg.get("ollama_url", "http://localhost:11434")
             except Exception as e:
                 print(f"Warning loading config: {e}")
@@ -77,33 +79,44 @@ class LLMEngine:
                         raise e
 
     def call_ollama(self, prompt, system_instruction=None, model="llama3"):
-        """Call Ollama local LLM."""
+        """Call Ollama local LLM with forced JSON formatting and extended context window."""
         if ollama is None:
             raise RuntimeError("Ollama Python package is not installed.")
         full_prompt = f"{system_instruction}\n\n{prompt}" if system_instruction else prompt
-        res = ollama.generate(model=model, prompt=full_prompt)
+        print(f"🦙 Generating analysis via local Ollama ({model})... Please wait...")
+        res = ollama.generate(
+            model=model,
+            prompt=full_prompt,
+            format="json",
+            options={"num_ctx": 16384, "temperature": 0.3}
+        )
         return res.get('response', '')
 
     def generate_analysis(self, prompt, system_instruction=None, engine=None):
         """Unified method to call chosen AI engine with automatic fallback."""
         target_engine = engine if engine else self.preferred_engine
 
-        if target_engine == "gemini":
+        # On Cloud GitHub Actions VM, force Gemini API
+        if self.is_github_actions:
+            print("☁️ [Cloud Execution Mode: GitHub Actions VM] Using Gemini 2.5 Flash API...")
+            return self.call_gemini(prompt, system_instruction)
+
+        if target_engine == "ollama":
+            print("🦙 [Local Mode] Attempting local Ollama (llama3) LLM execution...")
             try:
-                return self.call_gemini(prompt, system_instruction)
+                result = self.call_ollama(prompt, system_instruction)
+                print("✅ [Local Mode] Local Ollama execution finished successfully!")
+                return result
             except Exception as e:
-                print(f"Gemini API error ({e}). Trying Ollama fallback...")
-                try:
-                    return self.call_ollama(prompt, system_instruction)
-                except Exception as oe:
-                    print(f"Ollama fallback error ({oe}).")
-                    raise e
+                print(f"⚠️ Ollama error ({e}). Falling back to Gemini API...")
+                return self.call_gemini(prompt, system_instruction)
         else:
+            print("✨ [Local Mode] Using Gemini API...")
             try:
-                return self.call_ollama(prompt, system_instruction)
-            except Exception as e:
-                print(f"Ollama error ({e}). Trying Gemini API fallback...")
                 return self.call_gemini(prompt, system_instruction)
+            except Exception as e:
+                print(f"⚠️ Gemini API error ({e}). Trying local Ollama fallback...")
+                return self.call_ollama(prompt, system_instruction)
 
 if __name__ == '__main__':
     engine = LLMEngine()
