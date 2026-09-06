@@ -35,31 +35,38 @@ class LLMEngine:
                 print(f"Warning loading config: {e}")
 
     def call_gemini(self, prompt, system_instruction=None):
-        """Call Gemini API via google-genai SDK."""
+        """Call Gemini API via google-genai SDK with automatic model fallback for 429 rate limits."""
         if not self.api_key:
             raise ValueError("GEMINI_API_KEY is not configured! Please set it in config.json or environment.")
 
         client = genai.Client(api_key=self.api_key)
-        max_retries = 3
-        retry_delay = 3
-        for attempt in range(max_retries):
-            try:
-                response = client.models.generate_content(
-                    model='gemini-3.6-flash',
-                    contents=prompt,
-                    config={
-                        'temperature': 0.3,
-                        'system_instruction': system_instruction
-                    } if system_instruction else {'temperature': 0.3}
-                )
-                return response.text
-            except Exception as e:
-                if attempt < max_retries - 1:
-                    print(f"Gemini API attempt {attempt+1} failed with error ({e}). Retrying in {retry_delay}s...")
-                    time.sleep(retry_delay)
-                    retry_delay *= 2
-                else:
-                    raise e
+        models_to_try = ['gemini-3.6-flash', 'gemini-2.5-flash', 'gemini-1.5-flash']
+        last_error = None
+
+        for m in models_to_try:
+            for attempt in range(2):
+                try:
+                    response = client.models.generate_content(
+                        model=m,
+                        contents=prompt,
+                        config={
+                            'temperature': 0.3,
+                            'system_instruction': system_instruction
+                        } if system_instruction else {'temperature': 0.3}
+                    )
+                    return response.text
+                except Exception as e:
+                    last_error = e
+                    err_str = str(e)
+                    if "429" in err_str or "RESOURCE_EXHAUSTED" in err_str or "quota" in err_str.lower():
+                        print(f"Gemini model {m} quota limit (429 RateLimit). Trying fallback model...")
+                        time.sleep(4)
+                        break
+                    else:
+                        print(f"Gemini model {m} attempt {attempt+1} error ({e}). Sleeping 3s...")
+                        time.sleep(3)
+        if last_error:
+            raise last_error
 
     def call_ollama(self, prompt, system_instruction=None, model="llama3"):
         """Call Ollama local LLM."""
