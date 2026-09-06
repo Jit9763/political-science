@@ -242,7 +242,7 @@ class NewsFetcher:
         # 2. Economic Times, Financial Express & LiveMint (Economy & Markets - RAS Paper 1 / UPSC GS3)
         print("- Fetching Economic Times, Financial Express & LiveMint Economy Articles...")
         et_items = self.fetch_rss_items('https://economictimes.indiatimes.com/news/economy/rssfeeds/1373380680.cms', max_items=5, fetch_full_text=True)
-        fe_items = self.fetch_rss_items('https://www.financialexpress.com/feed/', max_items=5, fetch_full_text=True)
+        fe_items = self.fetch_rss_items('https://www.financialexpress.com/economy/feed/', max_items=5, fetch_full_text=True)
         mint_items = self.fetch_rss_items('https://www.livemint.com/rss/opinion', max_items=5, fetch_full_text=True)
         
         for item in et_items:
