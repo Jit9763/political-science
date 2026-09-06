@@ -22,7 +22,7 @@ jobs:
     - name: Install Dependencies
       run: |
         python -m pip install --upgrade pip
-        pip install requests beautifulsoup4 google-genai python-docx python-dotenv youtube-transcript-api customtkinter
+        pip install requests beautifulsoup4 google-genai python-docx python-dotenv youtube-transcript-api customtkinter ollama
 
     - name: Run Daily News & Master Syllabus AI Agent
       env:

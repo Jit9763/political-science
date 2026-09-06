@@ -4,7 +4,10 @@ import time
 import requests
 from dotenv import load_dotenv
 from google import genai
-import ollama
+try:
+    import ollama
+except ImportError:
+    ollama = None
 
 load_dotenv()
 
@@ -60,6 +63,8 @@ class LLMEngine:
 
     def call_ollama(self, prompt, system_instruction=None, model="llama3"):
         """Call Ollama local LLM."""
+        if ollama is None:
+            raise RuntimeError("Ollama Python package is not installed.")
         full_prompt = f"{system_instruction}\n\n{prompt}" if system_instruction else prompt
         res = ollama.generate(model=model, prompt=full_prompt)
         return res.get('response', '')
