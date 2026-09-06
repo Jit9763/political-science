@@ -31,6 +31,24 @@ backup_images/
 scratch/
 *.json
 
-# RPSC & UPSC Daily AI Agent folder and API keys
-RPSC_UPSC_Daily_AI_Agent/
+# Environment & secret key files
+.env
+.env.*
+*.env
+*.pem
+*.key
+*.cert
+*.p12
+*.pfx
+secrets/
+
+# RPSC & UPSC Daily AI Agent sensitive config & keys
+RPSC_UPSC_Daily_AI_Agent/config.json
+RPSC_UPSC_Daily_AI_Agent/.env
+RPSC_UPSC_Daily_AI_Agent/.env.*
+RPSC_UPSC_Daily_AI_Agent/Output_Notes/*.html
+RPSC_UPSC_Daily_AI_Agent/Output_Notes/*.docx
+
+# Allow Python scripts for GitHub Actions VM
+!RPSC_UPSC_Daily_AI_Agent/*.py
 
