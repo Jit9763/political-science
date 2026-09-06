@@ -127,7 +127,7 @@ class NewsFetcher:
         return pib_items
 
     def extract_youtube_id(self, url_or_id):
-        """Extract YouTube video ID from direct URL/ID or automatically find latest video from channel handle/URL."""
+        """Extract YouTube video ID from direct URL/ID or target 'The Hindu Analysis' / 'Current Affairs' video from channel RSS."""
         if not url_or_id:
             return ""
         
@@ -139,26 +139,59 @@ class NewsFetcher:
         if match:
             return match.group(1)
 
-        # 2. Channel Handle or Channel URL -> Automatically find LATEST video
-        channel_url = url_or_id
-        if not channel_url.startswith('http'):
-            if not channel_url.startswith('@'):
-                channel_url = '@' + channel_url
-            channel_url = f"https://www.youtube.com/{channel_url}/videos"
+        # 2. Channel Handle or Channel URL -> Targeted 'The Hindu / Current Affairs' Video Search
+        channel_name = url_or_id
+        if not channel_name.startswith('http'):
+            if not channel_name.startswith('@'):
+                channel_name = '@' + channel_name
+            channel_url = f"https://www.youtube.com/{channel_name}"
+        else:
+            channel_url = url_or_id
 
-        print(f"- Automatically finding LATEST video for YouTube channel: {channel_url}...")
+        print(f"- Automatically finding 'The Hindu / Current Affairs' video for YouTube channel: {channel_url}...")
         try:
             req = urllib.request.Request(channel_url, headers=self.headers)
             with urllib.request.urlopen(req, timeout=10) as resp:
                 html = resp.read().decode('utf-8', errors='ignore')
-                matches = re.findall(r'"videoId":"([a-zA-Z0-9_-]{11})"', html)
-                unique_ids = []
-                for m in matches:
-                    if m not in unique_ids:
-                        unique_ids.append(m)
-                if unique_ids:
-                    print(f"✅ Found latest channel video ID: {unique_ids[0]}")
-                    return unique_ids[0]
+                
+                # Extract channel ID (UC...)
+                channel_id_match = re.search(r'"externalChannelId":"(UC[a-zA-Z0-9_-]+)"', html)
+                if not channel_id_match:
+                    channel_id_match = re.search(r'https://www\.youtube\.com/channel/(UC[a-zA-Z0-9_-]+)', html)
+
+                if channel_id_match:
+                    channel_id = channel_id_match.group(1)
+                    rss_url = f"https://www.youtube.com/feeds/videos.xml?channel_id={channel_id}"
+                    
+                    rss_req = urllib.request.Request(rss_url, headers=self.headers)
+                    with urllib.request.urlopen(rss_req, timeout=10) as rss_resp:
+                        rss_xml = rss_resp.read()
+                        root = ET.fromstring(rss_xml)
+                        ns = {'atom': 'http://www.w3.org/2005/Atom', 'yt': 'http://www.youtube.com/xml/schemas/2015'}
+                        
+                        target_keywords = ['hindu', 'current affairs', 'dnc', 'editorial', 'pib', 'indian express', 'डेली न्यूज', 'द हिंदू', 'न्यूज']
+                        fallback_id = None
+                        fallback_title = None
+
+                        for entry in root.findall('atom:entry', ns):
+                            title_elem = entry.find('atom:title', ns)
+                            video_id_elem = entry.find('yt:videoId', ns)
+                            if title_elem is not None and video_id_elem is not None:
+                                title = title_elem.text
+                                v_id = video_id_elem.text
+                                if not fallback_id:
+                                    fallback_id = v_id
+                                    fallback_title = title
+                                
+                                title_lower = title.lower()
+                                if any(kw in title_lower for kw in target_keywords):
+                                    print(f"✅ Found targeted Hindu Analysis video: \"{title}\" (ID: {v_id})")
+                                    return v_id
+
+                        if fallback_id:
+                            print(f"✅ Found channel video: \"{fallback_title}\" (ID: {fallback_id})")
+                            return fallback_id
+
         except Exception as e:
             print(f"Warning resolving channel video ID: {e}")
 
@@ -181,7 +214,7 @@ class NewsFetcher:
             return ""
 
     def fetch_all_daily_news(self, target_date=None, youtube_url=None):
-        """Fetch news from The Hindu, Economic Times, Down To Earth Science, PIB, Sujas & YouTube."""
+        """Fetch news from The Hindu, Indian Express, Economic Times, Financial Express, LiveMint, Business Standard, Down To Earth Science, PIB, Sujas & YouTube."""
         date_str = target_date if target_date else datetime.now().strftime('%Y-%m-%d')
         print(f"Fetching ALL News, Economy & Science Articles for date: {date_str}...")
 
@@ -206,12 +239,20 @@ class NewsFetcher:
             item['source'] = 'Indian Express Editorial'
         news_corpus['hindu_editorials'] = hindu_eds + ie_eds
 
-        # 2. Economic Times (Economy & Markets - RAS Paper 1 / UPSC GS3)
-        print("- Fetching Economic Times Economy Articles...")
-        et_items = self.fetch_rss_items('https://economictimes.indiatimes.com/news/economy/rssfeeds/1373380680.cms', max_items=6, fetch_full_text=True)
+        # 2. Economic Times, Financial Express & LiveMint (Economy & Markets - RAS Paper 1 / UPSC GS3)
+        print("- Fetching Economic Times, Financial Express & LiveMint Economy Articles...")
+        et_items = self.fetch_rss_items('https://economictimes.indiatimes.com/news/economy/rssfeeds/1373380680.cms', max_items=5, fetch_full_text=True)
+        fe_items = self.fetch_rss_items('https://www.financialexpress.com/feed/', max_items=5, fetch_full_text=True)
+        mint_items = self.fetch_rss_items('https://www.livemint.com/rss/opinion', max_items=5, fetch_full_text=True)
+        
         for item in et_items:
             item['source'] = 'Economic Times (Economy)'
-        news_corpus['economy_news'] = et_items
+        for item in fe_items:
+            item['source'] = 'Financial Express'
+        for item in mint_items:
+            item['source'] = 'LiveMint (Opinion & Economy)'
+            
+        news_corpus['economy_news'] = et_items + fe_items + mint_items
 
         # 3. Down To Earth (Science, Tech & Environment - RAS Paper 2 / UPSC GS3)
         print("- Fetching Down To Earth Science & Tech Articles...")
@@ -237,7 +278,7 @@ class NewsFetcher:
         for item in news_corpus['rajasthan_sujas']:
             item['source'] = 'राजस्थान सुजस एवं DIPR (राज्य विशेष)'
 
-        # 7. YouTube Teacher Current Affairs Live Transcript (Auto-Finds Today's Latest Video from Channel)
+        # 7. YouTube Teacher Current Affairs Live Transcript (Auto-Finds Today's Targeted Hindu Analysis Video)
         yt_input = youtube_url if youtube_url else "https://www.youtube.com/@NirmanIAS"
         news_corpus['youtube_transcript'] = self.fetch_youtube_transcript(yt_input)
 
