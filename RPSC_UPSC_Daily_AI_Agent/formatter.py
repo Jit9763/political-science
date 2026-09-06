@@ -1,5 +1,6 @@
 import os
 import json
+from datetime import datetime
 from docx import Document
 from docx.shared import Pt, RGBColor, Inches
 from docx.enum.text import WD_ALIGN_PARAGRAPH
@@ -18,6 +19,10 @@ class NotesFormatter:
         """Render complete interactive RAS Master Syllabus Wiki HTML website."""
         topics_data = self.master_kb.get_all_topics()
         last_updated = self.master_kb.data.get("metadata", {}).get("last_updated", "Recently")
+
+        today_str = datetime.now().strftime("%Y-%m-%d")
+        recent_updates_html = ""
+        recent_count = 0
 
         paper_sections_html = ""
         for paper_name, units in topics_data.items():
@@ -38,6 +43,23 @@ class NotesFormatter:
                             </div>
                             """
                         status_text = item.get('current_status', '').replace('\n', '<br>')
+                        
+                        # Collect recent updates for top banner
+                        if item.get('last_updated') == today_str or (recent_count < 3 and item.get('last_updated')):
+                            recent_count += 1
+                            recent_updates_html += f"""
+                            <div class="syllabus-topic-card" style="border-left:6px solid #dc2626; background:#fff1f2;">
+                                <div class="topic-header">
+                                    <span class="topic-name">🔥 [{paper_name}] {item.get('title', '')}</span>
+                                    <span class="badge" style="background:#dc2626; color:white; font-weight:bold;">ताज़ा अपडेट: {item.get('last_updated', '')}</span>
+                                </div>
+                                <div class="current-status-box">
+                                    <strong>अद्यतन स्थिति एवं मुख्य तथ्य:</strong>
+                                    <p>{status_text}</p>
+                                </div>
+                            </div>
+                            """
+
                         items_html += f"""
                         <div class="syllabus-topic-card">
                             <div class="topic-header">
@@ -218,6 +240,13 @@ class NotesFormatter:
 
     <div class="container">
         <input type="text" class="search-box" id="syllabusSearch" onkeyup="filterTopics()" placeholder="🔍 RAS सिलेबस टॉपिक, आयोग, नियम या विषय खोजें...">
+
+        {f'''
+        <div style="background:#fff1f2; border:2px solid #fecdd3; border-radius:14px; padding:20px; margin-bottom:25px;">
+            <h2 style="margin:0 0 15px 0; color:#991b1b; font-size:22px; font-weight:900;">🔥 हाल ही में अद्यतन किए गए नवीन तथ्य (Recent Live Updates)</h2>
+            {recent_updates_html}
+        </div>
+        ''' if recent_updates_html else ''}
 
         <div class="tab-buttons">
             <button class="tab-btn active" onclick="showPaper('Paper_1', this)">📘 Paper 1</button>
