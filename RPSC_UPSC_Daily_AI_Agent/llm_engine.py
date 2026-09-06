@@ -35,16 +35,16 @@ class LLMEngine:
                 print(f"Warning loading config: {e}")
 
     def call_gemini(self, prompt, system_instruction=None):
-        """Call Gemini API via google-genai SDK with automatic model fallback for 429 rate limits."""
+        """Call Gemini API via google-genai SDK with automatic retry & valid model fallback."""
         if not self.api_key:
             raise ValueError("GEMINI_API_KEY is not configured! Please set it in config.json or environment.")
 
         client = genai.Client(api_key=self.api_key)
-        models_to_try = ['gemini-3.6-flash', 'gemini-2.5-flash', 'gemini-1.5-flash']
+        models_to_try = ['gemini-3.6-flash', 'gemini-2.0-flash']
         last_error = None
 
         for m in models_to_try:
-            for attempt in range(2):
+            for attempt in range(3):
                 try:
                     response = client.models.generate_content(
                         model=m,
@@ -59,9 +59,11 @@ class LLMEngine:
                     last_error = e
                     err_str = str(e)
                     if "429" in err_str or "RESOURCE_EXHAUSTED" in err_str or "quota" in err_str.lower():
-                        print(f"Gemini model {m} quota limit (429 RateLimit). Trying fallback model...")
-                        time.sleep(4)
-                        break
+                        print(f"Gemini API rate limit on {m} (429 RateLimit). Waiting 15s before retry (Attempt {attempt+1}/3)...")
+                        time.sleep(15)
+                    elif "503" in err_str or "UNAVAILABLE" in err_str:
+                        print(f"Gemini API 503 server demand spike on {m}. Sleeping 5s before retry...")
+                        time.sleep(5)
                     else:
                         print(f"Gemini model {m} attempt {attempt+1} error ({e}). Sleeping 3s...")
                         time.sleep(3)
