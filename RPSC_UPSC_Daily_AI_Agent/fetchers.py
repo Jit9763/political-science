@@ -254,12 +254,26 @@ class NewsFetcher:
             
         news_corpus['economy_news'] = et_items + fe_items + mint_items
 
-        # 3. Down To Earth (Science, Tech & Environment - RAS Paper 2 / UPSC GS3)
-        print("- Fetching Down To Earth Science & Tech Articles...")
-        science_items = self.fetch_rss_items('https://www.downtoearth.org.in/rss/science-technology', max_items=6, fetch_full_text=True)
-        for item in science_items:
-            item['source'] = 'Down To Earth (Science & Tech)'
-        news_corpus['science_news'] = science_items
+        # 3. Science & Tech (Down To Earth, The Hindu Sci-Tech, Indian Express Tech, ScienceDaily - RAS Paper 2 / UPSC GS3)
+        print("- Fetching Science, Technology, Environment & Defence Articles...")
+        dte_items = self.fetch_rss_items('https://www.downtoearth.org.in/rss/science-technology', max_items=5, fetch_full_text=True)
+        hindu_sci = self.fetch_rss_items('https://www.thehindu.com/sci-tech/science/feeder/default.rss', max_items=5, fetch_full_text=True)
+        hindu_tech = self.fetch_rss_items('https://www.thehindu.com/sci-tech/technology/feeder/default.rss', max_items=5, fetch_full_text=True)
+        ie_tech = self.fetch_rss_items('https://indianexpress.com/section/technology/feed/', max_items=5, fetch_full_text=True)
+        scidaily_items = self.fetch_rss_items('https://www.sciencedaily.com/rss/top/science.xml', max_items=5, fetch_full_text=False)
+
+        for item in dte_items:
+            item['source'] = 'Down To Earth (Science & Environment)'
+        for item in hindu_sci:
+            item['source'] = 'The Hindu (Science)'
+        for item in hindu_tech:
+            item['source'] = 'The Hindu (Technology)'
+        for item in ie_tech:
+            item['source'] = 'Indian Express (Technology)'
+        for item in scidaily_items:
+            item['source'] = 'ScienceDaily (Global Science Update)'
+
+        news_corpus['science_news'] = dte_items + hindu_sci + hindu_tech + ie_tech + scidaily_items
 
         # 4. National Governance News
         print("- Fetching National Governance News...")
