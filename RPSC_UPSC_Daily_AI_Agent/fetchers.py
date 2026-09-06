@@ -36,54 +36,78 @@ class NewsFetcher:
             return ""
 
     def fetch_rss_items(self, url, max_items=8, fetch_full_text=True):
-        """Fetch items from an RSS feed and scrape complete full article text."""
+        """Fetch items from an RSS feed and scrape complete full article text with robust HTML fallback."""
         items = []
         try:
             req = urllib.request.Request(url, headers=self.headers)
             with urllib.request.urlopen(req, timeout=10) as resp:
                 xml_data = resp.read()
-                root = ET.fromstring(xml_data)
-                
-                channel = root.find('channel')
-                if channel is not None:
-                    raw_items = channel.findall('item')
-                else:
-                    raw_items = root.findall('{http://www.w3.org/2005/Atom}entry')
+                try:
+                    root = ET.fromstring(xml_data)
+                    channel = root.find('channel')
+                    if channel is not None:
+                        raw_items = channel.findall('item')
+                    else:
+                        raw_items = root.findall('{http://www.w3.org/2005/Atom}entry')
 
-                for elem in raw_items[:max_items]:
-                    title_elem = elem.find('title')
-                    if title_elem is None:
-                        title_elem = elem.find('{http://www.w3.org/2005/Atom}title')
-                    
-                    link_elem = elem.find('link')
-                    if link_elem is None:
-                        link_elem = elem.find('{http://www.w3.org/2005/Atom}link')
+                    for elem in raw_items[:max_items]:
+                        title_elem = elem.find('title')
+                        if title_elem is None:
+                            title_elem = elem.find('{http://www.w3.org/2005/Atom}title')
+                        
+                        link_elem = elem.find('link')
+                        if link_elem is None:
+                            link_elem = elem.find('{http://www.w3.org/2005/Atom}link')
 
-                    desc_elem = elem.find('description')
-                    if desc_elem is None:
-                        desc_elem = elem.find('{http://www.w3.org/2005/Atom}summary')
-                    if desc_elem is None:
-                        desc_elem = elem.find('{http://www.w3.org/2005/Atom}content')
-                    
-                    title = title_elem.text if title_elem is not None and title_elem.text else ''
-                    link = link_elem.text if link_elem is not None and link_elem.text else ''
-                    if not link and link_elem is not None and 'href' in link_elem.attrib:
-                        link = link_elem.attrib['href']
-                    
-                    desc = desc_elem.text if desc_elem is not None and desc_elem.text else ''
-                    clean_desc = BeautifulSoup(desc, 'html.parser').get_text(separator=' ').strip() if desc else ''
+                        desc_elem = elem.find('description')
+                        if desc_elem is None:
+                            desc_elem = elem.find('{http://www.w3.org/2005/Atom}summary')
+                        if desc_elem is None:
+                            desc_elem = elem.find('{http://www.w3.org/2005/Atom}content')
+                        
+                        title = title_elem.text if title_elem is not None and title_elem.text else ''
+                        link = link_elem.text if link_elem is not None and link_elem.text else ''
+                        if not link and link_elem is not None and 'href' in link_elem.attrib:
+                            link = link_elem.attrib['href']
+                        
+                        desc = desc_elem.text if desc_elem is not None and desc_elem.text else ''
+                        clean_desc = BeautifulSoup(desc, 'html.parser').get_text(separator=' ').strip() if desc else ''
 
-                    full_body = ""
-                    if fetch_full_text and link:
-                        full_body = self.fetch_full_article_content(link)
+                        full_body = ""
+                        if fetch_full_text and link:
+                            full_body = self.fetch_full_article_content(link)
 
-                    if title:
-                        items.append({
-                            'title': title.strip(),
-                            'link': link.strip(),
-                            'summary': clean_desc,
-                            'full_text': full_body if len(full_body) > 100 else clean_desc
-                        })
+                        if title:
+                            items.append({
+                                'title': title.strip(),
+                                'link': link.strip(),
+                                'summary': clean_desc,
+                                'full_text': full_body if len(full_body) > 100 else clean_desc
+                            })
+                except Exception:
+                    # Fallback parser for ill-formed XML feeds
+                    soup = BeautifulSoup(xml_data, 'html.parser')
+                    for elem in soup.find_all(['item', 'entry'])[:max_items]:
+                        t_tag = elem.find('title')
+                        l_tag = elem.find('link')
+                        d_tag = elem.find(['description', 'summary', 'content'])
+                        
+                        title = t_tag.get_text().strip() if t_tag else ''
+                        link = l_tag.get_text().strip() if l_tag else ''
+                        if not link and l_tag and l_tag.get('href'):
+                            link = l_tag.get('href')
+                        
+                        desc = BeautifulSoup(d_tag.get_text(), 'html.parser').get_text(separator=' ').strip() if d_tag else ''
+                        full_body = self.fetch_full_article_content(link) if (fetch_full_text and link) else ""
+                        
+                        if title and len(title) > 5:
+                            items.append({
+                                'title': title,
+                                'link': link,
+                                'summary': desc,
+                                'full_text': full_body if len(full_body) > 100 else desc
+                            })
+
         except Exception as e:
             print(f"Warning: RSS Fetch failed for {url}: {e}")
         return items
