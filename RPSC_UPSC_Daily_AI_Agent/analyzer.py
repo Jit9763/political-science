@@ -12,6 +12,8 @@ class NewsAnalyzer:
         
         # Format FULL UNTRUNCATED corpus text for prompt
         eds_text = "\n\n".join([f"=== [{item.get('source', '')}] {item.get('title', '')} ===\n{item.get('full_text', item.get('summary', ''))}" for item in news_corpus.get('hindu_editorials', [])])
+        eco_text = "\n\n".join([f"=== [{item.get('source', '')}] {item.get('title', '')} ===\n{item.get('full_text', item.get('summary', ''))}" for item in news_corpus.get('economy_news', [])])
+        sci_text = "\n\n".join([f"=== [{item.get('source', '')}] {item.get('title', '')} ===\n{item.get('full_text', item.get('summary', ''))}" for item in news_corpus.get('science_news', [])])
         nat_text = "\n\n".join([f"=== [{item.get('source', '')}] {item.get('title', '')} ===\n{item.get('full_text', item.get('summary', ''))}" for item in news_corpus.get('national_news', [])])
         pib_text = "\n\n".join([f"=== [{item.get('source', '')}] {item.get('title', '')} ===\n{item.get('full_text', item.get('summary', ''))}" for item in news_corpus.get('pib_releases', [])])
         sujas_text = "\n".join([f"- [{item.get('source', '')}] {item.get('title', '')}: {item.get('summary', '')}" for item in news_corpus.get('rajasthan_sujas', [])])
@@ -21,10 +23,16 @@ class NewsAnalyzer:
 आप RPSC RAS एवं UPSC परीक्षा के सर्वोच्च विशेषज्ञ शिक्षक एवं विश्लेषक हैं।
 तारीख: {date_str}
 
-नीचे दिए गए दैनिक समाचारों, सम्पादकीयों (The Hindu, Indian Express के पूर्ण सम्पादकीय पाठ), PIB की संपूर्ण प्रेस विज्ञप्तियों, राजस्थान सुजस (DIPR) तथा यूट्यूब करंट अफेयर्स लाइव क्लास के 100% पूर्ण ट्रांसक्रिप्ट का गहन अध्ययन करें और बिना किसी जानकारी को छोड़े अत्यंत विस्तृत, संपूर्ण एवं बहुआयामी अध्ययन नोट्स तैयार करें।
+नीचे दिए गए दैनिक समाचारों, सम्पादकीयों (The Hindu, Indian Express के पूर्ण सम्पादकीय पाठ), अर्थशास्त्र (Economic Times, Financial Express, LiveMint), विज्ञान एवं प्रौद्योगिकी (The Hindu Sci-Tech, Down To Earth, ScienceDaily), PIB की संपूर्ण प्रेस विज्ञप्तियों, राजस्थान सुजस (DIPR) तथा यूट्यूब करंट अफेयर्स लाइव क्लास के 100% पूर्ण ट्रांसक्रिप्ट का गहन अध्ययन करें और बिना किसी जानकारी को छोड़े अत्यंत विस्तृत, संपूर्ण एवं बहुआयामी अध्ययन नोट्स तैयार करें।
 
 === सम्पादकीय का पूरा पाठ (Full The Hindu & Express Editorials) ===
 {eds_text}
+
+=== अर्थशास्त्र, नीतियां एवं बाजार समाचार (Economic Times, Financial Express & LiveMint Full Text) ===
+{eco_text if eco_text else "कोई अर्थशास्त्र समाचार उपलब्ध नहीं।"}
+
+=== विज्ञान, प्रौद्योगिकी, पर्यावरण व रक्षा समाचार (The Hindu Sci-Tech, Down To Earth & ScienceDaily) ===
+{sci_text if sci_text else "कोई विज्ञान-प्रौद्योगिकी समाचार उपलब्ध नहीं।"}
 
 === राष्ट्रीय शासन एवं नीति (National News Full Text) ===
 {nat_text}
@@ -39,11 +47,11 @@ class NewsAnalyzer:
 {yt_transcript if yt_transcript else "कोई यूट्यूब ट्रांसक्रिप्ट उपलब्ध नहीं।"}
 
 === अति-महत्वपूर्ण निर्देश (Strict Rules for Comprehensive Exhaustive Coverage) ===
-1. सामग्री में दी गई किसी भी महत्वपूर्ण खबर, सम्पादकीय या यूट्यूब क्लास में शिक्षक द्वारा समझाए गए किसी भी टॉपिक को न छोड़ें।
+1. सामग्री में दी गई किसी भी महत्वपूर्ण खबर, सम्पादकीय, इकोनॉमिक टाइम्स समाचार, साइंस-टेक अपडेट या यूट्यूब क्लास में शिक्षक द्वारा समझाए गए किसी भी टॉपिक को न छोड़ें।
 2. RAS Mains उत्तर लेखन में 2-अंक के प्रश्न पूरी तरह समाप्त हो चुके हैं। केवल 5-अंक (लघुउत्तरीय ~50 शब्द) और 10-अंक (दीर्घ/विश्लेषणात्मक ~100-200 शब्द) के प्रश्न ही बनाएं।
-3. सम्पादकीय विश्लेषण (editorial_deep_dive): कम से कम 5 से 8 विस्तृत सम्पादकीय विश्लेषण बनाएं।
+3. सम्पादकीय एवं विषयगत विश्लेषण (editorial_deep_dive): कम से कम 6 से 10 विस्तृत सम्पादकीय व समाचार विश्लेषण बनाएं (जिसमें Economic Times अर्थव्यवस्था तथा Science & Tech/Environment के अनिवार्य कार्ड्स शामिल हों)।
 4. यूट्यूब क्लास विश्लेषण (youtube_teacher_analysis): यूट्यूब ट्रांसक्रिप्ट में शिक्षक द्वारा चर्चा किए गए सभी अलग-अलग विषयों पर कम से कम 4 से 6 विस्तृत कोचिंग कार्ड्स बनाएं।
-5. प्रारंभिक परीक्षा तथ्य (prelims_facts): कम से कम 10 से 15 प्रिलिम्स फैक्ट कार्ड्स बनाएं।
+5. प्रारंभिक परीक्षा तथ्य (prelims_facts): कम से कम 10 से 15 प्रिलिम्स फैक्ट कार्ड्स बनाएं (RAS Pre/UPSC Pre हेतु)।
 6. मुख्य परीक्षा मॉडल उत्तर (mains_questions): कम से कम 4 से 6 RAS Mains (5-अंक व 10-अंक) मॉडल प्रश्न-उत्तर बनाएं।
 
 कृपया अपनी प्रतिक्रिया शुद्ध JSON फॉर्मेट में प्रदान करें जिसका ढांचा इस प्रकार हो:
