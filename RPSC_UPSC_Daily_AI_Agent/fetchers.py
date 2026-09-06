@@ -237,8 +237,41 @@ class NewsFetcher:
             print(f"Warning: YouTube transcript fetch failed for {video_id}: {e}")
             return ""
 
+    def fetch_downtoearth_articles(self, max_items=5, fetch_full_text=True):
+        """Directly scrape Down To Earth Science & Technology articles from section page."""
+        items = []
+        try:
+            url = "https://www.downtoearth.org.in/science-technology"
+            req = urllib.request.Request(url, headers=self.headers)
+            with urllib.request.urlopen(req, timeout=10) as resp:
+                html = resp.read().decode('utf-8', errors='ignore')
+                soup = BeautifulSoup(html, 'html.parser')
+                links = soup.find_all('a', href=True)
+                seen_urls = set()
+                for a in links:
+                    href = a['href']
+                    title = a.get_text().strip()
+                    if '/science-technology/' in href and len(title) > 20:
+                        if not href.startswith('http'):
+                            href = "https://www.downtoearth.org.in" + href
+                        if href not in seen_urls:
+                            seen_urls.add(href)
+                            full_body = self.fetch_full_article_content(href) if fetch_full_text else ""
+                            items.append({
+                                'title': title,
+                                'link': href,
+                                'source': 'Down To Earth (Science & Environment)',
+                                'summary': title,
+                                'full_text': full_body if len(full_body) > 100 else title
+                            })
+                            if len(items) >= max_items:
+                                break
+        except Exception as e:
+            print(f"Warning scraping Down To Earth: {e}")
+        return items
+
     def fetch_all_daily_news(self, target_date=None, youtube_url=None):
-        """Fetch news from The Hindu, Indian Express, Economic Times, Financial Express, LiveMint, Business Standard, Down To Earth Science, PIB, Sujas & YouTube."""
+        """Fetch news from The Hindu, Indian Express, Economic Times, LiveMint, Business Standard, Down To Earth Science, PIB, Sujas & YouTube."""
         date_str = target_date if target_date else datetime.now().strftime('%Y-%m-%d')
         print(f"Fetching ALL News, Economy & Science Articles for date: {date_str}...")
 
@@ -263,31 +296,29 @@ class NewsFetcher:
             item['source'] = 'Indian Express Editorial'
         news_corpus['hindu_editorials'] = hindu_eds + ie_eds
 
-        # 2. Economic Times, Financial Express & LiveMint (Economy & Markets - RAS Paper 1 / UPSC GS3)
-        print("- Fetching Economic Times, Financial Express & LiveMint Economy Articles...")
+        # 2. Economic Times, LiveMint & Business Standard (Economy & Markets - RAS Paper 1 / UPSC GS3)
+        print("- Fetching Economic Times, LiveMint & Business Standard Economy Articles...")
         et_items = self.fetch_rss_items('https://economictimes.indiatimes.com/news/economy/rssfeeds/1373380680.cms', max_items=5, fetch_full_text=True)
-        fe_items = self.fetch_rss_items('https://www.financialexpress.com/economy/feed/', max_items=5, fetch_full_text=True)
         mint_items = self.fetch_rss_items('https://www.livemint.com/rss/opinion', max_items=5, fetch_full_text=True)
+        bs_items = self.fetch_rss_items('https://www.business-standard.com/rss/economy-policy-102.rss', max_items=5, fetch_full_text=True)
         
         for item in et_items:
             item['source'] = 'Economic Times (Economy)'
-        for item in fe_items:
-            item['source'] = 'Financial Express'
         for item in mint_items:
             item['source'] = 'LiveMint (Opinion & Economy)'
+        for item in bs_items:
+            item['source'] = 'Business Standard (Policy & Economy)'
             
-        news_corpus['economy_news'] = et_items + fe_items + mint_items
+        news_corpus['economy_news'] = et_items + mint_items + bs_items
 
         # 3. Science & Tech (Down To Earth, The Hindu Sci-Tech, Indian Express Tech, ScienceDaily - RAS Paper 2 / UPSC GS3)
         print("- Fetching Science, Technology, Environment & Defence Articles...")
-        dte_items = self.fetch_rss_items('https://www.downtoearth.org.in/rss/science-technology', max_items=5, fetch_full_text=True)
+        dte_items = self.fetch_downtoearth_articles(max_items=5, fetch_full_text=True)
         hindu_sci = self.fetch_rss_items('https://www.thehindu.com/sci-tech/science/feeder/default.rss', max_items=5, fetch_full_text=True)
         hindu_tech = self.fetch_rss_items('https://www.thehindu.com/sci-tech/technology/feeder/default.rss', max_items=5, fetch_full_text=True)
         ie_tech = self.fetch_rss_items('https://indianexpress.com/section/technology/feed/', max_items=5, fetch_full_text=True)
         scidaily_items = self.fetch_rss_items('https://www.sciencedaily.com/rss/top/science.xml', max_items=5, fetch_full_text=False)
 
-        for item in dte_items:
-            item['source'] = 'Down To Earth (Science & Environment)'
         for item in hindu_sci:
             item['source'] = 'The Hindu (Science)'
         for item in hindu_tech:
