@@ -31,3 +31,6 @@ backup_images/
 scratch/
 *.json
 
+# RPSC & UPSC Daily AI Agent folder and API keys
+RPSC_UPSC_Daily_AI_Agent/
+
