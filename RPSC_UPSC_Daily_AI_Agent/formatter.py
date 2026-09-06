@@ -30,12 +30,14 @@ class NotesFormatter:
                     for item in items:
                         updates_list = ""
                         for u in item.get("updates_history", []):
+                            u_notes = u.get('update_notes', '').replace('\n', '<br>')
                             updates_list += f"""
                             <div class="update-entry">
                                 <span class="update-date">📅 {u.get('date', '')}</span>
-                                <div class="update-text">{u.get('update_notes', '').replace('\n', '<br>')}</div>
+                                <div class="update-text">{u_notes}</div>
                             </div>
                             """
+                        status_text = item.get('current_status', '').replace('\n', '<br>')
                         items_html += f"""
                         <div class="syllabus-topic-card">
                             <div class="topic-header">
@@ -44,7 +46,7 @@ class NotesFormatter:
                             </div>
                             <div class="current-status-box">
                                 <strong>वर्तमान स्थिति एवं अद्यतन तथ्य:</strong>
-                                <p>{item.get('current_status', '').replace('\n', '<br>')}</p>
+                                <p>{status_text}</p>
                             </div>
                             <details class="history-details">
                                 <summary>📜 अपडेट इतिहास एवं पूर्व विवरण देखें</summary>
@@ -287,17 +289,19 @@ class NotesFormatter:
             badge_class = "badge-5m" if marks == 5 else "badge-10m"
             
             if marks == 5:
+                model_ans = q.get('model_answer', '').replace('\n', '<br>')
                 answer_body = f"""
                 <div class="answer-box">
                     <strong class="ans-label">उत्तर ढांचा (~50 शब्द):</strong>
-                    <div class="answer-content">{q.get('model_answer', '').replace('\n', '<br>')}</div>
+                    <div class="answer-content">{model_ans}</div>
                 </div>
                 """
             else:
+                body_text = q.get('body', '').replace('\n', '<br>')
                 answer_body = f"""
                 <div class="answer-box">
                     <div class="ans-section"><strong class="ans-label">भूमिका (Introduction):</strong><br>{q.get('intro', '')}</div>
-                    <div class="ans-section"><strong class="ans-label">मुख्य भाग (Body & Rajasthan Context):</strong><br>{q.get('body', '').replace('\n', '<br>')}</div>
+                    <div class="ans-section"><strong class="ans-label">मुख्य भाग (Body & Rajasthan Context):</strong><br>{body_text}</div>
                     <div class="ans-section"><strong class="ans-label">निष्कर्ष (Conclusion):</strong><br>{q.get('conclusion', '')}</div>
                 </div>
                 """
