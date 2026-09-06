@@ -259,7 +259,36 @@ class NotesFormatter:
         with open(master_wiki_path, "w", encoding="utf-8") as f:
             f.write(wiki_html)
         print(f"Master Syllabus Wiki HTML saved to: {master_wiki_path}")
+        self.render_master_wiki_markdown(topics_data, self.master_kb.data.get("metadata", {}))
         return master_wiki_path
+
+    def render_master_wiki_markdown(self, topics, metadata):
+        """Generates GitHub Markdown Wiki file for repository Wiki tab."""
+        md_content = f"# 📚 RPSC RAS & UPSC Master Syllabus Wiki\n\n"
+        md_content += f"*अंतिम अद्यतन: {metadata.get('last_updated', '')}*\n\n"
+        md_content += "---" + "\n\n"
+
+        for paper_name, units in topics.items():
+            md_content += f"## 📄 {paper_name}\n\n"
+            for unit_name, items in units.items():
+                if not items:
+                    continue
+                md_content += f"### 📘 {unit_name}\n\n"
+                for item in items:
+                    md_content += f"#### 📌 {item.get('title', '')}\n"
+                    md_content += f"- **अद्यतन तिथि**: `{item.get('last_updated', '')}`\n"
+                    md_content += f"- **वर्तमान स्थिति एवं तथ्य**: {item.get('current_status', '')}\n\n"
+                    if item.get("updates_history"):
+                        md_content += "<details><summary>📜 अपडेट इतिहास</summary>\n\n"
+                        for u in item.get("updates_history", []):
+                            md_content += f"- **{u.get('date', '')}**: {u.get('update_notes', '')}\n"
+                        md_content += "</details>\n\n"
+
+        md_path = os.path.join(self.output_dir, "Master_Syllabus_Wiki.md")
+        with open(md_path, "w", encoding="utf-8") as f:
+            f.write(md_content)
+        print(f"Master Syllabus Wiki Markdown saved to: {md_path}")
+        return md_path
 
     def render_daily_html(self, analysis_data):
         date_str = analysis_data.get('date', 'Today')
