@@ -1,15 +1,19 @@
 import os
 import json
 import time
+import warnings
 import requests
 from dotenv import load_dotenv
 from google import genai
+from google.genai import types
+
 try:
     import ollama
 except ImportError:
     ollama = None
 
 load_dotenv()
+warnings.filterwarnings("ignore", message=".*automatic function calling.*")
 
 class LLMEngine:
     def __init__(self, config_path=None):
@@ -36,23 +40,26 @@ class LLMEngine:
                 print(f"Warning loading config: {e}")
 
     def call_gemini(self, prompt, system_instruction=None):
-        """Call Gemini API via google-genai SDK with automatic retry & clear quota messaging."""
+        """Call Gemini API via google-genai SDK with types.GenerateContentConfig & automatic retry."""
         if not self.api_key:
             raise ValueError("GEMINI_API_KEY is not configured! Please set it in config.json or environment.")
 
         client = genai.Client(api_key=self.api_key)
         model = 'gemini-3.6-flash'
         max_retries = 3
+
+        config_args = {'temperature': 0.3}
+        if system_instruction:
+            config_args['system_instruction'] = system_instruction
+            
+        cfg = types.GenerateContentConfig(**config_args)
         
         for attempt in range(max_retries):
             try:
                 response = client.models.generate_content(
                     model=model,
                     contents=prompt,
-                    config={
-                        'temperature': 0.3,
-                        'system_instruction': system_instruction
-                    } if system_instruction else {'temperature': 0.3}
+                    config=cfg
                 )
                 return response.text
             except Exception as e:

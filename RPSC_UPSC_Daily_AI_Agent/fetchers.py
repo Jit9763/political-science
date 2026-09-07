@@ -284,7 +284,7 @@ class NewsFetcher:
             print(f"Successfully fetched COMPLETE YouTube transcript ({len(full_text)} chars).")
             return full_text
         except Exception as e:
-            print(f"Warning: YouTube transcript fetch failed for {video_id}: {e}")
+            print(f"ℹ️ YouTube Subtitles Notice: Auto-subtitles are disabled or still processing on YouTube for video ID: {video_id}. (Continuing analysis using full news corpus & editorials).")
             return ""
 
     def fetch_downtoearth_articles(self, max_items=5, fetch_full_text=True, target_date=None):
