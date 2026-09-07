@@ -1,769 +1,617 @@
 <!DOCTYPE html>
-
 <html lang="hi">
 <head>
 <meta charset="utf-8"/>
-<title>Chapter 12 COPY MASTER - Premium Notes</title>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>अध्याय 12: कांग्रेस प्रणाली: चुनौतियाँ और पुनर्स्थापना - Master Visual Notes</title>
+<link href="css/style.css" rel="stylesheet"/>
 <style>
-        p, li, h1, h2, h3, h4, b, strong, td, th {
-            font-weight: 900 !important;
-            -webkit-text-stroke: 1.1px #000000;
-            text-shadow: 0 0 1px #000;
-        }
-        body, p, li, td, th, div, span {
-            font-size: 28pt !important;
-            line-height: 1.8 !important;
-        }
-        .ch12-content {
-            font-size: 28pt !important;
-            line-height: 1.8 !important;
-            padding: 10px !important;
-        }
-        /* Projector Banner Styles for Headings */
-        .hero-title, h1.section-header {
-            text-align: center !important;
-            color: #ffffff !important;
-            background-color: #064e3b !important; /* Dark Green Background */
-            border: 5px solid #10b981 !important;
-            border-radius: 20px !important;
-            padding: 30px !important;
-            margin-bottom: 50px !important;
-            font-size: 60pt !important;
-            font-weight: 900 !important;
-            box-shadow: 0 8px 25px rgba(6, 78, 59, 0.4) !important;
-        }
-        .part-header {
-            color: #7f1d1d !important;
-            background-color: #fee2e2 !important;
-            border-left: 18px solid #b91c1c !important;
-            padding: 22px 28px !important;
-            border-radius: 14px !important;
-            font-size: 46pt !important;
-            font-weight: 900 !important;
-            margin-top: 40px !important;
-            margin-bottom: 35px !important;
-            box-shadow: 0 6px 15px rgba(0,0,0,0.08) !important;
-        }
-        .topic-header, h2.sub-header {
-            color: #1e3a8a !important;
-            background-color: #eff6ff !important;
-            border-left: 16px solid #2563eb !important;
-            padding: 20px 26px !important;
-            border-radius: 12px !important;
-            font-size: 38pt !important;
-            font-weight: 900 !important;
-            margin-top: 45px !important;
-            margin-bottom: 30px !important;
-        }
-        .subtopic-header {
-            color: #4c1d95 !important;
-            background-color: #f3e8ff !important;
-            border-left: 14px solid #7c3aed !important;
-            padding: 18px 24px !important;
-            border-radius: 10px !important;
-            font-size: 32pt !important;
-            font-weight: 900 !important;
-            margin-top: 40px !important;
-            margin-bottom: 25px !important;
-        }
-        .box-header {
-            color: #166534 !important;
-            background-color: #f0fdf4 !important;
-            border-left: 12px solid #16a34a !important;
-            padding: 16px 20px !important;
-            border-radius: 10px !important;
-            font-size: 30pt !important;
-            font-weight: 900 !important;
-        }
-        /* Highlights */
-        b, strong {
-            color: #b91c1c !important; /* Dark Red */
-            font-weight: 900 !important;
-        }
-        .blue-highlight, b.blue-text, strong.blue-text {
-            color: #1e3a8a !important;
-        }
-        .keyword-box, .story-box, .highlight-box {
-            font-size: 28pt !important;
-            line-height: 1.8 !important;
-            padding: 25px !important;
-            margin: 30px 0 !important;
-        }
-        .illustration-box { border: 4px solid #cbd5e1 !important; border-radius: 12px; padding: 20px; background-color: #ffffff; margin-top: 25px; }
-        .illustration-explanation { border-left: 6px solid #cbd5e1 !important; padding-left: 15px; font-size: 28pt !important; line-height: 1.6 !important; text-align: left; margin-top: 15px; }
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.8;
+    color: #1e293b;
+    background-color: #f8fafc;
+    margin: 0;
+    padding: 20px;
+  }
+  .container {
+    max-width: 900px;
+    margin: 0 auto;
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+  }
+  h1 {
+    color: #1e3a8a;
+    border-bottom: 4px solid #3b82f6;
+    padding-bottom: 12px;
+    font-size: 2rem;
+    text-align: center;
+  }
+  h2 {
+    color: #1e40af;
+    background: #e0f2fe;
+    padding: 12px 18px;
+    border-left: 6px solid #0284c7;
+    border-radius: 6px;
+    margin-top: 35px;
+    font-size: 1.4rem;
+  }
+  h3 {
+    color: #0f766e;
+    border-bottom: 2px solid #0d9488;
+    padding-bottom: 6px;
+    margin-top: 25px;
+    font-size: 1.2rem;
+  }
+  h4 {
+    color: #4338ca;
+    margin-top: 20px;
+    font-size: 1.1rem;
+  }
+  p {
+    font-size: 1.05rem;
+    margin-bottom: 15px;
+  }
+  ul, ol {
+    margin-bottom: 20px;
+    padding-left: 25px;
+  }
+  li {
+    margin-bottom: 8px;
+  }
+  
+  /* Illustration & Visual Card Styling */
+  .illustration-box {
+    background-color: #f1f5f9;
+    border: 2px solid #cbd5e1;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 25px 0;
+    text-align: center;
+  }
+  .illustration-box img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.12);
+  }
+  .illustration-title {
+    font-weight: 800;
+    font-size: 1.15rem;
+    color: #0f172a;
+    margin-top: 12px;
+    margin-bottom: 8px;
+  }
+  .illustration-explanation, .visual-summary {
+    background: #ffffff;
+    border-left: 4px solid #3b82f6;
+    padding: 12px 16px;
+    margin-top: 12px;
+    text-align: left;
+    font-size: 0.98rem;
+    color: #334155;
+    border-radius: 0 6px 6px 0;
+  }
 
+  /* Leader Profile Stamp Box */
+  .leader-card {
+    background: #fffbebf8;
+    border: 2px solid #fde68a;
+    border-radius: 10px;
+    padding: 18px;
+    margin: 20px 0;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+  }
+  .leader-card img {
+    width: 110px;
+    height: auto;
+    border-radius: 6px;
+    border: 2px solid #d97706;
+  }
+  .leader-info {
+    flex: 1;
+  }
 
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f1f5f9; margin: 0; padding: 20px; text-align: center; }
-        .header { background: #1e293b; color: white; padding: 20px; border-radius: 10px; margin-bottom: 30px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
-        .copy-btn { background-color: #2563eb; color: white; padding: 20px 40px; font-size: 24pt; border: none; border-radius: 50px; cursor: pointer; font-weight: 900; transition: all 0.3s; box-shadow: 0 10px 20px rgba(37, 99, 235, 0.4); }
-        .copy-btn:hover { background-color: #1d4ed8; transform: scale(1.05); }
-        .preview { background: white; padding: 40px; border-radius: 15px; margin-top: 30px; text-align: justify; max-width: 1400px; margin-left: auto; margin-right: auto; border: 3px solid #e2e8f0; }
-        #status { margin-top: 20px; font-weight: 900; color: #059669; font-size: 24pt; display: none; }
-    
-        /* Extra Heavy Text Thickness for Projector Visibility */
-        p, li, h1, h2, h3, h4, b, strong {
-            font-weight: 900 !important;
-            -webkit-text-stroke: 1.2px #000000; text-shadow: 0 0 1px #000;
-        }
-        .bio-box { border: 6px dashed #2563eb !important; background-color: #eff6ff; border-radius: 12px; padding: 25px; margin-top: 35px; }
-        .illustration-box { border: 6px solid #cbd5e1 !important; border-radius: 12px; padding: 20px; background-color: #ffffff; margin-top: 30px; }
-        .illustration-explanation { border-left: 8px solid #cbd5e1 !important; padding-left: 15px; font-size: 18pt; line-height: 1.6; text-align: left; margin-top: 15px; }
-        
-    </style>
+  /* Special Feature Boxes */
+  .case-study-box {
+    background: #f0fdf4;
+    border: 2px dashed #22c55e;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 25px 0;
+  }
+  .cinema-box {
+    background: #fdf2f8;
+    border: 2px solid #f43f5e;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 25px 0;
+  }
+  .guru-box {
+    background: #faf5ff;
+    border: 3px double #a855f7;
+    border-radius: 12px;
+    padding: 22px;
+    margin: 30px 0;
+  }
+</style>
 </head>
 <body>
-<div class="header">
-<h1>🚀 Chapter 12 (Full-Proof Copy Master)</h1>
-<p>100% Google Docs Compatible with Images (Localhost-Sync)</p>
-</div>
-<button class="copy-btn" id="mainCopyBtn" onclick="copyToGoogleDoc()">📋 COPY EVERYTHING FOR GOOGLE DOCS</button>
-<p id="status">✅ Copied Successfully! Now go to your Google Doc and Press Ctrl+V</p>
-<div class="preview" id="contentToCopy">
-<div style="font-family: 'Arial', verdana, sans-serif;  line-height: 2.0; color: #000000; font-weight: 900; -webkit-text-stroke: 1.2px #000000; text-shadow: 0 0 1px #000; padding: 20px;">
-<!-- BIG HERO HEADER -->
-<h1 class="hero-title" style="text-align: center;   font-weight: 900; border-bottom: 5px solid #ef4444; padding-bottom: 30px; margin-bottom: 40px;">
-        अध्याय 12: कांग्रेस प्रणाली: चुनौतियाँ और पुनर्स्थापना<br/>
-<span style=" color:#6b7280; font-weight: normal;">(Challenges to &amp; Restoration of Congress)</span>
-</h1>
-<!-- PART 1 SECTION: Post-Nehru -->
-<div style="background-color: #fef2f2; padding: 40px; border-radius: 12px; margin-bottom: 40px; border: 6px solid #fecaca;">
-<h2 class="part-header" style="font-weight: 900; margin-top: 0;">भाग 1: नेहरू के बाद उत्तराधिकार की चुनौती (Succession Crisis)</h2>
-<!-- NCERT Illustration: Nehru Death News -->
-<div class="illustration-box" style="border-color: #991b1b !important; margin-bottom: 35px;">
-<img alt="The Hindustan Times: Prime Minister Nehru Is Dead" src="images/ch12/nehru_death_news.webp" style="width: 100%; max-width: 100%; display: block; margin: 0 auto; border: 4px solid #cbd5e1; border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.15); height: auto;"/>
-<div class="illustration-explanation" style="border-left-color: #991b1b !important;">
-<b>NCERT पुस्तक का ऐतिहासिक समाचार पत्र कतरन (Newspaper Clipping - 27 May 1964):</b><br/>
-<b>विवरण:</b> 27 मई 1964 को भारत के पहले प्रधानमंत्री जवाहरलाल नेहरू के निधन की खबर देने वाला 'द हिंदुस्तान टाइम्स' का मुख्य पृष्ठ। साथ में दिया गया रेखाचित्र 'The Void' (शून्यता) देश के राजनीतिक परिदृश्य में उनके निधन से उत्पन्न खालीपन को दर्शाता है।<br/>
-<b>महत्वपूर्ण प्रश्नोत्तर:</b><br/>
-            • <b>प्रश्न 1: जवाहरलाल नेहरू के निधन से भारतीय राजनीति में उत्पन्न खालीपन को किस नाम से जाना गया और क्यों?</b><br/>
-            • <b>उत्तर:</b> इसे <b>'उत्तराधिकार का संकट' (Crisis of Succession)</b> कहा गया। नेहरू स्वतंत्रता आंदोलन के नायक और देश के निर्विवाद नेता थे। उनके निधन से उत्पन्न शून्यता के कारण देश-विदेश में यह आशंका थी कि नेहरू के बिना भारतीय लोकतंत्र असफल हो जाएगा।<br/>
-            • <b>प्रश्न 2: 1960 के दशक को भारतीय इतिहास में 'खतरनाक दशक' (Dangerous Decade) क्यों कहा जाता है?</b><br/>
-            • <b>उत्तर:</b> क्योंकि इस दशक में खाद्यान्न संकट, आर्थिक मंदी, चीन (1962) और पाकिस्तान (1965) के साथ युद्ध जैसी गंभीर समस्याओं के साथ-साथ दो महान प्रधानमंत्रियों (नेहरू और शास्त्री) का आकस्मिक निधन हुआ, जिससे राजनीतिक अस्थिरता का खतरा पैदा हो गया था।
-        </div>
-</div>
-<p>मई 1964 में जवाहरलाल नेहरू के निधन के बाद पूरे देश में एक ही सवाल था—"नेहरू के बाद कौन?" इस सवाल के पीछे एक और अधिक गंभीर सवाल था कि क्या भारत में नेहरू की मृत्यु के बाद लोकतंत्र जीवित रहेगा या नहीं। कई पश्चिमी विचारकों और अंतरराष्ट्रीय समाचार पत्रों का मानना था कि नेहरू की अनुपस्थिति में देश का विभाजन हो सकता है या सेना शासन संभाल सकती है। नेहरू के बाद उत्तराधिकार की यह चुनौती बेहद कठिन थी क्योंकि नेहरू का राजनीतिक कद और उनका जनसमर्थन असाधारण था। दुनिया को डर था कि भारत का लोकतंत्र नेहरू के बिना बिखर जाएगा।</p>
-<p><b>लाल बहादुर शास्त्री (1964-1966):</b> नेहरू के बाद कांग्रेस ने सर्वसम्मति से शास्त्रीजी को देश का दूसरा प्रधानमंत्री चुना। उनके कार्यकाल के दौरान ये मुख्य बिंदु महत्वपूर्ण हैं:</p>
-<ul style=" line-height: 2.2;">
-<li><b>1. दोहरी चुनौतियाँ:</b> उनके सामने दो बड़ी चुनौतियाँ थीं—गंभीर अनाज संकट और 1965 का भारत-पाक युद्ध।</li>
-<li><b>2. जय जवान जय किसान:</b> उन्होंने देश के जवानों और किसानों का मनोबल बढ़ाने के लिए यह अमर नारा दिया।</li>
-<li><b>3. ताशकंद समझौता:</b> 1965 युद्ध को समाप्त करने के लिए 10 जनवरी 1966 को ताशकंद (रूस) में समझौता हुआ, जहाँ शास्त्रीजी का अचानक निधन हो गया।</li>
-<li><b>4. इंदिरा गांधी का आगमन:</b> शास्त्रीजी के बाद प्रधानमंत्री पद के लिए <b>इंदिरा गांधी</b> और <b>मोरारजी देसाई</b> के बीच कड़ा मुकाबला हुआ।</li>
-<li><b>5. पार्टी गुप्त मतदान:</b> कांग्रेस के सांसदों के बीच गुप्त मतदान हुआ, जिसमें इंदिरा गांधी दो-तिहाई बहुमत से जीत गईं।</li>
-</ul>
-<!-- Visual Card: उत्तराधिकार संकट और लाल बहादुर शास्त्री जी का सर्वसम्मत चयन (1964) -->
-<div class="illustration-box" style="border-color: #d97706 !important; margin-top: 30px; margin-bottom: 35px;">
-<img alt="उत्तराधिकार संकट और लाल बहादुर शास्त्री जी का सर्वसम्मत चयन (1964)" src="images/ch12/visual_succession_shastri_1964.webp" style="width: 100%; max-width: 100%; display: block; margin: 0 auto; border: 4px solid #cbd5e1; border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.15); height: auto;"/>
-<div class="illustration-explanation" style="border-left-color: #d97706 !important;">
-<b>विज़ुअल नोट्स: नेहरू के बाद उत्तराधिकार का संकट और शास्त्री जी का सर्वसम्मत चयन (1964):</b><br/>
-<b>विवरण:</b> 27 मई 1964 को नेहरू जी के निधन के बाद के. कामराज और कांग्रेस दिग्गजों द्वारा सादगी और विवादहीन छवि के कारण लाल बहादुर शास्त्री को सर्वसम्मति से भारत का दूसरा प्रधानमंत्री चुना जाना।<br/>
-<b>महत्वपूर्ण प्रश्नोत्तर:</b><br/>
-            • <b>प्रश्न 1: नेहरू के निधन के बाद शास्त्री जी को प्रधानमंत्री बनाने का मुख्य आधार क्या था?</b><br/>
-            • <b>उत्तर:</b> उनकी सादगी, ईमानदारी, प्रशासनिक अनुभव और पार्टी में सर्वस्वीकार्य विवादहीन छवि।<br/>
-            • <b>प्रश्न 2: 1960 के दशक को 'खतरनाक दशक' क्यों कहा गया?</b><br/>
-            • <b>उत्तर:</b> क्योंकि इस दौर में खाद्यान्न संकट, आर्थिक मंदी, दो युद्धों (1962 व 1965) और दो प्रधानमंत्रियों (नेहरू व शास्त्री) के निधन जैसी विकट चुनौतियाँ एक साथ आईं।<br/>
-</div>
-</div>
+<div class="container">
 
-<!-- Biography Card: Lal Bahadur Shastri -->
-<div class="bio-box" style="border: 6px dashed #d97706 !important; background-color: #fffde6; border-radius: 12px; padding: 25px; margin-top: 35px; overflow: auto; margin-bottom: 35px;">
-<img src="images/ch12/shastri_stamp.webp" style="width: 150px; height: auto; border: 4px solid #cbd5e1; border-radius: 6px; float: right; margin-left: 20px;"/>
-<div style="display: flex; gap: 20px; align-items: center; justify-content: left; margin-bottom: 15px; border-bottom: 2px solid #fef08a; padding-bottom: 10px;">
-<h4 style="font-weight: 900; margin: 0;">
-                लाल बहादुर शास्त्री (1904 - 1966)
-            </h4>
-</div>
-<p style=" line-height: 1.6; color: #78350f; margin: 0;">
-            • <b>परिचय:</b> स्वतंत्र भारत के दूसरे प्रधानमंत्री (1964-1966)। वे 1930 से स्वतंत्रता आंदोलन में सक्रिय रहे।<br/>
-            • <b>नैतिक मूल्य और शुचिता:</b> उत्तर प्रदेश सरकार में मंत्री और बाद में केंद्रीय मंत्रिमंडल में रेल मंत्री रहे। एक बड़ी <b>रेलवे दुर्घटना की नैतिक जिम्मेदारी</b> लेते हुए उन्होंने मंत्री पद से इस्तीफा दे दिया था, जो सार्वजनिक जीवन में उनकी उच्च नैतिकता का प्रतीक है।<br/>
-            • <b>अमर नारा:</b> देश में खाद्यान्न संकट और पाकिस्तान आक्रमण के समय जवानों व किसानों का मनोबल बढ़ाने के लिए उन्होंने प्रसिद्ध <b>'जय जवान, जय किसान'</b> का नारा दिया।<br/>
-            • <b>अंतिम समझौता:</b> 1965 के भारत-पाक युद्ध के बाद शांति वार्ता के लिए <b>ताशकंद (तत्कालीन सोवियत संघ)</b> गए, जहाँ 10 जनवरी 1966 को ताशकंद समझौते पर हस्ताक्षर करने के बाद उनका अचानक निधन हो गया।
-        </p>
-</div>
-<!-- NCERT Cartoon: Succession Race -->
-<div class="illustration-box" style="border-color: #c084fc !important; margin-bottom: 30px;">
-<img alt="Succession Race Cartoon" src="images/ch12/succession_race_cartoon.webp" style="width: 100%; max-width: 100%; display: block; margin: 0 auto; border: 4px solid #cbd5e1; border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.15); height: auto;"/>
-<div class="illustration-explanation" style="border-left-color: #c084fc !important;">
-<b>NCERT पुस्तक का प्रसिद्ध कार्टून (Succession Race - 1964):</b><br/>
-<b>विवरण:</b> इस व्यंग्यात्मक कार्टून में नेहरू के निधन के बाद प्रधानमंत्री पद के दावेदारों (शास्त्री, मोरारजी देसाई, जगजिवन राम आदि) को एक रेस ट्रैक पर दौड़ते दिखाया गया है, जो उत्तराधिकार के संघर्ष को दर्शाता है।<br/>
-<b>कार्टून आधारित प्रश्नोत्तर:</b><br/>
-            • <b>प्रश्न 1: 1964 में नेहरू की मृत्यु के बाद उत्तराधिकार के प्रश्न को विश्व स्तर पर किस रूप में देखा जा रहा था?</b><br/>
-            • <b>उत्तर:</b> विश्व के कई विश्लेषकों को संदेह था कि नेहरू के बिना भारत का लोकतांत्रिक ढांचा बिखर जाएगा और देश में सेना का शासन लागू हो सकता है। इसे 'खतरनाक दशक' (Dangerous Decade) के रूप में देखा गया।<br/>
-            • <b>प्रश्न 2: इस रेस में अंततः किसकी विजय हुई और उसका क्या आधार था?</b><br/>
-            • <b>उत्तर:</b> इस दौड़ में अंततः <b>लाल बहादुर शास्त्री</b> की विजय हुई। उन्हें कांग्रेस पार्टी के अध्यक्ष के. कामराज और सांसदों द्वारा उनकी सादगी, विवादहीन छवि और नेहरू के साथ लंबे कूटनीतिक अनुभव के कारण सर्वसम्मति से चुना गया।
-        </div>
-</div>
-<!-- Illustration Box 1 -->
-<div class="illustration-box" style="border-color: #ef4444 !important;">
-<img alt="Indira Gandhi and Lal Bahadur Shastri" src="images/ch12/indira_shastri.webp" style="width: 100%; max-width: 100%; display: block; margin: 0 auto; border: 4px solid #cbd5e1; border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.15); height: auto;"/>
-<div class="illustration-explanation" style="border-left-color: #ef4444 !important;">
-<b>NCERT पुस्तक का चित्र (Indira Gandhi and Lal Bahadur Shastri):</b><br/>
-<b>विवरण:</b> लाल बहादुर शास्त्री के प्रधानमंत्री काल के दौरान वरिष्ठ सहयोगी के रूप में बैठक में भाग लेतीं इंदिरा गांधी। यह चित्र नेहरू के बाद भारत में नेतृत्व परिवर्तन और राजनीतिक संक्रमण को दर्शाता है।<br/>
-<b>महत्वपूर्ण प्रश्नोत्तर:</b><br/>
-            • <b>प्रश्न 1: लाल बहादुर शास्त्री के प्रधानमंत्री बनने के समय देश के सामने कौन सी दो बड़ी चुनौतियाँ थीं?</b><br/>
-            • <b>उत्तर:</b> (1) 1960 के दशक का मानसून संकट जिसके कारण देश में भीषण खाद्यान्न संकट (अकाल) पैदा हुआ। (2) 1965 में पाकिस्तान द्वारा भारत पर थोपा गया सैन्य आक्रमण।<br/>
-            • <b>प्रश्न 2: शास्त्रीजी के बाद प्रधानमंत्री पद के चुनाव में किन दो नेताओं के बीच कड़ा मुकाबला हुआ था?</b><br/>
-            • <b>उत्तर:</b> शास्त्रीजी के बाद मोरारजी देसाई (अनुभवी नेता व बंबई प्रांत के पूर्व मुख्यमंत्री) और इंदिरा गांधी (सूचना एवं प्रसारण मंत्री) के बीच मुकाबला हुआ, जिसमें गुप्त मतदान द्वारा इंदिरा गांधी को चुना गया।
-        </div>
-</div>
-<!-- Visual Card: 1966 उत्तराधिकार मुकाबला - इंदिरा गांधी बनाम मोरारजी देसाई -->
-<div class="illustration-box" style="border-color: #2563eb !important; margin-top: 30px; margin-bottom: 35px;">
-<img alt="1966 उत्तराधिकार मुकाबला - इंदिरा गांधी बनाम मोरारजी देसाई" src="images/ch12/visual_indira_gandhi_entry_1966.webp" style="width: 100%; max-width: 100%; display: block; margin: 0 auto; border: 4px solid #cbd5e1; border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.15); height: auto;"/>
-<div class="illustration-explanation" style="border-left-color: #2563eb !important;">
-<b>विज़ुअल नोट्स: ताशकंद में शास्त्री जी का निधन (1966) और इंदिरा गांधी का गुप्त मतदान द्वारा चयन:</b><br/>
-<b>विवरण:</b> 10 जनवरी 1966 को ताशकंद समझौते के बाद शास्त्री जी के अचानक निधन पर इंदिरा गांधी और मोरारजी देसाई के बीच कड़ा मुकाबला, जिसमें संसदीय दल के गुप्त मतदान द्वारा इंदिरा गांधी को दो-तिहाई बहुमत से चुना गया।<br/>
-<b>महत्वपूर्ण प्रश्नोत्तर:</b><br/>
-            • <b>प्रश्न 1: 1966 में प्रधानमंत्री पद के लिए गुप्त मतदान क्यों करना पड़ा?</b><br/>
-            • <b>उत्तर:</b> क्योंकि मोरारजी देसाई सर्वसम्मति के प्रस्ताव पर सहमत नहीं हुए और वे लोकतांत्रिक चुनाव पर अड़े रहे।<br/>
-            • <b>प्रश्न 2: इंदिरा गांधी को चुनने में सिंडिकेट की क्या उम्मीद थी?</b><br/>
-            • <b>उत्तर:</b> सिंडिकेट को लगा कि राजनीति में कम अनुभवी होने के कारण इंदिरा गांधी उनके दिशा-निर्देशों पर निर्भर रहेंगी।<br/>
-</div>
-</div>
+  <!-- Header Banner -->
+  <div style="background-color: #1e3a8a; color: white; padding: 15px; border-radius: 8px; text-align: center; margin-bottom: 20px;">
+    🚀 <b>Chapter 12 (Full-Proof Copy Master)</b> 100% Google Docs Compatible with Images (Loaded from local `images/ch12/`)
+  </div>
 
-<!-- Biography Card: K. Kamraj -->
-<div class="bio-box" style="border: 6px dashed #2563eb !important; background-color: #eff6ff; border-radius: 12px; padding: 25px; margin-top: 35px; overflow: auto;">
-<img src="images/ch12/k_kamraj_stamp.webp" style="width: 150px; height: auto; border: 4px solid #cbd5e1; border-radius: 6px; float: right; margin-left: 20px;"/>
-<div style="display: flex; gap: 20px; align-items: center; justify-content: left; margin-bottom: 15px; border-bottom: 2px solid #bfdbfe; padding-bottom: 10px;">
-<h4 style="font-weight: 900; margin: 0;">
-                के. कामराज (1903 - 1976)
-            </h4>
-</div>
-<p style=" line-height: 1.6; color: #1e3a8a; margin: 0;">
-            • <b>परिचय:</b> स्वतंत्रता सेनानी, कांग्रेस के दिग्गज नेता और <b>मद्रास (तमिलनाडु) के पूर्व मुख्यमंत्री</b>।<br/>
-            • <b>किंगमेकर की भूमिका:</b> कांग्रेस अध्यक्ष रहते हुए इन्होंने नेहरू के बाद शास्त्रीजी को और शास्त्रीजी के बाद इंदिरा गांधी को सर्वसम्मति से प्रधानमंत्री बनाने में केंद्रीय भूमिका निभाई।<br/>
-            • <b>जनकल्याणकारी योजना:</b> मद्रास राज्य के स्कूलों में प्राथमिक शिक्षा को बढ़ावा देने के लिए प्रसिद्ध <b>'मिड-डे मील स्कीम' (दोपहर के भोजन की योजना)</b> के वास्तविक प्रणेता।<br/>
-            • <b>कामराज योजना (Kamraj Plan):</b> 1963 में इन्होंने प्रस्ताव दिया था कि कांग्रेस के सभी वरिष्ठ नेताओं को सरकार के पदों से इस्तीफा देकर संगठन के काम में लग जाना चाहिए।
-        </p>
-</div>
-</div>
-<!-- PART 2 SECTION: 1967 Election -->
-<div style="background-color: #fffbeb; padding: 40px; border-radius: 12px; margin-bottom: 40px; border: 6px solid #fde047;">
-<h2 class="part-header" style="font-weight: 900; margin-top: 0;">भाग 2: 1967 के चुनाव और 'राजनैतिक भूकंप' (Political Earthquake)</h2>
-<p>1967 का चौथा आम चुनाव स्वतंत्र भारत के इतिहास में एक मील का पत्थर था। इस चुनाव से पहले देश दो बड़े युद्धों (1962 चीन युद्ध और 1965 पाकिस्तान युद्ध), गंभीर मानसून विफलता, लगातार अकाल और खाद्य संकट से जूझ रहा था। जनता में कांग्रेस सरकार के खिलाफ गहरा जनाक्रोश था, जिसका विपक्षी दलों ने भरपूर फायदा उठाया। इस चुनाव ने पहली बार भारत में कांग्रेस के एकछत्र वर्चस्व को केंद्र और राज्यों दोनों स्तरों पर तोड़ दिया और राजनैतिक बहुलवाद (Political Pluralism) की शुरुआत की।, जिसने कांग्रेस के एकछत्र वर्चस्व को पहली बार बड़ी चुनौती दी।</p>
-<p><b>1967 के चुनावों के 5 प्रमुख कारण और परिणाम:</b></p>
-<ul style=" line-height: 2.2;">
-<li><b>1. आर्थिक संकट और जनाक्रोश:</b> लगातार सूखे, विदेशी मुद्रा भंडार में कमी और रुपए के अवमूल्यन के कारण महंगाई बहुत बढ़ गई थी, जिससे जनता में सरकार के खिलाफ व्यापक रोष था।</li>
-<li><b>2. गैर-कांग्रेसवाद (Non-Congressism):</b> राम मनोहर लोहिया ने नारा दिया कि विपक्षी दल बंटे होने के कारण कांग्रेस जीतती है, इसलिए कांग्रेस विरोधी मतों को एक करने के लिए गठबंधन जरूरी है।</li>
-<li><b>3. कांग्रेस को भारी चुनावी नुकसान:</b> कांग्रेस किसी तरह केंद्र में बहुमत तो पा गई, लेकिन उसे अब तक की सबसे कम सीटें मिलीं।</li>
-<li><b>4. 9 राज्यों में कांग्रेस का सफाया:</b> देश के 9 राज्यों (जैसे उत्तर प्रदेश, बिहार, पंजाब, पश्चिम बंगाल आदि) में कांग्रेस बहुमत खो बैठी और वहाँ गैर-कांग्रेसी गठबंधन सरकारें (SVD) बनीं।</li>
-<li><b>5. दलबदल (Defection) और अस्थिरता:</b> विधायकों द्वारा अपनी पार्टी बदलने की प्रक्रिया तेज़ हुई, जिससे हरियाणा के विधायक गया लाल के नाम पर प्रसिद्ध जुमला <b>"आया राम, गया राम"</b> शुरू हुआ।</li>
-</ul>
-<!-- NCERT Illustration: Two Bullocks Symbol -->
-<div class="illustration-box" style="border-color: #fbbf24 !important; margin-bottom: 30px;">
-<img alt="Congress Two Bullocks Symbol" src="images/ch12/congress_bullocks_symbol.webp" style="width: 100%; max-width: 100%; display: block; margin: 0 auto; border: 4px solid #cbd5e1; border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.15); height: auto;"/>
-<div class="illustration-explanation" style="border-left-color: #fbbf24 !important;">
-<b>NCERT पुस्तक का ऐतिहासिक प्रतीक - "दो बैलों की जोड़ी" (Congress Original Symbol):</b><br/>
-<b>विवरण:</b> 1952 से 1969 तक भारतीय राष्ट्रीय कांग्रेस (INC) का आधिकारिक चुनाव चिह्न "दो बैलों की जोड़ी" था, जो भारत की ग्रामीण और कृषि प्रधान अर्थव्यवस्था में पार्टी की गहरी पैठ को दर्शाता था।<br/>
-<b>महत्वपूर्ण प्रश्नोत्तर:</b><br/>
-            • <b>प्रश्न 1: यह चुनाव चिह्न किस कालखंड में कांग्रेस की पहचान रहा और 1969 में इसका क्या हुआ?</b><br/>
-            • <b>उत्तर:</b> यह चिह्न प्रथम तीन आम चुनावों (1952, 1957, 1962) और 1967 के चौथे आम चुनाव में कांग्रेस का प्रतीक था। 1969 के पार्टी विभाजन के बाद, चुनाव आयोग ने इस सिंबल को फ्रीज कर दिया। बाद में इंदिरा की कांग्रेस (R) को 'गाय और बछड़ा' तथा पुरानी कांग्रेस (O) को 'चरखा कातता हुआ व्यक्ति' मिला।
-        </div>
-</div>
-<!-- Illustration Box 2 -->
-<div class="illustration-box" style="border-color: #d97706 !important;">
-<img alt="Non-Congressism and Coalitions" src="images/ch12/non_congress_map.webp" style="width: 100%; max-width: 100%; display: block; margin: 0 auto; border: 4px solid #cbd5e1; border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.15); height: auto;"/>
-<div class="illustration-explanation" style="border-left-color: #d97706 !important;">
-<b>NCERT पुस्तक का ऐतिहासिक नक्शा/कार्टून संदर्भ (1967 Coalition Governments):</b><br/>
-<b>विवरण:</b> यह नक्शा/कार्टून 1967 के चुनावों के बाद भारत के राजनीतिक परिदृश्य को दिखाता है, जिसमें उत्तर में पंजाब से लेकर पूर्व में पश्चिम बंगाल तक कांग्रेस मुक्त गठबंधन सरकारों का उदय हुआ था।<br/>
-<b>महत्वपूर्ण प्रश्नोत्तर:</b><br/>
-            • <b>प्रश्न 1: 1967 के चुनाव परिणामों को 'राजनैतिक भूकंप' की संज्ञा क्यों दी जाती है?</b><br/>
-            • <b>उत्तर:</b> क्योंकि आजादी के बाद पहली बार कांग्रेस को न केवल केंद्र में भारी सीटों का नुकसान हुआ, बल्कि उसने 9 राज्यों (पंजाब, हरियाणा, यूपी, बिहार, मध्य प्रदेश, मद्रास, उड़ीसा, पश्चिम बंगाल और केरल) में अपनी सरकार खो दी।<br/>
-            • <b>प्रश्न 2: भारतीय राजनीति में 'दलबदल' (Defection) से क्या अभिप्राय है?</b><br/>
-            • <b>उत्तर:</b> जब कोई निर्वाचित जनप्रतिनिधि (सांसद या विधायक) उस राजनैतिक दल को छोड़ देता है जिसके चुनाव चिह्न पर वह चुनकर आया हो, और किसी अन्य दल में शामिल हो जाता है, तो उसे दलबदल कहते हैं।
-        </div>
-</div>
-<!-- Visual Card: 1967 का चौथा आम चुनाव - 'राजनैतिक भूकम्प' -->
-<div class="illustration-box" style="border-color: #ef4444 !important; margin-top: 30px; margin-bottom: 35px;">
-<img alt="1967 का चौथा आम चुनाव - 'राजनैतिक भूकम्प'" src="images/ch12/visual_1967_fourth_general_election.webp" style="width: 100%; max-width: 100%; display: block; margin: 0 auto; border: 4px solid #cbd5e1; border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.15); height: auto;"/>
-<div class="illustration-explanation" style="border-left-color: #ef4444 !important;">
-<b>विज़ुअल नोट्स: 1967 का चौथा आम चुनाव - 'राजनैतिक भूकम्प' (Political Earthquake):</b><br/>
-<b>विवरण:</b> 1967 के चुनावों में पहली बार कांग्रेस के एकछत्र वर्चस्व को बड़ा झटका लगा। कांग्रेस केंद्र में बहुत कम बहुमत ला पाई और 9 राज्यों में उसकी सरकारें गिर गईं।<br/>
-<b>महत्वपूर्ण प्रश्नोत्तर:</b><br/>
-            • <b>प्रश्न 1: 1967 के चुनावों को 'राजनैतिक भूकम्प' की संज्ञा किसने और क्यों दी?</b><br/>
-            • <b>उत्तर:</b> राजनैतिक विश्लेषकों ने दी, क्योंकि आजादी के बाद पहली बार कांग्रेस का राष्ट्रीय वर्चस्व टूटा और 9 राज्यों में गैर-कांग्रेसी सरकारें बनीं।<br/>
-            • <b>प्रश्न 2: 1967 में गैर-कांग्रेसवाद का नारा किसने दिया?</b><br/>
-            • <b>उत्तर:</b> डॉ. राम मनोहर लोहिया ने, ताकि कांग्रेस विरोधी मतों को एक जुट करके कांग्रेस को सत्ता से हटाया जा सके।<br/>
-</div>
-</div>
+  <h1>अध्याय 12: कांग्रेस प्रणाली: चुनौतियाँ और पुनर्स्थापना<br/><span style="font-size: 1.2rem; color: #64748b;">(Challenges to & Restoration of the Congress System)</span></h1>
 
-<!-- SUBSECTION: COALITIONS -->
-<h3 class="subtopic-header" style="font-weight: 900; margin-top: 40px; border-bottom: 3px solid #fcd34d; padding-bottom: 10px;">
-        🤝 गठबंधन का उदय (Rise of Coalitions)
-    </h3>
-<p style=" line-height: 1.8; color: #000000; font-weight: 900; text-align: justify;">
-        1967 के चुनावों ने भारतीय राजनीति में <b>'गठबंधन' (Coalition)</b> के एक नए युग की शुरुआत की। चूंकि कांग्रेस को कई राज्यों में बहुमत नहीं मिला, इसलिए विभिन्न गैर-कांग्रेसी दलों ने मिलकर संयुक्त विधायक दल (संवित - Samyukt Vidhayak Dal) का गठन किया और गैर-कांग्रेसी सरकारें बनाईं। इन सरकारों को 'संवित सरकारें' कहा गया। अधिकांश मामलों में ये दल वैचारिक रूप से एक-दूसरे से बिल्कुल भिन्न थे (जैसे बिहार में कम्युनिस्ट और जनसंघ दोनों एक ही गठबंधन सरकार का हिस्सा थे)।
-    </p>
-<!-- NCERT Cartoon: Coalition Cartoon -->
-<div class="illustration-box" style="border-color: #b45309 !important; margin-bottom: 35px;">
-<img alt="Coalition Cartoon by Kutty" src="images/ch12/coalition_cartoon.webp" style="width: 100%; max-width: 100%; display: block; margin: 0 auto; border: 4px solid #cbd5e1; border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.15); height: auto;"/>
-<div class="illustration-explanation" style="border-left-color: #b45309 !important;">
-<b>NCERT पुस्तक का प्रसिद्ध गठबंधन कार्टून (Coalition Cartoon by Kutty - 1974):</b><br/>
-<b>विवरण:</b> कार्टूनिस्ट कुट्टी द्वारा बनाया गया यह रेखाचित्र 1974 में चौधरी चरण सिंह द्वारा गैर-वामपंथी दलों को मिलाकर एक 'संयुक्त मोर्चा' (United Front) बनाने के प्रयास को दर्शाता है। यह दिखाता है कि कैसे वैचारिक रूप से भिन्न दल एक पहिए वाले बहु-पहिया वाहन पर संतुलन बनाने की कोशिश कर रहे हैं जिसपर "KEEP RIGHT: NO LEFT TURN" (दाएं रहें: बाएं मुड़ना मना है) का बोर्ड लगा है।<br/>
-<b>कार्टून आधारित प्रश्नोत्तर:</b><br/>
-            • <b>प्रश्न 1: 1967 के चुनावों के बाद राज्यों में बनी 'संवित' (SVD) सरकारों की मुख्य विशेषता क्या थी?</b><br/>
-            • <b>उत्तर:</b> संवित (संयुक्त विधायक दल) सरकारों की मुख्य विशेषता यह थी कि इनमें शामिल दल वैचारिक रूप से अत्यंत विपरीत थे। उदाहरण के लिए, बिहार की संवित सरकार में वामपंथी (CPI) और दक्षिणपंथी (जनसंघ) दोनों विपरीत विचारधारा वाले दल शामिल थे, जिनका एकमात्र उद्देश्य कांग्रेस को सत्ता से बाहर रखना था।<br/>
-            • <b>प्रश्न 2: कार्टून में दिए गए बोर्ड "KEEP RIGHT - NO LEFT TURN" का क्या राजनैतिक निहितार्थ है?</b><br/>
-            • <b>उत्तर:</b> इसका अर्थ है कि चौधरी चरण सिंह द्वारा बनाया गया यह मोर्चा <b>गैर-कम्युनिस्ट/गैर-वामपंथी (Non-Communist)</b> दलों का गठबंधन था। वे दक्षिणपंथी और मध्यमार्गी विचारधारा (Right and Center) की ओर झुके हुए थे और कम्युनिस्टों (वामपंथ) को इससे बाहर रखा गया था।
-        </div>
-</div>
-<!-- NCERT Cartoon: Syndicate Umbrella Cartoon (State Leaders as Kingmakers) -->
-<div class="illustration-box" style="border-color: #b45309 !important; margin-bottom: 35px;">
-<img alt="State Leaders as Kingmakers Cartoon" src="images/ch12/syndicate_umbrella_cartoon.webp" style="width: 100%; max-width: 100%; display: block; margin: 0 auto; border: 4px solid #cbd5e1; border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.15); height: auto;"/>
-<div class="illustration-explanation" style="border-left-color: #b45309 !important;">
-<b>NCERT पुस्तक का चित्र (State Leaders as Kingmakers Cartoon):</b><br/>
-<b>विवरण:</b> कार्टून में दिखाया गया है कि कैसे राज्य स्तर के नेता केंद्र में 'किंगमेकर' (सरकार बनाने वाले) की भूमिका निभा रहे हैं। यह 1967 के बाद के गठबंधन युग और राज्यों के बढ़ते राजनैतिक महत्व को दर्शाता है।<br/>
-<b>महत्वपूर्ण प्रश्नोत्तर:</b><br/>
-            • <b>प्रश्न: 1960 और 1970 के दशक में राज्य स्तर के नेताओं का केंद्र सरकार के गठन में क्या प्रभाव था?</b><br/>
-            • <b>उत्तर:</b> इस दौर में कांग्रेस के भीतर 'सिंडिकेट' के नेता (जैसे तमिलनाडु के के. कामराज, मैसूर के निजलिंगप्पा) राज्यों के शक्तिशाली नेता थे, जिन्होंने शास्त्रीजी और इंदिरा गांधी दोनों को प्रधानमंत्री बनाने में केंद्रीय भूमिका निभाई। 1967 के बाद राज्यों में बनी गठबंधन सरकारों ने भी इस प्रभाव को बढ़ाया।
-        </div>
-</div>
-<!-- Visual Card: संयुक्त विधायक दल (SVD) संविद सरकारें और आया राम गया राम -->
-<div class="illustration-box" style="border-color: #b45309 !important; margin-top: 30px; margin-bottom: 35px;">
-<img alt="संयुक्त विधायक दल (SVD) संविद सरकारें और आया राम गया राम" src="images/ch12/visual_coalition_aya_ram_gaya_ram.webp" style="width: 100%; max-width: 100%; display: block; margin: 0 auto; border: 4px solid #cbd5e1; border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.15); height: auto;"/>
-<div class="illustration-explanation" style="border-left-color: #b45309 !important;">
-<b>विज़ुअल नोट्स: संविद सरकारें (SVD) और 'आया राम, गया राम' (दलबदल राजनीति):</b><br/>
-<b>विवरण:</b> 1967 के बाद विभिन्न विरोधी विचारधाराओं के दलों का मिलकर संविद सरकारें बनाना और हरियाणा के विधायक गया लाल की घटना से प्रसिद्ध जुमला 'आया राम, गया राम' का जन्म।<br/>
-<b>महत्वपूर्ण प्रश्नोत्तर:</b><br/>
-            • <b>प्रश्न 1: दलबदल (Defection) रोकने के लिए संविधान में क्या व्यवस्था की गई?</b><br/>
-            • <b>उत्तर:</b> 1985 में 52वें संविधान संशोधन द्वारा 10वीं अनुसूची (Anti-Defection Law) जोड़ी गई।<br/>
-            • <b>प्रश्न 2: संवित (SVD) सरकारों की मुख्य कमज़ोरी क्या थी?</b><br/>
-            • <b>उत्तर:</b> शामिल दलों में गहरे वैचारिक मतभेद थे (जैसे वामपंथी और जनसंघ), जिससे ये सरकारें बहुत कम समय में गिर गईं।<br/>
-</div>
-</div>
+  <!-- PART 1 -->
+  <h2>भाग 1: राजनीतिक उत्तराधिकार की चुनौती (Challenge of Political Succession)</h2>
+  
+  <p>1960 के दशक को भारतीय राजनीति में <b>'खतरनाक दशक' (Dangerous Decade)</b> कहा जाता है, क्योंकि इस दौर में गरीबी, असमानता, साम्प्रदायिक विभाजन और मानसून विफलता के साथ-साथ देश ने दो महान प्रधानमंत्रियों का आकस्मिक निधन झेला।</p>
 
-<!-- SPECIAL STORY BOX: AYA RAM, GAYA RAM (DEFECTION) -->
-<div style="background-color: #fffbeb; border: 8px solid #000000; border-radius: 20px; padding: 40px; margin-top: 50px; margin-bottom: 50px; box-shadow: 10px 10px 0px #000000;">
-<h3 class="subtopic-header" style="font-weight: 900; margin-top: 0; text-align: center; border-bottom: 5px solid #000000; padding-bottom: 15px; text-transform: uppercase;">
-                    🎭 ऐतिहासिक संदर्भ: 'आया राम, गया राम' की कहानी
-                </h3>
-<img alt="Aya Ram Gaya Ram Amul Cartoon" src="images/ch12/aya_ram_gaya_ram.webp" style="width: 100%; max-width: 100%; display: block; margin: 30px auto; border: 6px solid #000000; border-radius: 10px; box-shadow: 5px 5px 0px #000000; height: auto;"/>
-<p style=" line-height: 1.8; color: #000000; font-weight: 900; text-align: justify; background-color: #ffffff; padding: 30px; border: 4px solid #000000; border-radius: 10px;">
-<b>नारे की उत्पत्ति और इतिहास:</b><br/>
-                    भारतीय राजनीति में 'दलबदल' की प्रवृत्ति को दर्शाने वाला यह प्रसिद्ध जुमला <b>'आया राम, गया राम'</b> 1967 में हरियाणा के एक विधायक <b>गया लाल</b> के कारनामे से बना। गया लाल ने मात्र 15 दिनों के भीतर तीन बार अपनी पार्टी बदली! वे पहले कांग्रेस से यूनाइटेड फ्रंट में गए, फिर कांग्रेस में लौटे और 9 घंटे बाद दोबारा यूनाइटेड फ्रंट में चले गए। जब वे कांग्रेस में वापस आए, तो नेता राव बीरेंद्र सिंह ने चंडीगढ़ में प्रेस के सामने कहा था—<b>"गया राम अब आया राम हैं।"</b><br/><br/>
-                    इस घटना के बाद भारतीय संविधान में दलबदल को रोकने के लिए <b>52वां संविधान संशोधन (1985)</b> किया गया और <b>10वीं अनुसूची</b> जोड़ी गई।
-                </p>
-<div style="background-color: #f1f5f9; border-left: 10px solid #000000; padding: 20px; margin-top: 20px;  line-height: 1.6; font-weight: bold; text-align: left;">
-<b>महत्वपूर्ण प्रश्नोत्तर:</b><br/>
-                    • <b>प्रश्न 1: 'दलबदल' (Defection) से क्या अभिप्राय है?</b><br/>
-                    • <b>उत्तर:</b> जब कोई जनप्रतिनिधि (सांसद या विधायक) किसी खास राजनीतिक दल के चुनाव चिह्न पर चुनाव जीतकर जीतने के बाद उस दल को छोड़कर किसी दूसरे दल में शामिल हो जाता है, तो उसे दलबदल कहा जाता है।<br/>
-                    • <b>प्रश्न 2: दलबदल रोकने के लिए भारतीय संविधान में क्या प्रयास किए गए हैं?</b><br/>
-                    • <b>उत्तर:</b> दलबदल रोकने के लिए <b>1985 में 52वां संविधान संशोधन</b> पारित किया गया, जिसके तहत संविधान में <b>दसवीं अनुसूची (Tenth Schedule / Anti-Defection Law)</b> जोड़ी गई। इसके अनुसार यदि कोई सदस्य दलबदल करता है तो वह संसद या विधानसभा की सदस्यता खो देता है।
-                </div>
-</div>
-<!-- SPECIAL CASE STUDY BOX: RAJASTHAN VILLAGE ELECTION (1967) -->
-<div style="background-color: #fffbeb; border: 8px solid #000000; border-radius: 20px; padding: 40px; margin-top: 50px; margin-bottom: 50px; box-shadow: 10px 10px 0px #000000;">
-<h3 class="subtopic-header" style="font-weight: 900; margin-top: 0; text-align: center; border-bottom: 5px solid #000000; padding-bottom: 15px; text-transform: uppercase;">
-                    📖 केस स्टडी (Case Study): राजस्थान के एक गाँव में चुनाव (1967)
-                </h3>
-<img alt="The Grassroots of Democracy Book Cover" src="images/ch12/rajasthan_election.webp" style="width: 100%; max-width: 100%; display: block; margin: 30px auto; border: 6px solid #000000; border-radius: 10px; box-shadow: 5px 5px 0px #000000; height: auto;"/>
-<p style=" line-height: 1.8; color: #000000; font-weight: 900; text-align: justify; background-color: #ffffff; padding: 30px; border: 4px solid #000000; border-radius: 10px;">
-<b>गाँव देवीसर (चोमू निर्वाचन क्षेत्र, राजस्थान) की कहानी:</b><br/>
-                    यह कहानी 1967 के विधानसभा चुनावों के समय की है। गाँव में मुख्य मुकाबला <b>कांग्रेस</b> और <b>स्वतंत्र पार्टी</b> के बीच था। लेकिन गाँव के भीतर की स्थानीय राजनीति चाचा (शेर सिंह) और भतीजे (भीम सिंह) के व्यक्तिगत और गुटीय संघर्ष से प्रभावित थी।<br/><br/>
-                    • <b>भीम सिंह (भतीजा):</b> इन्होंने राजपूतों और गैर-राजपूतों का एक नया सामाजिक समीकरण बनाया। वे कांग्रेस के साथ जुड़े और तत्कालीन मुख्यमंत्री <b>मोहन लाल सुखाड़िया</b> से मिलकर अपने प्रभाव का इस्तेमाल किया। उनका उद्देश्य था कि यदि कांग्रेस उम्मीदवार जीतेगा तो उनका सीधा संपर्क सरकार के मंत्री से हो जाएगा।<br/><br/>
-                    • <b>शेर सिंह (चाचा):</b> पारंपरिक रूप से गाँव की राजनीति पर इनका दबदबा था। कांग्रेस विरोधी रुख के कारण इन्होंने स्वतंत्र पार्टी के उम्मीदवार (जो एक जागीरदार थे) का समर्थन किया, और जनता से वादा किया कि जागीरदार गाँव में स्कूल का निर्माण करवाएंगे।
-                </p>
-<div style="background-color: #f1f5f9; border-left: 10px solid #000000; padding: 20px; margin-top: 20px;  line-height: 1.6; font-weight: bold; text-align: left;">
-<b>केस-स्टडी आधारित प्रश्नोत्तर:</b><br/>
-                    • <b>प्रश्न 1: इस केस स्टडी से भारत में स्थानीय स्तर पर चुनावी राजनीति और जातिगत समीकरणों के संबंधों का क्या पता चलता है?</b><br/>
-                    • <b>उत्तर:</b> यह दर्शाता है कि भारत में राष्ट्रीय/राज्य स्तर की पार्टियों का मुकाबला स्थानीय स्तर पर जातिगत समीकरणों और गुटीय संघर्षों (जैसे राजपूत और गैर-राजपूत गठबंधन) से जुड़ जाता है। मतदाता केवल पार्टी नहीं, बल्कि स्थानीय संबंधों और अपने काम करवाने के माध्यम (जैसे मंत्री से संपर्क) को देखकर वोट करते हैं।<br/>
-                    • <b>प्रश्न 2: 1967 के चुनाव में 'स्वतंत्र पार्टी' की स्थिति ग्रामीण क्षेत्रों में कैसी थी?</b><br/>
-                    • <b>उत्तर:</b> स्वतंत्र पार्टी को ग्रामीण क्षेत्रों के पूर्व राजा-महाराजाओं और जागीरदारों (जमींदारों) का समर्थन प्राप्त था। वे अपने व्यक्तिगत प्रभाव और सामाजिक-आर्थिक संसाधनों (जैसे स्कूल निर्माण के वादे) के बल पर कांग्रेस को चुनौती दे रहे थे।
-                </div>
-</div>
-<!-- Biography Card: Ram Manohar Lohia -->
-<div class="bio-box" style="border: 6px dashed #d97706 !important; background-color: #fffde6; border-radius: 12px; padding: 25px; margin-top: 35px; overflow: auto;">
-<img src="images/ch12/lohia_stamp.webp" style="width: 150px; height: auto; border: 4px solid #cbd5e1; border-radius: 6px; float: right; margin-left: 20px;"/>
-<div style="display: flex; gap: 20px; align-items: center; justify-content: left; margin-bottom: 15px; border-bottom: 2px solid #fef08a; padding-bottom: 10px;">
-<h4 style="font-weight: 900; margin: 0;">
-                डॉ. राम मनोहर लोहिया (1910 - 1967)
-            </h4>
-</div>
-<p style=" line-height: 1.6; color: #78350f; margin: 0;">
-            • <b>परिचय:</b> भारत के प्रमुख समाजवादी विचारक, स्वतंत्रता सेनानी और प्रखर राजनेता।<br/>
-            • <b>सिद्धांत:</b> इन्होंने <b>'गैर-कांग्रेसवाद'</b> (Non-Congressism) का सैद्धांतिक आधार तैयार किया। इनका मानना था कि कांग्रेस का शासन अलोकतांत्रिक और गरीब-विरोधी है।<br/>
-            • <b>समाजवाद:</b> चौखंभा राज्य, सामाजिक न्याय और पिछड़ों को सत्ता में 60% आरक्षण देने की वकालत करने वाले पहले विचारक।<br/>
-            • <b>संसद में प्रभाव:</b> नेहरू सरकार की नीतियों (विशेषकर नेहरू की विदेश नीति) के संसद में सबसे तीखे आलोचक।
-        </p>
-</div>
-<!-- Biography Card: C.N. Annadurai -->
-<div class="bio-box" style="border: 6px dashed #059669 !important; background-color: #ecfdf5; border-radius: 12px; padding: 25px; margin-top: 35px; overflow: auto; margin-bottom: 35px;">
-<img src="images/ch12/annadurai_stamp.webp" style="width: 150px; height: auto; border: 4px solid #cbd5e1; border-radius: 6px; float: right; margin-left: 20px;"/>
-<div style="display: flex; gap: 20px; align-items: center; justify-content: left; margin-bottom: 15px; border-bottom: 2px solid #a7f3d0; padding-bottom: 10px;">
-<h4 style="font-weight: 900; margin: 0;">
-                सी. नटराजन अन्नादुरै (1909 - 1969)
-            </h4>
-</div>
-<p style=" line-height: 1.6; color: #065f46; margin: 0;">
-            • <b>परिचय:</b> मद्रास (तमिलनाडु) के पूर्व मुख्यमंत्री (1967-1969)। वे एक प्रसिद्ध लेखक, पत्रकार और प्रभावशाली वक्ता थे।<br/>
-            • <b>द्रविड़ आंदोलन:</b> शुरुआत में वे पेरियार (ई.वी. रामासामी नायकर) के नेतृत्व वाले 'द्रविड़ कड़गम' (DK) से जुड़े थे, लेकिन 1949 में वैचारिक मतभेदों के कारण उन्होंने <b>'द्रविड़ मुनेत्र कड़गम' (DMK)</b> की स्थापना की।<br/>
-            • <b>हिंदी विरोधी आंदोलन (1965):</b> उन्होंने 1965 में मद्रास में हुए हिंदी-विरोधी आंदोलन का प्रखर नेतृत्व किया और केंद्र सरकार द्वारा राज्यों पर हिंदी थोपने की नीति का पुरजोर विरोध किया। वे राज्यों की अधिक स्वायत्तता (Federal Autonomy) के कट्टर समर्थक थे।<br/>
-            • <b>ऐतिहासिक विजय:</b> 1967 के आम चुनाव में उनकी पार्टी DMK ने मद्रास में भारी बहुमत प्राप्त किया। वे भारत के पहले गैर-कांग्रेसी मुख्यमंत्री थे जिन्होंने अपने बल पर पूर्ण बहुमत की सरकार बनाई थी।
-        </p>
-</div>
-<!-- Biography Card: Karpoori Thakur -->
-<div class="bio-box" style="border: 6px dashed #ea580c !important; background-color: #fff7ed; border-radius: 12px; padding: 25px; margin-top: 35px; overflow: auto; margin-bottom: 35px;">
-<img src="images/ch12/karpoori_stamp.webp" style="width: 150px; height: auto; border: 4px solid #cbd5e1; border-radius: 6px; float: right; margin-left: 20px;"/>
-<div style="display: flex; gap: 20px; align-items: center; justify-content: left; margin-bottom: 15px; border-bottom: 2px solid #ffedd5; padding-bottom: 10px;">
-<h4 style="font-weight: 900; margin: 0;">
-                कर्पूरी ठाकुर (1924 - 1988)
-            </h4>
-</div>
-<p style=" line-height: 1.6; color: #9a3412; margin: 0;">
-            • <b>परिचय:</b> स्वतंत्रता सेनानी, प्रमुख समाजवादी नेता और बिहार के दो बार मुख्यमंत्री (दिसंबर 1970-जून 1971 और जून 1977-अप्रैल 1979)। उन्हें लोकप्रिय रूप से <b>'जननायक'</b> कहा जाता है।<br/>
-            • <b>सामाजिक न्याय और आरक्षण:</b> वे लोहिया और जयप्रकाश नारायण के अनन्य सहयोगी थे। बिहार में <b>पिछड़े वर्गों के लिए सरकारी नौकरियों में आरक्षण (मुंगेरी लाल आयोग की सिफारिशों के आधार पर)</b> लागू करने में उन्होंने क्रांतिकारी भूमिका निभाई, जिसे 'कर्पूरी ठाकुर फॉर्मूला' भी कहा जाता है।<br/>
-            • <b>जन सरोकार:</b> वे सादगी, ईमानदारी और अंग्रेजी भाषा की अनिवार्यता को समाप्त करने के समर्थक के रूप में जाने जाते थे। वर्ष 2024 में उन्हें मरणोपरांत भारत के सर्वोच्च नागरिक सम्मान <b>'भारत रत्न'</b> से सम्मानित किया गया।
-        </p>
-</div>
-</div>
-<!-- PART 3 SECTION: The Split -->
-<div style="background-color: #f5f3ff; padding: 40px; border-radius: 12px; margin-bottom: 40px; border: 6px solid #c084fc;">
-<h2 class="part-header" style="font-weight: 900; margin-top: 0;">भाग 3: कांग्रेस का ऐतिहासिक विभाजन (The Great Split - 1969)</h2>
-<!-- SPECIAL NCERT BOX: THE CONGRESS SYNDICATE -->
-<div style="background-color: #f3e8ff; border: 8px solid #000000; border-radius: 20px; padding: 40px; margin-top: 50px; margin-bottom: 50px; box-shadow: 10px 10px 0px #000000;">
-<h3 class="subtopic-header" style="font-weight: 900; margin-top: 0; text-align: center; border-bottom: 5px solid #000000; padding-bottom: 15px; text-transform: uppercase;">
-                    👥 ऐतिहासिक संदर्भ: कांग्रेस 'सिंडिकेट' (The Congress Syndicate)
-                </h3>
-<p style=" line-height: 1.8; color: #000000; font-weight: 900; text-align: justify; background-color: #ffffff; padding: 30px; border: 4px solid #000000; border-radius: 10px;">
-<b>सिंडिकेट क्या था?</b><br/>
-                    कांग्रेस संगठन के भीतर <b>प्रभावशाली और ताकतवर नेताओं के अनौपचारिक समूह</b> को 'सिंडिकेट' कहा जाता था। इस समूह का पार्टी के सांगठनिक ढांचे पर पूरा नियंत्रण था। इसके मुख्य नेताओं में के. कामराज (मद्रास के पूर्व मुख्यमंत्री), एस.के. पाटिल (बंबई के नेता), एस. निजलिंगप्पा (मैसूर के नेता), एन. संजीव रेड्डी (आंध्र प्रदेश के नेता) और अतुल्य घोष (पश्चिम बंगाल) शामिल थे।<br/><br/>
-                    लाल बहादुर शास्त्री और शुरुआत में इंदिरा गांधी दोनों को प्रधानमंत्री बनाने में इस सिंडिकेट की निर्णायक भूमिका थी। सिंडिकेट के नेताओं को उम्मीद थी कि इंदिरा गांधी उनके दिशा-निर्देशों पर चलेंगी, लेकिन इंदिरा गांधी ने धीरे-धीरे सिंडिकेट को दरकिनार करना शुरू कर दिया जिससे 1969 में कांग्रेस का विभाजन हो गया।
-                </p>
-<div style="background-color: #f1f5f9; border-left: 10px solid #000000; padding: 20px; margin-top: 20px;  line-height: 1.6; font-weight: bold; text-align: left;">
-<b>महत्वपूर्ण प्रश्नोत्तर:</b><br/>
-                    • <b>प्रश्न 1: 1960 के दशक में कांग्रेस के संदर्भ में 'सिंडिकेट' शब्द से क्या तात्पर्य है? इसके किन्हीं दो नेताओं के नाम लिखिए।</b><br/>
-                    • <b>उत्तर:</b> 'सिंडिकेट' कांग्रेस के भीतर वरिष्ठ, प्रभावशाली और ताकतवर नेताओं का एक अनौपचारिक समूह था जिसका संगठन पर नियंत्रण था। इसके दो प्रमुख नेता <b>के. कामराज</b> और <b>एस. निजलिंगप्पा</b> थे।<br/>
-                    • <b>प्रश्न 2: इंदिरा गांधी और सिंडिकेट के बीच टकराव के मुख्य कारण क्या थे?</b><br/>
-                    • <b>उत्तर:</b> मुख्य कारण यह था कि इंदिरा गांधी ने प्रधानमंत्री बनने के बाद सिंडिकेट के नेताओं पर निर्भर रहने के बजाय अपने सलाहकारों के एक अलग समूह (किचन कैबिनेट) का गठन किया और नीतियों (जैसे बैंकों का राष्ट्रीयकरण, प्रिवी पर्स की समाप्ति) को वामपंथी झुकाव देकर अपनी स्वतंत्र छवि बनाना शुरू किया।
-                </div>
-</div>
-<!-- Visual Card: कांग्रेस सिंडिकेट बनाम इंदिरा गांधी सत्ता संघर्ष -->
-<div class="illustration-box" style="border-color: #7c3aed !important; margin-top: 30px; margin-bottom: 35px;">
-<img alt="कांग्रेस सिंडिकेट बनाम इंदिरा गांधी सत्ता संघर्ष" src="images/ch12/visual_congress_syndicate_power.webp" style="width: 100%; max-width: 100%; display: block; margin: 0 auto; border: 4px solid #cbd5e1; border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.15); height: auto;"/>
-<div class="illustration-explanation" style="border-left-color: #7c3aed !important;">
-<b>विज़ुअल नोट्स: कांग्रेस 'सिंडिकेट' (K. Kamraj, Nijalingappa) का संगठन पर प्रभाव और इंदिरा गांधी से टकराव:</b><br/>
-<b>विवरण:</b> कांग्रेस के भीतर शक्तिशाली नेताओं के अनौपचारिक समूह 'सिंडिकेट' द्वारा संगठन नियंत्रण और इंदिरा गांधी द्वारा स्वतंत्र फैसले लेकर सिंडिकेट को दरकिनार करने की कहानी।<br/>
-<b>महत्वपूर्ण प्रश्नोत्तर:</b><br/>
-            • <b>प्रश्न 1: कांग्रेस सिंडिकेट के प्रमुख नेता कौन-कौन थे?</b><br/>
-            • <b>उत्तर:</b> के. कामराज (तमिलनाडु), एस. निजलिंगप्पा (मैसूर), एस.के. पाटिल (बंबई), अतुल्य घोष (पश्चिम बंगाल) और एन. संजीव रेड्डी।<br/>
-            • <b>प्रश्न 2: इंदिरा गांधी ने सिंडिकेट को चुनौती देने के लिए क्या रणनीति अपनाई?</b><br/>
-            • <b>उत्तर:</b> उन्होंने अपनी नीतियों को समाजवादी/वामपंथी मोड़ दिया और 'किचन कैबिनेट' बनाकर स्वतंत्र प्रशासनिक फैसले लिए।<br/>
-</div>
-</div>
+  <h3>1.1 नेहरू के बाद शास्त्री युग एवं 'जय जवान जय किसान' (1964 - 1966)</h3>
+  
+  <p>मई 1964 में पंडित जवाहरलाल नेहरू के निधन के बाद देश के सामने सबसे बड़ा सवाल था—<i>"नेहरू के बाद कौन और भारत का लोकतंत्र कैसे कायम रहेगा?"</i> कांग्रेस अध्यक्ष <b>के. कामराज</b> ने पार्टी नेताओं से सलाह-मशविरा कर <b>लाल बहादुर शास्त्री</b> को निर्विरोध प्रधानमंत्री चुना।</p>
 
-<!-- Biography Card: S. Nijalingappa -->
-<div class="bio-box" style="border: 6px dashed #7c3aed !important; background-color: #faf5ff; border-radius: 12px; padding: 25px; margin-top: 35px; overflow: auto; margin-bottom: 35px;">
-<img src="images/ch12/nijalingappa_stamp.webp" style="width: 150px; height: auto; border: 4px solid #cbd5e1; border-radius: 6px; float: right; margin-left: 20px;"/>
-<div style="display: flex; gap: 20px; align-items: center; justify-content: left; margin-bottom: 15px; border-bottom: 2px solid #ddd6fe; padding-bottom: 10px;">
-<h4 style="font-weight: 900; margin: 0;">
-                एस. निजलिंगप्पा (1902 - 2000)
-            </h4>
-</div>
-<p style=" line-height: 1.6; color: #5b21b6; margin: 0;">
-            • <b>परिचय:</b> स्वतंत्रता सेनानी, संविधान सभा के सदस्य, और मैसूर (कर्नाटक) प्रांत के पूर्व मुख्यमंत्री। उन्हें <b>'आधुनिक कर्नाटक का निर्माता'</b> माना जाता है।<br/>
-            • <b>संगठन में भूमिका:</b> 1968 से 1971 के दौरान वे कांग्रेस पार्टी के अध्यक्ष रहे। वे कांग्रेस के भीतर 'सिंडिकेट' समूह के सबसे प्रभावशाली नेताओं में से एक थे।<br/>
-            • <b>ऐतिहासिक टकराव:</b> 1969 के राष्ट्रपति चुनाव में उन्होंने इंदिरा गांधी के वामपंथी रुख का खुलकर विरोध किया और अंततः अनुशासनहीनता के आरोप में इंदिरा गांधी को कांग्रेस से निष्कासित कर दिया, जिससे कांग्रेस आधिकारिक तौर पर कांग्रेस (O) और कांग्रेस (R) में विभाजित हो गई।
-        </p>
-</div>
-<p>1969 में कांग्रेस के भीतर का आंतरिक सांगठनिक तनाव चरम पर पहुँच गया। नेहरू के बाद इंदिरा गांधी को प्रधानमंत्री बनाने वाली सिंडिकेट चाहती थी कि इंदिरा उनकी सलाह से काम करें। किंतु इंदिरा ने अपनी स्वतंत्र राजनैतिक जमीन तलाशनी शुरू कर दी और सिंडिकेट को कड़ा संदेश देते हुए उप-प्रधानमंत्री मोरारजी देसाई की असहमति के बावजूद 14 बैंकों के राष्ट्रीयकरण जैसे वामपंथी नीतिगत फैसलों को आगे बढ़ाया। यह व्यक्तिगत वर्चस्व और समाजवादी बनाम दक्षिणपंथी नीतियों की वैचारिक जंग बन गई।, जिसके परिणामस्वरूप पार्टी दो विरोधी गुटों में विभाजित हो गई।</p>
-<p><b>विभाजन की ओर ले जाने वाले 5 प्रमुख घटनाक्रम:</b></p>
-<ul style=" line-height: 2.2;">
-<li><b>1. सिंडिकेट बनाम इंदिरा गांधी संघर्ष:</b> इंदिरा गांधी ने पार्टी संगठन के पुराने नेताओं (सिंडिकेट) के नियंत्रण से बाहर निकलकर सरकार पर अपनी स्वतंत्र पकड़ बनानी शुरू की।</li>
-<li><b>2. समाजवादी नीतियां:</b> इंदिरा ने सिंडिकेट की असहमति के बावजूद बैंकों के राष्ट्रीयकरण और प्रिवी पर्स की समाप्ति जैसे प्रगतिशील कदम उठाए।</li>
-<li><b>3. राष्ट्रपति पद का चुनाव (1969):</b> जाकिर हुसैन के निधन के बाद सिंडिकेट ने <b>एन. संजीव रेड्डी</b> को कांग्रेस का आधिकारिक उम्मीदवार बनाया, जबकि इंदिरा ने स्वतंत्र उम्मीदवार <b>वी. वी. गिरि</b> का समर्थन किया।</li>
-<li><b>4. 'अन्तरात्मा की आवाज़' की अपील:</b> इंदिरा गांधी ने कांग्रेस सांसदों और विधायकों से पार्टी व्हिप के बजाय अपनी अंतरात्मा की आवाज पर वी. वी. गिरि को वोट देने की अपील की।</li>
-<li><b>5. औपचारिक विभाजन (O बनाम R):</b> वी. वी. गिरि की जीत के बाद कांग्रेस दो फाड़ हो गई—सिंडिकेट के नियंत्रण वाली <b>कांग्रेस (O - पुरानी कांग्रेस)</b> और इंदिरा के नेतृत्व वाली <b>कांग्रेस (R - नई कांग्रेस)</b>।</li>
-</ul>
-<!-- NCERT Cartoon: Tug of War 1969 -->
-<div class="illustration-box" style="border-color: #10b981 !important; margin-bottom: 30px;">
-<img alt="Congress Tug of War Cartoon" src="images/ch12/tug_of_war_cartoon.webp" style="width: 100%; max-width: 100%; display: block; margin: 0 auto; border: 4px solid #cbd5e1; border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.15); height: auto;"/>
-<div class="illustration-explanation" style="border-left-color: #10b981 !important;">
-<b>NCERT पुस्तक का प्रसिद्ध कार्टून (The Tug of War - 1969):</b><br/>
-<b>विवरण:</b> इस व्यंग्यात्मक कार्टून में इंदिरा गांधी और सिंडिकेट के नेताओं (कामराज, निजलिंगप्पा) को एक रस्सी के साथ खींचातानी करते दिखाया गया है, जो कांग्रेस की सत्ता और संगठन पर नियंत्रण के कड़े आंतरिक संघर्ष को दर्शाता है।<br/>
-<b>कार्टून आधारित प्रश्नोत्तर:</b><br/>
-            • <b>प्रश्न 1: यह रस्सी की खींचतान किस ऐतिहासिक विभाजन की ओर इशारा करती है?</b><br/>
-            • <b>उत्तर:</b> यह 1969 में कांग्रेस के दो विरोधी गुटों—Congress (O) और Congress (R)—के बीच हुए ऐतिहासिक विभाजन की ओर इशारा करती है।<br/>
-            • <b>प्रश्न 2: सिंडिकेट के नेताओं का इंदिरा गांधी के प्रति क्या प्रारंभिक सोचना था जो बाद में गलत सिद्ध हुआ?</b><br/>
-            • <b>उत्तर:</b> सिंडिकेट के नेताओं को लगता था कि इंदिरा गांधी को राजनीति का कम अनुभव है, इसलिए वे उन पर निर्भर रहेंगी और उनकी सलाह पर काम करेंगी। परंतु इंदिरा ने बैंकों के राष्ट्रीयकरण जैसे साहसिक और स्वतंत्र फैसले लेकर सिंडिकेट को किनारे कर दिया।
-        </div>
-</div>
-<!-- Visual Card: 1969 का राष्ट्रपति चुनाव - एन. संजीव रेड्डी बनाम वी.वी. गिरि -->
-<div class="illustration-box" style="border-color: #10b981 !important; margin-top: 30px; margin-bottom: 35px;">
-<img alt="1969 का राष्ट्रपति चुनाव - एन. संजीव रेड्डी बनाम वी.वी. गिरि" src="images/ch12/visual_presidential_election_1969.webp" style="width: 100%; max-width: 100%; display: block; margin: 0 auto; border: 4px solid #cbd5e1; border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.15); height: auto;"/>
-<div class="illustration-explanation" style="border-left-color: #10b981 !important;">
-<b>विज़ुअल नोट्स: 1969 का ऐतिहासिक राष्ट्रपति चुनाव (वी.वी. गिरि बनाम एन. संजीव रेड्डी):</b><br/>
-<b>विवरण:</b> डॉ. जाकिर हुसैन के निधन के बाद सिंडिकेट के उम्मीदवार संजीव रेड्डी के खिलाफ इंदिरा गांधी द्वारा स्वतंत्र उम्मीदवार वी.वी. गिरि का समर्थन और 'अन्तरात्मा की आवाज' पर मतदान की अपील।<br/>
-<b>महत्वपूर्ण प्रश्नोत्तर:</b><br/>
-            • <b>प्रश्न 1: 1969 के राष्ट्रपति चुनाव में इंदिरा गांधी की अपील का क्या प्रभाव पड़ा?</b><br/>
-            • <b>उत्तर:</b> सांसदों व विधायकों ने पार्टी व्हिप को दरकिनार कर अंतरात्मा की आवाज पर वी.वी. गिरि को चुनाव जिताया।<br/>
-            • <b>प्रश्न 2: वी.वी. गिरि की जीत ने कांग्रेस पर क्या प्रभाव डाला?</b><br/>
-            • <b>उत्तर:</b> इससे सिंडिकेट का प्रभाव समाप्त हो गया और कांग्रेस का औपचारिक विभाजन तय हो गया।<br/>
-</div>
-</div>
+  <!-- Photo: Nehru Death News -->
+  <div class="illustration-box">
+    <img src="images/ch12/nehru_death_news.webp" alt="नेहरू निधन समाचार पत्र (1964)"/>
+    <div class="illustration-title">ऐतिहासिक समाचार (27 मई 1964): पंडित नेहरू का निधन</div>
+    <div class="illustration-explanation">
+      <b>चित्र की व्याख्या:</b> 27 मई 1964 को प्रथम प्रधानमंत्री जवाहरलाल नेहरू के निधन की 'द हिंदुस्तान टाइम्स' की ऐतिहासिक मुख्य खबर। इस घटना के बाद भारतीय लोकतंत्र के भविष्य पर वैश्विक चिंताएं व्यक्त की गई थीं।
+    </div>
+  </div>
 
-<!-- NCERT Cartoon: Congress Bullocks Cartoon -->
-<div class="illustration-box" style="border-color: #3b82f6 !important; margin-bottom: 30px;">
-<img alt="Congress Bullocks Cartoon" src="images/ch12/congress_bullocks_cartoon.webp" style="width: 100%; max-width: 100%; display: block; margin: 0 auto; border: 4px solid #cbd5e1; border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.15); height: auto;"/>
-<div class="illustration-explanation" style="border-left-color: #3b82f6 !important;">
-<b>NCERT पुस्तक का ऐतिहासिक कार्टून - "दो बैलों की जोड़ी पर कब्जा" (Contest for Symbol):</b><br/>
-<b>विवरण:</b> 1969 के विभाजन के समय का कार्टून, जिसमें सिंडिकेट और इंदिरा गांधी दोनों गुटों को कांग्रेस के आधिकारिक दो बैलों वाले चुनाव चिह्न पर अपना-अपना दावा ठोकते दिखाया गया है।<br/>
-<b>महत्वपूर्ण प्रश्नोत्तर:</b><br/>
-            • <b>प्रश्न 1: विभाजन के बाद चुनाव चिह्न के लिए दोनों गुटों में क्या विवाद हुआ?</b><br/>
-            • <b>उत्तर:</b> दोनों गुटों (कांग्रेस-O और कांग्रेस-R) ने दावा किया कि वे ही असली कांग्रेस हैं और उन्हें ही "दो बैलों की जोड़ी" का मूल चिह्न मिलना चाहिए। चुनाव आयोग ने विवाद के कारण इस मूल चिह्न को जब्त (freeze) कर दिया।
-        </div>
-</div>
-<!-- Illustration Box 3 -->
-<div class="illustration-box" style="border-color: #7c3aed !important;">
-<div style="display: flex; flex-direction: column; gap: 20px; align-items: center;">
-<img alt="Congress Split News Headline" src="images/ch12/indira_socialist.webp" style="width: 100%; max-width: 100%; display: block; border: 4px solid #cbd5e1; border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.15); height: auto;"/>
-<img alt="Congress Split Cartoon" src="images/ch12/congress_split.webp" style="width: 100%; max-width: 100%; display: block; border: 4px solid #cbd5e1; border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.15); height: auto;"/>
-</div>
-<div class="illustration-explanation" style="border-left-color: #7c3aed !important;">
-<b>NCERT पुस्तक का चित्र व कार्टून (Congress Split - 1969):</b><br/>
-<b>विवरण:</b> 1969 के कांग्रेस विभाजन के समय के कार्टून और सुर्खियां। (ऊपर) 'द हिंदुस्तान टाइम्स' की सुर्खी "PM INSISTS ON FREE VOTE: Congress splits on historic day" जो राष्ट्रपति चुनाव के समय इंदिरा के रुख को दिखाती है। (नीचे) विजयन द्वारा बनाया गया प्रसिद्ध कार्टून जिसमें इंदिरा गांधी और सिंडिकेट नेताओं को कांग्रेस को समाप्त करने (Bapu's wish was to see the Congress dissolved) का व्यंग्य करते दिखाया गया है।<br/>
-<b>महत्वपूर्ण प्रश्नोत्तर:</b><br/>
-            • <b>प्रश्न 1: 1969 के राष्ट्रपति चुनाव में इंदिरा गांधी के समर्थक और सिंडिकेट के उम्मीदवार कौन-कौन थे?</b><br/>
-            • <b>उत्तर:</b> सिंडिकेट के आधिकारिक कांग्रेस उम्मीदवार <b>नीलम संजीव रेड्डी</b> थे, जबकि इंदिरा गांधी समर्थित उम्मीदवार तत्कालीन उपराष्ट्रपति <b>वी. वी. गिरि</b> थे। वी. वी. गिरि ने स्वतंत्र उम्मीदवार के रूप में चुनाव जीता।<br/>
-            • <b>प्रश्न 2: विभाजन के बाद बनी कांग्रेस के दोनों गुटों को किन तकनीकी नामों से जाना गया?</b><br/>
-            • <b>उत्तर:</b> (1) सिंडिकेट समर्थित पुरानी कांग्रेस को <b>Congress (O) - Organisation</b> कहा गया। (2) इंदिरा गांधी समर्थित नई कांग्रेस को <b>Congress (R) - Requisitionist</b> कहा गया।
-        </div>
-</div>
-<!-- Visual Card: 1969 कांग्रेस का ऐतिहासिक विभाजन - Congress (O) बनाम Congress (R) -->
-<div class="illustration-box" style="border-color: #7c3aed !important; margin-top: 30px; margin-bottom: 35px;">
-<img alt="1969 कांग्रेस का ऐतिहासिक विभाजन - Congress (O) बनाम Congress (R)" src="images/ch12/visual_congress_split_1969.webp" style="width: 100%; max-width: 100%; display: block; margin: 0 auto; border: 4px solid #cbd5e1; border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.15); height: auto;"/>
-<div class="illustration-explanation" style="border-left-color: #7c3aed !important;">
-<b>विज़ुअल नोट्स: 1969 का महान कांग्रेस विभाजन (Congress-O बनाम Congress-R):</b><br/>
-<b>विवरण:</b> अध्यक्ष निजलिंगप्पा द्वारा इंदिरा गांधी को पार्टी से निष्कासित करने के बाद पुरानी कांग्रेस (Organisation) और नई कांग्रेस (Requisitionist) में विभाजन।<br/>
-<b>महत्वपूर्ण प्रश्नोत्तर:</b><br/>
-            • <b>प्रश्न 1: Congress (O) और Congress (R) में मुख्य अंतर क्या था?</b><br/>
-            • <b>उत्तर:</b> Congress (O) सिंडिकेट के नियंत्रण वाली पुरानी रूढ़िवादी पार्टी थी, जबकि Congress (R) इंदिरा गांधी के नेतृत्व वाली प्रगतिशील समाजवादी पार्टी थी।<br/>
-            • <b>प्रश्न 2: विभाजन के बाद चुनाव चिह्न का क्या हुआ?</b><br/>
-            • <b>उत्तर:</b> पुराना 'दो बैलों की जोड़ी' सिंबल फ्रीज हो गया; इंदिरा को 'गाय-बछड़ा' और सिंडिकेट को 'चरखा कातता व्यक्ति' मिला।<br/>
-</div>
-</div>
+  <ul style="line-height: 1.8;">
+    <li><b>शास्त्री जी का सादगीपूर्ण नेतृत्व:</b> शास्त्री जी 1951 से कांग्रेस संगठन में सक्रिय थे और नेहरू मंत्रिमण्डल में निष्ठावान मंत्री रहे। वे अपनी सादगी और सिद्धांतों के लिए जाने जाते थे (रेल दुर्घटना पर नैतिकता के आधार पर रेल मंत्री पद से इस्तीफा दिया था)।</li>
+    <li><b>दो मुख्य चुनौतियाँ:</b>
+      <br/>1. <b>खाद्यान्न संकट (Food Crisis):</b> देश में भयंकर अकाल और खाद्यान्न की कमी।
+      <br/>2. <b>1965 भारत-पाक युद्ध:</b> पाकिस्तान का भारत पर आक्रमण।
+    </li>
+    <li><b>जय जवान जय किसान:</b> शास्त्री जी ने सीमा पर डटे सैनिकों और खेतों में मेहनत करते किसानों का मनोबल बढ़ाने के लिए 'जय जवान जय किसान' का ऐतिहासिक नारा दिया।</li>
+  </ul>
 
-<!-- Biography Card: V.V. Giri -->
-<div class="bio-box" style="border: 6px dashed #7c3aed !important; background-color: #faf5ff; border-radius: 12px; padding: 25px; margin-top: 35px; overflow: auto;">
-<img src="images/ch12/vv_giri_stamp.webp" style="width: 150px; height: auto; border: 4px solid #cbd5e1; border-radius: 6px; float: right; margin-left: 20px;"/>
-<div style="display: flex; gap: 20px; align-items: center; justify-content: left; margin-bottom: 15px; border-bottom: 2px solid #ddd6fe; padding-bottom: 10px;">
-<h4 style="font-weight: 900; margin: 0;">
-                वराहगिरि वेंकट गिरि (1894 - 1980)
-            </h4>
-</div>
-<p style=" line-height: 1.6; color: #5b21b6; margin: 0;">
-            • <b>उपाधि:</b> भारत के चौथे राष्ट्रपति (1969 - 1974)।<br/>
-            • <b>पृष्ठभूमि:</b> प्रमुख श्रमिक संघ (Trade Union) नेता। श्रीलंका में भारत के उच्चायुक्त और कई राज्यों के राज्यपाल रहे।<br/>
-            • <b>ऐतिहासिक घटना:</b> 1969 के राष्ट्रपति चुनाव में स्वतंत्र उम्मीदवार के रूप में उतरे और इंदिरा गांधी के 'अन्तरात्मा की आवाज़' वाले ऐतिहासिक कूटनीतिक समर्थन से कांग्रेस के आधिकारिक उम्मीदवार एन. संजीव रेड्डी को पराजित किया।<br/>
-            • <b>योगदान:</b> श्रमिक कल्याण और सार्वजनिक जीवन में शुचिता के प्रबल पक्षधर। इन्हें 1975 में भारत रत्न से सम्मानित किया गया।
-        </p>
-</div>
-</div>
-<!-- PART 4 SECTION: Privy Purse -->
-<div style="background-color: #fff7ed; padding: 40px; border-radius: 12px; margin-bottom: 40px; border: 6px solid #f97316;">
-<h2 class="part-header" style="font-weight: 900; margin-top: 0;">भाग 4: प्रिवी पर्स की समाप्ति और समाजवादी कदम (Socialist Reforms)</h2>
-<p>इंदिरा गांधी ने अपनी राजनैतिक पकड़ मजबूत करने के लिए खुद को गरीबों और भूमिहीनों के मसीहा के रूप में स्थापित करने हेतु कई कड़े आर्थिक फैसले लिए।</p>
-<p><b>प्रिवी पर्स की समाप्ति और समाजवादी कदमों के 5 मुख्य आयाम:</b></p>
-<ul style=" line-height: 2.2;">
-<li><b>1. प्रिवी पर्स (Privy Purse) क्या था:</b> आजादी के समय रियासतों के भारत में विलय के बदले राजा-महाराजाओं को दी जाने वाली विशेष पेंशन और विशेषाधिकार।</li>
-<li><b>2. समानता के सिद्धांत पर चोट:</b> इंदिरा का तर्क था कि एक लोकतांत्रिक समाज में जन्म के आधार पर विशेष भत्ते और पेंशन देना समानता के मौलिक अधिकार के खिलाफ है।</li>
-<li><b>3. 14 निजी बैंकों का राष्ट्रीयकरण (1969):</b> बैंकों का पैसा कुछ अमीर घरानों की मुट्ठी से निकालकर किसानों और छोटे उद्योगों तक पहुँचाने के लिए 14 बैंकों को सरकारी घोषित किया गया।</li>
-<li><b>4. 26वाँ संविधान संशोधन (1971):</b> सुप्रीम कोर्ट द्वारा प्रिवी पर्स बंद करने के अध्यादेश को रद्द करने के बाद, इंदिरा ने 1971 की भारी जीत के बाद संविधान संशोधन कर इसे जड़ से खत्म कर दिया।</li>
-<li><b>5. लोक-लुभावन छवि का निर्माण:</b> इन नीतियों ने मोरारजी देसाई और सिंडिकेट को 'अमीर-समर्थक' और इंदिरा को 'गरीब-रक्षक' साबित करने में मुख्य भूमिका निभाई।</li>
-</ul>
-</div>
-<!-- Visual Card: प्रिवी पर्स की समाप्ति और 14 बैंकों का राष्ट्रीयकरण (1969-1971) -->
-<div class="illustration-box" style="border-color: #f97316 !important; margin-top: 30px; margin-bottom: 35px;">
-<img alt="प्रिवी पर्स की समाप्ति और 14 बैंकों का राष्ट्रीयकरण (1969-1971)" src="images/ch12/visual_privy_purse_bank_nationalisation.webp" style="width: 100%; max-width: 100%; display: block; margin: 0 auto; border: 4px solid #cbd5e1; border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.15); height: auto;"/>
-<div class="illustration-explanation" style="border-left-color: #f97316 !important;">
-<b>विज़ुअल नोट्स: प्रिवी पर्स का अंत, 14 बैंकों का राष्ट्रीयकरण और समाजवादी कदम:</b><br/>
-<b>विवरण:</b> राजाओं के रियासती भत्ते (प्रिवी पर्स) को 26वें संविधान संशोधन (1971) से समाप्त करना और 14 निजी बैंकों का राष्ट्रीयकरण कर गरीबों तक बैंकिंग सेवाएँ पहुँचाना।<br/>
-<b>महत्वपूर्ण प्रश्नोत्तर:</b><br/>
-            • <b>प्रश्न 1: प्रिवी पर्स (Privy Purse) की समाप्ति को इंदिरा गांधी ने क्यों जरूरी बताया?</b><br/>
-            • <b>उत्तर:</b> क्योंकि लोकतांत्रिक भारत में जन्म और वंश के आधार पर विशेष भत्ते व पेंशन देना संवैधानिक समानता के सिद्धांत के खिलाफ था।<br/>
-            • <b>प्रश्न 2: 14 बैंकों के राष्ट्रीयकरण का मुख्य उद्देश्य क्या था?</b><br/>
-            • <b>उत्तर:</b> बैंकों की पूँजी को चंद उद्योगपतियों से निकालकर किसानों, कृषि और छोटे व्यवसायियों के लिए सुलभ कराना।<br/>
-</div>
-</div>
+  <!-- Leader Profile: Shastri -->
+  <div class="leader-card">
+    <img src="images/ch12/shastri_stamp.webp" alt="लाल बहादुर शास्त्री"/>
+    <div class="leader-info">
+      <h4 style="margin-top:0;">लाल बहादुर शास्त्री (1904 - 1966)</h4>
+      <p style="margin:0;">• <b>पद:</b> भारत के दूसरे प्रधानमंत्री (1964 - 1966)।<br/>
+      • <b>योगदान:</b> 1965 के भारत-पाक युद्ध में दृढ़ नेतृत्व, 'जय जवान जय किसान' का नारा, और दुग्ध उत्पादन बढ़ाने हेतु 'श्वेत क्रांति' (White Revolution / Amul) को प्रोत्साहन। ताशकंद में 10 जनवरी 1966 को रहस्यमयी परिस्थितियों में निधन।</p>
+    </div>
+  </div>
 
-<!-- PART 5 SECTION: 1971 Election -->
-<div style="background-color: #ecfdf5; padding: 40px; border-radius: 12px; margin-bottom: 40px; border: 6px solid #10b981;">
-<h2 class="part-header" style="font-weight: 900; margin-top: 0;">भाग 5: 1971 का आम चुनाव और 'गरीबी हटाओ' (Landslide Victory)</h2>
-<p>1971 का चुनाव भारत की संसदीय प्रणाली का एक अभूतपूर्व मुकाबला था। इंदिरा गांधी ने पार्टी विभाजन के बाद संसद में अपना पूर्ण बहुमत खो दिया था और वे कम्युनिस्ट पार्टी (CPI) के बाहरी समर्थन से सरकार चला रही थीं। उन्होंने लोकसभा को समय से पूर्व भंग करके नए जनादेश के लिए चुनाव मैदान में उतरने का साहसिक फैसला लिया। इस चुनाव में सारा विपक्ष एक तरफ खड़ा था, जिसे 'ग्रैंड अलायंस' कहा गया, और दूसरी तरफ इंदिरा गांधी अपने अकेले करिश्मे पर चुनावी समर में उतरी थीं।, जिसमें इंदिरा गांधी ने पूरे विपक्ष के मोर्चे (ग्रैंड अलायंस) को अकेले धूल चटा दी।</p>
-<p><b>इंदिरा गांधी की 1971 की ऐतिहासिक जीत के 5 प्रमुख कारक:</b></p>
-<ul style=" line-height: 2.2;">
-<li><b>1. गरीबी हटाओ (Garibi Hatao) का नारा:</b> विपक्ष के पास केवल "इंदिरा हटाओ" का नारा था, जिसके मुकाबले इंदिरा ने "गरीबी हटाओ" का सकारात्मक, उम्मीद से भरा लोकप्रिय नारा दिया।</li>
-<li><b>2. ग्रैंड अलायंस की कमजोरी:</b> गैर-कांग्रेसी विपक्षी दलों के गठबंधन (Grand Alliance) के पास कोई साझा एजेंडा या वैकल्पिक नेतृत्व नहीं था।</li>
-<li><b>3. वंचित वर्गों का मजबूत समर्थन:</b> भूमिहीन मजदूरों, दलितों, आदिवासियों, अल्पसंख्यकों और महिलाओं ने इंदिरा गांधी की कांग्रेस को एकतरफा वोट दिया।</li>
-<li><b>4. बांग्लादेश का उदय और 1971 का युद्ध:</b> चुनाव के ठीक बाद भारत-पाक युद्ध में ऐतिहासिक जीत और बांग्लादेश के निर्माण से इंदिरा गांधी को पूरे देश में देवी 'दुर्गा' के रूप में देखा गया।</li>
-<li><b>5. पार्टी पर पूर्ण नियंत्रण:</b> 352 सीटों के साथ प्रचंड बहुमत पाकर इंदिरा ने यह साबित कर दिया कि असली कांग्रेस उनकी कांग्रेस (R) ही है।</li>
-</ul>
+  <!-- Photo: Shastri & Indira -->
+  <div class="illustration-box">
+    <img src="images/ch12/indira_shastri.webp" alt="लाल बहादुर शास्त्री और इंदिरा गांधी"/>
+    <div class="illustration-title">ऐतिहासिक चित्र: लाल बहादुर शास्त्री और इंदिरा गांधी</div>
+    <div class="illustration-explanation">
+      <b>चित्र की व्याख्या:</b> प्रधानमंत्री लाल बहादुर शास्त्री के साथ उनकी कैबिनेट में सूचना एवं प्रसारण मंत्री के रूप में कार्य कर रहीं इंदिरा गांधी का ऐतिहासिक चित्र।
+    </div>
+  </div>
 
+  <!-- Visual Card 1: Succession Shastri 1964 -->
+  <div class="illustration-box">
+    <img src="images/ch12/visual_succession_shastri_1964.webp" alt="नेहरू के बाद उत्तराधिकार: शास्त्री युग एवं जय जवान जय किसान (1964)"/>
+    <div class="illustration-title">विज़ुअल नोट्स 1: नेहरू के बाद उत्तराधिकार एवं शास्त्री युग (1964)</div>
+    <div class="visual-summary">
+      <b>दृश्य व्याख्या (Visual Summary):</b> यह 16:9 दृश्य कार्ड 1964 में नेहरू के निधन के बाद लोकतंत्र की निरंतरता, लाल बहादुर शास्त्री के निर्विरोध चयन, 1965 युद्ध नेतृत्व और खाद्यान्न संकट के दौरान 'जय जवान जय किसान' नारे के ऐतिहासिक महत्व को दर्शाता है।
+    </div>
+  </div>
 
-<!-- NCERT Cartoon: Grand Alliance vs Giant Indira -->
-<div class="illustration-box" style="border-color: #f43f5e !important; margin-bottom: 30px;">
-<img alt="Grand Alliance Cartoon" src="images/ch12/grand_alliance_cartoon.webp" style="width: 100%; max-width: 100%; display: block; margin: 0 auto; border: 4px solid #cbd5e1; border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.15); height: auto;"/>
-<div class="illustration-explanation" style="border-left-color: #f43f5e !important;">
-<b>NCERT पुस्तक का प्रसिद्ध कार्टून (The Grand Alliance Challenge - 1971):</b><br/>
-<b>विवरण:</b> आर.के. लक्ष्मण द्वारा बनाया गया यह कार्टून विपक्षी नेताओं (ग्रैंड अलायंस) को एक छोटी नाव में एक विशाल इंदिरा गांधी का मुकाबला करने का प्रयास करते दिखाता है, जो उस समय के एकतरफा शक्ति संतुलन को दर्शाता है।<br/>
-<b>कार्टून आधारित प्रश्नोत्तर:</b><br/>
-            • <b>प्रश्न 1: कार्टून में इंदिरा गांधी को इतना विशाल और विपक्षी नेताओं को इतना बौना क्यों दिखाया गया है?</b><br/>
-            • <b>उत्तर:</b> यह 1971 के चुनावों में इंदिरा गांधी की अपार जन-लोकप्रियता और उनके सशक्त राजनैतिक कद को दर्शाता है। उनके सामने विपक्ष का संगठन और जनाधार बहुत बिखरा हुआ और कमजोर था।<br/>
-            • <b>प्रश्न 2: विपक्ष के पास इंदिरा गांधी के "गरीबी हटाओ" नारे का क्या मुकाबला था?</b><br/>
-            • <b>उत्तर:</b> विपक्ष के पास कोई वैकल्पिक आर्थिक एजेंडा या नीतिगत कार्यक्रम नहीं था; उनका एकमात्र साझा नारा <b>"इंदिरा हटाओ"</b> था, जिसे जनता ने स्वीकार नहीं किया।
-        </div>
-</div>
-<!-- NCERT Cartoon: The Grand Finish (1971) -->
-<div class="illustration-box" style="border-color: #10b981 !important; margin-bottom: 35px;">
-<img alt="The Grand Finish Cartoon" src="images/ch12/grand_finish_cartoon.webp" style="width: 100%; max-width: 100%; display: block; margin: 0 auto; border: 4px solid #cbd5e1; border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.15); height: auto;"/>
-<div class="illustration-explanation" style="border-left-color: #10b981 !important;">
-<b>NCERT पुस्तक का प्रसिद्ध कार्टून - "द ग्रैंड फिनिश" (The Grand Finish - 1971):</b><br/>
-<b>विवरण:</b> आर.के. लक्ष्मण द्वारा बनाया गया यह व्यंग्यात्मक कार्टून 1971 के लोकसभा चुनावों के परिणामों की व्याख्या करता है। इसमें विजय पोडियम पर पहले, दूसरे और तीसरे तीनों स्थानों पर अकेले इंदिरा गांधी (मजबूत निर्वाचन क्षेत्र, कमजोर निर्वाचन क्षेत्र और संदेहास्पद निर्वाचन क्षेत्र) को खड़ा दिखाया गया है। नीचे जमीन पर विपक्षी नेता (जैसे मोरारजी देसाई, वाजपेयी, चरण सिंह) हक्के-बक्के खड़े होकर कह रहे हैं कि उन्हें विश्वास नहीं हो रहा कि वे पूरी तरह हार गए।<br/>
-<b>कार्टून आधारित प्रश्नोत्तर:</b><br/>
-            • <b>प्रश्न 1: इस कार्टून में पहले, दूसरे और तीसरे तीनों स्थानों पर केवल एक ही नेता (इंदिरा गांधी) को दिखाने का क्या संदेश है?</b><br/>
-            • <b>उत्तर:</b> यह दर्शाता है कि 1971 के चुनावों में इंदिरा गांधी की कांग्रेस (R) को देश के सभी क्षेत्रों (मजबूत, कमजोर और कठिन तीनों तरह की सीटों पर) में एकतरफा प्रचंड बहुमत हासिल हुआ था। उनके प्रभाव के सामने विपक्ष का नामोनिशान पूरी तरह समाप्त हो गया था।<br/>
-            • <b>प्रश्न 2: 1971 के लोकसभा चुनावों में इंदिरा गांधी की भारी सफलता का मुख्य कारण क्या था?</b><br/>
-            • <b>उत्तर:</b> मुख्य कारण उनका लोक-लुभावन <b>"गरीबी हटाओ"</b> का नारा, वंचितों (भूमिहीनों, दलितों, महिलाओं, अल्पसंख्यकों) का मजबूत समर्थन, और उनका व्यक्तिगत करिश्माई नेतृत्व था।
-        </div>
-</div>
-<!-- Illustration Box 5 -->
-<div class="illustration-box" style="border-color: #10b981 !important;">
-<img alt="Indira Gandhi 1971 Victory" src="images/ch12/indira_victory.webp" style="width: 100%; max-width: 100%; display: block; margin: 0 auto; border: 4px solid #cbd5e1; border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.15); height: auto;"/>
-<div class="illustration-explanation" style="border-left-color: #10b981 !important;">
-<b>NCERT पुस्तक का चित्र (1971 General Election Results):</b><br/>
-<b>विवरण:</b> 1971 के ऐतिहासिक परिणामों के बाद देश में जश्न मनाते कांग्रेसी कार्यकर्ता और इंदिरा गांधी का विजयी पोस्टर। यह भारतीय राजनीति में इंदिरा गांधी के निर्विवाद वर्चस्व के आरंभ को दर्शाता है।<br/>
-<b>महत्वपूर्ण प्रश्नोत्तर:</b><br/>
-            • <b>प्रश्न 1: 1971 के आम चुनाव में विपक्ष के गठबंधन को किस नाम से जाना गया और उसमें कौन से दल शामिल थे?</b><br/>
-            • <b>उत्तर:</b> विपक्ष के इस मोर्चे को <b>"ग्रैंड अलायंस" (Grand Alliance)</b> कहा गया। इसमें सिंडिकेट की कांग्रेस (O), एसएसपी, पीएसपी, जनसंघ और स्वतंत्र पार्टी जैसे प्रमुख गैर-कांग्रेसी दल शामिल थे।<br/>
-            • <b>प्रश्न 2: 1971 के आम चुनाव में कांग्रेस (R) और सीपीआई (CPI) गठबंधन को कुल कितनी सीटें मिली थीं?</b><br/>
-            • <b>उत्तर:</b> इस गठबंधन ने लोकसभा की कुल 518 सीटों में से <b>375 सीटें</b> जीती थीं, जिसमें से अकेले इंदिरा गांधी की कांग्रेस (R) ने <b>352 सीटें</b> और 48.4% मत प्राप्त किए थे।
-        </div>
-</div>
-</div>
-<!-- Visual Card: 1971 का आम चुनाव - गरीबी हटाओ बनाम इंदिरा हटाओ -->
-<div class="illustration-box" style="border-color: #10b981 !important; margin-top: 30px; margin-bottom: 35px;">
-<img alt="1971 का आम चुनाव - गरीबी हटाओ बनाम इंदिरा हटाओ" src="images/ch12/visual_1971_election_garibi_hatao.webp" style="width: 100%; max-width: 100%; display: block; margin: 0 auto; border: 4px solid #cbd5e1; border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.15); height: auto;"/>
-<div class="illustration-explanation" style="border-left-color: #10b981 !important;">
-<b>विज़ुअल नोट्स: 1971 आम चुनाव - 'गरीबी हटाओ' (Garibi Hatao) का ऐतिहासिक नारा व प्रचंड जीत:</b><br/>
-<b>विवरण:</b> विपक्ष के 'ग्रैंड अलायंस' के नारे 'इंदिरा हटाओ' के जवाब में इंदिरा गांधी का सकारात्मक नारा 'गरीबी हटाओ' और 352 सीटों के साथ प्रचंड बहुमत।<br/>
-<b>महत्वपूर्ण प्रश्नोत्तर:</b><br/>
-            • <b>प्रश्न 1: 1971 में विपक्ष के गठबंधन को किस नाम से जाना गया?</b><br/>
-            • <b>उत्तर:</b> ग्रैंड अलायंस (Grand Alliance), जिसमें सिंडिकेट की Congress-O, जनसंघ, स्वतंत्र पार्टी व सोशलिस्ट दल शामिल थे।<br/>
-            • <b>प्रश्न 2: इंदिरा गांधी की 1971 में भारी जीत के मुख्य कारण क्या थे?</b><br/>
-            • <b>उत्तर:</b> 'गरीबी हटाओ' नारा, वंचित वर्गों (दलित, गरीब, महिला, अल्पसंख्यक) का एकतरफा समर्थन और उनका करिश्माई नेतृत्व।<br/>
-</div>
-</div>
+  <hr style="border: 1px dashed #93c5fd; margin: 35px 0;"/>
 
-<!-- PART 6 SECTION: Restoration -->
-<div style="background-color: #f0f9ff; padding: 40px; border-radius: 12px; margin-bottom: 40px; border: 6px solid #0ea5e9;">
-<h2 class="part-header" style="font-weight: 900; margin-top: 0;">भाग 6: कांग्रेस प्रणाली की पुनर्स्थापना और उसकी प्रकृति (Restoration of Congress)</h2>
-<p>1971 की जीत के बाद इंदिरा गांधी ने दावा किया कि उन्होंने नेहरू के दौर की कांग्रेस प्रणाली को पुनर्जीवित कर दिया है। लेकिन इस 'नई कांग्रेस' की प्रकृति पुरानी कांग्रेस से बहुत अलग थी।</p>
-<p><b>पुरानी कांग्रेस और इंदिरा गांधी की नई कांग्रेस में 5 मुख्य अंतर:</b></p>
-<ul style=" line-height: 2.2;">
-<li><b>1. सांगठनिक मजबूती बनाम नेता की लोकप्रियता:</b> पुरानी कांग्रेस के पास हर राज्य और जिले में मजबूत संगठन था, जबकि नई कांग्रेस पूरी तरह से इंदिरा गांधी की व्यक्तिगत लोकप्रियता और करिश्मे पर टिकी थी।</li>
-<li><b>2. सर्वसमावेशी छतरी बनाम वफादारी (Loyalty):</b> पुरानी कांग्रेस विभिन्न विचारों (वाम, दक्षिण, मध्यमार्गी) को साथ लेकर चलती थी, जबकि नई कांग्रेस में नेतृत्व के प्रति वफादारी को सर्वोपरि माना गया।</li>
-<li><b>3. आंतरिक लोकतंत्र का अंत:</b> पुरानी कांग्रेस में मतभेदों पर आंतरिक चर्चा होती थी, लेकिन नई कांग्रेस में सारे फैसले दिल्ली (हाईकमांड) से थोपे जाने लगे।</li>
-<li><b>4. गरीबों पर केंद्रित एकतरफा जनाधार:</b> पुरानी कांग्रेस में समाज के सभी वर्गों (जमींदारों से लेकर मजदूरों तक) का प्रतिनिधित्व था, जबकि नई कांग्रेस ने अपना जनाधार पूरी तरह गरीबों, पिछड़ों और अल्पसंख्यकों के बीच केंद्रित किया।</li>
-<li><b>5. संस्थागत कमजोरी और केंद्रीकरण:</b> नई कांग्रेस में संगठन कमजोर हो गया, जिससे आने वाले वर्षों में सत्ता के अत्यधिक केंद्रीकरण और 'आपातकाल' (Emergency) का मार्ग प्रशस्त हुआ।</li>
-</ul>
-<!-- Illustration Box 6 -->
-<div class="illustration-box" style="border-color: #0284c7 !important;">
-<img alt="The Era of Indira Gandhi Dominance" src="images/ch12/indira_dominance.webp" style="width: 100%; max-width: 100%; display: block; margin: 0 auto; border: 4px solid #cbd5e1; border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.15); height: auto;"/>
-<div class="illustration-explanation" style="border-left-color: #0284c7 !important;">
-<b>NCERT पुस्तक का चित्र/कार्टून (Indira Dominance and Restoration):</b><br/>
-<b>विवरण:</b> यह चित्र/कार्टून इंदिरा गांधी के कांग्रेस के भीतर और बाहर निर्विवाद राजनैतिक वर्चस्व को दर्शाता है, जिसमें सभी अन्य नेता और संस्थान उनके प्रभाव के नीचे दिखाई देते हैं।<br/>
-<b>महत्वपूर्ण प्रश्नोत्तर:</b><br/>
-            • <b>प्रश्न 1: क्या 1971 की जीत के बाद पुरानी 'कांग्रेस प्रणाली' की पुनर्स्थापना (Restoration) हो पाई थी? तर्क सहित उत्तर दें।</b><br/>
-            • <b>उत्तर:</b> नहीं, यह पुनर्स्थापना नहीं बल्कि कांग्रेस का 'कायाकल्प' था। यद्यपि कांग्रेस सत्ता में वापस आ गई, परंतु उसने अपनी पुरानी 'सर्वसमावेशी' प्रकृति और सांगठनिक ढांचे को खो दिया था। अब वह पूरी तरह से एक नेता की सत्ता पर आधारित दल बन चुकी थी।<br/>
-            • <b>प्रश्न 2: नई कांग्रेस ने नेहरू के दौर के किस मूल राजनैतिक संतुलन को बदल दिया था?</b><br/>
-            • <b>उत्तर:</b> नेहरू के दौर में पार्टी के भीतर विभिन्न गुटों (Factions) में समन्वय और मतभेदों को सुलझाने की क्षमता थी, जिससे लोकतंत्र बना रहता था। नई कांग्रेस ने इस बहुगुटीय व्यवस्था को समाप्त कर 'एकछत्र कमान' लागू कर दी।
-        </div>
-</div>
-<!-- Visual Card: कांग्रेस प्रणाली की पुनर्स्थापना और उसकी प्रकृति -->
-<div class="illustration-box" style="border-color: #0ea5e9 !important; margin-top: 30px; margin-bottom: 35px;">
-<img alt="कांग्रेस प्रणाली की पुनर्स्थापना और उसकी प्रकृति" src="images/ch12/visual_congress_restoration_nature.webp" style="width: 100%; max-width: 100%; display: block; margin: 0 auto; border: 4px solid #cbd5e1; border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.15); height: auto;"/>
-<div class="illustration-explanation" style="border-left-color: #0ea5e9 !important;">
-<b>विज़ुअल नोट्स: 1971 युद्ध विजय (बांग्लादेश निर्माण) व 'कांग्रेस प्रणाली की पुनर्स्थापना' की प्रकृति:</b><br/>
-<b>विवरण:</b> 1971 पाकिस्तान युद्ध विजय (बांग्लादेश निर्माण) के बाद इंदिरा गांधी का सर्वोपरि कद और 'कांग्रेस प्रणाली' की नई प्रकृति—जो पार्टी संगठन के बजाय एक नेता के करिश्मे पर आधारित थी।<br/>
-<b>महत्वपूर्ण प्रश्नोत्तर:</b><br/>
-            • <b>प्रश्न 1: नेहरू की पुरानी कांग्रेस और इंदिरा की नई कांग्रेस में मुख्य अंतर क्या था?</b><br/>
-            • <b>उत्तर:</b> पुरानी कांग्रेस सांगठनिक ढांचे और सर्वसमावेशी गुटबाज़ी पर टिकी थी; नई कांग्रेस पूरी तरह इंदिरा गांधी की व्यक्तिगत छवि व हाईकमान पर निर्भर थी।<br/>
-            • <b>प्रश्न 2: 1971 के भारत-पाक युद्ध का इंदिरा गांधी के राजनीतिक कद पर क्या प्रभाव पड़ा?</b><br/>
-            • <b>उत्तर:</b> युद्ध में ऐतिहासिक जीत और बांग्लादेश निर्माण से पूरे देश में उन्हें देवी 'दुर्गा' के रूप में देखा गया और उनका वर्चस्व स्थापित हो गया।<br/>
-</div>
-</div>
+  <h3>1.2 ताशकंद समझौता और इंदिरा गांधी का आगमन (1966)</h3>
 
-<!-- Biography Card: Indira Gandhi -->
-<div class="bio-box" style="border: 6px dashed #0ea5e9 !important; background-color: #f0f9ff; border-radius: 12px; padding: 25px; margin-top: 35px; overflow: auto;">
-<img src="images/ch12/indira_stamp.webp" style="width: 150px; height: auto; border: 4px solid #cbd5e1; border-radius: 6px; float: right; margin-left: 20px;"/>
-<div style="display: flex; gap: 20px; align-items: center; justify-content: left; margin-bottom: 15px; border-bottom: 2px solid #bae6fd; padding-bottom: 10px;">
-<h4 style="font-weight: 900; margin: 0;">
-                इंदिरा गांधी (1917 - 1984)
-            </h4>
+  <p>10 जनवरी 1966 को ताशकंद (सोवियत संघ) में पाकिस्तान के राष्ट्रपति अय्यूब खान के साथ शांति समझौते पर हस्ताक्षर करने के कुछ ही घंटों बाद शास्त्री जी का आकस्मिक निधन हो गया। इसके बाद पुनः उत्तराधिकार का संकट खड़ा हुआ।</p>
+
+  <ul style="line-height: 1.8;">
+    <li><b>इंदिरा गांधी बनाम मोरारजी देसाई:</b> इस बार प्रधानमंत्री पद के लिए सीधा मुकाबला हुआ। एक तरफ मोरारजी देसाई (बॉम्बे के पूर्व सीएम व वरिष्ठ नेता) थे, तो दूसरी तरफ इंदिरा गांधी (नेहरू की पुत्री व कांग्रेस अध्यक्ष रह चुकीं)।</li>
+    <li><b>संसदीय दल में गुप्त मतदान:</b> सिंडिकेट के नेताओं ने इंदिरा गांधी का समर्थन किया। कांग्रेस सांसदों के गुप्त मतदान में इंदिरा गांधी ने मोरारजी देसाई को भारी मतों से हराकर प्रधानमंत्री पद हासिल किया।</li>
+    <li><b>सिंडिकेट की रणनीति:</b> वरिष्ठ नेताओं का मानना था कि इंदिरा गांधी प्रशासनिक मामलों में नई हैं, इसलिए वे अपने मार्गदर्शन के लिए सिंडिकेट पर निर्भर रहेंगी।</li>
+  </ul>
+
+  <!-- Cartoon: Succession Race -->
+  <div class="illustration-box">
+    <img src="images/ch12/succession_race_cartoon.webp" alt="उत्तराधिकार की दौड़ कार्टून"/>
+    <div class="illustration-title">NCERT कार्टून: 1966 का उत्तराधिकार मुकाबला</div>
+    <div class="illustration-explanation">
+      <b>चित्र की व्याख्या:</b> शास्त्री जी के निधन के बाद मोरारजी देसाई और इंदिरा गांधी के बीच प्रधानमंत्री पद के लिए हुई राजनीतिक होड़ को दर्शाता ऐतिहासिक व्यंग्यात्मक कार्टून।
+    </div>
+  </div>
+
+  <!-- Visual Card 2: Indira Entry 1966 -->
+  <div class="illustration-box">
+    <img src="images/ch12/visual_indira_gandhi_entry_1966.webp" alt="1966 उत्तराधिकार: इंदिरा गांधी बनाम मोरारजी देसाई"/>
+    <div class="illustration-title">विज़ुअल नोट्स 2: 1966 उत्तराधिकार - इंदिरा गांधी बनाम मोरारजी देसाई</div>
+    <div class="visual-summary">
+      <b>दृश्य व्याख्या (Visual Summary):</b> यह 16:9 दृश्य कार्ड 1966 में ताशकंद घटनाक्रम के बाद कांग्रेस संसदीय दल के गुप्त मतदान में इंदिरा गांधी की जीत तथा सिंडिकेट द्वारा उन्हें समर्थन देने के रणनीतिक कारणों को प्रदर्शित करता है।
+    </div>
+  </div>
+
+  <!-- Leader Profile: Kamraj -->
+  <div class="leader-card">
+    <img src="images/ch12/k_kamraj_stamp.webp" alt="के. कामराज"/>
+    <div class="leader-info">
+      <h4 style="margin-top:0;">के. कामराज (1903 - 1975)</h4>
+      <p style="margin:0;">• <b>पद:</b> मद्रास (तमिलनाडु) के पूर्व मुख्यमंत्री, स्वतंत्रता सेनानी और कांग्रेस के राष्ट्रीय अध्यक्ष (1963-1967)।<br/>
+      • <b>कामराज योजना (Kamraj Plan):</b> 1963 में प्रस्ताव दिया कि वरिष्ठ कांग्रेसी नेता मंत्री पद त्याग कर संगठन का काम संभालें। उन्हें भारतीय राजनीति का 'किंगमेकर' (Kingmaker) कहा जाता था जिन्होंने शास्त्री जी और इंदिरा गांधी दोनों को PM बनाने में अहम भूमिका निभाई।</p>
+    </div>
+  </div>
+
+  <!-- PART 2 -->
+  <h2>भाग 2: 1967 के चौथे आम चुनाव और 'राजनैतिक भूकंप' (1967 Fourth General Elections)</h2>
+
+  <p>1967 के चौथे आम चुनाव भारत के लोकतांत्रिक इतिहास का एक बड़ा मोड़ साबित हुए। यह पहला चुनाव था जो जवाहरलाल नेहरू के बिना लड़ा गया।</p>
+
+  <h3>2.1 आर्थिक संकट और 'गैर-कांग्रेसवाद' का सिद्धांत</h3>
+  <ul style="line-height: 1.8;">
+    <li><b>आर्थिक संकट का दौर:</b> 1965-66 में सूखा, खाद्यान्न की कमी, विदेशी मुद्रा भंडार में गिरावट और अमेरिकी दबाव में भारतीय रुपये का अवमूल्यन (Devaluation of Rupee - $1 = ₹5 से बढ़ाकर ₹7.50)। इससे महंगाई और बंद का माहौल बना।</li>
+    <li><b>गैर-कांग्रेसवाद (Non-Congressism):</b> समाजवादी नेता <b>डॉ. राममनोहर लोहिया</b> ने तर्क दिया कि कांग्रेस का शासन अलोकतांत्रिक और गरीबों के खिलाफ है। उन्होंने गैर-कांग्रेसी विपक्षी दलों से एक एकजुट होकर चुनाव लड़ने का आह्वान किया ताकि कांग्रेस को सत्ता से बाहर किया जा सके।</li>
+  </ul>
+
+  <!-- Photo: Congress Two Bullocks Symbol -->
+  <div class="illustration-box">
+    <img src="images/ch12/congress_bullocks_symbol.webp" alt="दो बैलों की जोड़ी चुनाव चिह्न"/>
+    <div class="illustration-title">ऐतिहासिक चुनाव चिह्न: दो बैलों की जोड़ी (1952 - 1969)</div>
+    <div class="illustration-explanation">
+      <b>चित्र की व्याख्या:</b> 1952 से 1969 तक अविभाजित भारतीय राष्ट्रीय कांग्रेस का आधिकारिक चुनाव चिह्न 'दो बैलों की जोड़ी' (Two Bullocks with Yoke) था, जो देश के कृषि प्रधान आधार का प्रतीक था।
+    </div>
+  </div>
+
+  <h3>2.2 1967 के चुनावी परिणाम (Political Earthquake)</h3>
+  <ul style="line-height: 1.8;">
+    <li><b>केंद्र में बहुमत घटा:</b> लोकसभा में कांग्रेस को बहुमत तो मिला, लेकिन 1952 के बाद सबसे कम सीटें (283 सीटें) प्राप्त हुईं। कई केंद्रीय मंत्री चुनाव हार गए (जैसे के. कामराज, एस.के. पाटिल, अतुल्य घोष)।</li>
+    <li><b>9 राज्यों में कांग्रेस बाहर:</b> भारत के 9 राज्यों (पंजाब, हरियाणा, यूपी, बिहार, पश्चिम बंगाल, उड़ीसा, मद्रास, केरल और एमपी) में कांग्रेस सरकार बनाने से चूक गई। मद्रास (तमिलनाडु) में पहली बार <b>द्रमुक (DMK)</b> को पूर्ण बहुमत मिला।</li>
+  </ul>
+
+  <!-- Photo: Non-Congress Map -->
+  <div class="illustration-box">
+    <img src="images/ch12/non_congress_map.webp" alt="गैर-कांग्रेसी राज्यों का मानचित्र (1967)"/>
+    <div class="illustration-title">ऐतिहासिक मानचित्र: 1967 में गैर-कांग्रेसी राज्यों का उदय</div>
+    <div class="illustration-explanation">
+      <b>चित्र की व्याख्या:</b> 1967 के ऐतिहासिक विधानसभा चुनावों के बाद जिन 9 राज्यों में कांग्रेस सत्ता से बाहर हुई, उन्हें प्रदर्शित करता भारत का मानचित्र। चुनाव विश्लेषकों ने इसे 'राजनैतिक भूकंप' कहा था।
+    </div>
+  </div>
+
+  <!-- Leader Profiles Grid for Part 2 -->
+  <div class="leader-card">
+    <img src="images/ch12/lohia_stamp.webp" alt="डॉ. राम मनोहर लोहिया"/>
+    <div class="leader-info">
+      <h4 style="margin-top:0;">डॉ. राम मनोहर लोहिया (1910 - 1967)</h4>
+      <p style="margin:0;">• <b>परिचय:</b> भारत के महान समाजवादी विचारक, स्वतंत्रता सेनानी और प्रखर संसदविद।<br/>
+      • <b>सिद्धान्त:</b> 'गैर-कांग्रेसवाद' (Non-Congressism) के जनक और पिछड़ों को 60% आरक्षण के समर्थक। संयुक्त सोशलिस्ट पार्टी (SSP) के संस्थापक।</p>
+    </div>
+  </div>
+
+  <div class="leader-card">
+    <img src="images/ch12/annadurai_stamp.webp" alt="सी. नटराजन अन्नादुरै"/>
+    <div class="leader-info">
+      <h4 style="margin-top:0;">सी. नटराजन अन्नादुरै (1909 - 1969)</h4>
+      <p style="margin:0;">• <b>परिचय:</b> द्रविड़ मुन्नेत्र कड़गम (DMK) के संस्थापक और तमिलनाडु के लोकप्रिय मुख्यमंत्री (1967-69)।<br/>
+      • <b>उपलब्धि:</b> 1965 के हिंदी विरोधी आंदोलन के नायक। 1967 में किसी एक राज्य में स्पष्ट बहुमत पाने वाले पहले क्षेत्रीय दल के नेता।</p>
+    </div>
+  </div>
+
+  <div class="leader-card">
+    <img src="images/ch12/karpoori_stamp.webp" alt="कर्पूरी ठाकुर"/>
+    <div class="leader-info">
+      <h4 style="margin-top:0;">कर्पूरी ठाकुर (1924 - 1988)</h4>
+      <p style="margin:0;">• <b>परिचय:</b> 'जननायक' के नाम से प्रसिद्ध, बिहार के दो बार मुख्यमंत्री रहे समाजवादी नेता।<br/>
+      • <b>उपलब्धि:</b> 1970 में बिहार में पहली संविद सरकार का नेतृत्व किया तथा पिछड़ों हेतु मुंगेरी लाल आयोग की सिफारिशों के तहत आरक्षण लागू किया (2024 में भारत रत्न से सम्मानित)।</p>
+    </div>
+  </div>
+
+  <!-- Case Study Box: Devisar Village -->
+  <div class="case-study-box">
+    <h3 style="margin-top:0; color:#15803d;">📖 केस स्टडी (NCERT Case Study): राजस्थान के देवीसर गाँव में 1967 का चुनाव</h3>
+    <p><b>घटनाक्रम:</b> राजस्थान के चोमू (जयपुर) के पास देवीसर गाँव में 1967 के चुनावों में पारंपरिक कांग्रेस निष्ठा के बजाय ग्रामीणों ने स्थानीय मुद्दों पर स्वतंत्र प्रत्याशी और विपक्षी दलों का समर्थन किया। इसने दिखाया कि ग्रामीण भारतीय मतदाता अब जागरूक हो चुके थे और केवल पार्टी चिन्ह पर आँख बंद करके वोट नहीं दे रहे थे।</p>
+    <div style="text-align:center; margin-top:10px;">
+      <img src="images/ch12/rajasthan_election.webp" alt="राजस्थान देवीसर गाँव चुनाव" style="max-width:100%; border-radius:6px; border:1px solid #bbf7d0;"/>
+    </div>
+  </div>
+
+  <!-- Visual Card 3: 1967 Fourth General Election -->
+  <div class="illustration-box">
+    <img src="images/ch12/visual_1967_fourth_general_election.webp" alt="1967 के चौथे आम चुनाव: राजनीतिक भूकंप"/>
+    <div class="illustration-title">विज़ुअल नोट्स 3: 1967 का चौथा आम चुनाव (राजनीतिक भूकंप)</div>
+    <div class="visual-summary">
+      <b>दृश्य व्याख्या (Visual Summary):</b> यह 16:9 दृश्य कार्ड 1967 के आम चुनावों में गैर-कांग्रेसवाद के तहत एकजुट विपक्ष, 9 राज्यों में कांग्रेस की हार, और भारतीय राजनीति में एक दलीय वर्चस्व के अंत को रेखांकित करता है।
+    </div>
+  </div>
+
+  <h3>2.3 संविद सरकारें और 'आया राम, गया राम' (Aya Ram, Gaya Ram - Coalition Era)</h3>
+  <ul style="line-height: 1.8;">
+    <li><b>संविद (SVD) सरकारें:</b> 1967 में जहाँ किसी पार्टी को बहुमत नहीं मिला, वहाँ गैर-कांग्रेसी दलों ने मिलकर 'संयुक्त विधायक दल' (SVD) की सरकारें बनाईं (जैसे यूपी, बिहार, पंजाब)। इनमें वामपंथी और जनसंघ जैसे विरोधी दल भी साथ आए।</li>
+    <li><b>दल-बदल (Defection):</b> कोई जनप्रतिनिधि जिस पार्टी के चुनाव चिह्न पर जीतकर आए, उसे छोड़कर दूसरी पार्टी में शामिल हो जाए।</li>
+    <li><b>'आया राम, गया राम' का जुमला:</b> 1967 में हरियाणा के विधायक <b>गया लाल</b> ने 15 दिनों के भीतर तीन बार अपनी पार्टी बदली (कांग्रेस -> जनता पार्टी -> कांग्रेस -> जनता पार्टी)। इस पर कांग्रेस नेता राव बीरेंद्र सिंह ने चंडीगढ़ में कहा—<i>"गया राम अब आया राम हो गए हैं।"</i> यह मुहावरा भारतीय राजनीति में दल-बदल का पर्याय बन गया।</li>
+  </ul>
+
+  <!-- Cartoons for SVD & Defection -->
+  <div class="illustration-box">
+    <img src="images/ch12/coalition_cartoon.webp" alt="संविद गठबंधन कार्टून"/>
+    <div class="illustration-title">NCERT कार्टून: 1967 की संविद सरकारें (Kutty Cartoon)</div>
+    <div class="illustration-explanation">
+      <b>चित्र की व्याख्या:</b> भिन्न-भिन्न विचारधाराओं वाले दलों द्वारा बनाई गई संविद (SVD) सरकारों की आंतरिक खींचतान पर कार्टूनिस्ट कुट्टी का प्रसिद्ध व्यंग्य।
+    </div>
+  </div>
+
+  <div class="illustration-box">
+    <img src="images/ch12/aya_ram_gaya_ram.webp" alt="आया राम गया राम कार्टून"/>
+    <div class="illustration-title">NCERT कार्टून: आया राम, गया राम (दल-बदल की राजनीति)</div>
+    <div class="illustration-explanation">
+      <b>चित्र की व्याख्या:</b> हरियाणा के विधायक गया लाल के बार-बार पार्टी बदलने पर आधारित प्रसिद्ध ऐतिहासिक राजनीतिक कार्टून।
+    </div>
+  </div>
+
+  <!-- Visual Card 4: Coalition & Aya Ram Gaya Ram -->
+  <div class="illustration-box">
+    <img src="images/ch12/visual_coalition_aya_ram_gaya_ram.webp" alt="1967 संविद सरकारें एवं आया राम गया राम (दल-बदल)"/>
+    <div class="illustration-title">विज़ुअल नोट्स 4: संविद सरकारें एवं 'आया राम गया राम' (दल-बदल)</div>
+    <div class="visual-summary">
+      <b>दृश्य व्याख्या (Visual Summary):</b> यह 16:9 दृश्य कार्ड 1967 के बाद उत्तरी राज्यों में गठबंधन राजनीति के प्रयोगों, SVD सरकारों के गठन और 'आया राम गया राम' (दल-बदल) की वजह से आई राजनीतिक अस्थिरता को प्रदर्शित करता है।
+    </div>
+  </div>
+
+  <!-- PART 3 -->
+  <h2>भाग 3: कांग्रेस का ऐतिहासिक विभाजन (The Great Split - 1969)</h2>
+
+  <p>1967 के चुनावों के बाद कांग्रेस के भीतर आंतरिक कलह खुलकर सामने आ गई। यह लड़ाई विचार तथा पार्टी पर अधिकार को लेकर थी।</p>
+
+  <h3>3.1 सिंडिकेट बनाम इंदिरा गांधी (Syndicate vs Indira Gandhi)</h3>
+  <ul style="line-height: 1.8;">
+    <li><b>सिंडिकेट क्या था?</b> कांग्रेस संगठन के भीतर अनौपचारिक रूप से शक्तिशाली और प्रभावशाली नेताओं के गुट को 'सिंडिकेट' कहा जाता था। इसके मुख्य नेता थे—<b>के. कामराज, एस. निजलिंगप्पा, एस.के. पाटिल, एन. संजीव रेड्डी, और अतुल्य घोष</b>।</li>
+    <li><b>इंदिरा गांधी की स्वतंत्र रणनीति:</b> इंदिरा गांधी ने सिंडिकेट के प्रभाव से बाहर निकलने के लिए अपनी नीतियां वामपंथी और प्रगतिशील मोड़ की ओर बढ़ाईं। उन्होंने मई 1967 में <b>10-सूत्रीय कार्यक्रम (Ten-Point Programme)</b> मंजूर कराया (बैंक नियंत्रण, भूमि सुधार, शहरी संपत्ति सीमा)।</li>
+    <li><b>युवा तुर्क (Socialist Young Turks):</b> पार्टी के भीतर चंद्रशेखर जैसे युवा समाजवादी नेताओं का समर्थन इंदिरा गांधी को प्राप्त था।</li>
+  </ul>
+
+  <!-- Cartoon: Syndicate Umbrella -->
+  <div class="illustration-box">
+    <img src="images/ch12/syndicate_umbrella_cartoon.webp" alt="सिंडिकेट छतरी कार्टून"/>
+    <div class="illustration-title">NCERT कार्टून: सिंडिकेट का प्रभाव एवं 'किंगमेकर' भूमिका</div>
+    <div class="illustration-explanation">
+      <b>चित्र की व्याख्या:</b> कांग्रेस पार्टी के वरिष्ठ नेताओं के गुट (सिंडिकेट) की सरकार और संगठन पर मजबूत पकड़ को दर्शाता राजनीतिक कार्टून।
+    </div>
+  </div>
+
+  <!-- Leader Profile: Nijalingappa -->
+  <div class="leader-card">
+    <img src="images/ch12/nijalingappa_stamp.webp" alt="एस. निजलिंगप्पा"/>
+    <div class="leader-info">
+      <h4 style="margin-top:0;">एस. निजलिंगप्पा (1902 - 2000)</h4>
+      <p style="margin:0;">• <b>पद:</b> मैसूर (कर्नाटक) के पूर्व मुख्यमंत्री और 1969 के विभाजन के समय कांग्रेस के राष्ट्रीय अध्यक्ष।<br/>
+      • <b>भूमिका:</b> सिंडिकेट के प्रमुख स्तंभ। इंदिरा गांधी द्वारा पार्टी अनुशासन तोड़ने पर उन्हें 12 नवंबर 1969 को कांग्रेस की प्राथमिक सदस्यता से निष्कासित किया था।</p>
+    </div>
+  </div>
+
+  <!-- Visual Card 5: Congress Syndicate Power -->
+  <div class="illustration-box">
+    <img src="images/ch12/visual_congress_syndicate_power.webp" alt="कांग्रेस सिंडिकेट: संगठन बनाम सत्ता संघर्ष"/>
+    <div class="illustration-title">विज़ुअल नोट्स 5: कांग्रेस सिंडिकेट - संगठन बनाम सत्ता संघर्ष</div>
+    <div class="visual-summary">
+      <b>दृश्य व्याख्या (Visual Summary):</b> यह 16:9 दृश्य कार्ड कांग्रेस के वरिष्ठ नेताओं (सिंडिकेट) और युवा प्रधानमंत्री इंदिरा गांधी के बीच सांगठनिक नियंत्रण और विचारधारा की टकराहट को स्पष्ट करता है।
+    </div>
+  </div>
+
+  <!-- Cartoon: Tug of War -->
+  <div class="illustration-box">
+    <img src="images/ch12/tug_of_war_cartoon.webp" alt="Tug of War Cartoon"/>
+    <div class="illustration-title">NCERT कार्टून: सिंडिकेट और इंदिरा गांधी के बीच खींचतान</div>
+    <div class="illustration-explanation">
+      <b>चित्र की व्याख्या:</b> 1969 में कांग्रेस पार्टी और सरकार पर वर्चस्व स्थापित करने के लिए सिंडिकेट और इंदिरा समर्थकों के बीच रस्साकशी (Tug of War) का प्रसिद्ध कार्टून।
+    </div>
+  </div>
+
+  <h3>3.2 1969 का ऐतिहासिक राष्ट्रपति चुनाव</h3>
+
+  <p>मई 1969 में राष्ट्रपति डॉ. जाकिर हुसैन के निधन के बाद सिंडिकेट और इंदिरा गांधी के बीच का मतभेद खुलकर सामने आ गया।</p>
+
+  <ul style="line-height: 1.8;">
+    <li><b>उम्मीदवारों का चयन:</b> सिंडिकेट ने लोकसभा अध्यक्ष <b>एन. संजीव रेड्डी</b> को कांग्रेस का आधिकारिक प्रत्याशी घोषित किया। इंदिरा गांधी ने तत्कालीन उपराष्ट्रपति <b>वी.वी. गिरि (V.V. Giri)</b> को स्वतंत्र उम्मीदवार के रूप में चुनाव मैदान में उतरने के लिए प्रोत्साहित किया।</li>
+    <li><b>अंतरात्मा की आवाज पर मतदान (Freedom of Conscience):</b> कांग्रेस अध्यक्ष निजलिंगप्पा ने सभी कांग्रेसियों को संजीव रेड्डी को वोट देने का व्हिप (Whip) जारी किया। इसके जवाब में इंदिरा गांधी ने खुलकर सांसदों व विधायकों से अपनी <i>"अंतरात्मा की आवाज"</i> पर वोट देने की अपील की।</li>
+    <li><b>वी.वी. गिरि की जीत:</b> वी.वी. गिरि चुनाव जीत गए और सिंडिकेट समर्थित आधिकारिक प्रत्याशी संजीव रेड्डी हार गए। यह इंदिरा गांधी की बहुत बड़ी राजनैतिक विजय थी।</li>
+  </ul>
+
+  <!-- Leader Profile: VV Giri -->
+  <div class="leader-card">
+    <img src="images/ch12/vv_giri_stamp.webp" alt="वराहगिरि वेंकट गिरि"/>
+    <div class="leader-info">
+      <h4 style="margin-top:0;">वराहगिरि वेंकट गिरि (1894 - 1980)</h4>
+      <p style="margin:0;">• <b>पद:</b> भारत के चौथे राष्ट्रपति (1969 - 1974)।<br/>
+      • <b>उपलब्धि:</b> प्रसिद्ध मजदूर संघ (Trade Union) नेता। 1969 के राष्ट्रपति चुनाव में इंदिरा गांधी के गुप्त समर्थन से स्वतंत्र प्रत्याशी के रूप में ऐतिहासिक जीत दर्ज की।</p>
+    </div>
+  </div>
+
+  <!-- Visual Card 6: Presidential Election 1969 -->
+  <div class="illustration-box">
+    <img src="images/ch12/visual_presidential_election_1969.webp" alt="1969 का ऐतिहासिक राष्ट्रपति चुनाव: वी.वी. गिरि बनाम संजीव रेड्डी"/>
+    <div class="illustration-title">विज़ुअल नोट्स 6: 1969 का राष्ट्रपति चुनाव (वी.वी. गिरि बनाम संजीव रेड्डी)</div>
+    <div class="visual-summary">
+      <b>दृश्य व्याख्या (Visual Summary):</b> यह 16:9 दृश्य कार्ड 1969 के राष्ट्रपति चुनाव में आधिकारिक प्रत्याशी संजीव रेड्डी के मुकाबले इंदिरा गांधी समर्थित स्वतंत्र प्रत्याशी वी.वी. गिरि की जीत तथा 'अंतरात्मा की आवाज' के सिद्धांत को रेखांकित करता है।
+    </div>
+  </div>
+
+  <h3>3.3 नवंबर 1969 का महान कांग्रेस विभाजन: Congress (O) बनाम Congress (R)</h3>
+
+  <p>राष्ट्रपति चुनाव में अपनी हार से बौखलाए कांग्रेस अध्यक्ष एस. निजलिंगप्पा ने 12 नवंबर 1969 को प्रधानमंत्री इंदिरा गांधी को कांग्रेस पार्टी से निष्कासित कर दिया। इसके साथ ही कांग्रेस दो टुकड़ों में बंट गई:</p>
+
+  <ul style="line-height: 1.8;">
+    <li><b>1. कांग्रेस (ऑर्गनाइजेशन / संगठन) - Congress (O):</b> सिंडिकेट नेताओं का गुट, जिसे 'पुरानी कांग्रेस' (Old Congress) कहा गया।</li>
+    <li><b>2. कांग्रेस (रिक्विजिशजिस्ट / याचनाकर्ता) - Congress (R):</b> इंदिरा गांधी समर्थकों का गुट, जिसे 'नई कांग्रेस' (New Congress) कहा गया।</li>
+    <li><b>अल्पसंख्यक सरकार को वामपंथी समर्थन:</b> विभाजन के बाद इंदिरा गांधी की सरकार संसद में अल्पमत में आ गई, लेकिन <b>भारतीय कम्युनिस्ट पार्टी (CPI)</b> और <b>द्रमुक (DMK)</b> के बाहरी समर्थन से सरकार टिकी रही।</li>
+  </ul>
+
+  <!-- Photos / Cartoons for Split -->
+  <div class="illustration-box">
+    <img src="images/ch12/congress_bullocks_cartoon.webp" alt="चुनाव चिह्न विवाद कार्टून"/>
+    <div class="illustration-title">NCERT कार्टून: दो बैलों की जोड़ी चुनाव चिह्न पर जंग</div>
+    <div class="illustration-explanation">
+      <b>चित्र की व्याख्या:</b> 1969 विभाजन के बाद पुरानी कांग्रेस (O) और नई कांग्रेस (R) के बीच मूल चुनाव चिह्न 'दो बैलों की जोड़ी' पर दावेदारी का व्यंग्यात्मक कार्टून।
+    </div>
+  </div>
+
+  <div class="illustration-box">
+    <img src="images/ch12/indira_socialist.webp" alt="अखबार की सुर्खियां 1969"/>
+    <div class="illustration-title">ऐतिहासिक समाचार (1969): कांग्रेस विभाजन व समाजवादी नीतियां</div>
+    <div class="illustration-explanation">
+      <b>चित्र की व्याख्या:</b> 'द हिंदुस्तान टाइम्स' की 1969 की सुर्खियां जो कांग्रेस पार्टी के औपचारिक विभाजन और इंदिरा गांधी द्वारा समाजवाद की ओर कदम बढ़ाने की खबर दिखाती हैं।
+    </div>
+  </div>
+
+  <!-- Visual Card 7: Congress Split 1969 -->
+  <div class="illustration-box">
+    <img src="images/ch12/visual_congress_split_1969.webp" alt="1969 का ऐतिहासिक विभाजन: कांग्रेस (O) बनाम कांग्रेस (R)"/>
+    <div class="illustration-title">विज़ुअल नोट्स 7: 1969 का ऐतिहासिक विभाजन (Congress-O बनाम Congress-R)</div>
+    <div class="visual-summary">
+      <b>दृश्य व्याख्या (Visual Summary):</b> यह 16:9 दृश्य कार्ड 1969 में कांग्रेस छत्र के दो फाड़ होने, पुरानी सिंडिकेट कांग्रेस (O) और इंदिरा गांधी की नई समाजवादी कांग्रेस (R) में विभाजन को प्रदर्शित करता है।
+    </div>
+  </div>
+
+  <!-- PART 4 -->
+  <h2>भाग 4: प्रिवी पर्स की समाप्ति और समाजवादी कदम (Socialist Reforms)</h2>
+
+  <p>1969 के विभाजन के बाद इंदिरा गांधी ने अपनी सरकार को गरीबों, किसानों और वंचितों की सरकार के रूप में पेश करने के लिए कड़े समाजवादी फैसले लिए।</p>
+
+  <ul style="line-height: 1.8;">
+    <li><b>14 प्रमुख बैंकों का राष्ट्रीयकरण (July 1969):</b> देश के 14 बड़े निजी वाणिज्यिक बैंकों को सरकारी नियंत्रण में लिया गया ताकि आम जनता, किसानों और छोटे व्यवसायियों को आसानी से ऋण मिल सके।</li>
+    <li><b>प्रिवी पर्स (Privy Purse) का उन्मूलन:</b> 1947 में देसी रियासतों के विलय के समय राजा-महाराजाओं को दिए गए विशेष भत्तों और विशेषाधिकारों (Privy Purse) को समाप्त करने की घोषणा की गई। 1971 में <b>26वें संविधान संशोधन</b> द्वारा इसे पूरी तरह निरस्त कर दिया गया।</li>
+    <li><b>उप-प्रधानमंत्री मोरारजी देसाई का इस्तीफा:</b> बैंकों के राष्ट्रीयकरण से असहमत होकर मोरारजी देसाई ने वित्त मंत्री एवं उप-प्रधानमंत्री पद से इस्तीफा दे दिया।</li>
+  </ul>
+
+  <!-- Visual Card 8: Privy Purse & Bank Nationalisation -->
+  <div class="illustration-box">
+    <img src="images/ch12/visual_privy_purse_bank_nationalisation.webp" alt="प्रिवी पर्स की समाप्ति एवं 14 बैंकों का राष्ट्रीयकरण (1969)"/>
+    <div class="illustration-title">विज़ुअल नोट्स 8: प्रिवी पर्स की समाप्ति एवं 14 बैंकों का राष्ट्रीयकरण (1969)</div>
+    <div class="visual-summary">
+      <b>दृश्य व्याख्या (Visual Summary):</b> यह 16:9 दृश्य कार्ड जुलाई 1969 में 14 निजी वाणिज्यिक बैंकों के राष्ट्रीयकरण, राजा-महाराजाओं के प्रिवी पर्स के अंत और 10-सूत्रीय समाजवादी एजेंडे के क्रियान्वयन को रेखांकित करता है।
+    </div>
+  </div>
+
+  <!-- PART 5 -->
+  <h2>भाग 5: 1971 का आम चुनाव और 'गरीबी हटाओ' (Landslide Victory)</h2>
+
+  <p>इंदिरा गांधी ने अपनी अल्पसंख्यक सरकार पर निर्भरता खत्म करने के लिए दिसंबर 1970 में लोकसभा भंग कर दी और <b>फरवरी 1971 में 5वें आम चुनाव</b> कराने की सिफारिश की।</p>
+
+  <h3>5.1 'गरीबी हटाओ' बनाम 'इंदिरा हटाओ' (Garibi Hatao vs Indira Hatao)</h3>
+  <ul style="line-height: 1.8;">
+    <li><b>ग्रैंड अलायंस (Grand Alliance):</b> इंदिरा गांधी के खिलाफ सभी प्रमुख गैर-कांग्रेसी विपक्षी दलों (Congress-O, जनसंघ, स्वतंत्र पार्टी, सोशलिस्ट पार्टी) ने मिलकर एक बड़ा चुनावी मोर्चा बनाया जिसे 'ग्रैंड अलायंस' कहा गया। उनका एक ही नारा था—<i>"इंदिरा हटाओ"</i>।</li>
+    <li><b>गरीबी हटाओ का मास्टरस्ट्रोक:</b> इसके जवाब में इंदिरा गांधी ने एक सकारात्मक और क्रांतिकारी नारा दिया—<i>"वे कहते हैं इंदिरा हटाओ, मैं कहती हूँ गरीबी हटाओ!"</i></li>
+    <li><b>सकारात्मक एजेंडा:</b> इंदिरा गांधी ने समाज के शोषित, दलित, आदिवासी, महिलाओं, अल्पसंख्यकों और भूमिहीनों का विश्वास जीता।</li>
+  </ul>
+
+  <!-- RK Laxman Cartoons for 1971 Election -->
+  <div class="illustration-box">
+    <img src="images/ch12/grand_alliance_cartoon.webp" alt="ग्रैंड अलायंस कार्टून"/>
+    <div class="illustration-title">NCERT कार्टून: विपक्षी 'ग्रैंड अलायंस' (Grand Alliance) का गठबंधन</div>
+    <div class="illustration-explanation">
+      <b>चित्र की व्याख्या:</b> आर.के. लक्ष्मण का प्रसिद्ध व्यंग्यात्मक कार्टून, जिसमें इंदिरा गांधी को हटाने के एकमात्र मकसद से विभिन्न विरोधी विचारधाराओं के दलों के साथ आने (ग्रैंड अलायंस) का मज़ाक उड़ाया गया है।
+    </div>
+  </div>
+
+  <div class="illustration-box">
+    <img src="images/ch12/grand_finish_cartoon.webp" alt="द ग्रैंड फिनिश कार्टून"/>
+    <div class="illustration-title">NCERT कार्टून: चुनावी नतीजे - "द ग्रैंड फिनिश"</div>
+    <div class="illustration-explanation">
+      <b>चित्र की व्याख्या:</b> 1971 के आम चुनाव परिणामों में इंदिरा गांधी की तूफानी जीत और विपक्षी 'ग्रैंड अलायंस' के पूरी तरह सफाए पर आर.के. लक्ष्मण का कालजयी कार्टून।
+    </div>
+  </div>
+
+  <h3>5.2 1971 के परिणाम: प्रचंड बहुमत</h3>
+  <ul style="line-height: 1.8;">
+    <li><b>ऐतिहासिक जनादेश:</b> इंदिरा गांधी की कांग्रेस (R) और CPI गठबंधन ने कुल 375 सीटें जीतीं (अकेले कांग्रेस-R को 352 सीटें मिलीं)।</li>
+    <li><b>सिंडिकेट का सफाया:</b> सिंडिकेट की पुरानी कांग्रेस (O) मात्र 16 सीटों पर सिमट गई और 'ग्रैंड अलायंस' पूरी तरह धराशायी हो गया।</li>
+  </ul>
+
+  <!-- Photo: 1971 Victory -->
+  <div class="illustration-box">
+    <img src="images/ch12/indira_victory.webp" alt="1971 चुनावी जीत उत्सव"/>
+    <div class="illustration-title">ऐतिहासिक चित्र: 1971 की प्रचंड जीत का उत्सव</div>
+    <div class="illustration-explanation">
+      <b>चित्र की व्याख्या:</b> 1971 के लोकसभा चुनावों में 375 सीटों की अप्रत्याशित जीत के बाद जश्न मनाते कांग्रेसी कार्यकर्ता और प्रधानमंत्री इंदिरा गांधी।
+    </div>
+  </div>
+
+  <!-- Visual Card 9: 1971 Election Garibi Hatao -->
+  <div class="illustration-box">
+    <img src="images/ch12/visual_1971_election_garibi_hatao.webp" alt="1971 का आम चुनाव: गरीबी हटाओ बनाम इंदिरा हटाओ"/>
+    <div class="illustration-title">विज़ुअल नोट्स 9: 1971 का आम चुनाव ('गरीबी हटाओ' की ऐतिहासिक जीत)</div>
+    <div class="visual-summary">
+      <b>दृश्य व्याख्या (Visual Summary):</b> यह 16:9 दृश्य कार्ड 1971 के आम चुनावों में 'ग्रैंड अलायंस' के 'इंदिरा हटाओ' के मुकाबले 'गरीबी हटाओ' नारे और कांग्रेस (R) की 375 सीटों पर अभूतपूर्व जीत को प्रदर्शित करता है।
+    </div>
+  </div>
+
+  <!-- PART 6 -->
+  <h2>भाग 6: कांग्रेस प्रणाली की पुनर्स्थापना और उसकी प्रकृति (Restoration of Congress System)</h2>
+
+  <p>1971 के आम चुनाव के तुरंत बाद दिसंबर 1971 में भारत-पाकिस्तान युद्ध हुआ, जिसमें भारत ने ऐतिहासिक विजय प्राप्त की और <b>बांग्लादेश</b> का निर्माण हुआ।</p>
+
+  <h3>6.1 इंदिरा गांधी का सर्वोपरि नेतृत्व</h3>
+  <ul style="line-height: 1.8;">
+    <li><b>1972 के राज्य विधानसभा चुनाव:</b> 1972 के राज्य चुनावों में भी कांग्रेस को सभी राज्यों में भारी जीत मिली। विपक्षी नेताओं (यहाँ तक कि अटल बिहारी वाजपेयी) ने इंदिरा गांधी को 'दुर्गा' का रूप कहा।</li>
+    <li><b>नई कांग्रेस की प्रकृति:</b> इंदिरा गांधी ने 'कांग्रेस प्रणाली' को पुनः स्थापित तो किया, लेकिन यह पुरानी नेहरूवादी कांग्रेस प्रणाली से बिल्कुल अलग थी:
+      <br/>1. <b>नेता पर अत्यधिक निर्भरता:</b> यह पार्टी पूरी तरह से इंदिरा गांधी के व्यक्तिगत आकर्षण और सर्वोपरि नेतृत्व पर आधारित थी।
+      <br/>2. <b>सांगठनिक ढांचे का कमजोर होना:</b> पुरानी कांग्रेस में गुटों का संतुलन और आंतरिक लोकतंत्र था, जबकि नई कांग्रेस में सत्ता का अत्यधिक केंद्रीयकरण हो गया।
+      <br/>3. <b>वंचित वर्गों का आधार:</b> नई कांग्रेस का मुख्य जनाधार गरीब, दलित, महिला, अल्पसंख्यक और भूमिहीन मजदूर बन गए।
+    </li>
+  </ul>
+
+  <!-- Cartoon: Indira Dominance -->
+  <div class="illustration-box">
+    <img src="images/ch12/indira_dominance.webp" alt="इंदिरा वर्चस्व कार्टून"/>
+    <div class="illustration-title">NCERT कार्टून: भारतीय राजनीति में इंदिरा गांधी का सर्वोपरि वर्चस्व</div>
+    <div class="illustration-explanation">
+      <b>चित्र की व्याख्या:</b> 1971-72 की जीत के बाद देश की संपूर्ण राजनीति और अपनी पार्टी के भीतर इंदिरा गांधी के सर्वशक्तिमान कद को दर्शाता ऐतिहासिक कार्टून।
+    </div>
+  </div>
+
+  <!-- Leader Profile: Indira Gandhi -->
+  <div class="leader-card">
+    <img src="images/ch12/indira_stamp.webp" alt="इंदिरा गांधी"/>
+    <div class="leader-info">
+      <h4 style="margin-top:0;">इंदिरा गांधी (1917 - 1984)</h4>
+      <p style="margin:0;">• <b>पद:</b> भारत की प्रथम महिला प्रधानमंत्री (1966-1977 और 1980-1984)।<br/>
+      • <b>ऐतिहासिक कदम:</b> 14 बैंकों का राष्ट्रीयकरण (1969), प्रिवी पर्स की समाप्ति, 1971 युद्ध में विजय व बांग्लादेश निर्माण, 1974 पोखरण-1 परमाणु परीक्षण। 'गरीबी हटाओ' के नारे से भारतीय राजनीति की दिशा बदली।</p>
+    </div>
+  </div>
+
+  <!-- Visual Card 10: Congress Restoration Nature -->
+  <div class="illustration-box">
+    <img src="images/ch12/visual_congress_restoration_nature.webp" alt="कांग्रेस प्रणाली की पुनर्स्थापना: नई कांग्रेस की प्रकृति"/>
+    <div class="illustration-title">विज़ुअल नोट्स 10: कांग्रेस प्रणाली की पुनर्स्थापना एवं उसकी प्रकृति</div>
+    <div class="visual-summary">
+      <b>दृश्य व्याख्या (Visual Summary):</b> यह 16:9 दृश्य कार्ड 1971 पाकिस्तान युद्ध विजय (बांग्लादेश निर्माण) के बाद इंदिरा गांधी के नेतृत्व में पुनर्जीवित 'नई कांग्रेस प्रणाली' की केंद्रीयकृत और व्यक्तित्व-आधारित प्रकृति को स्पष्ट करता है।
+    </div>
+  </div>
+
+  <!-- Cinema Box: Zanjeer Movie -->
+  <div class="cinema-box">
+    <h3 style="margin-top:0; color:#be123c;">🎬 सिनेमाई संदर्भ (NCERT Cinema Feature): फिल्म 'ज़ंजीर' (1973)</h3>
+    <div style="display:flex; gap:20px; align-items:center;">
+      <img src="images/ch12/zanjeer_movie.webp" alt="ज़ंजीर फिल्म पोस्टर" style="width:130px; border-radius:6px; border:2px solid #f43f5e;"/>
+      <div>
+        <p style="margin:0;"><b>फिल्म एवं संदर्भ:</b> प्रकाश मेहरा निर्देशित और सलीम-जावेद लिखित फिल्म <b>'ज़ंजीर' (1973)</b> में अमिताभ बच्चन द्वारा निभाया गया 'एंग्री यंग मैन' (Angry Young Man - इन्स्पेक्टर विजय) का किरदार।</p>
+        <p style="margin-top:8px; margin-bottom:0;"><b>राजनैतिक जुड़ाव:</b> 1970 के दशक की शुरुआत में गरीबी और बेरोजगारी से परेशान भारतीय युवाओं के मोहभंग, व्यवस्था के प्रति फैले आक्रोश और भ्रष्टाचार के खिलाफ न्याय की मांग का यह किरदार एक प्रतीक बन गया।</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Gurumantra / Quick Summary Box -->
+  <div class="guru-box">
+    <h3 style="margin-top:0; color:#7e22ce; text-align:center;">💡 अध्याय 12 का 'गुरुमंत्र' (Quick Chapter Summary)</h3>
+    <ul style="line-height: 1.8; margin-bottom:0;">
+      <li><b>1964-1966:</b> नेहरू के बाद शास्त्री जी (जय जवान जय किसान) -> ताशकंद निधन -> 1966 में इंदिरा गांधी की मोरारजी पर जीत।</li>
+      <li><b>1967:</b> चौथे आम चुनाव में 'राजनैतिक भूकंप' (9 राज्यों में हार), गैर-कांग्रेसवाद (लोहिया), संविद सरकारें और 'आया राम गया राम' (दल-बदल)।</li>
+      <li><b>1969:</b> सिंडिकेट बनाम इंदिरा -> 14 बैंकों का राष्ट्रीयकरण व प्रिवी पर्स अंत -> वी.वी. गिरि की राष्ट्रपति चुनाव में जीत -> कांग्रेस का विभाजन (Congress-O बनाम Congress-R)।</li>
+      <li><b>1971:</b> 'गरीबी हटाओ' बनाम 'इंदिरा हटाओ' -> 375 सीटों पर कांग्रेस (R) की प्रचंड जीत -> दिसंबर 1971 युद्ध में बांग्लादेश का जन्म -> इंदिरा गांधी द्वारा 'नई कांग्रेस प्रणाली' की पुनर्स्थापना।</li>
+    </ul>
+  </div>
+
 </div>
-<p style=" line-height: 1.6; color: #0369a1; margin: 0;">
-            • <b>उपाधि:</b> भारत की पहली महिला प्रधानमंत्री (1966-1977 और 1980-1984)।<br/>
-            • <b>साहसिक कदम:</b> 1969 में 14 निजी बैंकों का राष्ट्रीयकरण, प्रिवी पर्स की समाप्ति, और 1971 के युद्ध में ऐतिहासिक जीत दिलाकर बांग्लादेश का निर्माण कराया।<br/>
-            • <b>नारा:</b> "गरीबी हटाओ" के लोक-लुभावन नारे से देश के वंचितों के बीच अपनी अमिट पहचान बनाई।<br/>
-            • <b>विवाद:</b> 1975 में देश में <b>आपातकाल (Emergency)</b> लागू किया, जिसके कारण इनकी काफी आलोचना हुई। 1984 में इनके अंगरक्षकों द्वारा इनकी हत्या कर दी गई।
-        </p>
-<!-- FILM BOX: ZANJEER (1973) -->
-<div style="background-color: #f8fafc; border: 8px solid #000000; border-radius: 20px; padding: 40px; margin-top: 50px; margin-bottom: 50px; box-shadow: 10px 10px 0px #000000;">
-<h3 class="subtopic-header" style="font-weight: 900; margin-top: 0; text-align: center; border-bottom: 5px solid #000000; padding-bottom: 15px; text-transform: uppercase;">
-                    🎬 सिनेमाई संदर्भ (Film Box): ज़ंजीर (1973)
-                </h3>
-<img alt="Zanjeer 1973 Film poster" src="images/ch12/zanjeer_movie.webp" style="width: 100%; max-width: 100%; display: block; margin: 30px auto; border: 8px solid #000000; border-radius: 10px; box-shadow: 5px 5px 0px #000000; height: auto;"/>
-<p style=" line-height: 1.8; color: #000000; font-weight: 900; text-align: justify;">
-<b>फिल्म का पृष्ठभूमि और संदर्भ:</b> प्रकाश मेहरा द्वारा निर्देशित और सलीम-जावेद द्वारा लिखित फिल्म <b>'ज़ंजीर' (1973)</b> भारतीय सिनेमा इतिहास की एक युगांतकारी फिल्म है। इस फिल्म ने हिंदी सिनेमा में <b>'एंग्री यंग मैन' (Angry Young Man)</b> के रूप में अमिताभ बच्चन को स्थापित किया।
-                </p>
-<p style=" line-height: 1.8; color: #000000; font-weight: 900; text-align: justify;">
-<b>राजनैतिक एवं सामाजिक जुड़ाव:</b> 1970 के दशक की शुरुआत में देश में भारी गरीबी, बेरोजगारी, और विकास की धीमी रफ्तार के कारण युवाओं में भारी हताशा और आक्रोश (angst) था। 'ज़ंजीर' का ईमानदार लेकिन गुस्सैल पुलिस इंस्पेक्टर (विजय) व्यवस्था के भ्रष्टाचार और कानून की लाचारी के खिलाफ निजी जंग लड़ता है। यह फिल्म उस दौर के राजनैतिक मोहभंग, प्रशासनिक भ्रष्टाचार और नागरिक असंतोष का जीवंत प्रतीक है, जिसने आगे चलकर आपातकाल (Emergency) की पृष्ठभूमि तैयार की।
-                </p>
-<div style="background-color: #f1f5f9; border-left: 10px solid #000000; padding: 20px; margin-top: 20px;  line-height: 1.6; font-weight: bold; text-align: left;">
-<b>महत्वपूर्ण प्रश्नोत्तर:</b><br/>
-                    • <b>प्रश्न: एनसीईआरटी पुस्तक में फिल्म 'ज़ंजीर' (1973) का उल्लेख किस संदर्भ में किया गया है?</b><br/>
-                    • <b>उत्तर:</b> 'ज़ंजीर' का उल्लेख 1970 के दशक के <b>राजनैतिक मोहभंग (Political Disillusionment)</b> और सामाजिक-आर्थिक संकट को दर्शाने के लिए किया गया है। यह फिल्म दिखाती है कि कैसे व्यवस्था की कमियों और भ्रष्टाचार ने युवाओं में तीव्र आक्रोश पैदा किया, जो तत्कालीन कांग्रेस सरकार की लोक-लुभावन नीतियों और वास्तविक परिस्थितियों के बीच के अंतर को उजागर करता है।
-                </div>
-</div>
-</div>
-</div>
-<!-- REVISION GURU MANTRA -->
-<div style="background-color: #dcfce7; padding: 30px; border-radius: 12px; margin-top: 50px; border: 6px solid #4ade80;">
-<h2 class="topic-header" style="font-weight: 900; text-align: center;">अध्याय 12 का 'गुरुमंत्र' (Quick Box Summary)</h2>
-<ul style=" line-height: 2.2; font-weight: 900; color: #166534;">
-<li>1. शास्त्रीजी का काल चुनौतियों से भरा था ('जय जवान जय किसान')।</li>
-<li>2. 1967 का चुनाव भारतीय राजनीति का पहला बड़ा झटका ('राजनैतिक भूकंप') था।</li>
-<li>3. दलबदल ('आया राम गया राम') ने अस्थिरता को जन्म दिया।</li>
-<li>4. 1969 का विभाजन कांग्रेस के सांगठनिक ढांचे के कमजोर होने की शुरुआत थी।</li>
-<li>5. इंदिरा गांधी ने समाजवादी रुख अपनाकर अपनी स्थिति मजबूत की।</li>
-<li>6. 1971 की जीत ने कांग्रेस के प्रभुत्व को फिर से स्थापित किया।</li>
-<li>7. 'Restoration' का अर्थ था—पुरानी लोकतांत्रिक छतरी की जगह एक केंद्रीकृत राजनैतिक दल का उदय।</li>
-</ul>
-</div>
-</div>
-</div>
-</div>
-<script>
-    async function copyToGoogleDoc() {
-        const btn = document.getElementById('mainCopyBtn');
-        const status = document.getElementById('status');
-        const content = document.getElementById('contentToCopy').innerHTML;
-        
-        try {
-            const blob = new Blob([content], { type: 'text/html' });
-            const item = new ClipboardItem({ 'text/html': blob });
-            await navigator.clipboard.write([item]);
-            
-            status.style.display = 'block';
-            btn.style.backgroundColor = '#059669';
-            btn.innerText = '✅ COPIED! NOW PASTE IN DOC';
-            
-            setTimeout(() => {
-                status.style.display = 'none';
-                btn.style.backgroundColor = '#2563eb';
-                btn.innerText = '📋 COPY EVERYTHING FOR GOOGLE DOCS';
-            }, 5000);
-        } catch (err) {
-            alert('Error copying: ' + err);
-        }
-    }
-    </script>
 </body>
 </html>
