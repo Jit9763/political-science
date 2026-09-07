@@ -1,7 +1,7 @@
 import os
 import sys
 import argparse
-from datetime import datetime
+from datetime import datetime, timezone, timedelta
 
 from fetchers import NewsFetcher
 from analyzer import NewsAnalyzer
@@ -9,11 +9,14 @@ from formatter import NotesFormatter
 from uploader import DriveSyncUploader
 from master_library import MasterNotesLibrary
 
+IST = timezone(timedelta(hours=5, minutes=30))
+
 def run_agent(target_date=None, youtube_url=None, auto_open=True):
-    date_str = target_date if target_date else datetime.now().strftime('%Y-%m-%d')
+    now_ist = datetime.now(IST).strftime('%Y-%m-%d')
+    date_str = target_date if target_date else now_ist
     print(f"===========================================================")
     print(f"🚀 Starting RPSC RAS & UPSC Daily News & Editorial AI Agent")
-    print(f"📅 Target Date: {date_str}")
+    print(f"📅 Target Date (IST): {date_str}")
     if youtube_url:
         print(f"📺 YouTube Class Stream: {youtube_url}")
     print(f"===========================================================")
@@ -31,7 +34,7 @@ def run_agent(target_date=None, youtube_url=None, auto_open=True):
     html_path = formatter.render_daily_html(analysis_data)
     docx_path = formatter.render_daily_docx(analysis_data)
 
-    # Step 4: Sync to Google Drive
+    # Step 4: Sync to Google Drive & Local Manifest
     uploader = DriveSyncUploader()
     uploader.sync_to_drive(html_path)
     uploader.sync_to_drive(docx_path)

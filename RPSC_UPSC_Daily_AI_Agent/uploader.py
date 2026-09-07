@@ -1,6 +1,7 @@
 import os
 import shutil
 import json
+import glob
 import webbrowser
 
 class DriveSyncUploader:
@@ -45,6 +46,44 @@ class DriveSyncUploader:
             print(f"Error syncing to Drive folder ({self.drive_folder}): {e}")
             return False
 
+    def sync_from_drive(self, local_output_dir):
+        """Sync files FROM Google Drive folder TO local Output_Notes folder when GUI opens."""
+        if not os.path.exists(self.drive_folder):
+            print(f"Drive folder does not exist yet: {self.drive_folder}")
+            return 0
+
+        os.makedirs(local_output_dir, exist_ok=True)
+        synced_count = 0
+
+        try:
+            drive_files = glob.glob(os.path.join(self.drive_folder, "*.*"))
+            for src in drive_files:
+                fname = os.path.basename(src)
+                if not (fname.endswith(".html") or fname.endswith(".docx") or fname.endswith(".md")):
+                    continue
+
+                dest = os.path.join(local_output_dir, fname)
+                
+                # Copy if dest doesn't exist or src is newer
+                should_copy = False
+                if not os.path.exists(dest):
+                    should_copy = True
+                else:
+                    src_mtime = os.path.getmtime(src)
+                    dest_mtime = os.path.getmtime(dest)
+                    if src_mtime > dest_mtime + 2: # 2 sec buffer
+                        should_copy = True
+
+                if should_copy:
+                    shutil.copy2(src, dest)
+                    synced_count += 1
+                    print(f"Synced FROM Google Drive to local Output_Notes: {fname}")
+
+        except Exception as e:
+            print(f"Error syncing from Drive to local: {e}")
+
+        return synced_count
+
     def open_in_browser(self, html_filepath):
         """Open the HTML report in the user's default browser."""
         if os.path.exists(html_filepath):
@@ -54,3 +93,6 @@ class DriveSyncUploader:
 if __name__ == '__main__':
     uploader = DriveSyncUploader()
     print("Uploader ready. Target drive folder:", uploader.drive_folder)
+    out_dir = os.path.join(os.path.dirname(__file__), "Output_Notes")
+    count = uploader.sync_from_drive(out_dir)
+    print(f"Test sync from Drive complete. {count} files synced.")

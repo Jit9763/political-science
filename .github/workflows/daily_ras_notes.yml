@@ -27,6 +27,7 @@ jobs:
     - name: Run Daily News & Master Syllabus AI Agent
       env:
         GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        TZ: "Asia/Kolkata"
       run: |
         python RPSC_UPSC_Daily_AI_Agent/main_agent.py --no-browser
 

@@ -3,25 +3,29 @@ import glob
 import json
 import webbrowser
 import threading
-from datetime import datetime
+from datetime import datetime, timezone, timedelta
 import customtkinter as ctk
 
 from main_agent import run_agent
 from master_library import MasterNotesLibrary
+from uploader import DriveSyncUploader
 
 ctk.set_appearance_mode("Dark")
 ctk.set_default_color_theme("blue")
+
+IST = timezone(timedelta(hours=5, minutes=30))
 
 class RASNotesGUI(ctk.CTk):
     def __init__(self):
         super().__init__()
 
         self.title("RPSC RAS & UPSC Daily News, Editorial & Master Notes AI Dashboard")
-        self.geometry("1100 x 700")
+        self.geometry("1100x700")
 
-        self.output_dir = "c:\\Users\\jiten\\Desktop\\class11\\political-science\\RPSC_UPSC_Daily_AI_Agent\\Output_Notes"
-        self.config_path = "c:\\Users\\jiten\\Desktop\\class11\\political-science\\RPSC_UPSC_Daily_AI_Agent\\config.json"
+        self.output_dir = os.path.join(os.path.dirname(__file__), "Output_Notes")
+        self.config_path = os.path.join(os.path.dirname(__file__), "config.json")
         self.master_kb = MasterNotesLibrary()
+        self.uploader = DriveSyncUploader()
 
         # Grid configuration
         self.grid_columnconfigure(1, weight=1)
@@ -30,12 +34,15 @@ class RASNotesGUI(ctk.CTk):
         # Build UI
         self.create_sidebar()
         self.create_main_tabs()
+        
+        # Initial Drive Sync when GUI opens
+        self.sync_from_drive_quiet()
         self.refresh_notes_list()
 
     def create_sidebar(self):
         self.sidebar_frame = ctk.CTkFrame(self, width=220, corner_radius=0)
         self.sidebar_frame.grid(row=0, column=0, sticky="nsew")
-        self.sidebar_frame.grid_rowconfigure(6, weight=1)
+        self.sidebar_frame.grid_rowconfigure(8, weight=1)
 
         # App Title
         self.logo_label = ctk.CTkLabel(
@@ -43,7 +50,18 @@ class RASNotesGUI(ctk.CTk):
             text="🏛️ RPSC RAS & UPSC\nAI Agent Dashboard", 
             font=ctk.CTkFont(size=18, weight="bold")
         )
-        self.logo_label.grid(row=0, column=0, padx=20, pady=(20, 20))
+        self.logo_label.grid(row=0, column=0, padx=20, pady=(20, 15))
+
+        # Drive Sync Button (Hybrid Cloud VM Sync)
+        self.btn_sync_drive = ctk.CTkButton(
+            self.sidebar_frame,
+            text="☁️ गूगल ड्राइव से सिंक करें",
+            fg_color="#0284c7",
+            hover_color="#0369a1",
+            font=ctk.CTkFont(size=13, weight="bold"),
+            command=self.on_sync_drive
+        )
+        self.btn_sync_drive.grid(row=1, column=0, padx=20, pady=8)
 
         # Action Buttons
         self.btn_gen_today = ctk.CTkButton(
@@ -54,31 +72,31 @@ class RASNotesGUI(ctk.CTk):
             font=ctk.CTkFont(size=14, weight="bold"),
             command=self.on_generate_today
         )
-        self.btn_gen_today.grid(row=1, column=0, padx=20, pady=10)
+        self.btn_gen_today.grid(row=2, column=0, padx=20, pady=10)
 
         # YouTube URL Field
         self.lbl_yt = ctk.CTkLabel(self.sidebar_frame, text="📺 यूट्यूब क्लास लिंक (Optional):", font=ctk.CTkFont(size=11, weight="bold"))
-        self.lbl_yt.grid(row=2, column=0, padx=20, pady=(5, 2))
+        self.lbl_yt.grid(row=3, column=0, padx=20, pady=(5, 2))
 
         self.entry_yt_url = ctk.CTkEntry(self.sidebar_frame, width=180, placeholder_text="YouTube URL / Live Link")
-        self.entry_yt_url.grid(row=3, column=0, padx=20, pady=(0, 10))
-        self.entry_yt_url.insert(0, "https://www.youtube.com/live/RJL7n_ZuU2U")
+        self.entry_yt_url.grid(row=4, column=0, padx=20, pady=(0, 10))
+        self.entry_yt_url.insert(0, "https://www.youtube.com/@NirmanIAS")
 
         # Tab Navigation Buttons
         self.btn_tab_daily = ctk.CTkButton(
             self.sidebar_frame, text="📄 दैनिक नोट्स इतिहास", command=lambda: self.tab_view.set("Daily Notes")
         )
-        self.btn_tab_daily.grid(row=4, column=0, padx=20, pady=8)
+        self.btn_tab_daily.grid(row=5, column=0, padx=20, pady=6)
 
         self.btn_tab_custom = ctk.CTkButton(
             self.sidebar_frame, text="🗓️ तिथि अनुसार नोट्स", command=lambda: self.tab_view.set("Custom Date")
         )
-        self.btn_tab_custom.grid(row=5, column=0, padx=20, pady=8)
+        self.btn_tab_custom.grid(row=6, column=0, padx=20, pady=6)
 
         self.btn_tab_master = ctk.CTkButton(
             self.sidebar_frame, text="📚 मास्टर नोट्स (Syllabus)", command=lambda: self.tab_view.set("Master Library")
         )
-        self.btn_tab_master.grid(row=6, column=0, padx=20, pady=8)
+        self.btn_tab_master.grid(row=7, column=0, padx=20, pady=6)
 
         self.btn_open_wiki = ctk.CTkButton(
             self.sidebar_frame, 
@@ -88,16 +106,36 @@ class RASNotesGUI(ctk.CTk):
             font=ctk.CTkFont(size=13, weight="bold"),
             command=self.open_master_wiki_browser
         )
-        self.btn_open_wiki.grid(row=7, column=0, padx=20, pady=8)
+        self.btn_open_wiki.grid(row=8, column=0, padx=20, pady=6)
 
         self.btn_tab_settings = ctk.CTkButton(
             self.sidebar_frame, text="⚙️ सेटिंग्स (Engine/Drive)", command=lambda: self.tab_view.set("Settings")
         )
-        self.btn_tab_settings.grid(row=8, column=0, padx=20, pady=8)
+        self.btn_tab_settings.grid(row=9, column=0, padx=20, pady=6)
 
         # Status Label
         self.status_label = ctk.CTkLabel(self.sidebar_frame, text="रेडी (Ready)", text_color="#10b981", font=ctk.CTkFont(size=12))
-        self.status_label.grid(row=9, column=0, padx=20, pady=10)
+        self.status_label.grid(row=10, column=0, padx=20, pady=10)
+
+    def sync_from_drive_quiet(self):
+        """Automatically fetch any missing notes from Google Drive folder on launch."""
+        try:
+            synced = self.uploader.sync_from_drive(self.output_dir)
+            if synced > 0:
+                self.status_label.configure(text=f"☁️ ड्राइव से {synced} नए नोट्स सिंक हुए!", text_color="#3b82f6")
+        except Exception as e:
+            print(f"Quiet drive sync notice: {e}")
+
+    def on_sync_drive(self):
+        """Manual trigger to fetch notes from Google Drive folder."""
+        self.status_label.configure(text="☁️ गूगल ड्राइव से नोट्स सिंक हो रहे हैं...", text_color="#3b82f6")
+        synced = self.uploader.sync_from_drive(self.output_dir)
+        self.refresh_notes_list()
+        self.refresh_master_library_view()
+        if synced > 0:
+            self.status_label.configure(text=f"✅ सफलतापूर्वक {synced} नोट्स ड्राइव से सिंक हुए!", text_color="#10b981")
+        else:
+            self.status_label.configure(text="✅ ड्राइव सिंक अप-टू-डेट है!", text_color="#10b981")
 
     def open_master_wiki_browser(self):
         wiki_path = os.path.join(self.output_dir, "Master_Syllabus_Wiki.html")
@@ -127,22 +165,23 @@ class RASNotesGUI(ctk.CTk):
         self.setup_settings_tab()
 
     def setup_daily_notes_tab(self):
-        self.lbl_history = ctk.CTkLabel(self.tab_daily, text="📋 जनरेट किए गए दैनिक नोट्स की सूची", font=ctk.CTkFont(size=16, weight="bold"))
+        self.lbl_history = ctk.CTkLabel(self.tab_daily, text="📋 जनरेट / ड्राइव से सिंक किए गए दैनिक नोट्स की सूची", font=ctk.CTkFont(size=16, weight="bold"))
         self.lbl_history.pack(anchor="w", padx=10, pady=10)
 
         self.notes_scroll = ctk.CTkScrollableFrame(self.tab_daily, width=800, height=450)
         self.notes_scroll.pack(fill="both", expand=True, padx=10, pady=10)
 
     def setup_custom_date_tab(self):
+        now_str = datetime.now(IST).strftime('%Y-%m-%d')
         lbl = ctk.CTkLabel(self.tab_custom, text="🗓️ किसी विशेष तारीख के नोट्स बनाएं (Custom Date)", font=ctk.CTkFont(size=16, weight="bold"))
         lbl.pack(anchor="w", padx=20, pady=15)
 
         sub_lbl = ctk.CTkLabel(self.tab_custom, text="तारीख दर्ज करें (फॉर्मेट: YYYY-MM-DD):")
         sub_lbl.pack(anchor="w", padx=20, pady=5)
 
-        self.entry_date = ctk.CTkEntry(self.tab_custom, width=250, placeholder_text=datetime.now().strftime('%Y-%m-%d'))
+        self.entry_date = ctk.CTkEntry(self.tab_custom, width=250, placeholder_text=now_str)
         self.entry_date.pack(anchor="w", padx=20, pady=5)
-        self.entry_date.insert(0, datetime.now().strftime('%Y-%m-%d'))
+        self.entry_date.insert(0, now_str)
 
         btn_generate_custom = ctk.CTkButton(
             self.tab_custom, 
@@ -172,6 +211,14 @@ class RASNotesGUI(ctk.CTk):
         self.entry_api_key = ctk.CTkEntry(self.tab_settings, width=450, show="*")
         self.entry_api_key.pack(anchor="w", padx=20, pady=5)
 
+        # Google Drive Folder Path
+        lbl_drive = ctk.CTkLabel(self.tab_settings, text="गूगल ड्राइव लोकल फोल्डर पाथ (Google Drive Folder):")
+        lbl_drive.pack(anchor="w", padx=20, pady=5)
+        
+        self.entry_drive_path = ctk.CTkEntry(self.tab_settings, width=450)
+        self.entry_drive_path.pack(anchor="w", padx=20, pady=5)
+        self.entry_drive_path.insert(0, self.uploader.drive_folder)
+
         # Preferred Engine
         lbl_eng = ctk.CTkLabel(self.tab_settings, text="पसंदीदा AI इंजन:")
         lbl_eng.pack(anchor="w", padx=20, pady=5)
@@ -192,6 +239,10 @@ class RASNotesGUI(ctk.CTk):
                     cfg = json.load(f)
                     self.entry_api_key.insert(0, cfg.get("gemini_api_key", ""))
                     self.combo_engine.set(cfg.get("preferred_engine", "gemini"))
+                    drive_p = cfg.get("google_drive_folder", "")
+                    if drive_p:
+                        self.entry_drive_path.delete(0, "end")
+                        self.entry_drive_path.insert(0, drive_p)
             except Exception as e:
                 print(f"Error loading settings GUI: {e}")
 
@@ -204,10 +255,12 @@ class RASNotesGUI(ctk.CTk):
             
             cfg["gemini_api_key"] = self.entry_api_key.get().strip()
             cfg["preferred_engine"] = self.combo_engine.get()
+            cfg["google_drive_folder"] = self.entry_drive_path.get().strip()
 
             with open(self.config_path, "w", encoding="utf-8") as f:
                 json.dump(cfg, f, ensure_ascii=False, indent=2)
             
+            self.uploader.load_config()
             self.status_label.configure(text="सेटिंग्स सेव हो गईं!", text_color="#10b981")
         except Exception as e:
             self.status_label.configure(text=f"एरर: {e}", text_color="#ef4444")
@@ -218,7 +271,7 @@ class RASNotesGUI(ctk.CTk):
 
         files = sorted(glob.glob(os.path.join(self.output_dir, "*.html")), reverse=True)
         if not files:
-            lbl = ctk.CTkLabel(self.notes_scroll, text="कोई पूर्व नोट्स उपलब्ध नहीं हैं। 'आज के नोट्स बनाएं' पर क्लिक करें।")
+            lbl = ctk.CTkLabel(self.notes_scroll, text="कोई पूर्व नोट्स उपलब्ध नहीं हैं। 'आज के नोट्स बनाएं' या 'गूगल ड्राइव से सिंक करें' पर क्लिक करें।")
             lbl.pack(padx=20, pady=20)
             return
 
