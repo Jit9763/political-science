@@ -164,6 +164,9 @@
             <div class="action-bar">
                 <button class="action-btn" onclick="adjustWidth(40)" title="Increase Page Width" style="font-family: 'Outfit', sans-serif; font-weight: 600;">W+</button>
                 <button class="action-btn" onclick="adjustWidth(-40)" title="Decrease Page Width" style="font-family: 'Outfit', sans-serif; font-weight: 600;">W-</button>
+                <button class="action-btn" onclick="adjustZoom(-0.1)" title="Decrease Zoom / ज़ूम कम करें (Z-)" style="font-family: 'Outfit', sans-serif; font-weight: 600; border-color: #06b6d4;">Z−</button>
+                <button class="action-btn" onclick="adjustZoom(0.1)" title="Increase Zoom / ज़ूम बढ़ाएं (Z+)" style="font-family: 'Outfit', sans-serif; font-weight: 600; border-color: #06b6d4;">Z+</button>
+                <button id="zoomResetBtn" class="action-btn" onclick="resetZoom()" title="Reset Zoom / रीसेट ज़ूम (100%)" style="font-family: 'Outfit', sans-serif; font-weight: 600; font-size: 0.95rem; border-color: #06b6d4;">100%</button>
                 <button class="action-btn" onclick="adjustFontSize(2)" title="Increase Font Size" style="font-family: 'Outfit', sans-serif; font-weight: 600;">A+</button>
                 <button class="action-btn" onclick="adjustFontSize(-2)" title="Decrease Font Size" style="font-family: 'Outfit', sans-serif; font-weight: 600;">A-</button>
                 <button class="action-btn" onclick="adjustFontWeight(100)" title="Increase Text Boldness" style="font-family: 'Outfit', sans-serif; font-weight: 600;">B+</button>
@@ -180,6 +183,33 @@
 
     <script>
         let containerWidth = 1400; // default width in pixels
+        let currentZoom = 1.0;
+
+        function adjustZoom(amount) {
+            currentZoom = Math.round((currentZoom + amount) * 100) / 100;
+            if (currentZoom < 0.3) currentZoom = 0.3;
+            if (currentZoom > 2.0) currentZoom = 2.0;
+            const target = document.getElementById('notes-content');
+            if (target) {
+                target.style.zoom = currentZoom;
+            }
+            const btn = document.getElementById('zoomResetBtn');
+            if (btn) {
+                btn.innerText = Math.round(currentZoom * 100) + '%';
+            }
+        }
+
+        function resetZoom() {
+            currentZoom = 1.0;
+            const target = document.getElementById('notes-content');
+            if (target) {
+                target.style.zoom = 1.0;
+            }
+            const btn = document.getElementById('zoomResetBtn');
+            if (btn) {
+                btn.innerText = '100%';
+            }
+        }
 
         function adjustWidth(amount) {
             containerWidth += amount;
@@ -203,8 +233,14 @@
                 }
             } else if (e.key === '+' || e.key === '=') {
                 adjustWidth(40);
-            } else if (e.key === '-') {
+            } else if (e.key === '-' || e.key === '_') {
                 adjustWidth(-40);
+            } else if (e.key === 'z' || e.key === 'Z') {
+                if (e.shiftKey) {
+                    adjustZoom(0.1);
+                } else {
+                    adjustZoom(-0.1);
+                }
             }
         });
 

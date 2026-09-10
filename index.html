@@ -35,9 +35,38 @@
     </div>
   </main>
 
-  <footer>
-    <p>© 2026 राजनीति विज्ञान इंटरैक्टिव पोर्टल | Inspired by your learning journey</p>
-  </footer>
+  <!-- Floating Zoom Controls -->
+  <div id="floatingZoomBar" style="position: fixed; bottom: 25px; right: 25px; z-index: 99999; display: flex; gap: 8px; background: rgba(15, 23, 42, 0.88); padding: 8px 14px; border-radius: 40px; box-shadow: 0 8px 24px rgba(0,0,0,0.4); border: 2px solid #06b6d4; align-items: center; backdrop-filter: blur(10px); font-family: 'Outfit', sans-serif;">
+      <button onclick="adjustPageZoom(-0.1)" title="Zoom Out / ज़ूम कम करें (Z-)" style="width: 40px; height: 40px; border-radius: 50%; border: 2px solid #06b6d4; background: #1e293b; color: white; font-weight: 800; font-size: 17px; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: all 0.2s ease;">Z−</button>
+      <button id="floatingZoomLevel" onclick="resetPageZoom()" title="Reset Zoom / रीसेट ज़ूम (100%)" style="min-width: 52px; height: 40px; border-radius: 20px; border: 2px solid #3b82f6; background: #0f172a; color: #38bdf8; font-weight: 800; font-size: 13px; cursor: pointer; padding: 0 10px; transition: all 0.2s ease;">100%</button>
+      <button onclick="adjustPageZoom(0.1)" title="Zoom In / ज़ूम बढ़ाएं (Z+)" style="width: 40px; height: 40px; border-radius: 50%; border: 2px solid #06b6d4; background: #1e293b; color: white; font-weight: 800; font-size: 17px; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: all 0.2s ease;">Z+</button>
+  </div>
+  <script>
+    (function() {
+      let zoomLevel = 1.0;
+      window.adjustPageZoom = function(amount) {
+        zoomLevel = Math.round((zoomLevel + amount) * 100) / 100;
+        if (zoomLevel < 0.4) zoomLevel = 0.4;
+        if (zoomLevel > 2.0) zoomLevel = 2.0;
+        document.body.style.zoom = zoomLevel;
+        const lbl = document.getElementById('floatingZoomLevel');
+        if (lbl) lbl.innerText = Math.round(zoomLevel * 100) + '%';
+      };
+      window.resetPageZoom = function() {
+        zoomLevel = 1.0;
+        document.body.style.zoom = 1.0;
+        const lbl = document.getElementById('floatingZoomLevel');
+        if (lbl) lbl.innerText = '100%';
+      };
+      document.addEventListener('keydown', function(e) {
+        if (['INPUT', 'TEXTAREA'].includes(document.activeElement?.tagName)) return;
+        if (e.key === 'z' || e.key === 'Z') {
+          if (e.shiftKey) adjustPageZoom(0.1);
+          else adjustPageZoom(-0.1);
+        }
+      });
+    })();
+  </script>
 
   <script src="js/main.js"></script>
 </body>

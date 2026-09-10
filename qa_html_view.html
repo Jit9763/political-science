@@ -75,6 +75,9 @@
     <div class="container" style="position: relative; width: 100%;">
         <!-- Sidebar Tools at TOP RIGHT -->
         <div class="sidebar-actions">
+            <button id="zoomOutBtn" class="tool-btn" onclick="adjustZoom(-0.1)" title="Zoom Out / ज़ूम कम करें (Z-)" style="background: #0284c7; font-weight: bold; font-size: 1.2rem;">Z−</button>
+            <button id="zoomInBtn" class="tool-btn" onclick="adjustZoom(0.1)" title="Zoom In / ज़ूम बढ़ाएं (Z+)" style="background: #0284c7; font-weight: bold; font-size: 1.2rem;">Z+</button>
+            <button id="zoomResetBtn" class="tool-btn" onclick="resetZoom()" title="Reset Zoom / रीसेट ज़ूम (100%)" style="background: #0f172a; font-size: 14px; font-weight: bold;">100%</button>
             <button id="copyBtn" class="tool-btn copy-tool" onclick="copyEntireContent()" title="Copy Formatting">📋</button>
             <button id="pdfBtn" class="tool-btn pdf-tool" onclick="generatePDF()" title="Download PDF or Print">📥</button>
         </div>
@@ -90,6 +93,45 @@
     </div>
 
     <script>
+        let currentZoom = 1.0;
+
+        function adjustZoom(amount) {
+            currentZoom = Math.round((currentZoom + amount) * 100) / 100;
+            if (currentZoom < 0.3) currentZoom = 0.3;
+            if (currentZoom > 2.0) currentZoom = 2.0;
+            const target = document.getElementById('notes-content');
+            if (target) {
+                target.style.zoom = currentZoom;
+            }
+            const btn = document.getElementById('zoomResetBtn');
+            if (btn) {
+                btn.innerText = Math.round(currentZoom * 100) + '%';
+            }
+        }
+
+        function resetZoom() {
+            currentZoom = 1.0;
+            const target = document.getElementById('notes-content');
+            if (target) {
+                target.style.zoom = 1.0;
+            }
+            const btn = document.getElementById('zoomResetBtn');
+            if (btn) {
+                btn.innerText = '100%';
+            }
+        }
+
+        document.addEventListener('keydown', (e) => {
+            if (['INPUT', 'TEXTAREA'].includes(document.activeElement?.tagName)) return;
+            if (e.key === 'z' || e.key === 'Z') {
+                if (e.shiftKey) {
+                    adjustZoom(0.1);
+                } else {
+                    adjustZoom(-0.1);
+                }
+            }
+        });
+
         async function copyEntireContent() {
             const btn = document.getElementById('copyBtn');
             const target = document.getElementById('notes-content');

@@ -63,7 +63,11 @@
   <div class="top-bar">
     <a href="index.html" class="back-btn">🏠 पोर्टल पर वापस जाएँ</a>
     <h1 id="chapterTitle" class="chapter-title">लोड हो रहा है...</h1>
-    <div style="width: 100px;"></div> <!-- Spacer for centering -->
+    <div style="display: flex; gap: 8px; align-items: center;">
+      <button onclick="adjustIframeZoom(-0.1)" title="Zoom Out (कम करें)" style="width: 38px; height: 38px; border-radius: 50%; border: 1.5px solid #06b6d4; background: #1e293b; color: white; font-weight: bold; font-size: 15px; cursor: pointer; display: flex; align-items: center; justify-content: center;">Z−</button>
+      <button id="iframeZoomLevel" onclick="resetIframeZoom()" title="Reset Zoom (100%)" style="min-width: 48px; height: 38px; border-radius: 19px; border: 1.5px solid #3b82f6; background: #0f172a; color: #38bdf8; font-weight: bold; font-size: 12px; cursor: pointer; padding: 0 8px;">100%</button>
+      <button onclick="adjustIframeZoom(0.1)" title="Zoom In (बढ़ाएं)" style="width: 38px; height: 38px; border-radius: 50%; border: 1.5px solid #06b6d4; background: #1e293b; color: white; font-weight: bold; font-size: 15px; cursor: pointer; display: flex; align-items: center; justify-content: center;">Z+</button>
+    </div>
   </div>
 
   <div id="loadingMsg">
@@ -112,6 +116,29 @@
          titleElem.innerText = `दस्तावेज़ नहीं मिला`;
          loadingMsg.innerHTML = `<h2 style="color: #ff5252;">⚠️ अध्याय ${chapterId} के लिए कोई Google Doc लिंक नहीं किया गया है।</h2>`;
       }
+
+      let iframeZoom = 1.0;
+      window.adjustIframeZoom = function(amount) {
+        iframeZoom = Math.round((iframeZoom + amount) * 100) / 100;
+        if (iframeZoom < 0.4) iframeZoom = 0.4;
+        if (iframeZoom > 2.0) iframeZoom = 2.0;
+        iframe.style.zoom = iframeZoom;
+        const lbl = document.getElementById('iframeZoomLevel');
+        if (lbl) lbl.innerText = Math.round(iframeZoom * 100) + '%';
+      };
+      window.resetIframeZoom = function() {
+        iframeZoom = 1.0;
+        iframe.style.zoom = 1.0;
+        const lbl = document.getElementById('iframeZoomLevel');
+        if (lbl) lbl.innerText = '100%';
+      };
+      document.addEventListener('keydown', function(e) {
+        if (['INPUT', 'TEXTAREA'].includes(document.activeElement?.tagName)) return;
+        if (e.key === 'z' || e.key === 'Z') {
+          if (e.shiftKey) adjustIframeZoom(0.1);
+          else adjustIframeZoom(-0.1);
+        }
+      });
     });
   </script>
 </body>
