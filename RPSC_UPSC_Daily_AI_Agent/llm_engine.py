@@ -45,9 +45,12 @@ class LLMEngine:
             raise ValueError("GEMINI_API_KEY is not configured! Please set it in config.json or environment.")
 
         client = genai.Client(api_key=self.api_key)
-        candidate_models = ['gemini-3.6-flash', 'gemini-2.5-flash', 'gemini-1.5-flash']
+        candidate_models = ['gemini-3.6-flash', 'gemini-3.7-flash', 'gemini-3.5-flash', 'gemini-flash-latest', 'gemini-3.8-flash']
 
-        config_args = {'temperature': 0.3}
+        config_args = {
+            'temperature': 0.3,
+            'response_mime_type': 'application/json'
+        }
         if system_instruction:
             config_args['system_instruction'] = system_instruction
             

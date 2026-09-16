@@ -225,6 +225,9 @@ class RASNotesGUI(ctk.CTk):
         btn_add = ctk.CTkButton(add_frame, text="➕ चैनल जोड़ें", fg_color="#0f766e", hover_color="#0d9488", command=self.add_telegram_channel)
         btn_add.pack(side="left", padx=10, pady=10)
 
+        btn_open_bank = ctk.CTkButton(add_frame, text="📖 5-माह का मास्टर क्वेश्चन बैंक", fg_color="#2563eb", hover_color="#1d4ed8", command=self.open_master_question_bank)
+        btn_open_bank.pack(side="left", padx=10, pady=10)
+
         self.tg_channels_scroll = ctk.CTkScrollableFrame(self.tab_telegram, width=800, height=350)
         self.tg_channels_scroll.pack(fill="both", expand=True, padx=20, pady=10)
 
@@ -296,6 +299,15 @@ class RASNotesGUI(ctk.CTk):
                     self.status_label.configure(text=f"चैनल हटाया गया", text_color="#f59e0b")
         except Exception as e:
             self.status_label.configure(text=f"एरर: {e}", text_color="#ef4444")
+
+    def open_master_question_bank(self):
+        import webbrowser
+        bank_path = os.path.join(os.path.dirname(__file__), "Output_Notes", "Rajasthan_5_Months_Telegram_Master_Question_Bank.html")
+        if os.path.exists(bank_path):
+            webbrowser.open(f"file:///{bank_path.replace(os.sep, '/')}")
+            self.status_label.configure(text="5-माह का मास्टर क्वेश्चन बैंक ब्राउज़र में खोला गया!", text_color="#10b981")
+        else:
+            self.status_label.configure(text="मास्टर क्वेश्चन बैंक फ़ाइल नहीं मिली", text_color="#ef4444")
 
     def setup_settings_tab(self):
         lbl = ctk.CTkLabel(self.tab_settings, text="⚙️ सिस्टम एवं AI इंजन सेटिंग्स", font=ctk.CTkFont(size=16, weight="bold"))

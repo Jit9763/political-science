@@ -457,11 +457,22 @@ class NewsFetcher:
         # If markdown response from Jina
         if "Markdown Content:" in html:
             content = html.split("Markdown Content:")[-1]
-            paragraphs = content.split("\n\n")
-            for p in paragraphs[-max_posts:]:
-                clean_p = p.strip()
+            blocks = re.split(r'\[(?:Image \d+|' + re.escape(clean_name) + r'|[a-zA-Z0-9_\s]+)\]\(https://t\.me/[^\)]+\)', content)
+            if len(blocks) <= 1:
+                blocks = content.split("\n\n")
+            for b in blocks[-max_posts:]:
+                b_clean = re.sub(r'\[?_?!\[[^\]]*\]\([^\)]+\)_?\]?', '', b)
+                lines = [l.strip() for l in b_clean.splitlines() if l.strip()]
+                lines = [l for l in lines if not l.startswith('#####') and not l.startswith('[Download') and not l.startswith('[Join') and not l.startswith('http') and not 'view and join' in l.lower() and not 'if you have **telegram**' in l.lower()]
+                clean_p = '\n'.join(lines).strip()
                 if len(clean_p) > 20 and not clean_p.startswith("!"):
-                    is_question = any(k in clean_p for k in ['?', 'Q.', 'प्रश्न', 'उ.', 'A)', 'B)', 'C)', 'D)', 'Option', 'क)', 'ख)', 'ग)', 'घ)'])
+                    if any(ignore in clean_p.lower() for ignore in ['view in telegram', 'subscribers', 'members,', 'right away', 'if you have **telegram**', 'tg://resolve']):
+                        continue
+                    # Ignore promotional/coupon messages
+                    spam_kw = ['discount', 'extra off', 'admission', 'use code', 'coupon', 'promocode']
+                    if any(sw in clean_p.lower() for sw in spam_kw) and not ('?' in clean_p or 'प्रश्न' in clean_p):
+                        continue
+                    is_question = any(k in clean_p for k in ['?', 'Q.', 'प्रश्न', 'उ.', 'A)', 'B)', 'C)', 'D)', 'Option', 'क)', 'ख)', 'ग)', 'घ)', 'Quiz', '%'])
                     posts.append({
                         'channel': f"@{clean_name}",
                         'text': clean_p,
