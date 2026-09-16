@@ -403,7 +403,96 @@ class NewsFetcher:
         yt_input = youtube_url if youtube_url else "https://www.youtube.com/@NirmanIAS"
         news_corpus['youtube_transcript'] = self.fetch_youtube_transcript(yt_input, target_date=date_str)
 
+        # 8. Telegram Channels (Daily Questions, MCQs & Notes)
+        tg_posts = []
+        channels_to_fetch = []
+        cfg_path = os.path.join(os.path.dirname(__file__), "config.json")
+        if os.path.exists(cfg_path):
+            try:
+                import json
+                with open(cfg_path, 'r', encoding='utf-8') as f:
+                    channels_to_fetch = json.load(f).get("telegram_channels", [])
+            except Exception as e:
+                print(f"Warning loading telegram channels from config: {e}")
+
+        if channels_to_fetch:
+            print(f"- Fetching from {len(channels_to_fetch)} Telegram Channels for {date_str}...")
+            for ch in channels_to_fetch:
+                tg_posts.extend(self.fetch_telegram_channel(ch, target_date=date_str))
+        news_corpus['telegram_posts'] = tg_posts
+
         return news_corpus
+
+    def fetch_telegram_channel(self, channel_identifier, max_posts=15, target_date=None):
+        """Scrape daily posts, MCQs, and notes from a Telegram public channel preview."""
+        import requests
+        clean_name = channel_identifier.strip().lstrip('@')
+        if 't.me/' in clean_name:
+            clean_name = clean_name.split('t.me/')[-1].split('/')[0]
+        if not clean_name:
+            return []
+
+        print(f"- Fetching Telegram Channel: @{clean_name}...")
+        posts = []
+        html = ""
+        # Try direct or via r.jina.ai to bypass Indian ISP t.me block
+        urls = [
+            f"https://r.jina.ai/https://t.me/s/{clean_name}",
+            f"https://t.me/s/{clean_name}"
+        ]
+        
+        for url in urls:
+            try:
+                r = requests.get(url, headers={'User-Agent': 'Mozilla/5.0'}, timeout=12)
+                if r.status_code == 200 and len(r.text) > 200:
+                    html = r.text
+                    break
+            except Exception:
+                continue
+
+        if not html:
+            print(f"Warning: Could not fetch Telegram channel @{clean_name}")
+            return []
+
+        # If markdown response from Jina
+        if "Markdown Content:" in html:
+            content = html.split("Markdown Content:")[-1]
+            paragraphs = content.split("\n\n")
+            for p in paragraphs[-max_posts:]:
+                clean_p = p.strip()
+                if len(clean_p) > 20 and not clean_p.startswith("!"):
+                    is_question = any(k in clean_p for k in ['?', 'Q.', 'प्रश्न', 'उ.', 'A)', 'B)', 'C)', 'D)', 'Option', 'क)', 'ख)', 'ग)', 'घ)'])
+                    posts.append({
+                        'channel': f"@{clean_name}",
+                        'text': clean_p,
+                        'date': target_date,
+                        'is_question': is_question
+                    })
+        else:
+            soup = BeautifulSoup(html, 'html.parser')
+            wraps = soup.find_all(class_='tgme_widget_message_wrap')
+            for w in wraps[-max_posts:]:
+                txt_elem = w.find(class_='tgme_widget_message_text')
+                date_elem = w.find(class_='time')
+                if not txt_elem:
+                    continue
+                text = txt_elem.get_text().strip()
+                dt_str = date_elem.get('datetime', '') if date_elem else ''
+                p_date = parse_date_to_ist_ymd(dt_str)
+                
+                if target_date and p_date and p_date != target_date:
+                    continue
+                    
+                is_question = any(k in text for k in ['?', 'Q.', 'प्रश्न', 'उ.', 'A)', 'B)', 'C)', 'D)', 'Option', 'क)', 'ख)', 'ग)', 'घ)'])
+                posts.append({
+                    'channel': f"@{clean_name}",
+                    'text': text,
+                    'date': p_date or target_date,
+                    'is_question': is_question
+                })
+
+        print(f"  [OK] Fetched {len(posts)} posts from Telegram @{clean_name}")
+        return posts
 
 if __name__ == '__main__':
     fetcher = NewsFetcher()
@@ -413,3 +502,4 @@ if __name__ == '__main__':
     print(f"Economy (ET): {len(data['economy_news'])}")
     print(f"Science & Tech: {len(data['science_news'])}")
     print(f"PIB Releases: {len(data['pib_releases'])}")
+    print(f"Telegram Posts: {len(data.get('telegram_posts', []))}")

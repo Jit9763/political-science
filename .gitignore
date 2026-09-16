@@ -55,3 +55,4 @@ RPSC_UPSC_Daily_AI_Agent/.env.*
 # Allow Python scripts for GitHub Actions VM
 !RPSC_UPSC_Daily_AI_Agent/*.py
 
+RPSC_UPSC_Daily_AI_Agent/telegram_browser_profile/

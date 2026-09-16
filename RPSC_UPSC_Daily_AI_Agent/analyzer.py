@@ -19,11 +19,15 @@ class NewsAnalyzer:
         sujas_text = "\n".join([f"- [{item.get('source', '')}] {item.get('title', '')}: {item.get('summary', '')}" for item in news_corpus.get('rajasthan_sujas', [])])
         yt_transcript = news_corpus.get('youtube_transcript', '')
 
+        # Telegram posts
+        tg_posts = news_corpus.get('telegram_posts', [])
+        tg_text = "\n\n".join([f"[{p.get('channel', '@Telegram')}] {p.get('text', '')}" for p in tg_posts])
+
         prompt = f"""
 आप RPSC RAS एवं UPSC परीक्षा के सर्वोच्च विशेषज्ञ शिक्षक एवं विश्लेषक हैं।
 तारीख: {date_str}
 
-नीचे दिए गए दैनिक समाचारों, सम्पादकीयों (The Hindu, Indian Express के पूर्ण सम्पादकीय पाठ), अर्थशास्त्र (Economic Times, Financial Express, LiveMint), विज्ञान एवं प्रौद्योगिकी (The Hindu Sci-Tech, Down To Earth, ScienceDaily), PIB की संपूर्ण प्रेस विज्ञप्तियों, राजस्थान सुजस (DIPR) तथा यूट्यूब करंट अफेयर्स लाइव क्लास के 100% पूर्ण ट्रांसक्रिप्ट का गहन अध्ययन करें और बिना किसी जानकारी को छोड़े अत्यंत विस्तृत, संपूर्ण एवं बहुआयामी अध्ययन नोट्स तैयार करें।
+नीचे दिए गए दैनिक समाचारों, सम्पादकीयों (The Hindu, Indian Express के पूर्ण सम्पादकीय पाठ), अर्थशास्त्र (Economic Times, Financial Express, LiveMint), विज्ञान एवं प्रौद्योगिकी (The Hindu Sci-Tech, Down To Earth, ScienceDaily), PIB की संपूर्ण प्रेस विज्ञप्तियों, राजस्थान सुजस (DIPR), टेलीग्राम स्टडी चैनल्स के प्रश्नों/नोट्स तथा यूट्यूब करंट अफेयर्स लाइव क्लास के 100% पूर्ण ट्रांसक्रिप्ट का गहन अध्ययन करें और बिना किसी जानकारी को छोड़े अत्यंत विस्तृत, संपूर्ण एवं बहुआयामी अध्ययन नोट्स तैयार करें।
 
 === सम्पादकीय का पूरा पाठ (Full The Hindu & Express Editorials) ===
 {eds_text}
@@ -42,6 +46,9 @@ class NewsAnalyzer:
 
 === राजस्थान सुजस एवं DIPR समाचार ===
 {sujas_text}
+
+=== टेलीग्राम चैनलों से दैनिक प्रश्न, क्विज़ व नोट्स (Telegram Daily MCQs & Notes) ===
+{tg_text if tg_text else "कोई टेलीग्राम अपडेट उपलब्ध नहीं।"}
 
 === यूट्यूब लाइव कोचिंग क्लास संपूर्ण ट्रांसक्रिप्ट (Teacher's Full Live Speech) ===
 {yt_transcript if yt_transcript else "कोई यूट्यूब ट्रांसक्रिप्ट उपलब्ध नहीं।"}
@@ -109,6 +116,15 @@ class NewsAnalyzer:
       "department": "विभागीय जानकारी",
       "key_points": ["बिंदु 1", "बिंदु 2", "बिंदु 3"],
       "rpsc_relevance": "RAS परीक्षा हेतु महत्व"
+    }}
+  ],
+  "telegram_quiz_and_notes": [
+    {{
+      "channel": "@channel_name",
+      "question_or_topic": "टेलीग्राम पर आया प्रश्न या महत्वपूर्ण टॉपिक",
+      "options": ["A) ...", "B) ...", "C) ...", "D) ..."],
+      "correct_answer": "सही उत्तर एवं विस्तृत व्याख्या",
+      "syllabus_link": "Paper 1 / Paper 2 / Paper 3 / Paper 4"
     }}
   ],
   "master_library_updates": [

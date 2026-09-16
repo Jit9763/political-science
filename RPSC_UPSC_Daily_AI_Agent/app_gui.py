@@ -108,14 +108,19 @@ class RASNotesGUI(ctk.CTk):
         )
         self.btn_open_wiki.grid(row=8, column=0, padx=20, pady=6)
 
+        self.btn_tab_telegram = ctk.CTkButton(
+            self.sidebar_frame, text="📲 टेलीग्राम चैनल्स", command=lambda: self.tab_view.set("Telegram")
+        )
+        self.btn_tab_telegram.grid(row=9, column=0, padx=20, pady=6)
+
         self.btn_tab_settings = ctk.CTkButton(
             self.sidebar_frame, text="⚙️ सेटिंग्स (Engine/Drive)", command=lambda: self.tab_view.set("Settings")
         )
-        self.btn_tab_settings.grid(row=9, column=0, padx=20, pady=6)
+        self.btn_tab_settings.grid(row=10, column=0, padx=20, pady=6)
 
         # Status Label
         self.status_label = ctk.CTkLabel(self.sidebar_frame, text="रेडी (Ready)", text_color="#10b981", font=ctk.CTkFont(size=12))
-        self.status_label.grid(row=10, column=0, padx=20, pady=10)
+        self.status_label.grid(row=11, column=0, padx=20, pady=10)
 
     def sync_from_drive_quiet(self):
         """Automatically fetch any missing notes from cloud VM & Google Drive folder on launch."""
@@ -160,7 +165,11 @@ class RASNotesGUI(ctk.CTk):
         self.tab_master = self.tab_view.add("Master Library")
         self.setup_master_library_tab()
 
-        # Tab 4: Settings
+        # Tab 4: Telegram Channels
+        self.tab_telegram = self.tab_view.add("Telegram")
+        self.setup_telegram_tab()
+
+        # Tab 5: Settings
         self.tab_settings = self.tab_view.add("Settings")
         self.setup_settings_tab()
 
@@ -199,6 +208,94 @@ class RASNotesGUI(ctk.CTk):
         self.master_scroll = ctk.CTkScrollableFrame(self.tab_master, width=800, height=500)
         self.master_scroll.pack(fill="both", expand=True, padx=10, pady=10)
         self.refresh_master_library_view()
+
+    def setup_telegram_tab(self):
+        lbl = ctk.CTkLabel(self.tab_telegram, text="📲 टेलीग्राम चैनल्स एवं दैनिक प्रश्न/क्विज़", font=ctk.CTkFont(size=16, weight="bold"))
+        lbl.pack(anchor="w", padx=20, pady=(15, 5))
+
+        desc = ctk.CTkLabel(self.tab_telegram, text="अपने पसंदीदा टेलीग्राम स्टडी चैनल्स (@username या लिंक) यहाँ जोड़ें। AI इनके रोज़ाना के प्रश्न व नोट्स स्वतः फेच करेगा।", text_color="#94a3b8")
+        desc.pack(anchor="w", padx=20, pady=(0, 10))
+
+        add_frame = ctk.CTkFrame(self.tab_telegram)
+        add_frame.pack(fill="x", padx=20, pady=5)
+
+        self.entry_new_channel = ctk.CTkEntry(add_frame, width=320, placeholder_text="उदा: @currentaffairs या DrishtiIAS")
+        self.entry_new_channel.pack(side="left", padx=10, pady=10)
+
+        btn_add = ctk.CTkButton(add_frame, text="➕ चैनल जोड़ें", fg_color="#0f766e", hover_color="#0d9488", command=self.add_telegram_channel)
+        btn_add.pack(side="left", padx=10, pady=10)
+
+        self.tg_channels_scroll = ctk.CTkScrollableFrame(self.tab_telegram, width=800, height=350)
+        self.tg_channels_scroll.pack(fill="both", expand=True, padx=20, pady=10)
+
+        self.refresh_telegram_channels_list()
+
+    def refresh_telegram_channels_list(self):
+        for widget in self.tg_channels_scroll.winfo_children():
+            widget.destroy()
+
+        channels = []
+        if os.path.exists(self.config_path):
+            try:
+                with open(self.config_path, "r", encoding="utf-8") as f:
+                    channels = json.load(f).get("telegram_channels", [])
+            except Exception:
+                pass
+
+        if not channels:
+            empty_lbl = ctk.CTkLabel(self.tg_channels_scroll, text="अभी तक कोई टेलीग्राम चैनल नहीं जोड़ा गया है। ऊपर इनपुट बॉक्स में चैनल का नाम डालें।", text_color="#94a3b8")
+            empty_lbl.pack(padx=20, pady=20)
+            return
+
+        for ch in channels:
+            row = ctk.CTkFrame(self.tg_channels_scroll)
+            row.pack(fill="x", padx=5, pady=4)
+
+            lbl = ctk.CTkLabel(row, text=f"📢 @{ch.lstrip('@')}", font=ctk.CTkFont(size=14, weight="bold"))
+            lbl.pack(side="left", padx=15, pady=8)
+
+            btn_del = ctk.CTkButton(row, text="❌ हटाएं", width=80, fg_color="#ef4444", hover_color="#dc2626", command=lambda c=ch: self.remove_telegram_channel(c))
+            btn_del.pack(side="right", padx=10, pady=8)
+
+    def add_telegram_channel(self):
+        val = self.entry_new_channel.get().strip().lstrip('@')
+        if 't.me/' in val:
+            val = val.split('t.me/')[-1].split('/')[0]
+        if not val:
+            return
+
+        try:
+            cfg = {}
+            if os.path.exists(self.config_path):
+                with open(self.config_path, "r", encoding="utf-8") as f:
+                    cfg = json.load(f)
+            ch_list = cfg.get("telegram_channels", [])
+            if val not in ch_list:
+                ch_list.append(val)
+                cfg["telegram_channels"] = ch_list
+                with open(self.config_path, "w", encoding="utf-8") as f:
+                    json.dump(cfg, f, ensure_ascii=False, indent=2)
+                self.entry_new_channel.delete(0, "end")
+                self.refresh_telegram_channels_list()
+                self.status_label.configure(text=f"चैनल @{val} जुड़ गया!", text_color="#10b981")
+        except Exception as e:
+            self.status_label.configure(text=f"एरर: {e}", text_color="#ef4444")
+
+    def remove_telegram_channel(self, channel_name):
+        try:
+            if os.path.exists(self.config_path):
+                with open(self.config_path, "r", encoding="utf-8") as f:
+                    cfg = json.load(f)
+                ch_list = cfg.get("telegram_channels", [])
+                if channel_name in ch_list:
+                    ch_list.remove(channel_name)
+                    cfg["telegram_channels"] = ch_list
+                    with open(self.config_path, "w", encoding="utf-8") as f:
+                        json.dump(cfg, f, ensure_ascii=False, indent=2)
+                    self.refresh_telegram_channels_list()
+                    self.status_label.configure(text=f"चैनल हटाया गया", text_color="#f59e0b")
+        except Exception as e:
+            self.status_label.configure(text=f"एरर: {e}", text_color="#ef4444")
 
     def setup_settings_tab(self):
         lbl = ctk.CTkLabel(self.tab_settings, text="⚙️ सिस्टम एवं AI इंजन सेटिंग्स", font=ctk.CTkFont(size=16, weight="bold"))

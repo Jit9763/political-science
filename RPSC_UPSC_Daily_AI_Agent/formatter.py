@@ -433,6 +433,26 @@ class NotesFormatter:
             </div>
             """
 
+        tg_items = analysis_data.get('telegram_quiz_and_notes', [])
+        tg_html = ""
+        for item in tg_items:
+            ch = item.get('channel', '@Telegram')
+            q_text = item.get('question_or_topic', '')
+            ans = item.get('correct_answer', '')
+            opts = item.get('options', [])
+            opts_html = "".join([f"<li>{o}</li>" for o in opts]) if opts else ""
+            tg_html += f"""
+            <div class="fact-card" style="border-left: 8px solid #0284c7; margin-bottom: 20px;">
+                <div class="card-header">
+                    <span class="badge" style="background:#0284c7; color:white;">{ch}</span>
+                    <span class="topic-title">{item.get('syllabus_link', 'दैनिक अभ्यास प्रश्न')}</span>
+                </div>
+                <p class="fact-text" style="font-weight:700; font-size:20px;">{q_text}</p>
+                {f'<ul style="margin: 10px 0; padding-left: 25px;">{opts_html}</ul>' if opts_html else ''}
+                {f'<div class="way-forward" style="margin-top:14px; font-size:18px;"><strong>उत्तर एवं व्याख्या:</strong> {ans}</div>' if ans else ''}
+            </div>
+            """
+
         html_content = f"""<!DOCTYPE html>
 <html lang="hi">
 <head>
@@ -569,6 +589,8 @@ class NotesFormatter:
 
         <div class="section-title">🔴 सम्पादकीय विस्तृत विश्लेषण (The Hindu, Indian Express, ET & DownToEarth)</div>
         {editorial_html if editorial_html else '<p>दैनिक सम्पादकीय विस्तृत विश्लेषण प्रस्तुत है।</p>'}
+
+        {f'<div class="section-title">📲 टेलीग्राम चैनल दैनिक प्रश्नोत्तरी व नोट्स (Telegram Daily Quiz & Notes)</div>{tg_html}' if tg_html else ''}
     </div>
 </body>
 </html>
@@ -606,6 +628,16 @@ class NotesFormatter:
                 p.add_run(f"भूमिका: {q.get('intro', '')}\n")
                 p.add_run(f"मुख्य भाग: {q.get('body', '')}\n")
                 p.add_run(f"निष्कर्ष: {q.get('conclusion', '')}\n")
+
+        tg_data = analysis_data.get('telegram_quiz_and_notes', [])
+        if tg_data:
+            doc.add_heading('3. टेलीग्राम चैनल दैनिक प्रश्नोत्तरी व नोट्स (Telegram Daily Quiz & Notes)', level=1)
+            for item in tg_data:
+                p = doc.add_paragraph()
+                p.add_run(f"[{item.get('channel', '@Telegram')}] {item.get('question_or_topic', '')}\n").bold = True
+                for o in item.get('options', []):
+                    doc.add_paragraph(f"  • {o}")
+                doc.add_paragraph(f"  उत्तर/व्याख्या: {item.get('correct_answer', '')}")
 
         docx_path = os.path.join(self.output_dir, f"RAS_UPSC_Notes_{date_str}.docx")
         doc.save(docx_path)
