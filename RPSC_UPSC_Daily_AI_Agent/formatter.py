@@ -437,19 +437,21 @@ class NotesFormatter:
         tg_html = ""
         for item in tg_items:
             ch = item.get('channel', '@Telegram')
-            q_text = item.get('question_or_topic', '')
-            ans = item.get('correct_answer', '')
-            opts = item.get('options', [])
-            opts_html = "".join([f"<li>{o}</li>" for o in opts]) if opts else ""
+            q_text = item.get('question', item.get('question_or_topic', ''))
+            ans = item.get('model_answer_50_words', item.get('correct_answer', '')).replace('\n', '<br>')
+            paper_tag = item.get('syllabus_link', 'Paper 1 (राजस्थान विशेष)')
             tg_html += f"""
-            <div class="fact-card" style="border-left: 8px solid #0284c7; margin-bottom: 20px;">
-                <div class="card-header">
-                    <span class="badge" style="background:#0284c7; color:white;">{ch}</span>
-                    <span class="topic-title">{item.get('syllabus_link', 'दैनिक अभ्यास प्रश्न')}</span>
+            <div class="mains-card" style="border-left: 8px solid #0284c7; margin-bottom: 25px;">
+                <div class="mains-header">
+                    <span class="badge" style="background:#0284c7; color:white;">5 अंक (~50 शब्द)</span>
+                    <span class="badge" style="background:#1e3a8a; color:white;">{ch}</span>
+                    <span class="subject-tag">{paper_tag}</span>
                 </div>
-                <p class="fact-text" style="font-weight:700; font-size:20px;">{q_text}</p>
-                {f'<ul style="margin: 10px 0; padding-left: 25px;">{opts_html}</ul>' if opts_html else ''}
-                {f'<div class="way-forward" style="margin-top:14px; font-size:18px;"><strong>उत्तर एवं व्याख्या:</strong> {ans}</div>' if ans else ''}
+                <h3 class="question-text">प्रश्न: {q_text}</h3>
+                <div class="answer-box">
+                    <strong class="ans-label">उत्तर ढांचा एवं विस्तृत नोट्स (~50 शब्द):</strong>
+                    <div class="answer-content">{ans}</div>
+                </div>
             </div>
             """
 
@@ -631,13 +633,14 @@ class NotesFormatter:
 
         tg_data = analysis_data.get('telegram_quiz_and_notes', [])
         if tg_data:
-            doc.add_heading('3. टेलीग्राम चैनल दैनिक प्रश्नोत्तरी व नोट्स (Telegram Daily Quiz & Notes)', level=1)
+            doc.add_heading('3. टेलीग्राम चैनल दैनिक मॉडल प्रश्नोत्तर व नोट्स (~50 शब्द प्रारूप)', level=1)
             for item in tg_data:
+                q_text = item.get('question', item.get('question_or_topic', ''))
+                ans_text = item.get('model_answer_50_words', item.get('correct_answer', ''))
                 p = doc.add_paragraph()
-                p.add_run(f"[{item.get('channel', '@Telegram')}] {item.get('question_or_topic', '')}\n").bold = True
-                for o in item.get('options', []):
-                    doc.add_paragraph(f"  • {o}")
-                doc.add_paragraph(f"  उत्तर/व्याख्या: {item.get('correct_answer', '')}")
+                p.add_run(f"प्रश्न [5 अंक - {item.get('syllabus_link', 'Paper 1')} - {item.get('channel', '@Telegram')}]: {q_text}\n").bold = True
+                p.add_run(f"उत्तर ढांचा (~50 शब्द):\n{ans_text}\n")
+                doc.add_paragraph("-" * 40)
 
         docx_path = os.path.join(self.output_dir, f"RAS_UPSC_Notes_{date_str}.docx")
         doc.save(docx_path)
