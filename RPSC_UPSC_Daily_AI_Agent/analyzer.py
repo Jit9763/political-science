@@ -60,7 +60,7 @@ class NewsAnalyzer:
 4. यूट्यूब क्लास विश्लेषण (youtube_teacher_analysis): यूट्यूब ट्रांसक्रिप्ट में शिक्षक द्वारा चर्चा किए गए सभी अलग-अलग विषयों पर कम से कम 4 से 6 विस्तृत कोचिंग कार्ड्स बनाएं।
 5. प्रारंभिक परीक्षा तथ्य (prelims_facts): कम से कम 10 से 15 प्रिलिम्स फैक्ट कार्ड्स बनाएं (RAS Pre/UPSC Pre हेतु)।
 6. मुख्य परीक्षा मॉडल उत्तर (mains_questions): कम से कम 4 से 6 RAS Mains (5-अंक व 10-अंक) मॉडल प्रश्न-उत्तर बनाएं।
-7. टेलीग्राम चैनल प्रश्नोत्तरी व नोट्स (telegram_quiz_and_notes): टेलीग्राम चैनलों से प्राप्त प्रत्येक प्रश्न/क्विज़ को साधारण 1-पंक्ति में न रखें। उसमें अतिरिक्त महत्वपूर्ण विवरण जोड़ते हुए RPSC RAS 5-अंक (~50 शब्द) लघुउत्तरीय मॉडल प्रश्नोत्तर प्रारूप में तैयार करें, जिसमें 3-4 विस्तृत बुलेट पॉइंट्स में तथ्य, संदर्भ व परीक्षा प्रासंगिकता शामिल हो।
+7. टेलीग्राम चैनल प्रश्नोत्तरी व नोट्स (telegram_quiz_and_notes): सभी उपलब्ध विभिन्न टेलीग्राम चैनलों (उदा. @Rajasthan_History_Polity_Culture, @Rajasthan_GK_Daily, @currentaffairs आदि) से अनिवार्य रूप से कम से कम 2-2 प्रश्न/नोट्स शामिल करें ताकि प्रत्येक चैनल का संतुलित प्रतिनिधित्व हो। किसी एक चैनल तक सीमित न रहें! प्रत्येक प्रश्न/क्विज़ को साधारण 1-पंक्ति में न रखें, बल्कि अतिरिक्त आवश्यक विवरण जोड़ते हुए RPSC RAS 5-अंक (~50 शब्द) लघुउत्तरीय मॉडल प्रश्नोत्तर प्रारूप में तैयार करें, जिसमें 3-4 विस्तृत बुलेट पॉइंट्स (1. मुख्य तथ्य व अवधारणा, 2. विस्तृत ऐतिहासिक/भौगोलिक/नीतिगत संदर्भ, 3. RPSC परीक्षा प्रासंगिकता) शामिल हों।
 
 कृपया अपनी प्रतिक्रिया शुद्ध JSON फॉर्मेट में प्रदान करें जिसका ढांचा इस प्रकार हो:
 
@@ -184,8 +184,23 @@ class NewsAnalyzer:
                             "model_answer_50_words": ans_detail,
                             "syllabus_link": "Paper 1 (राजस्थान इतिहास, कला, संस्कृति व समसामयिकी)"
                         })
-                if tg_list:
-                    analysis_data['telegram_quiz_and_notes'] = tg_list
+            existing_tg = analysis_data.get('telegram_quiz_and_notes', [])
+            existing_channels = {item.get('channel', '').lower() for item in existing_tg}
+            for p in news_corpus.get('telegram_posts', []):
+                ch = p.get('channel', '@Telegram')
+                if ch.lower() not in existing_channels and p.get('is_question'):
+                    lines = [l.strip() for l in p.get('text', '').splitlines() if l.strip()]
+                    q_line = lines[0] if lines else "राजस्थान समसामयिकी अभ्यास प्रश्न"
+                    opts = [l for l in lines[1:] if not l.startswith('http') and not 'voters' in l and not 'views' in l and not 'anonymous' in l.lower()]
+                    ans_detail = f"1. मुख्य तथ्य व अवधारणा: {q_line} का संबंध राजस्थान के विशिष्ट ऐतिहासिक व समसामयिक संदर्भ से है।\n2. विस्तृत आयाम व विवरण: {', '.join(opts[:3]) if opts else 'RPSC परीक्षा उपयोगी महत्वपूर्ण विश्लेषण व आंकड़े'}\n3. परीक्षा प्रासंगिकता: RAS मुख्य परीक्षा (Paper 1/2/3) के दृष्टिकोण से अनिवार्य अध्ययन बिंदु।"
+                    existing_tg.append({
+                        "channel": ch,
+                        "question": q_line,
+                        "model_answer_50_words": ans_detail,
+                        "syllabus_link": "Paper 1 (राजस्थान इतिहास, कला, संस्कृति व समसामयिकी)"
+                    })
+                    existing_channels.add(ch.lower())
+            analysis_data['telegram_quiz_and_notes'] = existing_tg
 
             return analysis_data
         except Exception as e:
