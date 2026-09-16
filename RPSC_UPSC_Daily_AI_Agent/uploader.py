@@ -46,6 +46,34 @@ class DriveSyncUploader:
             print(f"Error syncing to Drive folder ({self.drive_folder}): {e}")
             return False
 
+    def sync_from_cloud(self, local_output_dir):
+        """Pull latest notes pushed by VM server from GitHub and sync to Google Drive folder."""
+        repo_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+        try:
+            print(f"Checking for updates from Cloud VM (git pull in {repo_dir})...")
+            import subprocess
+            subprocess.run(["git", "-C", repo_dir, "pull", "--rebase", "origin", "main"], capture_output=True, text=True, timeout=15)
+        except Exception as ge:
+            print(f"Notice during cloud git pull: {ge}")
+
+        # Now mirror between Output_Notes and Drive folder
+        synced = self.sync_from_drive(local_output_dir)
+        
+        # Also copy any local Output_Notes to Drive folder
+        if os.path.exists(local_output_dir):
+            os.makedirs(self.drive_folder, exist_ok=True)
+            for fpath in glob.glob(os.path.join(local_output_dir, "*.*")):
+                fname = os.path.basename(fpath)
+                if fname.endswith(".html") or fname.endswith(".docx") or fname.endswith(".md"):
+                    dest = os.path.join(self.drive_folder, fname)
+                    if not os.path.exists(dest) or os.path.getmtime(fpath) > os.path.getmtime(dest):
+                        try:
+                            shutil.copy2(fpath, dest)
+                            synced += 1
+                        except Exception:
+                            pass
+        return synced
+
     def sync_from_drive(self, local_output_dir):
         """Sync files FROM Google Drive folder TO local Output_Notes folder when GUI opens."""
         if not os.path.exists(self.drive_folder):

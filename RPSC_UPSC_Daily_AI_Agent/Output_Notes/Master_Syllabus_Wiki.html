@@ -1,0 +1,1433 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RAS Master Syllabus Wiki - RPSC 4 Papers Knowledge Base</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #0f172a;
+            --primary-light: #2563eb;
+            --accent-green: #059669;
+            --accent-purple: #7c3aed;
+            --bg-main: #f8fafc;
+            --card-bg: #ffffff;
+            --text-dark: #020617;
+            --border-color: #cbd5e1;
+        }
+        body {
+            font-family: 'Noto Sans Devanagari', sans-serif;
+            background-color: var(--bg-main);
+            color: var(--text-dark);
+            margin: 0;
+            padding: 0;
+            line-height: 1.8;
+            font-size: 18px;
+        }
+        .top-navbar {
+            background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%);
+            color: white;
+            padding: 25px 40px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+        }
+        .top-navbar h1 {
+            margin: 0 0 8px 0;
+            font-size: 30px;
+            font-weight: 900;
+        }
+        .top-navbar p {
+            margin: 0;
+            opacity: 0.9;
+            font-size: 17px;
+        }
+        .container {
+            max-width: 1250px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+        .tab-buttons {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 30px;
+            border-bottom: 3px solid #e2e8f0;
+            padding-bottom: 10px;
+        }
+        .tab-btn {
+            background: #ffffff;
+            color: #334155;
+            border: 2px solid #cbd5e1;
+            padding: 12px 24px;
+            border-radius: 12px;
+            font-size: 19px;
+            font-weight: 800;
+            cursor: pointer;
+            font-family: inherit;
+            transition: all 0.2s;
+        }
+        .tab-btn:hover, .tab-btn.active {
+            background: #2563eb;
+            color: white;
+            border-color: #2563eb;
+            box-shadow: 0 4px 12px rgba(37,99,235,0.3);
+        }
+        .paper-title {
+            font-size: 26px;
+            font-weight: 900;
+            color: #1e3a8a;
+            margin-bottom: 25px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #3b82f6;
+        }
+        .unit-block {
+            background: white;
+            border-radius: 16px;
+            padding: 25px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+            border: 1px solid var(--border-color);
+        }
+        .unit-header {
+            font-size: 22px;
+            font-weight: 800;
+            color: #0f766e;
+            margin-top: 0;
+            margin-bottom: 20px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #ccfbf1;
+        }
+        .syllabus-topic-card {
+            background: #f8fafc;
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-left: 6px solid #2563eb;
+            border: 1px solid #e2e8f0;
+            border-left-width: 6px;
+        }
+        .topic-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 12px;
+        }
+        .topic-name { font-size: 20px; font-weight: 800; color: #0f172a; }
+        .badge-update { background: #059669; color: white; padding: 4px 12px; border-radius: 6px; font-size: 14px; font-weight: 700; }
+        
+        .current-status-box {
+            background: #ffffff;
+            padding: 16px;
+            border-radius: 10px;
+            border: 1px solid #cbd5e1;
+            font-size: 18px;
+        }
+        .history-details { margin-top: 12px; font-size: 16.5px; color: #475569; }
+        .history-body { margin-top: 10px; padding: 12px; background: #f1f5f9; border-radius: 8px; }
+        .update-entry { margin-bottom: 10px; padding-bottom: 8px; border-bottom: 1px dashed #cbd5e1; }
+        .update-date { font-weight: 700; color: #1e3a8a; font-size: 15px; }
+        .empty-topic { color: #94a3b8; font-style: italic; padding: 10px 0; }
+
+        .search-box {
+            width: 100%;
+            padding: 14px 20px;
+            font-size: 18px;
+            border-radius: 12px;
+            border: 2px solid #cbd5e1;
+            margin-bottom: 25px;
+            font-family: inherit;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    <div class="top-navbar">
+        <h1>📚 RPSC RAS 4 पेपर मास्टर सिलेबस नॉलेज बेस (Syllabus Wiki)</h1>
+        <p>पाठ्यक्रम अनुसार व्यवस्थित अध्ययन सामग्री एवं स्वतः अद्यतन तथ्य | अंतिम अद्यतन: 2026-09-16 21:12:59</p>
+    </div>
+
+    <div class="container">
+        <input type="text" class="search-box" id="syllabusSearch" onkeyup="filterTopics()" placeholder="🔍 RAS सिलेबस टॉपिक, आयोग, नियम या विषय खोजें...">
+
+        
+        <div style="background:#fff1f2; border:2px solid #fecdd3; border-radius:14px; padding:20px; margin-bottom:25px;">
+            <h2 style="margin:0 0 15px 0; color:#991b1b; font-size:22px; font-weight:900;">🔥 हाल ही में अद्यतन किए गए नवीन तथ्य (Recent Live Updates)</h2>
+            
+                            <div class="syllabus-topic-card" style="border-left:6px solid #dc2626; background:#fff1f2;">
+                                <div class="topic-header">
+                                    <span class="topic-name">🔥 [Paper 1] खाद्य व्यापार नीति, बफर स्टॉक एवं अंतर-राज्यीय जल विवाद</span>
+                                    <span class="badge" style="background:#dc2626; color:white; font-weight:bold;">ताज़ा अपडेट: 2026-09-06</span>
+                                </div>
+                                <div class="current-status-box">
+                                    <strong>अद्यतन स्थिति एवं मुख्य तथ्य:</strong>
+                                    <p>प्याज निर्यात नीति की अस्थिरता और बफर स्टॉक में 30% क्षरण के मुद्दे। नदी जोड़ो परियोजनाओं की सीमाएं और मांग-पक्ष जल प्रबंधन। संविधान की अनुसूची 7 के तहत जल (राज्य सूची प्रविष्टि 17) एवं अंतर-राज्यीय नदी जल विवाद अधिनियम 1956 का क्रियान्वयन।</p>
+                                </div>
+                            </div>
+                            
+                            <div class="syllabus-topic-card" style="border-left:6px solid #dc2626; background:#fff1f2;">
+                                <div class="topic-header">
+                                    <span class="topic-name">🔥 [Paper 1] कृषि विपणन एवं मूल्य स्थिरीकरण (Price Stabilization Fund)</span>
+                                    <span class="badge" style="background:#dc2626; color:white; font-weight:bold;">ताज़ा अपडेट: 2026-09-06</span>
+                                </div>
+                                <div class="current-status-box">
+                                    <strong>अद्यतन स्थिति एवं मुख्य तथ्य:</strong>
+                                    <p>मूल्य स्थिरीकरण कोष (PSF) की स्थापना आवश्यक कृषि वस्तुओं (प्याज, आलू, दालें) के मूल्य में अत्यधिक वृद्धि को नियंत्रित करने के लिए रणनीतिक बफर स्टॉक बनाए रखने हेतु की गई है। राजस्थान में राज्य स्तरीय बफर स्टॉक प्रबंधन के लिए राजफेड (RAJFED) नोडल एजेंसी के रूप में कार्य करता है।</p>
+                                </div>
+                            </div>
+                            
+                            <div class="syllabus-topic-card" style="border-left:6px solid #dc2626; background:#fff1f2;">
+                                <div class="topic-header">
+                                    <span class="topic-name">🔥 [Paper 1] वैश्विक बांड प्रतिफल (Bond Yields) एवं FCNR(B) स्वैप प्रबंधन</span>
+                                    <span class="badge" style="background:#dc2626; color:white; font-weight:bold;">ताज़ा अपडेट: 2026-09-06</span>
+                                </div>
+                                <div class="current-status-box">
+                                    <strong>अद्यतन स्थिति एवं मुख्य तथ्य:</strong>
+                                    <p>वैश्विक केंद्रीय बैंकों द्वारा ब्याज दरें ऊंची रखने (US 10-Yr Bond Yield ~4.8%) से वैश्विक विदेशी पूंजी महंगी हो गई है। भारत में विदेशी मुद्रा प्रवाह बनाए रखने हेतु RBI ने FCNR(B) जमाओं पर बैंकों को स्वैप विंडो दी, जिससे विदेशी मुद्रा भंडार बढ़कर $729 अरब हुआ। हालांकि, इससे बैंकिंग प्रणाली में प्रतरलता (Liquidity Surplus - ₹6.7 लाख करोड़) बढ़ी है, जिससे मुद्रास्फीति का जोखिम उत्पन्न हुआ है।</p>
+                                </div>
+                            </div>
+                            
+                            <div class="syllabus-topic-card" style="border-left:6px solid #dc2626; background:#fff1f2;">
+                                <div class="topic-header">
+                                    <span class="topic-name">🔥 [Paper 1] EPFO अधिनियम 1952 के तहत अनिवार्य वेतन सीमा में संशोधन</span>
+                                    <span class="badge" style="background:#dc2626; color:white; font-weight:bold;">ताज़ा अपडेट: 2026-09-16</span>
+                                </div>
+                                <div class="current-status-box">
+                                    <strong>अद्यतन स्थिति एवं मुख्य तथ्य:</strong>
+                                    <p>केंद्र सरकार ने कर्मचारी भविष्य निधि (EPF) योजना के तहत अनिवार्य कवरेज हेतु मासिक वेतन सीमा को ₹15,000 से बढ़ाकर ₹25,000 कर दिया है। इससे असंगठित व संगठित क्षेत्र के मध्य स्थित लगभग 1 करोड़ कर्मचारियों को पेंशन (EPS) और बीमा (EDLI) लाभ मिलेंगे।</p>
+                                </div>
+                            </div>
+                            
+                            <div class="syllabus-topic-card" style="border-left:6px solid #dc2626; background:#fff1f2;">
+                                <div class="topic-header">
+                                    <span class="topic-name">🔥 [Paper 2] डेटा सेंटर अवसंरचना, AI का भौतिक पदचिह्न व WUE मानक</span>
+                                    <span class="badge" style="background:#dc2626; color:white; font-weight:bold;">ताज़ा अपडेट: 2026-09-16</span>
+                                </div>
+                                <div class="current-status-box">
+                                    <strong>अद्यतन स्थिति एवं मुख्य तथ्य:</strong>
+                                    <p>AI सर्वर पारंपरिक सर्वरों की तुलना में 4 से 6 गुना अधिक ऊष्मा उत्पन्न करते हैं। जल उपयोग दक्षता (WUE) डेटा सेंटरों के पर्यावरणीय प्रभाव को मापने का प्रमुख मानक है। ग्रीन डेटा सेंटरों हेतु ड्राई कूलिंग, लिक्विड-टू-चिप कूलिंग और डीम्ड डिस्कॉम ऊर्जा नीतियों की आवश्यकता है।</p>
+                                </div>
+                            </div>
+                            
+                            <div class="syllabus-topic-card" style="border-left:6px solid #dc2626; background:#fff1f2;">
+                                <div class="topic-header">
+                                    <span class="topic-name">🔥 [Paper 3] पश्चिम एशिया के प्रमुख चोक-पॉइंट्स (Choke Points) और सुरक्षा ढांचा</span>
+                                    <span class="badge" style="background:#dc2626; color:white; font-weight:bold;">ताज़ा अपडेट: 2026-09-16</span>
+                                </div>
+                                <div class="current-status-box">
+                                    <strong>अद्यतन स्थिति एवं मुख्य तथ्य:</strong>
+                                    <p>बाब-अल-मंदेब (अदन की खाड़ी-लाल सागर) तथा हॉर्मुज जलडमरूमध्य (फारस की खाड़ी-ओमान की खाड़ी) वैश्विक 30% तेल और 20% कार्गो परिवहन को नियंत्रित करते हैं। मक्का पैक्ट (सऊदी-पाक-तुर्की) तथा अमेरिकी पेट्रो-डॉलर फ्रेमवर्क के क्षरण से इस क्षेत्र में बहुध्रुवीयता बढ़ रही है।</p>
+                                </div>
+                            </div>
+                            
+        </div>
+        
+
+        <div class="tab-buttons">
+            <button class="tab-btn active" onclick="showPaper('Paper_1', this)">📘 Paper 1</button>
+            <button class="tab-btn" onclick="showPaper('Paper_2', this)">📗 Paper 2</button>
+            <button class="tab-btn" onclick="showPaper('Paper_3', this)">📙 Paper 3</button>
+            <button class="tab-btn" onclick="showPaper('Paper_4', this)">📕 Paper 4</button>
+        </div>
+
+        
+            <div id="Paper_1" class="paper-tab-content">
+                <h2 class="paper-title">🏛️ RAS Paper 1 - विस्तृत पाठ्यक्रम एवं मास्टर नोट्स</h2>
+                
+                <div class="unit-block">
+                    <h3 class="unit-header">📘 Unit 1: इतिहास, कला, संस्कृति, साहित्य एवं विरासत</h3>
+                    <div class="empty-topic">नवीनतम दैनिक समाचारों से इस टॉपिक का अध्ययन जल्द ही अद्यतन होगा।</div>
+                </div>
+                
+                <div class="unit-block">
+                    <h3 class="unit-header">📘 Unit 2: भारतीय एवं राजस्थान अर्थव्यवस्था</h3>
+                    
+                        <div class="syllabus-topic-card">
+                            <div class="topic-header">
+                                <span class="topic-name">📌 खाद्य व्यापार नीति, बफर स्टॉक एवं अंतर-राज्यीय जल विवाद</span>
+                                <span class="badge badge-update">अद्यतन तिथि: 2026-09-06</span>
+                            </div>
+                            <div class="current-status-box">
+                                <strong>वर्तमान स्थिति एवं अद्यतन तथ्य:</strong>
+                                <p>प्याज निर्यात नीति की अस्थिरता और बफर स्टॉक में 30% क्षरण के मुद्दे। नदी जोड़ो परियोजनाओं की सीमाएं और मांग-पक्ष जल प्रबंधन। संविधान की अनुसूची 7 के तहत जल (राज्य सूची प्रविष्टि 17) एवं अंतर-राज्यीय नदी जल विवाद अधिनियम 1956 का क्रियान्वयन।</p>
+                            </div>
+                            <details class="history-details">
+                                <summary>📜 अपडेट इतिहास एवं पूर्व विवरण देखें</summary>
+                                <div class="history-body">
+                            <div class="update-entry">
+                                <span class="update-date">📅 2026-09-06</span>
+                                <div class="update-text">प्याज निर्यात नीति की अस्थिरता और बफर स्टॉक में 30% क्षरण के मुद्दे। नदी जोड़ो परियोजनाओं की सीमाएं और मांग-पक्ष जल प्रबंधन। संविधान की अनुसूची 7 के तहत जल (राज्य सूची प्रविष्टि 17) एवं अंतर-राज्यीय नदी जल विवाद अधिनियम 1956 का क्रियान्वयन।</div>
+                            </div>
+                            </div>
+                            </details>
+                        </div>
+                        
+                </div>
+                
+                <div class="unit-block">
+                    <h3 class="unit-header">📘 Unit 3: समाजशास्त्र, प्रबंधन, लेखांकन एवं अंकेक्षण</h3>
+                    <div class="empty-topic">नवीनतम दैनिक समाचारों से इस टॉपिक का अध्ययन जल्द ही अद्यतन होगा।</div>
+                </div>
+                
+                <div class="unit-block">
+                    <h3 class="unit-header">📘 Unit 2: राजस्थान एवं भारत की अर्थव्यवस्था</h3>
+                    
+                        <div class="syllabus-topic-card">
+                            <div class="topic-header">
+                                <span class="topic-name">📌 कृषि विपणन एवं मूल्य स्थिरीकरण (Price Stabilization Fund)</span>
+                                <span class="badge badge-update">अद्यतन तिथि: 2026-09-06</span>
+                            </div>
+                            <div class="current-status-box">
+                                <strong>वर्तमान स्थिति एवं अद्यतन तथ्य:</strong>
+                                <p>मूल्य स्थिरीकरण कोष (PSF) की स्थापना आवश्यक कृषि वस्तुओं (प्याज, आलू, दालें) के मूल्य में अत्यधिक वृद्धि को नियंत्रित करने के लिए रणनीतिक बफर स्टॉक बनाए रखने हेतु की गई है। राजस्थान में राज्य स्तरीय बफर स्टॉक प्रबंधन के लिए राजफेड (RAJFED) नोडल एजेंसी के रूप में कार्य करता है।</p>
+                            </div>
+                            <details class="history-details">
+                                <summary>📜 अपडेट इतिहास एवं पूर्व विवरण देखें</summary>
+                                <div class="history-body">
+                            <div class="update-entry">
+                                <span class="update-date">📅 2026-09-06</span>
+                                <div class="update-text">मूल्य स्थिरीकरण कोष (PSF) की स्थापना आवश्यक कृषि वस्तुओं (प्याज, आलू, दालें) के मूल्य में अत्यधिक वृद्धि को नियंत्रित करने के लिए रणनीतिक बफर स्टॉक बनाए रखने हेतु की गई है। राजस्थान में राज्य स्तरीय बफर स्टॉक प्रबंधन के लिए राजफेड (RAJFED) नोडल एजेंसी के रूप में कार्य करता है।</div>
+                            </div>
+                            </div>
+                            </details>
+                        </div>
+                        
+                </div>
+                
+                <div class="unit-block">
+                    <h3 class="unit-header">📘 Unit 2: भारतीय अर्थव्यवस्था व बाह्य क्षेत्र</h3>
+                    
+                        <div class="syllabus-topic-card">
+                            <div class="topic-header">
+                                <span class="topic-name">📌 वैश्विक बांड प्रतिफल (Bond Yields) एवं FCNR(B) स्वैप प्रबंधन</span>
+                                <span class="badge badge-update">अद्यतन तिथि: 2026-09-06</span>
+                            </div>
+                            <div class="current-status-box">
+                                <strong>वर्तमान स्थिति एवं अद्यतन तथ्य:</strong>
+                                <p>वैश्विक केंद्रीय बैंकों द्वारा ब्याज दरें ऊंची रखने (US 10-Yr Bond Yield ~4.8%) से वैश्विक विदेशी पूंजी महंगी हो गई है। भारत में विदेशी मुद्रा प्रवाह बनाए रखने हेतु RBI ने FCNR(B) जमाओं पर बैंकों को स्वैप विंडो दी, जिससे विदेशी मुद्रा भंडार बढ़कर $729 अरब हुआ। हालांकि, इससे बैंकिंग प्रणाली में प्रतरलता (Liquidity Surplus - ₹6.7 लाख करोड़) बढ़ी है, जिससे मुद्रास्फीति का जोखिम उत्पन्न हुआ है।</p>
+                            </div>
+                            <details class="history-details">
+                                <summary>📜 अपडेट इतिहास एवं पूर्व विवरण देखें</summary>
+                                <div class="history-body">
+                            <div class="update-entry">
+                                <span class="update-date">📅 2026-09-06</span>
+                                <div class="update-text">वैश्विक केंद्रीय बैंकों द्वारा ब्याज दरें ऊंची रखने (US 10-Yr Bond Yield ~4.8%) से वैश्विक विदेशी पूंजी महंगी हो गई है। भारत में विदेशी मुद्रा प्रवाह बनाए रखने हेतु RBI ने FCNR(B) जमाओं पर बैंकों को स्वैप विंडो दी, जिससे विदेशी मुद्रा भंडार बढ़कर $729 अरब हुआ। हालांकि, इससे बैंकिंग प्रणाली में प्रतरलता (Liquidity Surplus - ₹6.7 लाख करोड़) बढ़ी है, जिससे मुद्रास्फीति का जोखिम उत्पन्न हुआ है।</div>
+                            </div>
+                            </div>
+                            </details>
+                        </div>
+                        
+                </div>
+                
+                <div class="unit-block">
+                    <h3 class="unit-header">📘 Unit 2: अर्थशास्त्र - कृषि एवं बाह्य क्षेत्र</h3>
+                    
+                        <div class="syllabus-topic-card">
+                            <div class="topic-header">
+                                <span class="topic-name">📌 प्याज मूल्य नियंत्रण एवं बफर स्टॉक नीति</span>
+                                <span class="badge badge-update">अद्यतन तिथि: 2026-09-06</span>
+                            </div>
+                            <div class="current-status-box">
+                                <strong>वर्तमान स्थिति एवं अद्यतन तथ्य:</strong>
+                                <p>कृषि अर्थव्यवस्था में उपभोक्ता मूल्य स्थिरता और किसान आय सुरक्षा के बीच संतुलन स्थापित करने हेतु न्यूनतम निर्यात मूल्य (MEP), बफर स्टॉक प्रबंधन (30% तक भंडारण हानि), और PDS के माध्यम से राज्यस्तरीय हस्तक्षेप (तमिलनाडु मॉडल)।</p>
+                            </div>
+                            <details class="history-details">
+                                <summary>📜 अपडेट इतिहास एवं पूर्व विवरण देखें</summary>
+                                <div class="history-body">
+                            <div class="update-entry">
+                                <span class="update-date">📅 2026-09-06</span>
+                                <div class="update-text">कृषि अर्थव्यवस्था में उपभोक्ता मूल्य स्थिरता और किसान आय सुरक्षा के बीच संतुलन स्थापित करने हेतु न्यूनतम निर्यात मूल्य (MEP), बफर स्टॉक प्रबंधन (30% तक भंडारण हानि), और PDS के माध्यम से राज्यस्तरीय हस्तक्षेप (तमिलनाडु मॉडल)।</div>
+                            </div>
+                            </div>
+                            </details>
+                        </div>
+                        
+                </div>
+                
+                <div class="unit-block">
+                    <h3 class="unit-header">📘 Unit 3: जल संसाधन, नदी विकास व भूगोल</h3>
+                    
+                        <div class="syllabus-topic-card">
+                            <div class="topic-header">
+                                <span class="topic-name">📌 अंतर-राज्यीय नदी जल विवाद अधिनियम 1956 एवं प्रविष्टियां</span>
+                                <span class="badge badge-update">अद्यतन तिथि: 2026-09-06</span>
+                            </div>
+                            <div class="current-status-box">
+                                <strong>वर्तमान स्थिति एवं अद्यतन तथ्य:</strong>
+                                <p>जल राज्य सूची (अनुसूची 7, प्रविष्टि 17) का विषय है। अनु. 262 के तहत अंतर-राज्यीय जल विवाद अधिनियम 1956 संसद द्वारा निर्मित है। प्रमुख लंबित विवाद: पेनार नदी विवाद (कर्नाटक-तमिलनाडु), महादायी जल विवाद और मेकेदातु बांध विवाद।</p>
+                            </div>
+                            <details class="history-details">
+                                <summary>📜 अपडेट इतिहास एवं पूर्व विवरण देखें</summary>
+                                <div class="history-body">
+                            <div class="update-entry">
+                                <span class="update-date">📅 2026-09-06</span>
+                                <div class="update-text">जल राज्य सूची (अनुसूची 7, प्रविष्टि 17) का विषय है। अनु. 262 के तहत अंतर-राज्यीय जल विवाद अधिनियम 1956 संसद द्वारा निर्मित है। प्रमुख लंबित विवाद: पेनार नदी विवाद (कर्नाटक-तमिलनाडु), महादायी जल विवाद और मेकेदातु बांध विवाद।</div>
+                            </div>
+                            </div>
+                            </details>
+                        </div>
+                        
+                </div>
+                
+                <div class="unit-block">
+                    <h3 class="unit-header">📘 Unit 2: भारतीय अर्थशास्त्र व संसाधन - कृषि/जल प्रबंधन</h3>
+                    
+                        <div class="syllabus-topic-card">
+                            <div class="topic-header">
+                                <span class="topic-name">📌 नदी जोड़ो परियोजनाएं (ILR) बनाम मांग-पक्ष जल प्रबंधन</span>
+                                <span class="badge badge-update">अद्यतन तिथि: 2026-09-07</span>
+                            </div>
+                            <div class="current-status-box">
+                                <strong>वर्तमान स्थिति एवं अद्यतन तथ्य:</strong>
+                                <p>अंतर-राज्यीय जल विवाद अधिनियम 1961 के तहत पेन्नार व कावेरी जैसे विवादों का समाधान न होना और पारिस्थितिकी क्षति (जैसे वेम्बनाड व पन्ना) नदी जोड़ो की बड़ी बाधाएं हैं। इसके स्थान पर 'मांग-पक्ष जल प्रबंधन' (Demand-Side Water Management) और 'ब्लू कार्बन संरक्षण' को अधिक सतत माना गया है।</p>
+                            </div>
+                            <details class="history-details">
+                                <summary>📜 अपडेट इतिहास एवं पूर्व विवरण देखें</summary>
+                                <div class="history-body">
+                            <div class="update-entry">
+                                <span class="update-date">📅 2026-09-07</span>
+                                <div class="update-text">अंतर-राज्यीय जल विवाद अधिनियम 1961 के तहत पेन्नार व कावेरी जैसे विवादों का समाधान न होना और पारिस्थितिकी क्षति (जैसे वेम्बनाड व पन्ना) नदी जोड़ो की बड़ी बाधाएं हैं। इसके स्थान पर 'मांग-पक्ष जल प्रबंधन' (Demand-Side Water Management) और 'ब्लू कार्बन संरक्षण' को अधिक सतत माना गया है।</div>
+                            </div>
+                            </div>
+                            </details>
+                        </div>
+                        
+                </div>
+                
+                <div class="unit-block">
+                    <h3 class="unit-header">📘 Unit 2: भारतीय अर्थव्यवस्था एवं औद्योगिक विकास</h3>
+                    
+                        <div class="syllabus-topic-card">
+                            <div class="topic-header">
+                                <span class="topic-name">📌 मैन्युफैक्चरिंग जीडीपी लक्ष्य एवं कॉर्पोरेट कैपेक्स (BofA रिपोर्ट 2026)</span>
+                                <span class="badge badge-update">अद्यतन तिथि: 2026-09-07</span>
+                            </div>
+                            <div class="current-status-box">
+                                <strong>वर्तमान स्थिति एवं अद्यतन तथ्य:</strong>
+                                <p>भारत को 2040 तक $2.3 ट्रिलियन की विनिर्माण अर्थव्यवस्था बनने और जीडीपी में विनिर्माण की हिस्सेदारी 25% करने हेतु अगले 15 वर्षों तक प्रतिवर्ष 10% से अधिक की औद्योगिक वृद्धि दर आवश्यक है। इसके मार्ग में उच्च ऊर्जा लागत, विनिमायक बाधाएं और मध्यम आकार की फर्मों की कमी प्रमुख चुनौतियां हैं।</p>
+                            </div>
+                            <details class="history-details">
+                                <summary>📜 अपडेट इतिहास एवं पूर्व विवरण देखें</summary>
+                                <div class="history-body">
+                            <div class="update-entry">
+                                <span class="update-date">📅 2026-09-07</span>
+                                <div class="update-text">भारत को 2040 तक $2.3 ट्रिलियन की विनिर्माण अर्थव्यवस्था बनने और जीडीपी में विनिर्माण की हिस्सेदारी 25% करने हेतु अगले 15 वर्षों तक प्रतिवर्ष 10% से अधिक की औद्योगिक वृद्धि दर आवश्यक है। इसके मार्ग में उच्च ऊर्जा लागत, विनिमायक बाधाएं और मध्यम आकार की फर्मों की कमी प्रमुख चुनौतियां हैं।</div>
+                            </div>
+                            </div>
+                            </details>
+                        </div>
+                        
+                </div>
+                
+                <div class="unit-block">
+                    <h3 class="unit-header">📘 Unit 2: भारतीय अर्थव्यवस्था - उद्योग एवं बुनियादी ढांचा</h3>
+                    
+                        <div class="syllabus-topic-card">
+                            <div class="topic-header">
+                                <span class="topic-name">📌 विनिर्माण क्षेत्र लक्ष्य व बैंक ऑफ अमेरिका रिपोर्ट 2026</span>
+                                <span class="badge badge-update">अद्यतन तिथि: 2026-09-07</span>
+                            </div>
+                            <div class="current-status-box">
+                                <strong>वर्तमान स्थिति एवं अद्यतन तथ्य:</strong>
+                                <p>भारत को 2040 तक GDP में विनिर्माण की हिस्सेदारी 25% करने हेतु लगातार 15 वर्षों तक 10% की दोहरे अंकों वाली वार्षिक वृद्धि दर की आवश्यकता है। प्रमुख बाधाएं: उच्च बिजली दरें, अनुपालन बोझ और मध्यम आकार की फर्मों की कमी।</p>
+                            </div>
+                            <details class="history-details">
+                                <summary>📜 अपडेट इतिहास एवं पूर्व विवरण देखें</summary>
+                                <div class="history-body">
+                            <div class="update-entry">
+                                <span class="update-date">📅 2026-09-07</span>
+                                <div class="update-text">भारत को 2040 तक GDP में विनिर्माण की हिस्सेदारी 25% करने हेतु लगातार 15 वर्षों तक 10% की दोहरे अंकों वाली वार्षिक वृद्धि दर की आवश्यकता है। प्रमुख बाधाएं: उच्च बिजली दरें, अनुपालन बोझ और मध्यम आकार की फर्मों की कमी।</div>
+                            </div>
+                            </div>
+                            </details>
+                        </div>
+                        
+                </div>
+                
+                <div class="unit-block">
+                    <h3 class="unit-header">📘 Unit 2: अर्थशास्त्र - सामाजिक सुरक्षा व श्रम सुधार</h3>
+                    
+                        <div class="syllabus-topic-card">
+                            <div class="topic-header">
+                                <span class="topic-name">📌 EPFO अधिनियम 1952 के तहत अनिवार्य वेतन सीमा में संशोधन</span>
+                                <span class="badge badge-update">अद्यतन तिथि: 2026-09-16</span>
+                            </div>
+                            <div class="current-status-box">
+                                <strong>वर्तमान स्थिति एवं अद्यतन तथ्य:</strong>
+                                <p>केंद्र सरकार ने कर्मचारी भविष्य निधि (EPF) योजना के तहत अनिवार्य कवरेज हेतु मासिक वेतन सीमा को ₹15,000 से बढ़ाकर ₹25,000 कर दिया है। इससे असंगठित व संगठित क्षेत्र के मध्य स्थित लगभग 1 करोड़ कर्मचारियों को पेंशन (EPS) और बीमा (EDLI) लाभ मिलेंगे।</p>
+                            </div>
+                            <details class="history-details">
+                                <summary>📜 अपडेट इतिहास एवं पूर्व विवरण देखें</summary>
+                                <div class="history-body">
+                            <div class="update-entry">
+                                <span class="update-date">📅 2026-09-16</span>
+                                <div class="update-text">केंद्र सरकार ने कर्मचारी भविष्य निधि (EPF) योजना के तहत अनिवार्य कवरेज हेतु मासिक वेतन सीमा को ₹15,000 से बढ़ाकर ₹25,000 कर दिया है। इससे असंगठित व संगठित क्षेत्र के मध्य स्थित लगभग 1 करोड़ कर्मचारियों को पेंशन (EPS) और बीमा (EDLI) लाभ मिलेंगे।</div>
+                            </div>
+                            </div>
+                            </details>
+                        </div>
+                        
+                </div>
+                
+            </div>
+            
+            <div id="Paper_2" class="paper-tab-content">
+                <h2 class="paper-title">🏛️ RAS Paper 2 - विस्तृत पाठ्यक्रम एवं मास्टर नोट्स</h2>
+                
+                <div class="unit-block">
+                    <h3 class="unit-header">📘 Unit 1: प्रशासकीय नीतिशास्त्र (Administrative Ethics)</h3>
+                    <div class="empty-topic">नवीनतम दैनिक समाचारों से इस टॉपिक का अध्ययन जल्द ही अद्यतन होगा।</div>
+                </div>
+                
+                <div class="unit-block">
+                    <h3 class="unit-header">📘 Unit 2: सामान्य विज्ञान एवं प्रौद्योगिकी</h3>
+                    <div class="empty-topic">नवीनतम दैनिक समाचारों से इस टॉपिक का अध्ययन जल्द ही अद्यतन होगा।</div>
+                </div>
+                
+                <div class="unit-block">
+                    <h3 class="unit-header">📘 Unit 3: भूगोल (राजस्थान, भारत एवं विश्व)</h3>
+                    <div class="empty-topic">नवीनतम दैनिक समाचारों से इस टॉपिक का अध्ययन जल्द ही अद्यतन होगा।</div>
+                </div>
+                
+                <div class="unit-block">
+                    <h3 class="unit-header">📘 Unit 1: प्रशासनिक नीति एवं सार्वजनिक स्वास्थ्य ढांचा</h3>
+                    
+                        <div class="syllabus-topic-card">
+                            <div class="topic-header">
+                                <span class="topic-name">📌 पेरीमेनोपॉज़ एवं मेनोपॉज़ (Perimenopause & Menopause) सार्वजनिक स्वास्थ्य नीति</span>
+                                <span class="badge badge-update">अद्यतन तिथि: 2026-09-06</span>
+                            </div>
+                            <div class="current-status-box">
+                                <strong>वर्तमान स्थिति एवं अद्यतन तथ्य:</strong>
+                                <p>भारत में महिलाओं के मध्य-जीवन स्वास्थ्य देखभाल (Mid-life Healthcare) हेतु कर्नाटक ('ऋतु थारे') और तमिलनाडु द्वारा समर्पित नीतियों का शुभारंभ। इसके अंतर्गत 40-55 वर्ष की महिलाओं के शारीरिक (हॉट फ्लैशेज, ऑस्टियोपोरोसिस) व मानसिक (अवसाद, चिंता) परिवर्तनों की पहचान हेतु प्राथमिक स्वास्थ्य केंद्रों (PHCs) और आयुष्मान आरोग्य मंदिरों में नियमित स्क्रीनिंग, हार्मोन रिप्लेसमेंट थेरेपी (HRT) परामर्श और समर्पित क्लीनिक स्थापित करने का प्रावधान है।</p>
+                            </div>
+                            <details class="history-details">
+                                <summary>📜 अपडेट इतिहास एवं पूर्व विवरण देखें</summary>
+                                <div class="history-body">
+                            <div class="update-entry">
+                                <span class="update-date">📅 2026-09-06</span>
+                                <div class="update-text">भारत में महिलाओं के मध्य-जीवन स्वास्थ्य देखभाल (Mid-life Healthcare) हेतु कर्नाटक ('ऋतु थारे') और तमिलनाडु द्वारा समर्पित नीतियों का शुभारंभ। इसके अंतर्गत 40-55 वर्ष की महिलाओं के शारीरिक (हॉट फ्लैशेज, ऑस्टियोपोरोसिस) व मानसिक (अवसाद, चिंता) परिवर्तनों की पहचान हेतु प्राथमिक स्वास्थ्य केंद्रों (PHCs) और आयुष्मान आरोग्य मंदिरों में नियमित स्क्रीनिंग, हार्मोन रिप्लेसमेंट थेरेपी (HRT) परामर्श और समर्पित क्लीनिक स्थापित करने का प्रावधान है।</div>
+                            </div>
+                            </div>
+                            </details>
+                        </div>
+                        
+                </div>
+                
+                <div class="unit-block">
+                    <h3 class="unit-header">📘 Unit 2: पर्यावरण, जलवायु परिवर्तन व पारिस्थितिकी</h3>
+                    
+                        <div class="syllabus-topic-card">
+                            <div class="topic-header">
+                                <span class="topic-name">📌 UNEP लिंकिंग ओवरशूट रिपोर्ट एवं ब्लू कार्बन पारिस्थितिकी</span>
+                                <span class="badge badge-update">अद्यतन तिथि: 2026-09-06</span>
+                            </div>
+                            <div class="current-status-box">
+                                <strong>वर्तमान स्थिति एवं अद्यतन तथ्य:</strong>
+                                <p>1.5°C तापमान सीमा उल्लंघन के बाद ओवरशूट-पीक-डिक्लाइन पाथवे की अनिवार्यता। पिचावरम जैसे मैंग्रोव पारितंत्रों का ₹2500 करोड़ का ब्लू कार्बन मूल्यांकन। मीथेन उत्सर्जन (0.5°C योगदान) नियंत्रण को प्राथमिकता।</p>
+                            </div>
+                            <details class="history-details">
+                                <summary>📜 अपडेट इतिहास एवं पूर्व विवरण देखें</summary>
+                                <div class="history-body">
+                            <div class="update-entry">
+                                <span class="update-date">📅 2026-09-06</span>
+                                <div class="update-text">1.5°C तापमान सीमा उल्लंघन के बाद ओवरशूट-पीक-डिक्लाइन पाथवे की अनिवार्यता। पिचावरम जैसे मैंग्रोव पारितंत्रों का ₹2500 करोड़ का ब्लू कार्बन मूल्यांकन। मीथेन उत्सर्जन (0.5°C योगदान) नियंत्रण को प्राथमिकता।</div>
+                            </div>
+                            </div>
+                            </details>
+                        </div>
+                        
+                </div>
+                
+                <div class="unit-block">
+                    <h3 class="unit-header">📘 Unit 1: प्रशासनिक विधि एवं संवैधानिक संस्थाएं</h3>
+                    
+                        <div class="syllabus-topic-card">
+                            <div class="topic-header">
+                                <span class="topic-name">📌 उच्चतम न्यायालय में न्यायाधीशों की योग्यता - अनुच्छेद 124(3)(c)</span>
+                                <span class="badge badge-update">अद्यतन तिथि: 2026-09-06</span>
+                            </div>
+                            <div class="current-status-box">
+                                <strong>वर्तमान स्थिति एवं अद्यतन तथ्य:</strong>
+                                <p>संविधान के अनुच्छेद 124(3)(c) के अनुसार राष्ट्रपति की राय में एक 'प्रतिष्ठित न्यायविद' (Distinguished Jurist) सुप्रीम कोर्ट का न्यायाधीश बन सकता है। 76 वर्षों में कॉलेजियम द्वारा किसी अकादमिक/न्यायविद की सिफारिश न करने और बार काउंसिल नियम 49 (पूर्णकालिक वेतनभोगी पद पर रोक) के कारण यह प्रावधान अप्रयुक्त रहा है।</p>
+                            </div>
+                            <details class="history-details">
+                                <summary>📜 अपडेट इतिहास एवं पूर्व विवरण देखें</summary>
+                                <div class="history-body">
+                            <div class="update-entry">
+                                <span class="update-date">📅 2026-09-06</span>
+                                <div class="update-text">संविधान के अनुच्छेद 124(3)(c) के अनुसार राष्ट्रपति की राय में एक 'प्रतिष्ठित न्यायविद' (Distinguished Jurist) सुप्रीम कोर्ट का न्यायाधीश बन सकता है। 76 वर्षों में कॉलेजियम द्वारा किसी अकादमिक/न्यायविद की सिफारिश न करने और बार काउंसिल नियम 49 (पूर्णकालिक वेतनभोगी पद पर रोक) के कारण यह प्रावधान अप्रयुक्त रहा है।</div>
+                            </div>
+                            </div>
+                            </details>
+                        </div>
+                        
+                </div>
+                
+                <div class="unit-block">
+                    <h3 class="unit-header">📘 Unit 2: प्रशासनिक नीतिशास्त्र, मनोविज्ञान एवं प्रबंधन</h3>
+                    
+                        <div class="syllabus-topic-card">
+                            <div class="topic-header">
+                                <span class="topic-name">📌 सफलता के निर्धारक: प्रतिभा बनाम निरंतरता और स्व-नियमन (Self-Regulation)</span>
+                                <span class="badge badge-update">अद्यतन तिथि: 2026-09-06</span>
+                            </div>
+                            <div class="current-status-box">
+                                <strong>वर्तमान स्थिति एवं अद्यतन तथ्य:</strong>
+                                <p>प्रतिस्पर्धी माहौल में सफलता हेतु प्रतिभा (Talent) केवल आरंभिक कारक है, जबकि 'निरंतरता' (Consistency) और '1% प्रतिदिन सुधार का नियम' सफलता की गारंटी देते हैं। भटकाव से मुक्ति, भावनात्मक बुद्धिमत्ता (Emotional Intelligence) और अनुशासन सिविल सेवा अधिकारी के प्रमुख गुण हैं।</p>
+                            </div>
+                            <details class="history-details">
+                                <summary>📜 अपडेट इतिहास एवं पूर्व विवरण देखें</summary>
+                                <div class="history-body">
+                            <div class="update-entry">
+                                <span class="update-date">📅 2026-09-06</span>
+                                <div class="update-text">प्रतिस्पर्धी माहौल में सफलता हेतु प्रतिभा (Talent) केवल आरंभिक कारक है, जबकि 'निरंतरता' (Consistency) और '1% प्रतिदिन सुधार का नियम' सफलता की गारंटी देते हैं। भटकाव से मुक्ति, भावनात्मक बुद्धिमत्ता (Emotional Intelligence) और अनुशासन सिविल सेवा अधिकारी के प्रमुख गुण हैं।</div>
+                            </div>
+                            </div>
+                            </details>
+                        </div>
+                        
+                </div>
+                
+                <div class="unit-block">
+                    <h3 class="unit-header">📘 Unit 1: भारतीय संविधान एवं न्यायपालिका</h3>
+                    
+                        <div class="syllabus-topic-card">
+                            <div class="topic-header">
+                                <span class="topic-name">📌 उच्चतम न्यायालय में न्यायाधीशों की नियुक्ति - विशिष्ट न्यायविद (अनुच्छेद 124(3)(c))</span>
+                                <span class="badge badge-update">अद्यतन तिथि: 2026-09-06</span>
+                            </div>
+                            <div class="current-status-box">
+                                <strong>वर्तमान स्थिति एवं अद्यतन तथ्य:</strong>
+                                <p>अनुच्छेद 124(3)(c) के तहत राष्ट्रपति किसी प्रतिष्ठित न्यायविद को SC का जज नियुक्त कर सकता है। 42वें संशोधन द्वारा HC हेतु यह प्रावधान जोड़ा गया था, जिसे 44वें संशोधन (1978) द्वारा पुनः निरस्त कर दिया गया। वर्तमान में यह केवल SC हेतु प्रभावी है, परंतु अब तक अप्रयुक्त है।</p>
+                            </div>
+                            <details class="history-details">
+                                <summary>📜 अपडेट इतिहास एवं पूर्व विवरण देखें</summary>
+                                <div class="history-body">
+                            <div class="update-entry">
+                                <span class="update-date">📅 2026-09-06</span>
+                                <div class="update-text">अनुच्छेद 124(3)(c) के तहत राष्ट्रपति किसी प्रतिष्ठित न्यायविद को SC का जज नियुक्त कर सकता है। 42वें संशोधन द्वारा HC हेतु यह प्रावधान जोड़ा गया था, जिसे 44वें संशोधन (1978) द्वारा पुनः निरस्त कर दिया गया। वर्तमान में यह केवल SC हेतु प्रभावी है, परंतु अब तक अप्रयुक्त है।</div>
+                            </div>
+                            </div>
+                            </details>
+                        </div>
+                        
+                </div>
+                
+                <div class="unit-block">
+                    <h3 class="unit-header">📘 Unit 1: भूगोल एवं पर्यावरण - जलवायु परिवर्तन नीतियां</h3>
+                    
+                        <div class="syllabus-topic-card">
+                            <div class="topic-header">
+                                <span class="topic-name">📌 ओवरशूट पाथवे (Overshoot Pathway) एवं मीथेन समन रणनीति</span>
+                                <span class="badge badge-update">अद्यतन तिथि: 2026-09-07</span>
+                            </div>
+                            <div class="current-status-box">
+                                <strong>वर्तमान स्थिति एवं अद्यतन तथ्य:</strong>
+                                <p>UNEP की 2026 'Limiting Overshoot' रिपोर्ट के अनुसार 1.5°C तापमान सीमा का उल्लंघन निश्चित होने के कारण अब वैश्विक नीति 'पिक-एंड-डिक्लाइन' पर स्थानांतरित हो गई है। मीथेन (CH4) का वार्मिंग में 0.5°C का प्रत्यक्ष योगदान है और इसके समन को CO2 की तुलना में त्वरित परिणाम देने वाला बताया गया है।</p>
+                            </div>
+                            <details class="history-details">
+                                <summary>📜 अपडेट इतिहास एवं पूर्व विवरण देखें</summary>
+                                <div class="history-body">
+                            <div class="update-entry">
+                                <span class="update-date">📅 2026-09-07</span>
+                                <div class="update-text">UNEP की 2026 'Limiting Overshoot' रिपोर्ट के अनुसार 1.5°C तापमान सीमा का उल्लंघन निश्चित होने के कारण अब वैश्विक नीति 'पिक-एंड-डिक्लाइन' पर स्थानांतरित हो गई है। मीथेन (CH4) का वार्मिंग में 0.5°C का प्रत्यक्ष योगदान है और इसके समन को CO2 की तुलना में त्वरित परिणाम देने वाला बताया गया है।</div>
+                            </div>
+                            </div>
+                            </details>
+                        </div>
+                        
+                </div>
+                
+                <div class="unit-block">
+                    <h3 class="unit-header">📘 Unit 1: विज्ञान एवं प्रौद्योगिकी / पर्यावरण</h3>
+                    
+                        <div class="syllabus-topic-card">
+                            <div class="topic-header">
+                                <span class="topic-name">📌 डेटा सेंटर अवसंरचना: जल खपत एवं वॉटर यूज़ एफिशिएंसी (WUE)</span>
+                                <span class="badge badge-update">अद्यतन तिथि: 2026-09-07</span>
+                            </div>
+                            <div class="current-status-box">
+                                <strong>वर्तमान स्थिति एवं अद्यतन तथ्य:</strong>
+                                <p>एआई विकास के कारण वैश्विक डेटा सेंटर्स की जल खपत 2030 तक 644 अरब लीटर पहुँचने का अनुमान है। वॉटर यूज़ एफिशिएंसी (WUE) प्रति kWh सूचना तकनीक ऊर्जा में प्रयुक्त लीटर जल की माप है। एयर कूलिंग बनाम लिक्विड कूलिंग का चयन ऊर्जा और जल दक्षता के बीच संतुलन पर निर्भर करता है।</p>
+                            </div>
+                            <details class="history-details">
+                                <summary>📜 अपडेट इतिहास एवं पूर्व विवरण देखें</summary>
+                                <div class="history-body">
+                            <div class="update-entry">
+                                <span class="update-date">📅 2026-09-07</span>
+                                <div class="update-text">एआई विकास के कारण वैश्विक डेटा सेंटर्स की जल खपत 2030 तक 644 अरब लीटर पहुँचने का अनुमान है। वॉटर यूज़ एफिशिएंसी (WUE) प्रति kWh सूचना तकनीक ऊर्जा में प्रयुक्त लीटर जल की माप है। एयर कूलिंग बनाम लिक्विड कूलिंग का चयन ऊर्जा और जल दक्षता के बीच संतुलन पर निर्भर करता है।</div>
+                            </div>
+                            </div>
+                            </details>
+                        </div>
+                        
+                </div>
+                
+                <div class="unit-block">
+                    <h3 class="unit-header">📘 Unit 2: भूगोल - भौतिक भूगोल व ज्वालामुखी विज्ञान</h3>
+                    
+                        <div class="syllabus-topic-card">
+                            <div class="topic-header">
+                                <span class="topic-name">📌 बैरेन आइलैंड एवं नारकोण्डम विवर्तनिक संरचना</span>
+                                <span class="badge badge-update">अद्यतन तिथि: 2026-09-07</span>
+                            </div>
+                            <div class="current-status-box">
+                                <strong>वर्तमान स्थिति एवं अद्यतन तथ्य:</strong>
+                                <p>बैरेन आइलैंड (सक्रिय) और नारकोण्डम (सुप्त) अंडमान सागर में जावा-सुमात्रा-अंडमान सबडक्शन ज़ोन में स्थित हैं। भारतीय प्लेट के बर्मी प्लेट के नीचे धँसने (Subduction) से निर्मित बेसाल्टिक मैग्मा इसकी ज्वालामुखीय गतिविधियों का कारण है।</p>
+                            </div>
+                            <details class="history-details">
+                                <summary>📜 अपडेट इतिहास एवं पूर्व विवरण देखें</summary>
+                                <div class="history-body">
+                            <div class="update-entry">
+                                <span class="update-date">📅 2026-09-07</span>
+                                <div class="update-text">बैरेन आइलैंड (सक्रिय) और नारकोण्डम (सुप्त) अंडमान सागर में जावा-सुमात्रा-अंडमान सबडक्शन ज़ोन में स्थित हैं। भारतीय प्लेट के बर्मी प्लेट के नीचे धँसने (Subduction) से निर्मित बेसाल्टिक मैग्मा इसकी ज्वालामुखीय गतिविधियों का कारण है।</div>
+                            </div>
+                            </div>
+                            </details>
+                        </div>
+                        
+                </div>
+                
+                <div class="unit-block">
+                    <h3 class="unit-header">📘 Unit 2: विज्ञान एवं प्रौद्योगिकी - AI एवं पर्यावरण प्रभाव</h3>
+                    
+                        <div class="syllabus-topic-card">
+                            <div class="topic-header">
+                                <span class="topic-name">📌 डेटा सेंटर अवसंरचना, AI का भौतिक पदचिह्न व WUE मानक</span>
+                                <span class="badge badge-update">अद्यतन तिथि: 2026-09-16</span>
+                            </div>
+                            <div class="current-status-box">
+                                <strong>वर्तमान स्थिति एवं अद्यतन तथ्य:</strong>
+                                <p>AI सर्वर पारंपरिक सर्वरों की तुलना में 4 से 6 गुना अधिक ऊष्मा उत्पन्न करते हैं। जल उपयोग दक्षता (WUE) डेटा सेंटरों के पर्यावरणीय प्रभाव को मापने का प्रमुख मानक है। ग्रीन डेटा सेंटरों हेतु ड्राई कूलिंग, लिक्विड-टू-चिप कूलिंग और डीम्ड डिस्कॉम ऊर्जा नीतियों की आवश्यकता है।</p>
+                            </div>
+                            <details class="history-details">
+                                <summary>📜 अपडेट इतिहास एवं पूर्व विवरण देखें</summary>
+                                <div class="history-body">
+                            <div class="update-entry">
+                                <span class="update-date">📅 2026-09-16</span>
+                                <div class="update-text">AI सर्वर पारंपरिक सर्वरों की तुलना में 4 से 6 गुना अधिक ऊष्मा उत्पन्न करते हैं। जल उपयोग दक्षता (WUE) डेटा सेंटरों के पर्यावरणीय प्रभाव को मापने का प्रमुख मानक है। ग्रीन डेटा सेंटरों हेतु ड्राई कूलिंग, लिक्विड-टू-चिप कूलिंग और डीम्ड डिस्कॉम ऊर्जा नीतियों की आवश्यकता है।</div>
+                            </div>
+                            </div>
+                            </details>
+                        </div>
+                        
+                </div>
+                
+            </div>
+            
+            <div id="Paper_3" class="paper-tab-content">
+                <h2 class="paper-title">🏛️ RAS Paper 3 - विस्तृत पाठ्यक्रम एवं मास्टर नोट्स</h2>
+                
+                <div class="unit-block">
+                    <h3 class="unit-header">📘 Unit 1: भारतीय राजनीतिक व्यवस्था एवं अंतरराष्ट्रीय संबंध</h3>
+                    <div class="empty-topic">नवीनतम दैनिक समाचारों से इस टॉपिक का अध्ययन जल्द ही अद्यतन होगा।</div>
+                </div>
+                
+                <div class="unit-block">
+                    <h3 class="unit-header">📘 Unit 2: लोक प्रशासन, राज्य प्रशासनिक ढांचा एवं आयोग/नियम</h3>
+                    
+                        <div class="syllabus-topic-card">
+                            <div class="topic-header">
+                                <span class="topic-name">📌 नारकोटिक्स नियंत्रण ढांचा व नवीन आपराधिक कानून (BNS/ICJS) क्रियान्वयन</span>
+                                <span class="badge badge-update">अद्यतन तिथि: 2026-09-06</span>
+                            </div>
+                            <div class="current-status-box">
+                                <strong>वर्तमान स्थिति एवं अद्यतन तथ्य:</strong>
+                                <p>गृह मंत्रालय के नए 3-वर्षीय रोडमैप (2026-2029) के तहत राज्यों में ANTF का गठन, NIDAAN पोर्टल, MANAS 1933 हेल्पलाइन, और ICJS (Inter-operable Criminal Justice System) के क्रियान्वयन से गोवा जैसे राज्यों में सजा दर (Conviction Rate) 22% से बढ़कर 53.2% हुई। अदालती मुकदमों का निपटारा 6-8 महीनों में संभव हुआ।</p>
+                            </div>
+                            <details class="history-details">
+                                <summary>📜 अपडेट इतिहास एवं पूर्व विवरण देखें</summary>
+                                <div class="history-body">
+                            <div class="update-entry">
+                                <span class="update-date">📅 2026-09-06</span>
+                                <div class="update-text">गृह मंत्रालय के नए 3-वर्षीय रोडमैप (2026-2029) के तहत राज्यों में ANTF का गठन, NIDAAN पोर्टल, MANAS 1933 हेल्पलाइन, और ICJS (Inter-operable Criminal Justice System) के क्रियान्वयन से गोवा जैसे राज्यों में सजा दर (Conviction Rate) 22% से बढ़कर 53.2% हुई। अदालती मुकदमों का निपटारा 6-8 महीनों में संभव हुआ।</div>
+                            </div>
+                            </div>
+                            </details>
+                        </div>
+                        
+                </div>
+                
+                <div class="unit-block">
+                    <h3 class="unit-header">📘 Unit 3: खेल एवं योग, व्यवहार तथा विधि (राजस्थान विशेष अधिनियम)</h3>
+                    <div class="empty-topic">नवीनतम दैनिक समाचारों से इस टॉपिक का अध्ययन जल्द ही अद्यतन होगा।</div>
+                </div>
+                
+                <div class="unit-block">
+                    <h3 class="unit-header">📘 Unit 2: राज्य प्रशासनिक ढांचा, नीतियां एवं आयोग</h3>
+                    
+                        <div class="syllabus-topic-card">
+                            <div class="topic-header">
+                                <span class="topic-name">📌 राजस्थान राज्य जैव विविधता बोर्ड (RSBB)</span>
+                                <span class="badge badge-update">अद्यतन तिथि: 2026-09-06</span>
+                            </div>
+                            <div class="current-status-box">
+                                <strong>वर्तमान स्थिति एवं अद्यतन तथ्य:</strong>
+                                <p>जैविक विविधता अधिनियम, 2002 की धारा 63 के तहत राजस्थान सरकार द्वारा 14 सितंबर 2010 को गठित। बोर्ड का मुख्य उद्देश्य राज्य की समृद्ध जैव विविधता का जैविक सर्वेक्षण, जन जैव विविधता रजिस्टर (PBR) का संधारण और जैव विविधता विरासत स्थलों (जैसे- आकल वुड फॉसिल पार्क, नागपहाड़) को संरक्षित करना है। हालिया अद्यतन के अनुसार बोर्ड स्थानीय निकायों में स्थापित BMCs को डिजिटल वित्तीय अनुदान हस्तांतरित कर रहा है।</p>
+                            </div>
+                            <details class="history-details">
+                                <summary>📜 अपडेट इतिहास एवं पूर्व विवरण देखें</summary>
+                                <div class="history-body">
+                            <div class="update-entry">
+                                <span class="update-date">📅 2026-09-06</span>
+                                <div class="update-text">जैविक विविधता अधिनियम, 2002 की धारा 63 के तहत राजस्थान सरकार द्वारा 14 सितंबर 2010 को गठित। बोर्ड का मुख्य उद्देश्य राज्य की समृद्ध जैव विविधता का जैविक सर्वेक्षण, जन जैव विविधता रजिस्टर (PBR) का संधारण और जैव विविधता विरासत स्थलों (जैसे- आकल वुड फॉसिल पार्क, नागपहाड़) को संरक्षित करना है। हालिया अद्यतन के अनुसार बोर्ड स्थानीय निकायों में स्थापित BMCs को डिजिटल वित्तीय अनुदान हस्तांतरित कर रहा है।</div>
+                            </div>
+                            </div>
+                            </details>
+                        </div>
+                        
+                </div>
+                
+                <div class="unit-block">
+                    <h3 class="unit-header">📘 Unit 2: लोक प्रशासन, कानून एवं आंतरिक सुरक्षा</h3>
+                    
+                        <div class="syllabus-topic-card">
+                            <div class="topic-header">
+                                <span class="topic-name">📌 नारको-टेररिज्म एवं नवीन आपराधिक न्याय प्रणाली (Bharatpol व ICJS)</span>
+                                <span class="badge badge-update">अद्यतन तिथि: 2026-09-06</span>
+                            </div>
+                            <div class="current-status-box">
+                                <strong>वर्तमान स्थिति एवं अद्यतन तथ्य:</strong>
+                                <p>गृह मंत्रालय द्वारा 2026-2029 के लिए घोषित 4-स्तंभीय राष्ट्रीय नार्कोटिक्स रोडमैप में ANTF हेतु 7% केंद्रीय वित्तीय सहायता, 30-दिवसीय फॉरेंसिक लैब रिपोर्ट, भारतपोल (Bharatpol) पोर्टल और '1933 MANAS' हेल्पलाइन शामिल हैं। गोवा में नए आपराधिक कानूनों (BNS) और ICJS के कार्यान्वयन से दोषसिद्धि दर (Conviction Rate) 22% से बढ़कर 53.2% हुई है।</p>
+                            </div>
+                            <details class="history-details">
+                                <summary>📜 अपडेट इतिहास एवं पूर्व विवरण देखें</summary>
+                                <div class="history-body">
+                            <div class="update-entry">
+                                <span class="update-date">📅 2026-09-06</span>
+                                <div class="update-text">भारत में तीन नए आपराधिक कानूनों (BNS, BNSS, BSA) के लागू होने के बाद अंतर-ऑपरेबल आपराधिक न्याय प्रणाली (ICJS) के माध्यम से दोषसिद्धि दर में वृद्धि हुई है। 'भारतपोल' पोर्टल के माध्यम से विदेश भागे 274 भगोड़ों का प्रत्यर्पण किया गया तथा गृह मंत्रालय द्वारा NCORD और 1930 साइबर हेल्पलाइन को सुदृढ़ किया गया है।</div>
+                            </div>
+                            
+                            <div class="update-entry">
+                                <span class="update-date">📅 2026-09-06</span>
+                                <div class="update-text">गृह मंत्रालय द्वारा 2026-2029 के लिए घोषित 4-स्तंभीय राष्ट्रीय नार्कोटिक्स रोडमैप में ANTF हेतु 7% केंद्रीय वित्तीय सहायता, 30-दिवसीय फॉरेंसिक लैब रिपोर्ट, भारतपोल (Bharatpol) पोर्टल और '1933 MANAS' हेल्पलाइन शामिल हैं। गोवा में नए आपराधिक कानूनों (BNS) और ICJS के कार्यान्वयन से दोषसिद्धि दर (Conviction Rate) 22% से बढ़कर 53.2% हुई है।</div>
+                            </div>
+                            </div>
+                            </details>
+                        </div>
+                        
+                </div>
+                
+                <div class="unit-block">
+                    <h3 class="unit-header">📘 Unit 1: वैश्विक पर्यावरण परिवर्तन व अंतर्राष्ट्रीय जलवायु समझौते</h3>
+                    
+                        <div class="syllabus-topic-card">
+                            <div class="topic-header">
+                                <span class="topic-name">📌 UNEP 'Limiting Overshoot' रिपोर्ट एवं ग्लोबल मुटीराओ (Global Mutirao)</span>
+                                <span class="badge badge-update">अद्यतन तिथि: 2026-09-06</span>
+                            </div>
+                            <div class="current-status-box">
+                                <strong>वर्तमान स्थिति एवं अद्यतन तथ्य:</strong>
+                                <p>जलवायु परिवर्तन पर UNEP की नवीनतम रिपोर्ट के अनुसार 1.5°C तापमान वृद्धि का उल्लंघन तय है। ब्राजील के बेलम में कॉप-13 (COP13) में स्वीकृत 'ग्लोबल मुटीराओ' अवधारणा ओवरशूट, पीक और डिक्लाइन रणनीति पर आधारित है। मीथेन कटौती एवं कार्बन सिंक निर्माण इसके मुख्य स्तंभ हैं।</p>
+                            </div>
+                            <details class="history-details">
+                                <summary>📜 अपडेट इतिहास एवं पूर्व विवरण देखें</summary>
+                                <div class="history-body">
+                            <div class="update-entry">
+                                <span class="update-date">📅 2026-09-06</span>
+                                <div class="update-text">जलवायु परिवर्तन पर UNEP की नवीनतम रिपोर्ट के अनुसार 1.5°C तापमान वृद्धि का उल्लंघन तय है। ब्राजील के बेलम में कॉप-13 (COP13) में स्वीकृत 'ग्लोबल मुटीराओ' अवधारणा ओवरशूट, पीक और डिक्लाइन रणनीति पर आधारित है। मीथेन कटौती एवं कार्बन सिंक निर्माण इसके मुख्य स्तंभ हैं।</div>
+                            </div>
+                            </div>
+                            </details>
+                        </div>
+                        
+                </div>
+                
+                <div class="unit-block">
+                    <h3 class="unit-header">📘 Unit 1: भारतीय राजव्यवस्था, सुरक्षा एजेंसियां एवं आंतरिक सुरक्षा</h3>
+                    
+                        <div class="syllabus-topic-card">
+                            <div class="topic-header">
+                                <span class="topic-name">📌 भारतपोल (Bharatpol) पोर्टल एवं अंतर्राष्ट्रीय प्रत्यर्पण ढांचा</span>
+                                <span class="badge badge-update">अद्यतन तिथि: 2026-09-06</span>
+                            </div>
+                            <div class="current-status-box">
+                                <strong>वर्तमान स्थिति एवं अद्यतन तथ्य:</strong>
+                                <p>गृह मंत्रालय द्वारा संचालित 'भारतपोल' एक एकीकृत डिजिटल ढांचा है जो सीबीआई (इंटरपोल नेशनल सेंट्रल ब्यूरो - नई दिल्ली), 14+ केंद्रीय जांच एजेंसियों और सभी राज्य पुलिस बलों को जोड़ता है। इसके माध्यम से इंटरपोल रेड कॉर्नर नोटिस (RCN) जारी करने और विदेश भागे अपराधियों/भगोड़ों की 17,874+ करोड़ रु. की संपत्तियों को कुर्क/सीज़ करने में तेजी आई है। नए आपराधिक कानूनों (भारतीय नागरिक सुरक्षा संहिता) में भगोड़ों की अनुपस्थिति में मुकदमा चलाने (Trial in Absentia) के प्रावधान ने प्रत्यर्पण प्रक्रिया को सुदृढ़ किया है।</p>
+                            </div>
+                            <details class="history-details">
+                                <summary>📜 अपडेट इतिहास एवं पूर्व विवरण देखें</summary>
+                                <div class="history-body">
+                            <div class="update-entry">
+                                <span class="update-date">📅 2026-09-06</span>
+                                <div class="update-text">गृह मंत्रालय द्वारा संचालित 'भारतपोल' एक एकीकृत डिजिटल ढांचा है जो सीबीआई (इंटरपोल नेशनल सेंट्रल ब्यूरो - नई दिल्ली), 14+ केंद्रीय जांच एजेंसियों और सभी राज्य पुलिस बलों को जोड़ता है। इसके माध्यम से इंटरपोल रेड कॉर्नर नोटिस (RCN) जारी करने और विदेश भागे अपराधियों/भगोड़ों की 17,874+ करोड़ रु. की संपत्तियों को कुर्क/सीज़ करने में तेजी आई है। नए आपराधिक कानूनों (भारतीय नागरिक सुरक्षा संहिता) में भगोड़ों की अनुपस्थिति में मुकदमा चलाने (Trial in Absentia) के प्रावधान ने प्रत्यर्पण प्रक्रिया को सुदृढ़ किया है।</div>
+                            </div>
+                            </div>
+                            </details>
+                        </div>
+                        
+                </div>
+                
+                <div class="unit-block">
+                    <h3 class="unit-header">📘 Unit 1: भारतीय राजव्यवस्था, आंतरिक सुरक्षा एवं कानून</h3>
+                    
+                        <div class="syllabus-topic-card">
+                            <div class="topic-header">
+                                <span class="topic-name">📌 राष्ट्रीय नारकोटिक्स नियंत्रण ढांचा एवं NCORD त्रिवर्षीय रोडमैप (2026-2029)</span>
+                                <span class="badge badge-update">अद्यतन तिथि: 2026-09-06</span>
+                            </div>
+                            <div class="current-status-box">
+                                <strong>वर्तमान स्थिति एवं अद्यतन तथ्य:</strong>
+                                <p>गृह मंत्रालय द्वारा नशामुक्त भारत हेतु 4-स्तरीय NCORD तंत्र, निदान (NIDAAN) पोर्टल, भारतपोल (Bharatpol) और 4-स्तंभीय रणनीति लागू की गई है। BNS व BNSS लागू होने से आपराधिक मामलों में सजा दर (Conviction Rate) में सुधार हुआ है। राज्य ANTF को 7% केंद्रीय सहायता का प्रावधान है।</p>
+                            </div>
+                            <details class="history-details">
+                                <summary>📜 अपडेट इतिहास एवं पूर्व विवरण देखें</summary>
+                                <div class="history-body">
+                            <div class="update-entry">
+                                <span class="update-date">📅 2026-09-06</span>
+                                <div class="update-text">गृह मंत्रालय द्वारा नशामुक्त भारत हेतु 4-स्तरीय NCORD तंत्र, निदान (NIDAAN) पोर्टल, भारतपोल (Bharatpol) और 4-स्तंभीय रणनीति लागू की गई है। BNS व BNSS लागू होने से आपराधिक मामलों में सजा दर (Conviction Rate) में सुधार हुआ है। राज्य ANTF को 7% केंद्रीय सहायता का प्रावधान है।</div>
+                            </div>
+                            </div>
+                            </details>
+                        </div>
+                        
+                </div>
+                
+                <div class="unit-block">
+                    <h3 class="unit-header">📘 Unit 1: भारतीय अर्थव्यवस्था एवं विकास</h3>
+                    
+                        <div class="syllabus-topic-card">
+                            <div class="topic-header">
+                                <span class="topic-name">📌 भारतीय रिजर्व बैंक की बाह्य क्षेत्र प्रबंधन नीति व FCNR(B) स्वैप विंडो</span>
+                                <span class="badge badge-update">अद्यतन तिथि: 2026-09-06</span>
+                            </div>
+                            <div class="current-status-box">
+                                <strong>वर्तमान स्थिति एवं अद्यतन तथ्य:</strong>
+                                <p>वैश्विक ब्याज दरों में वृद्धि (US Yield 4.8%) के कारण RBI ने FCNR(B) डिपॉजिट आकर्षित करने हेतु विशेष डॉलर-रुपया स्वैप विंडो का संचालन किया, जिससे भारत का विदेशी मुद्रा भंडार बढ़कर $729 बिलियन के रिकॉर्ड स्तर पर पहुँचा। हालांकि, इससे बैंकिंग प्रणाली में ₹6.7 लाख करोड़ का तरलता अधिशेष (Liquidity Surplus) उत्पन्न हुआ जिसे VRRR के माध्यम से प्रबंधित किया जा रहा है।</p>
+                            </div>
+                            <details class="history-details">
+                                <summary>📜 अपडेट इतिहास एवं पूर्व विवरण देखें</summary>
+                                <div class="history-body">
+                            <div class="update-entry">
+                                <span class="update-date">📅 2026-09-06</span>
+                                <div class="update-text">वैश्विक ब्याज दरों में वृद्धि (US Yield 4.8%) के कारण RBI ने FCNR(B) डिपॉजिट आकर्षित करने हेतु विशेष डॉलर-रुपया स्वैप विंडो का संचालन किया, जिससे भारत का विदेशी मुद्रा भंडार बढ़कर $729 बिलियन के रिकॉर्ड स्तर पर पहुँचा। हालांकि, इससे बैंकिंग प्रणाली में ₹6.7 लाख करोड़ का तरलता अधिशेष (Liquidity Surplus) उत्पन्न हुआ जिसे VRRR के माध्यम से प्रबंधित किया जा रहा है।</div>
+                            </div>
+                            </div>
+                            </details>
+                        </div>
+                        
+                </div>
+                
+                <div class="unit-block">
+                    <h3 class="unit-header">📘 Unit 1: भारतीय राजव्यवस्था व संवैधानिक विकास</h3>
+                    
+                        <div class="syllabus-topic-card">
+                            <div class="topic-header">
+                                <span class="topic-name">📌 अनुच्छेद 124(3)(c) - सर्वोच्च न्यायालय में 'प्रतिष्ठित न्यायविद' (Distinguished Jurist)</span>
+                                <span class="badge badge-update">अद्यतन तिथि: 2026-09-06</span>
+                            </div>
+                            <div class="current-status-box">
+                                <strong>वर्तमान स्थिति एवं अद्यतन तथ्य:</strong>
+                                <p>संविधान के अनुच्छेद 124(3)(c) के अनुसार राष्ट्रपति की राय में एक 'प्रतिष्ठित न्यायविद' को सुप्रीम कोर्ट का जज बनाया जा सकता है। इसका उद्देश्य पीठ में कानूनी शिक्षाविदों व विद्वानों के माध्यम से विविधता लाना था। परंतु 76 वर्षों में कॉलेजियम द्वारा सिफारिश न किए जाने, अदालती प्रक्रियात्मक अनुभव की कमी तथा बार काउंसिल नियम 49 (वेतनभोगी रोजगार पर प्रतिबंध) के कारण एक भी नियुक्ति नहीं हुई है। उच्च न्यायालयों से यह प्रावधान 44वें संशोधन (1978) द्वारा हटा दिया गया था।</p>
+                            </div>
+                            <details class="history-details">
+                                <summary>📜 अपडेट इतिहास एवं पूर्व विवरण देखें</summary>
+                                <div class="history-body">
+                            <div class="update-entry">
+                                <span class="update-date">📅 2026-09-06</span>
+                                <div class="update-text">संविधान के अनुच्छेद 124(3)(c) के अनुसार राष्ट्रपति की राय में एक 'प्रतिष्ठित न्यायविद' को सुप्रीम कोर्ट का जज बनाया जा सकता है। इसका उद्देश्य पीठ में कानूनी शिक्षाविदों व विद्वानों के माध्यम से विविधता लाना था। परंतु 76 वर्षों में कॉलेजियम द्वारा सिफारिश न किए जाने, अदालती प्रक्रियात्मक अनुभव की कमी तथा बार काउंसिल नियम 49 (वेतनभोगी रोजगार पर प्रतिबंध) के कारण एक भी नियुक्ति नहीं हुई है। उच्च न्यायालयों से यह प्रावधान 44वें संशोधन (1978) द्वारा हटा दिया गया था।</div>
+                            </div>
+                            </div>
+                            </details>
+                        </div>
+                        
+                </div>
+                
+                <div class="unit-block">
+                    <h3 class="unit-header">📘 Unit 3: आंतरिक सुरक्षा व कानून प्रवर्तन ढांचा</h3>
+                    
+                        <div class="syllabus-topic-card">
+                            <div class="topic-header">
+                                <span class="topic-name">📌 भारत का 4-स्तरी नार्कोटिक्स नियंत्रण ढांचा (NCORD & Bharatpol)</span>
+                                <span class="badge badge-update">अद्यतन तिथि: 2026-09-06</span>
+                            </div>
+                            <div class="current-status-box">
+                                <strong>वर्तमान स्थिति एवं अद्यतन तथ्य:</strong>
+                                <p>नार्को-आतंकवाद (Narco-Terror) और ड्रग्स नेटवर्क को ध्वस्त करने हेतु गृह मंत्रालय द्वारा लागू ढांचा: 1) 4-स्तरीय NCORD समिति, 2) 'भारतपोल' (14+ केंद्रीय एजेंसियों व राज्य पुलिस का प्रत्यर्पण पोर्टल), 3) 'NIDAAN' राष्ट्रीय नार्को अपराधियों का डेटाबेस, 4) 'MANAS 1933' नशामुक्ति हेल्पलाइन, 5) PIT-NDPS के तहत वित्तीय संपत्तियों की जब्ती और डार्कनेट/क्रिप्टो सेल का गठन।</p>
+                            </div>
+                            <details class="history-details">
+                                <summary>📜 अपडेट इतिहास एवं पूर्व विवरण देखें</summary>
+                                <div class="history-body">
+                            <div class="update-entry">
+                                <span class="update-date">📅 2026-09-06</span>
+                                <div class="update-text">नार्को-आतंकवाद (Narco-Terror) और ड्रग्स नेटवर्क को ध्वस्त करने हेतु गृह मंत्रालय द्वारा लागू ढांचा: 1) 4-स्तरीय NCORD समिति, 2) 'भारतपोल' (14+ केंद्रीय एजेंसियों व राज्य पुलिस का प्रत्यर्पण पोर्टल), 3) 'NIDAAN' राष्ट्रीय नार्को अपराधियों का डेटाबेस, 4) 'MANAS 1933' नशामुक्ति हेल्पलाइन, 5) PIT-NDPS के तहत वित्तीय संपत्तियों की जब्ती और डार्कनेट/क्रिप्टो सेल का गठन।</div>
+                            </div>
+                            </div>
+                            </details>
+                        </div>
+                        
+                </div>
+                
+                <div class="unit-block">
+                    <h3 class="unit-header">📘 Unit 1: भारतीय अर्थशास्त्र एवं बाह्य क्षेत्र</h3>
+                    
+                        <div class="syllabus-topic-card">
+                            <div class="topic-header">
+                                <span class="topic-name">📌 वैश्विक बांड प्रतिफल, FCNR(B) स्वैप सुविधा एवं तरलता प्रबंधन</span>
+                                <span class="badge badge-update">अद्यतन तिथि: 2026-09-06</span>
+                            </div>
+                            <div class="current-status-box">
+                                <strong>वर्तमान स्थिति एवं अद्यतन तथ्य:</strong>
+                                <p>वैश्विक स्तर पर बांड यील्ड्स (US 10-Yr Bond Yield ~4.8%) बढ़ने से उभरते बाजारों से पूंजी का पलायन होता है। RBI द्वारा डॉलर-रुपया स्वैप विंडो के जरिए FCNR(B) जमाओं में 127.2 अरब डॉलर आकर्षित किए गए, जिससे विदेशी मुद्रा भंडार $729 Billion पहुंचा। परंतु बैंकिंग प्रणाली में 6.7 लाख करोड़ का तरलता अधिशेष उत्पन्न हुआ जिसे Variable Rate Reverse Repo (VRRR) से प्रबंधित किया जा रहा है।</p>
+                            </div>
+                            <details class="history-details">
+                                <summary>📜 अपडेट इतिहास एवं पूर्व विवरण देखें</summary>
+                                <div class="history-body">
+                            <div class="update-entry">
+                                <span class="update-date">📅 2026-09-06</span>
+                                <div class="update-text">वैश्विक स्तर पर बांड यील्ड्स (US 10-Yr Bond Yield ~4.8%) बढ़ने से उभरते बाजारों से पूंजी का पलायन होता है। RBI द्वारा डॉलर-रुपया स्वैप विंडो के जरिए FCNR(B) जमाओं में 127.2 अरब डॉलर आकर्षित किए गए, जिससे विदेशी मुद्रा भंडार $729 Billion पहुंचा। परंतु बैंकिंग प्रणाली में 6.7 लाख करोड़ का तरलता अधिशेष उत्पन्न हुआ जिसे Variable Rate Reverse Repo (VRRR) से प्रबंधित किया जा रहा है।</div>
+                            </div>
+                            </div>
+                            </details>
+                        </div>
+                        
+                </div>
+                
+                <div class="unit-block">
+                    <h3 class="unit-header">📘 Unit 2: लोक प्रशासन, राज्य प्रशासनिक ढांचा एवं आयोग</h3>
+                    
+                        <div class="syllabus-topic-card">
+                            <div class="topic-header">
+                                <span class="topic-name">📌 राष्ट्रीय सफाई कर्मचारी आयोग (NCSK) - अद्यतन संरचना 2026</span>
+                                <span class="badge badge-update">अद्यतन तिथि: 2026-09-06</span>
+                            </div>
+                            <div class="current-status-box">
+                                <strong>वर्तमान स्थिति एवं अद्यतन तथ्य:</strong>
+                                <p>सामाजिक न्याय एवं अधिकारिता मंत्रालय द्वारा NCSK के नए अध्यक्ष पद पर भगवत प्रसाद मकवाना और उपाध्यक्ष पद पर कैशब बिहारी को नियुक्त किया गया है। आयोग का कार्यकाल 31 मार्च 2028 तक विस्तारित किया गया है। यह आयोग 'मैनुअल स्कैवेंजर्स नियोजन निषेध अधिनियम 2013' के कार्यान्वयन की सर्वोच्च निगरानी संस्था है।</p>
+                            </div>
+                            <details class="history-details">
+                                <summary>📜 अपडेट इतिहास एवं पूर्व विवरण देखें</summary>
+                                <div class="history-body">
+                            <div class="update-entry">
+                                <span class="update-date">📅 2026-09-06</span>
+                                <div class="update-text">सामाजिक न्याय एवं अधिकारिता मंत्रालय द्वारा NCSK के नए अध्यक्ष पद पर भगवत प्रसाद मकवाना और उपाध्यक्ष पद पर कैशब बिहारी को नियुक्त किया गया है। आयोग का कार्यकाल 31 मार्च 2028 तक विस्तारित किया गया है। यह आयोग 'मैनुअल स्कैवेंजर्स नियोजन निषेध अधिनियम 2013' के कार्यान्वयन की सर्वोच्च निगरानी संस्था है।</div>
+                            </div>
+                            </div>
+                            </details>
+                        </div>
+                        
+                </div>
+                
+                <div class="unit-block">
+                    <h3 class="unit-header">📘 Unit 1: भारत में आंतरिक सुरक्षा एवं राष्ट्रीय सुरक्षा नीतियां</h3>
+                    
+                        <div class="syllabus-topic-card">
+                            <div class="topic-header">
+                                <span class="topic-name">📌 नशा मुक्त भारत रोडमैप 2026-2029 (NCORD व ANTF मॉडल)</span>
+                                <span class="badge badge-update">अद्यतन तिथि: 2026-09-06</span>
+                            </div>
+                            <div class="current-status-box">
+                                <strong>वर्तमान स्थिति एवं अद्यतन तथ्य:</strong>
+                                <p>केंद्रीय गृह मंत्रालय द्वारा जारी 4-स्तंभीय राष्ट्रीय रणनीति के तहत सभी राज्यों/UTs में एंटी-नार्कोटिक्स टास्क फोर्स (ANTF) का गठन, 1933 'मानस' हेल्पलाइन, डार्कनेट व क्रिप्टो-सेल का गठन, और 4-स्तरीय NCORD तंत्र की संस्थागत व्यवस्था की गई है। 2029 तक 100 अंतरराष्ट्रीय सिंडिकेट्स को ध्वस्त करने का लक्ष्य है।</p>
+                            </div>
+                            <details class="history-details">
+                                <summary>📜 अपडेट इतिहास एवं पूर्व विवरण देखें</summary>
+                                <div class="history-body">
+                            <div class="update-entry">
+                                <span class="update-date">📅 2026-09-06</span>
+                                <div class="update-text">केंद्रीय गृह मंत्रालय द्वारा जारी 4-स्तंभीय राष्ट्रीय रणनीति के तहत सभी राज्यों/UTs में एंटी-नार्कोटिक्स टास्क फोर्स (ANTF) का गठन, 1933 'मानस' हेल्पलाइन, डार्कनेट व क्रिप्टो-सेल का गठन, और 4-स्तरीय NCORD तंत्र की संस्थागत व्यवस्था की गई है। 2029 तक 100 अंतरराष्ट्रीय सिंडिकेट्स को ध्वस्त करने का लक्ष्य है।</div>
+                            </div>
+                            </div>
+                            </details>
+                        </div>
+                        
+                </div>
+                
+                <div class="unit-block">
+                    <h3 class="unit-header">📘 Unit 3: वैश्विक पर्यावरण एवं जलवायु परिवर्तन नीतियां</h3>
+                    
+                        <div class="syllabus-topic-card">
+                            <div class="topic-header">
+                                <span class="topic-name">📌 पेरिस समझौता अतिलंघन (1.5°C Overshoot) व UNEP रिपोर्ट</span>
+                                <span class="badge badge-update">अद्यतन तिथि: 2026-09-06</span>
+                            </div>
+                            <div class="current-status-box">
+                                <strong>वर्तमान स्थिति एवं अद्यतन तथ्य:</strong>
+                                <p>UNEP की 2026 रिपोर्ट 'Limiting Overshoot' के अनुसार वैश्विक तापमान में 1.5°C का अतिलंघन निश्चित है। अल्पकालिक शमन हेतु मीथेन (Methane) में 30% कटौती हेतु 'Global Methane Pledge' पर बल दिया जा रहा है। भारत ऐतिहासिक उत्सर्जन और कृषि आजीविका के आधार पर अनुकूलन वित्त (Adaptation Finance) की मांग कर रहा है।</p>
+                            </div>
+                            <details class="history-details">
+                                <summary>📜 अपडेट इतिहास एवं पूर्व विवरण देखें</summary>
+                                <div class="history-body">
+                            <div class="update-entry">
+                                <span class="update-date">📅 2026-09-06</span>
+                                <div class="update-text">UNEP की 2026 रिपोर्ट 'Limiting Overshoot' के अनुसार वैश्विक तापमान में 1.5°C का अतिलंघन निश्चित है। अल्पकालिक शमन हेतु मीथेन (Methane) में 30% कटौती हेतु 'Global Methane Pledge' पर बल दिया जा रहा है। भारत ऐतिहासिक उत्सर्जन और कृषि आजीविका के आधार पर अनुकूलन वित्त (Adaptation Finance) की मांग कर रहा है।</div>
+                            </div>
+                            </div>
+                            </details>
+                        </div>
+                        
+                </div>
+                
+                <div class="unit-block">
+                    <h3 class="unit-header">📘 इकाई 3: आपदा प्रबंधन एवं आंतरिक सुरक्षा / लोक प्रशासन</h3>
+                    
+                        <div class="syllabus-topic-card">
+                            <div class="topic-header">
+                                <span class="topic-name">📌 मादक पदार्थ नियंत्रण एवं राष्ट्रीय सुरक्षा रणनीति (NCORD व ANTF ढांचा)</span>
+                                <span class="badge badge-update">अद्यतन तिथि: 2026-09-06</span>
+                            </div>
+                            <div class="current-status-box">
+                                <strong>वर्तमान स्थिति एवं अद्यतन तथ्य:</strong>
+                                <p>भारत सरकार ने मार्च 2029 तक 'नशा मुक्त भारत' का लक्ष्य रखा है। इसके तहत 4-स्तरीय NCORD (राष्ट्रीय मादक पदार्थ समन्वय समिति) ढांचा स्थापित किया गया है। सभी राज्यों/UTs में समर्पित एंटी-नारकोटिक्स टास्क फोर्स (ANTF) का गठन किया गया है। 2019 से 2026 के बीच ₹17,874 करोड़ की संपत्ति जब्त की गई है और 274 वांछित अपराधियों का प्रत्यर्पण किया गया है। लत से पीड़ित नागरिकों हेतु 1933 'MANAS' हेल्पलाइन शुरू की गई है। इसके अतिरिक्त, मार्च 2026 तक देश से वामपंथी उग्रवाद (LWE) के उन्मूलन का दावा किया गया है।</p>
+                            </div>
+                            <details class="history-details">
+                                <summary>📜 अपडेट इतिहास एवं पूर्व विवरण देखें</summary>
+                                <div class="history-body">
+                            <div class="update-entry">
+                                <span class="update-date">📅 2026-09-06</span>
+                                <div class="update-text">भारत सरकार ने मार्च 2029 तक 'नशा मुक्त भारत' का लक्ष्य रखा है। इसके तहत 4-स्तरीय NCORD (राष्ट्रीय मादक पदार्थ समन्वय समिति) ढांचा स्थापित किया गया है। सभी राज्यों/UTs में समर्पित एंटी-नारकोटिक्स टास्क फोर्स (ANTF) का गठन किया गया है। 2019 से 2026 के बीच ₹17,874 करोड़ की संपत्ति जब्त की गई है और 274 वांछित अपराधियों का प्रत्यर्पण किया गया है। लत से पीड़ित नागरिकों हेतु 1933 'MANAS' हेल्पलाइन शुरू की गई है। इसके अतिरिक्त, मार्च 2026 तक देश से वामपंथी उग्रवाद (LWE) के उन्मूलन का दावा किया गया है।</div>
+                            </div>
+                            </div>
+                            </details>
+                        </div>
+                        
+                </div>
+                
+                <div class="unit-block">
+                    <h3 class="unit-header">📘 इकाई 1: भारतीय संविधान एवं न्यायपालिका</h3>
+                    
+                        <div class="syllabus-topic-card">
+                            <div class="topic-header">
+                                <span class="topic-name">📌 अनुच्छेद 124(3)(c) - सर्वोच्च न्यायालय में 'प्रतिष्ठित न्यायविद' की नियुक्ति</span>
+                                <span class="badge badge-update">अद्यतन तिथि: 2026-09-06</span>
+                            </div>
+                            <div class="current-status-box">
+                                <strong>वर्तमान स्थिति एवं अद्यतन तथ्य:</strong>
+                                <p>अनुच्छेद 124(3)(c) के तहत राष्ट्रपति किसी प्रतिष्ठित कानूनविद/प्रोफेसर को सीधे सर्वोच्च न्यायालय का जज नियुक्त कर सकता है। 1950 से अब तक (76 वर्षों में) इस प्रावधान का उपयोग नहीं हुआ है। 42वें संशोधन (1976) ने उच्च न्यायालयों (अनुच्छेद 217) में भी यह प्रावधान जोड़ा था, जिसे 44वें संशोधन (1978) द्वारा हटा दिया गया। बार काउंसिल के नियम 49 के तहत पूर्णकालिक वेतनभोगी शिक्षाविदों के वकालत करने पर प्रतिबंध और कॉलेजियम द्वारा उच्च न्यायालय के जजों को प्राथमिकता देना इसके प्रमुख कारण हैं।</p>
+                            </div>
+                            <details class="history-details">
+                                <summary>📜 अपडेट इतिहास एवं पूर्व विवरण देखें</summary>
+                                <div class="history-body">
+                            <div class="update-entry">
+                                <span class="update-date">📅 2026-09-06</span>
+                                <div class="update-text">अनुच्छेद 124(3)(c) के तहत राष्ट्रपति किसी प्रतिष्ठित कानूनविद/प्रोफेसर को सीधे सर्वोच्च न्यायालय का जज नियुक्त कर सकता है। 1950 से अब तक (76 वर्षों में) इस प्रावधान का उपयोग नहीं हुआ है। 42वें संशोधन (1976) ने उच्च न्यायालयों (अनुच्छेद 217) में भी यह प्रावधान जोड़ा था, जिसे 44वें संशोधन (1978) द्वारा हटा दिया गया। बार काउंसिल के नियम 49 के तहत पूर्णकालिक वेतनभोगी शिक्षाविदों के वकालत करने पर प्रतिबंध और कॉलेजियम द्वारा उच्च न्यायालय के जजों को प्राथमिकता देना इसके प्रमुख कारण हैं।</div>
+                            </div>
+                            </div>
+                            </details>
+                        </div>
+                        
+                </div>
+                
+                <div class="unit-block">
+                    <h3 class="unit-header">📘 Unit 1: भारतीय राजव्यवस्था, संविधान एवं न्यायपालिका</h3>
+                    
+                        <div class="syllabus-topic-card">
+                            <div class="topic-header">
+                                <span class="topic-name">📌 सर्वोच्च न्यायालय न्यायाधीश पात्रता - विशिष्ट न्यायविद (अनुच्छेद 124(3)(c))</span>
+                                <span class="badge badge-update">अद्यतन तिथि: 2026-09-06</span>
+                            </div>
+                            <div class="current-status-box">
+                                <strong>वर्तमान स्थिति एवं अद्यतन तथ्य:</strong>
+                                <p>संविधान के अनु. 124(3)(c) में राष्ट्रपति की राय में 'विशिष्ट न्यायविद' को सीधे सर्वोच्च न्यायालय का न्यायाधीश नियुक्त करने का प्रावधान है। 1950 से 2026 तक एक भी विशिष्ट न्यायविद की नियुक्ति नहीं हुई है। उच्च न्यायालयों हेतु ऐसा प्रावधान 44वें संविधान संशोधन 1978 द्वारा हटा दिया गया था।</p>
+                            </div>
+                            <details class="history-details">
+                                <summary>📜 अपडेट इतिहास एवं पूर्व विवरण देखें</summary>
+                                <div class="history-body">
+                            <div class="update-entry">
+                                <span class="update-date">📅 2026-09-06</span>
+                                <div class="update-text">संविधान के अनु. 124(3)(c) में राष्ट्रपति की राय में 'विशिष्ट न्यायविद' को सीधे सर्वोच्च न्यायालय का न्यायाधीश नियुक्त करने का प्रावधान है। 1950 से 2026 तक एक भी विशिष्ट न्यायविद की नियुक्ति नहीं हुई है। उच्च न्यायालयों हेतु ऐसा प्रावधान 44वें संविधान संशोधन 1978 द्वारा हटा दिया गया था।</div>
+                            </div>
+                            </div>
+                            </details>
+                        </div>
+                        
+                </div>
+                
+                <div class="unit-block">
+                    <h3 class="unit-header">📘 Unit 2: लोक नीति, आंतरिक सुरक्षा एवं कानून लागू करने वाली एजेंसियां</h3>
+                    
+                        <div class="syllabus-topic-card">
+                            <div class="topic-header">
+                                <span class="topic-name">📌 राष्ट्रीय नारकोटिक्स नियंत्रण रणनीति एवं नशा मुक्त भारत रोडमैप (2026-2029)</span>
+                                <span class="badge badge-update">अद्यतन तिथि: 2026-09-06</span>
+                            </div>
+                            <div class="current-status-box">
+                                <strong>वर्तमान स्थिति एवं अद्यतन तथ्य:</strong>
+                                <p>2029 तक भारत को पूर्णतः नशा मुक्त बनाने का रोडमैप जारी। इसके अंतर्गत NCORD (4-स्तरीय तंत्र), ANTF (राज्य स्तरीय), NIDAAN डेटाबेस, MANAS (1933 हेल्पलाइन) तथा 'भारतपोल' के माध्यम से भगोड़ों के प्रत्यर्पण की व्यवस्था शामिल है।</p>
+                            </div>
+                            <details class="history-details">
+                                <summary>📜 अपडेट इतिहास एवं पूर्व विवरण देखें</summary>
+                                <div class="history-body">
+                            <div class="update-entry">
+                                <span class="update-date">📅 2026-09-06</span>
+                                <div class="update-text">2029 तक भारत को पूर्णतः नशा मुक्त बनाने का रोडमैप जारी। इसके अंतर्गत NCORD (4-स्तरीय तंत्र), ANTF (राज्य स्तरीय), NIDAAN डेटाबेस, MANAS (1933 हेल्पलाइन) तथा 'भारतपोल' के माध्यम से भगोड़ों के प्रत्यर्पण की व्यवस्था शामिल है।</div>
+                            </div>
+                            </div>
+                            </details>
+                        </div>
+                        
+                </div>
+                
+                <div class="unit-block">
+                    <h3 class="unit-header">📘 Unit 3: आंतरिक सुरक्षा एवं नशीली दवाओं का तंत्र</h3>
+                    
+                        <div class="syllabus-topic-card">
+                            <div class="topic-header">
+                                <span class="topic-name">📌 गृह मंत्रालय का नारकोटिक्स रोधी ढांचा (Anti-Narcotics Architecture)</span>
+                                <span class="badge badge-update">अद्यतन तिथि: 2026-09-06</span>
+                            </div>
+                            <div class="current-status-box">
+                                <strong>वर्तमान स्थिति एवं अद्यतन तथ्य:</strong>
+                                <p>MHA द्वारा 4-स्तरीय NCORD तंत्र, NIDAAN राष्ट्रीय डेटाबेस, 1933 MANAS हेल्पलाइन, ANTF में डार्कनेट-क्रिप्टो सेल, तथा 'भारतपोल' प्रत्यर्पण प्लेटफॉर्म की स्थापना की गई है। 2026-2029 का 3-वर्षीय रोडमैप लागू हुआ है।</p>
+                            </div>
+                            <details class="history-details">
+                                <summary>📜 अपडेट इतिहास एवं पूर्व विवरण देखें</summary>
+                                <div class="history-body">
+                            <div class="update-entry">
+                                <span class="update-date">📅 2026-09-06</span>
+                                <div class="update-text">MHA द्वारा 4-स्तरीय NCORD तंत्र, NIDAAN राष्ट्रीय डेटाबेस, 1933 MANAS हेल्पलाइन, ANTF में डार्कनेट-क्रिप्टो सेल, तथा 'भारतपोल' प्रत्यर्पण प्लेटफॉर्म की स्थापना की गई है। 2026-2029 का 3-वर्षीय रोडमैप लागू हुआ है।</div>
+                            </div>
+                            </div>
+                            </details>
+                        </div>
+                        
+                </div>
+                
+                <div class="unit-block">
+                    <h3 class="unit-header">📘 Unit 1: वैश्विक पर्यावरण एवं जलवायु नीति</h3>
+                    
+                        <div class="syllabus-topic-card">
+                            <div class="topic-header">
+                                <span class="topic-name">📌 UNEP का ओवरशूट एवं मीथेन शमन मॉडल (Limiting Overshoot)</span>
+                                <span class="badge badge-update">अद्यतन तिथि: 2026-09-06</span>
+                            </div>
+                            <div class="current-status-box">
+                                <strong>वर्तमान स्थिति एवं अद्यतन तथ्य:</strong>
+                                <p>1.5°C पेरिस लक्ष्य उल्लंघन के बाद 'Overshoot, Peak & Decline' मॉडल। वैश्विक वार्मिंग में मीथेन का 0.5°C योगदान। 0.1°C तापमान कम करने हेतु 200 अरब टन CO2 वायुमंडल से हटाना अनिवार्य।</p>
+                            </div>
+                            <details class="history-details">
+                                <summary>📜 अपडेट इतिहास एवं पूर्व विवरण देखें</summary>
+                                <div class="history-body">
+                            <div class="update-entry">
+                                <span class="update-date">📅 2026-09-06</span>
+                                <div class="update-text">1.5°C पेरिस लक्ष्य उल्लंघन के बाद 'Overshoot, Peak & Decline' मॉडल। वैश्विक वार्मिंग में मीथेन का 0.5°C योगदान। 0.1°C तापमान कम करने हेतु 200 अरब टन CO2 वायुमंडल से हटाना अनिवार्य।</div>
+                            </div>
+                            </div>
+                            </details>
+                        </div>
+                        
+                </div>
+                
+                <div class="unit-block">
+                    <h3 class="unit-header">📘 Unit 2: Public Administration</h3>
+                    
+                        <div class="syllabus-topic-card">
+                            <div class="topic-header">
+                                <span class="topic-name">📌 The Role of Public-Private Partnerships in Governance</span>
+                                <span class="badge badge-update">अद्यतन तिथि: 2026-09-06</span>
+                            </div>
+                            <div class="current-status-box">
+                                <strong>वर्तमान स्थिति एवं अद्यतन तथ्य:</strong>
+                                <p>Public-private partnerships can help improve governance by leveraging the strengths of both sectors. However, they also pose risks and challenges that must be addressed.</p>
+                            </div>
+                            <details class="history-details">
+                                <summary>📜 अपडेट इतिहास एवं पूर्व विवरण देखें</summary>
+                                <div class="history-body">
+                            <div class="update-entry">
+                                <span class="update-date">📅 2026-09-06</span>
+                                <div class="update-text">Public-private partnerships can help improve governance by leveraging the strengths of both sectors. However, they also pose risks and challenges that must be addressed.</div>
+                            </div>
+                            </div>
+                            </details>
+                        </div>
+                        
+                </div>
+                
+                <div class="unit-block">
+                    <h3 class="unit-header">📘 Unit 1: भारतीय राजव्यवस्था एवं संवैधानिक विकास</h3>
+                    
+                        <div class="syllabus-topic-card">
+                            <div class="topic-header">
+                                <span class="topic-name">📌 अनुच्छेद 124(3)(c) - प्रतिष्ठित न्यायविद (Distinguished Jurist) का प्रावधान</span>
+                                <span class="badge badge-update">अद्यतन तिथि: 2026-09-07</span>
+                            </div>
+                            <div class="current-status-box">
+                                <strong>वर्तमान स्थिति एवं अद्यतन तथ्य:</strong>
+                                <p>भारतीय संविधान के अनुच्छेद 124(3)(c) के तहत प्रतिष्ठित न्यायविदों को सुप्रीम कोर्ट जज बनाने का प्रावधान है जो 1950 से अप्रयुक्त है। 42वें संशोधन (1976) ने इसे उच्च न्यायालयों में भी लागू किया था, जिसे 44वें संशोधन (1978) द्वारा वापस ले लिया गया।</p>
+                            </div>
+                            <details class="history-details">
+                                <summary>📜 अपडेट इतिहास एवं पूर्व विवरण देखें</summary>
+                                <div class="history-body">
+                            <div class="update-entry">
+                                <span class="update-date">📅 2026-09-07</span>
+                                <div class="update-text">भारतीय संविधान के अनुच्छेद 124(3)(c) के तहत प्रतिष्ठित न्यायविदों को सुप्रीम कोर्ट जज बनाने का प्रावधान है जो 1950 से अप्रयुक्त है। 42वें संशोधन (1976) ने इसे उच्च न्यायालयों में भी लागू किया था, जिसे 44वें संशोधन (1978) द्वारा वापस ले लिया गया।</div>
+                            </div>
+                            </div>
+                            </details>
+                        </div>
+                        
+                </div>
+                
+                <div class="unit-block">
+                    <h3 class="unit-header">📘 Unit 2: प्रशासनिक कानून एवं सामाजिक-आर्थिक अधिकार</h3>
+                    
+                        <div class="syllabus-topic-card">
+                            <div class="topic-header">
+                                <span class="topic-name">📌 मातृत्व लाभ अधिनियम 1961 - धारा 12 का न्यायिक विस्तार</span>
+                                <span class="badge badge-update">अद्यतन तिथि: 2026-09-07</span>
+                            </div>
+                            <div class="current-status-box">
+                                <strong>वर्तमान स्थिति एवं अद्यतन तथ्य:</strong>
+                                <p>दिल्ली उच्च न्यायालय के 2026 के फैसले के अनुसार, मातृत्व अवकाश से लौटने वाली महिला कर्मचारी के न केवल रोजगार और वेतन की निरंतरता, बल्कि उसके पद (Status), पदोन्नति के अवसरों तथा समकक्ष स्थिति की रक्षा करना नियोक्ता का कानूनी दायित्व है।</p>
+                            </div>
+                            <details class="history-details">
+                                <summary>📜 अपडेट इतिहास एवं पूर्व विवरण देखें</summary>
+                                <div class="history-body">
+                            <div class="update-entry">
+                                <span class="update-date">📅 2026-09-07</span>
+                                <div class="update-text">दिल्ली उच्च न्यायालय के 2026 के फैसले के अनुसार, मातृत्व अवकाश से लौटने वाली महिला कर्मचारी के न केवल रोजगार और वेतन की निरंतरता, बल्कि उसके पद (Status), पदोन्नति के अवसरों तथा समकक्ष स्थिति की रक्षा करना नियोक्ता का कानूनी दायित्व है।</div>
+                            </div>
+                            </div>
+                            </details>
+                        </div>
+                        
+                </div>
+                
+                <div class="unit-block">
+                    <h3 class="unit-header">📘 Unit 1: भारतीय राजनीति व लोक प्रशासन / प्रतिस्पर्धा कानून</h3>
+                    
+                        <div class="syllabus-topic-card">
+                            <div class="topic-header">
+                                <span class="topic-name">📌 प्रतिस्पर्धा आयोग (CCI) और श्रम बाज़ार में एंटीट्रस्ट (Labour Market Antitrust)</span>
+                                <span class="badge badge-update">अद्यतन तिथि: 2026-09-07</span>
+                            </div>
+                            <div class="current-status-box">
+                                <strong>वर्तमान स्थिति एवं अद्यतन तथ्य:</strong>
+                                <p>भारतीय प्रतिस्पर्धा आयोग (CCI) ने श्रम बाज़ार में कंपनियों के मध्य 'नो-पोचिंग' (कर्मचारी न चुराने के समझौते) तथा 'वेतन-निर्धारण' (Wage-Fixing) की सांठगांठ को प्रतिस्पर्धा कानून के तहत दंडात्मक अपराध घोषित करने की दिशा में कदम बढ़ाया है।</p>
+                            </div>
+                            <details class="history-details">
+                                <summary>📜 अपडेट इतिहास एवं पूर्व विवरण देखें</summary>
+                                <div class="history-body">
+                            <div class="update-entry">
+                                <span class="update-date">📅 2026-09-07</span>
+                                <div class="update-text">भारतीय प्रतिस्पर्धा आयोग (CCI) ने श्रम बाज़ार में कंपनियों के मध्य 'नो-पोचिंग' (कर्मचारी न चुराने के समझौते) तथा 'वेतन-निर्धारण' (Wage-Fixing) की सांठगांठ को प्रतिस्पर्धा कानून के तहत दंडात्मक अपराध घोषित करने की दिशा में कदम बढ़ाया है।</div>
+                            </div>
+                            </div>
+                            </details>
+                        </div>
+                        
+                </div>
+                
+                <div class="unit-block">
+                    <h3 class="unit-header">📘 Unit 1: पारिस्थितिकी एवं पर्यावरण - जल संकट व नई तकनीक</h3>
+                    
+                        <div class="syllabus-topic-card">
+                            <div class="topic-header">
+                                <span class="topic-name">📌 डेटा सेंटर जल-ऊर्जा पदचिह्न (WUE Metric)</span>
+                                <span class="badge badge-update">अद्यतन तिथि: 2026-09-07</span>
+                            </div>
+                            <div class="current-status-box">
+                                <strong>वर्तमान स्थिति एवं अद्यतन तथ्य:</strong>
+                                <p>AI और डेटा सेंटरों की कूलिंग हेतु वैश्विक जल खपत 2030 तक 644 अरब लीटर होने का अनुमान। जल उपयोग दक्षता (WUE) = प्रति kWh ऊर्जा खपत पर जल लीटर में। ड्राई कूलिंग से जल बचता है पर बिजली खपत 0.30-0.74 kWh/kWh बढ़ती है।</p>
+                            </div>
+                            <details class="history-details">
+                                <summary>📜 अपडेट इतिहास एवं पूर्व विवरण देखें</summary>
+                                <div class="history-body">
+                            <div class="update-entry">
+                                <span class="update-date">📅 2026-09-07</span>
+                                <div class="update-text">AI और डेटा सेंटरों की कूलिंग हेतु वैश्विक जल खपत 2030 तक 644 अरब लीटर होने का अनुमान। जल उपयोग दक्षता (WUE) = प्रति kWh ऊर्जा खपत पर जल लीटर में। ड्राई कूलिंग से जल बचता है पर बिजली खपत 0.30-0.74 kWh/kWh बढ़ती है।</div>
+                            </div>
+                            </div>
+                            </details>
+                        </div>
+                        
+                </div>
+                
+                <div class="unit-block">
+                    <h3 class="unit-header">📘 Unit 1: अंतर्राष्ट्रीय संबंध व भू-राजनीति</h3>
+                    
+                        <div class="syllabus-topic-card">
+                            <div class="topic-header">
+                                <span class="topic-name">📌 पश्चिम एशिया के प्रमुख चोक-पॉइंट्स (Choke Points) और सुरक्षा ढांचा</span>
+                                <span class="badge badge-update">अद्यतन तिथि: 2026-09-16</span>
+                            </div>
+                            <div class="current-status-box">
+                                <strong>वर्तमान स्थिति एवं अद्यतन तथ्य:</strong>
+                                <p>बाब-अल-मंदेब (अदन की खाड़ी-लाल सागर) तथा हॉर्मुज जलडमरूमध्य (फारस की खाड़ी-ओमान की खाड़ी) वैश्विक 30% तेल और 20% कार्गो परिवहन को नियंत्रित करते हैं। मक्का पैक्ट (सऊदी-पाक-तुर्की) तथा अमेरिकी पेट्रो-डॉलर फ्रेमवर्क के क्षरण से इस क्षेत्र में बहुध्रुवीयता बढ़ रही है।</p>
+                            </div>
+                            <details class="history-details">
+                                <summary>📜 अपडेट इतिहास एवं पूर्व विवरण देखें</summary>
+                                <div class="history-body">
+                            <div class="update-entry">
+                                <span class="update-date">📅 2026-09-16</span>
+                                <div class="update-text">बाब-अल-मंदेब (अदन की खाड़ी-लाल सागर) तथा हॉर्मुज जलडमरूमध्य (फारस की खाड़ी-ओमान की खाड़ी) वैश्विक 30% तेल और 20% कार्गो परिवहन को नियंत्रित करते हैं। मक्का पैक्ट (सऊदी-पाक-तुर्की) तथा अमेरिकी पेट्रो-डॉलर फ्रेमवर्क के क्षरण से इस क्षेत्र में बहुध्रुवीयता बढ़ रही है।</div>
+                            </div>
+                            </div>
+                            </details>
+                        </div>
+                        
+                </div>
+                
+            </div>
+            
+            <div id="Paper_4" class="paper-tab-content">
+                <h2 class="paper-title">🏛️ RAS Paper 4 - विस्तृत पाठ्यक्रम एवं मास्टर नोट्स</h2>
+                
+                <div class="unit-block">
+                    <h3 class="unit-header">📘 Unit 1: सामान्य हिंदी (प्रशासनिक शब्दावली, प्रारूप लेखन)</h3>
+                    <div class="empty-topic">नवीनतम दैनिक समाचारों से इस टॉपिक का अध्ययन जल्द ही अद्यतन होगा।</div>
+                </div>
+                
+                <div class="unit-block">
+                    <h3 class="unit-header">📘 Unit 2: General English (Administrative Vocabulary & Comprehension)</h3>
+                    <div class="empty-topic">नवीनतम दैनिक समाचारों से इस टॉपिक का अध्ययन जल्द ही अद्यतन होगा।</div>
+                </div>
+                
+            </div>
+            
+            <div id="Paper_1_/_Paper_3" class="paper-tab-content">
+                <h2 class="paper-title">🏛️ RAS Paper 1 / Paper 3 - विस्तृत पाठ्यक्रम एवं मास्टर नोट्स</h2>
+                
+                <div class="unit-block">
+                    <h3 class="unit-header">📘 इकाई 2: जल संसाधन एवं पर्यावरण प्रबंधन</h3>
+                    
+                        <div class="syllabus-topic-card">
+                            <div class="topic-header">
+                                <span class="topic-name">📌 नदी जोड़ो परियोजनाएं (ILR) बनाम मांग पक्ष प्रबंधन (Demand Side Management)</span>
+                                <span class="badge badge-update">अद्यतन तिथि: 2026-09-06</span>
+                            </div>
+                            <div class="current-status-box">
+                                <strong>वर्तमान स्थिति एवं अद्यतन तथ्य:</strong>
+                                <p>जल संविधान की सातवीं अनुसूची में राज्य सूची की प्रविष्टि 17 के अंतर्गत आता है। अंतर-राज्यीय नदी जल विवाद अधिनियम 1956 के तहत न्यायाधिकरण गठित किए जाते हैं। नदी जोड़ो परियोजनाओं (जैसे केन-बेतवा, पंबा-अचनाकोविल) में भारी पर्यावरणीय क्षति, जैव विविधता नुकसान और जनजातीय विस्थापन होता है। इसके विकल्प के रूप में 'मांग पक्ष प्रबंधन' (Demand Side Management) की सिफारिश की जाती है, जिसमें कृषि में जल-दक्षता, मुफ्त बिजली पर नियंत्रण, वर्षा जल संचयन और स्थानीय जल निकायों के जीर्णोद्धार पर जोर दिया जाता है।</p>
+                            </div>
+                            <details class="history-details">
+                                <summary>📜 अपडेट इतिहास एवं पूर्व विवरण देखें</summary>
+                                <div class="history-body">
+                            <div class="update-entry">
+                                <span class="update-date">📅 2026-09-06</span>
+                                <div class="update-text">जल संविधान की सातवीं अनुसूची में राज्य सूची की प्रविष्टि 17 के अंतर्गत आता है। अंतर-राज्यीय नदी जल विवाद अधिनियम 1956 के तहत न्यायाधिकरण गठित किए जाते हैं। नदी जोड़ो परियोजनाओं (जैसे केन-बेतवा, पंबा-अचनाकोविल) में भारी पर्यावरणीय क्षति, जैव विविधता नुकसान और जनजातीय विस्थापन होता है। इसके विकल्प के रूप में 'मांग पक्ष प्रबंधन' (Demand Side Management) की सिफारिश की जाती है, जिसमें कृषि में जल-दक्षता, मुफ्त बिजली पर नियंत्रण, वर्षा जल संचयन और स्थानीय जल निकायों के जीर्णोद्धार पर जोर दिया जाता है।</div>
+                            </div>
+                            </div>
+                            </details>
+                        </div>
+                        
+                </div>
+                
+            </div>
+            
+    </div>
+
+    <script>
+        function showPaper(paperId, btn) {
+            let contents = document.querySelectorAll('.paper-tab-content');
+            contents.forEach(c => c.style.display = 'none');
+            document.getElementById(paperId).style.display = 'block';
+
+            let buttons = document.querySelectorAll('.tab-btn');
+            buttons.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+        }
+
+        function filterTopics() {
+            let input = document.getElementById('syllabusSearch').value.toLowerCase();
+            let cards = document.querySelectorAll('.syllabus-topic-card');
+            cards.forEach(card => {
+                let text = card.innerText.toLowerCase();
+                card.style.display = text.includes(input) ? 'block' : 'none';
+            });
+        }
+
+        // Default open Paper 1
+        showPaper('Paper_1', document.querySelector('.tab-btn'));
+    </script>
+</body>
+</html>

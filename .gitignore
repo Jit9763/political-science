@@ -46,8 +46,11 @@ secrets/
 RPSC_UPSC_Daily_AI_Agent/config.json
 RPSC_UPSC_Daily_AI_Agent/.env
 RPSC_UPSC_Daily_AI_Agent/.env.*
-RPSC_UPSC_Daily_AI_Agent/Output_Notes/*.html
-RPSC_UPSC_Daily_AI_Agent/Output_Notes/*.docx
+
+# Allow daily notes to be committed and synced
+!RPSC_UPSC_Daily_AI_Agent/Output_Notes/*.html
+!RPSC_UPSC_Daily_AI_Agent/Output_Notes/*.docx
+!RPSC_UPSC_Daily_AI_Agent/Output_Notes/*.md
 
 # Allow Python scripts for GitHub Actions VM
 !RPSC_UPSC_Daily_AI_Agent/*.py

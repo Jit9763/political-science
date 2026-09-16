@@ -118,24 +118,24 @@ class RASNotesGUI(ctk.CTk):
         self.status_label.grid(row=10, column=0, padx=20, pady=10)
 
     def sync_from_drive_quiet(self):
-        """Automatically fetch any missing notes from Google Drive folder on launch."""
+        """Automatically fetch any missing notes from cloud VM & Google Drive folder on launch."""
         try:
-            synced = self.uploader.sync_from_drive(self.output_dir)
+            synced = self.uploader.sync_from_cloud(self.output_dir)
             if synced > 0:
-                self.status_label.configure(text=f"☁️ ड्राइव से {synced} नए नोट्स सिंक हुए!", text_color="#3b82f6")
+                self.status_label.configure(text=f"☁️ क्लाउड/ड्राइव से {synced} नए नोट्स सिंक हुए!", text_color="#3b82f6")
         except Exception as e:
-            print(f"Quiet drive sync notice: {e}")
+            print(f"Quiet cloud/drive sync notice: {e}")
 
     def on_sync_drive(self):
-        """Manual trigger to fetch notes from Google Drive folder."""
-        self.status_label.configure(text="☁️ गूगल ड्राइव से नोट्स सिंक हो रहे हैं...", text_color="#3b82f6")
-        synced = self.uploader.sync_from_drive(self.output_dir)
+        """Manual trigger to fetch notes from Cloud VM and Google Drive folder."""
+        self.status_label.configure(text="☁️ क्लाउड व गूगल ड्राइव से नोट्स सिंक हो रहे हैं...", text_color="#3b82f6")
+        synced = self.uploader.sync_from_cloud(self.output_dir)
         self.refresh_notes_list()
         self.refresh_master_library_view()
         if synced > 0:
-            self.status_label.configure(text=f"✅ सफलतापूर्वक {synced} नोट्स ड्राइव से सिंक हुए!", text_color="#10b981")
+            self.status_label.configure(text=f"✅ सफलतापूर्वक {synced} नोट्स सिंक हुए!", text_color="#10b981")
         else:
-            self.status_label.configure(text="✅ ड्राइव सिंक अप-टू-डेट है!", text_color="#10b981")
+            self.status_label.configure(text="✅ नोट्स पूर्णतया अप-टू-डेट हैं!", text_color="#10b981")
 
     def open_master_wiki_browser(self):
         wiki_path = os.path.join(self.output_dir, "Master_Syllabus_Wiki.html")

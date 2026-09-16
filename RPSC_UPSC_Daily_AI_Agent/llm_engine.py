@@ -40,49 +40,46 @@ class LLMEngine:
                 print(f"Warning loading config: {e}")
 
     def call_gemini(self, prompt, system_instruction=None):
-        """Call Gemini API via google-genai SDK with types.GenerateContentConfig & automatic retry."""
+        """Call Gemini API via google-genai SDK with multi-model fallback & automatic retry."""
         if not self.api_key:
             raise ValueError("GEMINI_API_KEY is not configured! Please set it in config.json or environment.")
 
         client = genai.Client(api_key=self.api_key)
-        model = 'gemini-3.6-flash'
-        max_retries = 3
+        candidate_models = ['gemini-3.6-flash', 'gemini-2.5-flash', 'gemini-1.5-flash']
 
         config_args = {'temperature': 0.3}
         if system_instruction:
             config_args['system_instruction'] = system_instruction
             
         cfg = types.GenerateContentConfig(**config_args)
+        last_error = None
         
-        for attempt in range(max_retries):
-            try:
-                response = client.models.generate_content(
-                    model=model,
-                    contents=prompt,
-                    config=cfg
-                )
-                return response.text
-            except Exception as e:
-                err_str = str(e)
-                if "429" in err_str or "RESOURCE_EXHAUSTED" in err_str or "quota" in err_str.lower():
-                    if attempt < max_retries - 1:
-                        print(f"Gemini API rate limit on {model} (429 RateLimit). Waiting 10s before retry (Attempt {attempt+1}/{max_retries})...")
-                        time.sleep(10)
-                    else:
-                        print("⚠️ Gemini API Free Tier Daily Quota (20 requests/day) reached for today due to multiple test runs. Quota resets daily at midnight.")
-                        raise RuntimeError("Gemini API daily free-tier quota reached (20 requests/day). It will automatically reset tomorrow for daily runs.") from e
-                elif "503" in err_str or "UNAVAILABLE" in err_str:
-                    if attempt < max_retries - 1:
-                        print(f"Gemini API 503 server demand spike on {model}. Retrying in 5s (Attempt {attempt+1}/{max_retries})...")
+        for model in candidate_models:
+            max_retries = 2
+            for attempt in range(max_retries):
+                try:
+                    response = client.models.generate_content(
+                        model=model,
+                        contents=prompt,
+                        config=cfg
+                    )
+                    return response.text
+                except Exception as e:
+                    last_error = e
+                    err_str = str(e)
+                    if "429" in err_str or "RESOURCE_EXHAUSTED" in err_str or "quota" in err_str.lower():
+                        print(f"Gemini rate limit on {model}. Waiting 5s...")
                         time.sleep(5)
-                    else:
-                        raise e
-                else:
-                    if attempt < max_retries - 1:
-                        print(f"Gemini API error ({e}). Retrying in 3s...")
+                    elif "503" in err_str or "UNAVAILABLE" in err_str:
+                        print(f"Gemini 503 capacity spike on {model}. Switching or retrying...")
                         time.sleep(3)
                     else:
-                        raise e
+                        print(f"Gemini error on {model}: {e}")
+                        time.sleep(2)
+            print(f"Model {model} unavailable, trying fallback model...")
+
+        if last_error:
+            raise last_error
 
     def call_ollama(self, prompt, system_instruction=None, model="llama3"):
         """Call Ollama local LLM with forced JSON formatting and extended context window."""
