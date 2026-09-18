@@ -52,7 +52,20 @@ class DriveSyncUploader:
         try:
             print(f"Checking for updates from Cloud VM (git pull in {repo_dir})...")
             import subprocess
-            subprocess.run(["git", "-C", repo_dir, "pull", "--rebase", "origin", "main"], capture_output=True, text=True, timeout=15)
+            # Use --autostash to safely handle any local modifications without aborting
+            pull_res = subprocess.run(
+                ["git", "-C", repo_dir, "pull", "--rebase", "--autostash", "origin", "main"],
+                capture_output=True, text=True, timeout=25
+            )
+            if pull_res.returncode != 0:
+                print(f"Notice during git pull ({pull_res.returncode}): {pull_res.stderr.strip()[:100]}")
+                # Resilient fallback: fetch remote and checkout latest notes directly
+                subprocess.run(["git", "-C", repo_dir, "fetch", "origin", "main"], capture_output=True, timeout=20)
+                subprocess.run(["git", "-C", repo_dir, "checkout", "origin/main", "--", "RPSC_UPSC_Daily_AI_Agent/Output_Notes/"], capture_output=True, timeout=20)
+                subprocess.run(["git", "-C", repo_dir, "checkout", "origin/main", "--", "RPSC_UPSC_Daily_AI_Agent/Master_Library/"], capture_output=True, timeout=20)
+                print("Applied resilient checkout fallback from origin/main.")
+            else:
+                print("Cloud VM git pull completed successfully.")
         except Exception as ge:
             print(f"Notice during cloud git pull: {ge}")
 
