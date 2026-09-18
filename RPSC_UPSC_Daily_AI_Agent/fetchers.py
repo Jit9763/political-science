@@ -193,99 +193,171 @@ class NewsFetcher:
 
         return pib_items
 
-    def extract_youtube_id(self, url_or_id, target_date=None):
-        """Extract YouTube video ID matching target_date."""
-        if not url_or_id:
-            return ""
+    def extract_youtube_info(self, channel_or_url, target_date=None):
+        """Extract YouTube video ID and title matching target_date from channel or direct video."""
+        if not channel_or_url:
+            return "", ""
         
+        ch_name = "YouTube Coaching"
+        url_or_id = channel_or_url
+        channel_id = None
+
+        if isinstance(channel_or_url, dict):
+            ch_name = channel_or_url.get("name", "YouTube Coaching")
+            url_or_id = channel_or_url.get("url", "")
+            channel_id = channel_or_url.get("channel_id", None)
+
         # Direct Video ID or Video URL
         if len(url_or_id) == 11 and not '/' in url_or_id and not '@' in url_or_id:
-            return url_or_id
-        
+            return url_or_id, ch_name
+
         match = re.search(r'(?:v=|\/live\/|\/embed\/|\/shorts\/|youtu\.be\/)([a-zA-Z0-9_-]{11})', url_or_id)
         if match:
-            return match.group(1)
+            return match.group(1), ch_name
 
-        # Channel Handle or Channel URL
-        channel_name = url_or_id
-        if not channel_name.startswith('http'):
-            if not channel_name.startswith('@'):
-                channel_name = '@' + channel_name
-            channel_url = f"https://www.youtube.com/{channel_name}"
-        else:
-            channel_url = url_or_id
+        # If channel ID provided or extractable from URL
+        if not channel_id and '/channel/' in url_or_id:
+            channel_id = url_or_id.split('/channel/')[-1].split('/')[0].split('?')[0]
 
-        print(f"- Automatically finding targeted video for YouTube channel: {channel_url}...")
+        print(f"- Automatically finding targeted video for {ch_name}...")
         try:
-            req = urllib.request.Request(channel_url, headers=self.headers)
-            with urllib.request.urlopen(req, timeout=10) as resp:
-                html = resp.read().decode('utf-8', errors='ignore')
-                
-                channel_id_match = re.search(r'"externalChannelId":"(UC[a-zA-Z0-9_-]+)"', html)
-                if not channel_id_match:
-                    channel_id_match = re.search(r'https://www\.youtube\.com/channel/(UC[a-zA-Z0-9_-]+)', html)
+            if not channel_id:
+                channel_name = url_or_id
+                if not channel_name.startswith('http'):
+                    if not channel_name.startswith('@'):
+                        channel_name = '@' + channel_name
+                    channel_url = f"https://www.youtube.com/{channel_name}"
+                else:
+                    channel_url = url_or_id
 
-                if channel_id_match:
-                    channel_id = channel_id_match.group(1)
-                    rss_url = f"https://www.youtube.com/feeds/videos.xml?channel_id={channel_id}"
-                    
-                    rss_req = urllib.request.Request(rss_url, headers=self.headers)
-                    with urllib.request.urlopen(rss_req, timeout=10) as rss_resp:
-                        rss_xml = rss_resp.read()
-                        root = ET.fromstring(rss_xml)
-                        ns = {'atom': 'http://www.w3.org/2005/Atom', 'yt': 'http://www.youtube.com/xml/schemas/2015'}
-                        
-                        target_keywords = ['hindu', 'current affairs', 'dnc', 'editorial', 'pib', 'indian express', 'डेली न्यूज', 'द हिंदू', 'न्यूज']
-                        fallback_id = None
-                        fallback_title = None
+                req = urllib.request.Request(channel_url, headers=self.headers)
+                with urllib.request.urlopen(req, timeout=10) as resp:
+                    html = resp.read().decode('utf-8', errors='ignore')
+                    m = re.search(r'"externalChannelId":"(UC[a-zA-Z0-9_-]+)"', html)
+                    if not m:
+                        m = re.search(r'https://www\.youtube\.com/channel/(UC[a-zA-Z0-9_-]+)', html)
+                    if m:
+                        channel_id = m.group(1)
 
-                        for entry in root.findall('atom:entry', ns):
-                            title_elem = entry.find('atom:title', ns)
-                            video_id_elem = entry.find('yt:videoId', ns)
-                            pub_elem = entry.find('atom:published', ns)
-                            
-                            if title_elem is not None and video_id_elem is not None:
-                                title = title_elem.text
-                                v_id = video_id_elem.text
-                                pub_raw = pub_elem.text if pub_elem is not None else ""
-                                v_date = parse_date_to_ist_ymd(pub_raw)
+            if channel_id:
+                rss_url = f"https://www.youtube.com/feeds/videos.xml?channel_id={channel_id}"
+                rss_req = urllib.request.Request(rss_url, headers=self.headers)
+                with urllib.request.urlopen(rss_req, timeout=10) as rss_resp:
+                    rss_xml = rss_resp.read()
+                    root = ET.fromstring(rss_xml)
+                    ns = {'atom': 'http://www.w3.org/2005/Atom', 'yt': 'http://www.youtube.com/xml/schemas/2015'}
 
-                                if not fallback_id:
-                                    fallback_id = v_id
-                                    fallback_title = title
-                                
-                                title_lower = title.lower()
-                                if any(kw in title_lower for kw in target_keywords):
-                                    if target_date and v_date and v_date != target_date:
-                                        print(f"  (Skipping video '{title}' published on {v_date}, target is {target_date})")
-                                        continue
-                                    print(f"✅ Found targeted Hindu Analysis video for {v_date or target_date}: \"{title}\" (ID: {v_id})")
-                                    return v_id
+                    target_keywords = ['hindu', 'current affairs', 'dnc', 'editorial', 'pib', 'indian express', 'डेली न्यूज', 'द हिंदू', 'न्यूज']
+                    fallback_id = None
+                    fallback_title = None
 
-                        if fallback_id:
-                            print(f"✅ Found channel video: \"{fallback_title}\" (ID: {fallback_id})")
-                            return fallback_id
+                    for entry in root.findall('atom:entry', ns):
+                        title_elem = entry.find('atom:title', ns)
+                        video_id_elem = entry.find('yt:videoId', ns)
+                        pub_elem = entry.find('atom:published', ns)
+
+                        if title_elem is not None and video_id_elem is not None:
+                            title = title_elem.text
+                            v_id = video_id_elem.text
+                            pub_raw = pub_elem.text if pub_elem is not None else ""
+                            v_date = parse_date_to_ist_ymd(pub_raw)
+
+                            if not fallback_id:
+                                fallback_id = v_id
+                                fallback_title = title
+
+                            title_lower = title.lower()
+                            if any(kw in title_lower for kw in target_keywords):
+                                if target_date and v_date and v_date != target_date:
+                                    continue
+                                print(f"✅ Found targeted Hindu Analysis video for {v_date or target_date}: \"{title}\" (ID: {v_id})")
+                                return v_id, title
+
+                    if fallback_id:
+                        print(f"✅ Found channel video: \"{fallback_title}\" (ID: {fallback_id})")
+                        return fallback_id, fallback_title
 
         except Exception as e:
-            print(f"Warning resolving channel video ID: {e}")
+            print(f"Warning resolving channel video for {ch_name}: {e}")
 
-        return ""
+        return "", ""
 
-    def fetch_youtube_transcript(self, youtube_url_or_id="RJL7n_ZuU2U", target_date=None):
-        video_id = self.extract_youtube_id(youtube_url_or_id, target_date=target_date)
+    def extract_youtube_id(self, url_or_id, target_date=None):
+        vid, _ = self.extract_youtube_info(url_or_id, target_date=target_date)
+        return vid
+
+    def fetch_youtube_transcript(self, youtube_url_or_id="8lUqXNqdZbw", target_date=None):
+        video_id, title = self.extract_youtube_info(youtube_url_or_id, target_date=target_date)
         if not video_id:
             return ""
-        
+
         try:
-            print(f"- Fetching FULL YouTube Transcript for video ID: {video_id}...")
+            print(f"- Fetching FULL YouTube Transcript for video ID: {video_id} ({title})...")
             ytt = YouTubeTranscriptApi()
             transcript_list = ytt.fetch(video_id, languages=['hi', 'en', 'hi-IN'])
             full_text = " ".join([snippet.text for snippet in transcript_list])
             print(f"Successfully fetched COMPLETE YouTube transcript ({len(full_text)} chars).")
             return full_text
         except Exception as e:
-            print(f"ℹ️ YouTube Subtitles Notice: Auto-subtitles are disabled or still processing on YouTube for video ID: {video_id}. (Continuing analysis using full news corpus & editorials).")
+            print(f"ℹ️ YouTube Subtitles Notice: Auto-subtitles are disabled or still processing for video ID: {video_id} (\"{title}\").")
             return ""
+
+    def fetch_all_youtube_coaching(self, target_date=None, custom_url=None):
+        """Fetch daily lecture videos and transcripts from multiple top coaching channels."""
+        channels = []
+        cfg_path = os.path.join(os.path.dirname(__file__), "config.json")
+        if os.path.exists(cfg_path):
+            try:
+                import json
+                with open(cfg_path, 'r', encoding='utf-8') as f:
+                    cfg = json.load(f)
+                    channels = cfg.get("youtube_channels", [])
+            except Exception as e:
+                print(f"Warning loading youtube_channels from config: {e}")
+
+        if not channels:
+            channels = [
+                {
+                    "name": "UPSC Wallah (Prashant Sir - The Hindu Analysis)",
+                    "url": "https://www.youtube.com/channel/UCqOy6oOu6RPJNHYQ8f_Ybvg",
+                    "channel_id": "UCqOy6oOu6RPJNHYQ8f_Ybvg"
+                },
+                {
+                    "name": "Nirman IAS (Daily The Hindu & PIB Analysis)",
+                    "url": "https://www.youtube.com/channel/UCgJnU1HmRZkRzoyzJVRgq8w",
+                    "channel_id": "UCgJnU1HmRZkRzoyzJVRgq8w"
+                }
+            ]
+
+        if custom_url:
+            channels.insert(0, {"name": "User Custom Video/Channel", "url": custom_url})
+
+        combined_texts = []
+        for ch in channels:
+            ch_name = ch.get("name", "Coaching Lecture") if isinstance(ch, dict) else "Coaching Lecture"
+            v_id, title = self.extract_youtube_info(ch, target_date=target_date)
+            if not v_id:
+                continue
+
+            transcript = self.fetch_youtube_transcript(v_id, target_date=target_date)
+            if transcript:
+                combined_texts.append(f"=== [कोचिंग फैकल्टी क्लास: {ch_name} | वीडियो: \"{title}\" (ID: {v_id})] ===\n{transcript}")
+            else:
+                # Scrape video description as lecture curriculum
+                desc_text = ""
+                try:
+                    v_url = f"https://www.youtube.com/watch?v={v_id}"
+                    req = urllib.request.Request(v_url, headers=self.headers)
+                    with urllib.request.urlopen(req, timeout=8) as v_resp:
+                        v_html = v_resp.read().decode('utf-8', errors='ignore')
+                        d_m = re.search(r'"shortDescription":"([^"]+)"', v_html)
+                        if d_m:
+                            desc_text = d_m.group(1).encode('utf-8').decode('unicode_escape')
+                except Exception:
+                    pass
+                combined_texts.append(f"=== [कोचिंग क्लास आउटलाइन: {ch_name} | वीडियो: \"{title}\" (ID: {v_id})] ===\n{desc_text if desc_text else title}")
+
+        return "\n\n".join(combined_texts)
 
     def fetch_downtoearth_articles(self, max_items=5, fetch_full_text=True, target_date=None):
         """Directly scrape Down To Earth Science & Technology articles."""
@@ -416,9 +488,8 @@ class NewsFetcher:
             item['source'] = 'डाउन टू अर्थ (Down To Earth Hindi)'
         news_corpus['magazines_and_reports'] = mag_items + dte_hi
 
-        # 8. YouTube Transcript
-        yt_input = youtube_url if youtube_url else "https://www.youtube.com/@NirmanIAS"
-        news_corpus['youtube_transcript'] = self.fetch_youtube_transcript(yt_input, target_date=date_str)
+        # 8. YouTube Coaching Classes (UPSC Wallah - Prashant Sir & Nirman IAS)
+        news_corpus['youtube_transcript'] = self.fetch_all_youtube_coaching(target_date=date_str, custom_url=youtube_url)
 
         # 9. Telegram Channels (Daily Questions, MCQs & Notes)
         tg_posts = []
