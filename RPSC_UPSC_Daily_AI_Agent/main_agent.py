@@ -3,6 +3,9 @@ import sys
 import argparse
 from datetime import datetime, timezone, timedelta
 
+if hasattr(sys.stdout, 'reconfigure'):
+    sys.stdout.reconfigure(line_buffering=True)
+
 from fetchers import NewsFetcher
 from analyzer import NewsAnalyzer
 from formatter import NotesFormatter

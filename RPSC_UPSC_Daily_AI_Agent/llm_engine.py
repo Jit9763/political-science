@@ -45,41 +45,53 @@ class LLMEngine:
             raise ValueError("GEMINI_API_KEY is not configured! Please set it in config.json or environment.")
 
         client = genai.Client(api_key=self.api_key)
-        candidate_models = ['gemini-3.6-flash', 'gemini-3.7-flash', 'gemini-3.5-flash', 'gemini-flash-latest', 'gemini-3.8-flash']
+        candidate_models = ['gemini-3.5-flash', 'gemini-3.6-flash', 'gemini-3.7-flash', 'gemini-flash-latest']
 
         config_args = {
             'temperature': 0.3,
-            'response_mime_type': 'application/json'
+            'response_mime_type': 'application/json',
+            'thinking_config': types.ThinkingConfig(thinking_budget=0)
         }
         if system_instruction:
             config_args['system_instruction'] = system_instruction
             
-        cfg = types.GenerateContentConfig(**config_args)
+        try:
+            cfg = types.GenerateContentConfig(**config_args)
+        except Exception:
+            config_args.pop('thinking_config', None)
+            cfg = types.GenerateContentConfig(**config_args)
+
         last_error = None
         
         for model in candidate_models:
             max_retries = 2
             for attempt in range(max_retries):
                 try:
+                    print(f"🤖 Calling Gemini model '{model}' (Prompt: {len(prompt):,} chars, Attempt {attempt+1})...", flush=True)
                     response = client.models.generate_content(
                         model=model,
                         contents=prompt,
                         config=cfg
                     )
+                    print(f"✅ Gemini successfully returned {len(response.text):,} characters of JSON!", flush=True)
                     return response.text
                 except Exception as e:
                     last_error = e
                     err_str = str(e)
                     if "429" in err_str or "RESOURCE_EXHAUSTED" in err_str or "quota" in err_str.lower():
-                        print(f"Gemini rate limit on {model}. Waiting 5s...")
+                        print(f"⚠️ Gemini rate limit on {model}. Waiting 5s...", flush=True)
                         time.sleep(5)
                     elif "503" in err_str or "UNAVAILABLE" in err_str:
-                        print(f"Gemini 503 capacity spike on {model}. Switching or retrying...")
+                        print(f"⚠️ Gemini 503 capacity spike on {model}. Retrying...", flush=True)
                         time.sleep(3)
+                    elif "thinking_config" in err_str.lower():
+                        print(f"⚠️ thinking_config not supported on {model}, falling back without it...", flush=True)
+                        config_args.pop('thinking_config', None)
+                        cfg = types.GenerateContentConfig(**config_args)
                     else:
-                        print(f"Gemini error on {model}: {e}")
+                        print(f"⚠️ Gemini error on {model}: {e}", flush=True)
                         time.sleep(2)
-            print(f"Model {model} unavailable, trying fallback model...")
+            print(f"Model {model} unavailable, trying fallback model...", flush=True)
 
         if last_error:
             raise last_error
