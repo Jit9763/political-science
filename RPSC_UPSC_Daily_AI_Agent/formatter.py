@@ -586,11 +586,11 @@ class NotesFormatter:
 
         {f'<div class="section-title">📺 कोचिंग शिक्षक विश्लेषण एवं यूट्यूब लाइव क्लास सार</div>{yt_html}' if yt_html else ''}
 
-        <div class="section-title">🟣 राजस्थान सुजस एवं DIPR विशेष (RPSC Special)</div>
+        <div class="section-title">🟣 राजस्थान सुजस, पत्रिका एवं दैनिक भास्कर (Rajasthan Sujas, Patrika & Bhaskar)</div>
         {sujas_html if sujas_html else '<p>सुजस एवं राजस्थान राज्य सरकार की अद्यतन घोषणाएं।</p>'}
 
-        <div class="section-title">🔴 सम्पादकीय विस्तृत विश्लेषण (The Hindu, Indian Express, ET & DownToEarth)</div>
-        {editorial_html if editorial_html else '<p>दैनिक सम्पादकीय विस्तृत विश्लेषण प्रस्तुत है।</p>'}
+        <div class="section-title">🔴 सम्पादकीय एवं पत्रिका गहन विश्लेषण (The Hindu, Indian Express, ET, DownToEarth, योजना व कुरुक्षेत्र)</div>
+        {editorial_html if editorial_html else '<p>दैनिक सम्पादकीय एवं पत्रिका विश्लेषण प्रस्तुत है।</p>'}
 
         {f'<div class="section-title">📲 टेलीग्राम चैनल दैनिक प्रश्नोत्तरी व नोट्स (Telegram Daily Quiz & Notes)</div>{tg_html}' if tg_html else ''}
     </div>
@@ -614,32 +614,76 @@ class NotesFormatter:
         heading = doc.add_heading(f'RAS & UPSC Daily Notes - {date_str}', 0)
         heading.alignment = WD_ALIGN_PARAGRAPH.CENTER
 
+        # 1. Prelims Facts
         doc.add_heading('1. प्रारंभिक परीक्षा तथ्य (Prelims Tracker)', level=1)
         for item in analysis_data.get('prelims_facts', []):
             p = doc.add_paragraph()
             p.add_run(f"• [{item.get('topic', '')}] ").bold = True
             p.add_run(item.get('fact', ''))
 
-        doc.add_heading('2. मुख्य परीक्षा मॉडल उत्तर सेट (RAS Mains)', level=1)
+        # 2. Mains Questions (5M & 10M)
+        doc.add_heading('2. मुख्य परीक्षा मॉडल उत्तर सेट (RAS Mains - 5M & 10M)', level=1)
         for q in analysis_data.get('mains_questions', []):
             p = doc.add_paragraph()
             p.add_run(f"प्रश्न [{q.get('marks', 5)} अंक - {q.get('paper', '')}]: {q.get('question', '')}\n").bold = True
             if q.get('marks') == 5:
-                p.add_run(f"उत्तर: {q.get('model_answer', '')}\n")
+                p.add_run(f"उत्तर ढांचा (~50 शब्द):\n{q.get('model_answer', '')}\n")
             else:
                 p.add_run(f"भूमिका: {q.get('intro', '')}\n")
                 p.add_run(f"मुख्य भाग: {q.get('body', '')}\n")
                 p.add_run(f"निष्कर्ष: {q.get('conclusion', '')}\n")
+            doc.add_paragraph("-" * 35)
 
+        # 3. Coaching Teacher Analysis
+        yt_data = analysis_data.get('youtube_teacher_analysis', [])
+        if yt_data:
+            doc.add_heading('3. कोचिंग शिक्षक विश्लेषण एवं व्याख्यान सार (Lecture Analysis & Exam Tips)', level=1)
+            for yt in yt_data:
+                p = doc.add_paragraph()
+                p.add_run(f"विषय: {yt.get('topic', '')}\n").bold = True
+                p.add_run(f"शिक्षक व्याख्यान एवं ट्रिक्स: {yt.get('teacher_explanation', '')}\n")
+                p.add_run("क्लास के मुख्य बिंदु:\n")
+                for pt in yt.get('key_takeaways', []):
+                    p.add_run(f"  • {pt}\n")
+                p.add_run(f"💡 परीक्षा टिप: {yt.get('exam_tip', '')}\n")
+                doc.add_paragraph("-" * 35)
+
+        # 4. Rajasthan Sujas, Patrika & Bhaskar
+        sujas_data = analysis_data.get('rajasthan_sujas_special', [])
+        if sujas_data:
+            doc.add_heading('4. राजस्थान सुजस, पत्रिका एवं दैनिक भास्कर विशेष (RPSC Special)', level=1)
+            for s in sujas_data:
+                p = doc.add_paragraph()
+                p.add_run(f"शीर्षक: {s.get('title', '')} [{s.get('department', 'DIPR Rajasthan')}]\n").bold = True
+                for pt in s.get('key_points', []):
+                    p.add_run(f"  • {pt}\n")
+                p.add_run(f"RPSC महत्व: {s.get('rpsc_relevance', '')}\n")
+                doc.add_paragraph("-" * 35)
+
+        # 5. Editorial & Magazine Deep Dives
+        eds_data = analysis_data.get('editorial_deep_dive', [])
+        if eds_data:
+            doc.add_heading('5. सम्पादकीय एवं पत्रिका गहन विश्लेषण (The Hindu, Express, ET, DownToEarth, योजना व कुरुक्षेत्र)', level=1)
+            for ed in eds_data:
+                p = doc.add_paragraph()
+                p.add_run(f"[{ed.get('source', 'Editorial')} - {ed.get('syllabus_topic', '')}] {ed.get('title', '')}\n").bold = True
+                p.add_run(f"समसामयिक संदर्भ: {ed.get('context', '')}\n")
+                p.add_run("मुख्य विश्लेषण व तर्क:\n")
+                for pt in ed.get('key_arguments', []):
+                    p.add_run(f"  • {pt}\n")
+                p.add_run(f"आगे की राह: {ed.get('way_forward', '')}\n")
+                doc.add_paragraph("-" * 35)
+
+        # 6. Telegram Study Channels Q&A
         tg_data = analysis_data.get('telegram_quiz_and_notes', [])
         if tg_data:
-            doc.add_heading('3. टेलीग्राम चैनल दैनिक मॉडल प्रश्नोत्तर व नोट्स (~50 शब्द प्रारूप)', level=1)
+            doc.add_heading('6. टेलीग्राम चैनल दैनिक मॉडल प्रश्नोत्तर व नोट्स (~50 शब्द प्रारूप)', level=1)
             for item in tg_data:
                 q_text = item.get('question', item.get('question_or_topic', ''))
                 ans_text = item.get('model_answer_50_words', item.get('correct_answer', ''))
                 p = doc.add_paragraph()
                 p.add_run(f"प्रश्न [5 अंक - {item.get('syllabus_link', 'Paper 1')} - {item.get('channel', '@Telegram')}]: {q_text}\n").bold = True
-                p.add_run(f"उत्तर ढांचा (~50 शब्द):\n{ans_text}\n")
+                p.add_run(f"उत्तर ढांचा एवं विस्तृत नोट्स (~50 शब्द):\n{ans_text}\n")
                 doc.add_paragraph("-" * 40)
 
         docx_path = os.path.join(self.output_dir, f"RAS_UPSC_Notes_{date_str}.docx")

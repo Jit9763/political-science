@@ -393,17 +393,34 @@ class NewsFetcher:
         print(f"- Fetching Full PIB Press Releases for {date_str}...")
         news_corpus['pib_releases'] = self.fetch_pib_releases(max_items=6, fetch_full_text=True, target_date=date_str)
 
-        # 6. Rajasthan Sujas
-        print(f"- Fetching Rajasthan Sujas Updates for {date_str}...")
-        news_corpus['rajasthan_sujas'] = self.fetch_rss_items('https://www.news18.com/rss/india.xml', max_items=4, fetch_full_text=False, target_date=date_str)
-        for item in news_corpus['rajasthan_sujas']:
-            item['source'] = 'राजस्थान सुजस एवं DIPR (राज्य विशेष)'
+        # 6. Rajasthan Sujas & State Newspapers (Rajasthan Patrika, Dainik Bhaskar & DIPR)
+        print(f"- Fetching Rajasthan Patrika, Dainik Bhaskar & Sujas Updates for {date_str}...")
+        patrika_items = self.fetch_rss_items('https://news.google.com/rss/search?q=source%3ARajasthan%2BPatrika+when%3A1d&hl=hi&gl=IN&ceid=IN%3Ahi', max_items=6, fetch_full_text=False, target_date=date_str)
+        bhaskar_items = self.fetch_rss_items('https://news.google.com/rss/search?q=source%3ADainik%2BBhaskar+when%3A1d&hl=hi&gl=IN&ceid=IN%3Ahi', max_items=6, fetch_full_text=False, target_date=date_str)
+        dipr_items = self.fetch_rss_items('https://news.google.com/rss/search?q=%E0%A4%B8%E0%A5%81%E0%A4%9C%E0%A4%B8+DIPR+%E0%A4%B0%E0%A4%BE%E0%A4%9C%E0%A4%B8%E0%A5%8D%E0%A4%A5%E0%A4%BE%E0%A4%A8&hl=hi&gl=IN&ceid=IN%3Ahi', max_items=4, fetch_full_text=False, target_date=date_str)
+        for item in patrika_items:
+            item['source'] = 'राजस्थान पत्रिका (Rajasthan Patrika)'
+        for item in bhaskar_items:
+            item['source'] = 'दैनिक भास्कर (Dainik Bhaskar)'
+        for item in dipr_items:
+            item['source'] = 'राजस्थान सुजस (DIPR Rajasthan)'
+        news_corpus['rajasthan_sujas'] = patrika_items + bhaskar_items + dipr_items
 
-        # 7. YouTube Transcript
+        # 7. Magazines: Yojana, Kurukshetra & Down To Earth (Hindi)
+        print(f"- Fetching Yojana, Kurukshetra & Down To Earth Magazines...")
+        mag_items = self.fetch_rss_items('https://news.google.com/rss/search?q=%22%E0%A4%AF%E0%A5%8B%E0%A4%9C%E0%A4%A8%E0%A4%BE%22+OR+%22%E0%A4%95%E0%A5%81%E0%A4%B0%E0%A5%81%E0%A4%95%E0%A5%8D%E0%A4%B7%E0%A5%87%E0%A4%A4%E0%A5%8D%E0%A4%B0%22+UPSC+IAS&hl=hi&gl=IN&ceid=IN%3Ahi', max_items=5, fetch_full_text=False, target_date=date_str)
+        dte_hi = self.fetch_rss_items('https://news.google.com/rss/search?q=site%3Adowntoearth.org.in+when%3A2d&hl=hi&gl=IN&ceid=IN%3Ahi', max_items=5, fetch_full_text=False, target_date=date_str)
+        for item in mag_items:
+            item['source'] = 'योजना एवं कुरुक्षेत्र पत्रिका (Yojana & Kurukshetra)'
+        for item in dte_hi:
+            item['source'] = 'डाउन टू अर्थ (Down To Earth Hindi)'
+        news_corpus['magazines_and_reports'] = mag_items + dte_hi
+
+        # 8. YouTube Transcript
         yt_input = youtube_url if youtube_url else "https://www.youtube.com/@NirmanIAS"
         news_corpus['youtube_transcript'] = self.fetch_youtube_transcript(yt_input, target_date=date_str)
 
-        # 8. Telegram Channels (Daily Questions, MCQs & Notes)
+        # 9. Telegram Channels (Daily Questions, MCQs & Notes)
         tg_posts = []
         channels_to_fetch = []
         cfg_path = os.path.join(os.path.dirname(__file__), "config.json")
@@ -435,7 +452,6 @@ class NewsFetcher:
         print(f"- Fetching Telegram Channel: @{clean_name}...")
         posts = []
         html = ""
-        # Try direct or via r.jina.ai to bypass Indian ISP t.me block
         urls = [
             f"https://r.jina.ai/https://t.me/s/{clean_name}",
             f"https://t.me/s/{clean_name}"
@@ -454,31 +470,57 @@ class NewsFetcher:
             print(f"Warning: Could not fetch Telegram channel @{clean_name}")
             return []
 
+        spam_filter = [
+            '100% सफलता', 'owner-', '@ashok_poonia', 'download app', 'play.google', 
+            'admission', 'use code', 'coupon', 'promocode', 'discount', 'extra off', 
+            'call for inquiry', 'whatsapp', 'helpline', 'buy course', 'टेस्ट सीरीज जॉइन करें',
+            'if you have **telegram**', 'view and join', 'view in telegram', 'right away', 'धन्यवाद'
+        ]
+
         # If markdown response from Jina
         if "Markdown Content:" in html:
             content = html.split("Markdown Content:")[-1]
-            blocks = re.split(r'\[(?:Image \d+|' + re.escape(clean_name) + r'|[a-zA-Z0-9_\s]+)\]\(https://t\.me/[^\)]+\)', content)
-            if len(blocks) <= 1:
-                blocks = content.split("\n\n")
-            for b in blocks[-max_posts:]:
-                b_clean = re.sub(r'\[?_?!\[[^\]]*\]\([^\)]+\)_?\]?', '', b)
-                lines = [l.strip() for l in b_clean.splitlines() if l.strip()]
-                lines = [l for l in lines if not l.startswith('#####') and not l.startswith('[Download') and not l.startswith('[Join') and not l.startswith('http') and not 'view and join' in l.lower() and not 'if you have **telegram**' in l.lower()]
+            
+            # If channel has no post timestamps/views and only bio description, skip it completely
+            if not re.search(r'views\[\d\d:\d\d\]', content) and any(m in content.lower() for m in ['owner-', 'if you have **telegram**', 'right away']):
+                print(f"  (Skipping @{clean_name}: only channel description/bio found, no public posts)")
+                return []
+
+            # Clean images and channel navigation links
+            content = re.sub(r'\[_?!\[Image \d+\]\([^\)]+\)_?\]\(https://t\.me/[^\)]+\)', '', content)
+            content = re.sub(r'\[[a-zA-Z0-9_,\s\.\(\)\&\|-]+\]\(https://t\.me/[a-zA-Z0-9_]+\)', '', content)
+            
+            # Split cleanly on telegram post view/voter footers
+            raw_blocks = re.split(r'\n(?:\d+ voters )?\d+(?:\.\d+)?[KM]? views\[\d\d:\d\d\]\(https://t\.me/[^\)]+\)', content)
+            if len(raw_blocks) <= 1:
+                raw_blocks = content.split("\n\n")
+
+            for b in raw_blocks[-max_posts:]:
+                b_clean = re.sub(r'\[?_?!\[[^\]]*\]\([^\)]+\)_?\]?', '', b).strip()
+                lines = [l.strip() for l in b_clean.splitlines() if l.strip() and not l.startswith('http') and not l.startswith('#####')]
                 clean_p = '\n'.join(lines).strip()
-                if len(clean_p) > 20 and not clean_p.startswith("!"):
-                    if any(ignore in clean_p.lower() for ignore in ['view in telegram', 'subscribers', 'members,', 'right away', 'if you have **telegram**', 'tg://resolve']):
-                        continue
-                    # Ignore promotional/coupon messages
-                    spam_kw = ['discount', 'extra off', 'admission', 'use code', 'coupon', 'promocode']
-                    if any(sw in clean_p.lower() for sw in spam_kw) and not ('?' in clean_p or 'प्रश्न' in clean_p):
-                        continue
-                    is_question = any(k in clean_p for k in ['?', 'Q.', 'प्रश्न', 'उ.', 'A)', 'B)', 'C)', 'D)', 'Option', 'क)', 'ख)', 'ग)', 'घ)', 'Quiz', '%'])
-                    posts.append({
-                        'channel': f"@{clean_name}",
-                        'text': clean_p,
-                        'date': target_date,
-                        'is_question': is_question
-                    })
+                
+                if len(clean_p) < 15:
+                    continue
+                
+                # Check spam filter
+                clean_lower = clean_p.lower()
+                if any(sw in clean_lower for sw in spam_filter):
+                    continue
+
+                # Rigorous Question Detection:
+                has_q_word = any(k in clean_p for k in ['?', 'Q.', 'प्रश्न', 'कथन', 'सुमेलित', 'निम्न में से', 'किसने', 'किस वर्ष', 'कहाँ स्थित', 'किस जिले', 'कौनसा', 'कौनसी', 'क्या है', 'कब भरता'])
+                has_poll_options = bool(re.search(r'\d{1,2}%\s+[\u0900-\u097F]', clean_p))
+                has_mcq_options = bool(re.search(r'\b[A-D]\)|\b[क-घ]\)', clean_p))
+                
+                is_question = has_q_word or has_poll_options or has_mcq_options
+
+                posts.append({
+                    'channel': f"@{clean_name}",
+                    'text': clean_p,
+                    'date': target_date,
+                    'is_question': is_question
+                })
         else:
             soup = BeautifulSoup(html, 'html.parser')
             wraps = soup.find_all(class_='tgme_widget_message_wrap')
@@ -488,13 +530,17 @@ class NewsFetcher:
                 if not txt_elem:
                     continue
                 text = txt_elem.get_text().strip()
+                if any(sw in text.lower() for sw in spam_filter):
+                    continue
                 dt_str = date_elem.get('datetime', '') if date_elem else ''
                 p_date = parse_date_to_ist_ymd(dt_str)
                 
                 if target_date and p_date and p_date != target_date:
                     continue
                     
-                is_question = any(k in text for k in ['?', 'Q.', 'प्रश्न', 'उ.', 'A)', 'B)', 'C)', 'D)', 'Option', 'क)', 'ख)', 'ग)', 'घ)'])
+                has_q_word = any(k in text for k in ['?', 'Q.', 'प्रश्न', 'कथन', 'सुमेलित', 'निम्न में से', 'किसने', 'किस वर्ष', 'कहाँ स्थित', 'किस जिले', 'कौनसा', 'कौनसी', 'क्या है', 'कब भरता'])
+                has_mcq_options = bool(re.search(r'\b[A-D]\)|\b[क-घ]\)', text))
+                is_question = has_q_word or has_mcq_options
                 posts.append({
                     'channel': f"@{clean_name}",
                     'text': text,

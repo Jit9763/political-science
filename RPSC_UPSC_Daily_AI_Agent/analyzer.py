@@ -16,23 +16,30 @@ class NewsAnalyzer:
         sci_text = "\n\n".join([f"=== [{item.get('source', '')}] {item.get('title', '')} ===\n{item.get('full_text', item.get('summary', ''))}" for item in news_corpus.get('science_news', [])])
         nat_text = "\n\n".join([f"=== [{item.get('source', '')}] {item.get('title', '')} ===\n{item.get('full_text', item.get('summary', ''))}" for item in news_corpus.get('national_news', [])])
         pib_text = "\n\n".join([f"=== [{item.get('source', '')}] {item.get('title', '')} ===\n{item.get('full_text', item.get('summary', ''))}" for item in news_corpus.get('pib_releases', [])])
-        sujas_text = "\n".join([f"- [{item.get('source', '')}] {item.get('title', '')}: {item.get('summary', '')}" for item in news_corpus.get('rajasthan_sujas', [])])
+        sujas_text = "\n\n".join([f"=== [{item.get('source', '')}] {item.get('title', '')} ===\n{item.get('full_text', item.get('summary', item.get('title', '')))}" for item in news_corpus.get('rajasthan_sujas', [])])
+        mag_text = "\n\n".join([f"=== [{item.get('source', '')}] {item.get('title', '')} ===\n{item.get('full_text', item.get('summary', item.get('title', '')))}" for item in news_corpus.get('magazines_and_reports', [])])
         yt_transcript = news_corpus.get('youtube_transcript', '')
 
-        # Telegram posts
-        tg_posts = news_corpus.get('telegram_posts', [])
+        # Telegram posts - filter out any residual promotional text
+        spam_filter = ['100% सफलता', 'owner-', '@ashok_poonia', 'download app', 'play.google', 'admission', 'use code', 'coupon', 'promocode', 'discount', 'extra off', 'call for inquiry', 'whatsapp', 'helpline', 'buy course', 'टेस्ट सीरीज जॉइन करें', 'if you have **telegram**', 'view and join', 'view in telegram', 'right away', 'धन्यवाद']
+        tg_posts = []
+        for p in news_corpus.get('telegram_posts', []):
+            txt = p.get('text', '')
+            if not any(sw in txt.lower() for sw in spam_filter):
+                tg_posts.append(p)
+
         tg_text = "\n\n".join([f"[{p.get('channel', '@Telegram')}] {p.get('text', '')}" for p in tg_posts])
 
         prompt = f"""
-आप RPSC RAS एवं UPSC परीक्षा के सर्वोच्च विशेषज्ञ शिक्षक एवं विश्लेषक हैं।
+आप RPSC RAS एवं UPSC सिविल सेवा परीक्षा के सर्वोच्च विशेषज्ञ फैकल्टी एवं विश्लेषक हैं।
 तारीख: {date_str}
 
-नीचे दिए गए दैनिक समाचारों, सम्पादकीयों (The Hindu, Indian Express के पूर्ण सम्पादकीय पाठ), अर्थशास्त्र (Economic Times, Financial Express, LiveMint), विज्ञान एवं प्रौद्योगिकी (The Hindu Sci-Tech, Down To Earth, ScienceDaily), PIB की संपूर्ण प्रेस विज्ञप्तियों, राजस्थान सुजस (DIPR), टेलीग्राम स्टडी चैनल्स के प्रश्नों/नोट्स तथा यूट्यूब करंट अफेयर्स लाइव क्लास के 100% पूर्ण ट्रांसक्रिप्ट का गहन अध्ययन करें और बिना किसी जानकारी को छोड़े अत्यंत विस्तृत, संपूर्ण एवं बहुआयामी अध्ययन नोट्स तैयार करें।
+नीचे दिए गए दैनिक समाचार पत्रों (The Hindu, Indian Express, Economic Times, LiveMint, Business Standard, राजस्थान पत्रिका, दैनिक भास्कर), पत्रिकाओं (योजना, कुरुक्षेत्र, डाउन टू अर्थ - Down To Earth), PIB प्रेस विज्ञप्तियों, राजस्थान सुजस (DIPR), टेलीग्राम अध्ययन चैनलों के वास्तविक परीक्षा प्रश्नों और यूट्यूब करंट अफेयर्स कोचिंग व्याख्यान का गहन अध्ययन करें और अत्यंत उच्च स्तरीय, मानक प्रशासनिक हिंदी में बहुआयामी अध्ययन नोट्स तैयार करें।
 
-=== सम्पादकीय का पूरा पाठ (Full The Hindu & Express Editorials) ===
+=== सम्पादकीय का पूरा पाठ (Full The Hindu & Indian Express Editorials) ===
 {eds_text}
 
-=== अर्थशास्त्र, नीतियां एवं बाजार समाचार (Economic Times, Financial Express & LiveMint Full Text) ===
+=== अर्थशास्त्र, नीतियां एवं बाजार (Economic Times, LiveMint & Business Standard) ===
 {eco_text if eco_text else "कोई अर्थशास्त्र समाचार उपलब्ध नहीं।"}
 
 === विज्ञान, प्रौद्योगिकी, पर्यावरण व रक्षा समाचार (The Hindu Sci-Tech, Down To Earth & ScienceDaily) ===
@@ -44,23 +51,31 @@ class NewsAnalyzer:
 === PIB प्रेस विज्ञप्तियां (Full PIB Press Releases) ===
 {pib_text}
 
-=== राजस्थान सुजस एवं DIPR समाचार ===
-{sujas_text}
+=== राजस्थान सुजस, राजस्थान पत्रिका एवं दैनिक भास्कर समाचार (DIPR, Patrika & Bhaskar) ===
+{sujas_text if sujas_text else "कोई राजस्थान प्रादेशिक समाचार उपलब्ध नहीं।"}
 
-=== टेलीग्राम चैनलों से दैनिक प्रश्न, क्विज़ व नोट्स (Telegram Daily MCQs & Notes) ===
+=== राष्ट्रीय एवं समसामयिक पत्रिकाएं (योजना, कुरुक्षेत्र एवं डाउन टू अर्थ - Yojana, Kurukshetra & Down To Earth) ===
+{mag_text if mag_text else "कोई अतिरिक्त पत्रिका समाचार उपलब्ध नहीं।"}
+
+=== टेलीग्राम चैनलों से दैनिक परीक्षा प्रश्न, क्विज़ व नोट्स (Telegram Daily MCQs & Notes) ===
 {tg_text if tg_text else "कोई टेलीग्राम अपडेट उपलब्ध नहीं।"}
 
 === यूट्यूब लाइव कोचिंग क्लास संपूर्ण ट्रांसक्रिप्ट (Teacher's Full Live Speech) ===
-{yt_transcript if yt_transcript else "कोई यूट्यूब ट्रांसक्रिप्ट उपलब्ध नहीं।"}
+{yt_transcript if yt_transcript else "यूट्यूब ट्रांसक्रिप्ट अभी प्रोसेसिंग में है।"}
 
 === अति-महत्वपूर्ण निर्देश (Strict Rules for Comprehensive Exhaustive Coverage) ===
-1. सामग्री में दी गई किसी भी महत्वपूर्ण खबर, सम्पादकीय, इकोनॉमिक टाइम्स समाचार, साइंस-टेक अपडेट या यूट्यूब क्लास में शिक्षक द्वारा समझाए गए किसी भी टॉपिक को न छोड़ें।
-2. RAS Mains उत्तर लेखन में 2-अंक के प्रश्न पूरी तरह समाप्त हो चुके हैं। केवल 5-अंक (लघुउत्तरीय ~50 शब्द) और 10-अंक (दीर्घ/विश्लेषणात्मक ~100-200 शब्द) के प्रश्न ही बनाएं।
-3. सम्पादकीय एवं विषयगत विश्लेषण (editorial_deep_dive): कम से कम 6 से 10 विस्तृत सम्पादकीय व समाचार विश्लेषण बनाएं (जिसमें Economic Times अर्थव्यवस्था तथा Science & Tech/Environment के अनिवार्य कार्ड्स शामिल हों)।
-4. यूट्यूब क्लास विश्लेषण (youtube_teacher_analysis): यूट्यूब ट्रांसक्रिप्ट में शिक्षक द्वारा चर्चा किए गए सभी अलग-अलग विषयों पर कम से कम 4 से 6 विस्तृत कोचिंग कार्ड्स बनाएं।
-5. प्रारंभिक परीक्षा तथ्य (prelims_facts): कम से कम 10 से 15 प्रिलिम्स फैक्ट कार्ड्स बनाएं (RAS Pre/UPSC Pre हेतु)।
-6. मुख्य परीक्षा मॉडल उत्तर (mains_questions): कम से कम 4 से 6 RAS Mains (5-अंक व 10-अंक) मॉडल प्रश्न-उत्तर बनाएं।
-7. टेलीग्राम चैनल प्रश्नोत्तरी व नोट्स (telegram_quiz_and_notes): सभी उपलब्ध विभिन्न टेलीग्राम चैनलों (उदा. @Rajasthan_History_Polity_Culture, @Rajasthan_GK_Daily, @currentaffairs आदि) से अनिवार्य रूप से कम से कम 2-2 प्रश्न/नोट्स शामिल करें ताकि प्रत्येक चैनल का संतुलित प्रतिनिधित्व हो। किसी एक चैनल तक सीमित न रहें! प्रत्येक प्रश्न/क्विज़ को साधारण 1-पंक्ति में न रखें, बल्कि अतिरिक्त आवश्यक विवरण जोड़ते हुए RPSC RAS 5-अंक (~50 शब्द) लघुउत्तरीय मॉडल प्रश्नोत्तर प्रारूप में तैयार करें, जिसमें 3-4 विस्तृत बुलेट पॉइंट्स (1. मुख्य तथ्य व अवधारणा, 2. विस्तृत ऐतिहासिक/भौगोलिक/नीतिगत संदर्भ, 3. RPSC परीक्षा प्रासंगिकता) शामिल हों।
+1. सामग्री में दी गई किसी भी महत्वपूर्ण खबर, सम्पादकीय, पत्रिका (योजना, कुरुक्षेत्र, डाउन टू अर्थ), समाचार पत्र (पत्रिका, भास्कर, द हिंदू, एक्सप्रेस, ईटी), या कोचिंग व्याख्यान के विषय को न छोड़ें।
+2. RAS Mains उत्तर लेखन में केवल 5-अंक (लघुउत्तरीय ~50 शब्द) और 10-अंक (दीर्घ/विश्लेषणात्मक ~100-200 शब्द) के प्रश्न ही बनाएं।
+3. सम्पादकीय एवं पत्रिका गहन विश्लेषण (editorial_deep_dive): The Hindu, Indian Express, Economic Times, Down To Earth, तथा योजना व कुरुक्षेत्र से कम से कम 6 से 10 सम्पादकीय व पत्रिका विश्लेषण कार्ड्स बनाएं। प्रत्येक में समसामयिक संदर्भ (context), 4 विस्तृत मुख्य तर्क (key_arguments), तथा आगे की राह (way_forward) अवश्य दें।
+4. कोचिंग शिक्षक विश्लेषण एवं व्याख्यान सार (youtube_teacher_analysis): अनिवार्य रूप से कम से कम 4 से 6 विस्तृत कोचिंग कार्ड्स तैयार करें। यदि यूट्यूब ट्रांसक्रिप्ट उपलब्ध है, तो उससे बनाएं; यदि वीडियो सबटाइटल्स अभी प्रोसेसिंग में हैं, तो आज के प्रमुख राष्ट्रीय एवं सम्पादकीय मुद्दों (द हिंदू, इंडियन एक्सप्रेस व पीआईबी) पर शीर्ष कोचिंग फैकल्टी (उदा. निर्माण आईएएस / उत्कर्ष / दृष्टि आईएएस के दैनिक हिंदू व पीआईबी विश्लेषण) की शैली में उच्च-स्तरीय व्याख्यान कार्ड्स तैयार करें। प्रत्येक कार्ड में "शिक्षक व्याख्यान सार, अवधारणायें एवं ट्रिक्स (teacher_explanation)", कम से कम 3 "क्लास के मुख्य बिंदु (key_takeaways)", और परीक्षार्थियों के लिए "💡 परीक्षा टिप एवं मेन्स उत्तर संरचना (exam_tip)" अवश्य शामिल करें। यह सेक्शन कभी भी खाली नहीं रहना चाहिए!
+5. राजस्थान सुजस, पत्रिका एवं दैनिक भास्कर विशेष (rajasthan_sujas_special): राजस्थान सुजस (DIPR), राजस्थान पत्रिका एवं दैनिक भास्कर से कम से कम 4 से 6 कार्ड्स बनाएं, जिसमें राज्य सरकार की योजनाएं, नीतिगत निर्णय और प्रादेशिक घटनाएं शामिल हों।
+6. प्रारंभिक परीक्षा तथ्य (prelims_facts): कम से कम 12 से 16 प्रिलिम्स फैक्ट कार्ड्स बनाएं (RAS Pre/UPSC Pre हेतु, राजस्थान विशेष को 'rajasthan_special': true करें)।
+7. मुख्य परीक्षा मॉडल उत्तर (mains_questions): कम से कम 4 से 6 RAS Mains (5-अंक व 10-अंक) मॉडल प्रश्न-उत्तर बनाएं।
+8. टेलीग्राम चैनल दैनिक प्रश्नोत्तरी व मॉडल उत्तर (telegram_quiz_and_notes): टेलीग्राम इनपुट में दिए गए वास्तविक परीक्षा प्रश्नों (उदा. राजस्थान कला-संस्कृति, इतिहास, भूगोल, मेले-त्योहार, प्रशासनिक व्यवस्था आदि) को चुनें। किसी भी विज्ञापन, चैनल बायो या अप्रसांगिक लिंक को पूरी तरह छोड़ दें। प्रत्येक प्रश्न का सही उत्तर (Correct Answer) दें और RPSC RAS 5-अंक (~50 शब्द) प्रारूप में 3 स्पष्ट बुलेट पॉइंट्स में मॉडल उत्तर लिखें:
+   - "1. सही उत्तर एवं मुख्य तथ्य: [सही विकल्प/उत्तर] - [प्रामाणिक तथ्य]"
+   - "2. ऐतिहासिक/भौगोलिक/नीतिगत संदर्भ: [विस्तृत पृष्ठभूमि व महत्वपूर्ण विवरण]"
+   - "3. RPSC परीक्षा प्रासंगिकता: [परीक्षा में पूछे जाने वाले प्रमुख बिंदु]"
+   भाषा अत्यंत गंभीर, मानक प्रशासनिक हिंदी होनी चाहिए। कम से कम 4 से 8 प्रश्नोत्तर तैयार करें।
 
 कृपया अपनी प्रतिक्रिया शुद्ध JSON फॉर्मेट में प्रदान करें जिसका ढांचा इस प्रकार हो:
 
@@ -95,9 +110,9 @@ class NewsAnalyzer:
   ],
   "editorial_deep_dive": [
     {{
-      "title": "सम्पादकीय का विस्तृत शीर्षक",
-      "source": "The Hindu / Indian Express",
-      "syllabus_topic": "GS2 / GS3 / RAS Paper 2",
+      "title": "सम्पादकीय / पत्रिका का विस्तृत शीर्षक",
+      "source": "The Hindu / Indian Express / Down To Earth / योजना / कुरुक्षेत्र",
+      "syllabus_topic": "GS2 / GS3 / RAS Paper 2 / Paper 1",
       "context": "समसामयिक संदर्भ",
       "key_arguments": ["विस्तृत बिंदु 1", "विस्तृत बिंदु 2", "विस्तृत बिंदु 3", "विस्तृत बिंदु 4"],
       "way_forward": "समाधानपरक विस्तृत निष्कर्ष"
@@ -113,8 +128,8 @@ class NewsAnalyzer:
   ],
   "rajasthan_sujas_special": [
     {{
-      "title": "सुजस योजना / आयोग / नियम शीर्षक",
-      "department": "विभागीय जानकारी",
+      "title": "सुजस योजना / आयोग / नियम / पत्रिका-भास्कर खबर शीर्षक",
+      "department": "विभागीय जानकारी / समाचार स्रोत",
       "key_points": ["बिंदु 1", "बिंदु 2", "बिंदु 3"],
       "rpsc_relevance": "RAS परीक्षा हेतु महत्व"
     }}
@@ -122,8 +137,8 @@ class NewsAnalyzer:
   "telegram_quiz_and_notes": [
     {{
       "channel": "@channel_name",
-      "question": "RPSC RAS 5-अंक (~50 शब्द) मॉडल प्रश्न?",
-      "model_answer_50_words": "1. मुख्य तथ्य व अवधारणा: ...\n2. विस्तृत ऐतिहासिक/भौगोलिक/नीतिगत संदर्भ: ...\n3. RPSC परीक्षा प्रासंगिकता व मुख्य बिंदु: ...",
+      "question": "RPSC परीक्षा उपयोगी प्रश्न?",
+      "model_answer_50_words": "1. सही उत्तर एवं मुख्य तथ्य: ...\n2. ऐतिहासिक/भौगोलिक/नीतिगत संदर्भ: ...\n3. RPSC परीक्षा प्रासंगिकता: ...",
       "syllabus_link": "Paper 1 / Paper 2 / Paper 3 / Paper 4"
     }}
   ],
@@ -146,7 +161,7 @@ class NewsAnalyzer:
         prompt = self.build_analysis_prompt(news_corpus)
         system_instruction = "You are a top-tier senior expert faculty for RPSC RAS and UPSC Civil Services examination prep. You strictly output valid JSON containing structured Hindi analysis."
 
-        print("Sending 100% UNTRUNCATED full news corpus, editorials & YouTube transcript to AI Engine for analysis...")
+        print("Sending 100% UNTRUNCATED full news corpus, editorials, newspapers, magazines & YouTube transcript to AI Engine for analysis...")
         # Parse JSON output with total fault tolerance
         try:
             raw_response = self.llm.generate_analysis(prompt, system_instruction)
@@ -169,38 +184,17 @@ class NewsAnalyzer:
                         keywords=update.get("keywords", [])
                     )
 
-            # Guarantee Telegram questions are captured
-            if not analysis_data.get('telegram_quiz_and_notes') and news_corpus.get('telegram_posts'):
-                tg_list = []
-                for p in news_corpus.get('telegram_posts', []):
-                    if p.get('is_question'):
-                        lines = [l.strip() for l in p.get('text', '').splitlines() if l.strip()]
-                        q_line = lines[0] if lines else "राजस्थान समसामयिकी अभ्यास प्रश्न"
-                        opts = [l for l in lines[1:] if not l.startswith('http') and not 'voters' in l and not 'views' in l and not 'anonymous' in l.lower()]
-                        ans_detail = f"1. मुख्य तथ्य व अवधारणा: {q_line} का संबंध राजस्थान के विशिष्ट ऐतिहासिक व समसामयिक संदर्भ से है।\n2. विस्तृत आयाम व विवरण: {', '.join(opts[:3]) if opts else 'RPSC परीक्षा उपयोगी महत्वपूर्ण विश्लेषण व आंकड़े'}\n3. परीक्षा प्रासंगिकता: RAS मुख्य परीक्षा (Paper 1/2/3) के दृष्टिकोण से अनिवार्य अध्ययन बिंदु।"
-                        tg_list.append({
-                            "channel": p.get('channel', '@Telegram'),
-                            "question": q_line,
-                            "model_answer_50_words": ans_detail,
-                            "syllabus_link": "Paper 1 (राजस्थान इतिहास, कला, संस्कृति व समसामयिकी)"
-                        })
-            existing_tg = analysis_data.get('telegram_quiz_and_notes', [])
-            existing_channels = {item.get('channel', '').lower() for item in existing_tg}
-            for p in news_corpus.get('telegram_posts', []):
-                ch = p.get('channel', '@Telegram')
-                if ch.lower() not in existing_channels and p.get('is_question'):
-                    lines = [l.strip() for l in p.get('text', '').splitlines() if l.strip()]
-                    q_line = lines[0] if lines else "राजस्थान समसामयिकी अभ्यास प्रश्न"
-                    opts = [l for l in lines[1:] if not l.startswith('http') and not 'voters' in l and not 'views' in l and not 'anonymous' in l.lower()]
-                    ans_detail = f"1. मुख्य तथ्य व अवधारणा: {q_line} का संबंध राजस्थान के विशिष्ट ऐतिहासिक व समसामयिक संदर्भ से है।\n2. विस्तृत आयाम व विवरण: {', '.join(opts[:3]) if opts else 'RPSC परीक्षा उपयोगी महत्वपूर्ण विश्लेषण व आंकड़े'}\n3. परीक्षा प्रासंगिकता: RAS मुख्य परीक्षा (Paper 1/2/3) के दृष्टिकोण से अनिवार्य अध्ययन बिंदु।"
-                    existing_tg.append({
-                        "channel": ch,
-                        "question": q_line,
-                        "model_answer_50_words": ans_detail,
-                        "syllabus_link": "Paper 1 (राजस्थान इतिहास, कला, संस्कृति व समसामयिकी)"
-                    })
-                    existing_channels.add(ch.lower())
-            analysis_data['telegram_quiz_and_notes'] = existing_tg
+            # Sanitize telegram_quiz_and_notes from any residual promo text
+            clean_tg = []
+            spam_filter = ['100% सफलता', 'owner-', '@ashok_poonia', 'download app', 'play.google', 'admission', 'use code', 'coupon', 'promocode', 'discount', 'extra off', 'धन्यवाद', 'affairs']
+            for item in analysis_data.get('telegram_quiz_and_notes', []):
+                q = item.get('question', '')
+                ans = item.get('model_answer_50_words', '')
+                if any(sw in q.lower() or sw in ans.lower() for sw in spam_filter):
+                    continue
+                if len(q) > 10 and not q.startswith("http"):
+                    clean_tg.append(item)
+            analysis_data['telegram_quiz_and_notes'] = clean_tg
 
             return analysis_data
         except Exception as e:
