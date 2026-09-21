@@ -7,14 +7,14 @@ def create_desktop_shortcut():
     shortcut_path = os.path.join(desktop_dir, "Daily RAS UPSC AI Dashboard.lnk")
     target_script = "c:\\Users\\jiten\\Desktop\\class11\\political-science\\RPSC_UPSC_Daily_AI_Agent\\app_gui.py"
     work_dir = "c:\\Users\\jiten\\Desktop\\class11\\political-science\\RPSC_UPSC_Daily_AI_Agent"
-    python_exe = sys.executable
+    target_bat = os.path.join(work_dir, "Launch_Dashboard.bat")
 
     vbs_script = f'Set WshShell = CreateObject("WScript.Shell")\n' \
                  f'Set shortcut = WshShell.CreateShortcut("{shortcut_path}")\n' \
-                 f'shortcut.TargetPath = "{python_exe}"\n' \
-                 f'shortcut.Arguments = """{target_script}"""\n' \
+                 f'shortcut.TargetPath = "{target_bat}"\n' \
+                 f'shortcut.Arguments = ""\n' \
                  f'shortcut.WorkingDirectory = "{work_dir}"\n' \
-                 f'shortcut.WindowStyle = 1\n' \
+                 f'shortcut.WindowStyle = 7\n' \
                  f'shortcut.Description = "RPSC RAS & UPSC Daily News, Editorial & Master Notes AI Dashboard"\n' \
                  f'shortcut.Save\n'
 

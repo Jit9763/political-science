@@ -2,10 +2,8 @@ name: Daily RPSC RAS & UPSC AI Notes Generator (Cloud Automation)
 
 on:
   schedule:
-    # Multiple offset cron triggers (IST: 11:15 AM, 11:45 AM, 12:05 PM) to bypass GitHub Actions runner queue congestion
-    - cron: '45 5 * * *'
-    - cron: '15 6 * * *'
-    - cron: '35 6 * * *'
+    # Daily 12:00 PM IST (06:30 UTC) Cloud VM Automation
+    - cron: '30 6 * * *'
   workflow_dispatch: # Allows manual trigger anytime from GitHub UI
 
 jobs:
@@ -41,6 +39,13 @@ jobs:
       run: |
         git config --global user.name 'github-actions[bot]'
         git config --global user.email 'github-actions[bot]@users.noreply.github.com'
-        git pull --rebase origin main || true
-        git add -A RPSC_UPSC_Daily_AI_Agent/Output_Notes/ RPSC_UPSC_Daily_AI_Agent/Master_Library/
-        git diff --staged --quiet || (git commit -m "Auto-generate Daily RAS UPSC Notes & Master Wiki [skip ci]" && git push origin main)
+        git rebase --abort 2>/dev/null || true
+        git pull origin main --no-rebase -X theirs || true
+        git add RPSC_UPSC_Daily_AI_Agent/Output_Notes/ RPSC_UPSC_Daily_AI_Agent/Master_Library/
+        if [ -n "$(git status --porcelain RPSC_UPSC_Daily_AI_Agent/Output_Notes/ RPSC_UPSC_Daily_AI_Agent/Master_Library/)" ]; then
+          git commit -m "Auto-generate Daily RAS UPSC Notes & Master Wiki [skip ci]"
+          git push origin main
+          echo "Successfully pushed daily notes to repository."
+        else
+          echo "No new notes changes to commit today."
+        fi
