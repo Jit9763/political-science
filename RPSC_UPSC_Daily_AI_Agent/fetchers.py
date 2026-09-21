@@ -47,6 +47,18 @@ def parse_date_to_ist_ymd(date_str):
 
     return None
 
+def is_date_acceptable(item_date, target_date):
+    """Allow items from target_date or the immediately preceding 1 day (last 24-36h news cycle)."""
+    if not target_date or not item_date:
+        return True
+    try:
+        t_dt = datetime.strptime(target_date, "%Y-%m-%d")
+        prev_dt = t_dt - timedelta(days=1)
+        prev_date = prev_dt.strftime("%Y-%m-%d")
+        return item_date in (target_date, prev_date)
+    except Exception:
+        return item_date == target_date
+
 class NewsFetcher:
     def __init__(self):
         self.headers = {
@@ -76,8 +88,8 @@ class NewsFetcher:
             print(f"Warning scraping full article at {url}: {e}")
             return ""
 
-    def fetch_rss_items(self, url, max_items=8, fetch_full_text=True, target_date=None):
-        """Fetch items from an RSS feed and strictly filter by target_date in IST."""
+    def fetch_rss_items(self, url, max_items=10, fetch_full_text=True, target_date=None):
+        """Fetch items from an RSS feed and filter by target_date in IST (including last 24-36h cycle)."""
         items = []
         try:
             req = urllib.request.Request(url, headers=self.headers)
@@ -96,10 +108,9 @@ class NewsFetcher:
                     pub_raw = date_tag.get_text().strip() if date_tag else ''
                     item_date = parse_date_to_ist_ymd(pub_raw)
 
-                    # Strictly filter by target_date if target_date is specified
+                    # Filter by target_date or immediately preceding 24-36h news cycle
                     if target_date and item_date:
-                        if item_date != target_date:
-                            # Skip items that are not from target_date
+                        if not is_date_acceptable(item_date, target_date):
                             continue
                     
                     # Extract link
@@ -268,7 +279,7 @@ class NewsFetcher:
 
                             title_lower = title.lower()
                             if any(kw in title_lower for kw in target_keywords):
-                                if target_date and v_date and v_date != target_date:
+                                if target_date and v_date and not is_date_acceptable(v_date, target_date):
                                     continue
                                 print(f"✅ Found targeted Hindu Analysis video for {v_date or target_date}: \"{title}\" (ID: {v_id})")
                                 return v_id, title
@@ -606,7 +617,7 @@ class NewsFetcher:
                 dt_str = date_elem.get('datetime', '') if date_elem else ''
                 p_date = parse_date_to_ist_ymd(dt_str)
                 
-                if target_date and p_date and p_date != target_date:
+                if target_date and p_date and not is_date_acceptable(p_date, target_date):
                     continue
                     
                 has_q_word = any(k in text for k in ['?', 'Q.', 'प्रश्न', 'कथन', 'सुमेलित', 'निम्न में से', 'किसने', 'किस वर्ष', 'कहाँ स्थित', 'किस जिले', 'कौनसा', 'कौनसी', 'क्या है', 'कब भरता'])

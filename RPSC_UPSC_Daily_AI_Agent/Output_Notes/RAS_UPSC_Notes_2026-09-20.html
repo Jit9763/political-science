@@ -5,32 +5,131 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RAS & UPSC Daily Notes - 2026-09-20</title>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <style>
+    
+    <style id="customStyle">
         :root {
+            --base-font-size: 26px;
+            --base-line-height: 1.85;
             --primary: #1e1b4b;
-            --primary-light: #3b82f6;
+            --primary-light: #2563eb;
             --secondary: #0f766e;
             --accent-gold: #b45309;
             --accent-purple: #6b21a8;
             --accent-red: #9f1239;
-            --bg-main: #f1f5f9;
+            --bg-main: #f8fafc;
             --card-bg: #ffffff;
             --text-dark: #020617;
             --border-color: #cbd5e1;
+            --box-shadow: 0 8px 20px rgba(0,0,0,0.06);
         }
+
+        body.dark-mode {
+            --bg-main: #090d16;
+            --card-bg: #111827;
+            --text-dark: #f8fafc;
+            --border-color: #374151;
+            --box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+        }
+
+        body.sepia-mode {
+            --bg-main: #fbf0d9;
+            --card-bg: #fffdf7;
+            --text-dark: #2d2215;
+            --border-color: #e2d3b5;
+        }
+
         body {
-            font-family: 'Noto Sans Devanagari', sans-serif;
+            font-family: 'Noto Sans Devanagari', 'Segoe UI', Tahoma, sans-serif;
             background-color: var(--bg-main);
             color: var(--text-dark);
             margin: 0;
             padding: 25px;
-            line-height: 1.8;
-            font-size: 18px;
+            line-height: var(--base-line-height);
+            font-size: var(--base-font-size);
+            transition: background-color 0.2s, font-size 0.15s;
+            -webkit-font-smoothing: antialiased;
         }
+
+        p, li, div, span, td, th {
+            font-size: var(--base-font-size);
+            line-height: var(--base-line-height);
+        }
+
+        b, strong {
+            color: #b91c1c;
+            font-weight: 800;
+        }
+        body.dark-mode b, body.dark-mode strong {
+            color: #f87171;
+        }
+
+        .blue-highlight {
+            color: #1e3a8a;
+            font-weight: 800;
+        }
+        body.dark-mode .blue-highlight {
+            color: #60a5fa;
+        }
+
         .container {
-            max-width: 1200px;
+            max-width: 1300px;
             margin: 0 auto;
         }
+
+        .reader-toolbar {
+            position: sticky;
+            top: 15px;
+            z-index: 999;
+            background: rgba(15, 23, 42, 0.95);
+            backdrop-filter: blur(10px);
+            color: white;
+            padding: 12px 24px;
+            border-radius: 50px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+            margin-bottom: 25px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 12px;
+            border: 2px solid #334155;
+        }
+
+        .toolbar-title {
+            font-size: 19px;
+            font-weight: 800;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .toolbar-btns {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .t-btn {
+            background: #1e293b;
+            color: white;
+            border: 1px solid #475569;
+            padding: 8px 16px;
+            border-radius: 25px;
+            font-size: 16px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.2s;
+            font-family: inherit;
+        }
+
+        .t-btn:hover, .t-btn.active {
+            background: #2563eb;
+            border-color: #60a5fa;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 10px rgba(37,99,235,0.4);
+        }
+
         .header {
             background: linear-gradient(135deg, #09090b 0%, #1e1b4b 50%, #0f766e 100%);
             color: white;
@@ -38,36 +137,34 @@
             border-radius: 20px;
             box-shadow: 0 15px 30px -5px rgba(0,0,0,0.25);
             margin-bottom: 35px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+            border: 3px solid #3b82f6;
         }
-        .header h1 { margin: 0 0 10px 0; font-size: 32px; font-weight: 900; }
-        .header p { margin: 0; opacity: 0.95; font-size: 19px; }
-        .print-btn {
-            background: #ffffff;
-            color: #1e1b4b;
-            border: none;
-            padding: 14px 24px;
-            border-radius: 12px;
-            font-weight: 800;
-            font-size: 17px;
-            cursor: pointer;
-            font-family: inherit;
-            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
-        }
+        .header h1 { margin: 0 0 10px 0; font-size: 36px; font-weight: 900; letter-spacing: -0.5px; }
+        .header p { margin: 0; opacity: 0.95; font-size: 22px; font-weight: 600; }
+
         .section-title {
-            font-size: 26px;
-            font-weight: 800;
-            margin: 40px 0 20px 0;
-            padding: 12px 20px;
-            background: #ffffff;
-            border-radius: 12px;
-            border-left: 8px solid var(--primary-light);
-            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
-            color: #0f172a;
+            font-size: 32px;
+            font-weight: 900;
+            margin: 45px 0 25px 0;
+            padding: 18px 26px;
+            background: var(--card-bg);
+            border-radius: 14px;
+            border-left: 14px solid var(--primary-light);
+            box-shadow: var(--box-shadow);
+            color: var(--text-dark);
+            border-top: 1px solid var(--border-color);
+            border-right: 1px solid var(--border-color);
+            border-bottom: 1px solid var(--border-color);
         }
-        .badge { padding: 6px 14px; border-radius: 8px; font-size: 15px; font-weight: 800; color: white; display: inline-block; }
+
+        .badge {
+            padding: 8px 16px;
+            border-radius: 10px;
+            font-size: 17px;
+            font-weight: 800;
+            color: white;
+            display: inline-block;
+        }
         .badge-pre { background-color: var(--accent-gold); }
         .badge-raj { background-color: var(--accent-purple); }
         .badge-5m { background-color: #0284c7; }
@@ -75,39 +172,111 @@
         .badge-sujas { background-color: #0d9488; }
         .badge-ed { background-color: var(--accent-red); }
         .badge-yt { background-color: #dc2626; }
-        
+
         .fact-card, .mains-card, .sujas-card, .editorial-card, .yt-card {
             background: var(--card-bg);
-            border-radius: 16px;
-            padding: 28px;
-            margin-bottom: 25px;
-            box-shadow: 0 6px 12px -2px rgba(0,0,0,0.08);
-            border: 1px solid var(--border-color);
+            border-radius: 18px;
+            padding: 32px;
+            margin-bottom: 30px;
+            box-shadow: var(--box-shadow);
+            border: 2px solid var(--border-color);
+            transition: transform 0.2s, box-shadow 0.2s;
         }
-        .fact-card { border-left: 8px solid var(--accent-gold); }
-        .mains-card { border-left: 8px solid #4338ca; }
-        .sujas-card { border-left: 8px solid var(--accent-purple); }
-        .editorial-card { border-left: 8px solid var(--accent-red); }
-        .yt-card { border-left: 8px solid #dc2626; background: #fff1f2; }
-        
-        .card-header, .mains-header, .sujas-header, .editorial-header, .yt-header { display: flex; align-items: center; gap: 14px; margin-bottom: 14px; }
-        .topic-title { font-weight: 800; font-size: 20px; color: #0f172a; }
-        .fact-text { margin: 0; color: var(--text-dark); font-size: 19px; line-height: 1.8; }
-        .question-text { margin: 12px 0 16px 0; color: #1e1b4b; font-size: 22px; font-weight: 800; }
-        .answer-box { background: #f8fafc; padding: 22px; border-radius: 12px; font-size: 18px; border: 1px solid #e2e8f0; }
-        .ans-label { font-size: 19px; color: #1e3a8a; display: inline-block; margin-bottom: 6px; }
-        .ans-section { margin-bottom: 16px; line-height: 1.8; }
-        .relevance-box, .way-forward { background: #ecfdf5; color: #065f46; padding: 14px 18px; border-radius: 10px; margin-top: 16px; font-size: 17.5px; border-left: 5px solid #10b981; font-weight: 600; }
-        .exam-tip-box { background: #fefce8; color: #854d0e; padding: 14px 18px; border-radius: 10px; margin-top: 16px; font-size: 17.5px; border-left: 5px solid #eab308; font-weight: 600; }
-        ul { margin: 10px 0; padding-left: 25px; }
-        li { margin-bottom: 8px; font-size: 18px; }
+        .fact-card:hover, .mains-card:hover, .sujas-card:hover, .editorial-card:hover, .yt-card:hover {
+            box-shadow: 0 12px 28px rgba(0,0,0,0.1);
+        }
+
+        .fact-card { border-left: 14px solid var(--accent-gold); }
+        .mains-card { border-left: 14px solid #4338ca; }
+        .sujas-card { border-left: 14px solid var(--accent-purple); }
+        .editorial-card { border-left: 14px solid var(--accent-red); }
+        .yt-card { border-left: 14px solid #dc2626; background: var(--card-bg); }
+
+        .card-header, .mains-header, .sujas-header, .editorial-header, .yt-header {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 16px;
+            flex-wrap: wrap;
+        }
+        .topic-title { font-weight: 900; font-size: 26px; color: var(--text-dark); }
+        .fact-text { margin: 0; color: var(--text-dark); font-size: var(--base-font-size); line-height: var(--base-line-height); font-weight: 500; }
+        .question-text { margin: 12px 0 18px 0; color: #1e3a8a; font-size: calc(var(--base-font-size) + 4px); font-weight: 900; line-height: 1.6; }
+        body.dark-mode .question-text { color: #93c5fd; }
+
+        .answer-box {
+            background: #f1f5f9;
+            padding: 26px;
+            border-radius: 14px;
+            font-size: var(--base-font-size);
+            border: 2px solid #cbd5e1;
+            line-height: var(--base-line-height);
+        }
+        body.dark-mode .answer-box {
+            background: #1f2937;
+            border-color: #4b5563;
+        }
+        body.sepia-mode .answer-box {
+            background: #f4ebd0;
+            border-color: #dcd0b1;
+        }
+
+        .ans-label {
+            font-size: calc(var(--base-font-size) + 2px);
+            color: #1e3a8a;
+            display: block;
+            margin-bottom: 10px;
+            font-weight: 800;
+        }
+        body.dark-mode .ans-label { color: #60a5fa; }
+
+        .relevance-box, .way-forward {
+            background: #ecfdf5;
+            color: #065f46;
+            padding: 18px 24px;
+            border-radius: 12px;
+            margin-top: 20px;
+            font-size: calc(var(--base-font-size) - 1px);
+            border-left: 8px solid #10b981;
+            font-weight: 600;
+            border: 1px solid #a7f3d0;
+            border-left-width: 8px;
+        }
+        body.dark-mode .relevance-box, body.dark-mode .way-forward {
+            background: #064e3b;
+            color: #a7f3d0;
+            border-color: #059669;
+        }
+
+        .exam-tip-box {
+            background: #fefce8;
+            color: #854d0e;
+            padding: 18px 24px;
+            border-radius: 12px;
+            margin-top: 20px;
+            font-size: calc(var(--base-font-size) - 1px);
+            border-left: 8px solid #eab308;
+            font-weight: 600;
+            border: 1px solid #fef08a;
+            border-left-width: 8px;
+        }
+        body.dark-mode .exam-tip-box {
+            background: #713f12;
+            color: #fef08a;
+            border-color: #eab308;
+        }
+
+        ul { margin: 12px 0; padding-left: 30px; }
+        li { margin-bottom: 12px; font-size: var(--base-font-size); line-height: var(--base-line-height); }
 
         @media print {
-            .print-btn { display: none; }
-            body { background: white; padding: 0; font-size: 14pt; }
-            .container { max-width: 100%; }
+            .reader-toolbar, .print-btn { display: none !important; }
+            body { background: white !important; color: black !important; padding: 0 !important; font-size: 16pt !important; }
+            .container { max-width: 100% !important; }
+            .fact-card, .mains-card, .sujas-card, .editorial-card, .yt-card { page-break-inside: avoid; border: 1px solid #999 !important; }
         }
     </style>
+
 </head>
 <body>
     <div class="container">
@@ -282,102 +451,7 @@
             
 
         <div class="section-title">📺 कोचिंग शिक्षक विश्लेषण एवं यूट्यूब लाइव क्लास सार</div>
-            <div class="yt-card">
-                <div class="yt-header">
-                    <span class="badge badge-yt">📺 कोचिंग शिक्षक विश्लेषण</span>
-                    <span class="topic-title">पिग्मी हॉग (Pygmy Hog) संरक्षण और घासभूमि पारिस्थितिकी तंत्र</span>
-                </div>
-                <div class="yt-explanation">
-                    <strong>शिक्षक व्याख्यान एवं ट्रिक्स:</strong>
-                    <p>शिक्षक ने समझाया कि पिग्मी हॉग (Porcula salvania) दुनिया का सबसे छोटा और दुर्लभ जंगली सूअर है। यह केवल तराई क्षेत्र के लंबे घास के मैदानों में पाया जाता है। यह पारिस्थितिकी तंत्र के स्वास्थ्य का एक प्रमुख संकेतक (Indicator Species) है। इसके संरक्षण के लिए 'पिग्मी हॉग संरक्षण कार्यक्रम' (PHCP) चलाया जा रहा है।</p>
-                </div>
-                <div class="key-args">
-                    <strong>क्लास के मुख्य बिंदु (Key Lecture Points):</strong>
-                    <ul>
-                        <li>आईयूसीएन (IUCN) स्थिति: संकटग्रस्त (Endangered); वन्यजीव संरक्षण अधिनियम, 1972: अनुसूची-1।</li><li>प्राकृतिक आवास: असम का मानस राष्ट्रीय उद्यान और बरनाडी वन्यजीव अभयारण्य।</li><li>खतरे: घास के मैदानों का कृषि भूमि में परिवर्तन, अनियंत्रित आग और आक्रामक प्रजातियां।</li>
-                    </ul>
-                </div>
-                <div class="exam-tip-box"><strong>💡 परीक्षा टिप (Exam Tip):</strong> मेन्स में जैव विविधता संरक्षण पर उत्तर लिखते समय पिग्मी हॉग संरक्षण कार्यक्रम को एक सफल 'प्रजाति पुनर्प्राप्ति कार्यक्रम' (Species Recovery Programme) के उदाहरण के रूप में उद्धृत करें।</div>
-            </div>
-            
-            <div class="yt-card">
-                <div class="yt-header">
-                    <span class="badge badge-yt">📺 कोचिंग शिक्षक विश्लेषण</span>
-                    <span class="topic-title">त्रि-भाषा सूत्र (Three-Language Formula) और भाषाई संघवाद</span>
-                </div>
-                <div class="yt-explanation">
-                    <strong>शिक्षक व्याख्यान एवं ट्रिक्स:</strong>
-                    <p>शिक्षक ने कोठारी आयोग (1964-66) द्वारा अनुशंसित त्रि-भाषा सूत्र का विश्लेषण किया। इसके तहत हिंदी भाषी राज्यों में हिंदी, अंग्रेजी और एक आधुनिक भारतीय भाषा (अधिमानतः दक्षिणी भाषा) तथा गैर-हिंदी भाषी राज्यों में क्षेत्रीय भाषा, हिंदी और अंग्रेजी सिखाने का प्रावधान है। राष्ट्रीय शिक्षा नीति (NEP) 2020 भी इसका समर्थन करती है, लेकिन तमिलनाडु जैसे राज्य अपनी द्वि-भाषा नीति (क्षेत्रीय भाषा और अंग्रेजी) पर अड़े हैं।</p>
-                </div>
-                <div class="key-args">
-                    <strong>क्लास के मुख्य बिंदु (Key Lecture Points):</strong>
-                    <ul>
-                        <li>कोठारी आयोग ने भाषाई सद्भाव और राष्ट्रीय एकीकरण के लिए इसकी सिफारिश की थी।</li><li>तमिलनाडु और कुछ अन्य दक्षिणी राज्यों का आरोप है कि यह अप्रत्यक्ष रूप से हिंदी थोपने का प्रयास है, जो संघवाद के खिलाफ है।</li><li>नवोदय विद्यालयों में त्रि-भाषा सूत्र लागू है, लेकिन तमिलनाडु में नवोदय विद्यालय स्थापित नहीं किए गए हैं।</li>
-                    </ul>
-                </div>
-                <div class="exam-tip-box"><strong>💡 परीक्षा टिप (Exam Tip):</strong> GS-2 में भारतीय संघवाद और सांस्कृतिक विविधता से जुड़े प्रश्नों में भाषाई नीतियों और त्रि-भाषा सूत्र के विवाद को प्रशासनिक व संवैधानिक दृष्टिकोण से संतुलित रूप में प्रस्तुत करें।</div>
-            </div>
-            
-            <div class="yt-card">
-                <div class="yt-header">
-                    <span class="badge badge-yt">📺 कोचिंग शिक्षक विश्लेषण</span>
-                    <span class="topic-title">लोक लेखा समिति (PAC) और संसदीय निगरानी</span>
-                </div>
-                <div class="yt-explanation">
-                    <strong>शिक्षक व्याख्यान एवं ट्रिक्स:</strong>
-                    <p>शिक्षक ने पीएसी के ऐतिहासिक और व्यावहारिक महत्व पर प्रकाश डाला। यह संसद की सबसे पुरानी वित्तीय समिति है (गठन 1921)। यह सुनिश्चित करती है कि कार्यपालिका वित्तीय अनुशासन का पालन करे। यह कैग (CAG) की रिपोर्टों का पोस्टमार्टम करती है, इसलिए कैग को पीएसी का 'मित्र, दार्शनिक और मार्गदर्शक' कहा जाता है।</p>
-                </div>
-                <div class="key-args">
-                    <strong>क्लास के मुख्य बिंदु (Key Lecture Points):</strong>
-                    <ul>
-                        <li>सदस्य संख्या: 22 (15 लोकसभा + 7 राज्यसभा)। कोई भी मंत्री इसका सदस्य नहीं बन सकता।</li><li>कार्यकाल: 1 वर्ष। इसका अध्यक्ष सामान्यतः मुख्य विपक्षी दल से चुना जाता है।</li><li>सीमाएं: यह केवल खर्च होने के बाद की जांच (Post-mortem) करती है और इसके सुझाव केवल सलाहकार प्रकृति के होते हैं।</li>
-                    </ul>
-                </div>
-                <div class="exam-tip-box"><strong>💡 परीक्षा टिप (Exam Tip):</strong> आरएएस मेन्स पेपर-3 में 5-अंक के प्रश्न के लिए पीएसी की संरचना और सीमाओं को बुलेट पॉइंट्स में स्पष्ट रूप से लिखें।</div>
-            </div>
-            
-            <div class="yt-card">
-                <div class="yt-header">
-                    <span class="badge badge-yt">📺 कोचिंग शिक्षक विश्लेषण</span>
-                    <span class="topic-title">अमेरिकी प्रतिबंध, CAATSA और भारत की रणनीतिक स्वायत्तता</span>
-                </div>
-                <div class="yt-explanation">
-                    <strong>शिक्षक व्याख्यान एवं ट्रिक्स:</strong>
-                    <p>शिक्षक ने समझाया कि अमेरिका अपने घरेलू कानून CAATSA (Countering America's Adversaries Through Sanctions Act) के तहत रूस, ईरान और उत्तर कोरिया के साथ महत्वपूर्ण लेनदेन करने वाले देशों पर प्रतिबंध लगाता है। भारत द्वारा रूस से S-400 मिसाइल प्रणाली खरीदने और कच्चे तेल का आयात जारी रखने के बावजूद भारत को रणनीतिक स्वायत्तता (Strategic Autonomy) के तहत छूट मिली है, जो भारत की मजबूत कूटनीति को दर्शाता है।</p>
-                </div>
-                <div class="key-args">
-                    <strong>क्लास के मुख्य बिंदु (Key Lecture Points):</strong>
-                    <ul>
-                        <li>CAATSA का उद्देश्य अमेरिकी विरोधियों को आर्थिक रूप से कमजोर करना है।</li><li>भारत ने पश्चिमी दबाव के बावजूद राष्ट्रीय हितों को प्राथमिकता देते हुए रूस से तेल आयात जारी रखा और भुगतान के लिए स्थानीय मुद्राओं का उपयोग किया।</li><li>द्वितीयक प्रतिबंध (Secondary Sanctions) उन गैर-अमेरिकी कंपनियों पर लगते हैं जो प्रतिबंधित देशों के साथ व्यापार करती हैं।</li>
-                    </ul>
-                </div>
-                <div class="exam-tip-box"><strong>💡 परीक्षा टिप (Exam Tip):</strong> अंतरराष्ट्रीय संबंधों में भारत की विदेश नीति की 'रणनीतिक स्वायत्तता' को सिद्ध करने के लिए CAATSA छूट और रूस-भारत तेल व्यापार का उदाहरण अवश्य दें।</div>
-            </div>
-            
-            <div class="yt-card">
-                <div class="yt-header">
-                    <span class="badge badge-yt">📺 कोचिंग शिक्षक विश्लेषण</span>
-                    <span class="topic-title">लेबनान पेजर विस्फोट और वैश्विक आपूर्ति शृंखला का शस्त्रीकरण</span>
-                </div>
-                <div class="yt-explanation">
-                    <strong>शिक्षक व्याख्यान एवं ट्रिक्स:</strong>
-                    <p>शिक्षक ने लेबनान में हिजबुल्लाह के संचार उपकरणों (पेजर और वॉकी-टॉकी) में हुए श्रृंखलाबद्ध विस्फोटों का विश्लेषण किया। यह घटना दर्शाती है कि कैसे वैश्विक आपूर्ति शृंखला (Supply Chain Sabotage) में विनिर्माण या पारगमन के दौरान छेड़छाड़ कर उसे घातक हथियारों में बदला जा सकता है। यह साइबर-भौतिक युद्ध (Cyber-Physical Warfare) का एक नया और खतरनाक रूप है।</p>
-                </div>
-                <div class="key-args">
-                    <strong>क्लास के मुख्य बिंदु (Key Lecture Points):</strong>
-                    <ul>
-                        <li>आपूर्ति शृंखला का शस्त्रीकरण: हार्डवेयर स्तर पर मैलवेयर या विस्फोटक स्थापित करना।</li><li>अंतरराष्ट्रीय मानवीय कानून (IHL) का उल्लंघन: अंधाधुंध हमलों से नागरिक हताहत हुए, जो जिनेवा कन्वेंशन के सिद्धांतों के खिलाफ है।</li><li>भारत के लिए सबक: महत्वपूर्ण बुनियादी ढांचे और इलेक्ट्रॉनिक्स के लिए घरेलू विनिर्माण (आत्मनिर्भरता) और कड़े सुरक्षा ऑडिट की आवश्यकता।</li>
-                    </ul>
-                </div>
-                <div class="exam-tip-box"><strong>💡 परीक्षा टिप (Exam Tip):</strong> साइबर सुरक्षा और आधुनिक युद्ध तकनीकों पर पूछे जाने वाले निबंध या मेन्स प्रश्नों में 'सप्लाई चेन शस्त्रीकरण' के रूप में इस घटना का उल्लेख करें।</div>
-            </div>
-            
-            <div class="yt-card">
-                <div class="yt-header">
-                    <span class="badge badge-yt">📺 कोचिंग शिक्षक विश्लेषण</span>
-                    <span class="topic-title">मणिपुर जातीय संघर्ष, सीमा प्रबंधन एवं शांति बहाली मॉडल</span>
-                </div>
-                <div class="yt-explanation">
+            <div class="yt-explanation">
                     <strong>शिक्षक व्याख्यान एवं ट्रिक्स:</strong>
                     <p>प्रशांत सर ने मणिपुर में मेइती और कुकी-जो समुदायों के बीच चल रहे जातीय संघर्ष, म्यांमार सीमा से घुसपैठ, मुक्त आवागमन व्यवस्था (FMR) के निलंबन और 1643 किमी लंबी सीमा की पूर्ण बाड़बंदी (Fencing) का गहन विश्लेषण किया।</p>
                 </div>
@@ -390,12 +464,7 @@
                 <div class="exam-tip-box"><strong>💡 परीक्षा टिप (Exam Tip):</strong> UPSC GS3 / RAS Paper 3 (आंतरिक सुरक्षा) में पूर्वोत्तर सीमा प्रबंधन और जातीय उग्रवाद पर 10-अंक का प्रश्न पूछा जा सकता है।</div>
             </div>
             
-            <div class="yt-card">
-                <div class="yt-header">
-                    <span class="badge badge-yt">📺 कोचिंग शिक्षक विश्लेषण</span>
-                    <span class="topic-title">सियांग नदी बांध परियोजना और चीन की चुनौती</span>
-                </div>
-                <div class="yt-explanation">
+            <div class="yt-explanation">
                     <strong>शिक्षक व्याख्यान एवं ट्रिक्स:</strong>
                     <p>चीन द्वारा ब्रह्मपुत्र (यारलंग जंगपो) नदी पर तिब्बत के मेडोग में 60,000 मेगावाट का विशाल जलविद्युत बांध बनाने की योजना के जवाब में भारत अरुणाचल प्रदेश में सियांग अपर बहुउद्देशीय परियोजना (11,000 मेगावाट) पर कार्य कर रहा है।</p>
                 </div>
@@ -408,12 +477,7 @@
                 <div class="exam-tip-box"><strong>💡 परीक्षा टिप (Exam Tip):</strong> भू-राजनीति में 'हाइड्रो-हेजेमनी' (Hydro-Hegemony) और भारत-चीन नदी जल विवाद पर मेन्स 5-अंक व 10-अंक प्रश्न।</div>
             </div>
             
-            <div class="yt-card">
-                <div class="yt-header">
-                    <span class="badge badge-yt">📺 कोचिंग शिक्षक विश्लेषण</span>
-                    <span class="topic-title">कक्षा अभ्यास प्रश्न, प्रीलिम्स ट्रिक्स व मेन्स उत्तर संरचना</span>
-                </div>
-                <div class="yt-explanation">
+            <div class="yt-explanation">
                     <strong>शिक्षक व्याख्यान एवं ट्रिक्स:</strong>
                     <p>कक्षा के समापन सत्र में शिक्षक ने छात्रों के साथ द हिंदू और एक्सप्रेस के विषयों पर आधारित प्रारंभिक परीक्षा के संभावित बहुविकल्पीय प्रश्न (MCQs) और मुख्य परीक्षा के उत्तर प्रारूपण पर चरणबद्ध मार्गदर्शन प्रदान किया।</p>
                 </div>
@@ -561,5 +625,32 @@
             </div>
             
     </div>
+
+    <script>
+        function setFontSize(size) {
+            document.documentElement.style.setProperty('--base-font-size', size + 'px');
+            localStorage.setItem('ras_notes_font_size', size);
+            document.querySelectorAll('.toolbar-btns .t-btn').forEach(b => {
+                if (b.innerText.includes(size + 'px')) b.classList.add('active');
+                else if (b.innerText.includes('px')) b.classList.remove('active');
+            });
+        }
+
+        function toggleTheme(theme) {
+            document.body.classList.remove('dark-mode', 'sepia-mode');
+            if (theme === 'dark') document.body.classList.add('dark-mode');
+            else if (theme === 'sepia') document.body.classList.add('sepia-mode');
+            localStorage.setItem('ras_notes_theme', theme);
+        }
+
+        // Load saved preferences
+        (function() {
+            const savedSize = localStorage.getItem('ras_notes_font_size') || 26;
+            setFontSize(savedSize);
+            const savedTheme = localStorage.getItem('ras_notes_theme');
+            if (savedTheme) toggleTheme(savedTheme);
+        })();
+    </script>
+
 </body>
 </html>

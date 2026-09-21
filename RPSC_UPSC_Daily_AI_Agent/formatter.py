@@ -110,49 +110,52 @@ class NotesFormatter:
             --border-color: #cbd5e1;
         }}
         body {{
-            font-family: 'Noto Sans Devanagari', sans-serif;
+            font-family: 'Noto Sans Devanagari', 'Segoe UI', Tahoma, sans-serif;
             background-color: var(--bg-main);
             color: var(--text-dark);
             margin: 0;
             padding: 0;
-            line-height: 1.8;
-            font-size: 18px;
+            line-height: 1.85;
+            font-size: 22px;
         }}
         .top-navbar {{
             background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%);
             color: white;
-            padding: 25px 40px;
+            padding: 30px 45px;
             box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+            border-bottom: 4px solid #2563eb;
         }}
         .top-navbar h1 {{
             margin: 0 0 8px 0;
-            font-size: 30px;
+            font-size: 34px;
             font-weight: 900;
         }}
         .top-navbar p {{
             margin: 0;
-            opacity: 0.9;
-            font-size: 17px;
+            opacity: 0.95;
+            font-size: 20px;
+            font-weight: 600;
         }}
         .container {{
-            max-width: 1250px;
+            max-width: 1300px;
             margin: 30px auto;
-            padding: 0 20px;
+            padding: 0 25px;
         }}
         .tab-buttons {{
             display: flex;
             gap: 15px;
-            margin-bottom: 30px;
-            border-bottom: 3px solid #e2e8f0;
-            padding-bottom: 10px;
+            margin-bottom: 35px;
+            border-bottom: 3px solid #cbd5e1;
+            padding-bottom: 12px;
+            flex-wrap: wrap;
         }}
         .tab-btn {{
             background: #ffffff;
-            color: #334155;
-            border: 2px solid #cbd5e1;
-            padding: 12px 24px;
-            border-radius: 12px;
-            font-size: 19px;
+            color: #1e293b;
+            border: 2px solid #94a3b8;
+            padding: 14px 28px;
+            border-radius: 14px;
+            font-size: 22px;
             font-weight: 800;
             cursor: pointer;
             font-family: inherit;
@@ -161,74 +164,79 @@ class NotesFormatter:
         .tab-btn:hover, .tab-btn.active {{
             background: #2563eb;
             color: white;
-            border-color: #2563eb;
-            box-shadow: 0 4px 12px rgba(37,99,235,0.3);
+            border-color: #1d4ed8;
+            box-shadow: 0 6px 15px rgba(37,99,235,0.35);
         }}
         .paper-title {{
-            font-size: 26px;
+            font-size: 32px;
             font-weight: 900;
             color: #1e3a8a;
-            margin-bottom: 25px;
-            padding-bottom: 10px;
-            border-bottom: 3px solid #3b82f6;
+            margin-bottom: 30px;
+            padding-bottom: 12px;
+            border-bottom: 4px solid #3b82f6;
         }}
         .unit-block {{
             background: white;
-            border-radius: 16px;
-            padding: 25px;
-            margin-bottom: 30px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-            border: 1px solid var(--border-color);
+            border-radius: 18px;
+            padding: 32px;
+            margin-bottom: 35px;
+            box-shadow: 0 6px 16px rgba(0,0,0,0.06);
+            border: 2px solid var(--border-color);
         }}
         .unit-header {{
-            font-size: 22px;
-            font-weight: 800;
+            font-size: 28px;
+            font-weight: 900;
             color: #0f766e;
             margin-top: 0;
-            margin-bottom: 20px;
-            padding-bottom: 8px;
-            border-bottom: 2px solid #ccfbf1;
+            margin-bottom: 24px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #ccfbf1;
         }}
         .syllabus-topic-card {{
             background: #f8fafc;
-            border-radius: 12px;
-            padding: 20px;
-            margin-bottom: 20px;
-            border-left: 6px solid #2563eb;
-            border: 1px solid #e2e8f0;
-            border-left-width: 6px;
+            border-radius: 14px;
+            padding: 24px;
+            margin-bottom: 24px;
+            border-left: 10px solid #2563eb;
+            border: 2px solid #e2e8f0;
+            border-left-width: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.04);
         }}
         .topic-header {{
             display: flex;
             justify-content: space-between;
             align-items: center;
-            margin-bottom: 12px;
+            margin-bottom: 14px;
+            flex-wrap: wrap;
+            gap: 10px;
         }}
-        .topic-name {{ font-size: 20px; font-weight: 800; color: #0f172a; }}
-        .badge-update {{ background: #059669; color: white; padding: 4px 12px; border-radius: 6px; font-size: 14px; font-weight: 700; }}
+        .topic-name {{ font-size: 25px; font-weight: 900; color: #0f172a; }}
+        .badge-update {{ background: #059669; color: white; padding: 6px 16px; border-radius: 8px; font-size: 16px; font-weight: 800; }}
         
         .current-status-box {{
             background: #ffffff;
-            padding: 16px;
-            border-radius: 10px;
-            border: 1px solid #cbd5e1;
-            font-size: 18px;
+            padding: 20px;
+            border-radius: 12px;
+            border: 2px solid #cbd5e1;
+            font-size: 22px;
+            line-height: 1.85;
         }}
-        .history-details {{ margin-top: 12px; font-size: 16.5px; color: #475569; }}
-        .history-body {{ margin-top: 10px; padding: 12px; background: #f1f5f9; border-radius: 8px; }}
-        .update-entry {{ margin-bottom: 10px; padding-bottom: 8px; border-bottom: 1px dashed #cbd5e1; }}
-        .update-date {{ font-weight: 700; color: #1e3a8a; font-size: 15px; }}
-        .empty-topic {{ color: #94a3b8; font-style: italic; padding: 10px 0; }}
+        .history-details {{ margin-top: 14px; font-size: 18px; color: #475569; }}
+        .history-body {{ margin-top: 12px; padding: 16px; background: #f1f5f9; border-radius: 10px; font-size: 19px; }}
+        .update-entry {{ margin-bottom: 12px; padding-bottom: 10px; border-bottom: 1px dashed #cbd5e1; }}
+        .update-date {{ font-weight: 800; color: #1e3a8a; font-size: 18px; }}
+        .empty-topic {{ color: #94a3b8; font-style: italic; padding: 12px 0; font-size: 20px; }}
 
         .search-box {{
             width: 100%;
-            padding: 14px 20px;
-            font-size: 18px;
-            border-radius: 12px;
-            border: 2px solid #cbd5e1;
-            margin-bottom: 25px;
+            padding: 16px 24px;
+            font-size: 22px;
+            border-radius: 14px;
+            border: 3px solid #cbd5e1;
+            margin-bottom: 30px;
             font-family: inherit;
             box-sizing: border-box;
+            font-weight: 600;
         }}
     </style>
 </head>
@@ -462,32 +470,132 @@ class NotesFormatter:
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RAS & UPSC Daily Notes - {date_str}</title>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <style>
+    <style id="customStyle">
         :root {{
+            --base-font-size: 24px;
+            --base-line-height: 1.85;
             --primary: #1e1b4b;
-            --primary-light: #3b82f6;
+            --primary-light: #2563eb;
             --secondary: #0f766e;
             --accent-gold: #b45309;
             --accent-purple: #6b21a8;
             --accent-red: #9f1239;
-            --bg-main: #f1f5f9;
+            --bg-main: #f8fafc;
             --card-bg: #ffffff;
             --text-dark: #020617;
             --border-color: #cbd5e1;
+            --box-shadow: 0 8px 20px rgba(0,0,0,0.06);
         }}
+
+        body.dark-mode {{
+            --bg-main: #090d16;
+            --card-bg: #111827;
+            --text-dark: #f8fafc;
+            --border-color: #374151;
+            --box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+        }}
+
+        body.sepia-mode {{
+            --bg-main: #fbf0d9;
+            --card-bg: #fffdf7;
+            --text-dark: #2d2215;
+            --border-color: #e2d3b5;
+        }}
+
         body {{
-            font-family: 'Noto Sans Devanagari', sans-serif;
+            font-family: 'Noto Sans Devanagari', 'Segoe UI', Tahoma, sans-serif;
             background-color: var(--bg-main);
             color: var(--text-dark);
             margin: 0;
             padding: 25px;
-            line-height: 1.8;
-            font-size: 18px;
+            line-height: var(--base-line-height);
+            font-size: var(--base-font-size);
+            transition: background-color 0.2s, font-size 0.15s;
+            -webkit-font-smoothing: antialiased;
         }}
+
+        /* Eye-Comfort High Definition Typography */
+        p, li, div, span, td, th {{
+            font-size: var(--base-font-size);
+            line-height: var(--base-line-height);
+        }}
+
+        b, strong {{
+            color: #b91c1c;
+            font-weight: 800;
+        }}
+        body.dark-mode b, body.dark-mode strong {{
+            color: #f87171;
+        }}
+
+        .blue-highlight {{
+            color: #1e3a8a;
+            font-weight: 800;
+        }}
+        body.dark-mode .blue-highlight {{
+            color: #60a5fa;
+        }}
+
         .container {{
-            max-width: 1200px;
+            max-width: 1300px;
             margin: 0 auto;
         }}
+
+        /* Sticky Eye-Comfort Controls Toolbar */
+        .reader-toolbar {{
+            position: sticky;
+            top: 15px;
+            z-index: 999;
+            background: rgba(15, 23, 42, 0.95);
+            backdrop-filter: blur(10px);
+            color: white;
+            padding: 12px 24px;
+            border-radius: 50px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+            margin-bottom: 25px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 12px;
+            border: 2px solid #334155;
+        }}
+
+        .toolbar-title {{
+            font-size: 19px;
+            font-weight: 800;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }}
+
+        .toolbar-btns {{
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            flex-wrap: wrap;
+        }}
+
+        .t-btn {{
+            background: #1e293b;
+            color: white;
+            border: 1px solid #475569;
+            padding: 8px 16px;
+            border-radius: 25px;
+            font-size: 16px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.2s;
+            font-family: inherit;
+        }}
+
+        .t-btn:hover, .t-btn.active {{
+            background: #2563eb;
+            border-color: #60a5fa;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 10px rgba(37,99,235,0.4);
+        }}
+
         .header {{
             background: linear-gradient(135deg, #09090b 0%, #1e1b4b 50%, #0f766e 100%);
             color: white;
@@ -498,33 +606,35 @@ class NotesFormatter:
             display: flex;
             justify-content: space-between;
             align-items: center;
+            border: 3px solid #3b82f6;
         }}
-        .header h1 {{ margin: 0 0 10px 0; font-size: 32px; font-weight: 900; }}
-        .header p {{ margin: 0; opacity: 0.95; font-size: 19px; }}
-        .print-btn {{
-            background: #ffffff;
-            color: #1e1b4b;
-            border: none;
-            padding: 14px 24px;
-            border-radius: 12px;
-            font-weight: 800;
-            font-size: 17px;
-            cursor: pointer;
-            font-family: inherit;
-            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
-        }}
+        .header h1 {{ margin: 0 0 10px 0; font-size: 36px; font-weight: 900; letter-spacing: -0.5px; }}
+        .header p {{ margin: 0; opacity: 0.95; font-size: 22px; font-weight: 600; }}
+
+        /* Large Chapter 7 Style Section Headers */
         .section-title {{
-            font-size: 26px;
-            font-weight: 800;
-            margin: 40px 0 20px 0;
-            padding: 12px 20px;
-            background: #ffffff;
-            border-radius: 12px;
-            border-left: 8px solid var(--primary-light);
-            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
-            color: #0f172a;
+            font-size: 32px;
+            font-weight: 900;
+            margin: 45px 0 25px 0;
+            padding: 18px 26px;
+            background: var(--card-bg);
+            border-radius: 14px;
+            border-left: 14px solid var(--primary-light);
+            box-shadow: var(--box-shadow);
+            color: var(--text-dark);
+            border-top: 1px solid var(--border-color);
+            border-right: 1px solid var(--border-color);
+            border-bottom: 1px solid var(--border-color);
         }}
-        .badge {{ padding: 6px 14px; border-radius: 8px; font-size: 15px; font-weight: 800; color: white; display: inline-block; }}
+
+        .badge {{
+            padding: 8px 16px;
+            border-radius: 10px;
+            font-size: 17px;
+            font-weight: 800;
+            color: white;
+            display: inline-block;
+        }}
         .badge-pre {{ background-color: var(--accent-gold); }}
         .badge-raj {{ background-color: var(--accent-purple); }}
         .badge-5m {{ background-color: #0284c7; }}
@@ -532,49 +642,134 @@ class NotesFormatter:
         .badge-sujas {{ background-color: #0d9488; }}
         .badge-ed {{ background-color: var(--accent-red); }}
         .badge-yt {{ background-color: #dc2626; }}
-        
+
+        /* Big, Comfortable Eye-Friendly Cards */
         .fact-card, .mains-card, .sujas-card, .editorial-card, .yt-card {{
             background: var(--card-bg);
-            border-radius: 16px;
-            padding: 28px;
-            margin-bottom: 25px;
-            box-shadow: 0 6px 12px -2px rgba(0,0,0,0.08);
-            border: 1px solid var(--border-color);
+            border-radius: 18px;
+            padding: 32px;
+            margin-bottom: 30px;
+            box-shadow: var(--box-shadow);
+            border: 2px solid var(--border-color);
+            transition: transform 0.2s, box-shadow 0.2s;
         }}
-        .fact-card {{ border-left: 8px solid var(--accent-gold); }}
-        .mains-card {{ border-left: 8px solid #4338ca; }}
-        .sujas-card {{ border-left: 8px solid var(--accent-purple); }}
-        .editorial-card {{ border-left: 8px solid var(--accent-red); }}
-        .yt-card {{ border-left: 8px solid #dc2626; background: #fff1f2; }}
-        
-        .card-header, .mains-header, .sujas-header, .editorial-header, .yt-header {{ display: flex; align-items: center; gap: 14px; margin-bottom: 14px; }}
-        .topic-title {{ font-weight: 800; font-size: 20px; color: #0f172a; }}
-        .fact-text {{ margin: 0; color: var(--text-dark); font-size: 19px; line-height: 1.8; }}
-        .question-text {{ margin: 12px 0 16px 0; color: #1e1b4b; font-size: 22px; font-weight: 800; }}
-        .answer-box {{ background: #f8fafc; padding: 22px; border-radius: 12px; font-size: 18px; border: 1px solid #e2e8f0; }}
-        .ans-label {{ font-size: 19px; color: #1e3a8a; display: inline-block; margin-bottom: 6px; }}
-        .ans-section {{ margin-bottom: 16px; line-height: 1.8; }}
-        .relevance-box, .way-forward {{ background: #ecfdf5; color: #065f46; padding: 14px 18px; border-radius: 10px; margin-top: 16px; font-size: 17.5px; border-left: 5px solid #10b981; font-weight: 600; }}
-        .exam-tip-box {{ background: #fefce8; color: #854d0e; padding: 14px 18px; border-radius: 10px; margin-top: 16px; font-size: 17.5px; border-left: 5px solid #eab308; font-weight: 600; }}
-        ul {{ margin: 10px 0; padding-left: 25px; }}
-        li {{ margin-bottom: 8px; font-size: 18px; }}
+        .fact-card:hover, .mains-card:hover, .sujas-card:hover, .editorial-card:hover, .yt-card:hover {{
+            box-shadow: 0 12px 28px rgba(0,0,0,0.1);
+        }}
+
+        .fact-card {{ border-left: 14px solid var(--accent-gold); }}
+        .mains-card {{ border-left: 14px solid #4338ca; }}
+        .sujas-card {{ border-left: 14px solid var(--accent-purple); }}
+        .editorial-card {{ border-left: 14px solid var(--accent-red); }}
+        .yt-card {{ border-left: 14px solid #dc2626; background: var(--card-bg); }}
+
+        .card-header, .mains-header, .sujas-header, .editorial-header, .yt-header {{
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 16px;
+            flex-wrap: wrap;
+        }}
+        .topic-title {{ font-weight: 900; font-size: 26px; color: var(--text-dark); }}
+        .fact-text {{ margin: 0; color: var(--text-dark); font-size: var(--base-font-size); line-height: var(--base-line-height); font-weight: 500; }}
+        .question-text {{ margin: 12px 0 18px 0; color: #1e3a8a; font-size: calc(var(--base-font-size) + 4px); font-weight: 900; line-height: 1.6; }}
+        body.dark-mode .question-text {{ color: #93c5fd; }}
+
+        .answer-box {{
+            background: #f1f5f9;
+            padding: 26px;
+            border-radius: 14px;
+            font-size: var(--base-font-size);
+            border: 2px solid #cbd5e1;
+            line-height: var(--base-line-height);
+        }}
+        body.dark-mode .answer-box {{
+            background: #1f2937;
+            border-color: #4b5563;
+        }}
+        body.sepia-mode .answer-box {{
+            background: #f4ebd0;
+            border-color: #dcd0b1;
+        }}
+
+        .ans-label {{
+            font-size: calc(var(--base-font-size) + 2px);
+            color: #1e3a8a;
+            display: block;
+            margin-bottom: 10px;
+            font-weight: 800;
+        }}
+        body.dark-mode .ans-label {{ color: #60a5fa; }}
+
+        .relevance-box, .way-forward {{
+            background: #ecfdf5;
+            color: #065f46;
+            padding: 18px 24px;
+            border-radius: 12px;
+            margin-top: 20px;
+            font-size: calc(var(--base-font-size) - 1px);
+            border-left: 8px solid #10b981;
+            font-weight: 600;
+            border: 1px solid #a7f3d0;
+            border-left-width: 8px;
+        }}
+        body.dark-mode .relevance-box, body.dark-mode .way-forward {{
+            background: #064e3b;
+            color: #a7f3d0;
+            border-color: #059669;
+        }}
+
+        .exam-tip-box {{
+            background: #fefce8;
+            color: #854d0e;
+            padding: 18px 24px;
+            border-radius: 12px;
+            margin-top: 20px;
+            font-size: calc(var(--base-font-size) - 1px);
+            border-left: 8px solid #eab308;
+            font-weight: 600;
+            border: 1px solid #fef08a;
+            border-left-width: 8px;
+        }}
+        body.dark-mode .exam-tip-box {{
+            background: #713f12;
+            color: #fef08a;
+            border-color: #eab308;
+        }}
+
+        ul {{ margin: 12px 0; padding-left: 30px; }}
+        li {{ margin-bottom: 12px; font-size: var(--base-font-size); line-height: var(--base-line-height); }}
 
         @media print {{
-            .print-btn {{ display: none; }}
-            body {{ background: white; padding: 0; font-size: 14pt; }}
-            .container {{ max-width: 100%; }}
+            .reader-toolbar, .print-btn {{ display: none !important; }}
+            body {{ background: white !important; color: black !important; padding: 0 !important; font-size: 16pt !important; }}
+            .container {{ max-width: 100% !important; }}
+            .fact-card, .mains-card, .sujas-card, .editorial-card, .yt-card {{ page-break-inside: avoid; border: 1px solid #999 !important; }}
         }}
     </style>
 </head>
 <body>
     <div class="container">
+        <!-- Floating Interactive Eye-Comfort Toolbar -->
+        <div class="reader-toolbar">
+            <div class="toolbar-title">
+                <span>👁️ नेत्र-अनुकूल फॉन्ट व पठन मोड</span>
+            </div>
+            <div class="toolbar-btns">
+                <button class="t-btn" onclick="setFontSize(22)">A सामान्य (22px)</button>
+                <button class="t-btn active" id="btn-ch7" onclick="setFontSize(26)">🔠 बड़ा / Ch-7 स्टाइल (26px)</button>
+                <button class="t-btn" onclick="setFontSize(30)">🔍 अल्ट्रा लार्ज (30px)</button>
+                <button class="t-btn" onclick="toggleTheme('light')">☀️ लाइट</button>
+                <button class="t-btn" onclick="toggleTheme('sepia')">📜 सेपिया</button>
+                <button class="t-btn" onclick="toggleTheme('dark')">🌙 डार्क मोड</button>
+                <button class="t-btn" style="background:#059669; border-color:#10b981;" onclick="window.print()">🖨️ PDF प्रिंट</button>
+            </div>
+        </div>
+
         <div class="header">
             <div>
                 <h1>RPSC RAS & UPSC दैनिक समसामयिकी एवं सम्पादकीय विश्लेषण</h1>
                 <p>दिनांक: {date_str} | RAS Pre & Mains (5M & 10M) विशेष मास्टर नोट्स</p>
-            </div>
-            <div>
-                <button class="print-btn" onclick="window.print()">🖨️ PDF प्रिंट करें</button>
             </div>
         </div>
 
@@ -594,6 +789,32 @@ class NotesFormatter:
 
         {f'<div class="section-title">📲 टेलीग्राम चैनल दैनिक प्रश्नोत्तरी व नोट्स (Telegram Daily Quiz & Notes)</div>{tg_html}' if tg_html else ''}
     </div>
+
+    <script>
+        function setFontSize(size) {{
+            document.documentElement.style.setProperty('--base-font-size', size + 'px');
+            localStorage.setItem('ras_notes_font_size', size);
+            document.querySelectorAll('.toolbar-btns .t-btn').forEach(b => {{
+                if (b.innerText.includes(size + 'px')) b.classList.add('active');
+                else if (b.innerText.includes('px')) b.classList.remove('active');
+            }});
+        }}
+
+        function toggleTheme(theme) {{
+            document.body.classList.remove('dark-mode', 'sepia-mode');
+            if (theme === 'dark') document.body.classList.add('dark-mode');
+            else if (theme === 'sepia') document.body.classList.add('sepia-mode');
+            localStorage.setItem('ras_notes_theme', theme);
+        }}
+
+        // Load saved preferences
+        (function() {{
+            const savedSize = localStorage.getItem('ras_notes_font_size') || 26;
+            setFontSize(savedSize);
+            const savedTheme = localStorage.getItem('ras_notes_theme');
+            if (savedTheme) toggleTheme(savedTheme);
+        }})();
+    </script>
 </body>
 </html>
 """

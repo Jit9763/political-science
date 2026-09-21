@@ -5,32 +5,131 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RAS & UPSC Daily Notes - 2026-09-21</title>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <style>
+    
+    <style id="customStyle">
         :root {
+            --base-font-size: 26px;
+            --base-line-height: 1.85;
             --primary: #1e1b4b;
-            --primary-light: #3b82f6;
+            --primary-light: #2563eb;
             --secondary: #0f766e;
             --accent-gold: #b45309;
             --accent-purple: #6b21a8;
             --accent-red: #9f1239;
-            --bg-main: #f1f5f9;
+            --bg-main: #f8fafc;
             --card-bg: #ffffff;
             --text-dark: #020617;
             --border-color: #cbd5e1;
+            --box-shadow: 0 8px 20px rgba(0,0,0,0.06);
         }
+
+        body.dark-mode {
+            --bg-main: #090d16;
+            --card-bg: #111827;
+            --text-dark: #f8fafc;
+            --border-color: #374151;
+            --box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+        }
+
+        body.sepia-mode {
+            --bg-main: #fbf0d9;
+            --card-bg: #fffdf7;
+            --text-dark: #2d2215;
+            --border-color: #e2d3b5;
+        }
+
         body {
-            font-family: 'Noto Sans Devanagari', sans-serif;
+            font-family: 'Noto Sans Devanagari', 'Segoe UI', Tahoma, sans-serif;
             background-color: var(--bg-main);
             color: var(--text-dark);
             margin: 0;
             padding: 25px;
-            line-height: 1.8;
-            font-size: 18px;
+            line-height: var(--base-line-height);
+            font-size: var(--base-font-size);
+            transition: background-color 0.2s, font-size 0.15s;
+            -webkit-font-smoothing: antialiased;
         }
+
+        p, li, div, span, td, th {
+            font-size: var(--base-font-size);
+            line-height: var(--base-line-height);
+        }
+
+        b, strong {
+            color: #b91c1c;
+            font-weight: 800;
+        }
+        body.dark-mode b, body.dark-mode strong {
+            color: #f87171;
+        }
+
+        .blue-highlight {
+            color: #1e3a8a;
+            font-weight: 800;
+        }
+        body.dark-mode .blue-highlight {
+            color: #60a5fa;
+        }
+
         .container {
-            max-width: 1200px;
+            max-width: 1300px;
             margin: 0 auto;
         }
+
+        .reader-toolbar {
+            position: sticky;
+            top: 15px;
+            z-index: 999;
+            background: rgba(15, 23, 42, 0.95);
+            backdrop-filter: blur(10px);
+            color: white;
+            padding: 12px 24px;
+            border-radius: 50px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+            margin-bottom: 25px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 12px;
+            border: 2px solid #334155;
+        }
+
+        .toolbar-title {
+            font-size: 19px;
+            font-weight: 800;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .toolbar-btns {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .t-btn {
+            background: #1e293b;
+            color: white;
+            border: 1px solid #475569;
+            padding: 8px 16px;
+            border-radius: 25px;
+            font-size: 16px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.2s;
+            font-family: inherit;
+        }
+
+        .t-btn:hover, .t-btn.active {
+            background: #2563eb;
+            border-color: #60a5fa;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 10px rgba(37,99,235,0.4);
+        }
+
         .header {
             background: linear-gradient(135deg, #09090b 0%, #1e1b4b 50%, #0f766e 100%);
             color: white;
@@ -38,36 +137,34 @@
             border-radius: 20px;
             box-shadow: 0 15px 30px -5px rgba(0,0,0,0.25);
             margin-bottom: 35px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+            border: 3px solid #3b82f6;
         }
-        .header h1 { margin: 0 0 10px 0; font-size: 32px; font-weight: 900; }
-        .header p { margin: 0; opacity: 0.95; font-size: 19px; }
-        .print-btn {
-            background: #ffffff;
-            color: #1e1b4b;
-            border: none;
-            padding: 14px 24px;
-            border-radius: 12px;
-            font-weight: 800;
-            font-size: 17px;
-            cursor: pointer;
-            font-family: inherit;
-            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
-        }
+        .header h1 { margin: 0 0 10px 0; font-size: 36px; font-weight: 900; letter-spacing: -0.5px; }
+        .header p { margin: 0; opacity: 0.95; font-size: 22px; font-weight: 600; }
+
         .section-title {
-            font-size: 26px;
-            font-weight: 800;
-            margin: 40px 0 20px 0;
-            padding: 12px 20px;
-            background: #ffffff;
-            border-radius: 12px;
-            border-left: 8px solid var(--primary-light);
-            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
-            color: #0f172a;
+            font-size: 32px;
+            font-weight: 900;
+            margin: 45px 0 25px 0;
+            padding: 18px 26px;
+            background: var(--card-bg);
+            border-radius: 14px;
+            border-left: 14px solid var(--primary-light);
+            box-shadow: var(--box-shadow);
+            color: var(--text-dark);
+            border-top: 1px solid var(--border-color);
+            border-right: 1px solid var(--border-color);
+            border-bottom: 1px solid var(--border-color);
         }
-        .badge { padding: 6px 14px; border-radius: 8px; font-size: 15px; font-weight: 800; color: white; display: inline-block; }
+
+        .badge {
+            padding: 8px 16px;
+            border-radius: 10px;
+            font-size: 17px;
+            font-weight: 800;
+            color: white;
+            display: inline-block;
+        }
         .badge-pre { background-color: var(--accent-gold); }
         .badge-raj { background-color: var(--accent-purple); }
         .badge-5m { background-color: #0284c7; }
@@ -75,39 +172,111 @@
         .badge-sujas { background-color: #0d9488; }
         .badge-ed { background-color: var(--accent-red); }
         .badge-yt { background-color: #dc2626; }
-        
+
         .fact-card, .mains-card, .sujas-card, .editorial-card, .yt-card {
             background: var(--card-bg);
-            border-radius: 16px;
-            padding: 28px;
-            margin-bottom: 25px;
-            box-shadow: 0 6px 12px -2px rgba(0,0,0,0.08);
-            border: 1px solid var(--border-color);
+            border-radius: 18px;
+            padding: 32px;
+            margin-bottom: 30px;
+            box-shadow: var(--box-shadow);
+            border: 2px solid var(--border-color);
+            transition: transform 0.2s, box-shadow 0.2s;
         }
-        .fact-card { border-left: 8px solid var(--accent-gold); }
-        .mains-card { border-left: 8px solid #4338ca; }
-        .sujas-card { border-left: 8px solid var(--accent-purple); }
-        .editorial-card { border-left: 8px solid var(--accent-red); }
-        .yt-card { border-left: 8px solid #dc2626; background: #fff1f2; }
-        
-        .card-header, .mains-header, .sujas-header, .editorial-header, .yt-header { display: flex; align-items: center; gap: 14px; margin-bottom: 14px; }
-        .topic-title { font-weight: 800; font-size: 20px; color: #0f172a; }
-        .fact-text { margin: 0; color: var(--text-dark); font-size: 19px; line-height: 1.8; }
-        .question-text { margin: 12px 0 16px 0; color: #1e1b4b; font-size: 22px; font-weight: 800; }
-        .answer-box { background: #f8fafc; padding: 22px; border-radius: 12px; font-size: 18px; border: 1px solid #e2e8f0; }
-        .ans-label { font-size: 19px; color: #1e3a8a; display: inline-block; margin-bottom: 6px; }
-        .ans-section { margin-bottom: 16px; line-height: 1.8; }
-        .relevance-box, .way-forward { background: #ecfdf5; color: #065f46; padding: 14px 18px; border-radius: 10px; margin-top: 16px; font-size: 17.5px; border-left: 5px solid #10b981; font-weight: 600; }
-        .exam-tip-box { background: #fefce8; color: #854d0e; padding: 14px 18px; border-radius: 10px; margin-top: 16px; font-size: 17.5px; border-left: 5px solid #eab308; font-weight: 600; }
-        ul { margin: 10px 0; padding-left: 25px; }
-        li { margin-bottom: 8px; font-size: 18px; }
+        .fact-card:hover, .mains-card:hover, .sujas-card:hover, .editorial-card:hover, .yt-card:hover {
+            box-shadow: 0 12px 28px rgba(0,0,0,0.1);
+        }
+
+        .fact-card { border-left: 14px solid var(--accent-gold); }
+        .mains-card { border-left: 14px solid #4338ca; }
+        .sujas-card { border-left: 14px solid var(--accent-purple); }
+        .editorial-card { border-left: 14px solid var(--accent-red); }
+        .yt-card { border-left: 14px solid #dc2626; background: var(--card-bg); }
+
+        .card-header, .mains-header, .sujas-header, .editorial-header, .yt-header {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 16px;
+            flex-wrap: wrap;
+        }
+        .topic-title { font-weight: 900; font-size: 26px; color: var(--text-dark); }
+        .fact-text { margin: 0; color: var(--text-dark); font-size: var(--base-font-size); line-height: var(--base-line-height); font-weight: 500; }
+        .question-text { margin: 12px 0 18px 0; color: #1e3a8a; font-size: calc(var(--base-font-size) + 4px); font-weight: 900; line-height: 1.6; }
+        body.dark-mode .question-text { color: #93c5fd; }
+
+        .answer-box {
+            background: #f1f5f9;
+            padding: 26px;
+            border-radius: 14px;
+            font-size: var(--base-font-size);
+            border: 2px solid #cbd5e1;
+            line-height: var(--base-line-height);
+        }
+        body.dark-mode .answer-box {
+            background: #1f2937;
+            border-color: #4b5563;
+        }
+        body.sepia-mode .answer-box {
+            background: #f4ebd0;
+            border-color: #dcd0b1;
+        }
+
+        .ans-label {
+            font-size: calc(var(--base-font-size) + 2px);
+            color: #1e3a8a;
+            display: block;
+            margin-bottom: 10px;
+            font-weight: 800;
+        }
+        body.dark-mode .ans-label { color: #60a5fa; }
+
+        .relevance-box, .way-forward {
+            background: #ecfdf5;
+            color: #065f46;
+            padding: 18px 24px;
+            border-radius: 12px;
+            margin-top: 20px;
+            font-size: calc(var(--base-font-size) - 1px);
+            border-left: 8px solid #10b981;
+            font-weight: 600;
+            border: 1px solid #a7f3d0;
+            border-left-width: 8px;
+        }
+        body.dark-mode .relevance-box, body.dark-mode .way-forward {
+            background: #064e3b;
+            color: #a7f3d0;
+            border-color: #059669;
+        }
+
+        .exam-tip-box {
+            background: #fefce8;
+            color: #854d0e;
+            padding: 18px 24px;
+            border-radius: 12px;
+            margin-top: 20px;
+            font-size: calc(var(--base-font-size) - 1px);
+            border-left: 8px solid #eab308;
+            font-weight: 600;
+            border: 1px solid #fef08a;
+            border-left-width: 8px;
+        }
+        body.dark-mode .exam-tip-box {
+            background: #713f12;
+            color: #fef08a;
+            border-color: #eab308;
+        }
+
+        ul { margin: 12px 0; padding-left: 30px; }
+        li { margin-bottom: 12px; font-size: var(--base-font-size); line-height: var(--base-line-height); }
 
         @media print {
-            .print-btn { display: none; }
-            body { background: white; padding: 0; font-size: 14pt; }
-            .container { max-width: 100%; }
+            .reader-toolbar, .print-btn { display: none !important; }
+            body { background: white !important; color: black !important; padding: 0 !important; font-size: 16pt !important; }
+            .container { max-width: 100% !important; }
+            .fact-card, .mains-card, .sujas-card, .editorial-card, .yt-card { page-break-inside: avoid; border: 1px solid #999 !important; }
         }
     </style>
+
 </head>
 <body>
     <div class="container">
@@ -125,98 +294,98 @@
         
             <div class="fact-card">
                 <div class="card-header">
-                    <span class="badge badge-pre">RAS Pre / UPSC Pre</span>
+                    <span class="badge badge-pre">UPSC Pre / RAS Pre</span>
                     <span class="topic-title">भारत-न्यूजीलैंड मुक्त व्यापार समझौता (FTA)</span>
                 </div>
-                <p class="fact-text">भारत और न्यूजीलैंड के बीच मुक्त व्यापार समझौता 20 अक्टूबर 2026 (दशहरा) से लागू होगा। यह समझौता भारत के 100 प्रतिशत निर्यात को शुल्क मुक्त पहुंच प्रदान करेगा। इसके अतिरिक्त, न्यूजीलैंड अगले 15 वर्षों में भारत में 20 बिलियन अमेरिकी डॉलर का निवेश करेगा।</p>
+                <p class="fact-text">भारत और न्यूजीलैंड के बीच मुक्त व्यापार समझौता 20 अक्टूबर, 2026 से लागू होगा। इसके तहत सभी भारतीय निर्यातों को न्यूजीलैंड में शुल्क-मुक्त पहुंच मिलेगी और अगले 15 वर्षों में 20 बिलियन डॉलर के निवेश की प्रतिबद्धता जताई गई है। इसका लक्ष्य 2030 तक द्विपक्षीय व्यापार को दोगुना कर 7 बिलियन न्यूजीलैंड डॉलर करना है।</p>
             </div>
             
             <div class="fact-card">
                 <div class="card-header">
                     <span class="badge badge-pre">UPSC Pre</span>
-                    <span class="topic-title">प्लूटो का 'बौना ग्रह' (Dwarf Planet) वर्गीकरण</span>
+                    <span class="topic-title">आरबीआई एफसीएनआर (बी) विदेशी मुद्रा स्वैप सुविधा</span>
                 </div>
-                <p class="fact-text">24 अगस्त 2006 को प्राग (चेक गणराज्य) में अंतर्राष्ट्रीय खगोलीय संघ (IAU) के संकल्प 5A और 6A के तहत प्लूटो को ग्रह की श्रेणी से हटाकर 'बौना ग्रह' घोषित किया गया था। ग्रह होने की तीन शर्तें हैं: सूर्य की परिक्रमा करना, पर्याप्त द्रव्यमान (जलस्थैतिक संतुलन आकार), और अपनी कक्षा के आसपास के क्षेत्र को साफ रखना। प्लूटो तीसरी शर्त पूरी नहीं करता।</p>
+                <p class="fact-text">भारतीय रिजर्व बैंक (RBI) ने अनिवासी भारतीयों (NRIs) की मजबूत प्रतिक्रिया के बाद FCNR(B) जमा संग्रह के आंकड़ों को संशोधित कर 133 बिलियन अमेरिकी डॉलर कर दिया है। 18 सितंबर, 2026 तक इस विशेष स्वैप सुविधा के तहत कुल प्रवाह 143.596 बिलियन डॉलर तक पहुंच गया।</p>
+            </div>
+            
+            <div class="fact-card">
+                <div class="card-header">
+                    <span class="badge badge-pre">UPSC Pre / RAS Pre</span>
+                    <span class="topic-title">कोर सेक्टर आउटपुट (अगस्त 2026)</span>
+                </div>
+                <p class="fact-text">अगस्त 2026 में भारत के आठ मुख्य उद्योगों (Core Sector) की विकास दर धीमी होकर 4.8% रही। इस अवधि में सीमेंट, बिजली और लौह अयस्क में वृद्धि दर्ज की गई, जबकि कोयला, प्राकृतिक गैस, कच्चे तेल और उर्वरक क्षेत्रों में संकुचन (Contraction) देखा गया।</p>
             </div>
             
             <div class="fact-card">
                 <div class="card-header">
                     <span class="badge badge-pre">UPSC Pre</span>
-                    <span class="topic-title">डेटा सेंटर जल खपत अनुमान 2030</span>
+                    <span class="topic-title">प्लेटो का 'बौना ग्रह' वर्गीकरण (20वीं वर्षगांठ)</span>
                 </div>
-                <p class="fact-text">रिस्टैड एनर्जी (Rystad Energy) के अनुसार, कृत्रिम बुद्धिमत्ता (AI) के विस्तार के कारण वैश्विक डेटा सेंटरों की प्रत्यक्ष जल खपत वर्ष 2025 के 222 बिलियन लीटर से तीन गुना बढ़कर 2030 तक 644 बिलियन लीटर हो सकती है। भारत में जामनगर और ठाणे को अत्यधिक जल-तनाव वाले क्षेत्रों के रूप में पहचाना गया है जहां डेटा सेंटर स्थापित हैं।</p>
+                <p class="fact-text">24 अगस्त, 2006 को प्राग में अंतर्राष्ट्रीय खगोलीय संघ (IAU) के प्रस्ताव 5A और 6A के तहत प्लूटो को ग्रह की श्रेणी से हटाकर 'बौना ग्रह' (Dwarf Planet) घोषित किया गया था। ग्रह होने की तीन शर्तें हैं: सूर्य की परिक्रमा करना, पर्याप्त द्रव्यमान (जलस्थैतिक संतुलन आकार), और अपनी कक्षा के आसपास के क्षेत्र को अन्य खगोलीय पिंडों से साफ रखना (प्लूटो तीसरी शर्त पूरी नहीं करता)।</p>
+            </div>
+            
+            <div class="fact-card">
+                <div class="card-header">
+                    <span class="badge badge-pre">UPSC Pre</span>
+                    <span class="topic-title">डेटा सेंटर जल खपत रिपोर्ट (Rystad Energy)</span>
+                </div>
+                <p class="fact-text">रिस्टैड एनर्जी के अनुसार, कृत्रिम बुद्धिमत्ता (AI) के विस्तार के कारण वैश्विक डेटा सेंटरों की प्रत्यक्ष जल खपत वर्ष 2025 के 222 बिलियन लीटर से लगभग तीन गुना बढ़कर 2030 तक 644 बिलियन लीटर प्रति वर्ष हो सकती है। भारत के जामनगर और ठाणे को अत्यधिक जल-तनाव वाले डेटा सेंटर क्षेत्रों के रूप में चिह्नित किया गया है।</p>
+            </div>
+            
+            <div class="fact-card">
+                <div class="card-header">
+                    <span class="badge badge-pre">UPSC Pre / RAS Pre</span>
+                    <span class="topic-title">बैरन द्वीप ज्वालामुखी विस्फोट</span>
+                </div>
+                <p class="fact-text">अंडमान और निकोबार द्वीप समूह में स्थित भारत का एकमात्र सक्रिय ज्वालामुखी 'बैरन द्वीप' सितंबर 2025 में पुनः सक्रिय हुआ। यह भारतीय और बर्मी प्लेटों की सीमा पर स्थित है, जो जावा-सुमात्रा-अंडमान सबडक्शन जोन का हिस्सा है। इसका पहला दर्ज विस्फोट 1787 में हुआ था।</p>
+            </div>
+            
+            <div class="fact-card">
+                <div class="card-header">
+                    <span class="badge badge-pre">UPSC Pre</span>
+                    <span class="topic-title">नैन्सी ग्रेस रोमन स्पेस टेलीस्कोप</span>
+                </div>
+                <p class="fact-text">नासा (NASA) ने अपने रोमन स्पेस टेलीस्कोप के 300-मेगापिक्सल के विशाल इन्फ्रारेड कैमरे को सफलतापूर्वक सक्रिय कर दिया है। यह हबल जैसी स्पष्टता के साथ ब्रह्मांड के विशाल हिस्सों की तस्वीरें लेगा और वर्ष 2027 में अपना मुख्य विज्ञान अभियान शुरू करेगा।</p>
+            </div>
+            
+            <div class="fact-card">
+                <div class="card-header">
+                    <span class="badge badge-pre">UPSC Pre</span>
+                    <span class="topic-title">प्लास्टिक कचरे से ईंधन निर्माण तकनीक</span>
+                </div>
+                <p class="fact-text">ओक रिज नेशनल लेबोरेटरी के वैज्ञानिकों ने एल्युमिनियम-आधारित पिघले हुए लवणों (Molten Salts) का उपयोग करके पॉलीथीन प्लास्टिक को गैसोलीन और डीजल जैसे हाइड्रोकार्बन ईंधनों में बदलने की एक सरल और सस्ती विधि विकसित की है, जिससे लगभग 60% गैसोलीन प्राप्त होता है।</p>
             </div>
             
             <div class="fact-card">
                 <div class="card-header">
                     <span class="badge badge-pre">RAS Pre / UPSC Pre</span>
-                    <span class="topic-title">बैरन द्वीप ज्वालामुखी (Barren Island)</span>
+                    <span class="topic-title">विवाह पंजीकरण हेतु आधार आयु प्रमाण पत्र के रूप में अमान्य</span>
                 </div>
-                <p class="fact-text">यह भारत का एकमात्र सक्रिय ज्वालामुखी है जो अंडमान और निकोबार द्वीप समूह में स्थित है। यह भारतीय प्लेट और बर्मी प्लेट की सीमा पर स्थित है, जो जावा-सुमात्रा-अंडमान सबडक्शन जोन का हिस्सा है। इसका पहला दर्ज विस्फोट 1787 में हुआ था और हालिया लघु विस्फोट सितंबर 2025 में दर्ज किए गए।</p>
-            </div>
-            
-            <div class="fact-card">
-                <div class="card-header">
-                    <span class="badge badge-pre">UPSC Pre</span>
-                    <span class="topic-title">अगस्त्यमलाई बायोस्फीयर रिजर्व फ्लोरा चेकलिस्ट</span>
-                </div>
-                <p class="fact-text">जवाहरलाल नेहरू ट्रॉपिकल बॉटनिकल गार्डन एंड रिसर्च इंस्टीट्यूट (JNTBGRI) की केरल टीम द्वारा तैयार की गई नई चेकलिस्ट के अनुसार, पश्चिमी घाट के अगस्त्यमलाई बायोस्फीयर रिजर्व में पुष्पीय पौधों (Flowering Plants) की 3,261 प्रजातियां दर्ज की गई हैं, जो इसकी वैश्विक जैव विविधता महत्ता को दर्शाती हैं।</p>
-            </div>
-            
-            <div class="fact-card">
-                <div class="card-header">
-                    <span class="badge badge-pre">RAS Pre / UPSC Pre</span>
-                    <span class="topic-title">माइक्रोसॉफ्ट इंडिया साउथ सेंट्रल क्लाउड क्षेत्र</span>
-                </div>
-                <p class="fact-text">माइक्रोसॉफ्ट ने हैदराबाद में अपना नया 'इंडिया साउथ सेंट्रल क्लाउड क्षेत्र' लॉन्च किया है। यह क्षेत्र भारत की विनियामक और भूकंपीय आवश्यकताओं के अनुरूप तीन उपलब्धता क्षेत्रों (Availability Zones) के साथ मिशन-क्रिटिकल और एआई वर्कलोड को बड़े पैमाने पर समर्थन देने के लिए डिज़ाइन किया गया है।</p>
+                <p class="fact-text">कर्नाटक सरकार ने बाल विवाह रोकने और आयु विसंगतियों को दूर करने के लिए विवाह पंजीकरण नियमों को कड़ा करते हुए स्पष्ट किया है कि आधार कार्ड को आयु के वैध प्रमाण के रूप में स्वीकार नहीं किया जाएगा; इसके लिए जन्म प्रमाण पत्र या एसएसएलसी अंकतालिका अनिवार्य होगी।</p>
             </div>
             
             <div class="fact-card">
                 <div class="card-header">
                     <span class="badge badge-raj">RAS Pre</span>
-                    <span class="topic-title">किशाऊ बहुउद्देश्यीय बांध परियोजना</span>
+                    <span class="topic-title">कॉप्स टर्फ ग्राउंड इंडोर क्रिकेट स्टेडियम</span>
                 </div>
-                <p class="fact-text">राजस्थान सुजस के अनुसार, किशाऊ परियोजना हिमाचल प्रदेश और उत्तराखंड की सीमा पर टोंस नदी (यमुना की सहायक नदी) पर एक प्रस्तावित बांध है। इससे राजस्थान सहित छह बेसिन राज्यों को जल और विद्युत आपूर्ति प्राप्त होगी। हाल ही में राजस्थान सरकार ने इसके त्वरित क्रियान्वयन हेतु नीतिगत निर्णय लिए हैं।</p>
+                <p class="fact-text">राजस्थान में आधुनिक खेल सुविधाओं से युक्त नए इंडोर क्रिकेट स्टेडियम 'कॉप्स टर्फ ग्राउंड' का निर्माण उदयपुर जिले में किया गया है, जो स्थानीय खेल प्रतिभाओं को बढ़ावा देगा।</p>
             </div>
             
             <div class="fact-card">
                 <div class="card-header">
                     <span class="badge badge-raj">RAS Pre</span>
-                    <span class="topic-title">राजस्थान टेक्सटाइल सेल का गठन</span>
+                    <span class="topic-title">राजस्थान इंटीग्रेटेड एडवेंचर इंस्टीट्यूट</span>
                 </div>
-                <p class="fact-text">राजस्थान सरकार ने राज्य में कपड़ा उद्योग को बढ़ावा देने, निवेश आकर्षित करने और निर्यात बाधाओं को दूर करने के लिए उद्योग और वाणिज्य विभाग के तहत एक विशेष 'टेक्सटाइल सेल' (Textile Cell) के गठन को मंजूरी दी है।</p>
-            </div>
-            
-            <div class="fact-card">
-                <div class="card-header">
-                    <span class="badge badge-raj">RAS Pre</span>
-                    <span class="topic-title">जोधपुर हवाई अड्डा नया टर्मिनल</span>
-                </div>
-                <p class="fact-text">राजस्थान सुजस के अनुसार, जोधपुर नागरिक हवाई अड्डे पर एक नए अत्याधुनिक टर्मिनल भवन का विकास किया जा रहा है, जिससे पश्चिमी राजस्थान में पर्यटन, हस्तशिल्प निर्यात और हवाई कनेक्टिविटी को अत्यधिक बढ़ावा मिलेगा।</p>
-            </div>
-            
-            <div class="fact-card">
-                <div class="card-header">
-                    <span class="badge badge-pre">UPSC Pre</span>
-                    <span class="topic-title">पिग्मी हॉग (Pygmy Hog) संरक्षण</span>
-                </div>
-                <p class="fact-text">पिग्मी हॉग (Porcula salvania) विश्व का सबसे छोटा और दुर्लभ जंगली सुअर है। यह आईयूसीएन (IUCN) की 'लुप्तप्राय' (Endangered) श्रेणी में शामिल है। यह केवल असम के मानस राष्ट्रीय उद्यान और उसके आसपास के तराई घास के मैदानों (Wet Grasslands) में पाया जाता है।</p>
-            </div>
-            
-            <div class="fact-card">
-                <div class="card-header">
-                    <span class="badge badge-pre">RAS Pre / UPSC Pre</span>
-                    <span class="topic-title">लोक लेखा समिति (PAC) संरचना</span>
-                </div>
-                <p class="fact-text">संसद की इस सबसे पुरानी वित्तीय समिति में कुल 22 सदस्य होते हैं (15 लोकसभा से और 7 राज्यसभा से)। इसका मुख्य कार्य भारत के नियंत्रक और महालेखा परीक्षक (CAG) की रिपोर्टों की जांच करना है। परंपरा के अनुसार, इसका अध्यक्ष विपक्ष का कोई सदस्य होता है।</p>
+                <p class="fact-text">राजस्थान में साहसिक खेलों, प्रशिक्षण और एडवेंचर टूरिज्म को बढ़ावा देने के लिए 'राजस्थान इंटीग्रेटेड एडवेंचर इंस्टीट्यूट' की स्थापना उदयपुर जिले में की जाएगी।</p>
             </div>
             
             <div class="fact-card">
                 <div class="card-header">
                     <span class="badge badge-raj">RAS Pre / UPSC Pre</span>
-                    <span class="topic-title">डब्ल्यूडब्ल्यूएफ (WWF) वैश्विक संरक्षण सम्मेलन</span>
+                    <span class="topic-title">युद्धाभ्यास रोटर क्लैप-III</span>
                 </div>
-                <p class="fact-text">केंद्रीय पर्यावरण, वन और जलवायु परिवर्तन मंत्री भूपेंद्र यादव ने राजस्थान की राजधानी जयपुर में वर्ल्ड वाइड फंड फॉर नेचर (WWF) के वैश्विक संरक्षण सम्मेलन का उद्घाटन किया। इसका उद्देश्य जैव विविधता संरक्षण और पारिस्थितिक संतुलन हेतु वैश्विक रणनीतियों पर चर्चा करना है।</p>
+                <p class="fact-text">भारतीय वायुसेना द्वारा कम ऊंचाई पर उड़ने वाले दुश्मन के ड्रोन और मानव रहित हवाई वाहनों (UAVs) को हवा में ही नष्ट करने की क्षमता परखने हेतु 26 जुलाई से 1 अगस्त, 2026 तक पोखरण फील्ड फायरिंग रेंज, जैसलमेर में 'रोटर क्लैप-III' युद्धाभ्यास आयोजित किया गया।</p>
             </div>
             
 
@@ -224,196 +393,141 @@
         
             <div class="mains-card">
                 <div class="mains-header">
-                    <span class="badge badge-5m">5 अंक (Paper 3)</span>
-                    <span class="subject-tag">अंतर्राष्ट्रीय संबंध</span>
-                </div>
-                <h3 class="question-text">प्रश्न: अमेरिकी प्रतिबंध अधिनियम (US Sanctions Act) और रूसी तेल आयात पर इसके भारत पर पड़ने वाले प्रभावों को स्पष्ट कीजिए।</h3>
-                
-                <div class="answer-box">
-                    <strong class="ans-label">उत्तर ढांचा (~50 शब्द):</strong>
-                    <div class="answer-content">हाल ही में पारित अमेरिकी कानून रूसी तेल आयातकों पर 100% तक दंडात्मक शुल्क लगाने का प्रावधान करता है। भारत पर इसके प्रभाव निम्नलिखित हैं:<br>1. रणनीतिक स्वायत्तता पर दबाव: भारत के रूस के साथ पारंपरिक ऊर्जा संबंधों और सस्ते कच्चे तेल के आयात पर प्रतिकूल प्रभाव पड़ सकता है।<br>2. द्वितीयक प्रतिबंधों का खतरा: भारतीय रिफाइनरियों और बैंकों को अमेरिकी वित्तीय प्रणाली से बाहर किए जाने या निर्यात पर अतिरिक्त शुल्क का सामना करना पड़ सकता है।<br>3. वैकल्पिक भुगतान प्रणालियों की आवश्यकता: भारत को रूबल-रुपया व्यापार तंत्र या गैर-डॉलर मुद्राओं में लेनदेन को और मजबूत करना होगा।</div>
-                </div>
-                
-            </div>
-            
-            <div class="mains-card">
-                <div class="mains-header">
                     <span class="badge badge-5m">5 अंक (Paper 1)</span>
-                    <span class="subject-tag">अर्थशास्त्र</span>
+                    <span class="subject-tag">अर्थशास्त्र (भारतीय अर्थव्यवस्था)</span>
                 </div>
-                <h3 class="question-text">प्रश्न: भारत-न्यूजीलैंड मुक्त व्यापार समझौते (FTA) के प्रमुख प्रावधानों और इसके आर्थिक महत्व पर प्रकाश डालिए।</h3>
+                <h3 class="question-text">प्रश्न: भारत में अत्यधिक नमक के सेवन (Excessive Salt Intake) से जुड़े सार्वजनिक स्वास्थ्य संबंधी खतरों को स्पष्ट कीजिए।</h3>
                 
                 <div class="answer-box">
                     <strong class="ans-label">उत्तर ढांचा (~50 शब्द):</strong>
-                    <div class="answer-content">भारत-न्यूजीलैंड मुक्त व्यापार समझौता (FTA) 20 अक्टूबर 2026 से प्रभावी हो रहा है। इसके प्रमुख बिंदु निम्नलिखित हैं:<br>1. शुल्क मुक्त पहुंच: यह समझौता भारत के 100% निर्यात (जैसे सिरेमिक, कालीन, ऑटोमोबाइल और ऑटो घटकों) को न्यूजीलैंड के बाजार में शुल्क मुक्त पहुंच प्रदान करता है।<br>2. निवेश प्रतिबद्धता: न्यूजीलैंड अगले 15 वर्षों में भारत में 20 बिलियन अमेरिकी डॉलर का निवेश करेगा।<br>3. द्विपक्षीय व्यापार संवर्धन: इससे दोनों देशों के बीच वस्तुओं, सेवाओं और निवेश प्रवाह में ऐतिहासिक वृद्धि होगी।</div>
+                    <div class="answer-content">1. स्वास्थ्य पर नकारात्मक प्रभाव: आईसीएमआर के अनुसार भारतीय पुरुष औसतन 8.9 ग्राम और महिलाएं 7.1 ग्राम दैनिक नमक का सेवन करते हैं, जो डब्ल्यूएचओ के 5 ग्राम के मानक से काफी अधिक है। इससे उच्च रक्तचाप (Hypertension), हृदय रोग, स्ट्रोक और क्रोनिक किडनी रोग का खतरा बढ़ जाता है।<br>2. मुख्य कारक: बाजार में उपलब्ध अल्ट्रा-प्रोसेस्ड और पैकेज्ड खाद्य पदार्थों (उच्च सोडियम युक्त) की बढ़ती खपत इसका मुख्य कारण है।<br>3. समाधान: पैकेज्ड फूड पर स्पष्ट लेबलिंग, जन जागरूकता अभियान (जैसे तमिलनाडु का साल्ट रिडक्शन कैंपेन) और मिड-डे मील में नमक की मात्रा को नियंत्रित करना आवश्यक है।</div>
                 </div>
                 
             </div>
             
             <div class="mains-card">
                 <div class="mains-header">
-                    <span class="badge badge-10m">10 अंक (Paper 3)</span>
-                    <span class="subject-tag">विज्ञान एवं प्रौद्योगिकी / पर्यावरण</span>
+                    <span class="badge badge-5m">5 अंक (Paper 3)</span>
+                    <span class="subject-tag">राजव्यवस्था एवं प्रशासनिक कानून</span>
                 </div>
-                <h3 class="question-text">प्रश्न: कृत्रिम बुद्धिमत्ता (AI) और डेटा केंद्रों के तीव्र विस्तार से उत्पन्न होने वाली पर्यावरणीय चुनौतियों, विशेष रूप से जल और ऊर्जा संकट का समालोचनात्मक विश्लेषण कीजिए।</h3>
+                <h3 class="question-text">प्रश्न: सुप्रीम कोर्ट द्वारा गिरफ्तारी की प्रक्रिया और कारणों को स्पष्ट करने के संबंध में हाल ही में प्रतिपादित दिशा-निर्देशों पर प्रकाश डालिए।</h3>
                 
                 <div class="answer-box">
-                    <div class="ans-section"><strong class="ans-label">भूमिका (Introduction):</strong><br>वैश्विक स्तर पर डिजिटल क्रांति और एआई (AI) के प्रसार ने डेटा केंद्रों की मांग को अत्यधिक बढ़ा दिया है। हालांकि, यह अदृश्य डिजिटल अवसंरचना गंभीर भौतिक पर्यावरणीय संकट उत्पन्न कर रही है।</div>
-                    <div class="ans-section"><strong class="ans-label">मुख्य भाग (Body & Rajasthan Context):</strong><br>मुख्य पर्यावरणीय चुनौतियां निम्नलिखित हैं:<br>1. अत्यधिक जल खपत: एआई सर्वर सामान्य सर्वरों की तुलना में अधिक गर्मी उत्पन्न करते हैं। इनके शीतलन (Cooling) के लिए प्रत्यक्ष जल खपत 2030 तक बढ़कर 644 बिलियन लीटर होने का अनुमान है।<br>2. ऊर्जा की भारी मांग: डेटा केंद्रों को चलाने और ठंडा रखने के लिए भारी मात्रा में बिजली की आवश्यकता होती है। कई देशों में इसके लिए कोयला आधारित बिजली संयंत्रों का उपयोग किया जा रहा है, जिससे कार्बन उत्सर्जन बढ़ रहा है।<br>3. 'हीट आइलैंड' प्रभाव: डेटा केंद्रों के 10 किमी के दायरे में तापमान में लगभग 9 डिग्री सेल्सियस तक की वृद्धि देखी गई है, जो स्थानीय पारिस्थितिकी को प्रभावित करती है।<br>4. जल-तनाव वाले क्षेत्रों पर दबाव: भारत के जामनगर और ठाणे जैसे अत्यधिक जल-तनाव वाले क्षेत्रों में डेटा केंद्रों की स्थापना से स्थानीय समुदायों के लिए पेयजल संकट गहरा रहा है।<br><br>वैकल्पिक समाधान:<br>- एयर कूलिंग (शुष्क शीतलन) और तरल शीतलन (Liquid Cooling) प्रौद्योगिकियों को अपनाना।<br>- डेटा केंद्रों को ठंडे जलवायु वाले क्षेत्रों में स्थानांतरित करना।<br>- 'वाटर पॉजिटिव' (Water Positive) लक्ष्य निर्धारित कर पानी का पुनर्चक्रण करना।</div>
-                    <div class="ans-section"><strong class="ans-label">निष्कर्ष (Conclusion):</strong><br>डिजिटल प्रगति और सतत विकास के बीच संतुलन स्थापित करने के लिए सख्त 'जल उपयोग प्रभावशीलता' (WUE) मानकों और हरित ऊर्जा स्रोतों को अनिवार्य किया जाना अत्यंत आवश्यक है।</div>
+                    <strong class="ans-label">उत्तर ढांचा (~50 शब्द):</strong>
+                    <div class="answer-content">1. गिरफ्तारी के कारणों का प्रकटीकरण: सुप्रीम कोर्ट के हालिया निर्णय के अनुसार, यदि जांच एजेंसी आरोपी को गिरफ्तारी के लिखित आधार/कारण नहीं बताती है, तो पूरी गिरफ्तारी की कार्रवाई गैर-कानूनी घोषित कर दी जाएगी।<br>2. न्यायिक सुरक्षा कवच: आरोपी को दोबारा गिरफ्तार करने या हिरासत बढ़ाने से पहले संबंधित मजिस्ट्रेट की औपचारिक मंजूरी लेना अनिवार्य किया गया है।<br>3. प्रशासनिक महत्व: यह निर्णय संविधान के अनुच्छेद 22(1) के तहत मौलिक अधिकारों की रक्षा करता है और पुलिस की मनमानी शक्तियों पर अंकुश लगाकर कानून के शासन को सुदृढ़ करता है।</div>
                 </div>
                 
             </div>
             
             <div class="mains-card">
                 <div class="mains-header">
-                    <span class="badge badge-10m">10 अंक (Paper 3)</span>
-                    <span class="subject-tag">लोक प्रशासन एवं प्रबंधन</span>
+                    <span class="badge badge-10m">10 अंक (Paper 2)</span>
+                    <span class="subject-tag">विज्ञान एवं प्रौद्योगिकी (पर्यावरण एवं पारिस्थितिकी)</span>
                 </div>
-                <h3 class="question-text">प्रश्न: भारत में 'समरूप डेटा अवसंरचना' (Harmonised Data Infrastructure) के विकास हेतु सांख्यिकी और कार्यक्रम कार्यान्वयन मंत्रालय (MoSPI) द्वारा उठाए जा रहे कदमों और इसके प्रशासनिक महत्व का परीक्षण कीजिए।</h3>
+                <h3 class="question-text">प्रश्न: आर्टिफिशियल इंटेलिजेंस (AI) और डेटा सेंटर अवसंरचना के तीव्र विस्तार से उत्पन्न होने वाली वैश्विक जल संकट और पर्यावरणीय चुनौतियों का आलोचनात्मक मूल्यांकन कीजिए। भारत के संदर्भ में इसके निहितार्थ समझाइए।</h3>
                 
                 <div class="answer-box">
-                    <div class="ans-section"><strong class="ans-label">भूमिका (Introduction):</strong><br>प्रशासनिक दक्षता और साक्ष्य-आधारित नीति निर्माण के लिए डेटा का एकीकरण अनिवार्य है। सांख्यिकी और कार्यक्रम कार्यान्वयन मंत्रालय (MoSPI) देश में एक एकीकृत डेटा ढांचा विकसित कर रहा है।</div>
-                    <div class="ans-section"><strong class="ans-label">मुख्य भाग (Body & Rajasthan Context):</strong><br>इस पहल के प्रमुख चरण और प्रशासनिक महत्व इस प्रकार हैं:<br><br>1. पांच-चरणीय एकीकरण प्रक्रिया:<br>- सरकारी डेटा का एकीकरण और मानकीकरण।<br>- महत्वपूर्ण मेटाडेटा (Metadata) का रखरखाव सुनिश्चित करना।<br>- विभिन्न मंत्रालयों और राज्यों के डेटा पूलों को जोड़ने के लिए समान परिभाषाओं और पहचानकर्ताओं (Identifiers) की स्थापना।<br>- डेटा गुणवत्ता का कठोर मूल्यांकन।<br><br>2. प्रशासनिक महत्व:<br>- नीतिगत विसंगतियों में कमी: विभिन्न विभागों के बीच डेटा विसंगतियों को दूर कर सटीक योजनाएं बनाई जा सकेंगी।<br>- सूचना की त्वरित खोज: एकीकृत ढांचे से नीति निर्माताओं को वास्तविक समय में प्रामाणिक डेटा प्राप्त होगा।<br>- सहकारी संघवाद को बढ़ावा: केंद्र और राज्य सरकारों के डेटा प्रणालियों के बीच समन्वय स्थापित होगा।<br>- पारदर्शिता और जवाबदेही: डेटा की गुणवत्ता और प्रामाणिकता सुनिश्चित होने से नागरिक केंद्रित सेवाओं की डिलीवरी बेहतर होगी।</div>
-                    <div class="ans-section"><strong class="ans-label">निष्कर्ष (Conclusion):</strong><br>समरूप डेटा अवसंरचना न केवल शासन को सुगम बनाएगी बल्कि भारत को डेटा-संचालित अर्थव्यवस्था और सुशासन (Good Governance) की दिशा में अग्रसर करेगी।</div>
+                    <div class="ans-section"><strong class="ans-label">भूमिका (Introduction):</strong><br>वैश्विक स्तर पर डिजिटल अर्थव्यवस्था और आर्टिफिशियल इंटेलिजेंस (AI) के तीव्र विकास ने डेटा सेंटरों की मांग को अभूतपूर्व रूप से बढ़ा दिया है, जिससे ऊर्जा के साथ-साथ जल संसाधनों पर भी भारी दबाव उत्पन्न हो गया है।</div>
+                    <div class="ans-section"><strong class="ans-label">मुख्य भाग (Body & Rajasthan Context):</strong><br>1. जल संकट की भयावहता:<br>- रिस्टैड एनर्जी के अनुसार, डेटा सेंटरों की प्रत्यक्ष जल खपत वर्ष 2025 के 222 बिलियन लीटर से तिगुनी होकर 2030 तक 644 बिलियन लीटर हो सकती है।<br>- एआई सर्वर पारंपरिक सर्वरों की तुलना में अत्यधिक गर्मी उत्पन्न करते हैं, जिसके कूलिंग सिस्टम के लिए भारी मात्रा में पानी की आवश्यकता होती है।<br>2. अप्रत्यक्ष जल पदचिह्न (Indirect Water Footprint):<br>- डेटा सेंटरों को संचालित करने वाली बिजली के उत्पादन में भी भारी मात्रा में जल का उपभोग होता है। अमेरिका में अप्रत्यक्ष जल खपत प्रत्यक्ष खपत से दोगुनी है।<br>3. भारत के संदर्भ में चुनौतियां:<br>- भारत में $60-$70 बिलियन के डेटा सेंटर निवेश की उम्मीद है। आंध्र प्रदेश द्वारा गूगल को 'डीम्ड डिस्कॉम' लाइसेंस देना इसी दिशा में एक कदम है।<br>- भारत के जामनगर (गुजरात) और ठाणे (महाराष्ट्र) जैसे क्षेत्र पहले से ही जल-तनाव (Water Stress) से ग्रस्त हैं, जहां डेटा सेंटरों की स्थापना से स्थानीय समुदायों के पेयजल संकट के गहराने का खतरा है।<br>4. नीतिगत एवं तकनीकी समाधान:<br>- एयर/ड्राई कूलिंग तकनीकों को अपनाना, हालांकि यह बिजली की खपत को 0.30 से 0.74 kWh तक बढ़ा देती है।<br>- वाटर यूज इफेक्टिवनेस (WUE) मानकों को अनिवार्य बनाना (जैसे सिंगापुर का ग्रीन डेटा सेंटर रोडमैप - 2 लीटर/kWh से कम)।<br>- 'वाटर पॉजिटिव' लक्ष्य (2030 तक उपभोग से अधिक जल पुनर्भरण करना)।</div>
+                    <div class="ans-section"><strong class="ans-label">निष्कर्ष (Conclusion):</strong><br>अतः भारत को तकनीकी प्रगति और पारिस्थितिक संधारणीयता के बीच संतुलन स्थापित करने के लिए एक सख्त राष्ट्रीय डेटा सेंटर जल नीति और समुदाय-भागीदारी आधारित पर्यावरणीय प्रभाव आकलन (EIA) ढांचा तैयार करना चाहिए।</div>
                 </div>
                 
             </div>
             
 
         <div class="section-title">📺 कोचिंग शिक्षक विश्लेषण एवं यूट्यूब लाइव क्लास सार</div>
-            <div class="yt-card">
-                <div class="yt-header">
-                    <span class="badge badge-yt">📺 कोचिंग शिक्षक विश्लेषण</span>
-                    <span class="topic-title">पिग्मी हॉग (Pygmy Hog) संरक्षण</span>
-                </div>
-                <div class="yt-explanation">
+            <div class="yt-explanation">
                     <strong>शिक्षक व्याख्यान एवं ट्रिक्स:</strong>
-                    <p>शिक्षक ने समझाया कि पिग्मी हॉग (Porcula salvania) दुनिया का सबसे छोटा जंगली सुअर है। यह केवल असम के मानस राष्ट्रीय उद्यान में पाया जाता है। इसके संरक्षण के लिए 'पिग्मी हॉग संरक्षण कार्यक्रम' (PHCP) चलाया जा रहा है। यह घास के मैदानों (Wet Grasslands) का एक संकेतक संकेतक (Indicator Species) है।</p>
+                    <p>प्रशांत सर ने समझाया कि पिग्मी हॉग विश्व का सबसे छोटा और दुर्लभ जंगली सुअर है। यह केवल असम के मानस राष्ट्रीय उद्यान की लंबी घास के मैदानों में पाया जाता है। इसका आईयूसीएन (IUCN) दर्जा एंडेंजर्ड (Endangered) है और यह घासभूमि पारिस्थितिकी तंत्र का प्राथमिक संकेतक जीव है।</p>
                 </div>
                 <div class="key-args">
                     <strong>क्लास के मुख्य बिंदु (Key Lecture Points):</strong>
                     <ul>
-                        <li>आईयूसीएन (IUCN) रेड लिस्ट में यह 'लुप्तप्राय' (Endangered) श्रेणी में आता है।</li><li>असम का मानस राष्ट्रीय उद्यान इसका प्राथमिक प्राकृतिक आवास है।</li><li>घास के मैदानों में आग लगना और मानव अतिक्रमण इसके अस्तित्व के लिए सबसे बड़ा खतरा हैं।</li>
+                        <li>घासभूमि पारिस्थितिकी तंत्र का मुख्य संकेतक: इसका संरक्षण पूरे तराई घासभूमि के स्वास्थ्य को दर्शाता है।</li><li>संरक्षण केंद्र: मानस नेशनल पार्क असम में इसके बंदी प्रजनन (Captive Breeding) कार्यक्रम संचालित किए जा रहे हैं।</li><li>प्रमुख खतरे: कृषि अतिक्रमण, अनियंत्रित आग और बाढ़ से घासभूमि का विखंडन।</li>
                     </ul>
                 </div>
-                <div class="exam-tip-box"><strong>💡 परीक्षा टिप (Exam Tip):</strong> प्रारंभिक परीक्षा में इसके आवास और आईयूसीएन स्थिति पर सीधे प्रश्न पूछे जा सकते हैं। मुख्य परीक्षा में जैव विविधता संरक्षण के उदाहरण के रूप में इसका उल्लेख करें।</div>
+                <div class="exam-tip-box"><strong>💡 परीक्षा टिप (Exam Tip):</strong> प्रारंभिक परीक्षा में पिग्मी हॉग के आवास (Grassland Habitat) और इसके आईयूसीएन दर्जे पर सीधा प्रश्न पूछा जाता है।</div>
             </div>
             
-            <div class="yt-card">
-                <div class="yt-header">
-                    <span class="badge badge-yt">📺 कोचिंग शिक्षक विश्लेषण</span>
-                    <span class="topic-title">त्रि-भाषा सूत्र (Three-Language Formula) और भाषा नीति</span>
-                </div>
-                <div class="yt-explanation">
+            <div class="yt-explanation">
                     <strong>शिक्षक व्याख्यान एवं ट्रिक्स:</strong>
-                    <p>शिक्षक ने कोठारी आयोग (1964-66) द्वारा अनुशंसित त्रि-भाषा सूत्र का विश्लेषण किया। राष्ट्रीय शिक्षा नीति (NEP) 1968 और 2020 दोनों में इसका समर्थन किया गया है। हालांकि, तमिलनाडु जैसे राज्य अपनी द्वि-भाषा नीति (तमिल और अंग्रेजी) पर अड़े हुए हैं, जो भाषा नीति और भारतीय संघवाद के बीच टकराव को दर्शाता है।</p>
+                    <p>शिक्षक ने कोठारी आयोग (1964-66) द्वारा अनुशंसित त्रि-भाषा सूत्र की ऐतिहासिक पृष्ठभूमि पर चर्चा की। 1968 की राष्ट्रीय शिक्षा नीति से लेकर NEP 2020 तक के भाषाई प्रावधानों और तमिलनाडु के दो-भाषा मॉडल (तमिल व अंग्रेजी) के संवैधानिक व संघीय आयामों को स्पष्ट किया।</p>
                 </div>
                 <div class="key-args">
                     <strong>क्लास के मुख्य बिंदु (Key Lecture Points):</strong>
                     <ul>
-                        <li>त्रि-भाषा सूत्र के तहत हिंदी भाषी राज्यों में हिंदी, अंग्रेजी और एक आधुनिक भारतीय भाषा (अधिमानतः दक्षिणी भाषा) तथा गैर-हिंदी भाषी राज्यों में क्षेत्रीय भाषा, हिंदी और अंग्रेजी सिखाई जानी चाहिए।</li><li>तमिलनाडु नवोदय विद्यालयों का विरोध करता है क्योंकि वहां त्रि-भाषा सूत्र लागू होता है।</li><li>भाषा का मुद्दा भारत में सांस्कृतिक पहचान और प्रशासनिक संघवाद से गहराई से जुड़ा हुआ है।</li>
+                        <li>ऐतिहासिक संदर्भ: कोठारी आयोग की सिफारिश पर 1968 में त्रि-भाषा सूत्र लागू हुआ था।</li><li>NEP 2020 का दृष्टिकोण: किसी भी राज्य पर कोई भाषा नहीं थोपी जाएगी, राज्यों को मातृभाषा/स्थानीय भाषा चुनने का पूर्ण लचीलापन है।</li><li>संघवाद और भाषा: तमिलनाडु जैसे राज्यों का तर्क है कि दो-भाषा नीति ने उनके राज्य में सामाजिक व आर्थिक विकास में उत्कृष्ट योगदान दिया है।</li>
                     </ul>
                 </div>
-                <div class="exam-tip-box"><strong>💡 परीक्षा टिप (Exam Tip):</strong> जीएस पेपर 2 (राजव्यवस्था एवं संघवाद) में केंद्र-राज्य संबंधों और सांस्कृतिक संघवाद के तहत भाषा विवाद पर 10-अंक का प्रश्न पूछा जा सकता है।</div>
+                <div class="exam-tip-box"><strong>💡 परीक्षा टिप (Exam Tip):</strong> मुख्य परीक्षा में भाषा नीति, नवोदय विद्यालय विवाद और भारतीय संघवाद (Federalism) के अंतर्संबंधों पर 5-अंक व 10-अंक के प्रश्न तैयार करें।</div>
             </div>
             
-            <div class="yt-card">
-                <div class="yt-header">
-                    <span class="badge badge-yt">📺 कोचिंग शिक्षक विश्लेषण</span>
-                    <span class="topic-title">लोक लेखा समिति (Public Accounts Committee - PAC)</span>
-                </div>
-                <div class="yt-explanation">
+            <div class="yt-explanation">
                     <strong>शिक्षक व्याख्यान एवं ट्रिक्स:</strong>
-                    <p>सैयद अकबरुद्दीन के हालिया लेख के संदर्भ में शिक्षक ने पीएसी की भूमिका की समीक्षा की। यह संसद की सबसे महत्वपूर्ण वित्तीय समिति है जो कार्यकारी बजट और रेलवे के खर्चों की निगरानी करती है। यह कैग (CAG) की रिपोर्ट को आधार बनाकर अपनी जांच करती है।</p>
+                    <p>प्रशांत सर ने पीएसी के महत्व को रेखांकित करते हुए बताया कि यह संसद की सबसे पुरानी वित्तीय समिति है (1921 में गठित)। यह नियंत्रक एवं महालेखापरीक्षक (CAG) की रिपोर्ट की सूक्ष्म जांच कर कार्यपालिका की वित्तीय जवाबदेही सुनिश्चित करती है।</p>
                 </div>
                 <div class="key-args">
                     <strong>क्लास के मुख्य बिंदु (Key Lecture Points):</strong>
                     <ul>
-                        <li>पीएसी में कुल 22 सदस्य होते हैं (15 लोकसभा + 7 राज्यसभा), जिनका चुनाव आनुपातिक प्रतिनिधित्व प्रणाली द्वारा होता है।</li><li>कोई भी मंत्री इस समिति का सदस्य नहीं बन सकता।</li><li>समिति के पास केवल सलाहकार शक्तियां होती हैं, यह दंडात्मक कार्रवाई नहीं कर सकती।</li>
+                        <li>सदस्य संरचना: कुल 22 सदस्य (15 लोकसभा + 7 राज्यसभा) आनुपातिक प्रतिनिधित्व द्वारा एकल संक्रमणीय मत से चुने जाते हैं।</li><li>अध्यक्ष पद: 1967 से चली आ रही सुदृढ़ संसदीय परंपरा के अनुसार इसका अध्यक्ष लोकसभा में विपक्ष का नेता/सदस्य होता है।</li><li>कार्यप्रणाली की सीमाएं: यह केवल 'पोस्टमार्टम' जांच करती है (व्यय होने के बाद) और इसके सुझाव सरकार पर बाध्यकारी नहीं होते।</li>
                     </ul>
                 </div>
-                <div class="exam-tip-box"><strong>💡 परीक्षा टिप (Exam Tip):</strong> आरपीएससी मुख्य परीक्षा पेपर 3 में पीएसी की संरचना, कार्य और सीमाओं पर 5 या 10 अंक का प्रश्न पूछा जाना अत्यंत संभावित है।</div>
+                <div class="exam-tip-box"><strong>💡 परीक्षा टिप (Exam Tip):</strong> पीएसी के सदस्यों के चुनाव की विधि, सीएजी के साथ इसके संबंध ('मित्र, दार्शनिक एवं मार्गदर्शक') और शक्तियों पर RAS/UPSC Pre में प्रश्न आते हैं।</div>
             </div>
             
-            <div class="yt-card">
-                <div class="yt-header">
-                    <span class="badge badge-yt">📺 कोचिंग शिक्षक विश्लेषण</span>
-                    <span class="topic-title">अमेरिकी प्रतिबंध और भारत की रणनीतिक स्वायत्तता</span>
-                </div>
-                <div class="yt-explanation">
+            <div class="yt-explanation">
                     <strong>शिक्षक व्याख्यान एवं ट्रिक्स:</strong>
-                    <p>शिक्षक ने अमेरिकी प्रतिबंधों (जैसे CAATSA और नए तेल प्रतिबंध अधिनियम) के वैश्विक प्रभाव का विश्लेषण किया। भारत द्वारा रूस से रियायती दरों पर कच्चे तेल का आयात जारी रखने पर अमेरिका द्वितीयक प्रतिबंधों (Secondary Sanctions) की धमकी दे रहा है, जिससे भारत की कूटनीति की परीक्षा हो रही है।</p>
+                    <p>सैयद अकबरुद्दीन के संपादकीय का विश्लेषण करते हुए बताया कि अमेरिकी प्रतिबंधों (CAATSA व द्वितीयक प्रतिबंध) के बावजूद भारत ने अपने राष्ट्रीय हित में रूस से रियायती दर पर कच्चा तेल आयात जारी रखा, जो भारत की कूटनीतिक स्वायत्तता का प्रमाण है।</p>
                 </div>
                 <div class="key-args">
                     <strong>क्लास के मुख्य बिंदु (Key Lecture Points):</strong>
                     <ul>
-                        <li>द्वितीयक प्रतिबंध उन गैर-अमेरिकी संस्थाओं पर लागू होते हैं जो प्रतिबंधित देशों (जैसे रूस) के साथ व्यापार करती हैं।</li><li>भारत ने हमेशा 'रणनीतिक स्वायत्तता' का पालन किया है और राष्ट्रीय हितों को सर्वोपरि रखा है।</li><li>यह प्रतिबंध वैश्विक बहुध्रुवीय व्यवस्था और डॉलर के प्रभुत्व (De-dollarization) को चुनौती दे रहे हैं।</li>
+                        <li>ऊर्जा सुरक्षा प्राथमिकता: भारत अपनी कच्चे तेल की आवश्यकता का 80-85% आयात करता है; सस्ती ऊर्जा देश में मुद्रास्फीति नियंत्रण हेतु अनिवार्य है।</li><li>द्वितीयक प्रतिबंधों का दबाव: अमेरिका डॉलर प्रणाली और टैरिफ का उपयोग करके अन्य देशों पर व्यापारिक दबाव बनाता है।</li><li>बहुध्रुवीय कूटनीति: भारत किसी एक गुट का पिछलग्गू बने बिना राष्ट्रीय संप्रभुता और आर्थिक हितों को सर्वोपरि रखता है।</li>
                     </ul>
                 </div>
-                <div class="exam-tip-box"><strong>💡 परीक्षा टिप (Exam Tip):</strong> अंतर्राष्ट्रीय संबंधों में भारत-अमेरिका संबंधों के तनाव बिंदुओं को लिखते समय इस प्रतिबंधात्मक कूटनीति का समालोचनात्मक विश्लेषण अवश्य शामिल करें।</div>
+                <div class="exam-tip-box"><strong>💡 परीक्षा टिप (Exam Tip):</strong> अंतरराष्ट्रीय संबंधों में 'आर्थिक जबरदस्ती' (Economic Coercion) और भारत की 'रणनीतिक स्वायत्तता' पर 10-अंक का मेन्स प्रश्न तैयार करें।</div>
             </div>
             
-            <div class="yt-card">
-                <div class="yt-header">
-                    <span class="badge badge-yt">📺 कोचिंग शिक्षक विश्लेषण</span>
-                    <span class="topic-title">मणिपुर जातीय संघर्ष और सीमा प्रबंधन</span>
-                </div>
-                <div class="yt-explanation">
+            <div class="yt-explanation">
                     <strong>शिक्षक व्याख्यान एवं ट्रिक्स:</strong>
-                    <p>शिक्षक ने मणिपुर में कुकी-जो, मेइती और नगा समुदायों के बीच चल रहे जातीय संघर्ष के ऐतिहासिक और भौगोलिक कारणों को स्पष्ट किया। म्यांमार सीमा पर मुक्त आवागमन व्यवस्था (FMR) का निलंबन और सीमा पर तारबंदी (Fencing) इस संघर्ष को रोकने और ड्रग तस्करी सिंडिकेट को तोड़ने के लिए उठाए गए कदम हैं।</p>
+                    <p>प्रशांत सर ने मणिपुर में मेइती और कुकी-जो समुदायों के बीच चल रहे जातीय संघर्ष, म्यांमार सीमा से घुसपैठ, मुक्त आवागमन व्यवस्था (FMR) के निलंबन और 1643 किमी लंबी सीमा की पूर्ण बाड़बंदी (Fencing) का गहन विश्लेषण किया।</p>
                 </div>
                 <div class="key-args">
                     <strong>क्लास के मुख्य बिंदु (Key Lecture Points):</strong>
                     <ul>
-                        <li>संघर्ष के मुख्य कारण भूमि अधिकार, जनसांख्यिकीय परिवर्तन और अवैध प्रवासन हैं।</li><li>म्यांमार सीमा से होने वाली नशीली दवाओं की तस्करी (गोल्डन ट्राइएंगल का प्रभाव) आंतरिक सुरक्षा के लिए बड़ा खतरा है।</li><li>शांति बहाली के लिए सभी हितधारकों को शामिल करते हुए एक समावेशी कूटनीतिक मॉडल की आवश्यकता है।</li>
+                        <li>मूल कारण: अनुसूचित जनजाति (ST) दर्जे की मांग, घाटी (मेइती) बनाम पहाड़ी क्षेत्र (कुकी/नगा) में भूमि अधिकारों का तनाव।</li><li>सीमा प्रबंधन व बाह्य कारक: म्यांमार में गृहयुद्ध के कारण शरणार्थियों का आगमन, गोल्डन ट्रायंगल से नशीले पदार्थों (ड्रग्स) की तस्करी और सीमा पार उग्रवादी ठिकाने।</li><li>नीतिगत कदम: भारत सरकार द्वारा मुक्त आवागमन व्यवस्था (FMR) का औपचारिक निलंबन, भारत-म्यांमार सीमा पर स्मार्ट फेंसिंग का कार्य तेज करना।</li><li>दीर्घकालिक शांति मॉडल: स्वायत्त जिला परिषदों (ADC) का वित्तीय व प्रशासनिक सशक्तीकरण और सभी समुदायों का साझा संवाद मंच।</li>
                     </ul>
                 </div>
-                <div class="exam-tip-box"><strong>💡 परीक्षा टिप (Exam Tip):</strong> मुख्य परीक्षा के पेपर 3 (आंतरिक सुरक्षा) में पूर्वोत्तर भारत की सुरक्षा चुनौतियों और सीमा प्रबंधन पर उत्तर लिखते समय एफएमआर (FMR) निलंबन का उल्लेख अवश्य करें।</div>
+                <div class="exam-tip-box"><strong>💡 परीक्षा टिप (Exam Tip):</strong> UPSC GS3 / RAS Paper 3 (आंतरिक सुरक्षा) में पूर्वोत्तर सीमा प्रबंधन और जातीय उग्रवाद पर 10-अंक का प्रश्न पूछा जा सकता है।</div>
             </div>
             
-            <div class="yt-card">
-                <div class="yt-header">
-                    <span class="badge badge-yt">📺 कोचिंग शिक्षक विश्लेषण</span>
-                    <span class="topic-title">लेबनान पेजर विस्फोट और आपूर्ति शृंखला का शस्त्रीकरण</span>
-                </div>
-                <div class="yt-explanation">
+            <div class="yt-explanation">
                     <strong>शिक्षक व्याख्यान एवं ट्रिक्स:</strong>
-                    <p>शिक्षक ने लेबनान में पेजर और संचार उपकरणों में हुए शृंखलाबद्ध विस्फोटों का विश्लेषण किया। यह घटना दर्शाती है कि कैसे वैश्विक आपूर्ति शृंखला में तोड़फोड़ (Supply-chain sabotage) करके उसे एक घातक हथियार के रूप में इस्तेमाल किया जा सकता है। यह साइबर युद्ध और अंतरराष्ट्रीय मानवीय कानून (IHL) के उल्लंघन का एक नया और खतरनाक रूप है।</p>
+                    <p>चीन द्वारा ब्रह्मपुत्र (यारलंग जंगपो) नदी पर तिब्बत के मेडोग में 60,000 मेगावाट का विशाल जलविद्युत बांध बनाने की योजना के जवाब में भारत अरुणाचल प्रदेश में सियांग अपर बहुउद्देशीय परियोजना (11,000 मेगावाट) पर कार्य कर रहा है।</p>
                 </div>
                 <div class="key-args">
                     <strong>क्लास के मुख्य बिंदु (Key Lecture Points):</strong>
                     <ul>
-                        <li>आपूर्ति शृंखला का शस्त्रीकरण भविष्य के युद्धों का एक प्रमुख हिस्सा होगा, जहां हार्डवेयर स्तर पर ही वायरस या विस्फोटक स्थापित किए जा सकते हैं।</li><li>यह हमला अंधाधुंध था, जिसने नागरिक और सैन्य भेदों को धुंधला कर दिया, जो जिनेवा कन्वेंशन के सिद्धांतों के खिलाफ है।</li><li>भारत को अपने महत्वपूर्ण बुनियादी ढांचे और इलेक्ट्रॉनिक्स आयात के लिए 'विश्वसनीय स्रोतों' (Trusted Sources) पर निर्भरता बढ़ानी होगी।</li>
+                        <li>सामरिक जल सुरक्षा: यह बांध चीन द्वारा अचानक पानी छोड़े जाने (Flash Floods) या सूखा उत्पन्न करने की स्थिति में भारत के लिए वाटर कुशन का कार्य करेगा।</li><li>पर्यावरणीय व स्थानीय चिंताएं: भूकंपीय क्षेत्र (Seismic Zone V) और आदिवासियों के विस्थापन को लेकर स्थानीय विरोध को संबोधित करना आवश्यक।</li><li>अंतरराष्ट्रीय जल कूटनीति: लोअर रिपेरियन (निचले तटवर्ती) राज्य के रूप में भारत को डेटा-साझाकरण और पारदर्शी जल संधियों की मांग रखनी होगी।</li>
                     </ul>
                 </div>
-                <div class="exam-tip-box"><strong>💡 परीक्षा टिप (Exam Tip):</strong> साइबर सुरक्षा और आधुनिक युद्ध तकनीकों (Asymmetric Warfare) पर पूछे जाने वाले प्रश्नों में इस केस स्टडी का उपयोग करें।</div>
+                <div class="exam-tip-box"><strong>💡 परीक्षा टिप (Exam Tip):</strong> भू-राजनीति में 'हाइड्रो-हेजेमनी' (Hydro-Hegemony) और भारत-चीन नदी जल विवाद पर मेन्स 5-अंक व 10-अंक प्रश्न।</div>
             </div>
             
-            <div class="yt-card">
-                <div class="yt-header">
-                    <span class="badge badge-yt">📺 कोचिंग शिक्षक विश्लेषण</span>
-                    <span class="topic-title">सियांग नदी बांध परियोजना और चीन की चुनौती</span>
-                </div>
-                <div class="yt-explanation">
+            <div class="yt-explanation">
                     <strong>शिक्षक व्याख्यान एवं ट्रिक्स:</strong>
-                    <p>शिक्षक ने अरुणाचल प्रदेश में प्रस्तावित सियांग ऊपरी जलविद्युत परियोजना के महत्व को रेखांकित किया। चीन द्वारा ब्रह्मपुत्र नदी (यारलुंग त्सांगपो) पर बनाए जा रहे विशाल बांधों के जवाब में भारत इस परियोजना को गति दे रहा है ताकि जल विज्ञान संबंधी डेटा और जल अधिकारों (Prior Appropriation Rights) पर अपना दावा मजबूत कर सके।</p>
+                    <p>शिक्षक ने आधुनिक युद्धकला में इलेक्ट्रॉनिक्स और आपूर्ति श्रृंखला में तोड़फोड़ (Supply Chain Sabotage) के अभूतपूर्व आयाम की व्याख्या की। पेजर और वॉकी-टॉकी जैसे सामान्य संचार उपकरणों में विनिर्माण या पारगमन स्तर पर सैन्य-ग्रेड विस्फोटक (PETN) स्थापित करके उन्हें रिमोट डेटोनेटर में बदल दिया गया।</p>
                 </div>
                 <div class="key-args">
                     <strong>क्लास के मुख्य बिंदु (Key Lecture Points):</strong>
                     <ul>
-                        <li>चीन द्वारा नदी के मार्ग को मोड़ने या अचानक पानी छोड़ने (कृत्रिम बाढ़) के खतरे को कम करने के लिए सियाण बांध में बड़ी भंडारण क्षमता होगी।</li><li>यह परियोजना पूर्वोत्तर भारत में बाढ़ नियंत्रण और जल सुरक्षा के लिए रणनीतिक रूप से अत्यंत महत्वपूर्ण है।</li><li>स्थानीय जनजातीय समुदायों के विस्थापन और पर्यावरणीय चिंताओं का समाधान करना इस परियोजना की मुख्य चुनौती है।</li>
+                        <li>आपूर्ति शृंखला का शस्त्रीकरण: वैश्वीकृत उत्पादन नेटवर्क में जब हार्डवेयर घटकों में गुप्त रूप से छेड़छाड़ की जाती है, तो संपूर्ण तकनीक असुरक्षित हो जाती है।</li><li>साइबर-भौतिक युद्ध (Cyber-Physical Warfare): केवल सॉफ्टवेयर हैकिंग तक सीमित न रहकर डिजिटल सिग्नल के माध्यम से भौतिक विस्फोट और मानवीय क्षति पहुंचाना।</li><li>अंतरराष्ट्रीय मानवीय कानून (IHL): नागरिक उपयोग वाले दैनिक उपकरणों (Booby Traps) का अंधाधुंध शस्त्रीकरण युद्ध अपराधों की श्रेणी में आता है।</li><li>भारत के लिए सुरक्षा सीख: महत्वपूर्ण राष्ट्रीय अवसंरचना और रक्षा संचार में हार्डवेयर की स्वदेशी संप्रभुता (Hardware Sovereignty) अनिवार्य है।</li>
                     </ul>
                 </div>
-                <div class="exam-tip-box"><strong>💡 परीक्षा टिप (Exam Tip):</strong> भू-राजनीति और जल-कूटनीति (Water Diplomacy) के तहत भारत-चीन संबंधों में ब्रह्मपुत्र नदी विवाद पर उत्तर तैयार करें।</div>
+                <div class="exam-tip-box"><strong>💡 परीक्षा टिप (Exam Tip):</strong> UPSC GS3 (साइबर सुरक्षा) और RAS Paper 2 (विज्ञान व तकनीकी) में असंगत युद्ध (Asymmetric Warfare) और हार्डवेयर संप्रभुता पर केस स्टडी।</div>
             </div>
             
-            <div class="yt-card">
-                <div class="yt-header">
-                    <span class="badge badge-yt">📺 कोचिंग शिक्षक विश्लेषण</span>
-                    <span class="topic-title">कक्षा अभ्यास प्रश्न, प्रीलिम्स ट्रिक्स व मेन्स उत्तर संरचना</span>
-                </div>
-                <div class="yt-explanation">
+            <div class="yt-explanation">
                     <strong>शिक्षक व्याख्यान एवं ट्रिक्स:</strong>
                     <p>कक्षा के समापन सत्र में शिक्षक ने छात्रों के साथ द हिंदू और एक्सप्रेस के विषयों पर आधारित प्रारंभिक परीक्षा के संभावित बहुविकल्पीय प्रश्न (MCQs) और मुख्य परीक्षा के उत्तर प्रारूपण पर चरणबद्ध मार्गदर्शन प्रदान किया।</p>
                 </div>
@@ -432,37 +546,25 @@
             <div class="sujas-card">
                 <div class="sujas-header">
                     <span class="badge badge-sujas">राजस्थान सुजस विशेष</span>
-                    <strong>स्वायत्त शासन एवं पंचायती राज विभाग, राजस्थान</strong>
+                    <strong>चिकित्सा एवं स्वास्थ्य विभाग, राजस्थान सरकार</strong>
                 </div>
-                <h3>पंचायती राज चुनाव लॉटरी स्थगन एवं प्रशासनिक निर्णय</h3>
+                <h3>जयपुर से छोटे शहरों तक आधुनिक चिकित्सा नेटवर्क का विस्तार</h3>
                 <ul>
-                    <li>राजस्थान में आगामी पंचायती राज संस्थाओं के चुनावों हेतु वार्डों और पदों के आरक्षण के लिए निकाली जाने वाली लॉटरी को अपरिहार्य कारणों से स्थगित कर दिया गया है।</li><li>राज्य सरकार नए परिसीमन और जनसांख्यिकीय आंकड़ों के आधार पर आरक्षण श्रेणियों की समीक्षा कर रही है।</li><li>इसका उद्देश्य स्थानीय स्वशासन में समाज के सभी वर्गों को न्यायसंगत और पारदर्शी प्रतिनिधित्व प्रदान करना है।</li>
+                    <li>राजस्थान सरकार और निजी क्षेत्र मिलकर राज्य में एक सुदृढ़ 'हेल्ड नेटवर्क' का निर्माण करेंगे, जिससे जयपुर जैसी आधुनिक चिकित्सा सुविधाएं संभाग और जिला स्तर के छोटे शहरों तक सुलभ होंगी।</li><li>पीपीपी (सार्वजनिक-निजी भागीदारी) मॉडल के तहत ग्रामीण और अर्ध-शहरी क्षेत्रों में सुपर-स्पेशियलिटी स्वास्थ्य सेवाओं का बुनियादी ढांचा विकसित किया जाएगा।</li><li>इसका उद्देश्य मरीजों का बड़े शहरों की ओर पलायन रोकना और स्थानीय स्तर पर त्वरित इलाज सुनिश्चित करना है।</li>
                 </ul>
-                <div class="relevance-box"><strong>RPSC महत्व:</strong> RAS Mains Paper 3 (इकाई 2: स्थानीय स्वशासन और पंचायती राज) हेतु महत्वपूर्ण।</div>
+                <div class="relevance-box"><strong>RPSC महत्व:</strong> RAS Mains Paper 3 (स्वास्थ्य देखभाल नीतियां और बुनियादी ढांचा) हेतु अत्यंत महत्वपूर्ण।</div>
             </div>
             
             <div class="sujas-card">
                 <div class="sujas-header">
                     <span class="badge badge-sujas">राजस्थान सुजस विशेष</span>
-                    <strong>पशुपालन विभाग, राजस्थान सरकार</strong>
+                    <strong>आयोजना एवं पंचायती राज विभाग, राजस्थान</strong>
                 </div>
-                <h3>लंपी त्वचा रोग (Lumpy Skin Disease) नियंत्रण हेतु सख्त निर्देश</h3>
+                <h3>पन्नाधाय बाल गोपाल योजना एवं किशाऊ परियोजना निर्णय</h3>
                 <ul>
-                    <li>राज्य में पशुओं में लंपी बीमारी के संभावित प्रसार को रोकने के लिए पशुपालन विभाग ने जिला स्तरीय नियंत्रण कक्ष स्थापित किए हैं।</li><li>पशुपालकों को मुफ्त टीकाकरण, औषधियां और आपातकालीन चिकित्सा सहायता प्रदान करने के निर्देश दिए गए हैं।</li><li>पशु मेलों के आयोजन और अंतर-राज्यीय पशु परिवहन पर अस्थायी प्रतिबंध और निगरानी बढ़ा दी गई है।</li>
+                    <li>राजस्थान सुजस बुलेटिन के अनुसार, पंचायती राज लॉटरी को अपरिहार्य कारणों से स्थगित किया गया है।</li><li>बहुउद्देशीय 'किशाऊ बांध परियोजना' के त्वरित क्रियान्वयन और जल बंटवारे को लेकर नीतिगत निर्णय लिए गए हैं, जिससे राजस्थान के शुष्क क्षेत्रों को पेयजल और सिंचाई जल प्राप्त होगा।</li><li>जनजाति कल्याण योजनाओं के तहत अनुसूचित क्षेत्रों (TSP) में शिक्षा और स्वरोजगार के लिए विशेष बजटीय आवंटन को मंजूरी दी गई है।</li>
                 </ul>
-                <div class="relevance-box"><strong>RPSC महत्व:</strong> RAS Mains Paper 1 (राजस्थान की अर्थव्यवस्था - कृषि एवं पशुपालन) हेतु प्रासंगिक।</div>
-            </div>
-            
-            <div class="sujas-card">
-                <div class="sujas-header">
-                    <span class="badge badge-sujas">राजस्थान सुजस विशेष</span>
-                    <strong>चिकित्सा एवं स्वास्थ्य विभाग, राजस्थान</strong>
-                </div>
-                <h3>जयपुर-कोटा-जोधपुर हेल्थ नेटवर्क मॉडल</h3>
-                <ul>
-                    <li>राजस्थान सरकार सार्वजनिक-निजी भागीदारी (PPP) मॉडल के तहत राज्य के बड़े शहरों (जयपुर, जोधपुर) से लेकर छोटे कस्बों तक आधुनिक चिकित्सा सुविधाओं का विस्तार करने के लिए एक एकीकृत 'हेल्थ नेटवर्क' बना रही है।</li><li>इसके तहत सुपर-स्पेशियलिटी अस्पतालों को जिला अस्पतालों और प्राथमिक स्वास्थ्य केंद्रों (PHCs) से टेली-मेडिसिन और रेफरल सिस्टम के जरिए जोड़ा जाएगा।</li><li>इसका उद्देश्य ग्रामीण क्षेत्रों के मरीजों को स्थानीय स्तर पर ही गंभीर बीमारियों का गुणवत्तापूर्ण इलाज उपलब्ध कराना है।</li>
-                </ul>
-                <div class="relevance-box"><strong>RPSC महत्व:</strong> RAS Mains Paper 3 (स्वास्थ्य देखभाल और सामाजिक सुरक्षा योजनाएं) हेतु अत्यंत महत्वपूर्ण।</div>
+                <div class="relevance-box"><strong>RPSC महत्व:</strong> RAS Pre और Mains दोनों के लिए सरकारी योजनाओं और जल परियोजनाओं के अंतर्गत प्रासंगिक।</div>
             </div>
             
 
@@ -471,49 +573,33 @@
             <div class="editorial-card">
                 <div class="editorial-header">
                     <span class="badge badge-ed">The Hindu</span>
-                    <span class="syllabus-tag">GS2 / RAS Paper 3 - अंतर्राष्ट्रीय संबंध</span>
+                    <span class="syllabus-tag">GS2 / RAS Paper 3 (अंतरराष्ट्रीय संबंध)</span>
                 </div>
-                <h3>Serious escalation: On the U.S., Russia Sanctions Act and India</h3>
-                <p class="context"><strong>समसामयिक संदर्भ:</strong> अमेरिका द्वारा रूसी तेल आयात करने वाले देशों पर 100% तक दंडात्मक शुल्क लगाने संबंधी नया सख्त कानून पारित किया गया है, जिससे भारत-अमेरिका-रूस त्रिकोणीय संबंधों में तनाव बढ़ गया है।</p>
+                <h3>गंभीर तनाव: अमेरिकी प्रतिबंध अधिनियम, रूसी तेल और भारत की रणनीतिक स्वायत्तता</h3>
+                <p class="context"><strong>समसामयिक संदर्भ:</strong> अमेरिका द्वारा रूसी तेल आयातों पर नए और कड़े प्रतिबंध कानूनों को लागू करने से भारत-अमेरिका संबंधों और भारत की ऊर्जा सुरक्षा पर दबाव बढ़ रहा है।</p>
                 <div class="key-args">
                     <strong>सम्पादकीय का पूरा सार एवं तर्क (Deep Dive Takeaways):</strong>
                     <ul>
-                        <li>नया अमेरिकी कानून राष्ट्रपति को रूसी कच्चे तेल के खरीदारों (विशेष रूप से भारत और चीन) पर भारी शुल्क लगाने का कानूनी अधिकार देता है।</li><li>यह कानून पूर्ववर्ती प्रतिबंधों की तुलना में अधिक कानूनी और आर्थिक प्रभाव रखता है, जो वैश्विक ऊर्जा व्यापार को बाधित कर सकता है।</li><li>भारतीय रिफाइनरियों द्वारा रूसी तेल के आयात में कटौती करने की संभावना बढ़ गई है ताकि वे अमेरिकी बाजार में अपने निर्यात को सुरक्षित रख सकें।</li><li>यह कदम भारत की रणनीतिक स्वायत्तता और स्वतंत्र विदेश नीति के समक्ष एक गंभीर कूटनीतिक चुनौती प्रस्तुत करता है।</li>
+                        <li>नया अमेरिकी कानून रूसी तेल आयात पर कड़े कानूनी प्रतिबंध लगाता है, जिससे भारत जैसे देशों के लिए रूस से रियायती दरों पर कच्चा तेल खरीदना जटिल हो गया है।</li><li>अमेरिका द्वारा द्वितीयक प्रतिबंधों (Secondary Sanctions) और 100% तक टैरिफ लगाने की धमकियों से भारत के निर्यात क्षेत्र (जो 20% अमेरिकी बाजार पर निर्भर है) को नुकसान पहुंच सकता है।</li><li>भारत के लिए अपनी राष्ट्रीय सुरक्षा और आर्थिक हितों को ध्यान में रखते हुए रूस से तेल आयात जारी रखना एक रणनीतिक मजबूरी है, जिसे वह अमेरिकी दबाव में पूरी तरह छोड़ नहीं सकता।</li><li>यह स्थिति भारत की 'रणनीतिक स्वायत्तता' (Strategic Autonomy) की परीक्षा लेती है, जहां उसे पश्चिम के साथ साझेदारी और यूरेशियाई देशों के साथ अपने पारंपरिक संबंधों के बीच संतुलन बनाना होगा।</li>
                     </ul>
                 </div>
-                <div class="way-forward"><strong>आगे की राह (Way Forward):</strong> भारत को अपनी ऊर्जा सुरक्षा सुनिश्चित करने के लिए कच्चे तेल के आयात स्रोतों का विविधीकरण करना चाहिए, साथ ही अमेरिका के साथ कूटनीतिक बातचीत के जरिए छूट (Waiver) प्राप्त करने का प्रयास करना चाहिए।</div>
+                <div class="way-forward"><strong>आगे की राह (Way Forward):</strong> भारत को अपनी ऊर्जा टोकरी का विविधीकरण करना चाहिए, स्थानीय मुद्राओं में व्यापार निपटान प्रणालियों को मजबूत करना चाहिए और अमेरिका के साथ कूटनीतिक वार्ताओं के माध्यम से 'काटसा' (CAATSA) जैसी छूट प्राप्त करने के प्रयास जारी रखने चाहिए।</div>
             </div>
             
             <div class="editorial-card">
                 <div class="editorial-header">
-                    <span class="badge badge-ed">LiveMint</span>
-                    <span class="syllabus-tag">GS3 / RAS Paper 1 - सामाजिक-आर्थिक विकास</span>
+                    <span class="badge badge-ed">Down To Earth</span>
+                    <span class="syllabus-tag">GS3 / RAS Paper 2 (पर्यावरण एवं वैश्विक मुद्दे)</span>
                 </div>
-                <h3>Demographic U-turn: Indian states are reversing their population policies</h3>
-                <p class="context"><strong>समसामयिक संदर्भ:</strong> भारत के कई राज्य अपनी जनसंख्या नियंत्रण नीतियों को उलट रहे हैं और प्रजनन दर में गिरावट को रोकने के लिए जनसांख्यिकीय समर्थक (Pro-natalist) नीतियां अपना रहे हैं।</p>
+                <h3>डेटा सेंटर और कॉर्पोरेट हित बनाम सामुदायिक अधिकार: चिली के मोसाकैट (MOSACAT) आंदोलन से सीख</h3>
+                <p class="context"><strong>समसामयिक संदर्भ:</strong> चिली के सेरिलोस में स्थानीय समुदाय (MOSACAT) द्वारा गूगल के $200 मिलियन के डेटा सेंटर प्रोजेक्ट के खिलाफ सफल प्रतिरोध ने वैश्विक स्तर पर डिजिटल औपनिवेशिक नीतियों और जल अधिकारों पर बहस छेड़ दी है।</p>
                 <div class="key-args">
                     <strong>सम्पादकीय का पूरा सार एवं तर्क (Deep Dive Takeaways):</strong>
                     <ul>
-                        <li>वैश्विक स्तर पर माल्थस-विरोधी नीतियां अपनाई जा रही हैं, और अब भारतीय राज्य भी इसी राह पर चल रहे हैं ताकि भविष्य में कार्यबल की कमी न हो।</li><li>केवल वित्तीय प्रोत्साहन या 'बेबी बोनस' देने से जन्म दर में अपेक्षित सुधार नहीं होता है, जैसा कि विकसित देशों के अनुभवों से स्पष्ट है।</li><li>कामकाजी महिलाओं के लिए कार्यस्थल पर बेहतर बुनियादी ढांचा, जैसे गुणवत्तापूर्ण शिशु देखभाल (Creche) और सवैतनिक माता-पिता अवकाश अधिक प्रभावी सिद्ध होते हैं।</li><li>जनसंख्या नीति में अचानक बदलाव करने के बजाय दीर्घकालिक सामाजिक सुरक्षा और लैंगिक समानता पर ध्यान केंद्रित किया जाना चाहिए।</li>
+                        <li>गूगल के डेटा सेंटर के लिए प्रति सेकंड 169 लीटर पानी की आवश्यकता थी, जिससे सूखे से जूझ रहे चिली के स्थानीय एक्विफर (जलभृत) के समाप्त होने का खतरा था।</li><li>राज्य मशीनरी और पर्यावरण नियामक संस्थाओं द्वारा कॉर्पोरेट हितों के पक्ष में नियमों को शिथिल किया गया और विस्तृत पर्यावरणीय प्रभाव अध्ययन (EIS) के बजाय त्वरित घोषणाओं (EID) को मंजूरी दी गई।</li><li>डेटा सेंटरों से स्थानीय स्तर पर रोजगार के अत्यंत सीमित अवसर (केवल 50-60 कुशल नौकरियां) पैदा होते हैं, जबकि इसके पर्यावरणीय नुकसान (जैसे 10 किमी के दायरे में 9 डिग्री तक तापमान बढ़ना - हीट आइलैंड प्रभाव) बहुत अधिक हैं।</li><li>वैश्विक दक्षिण (Global South) के देशों को वैश्विक उत्तर (Global North) के डेटा भंडारण के लिए अपने प्राकृतिक संसाधनों (पानी और बिजली) की बलि देने के लिए मजबूर किया जा रहा है, जो एक प्रकार का 'डिजिटल उपनिवेशवाद' है।</li>
                     </ul>
                 </div>
-                <div class="way-forward"><strong>आगे की राह (Way Forward):</strong> राज्यों को केवल जनसांख्यिकीय संख्या बढ़ाने के बजाय मानव पूंजी की गुणवत्ता, महिला श्रम बल भागीदारी और बाल देखभाल सहायता प्रणालियों को मजबूत करने पर निवेश करना चाहिए।</div>
-            </div>
-            
-            <div class="editorial-card">
-                <div class="editorial-header">
-                    <span class="badge badge-ed">LiveMint</span>
-                    <span class="syllabus-tag">GS3 / RAS Paper 1 - वैश्विक अर्थव्यवस्था एवं व्यापार</span>
-                </div>
-                <h3>India’s China dilemma is about capability, not import reduction</h3>
-                <p class="context"><strong>समसामयिक संदर्भ:</strong> भारत और चीन के बीच व्यापारिक असंतुलन और रणनीतिक प्रतिस्पर्धा के संदर्भ में भारत की नीति केवल आयात कम करने पर नहीं, बल्कि घरेलू क्षमता निर्माण पर केंद्रित होनी चाहिए।</p>
-                <div class="key-args">
-                    <strong>सम्पादकीय का पूरा सार एवं तर्क (Deep Dive Takeaways):</strong>
-                    <ul>
-                        <li>चीन से आयात कम करना अपने आप में कोई अंतिम समाधान नहीं है; वास्तविक सुरक्षा जोखिमों को कम करना (De-risking) महत्वपूर्ण है।</li><li>जोखिम कम करने की सफलता इस बात से मापी जानी चाहिए कि क्या हम चीनी निर्भरता को घरेलू विनिर्माण क्षमता में बदल पा रहे हैं।</li><li>सक्रिय दवा सामग्री (API), इलेक्ट्रॉनिक्स और सौर घटकों जैसे रणनीतिक क्षेत्रों में आत्मनिर्भरता हासिल करना भारत के लिए अनिवार्य है।</li><li>घरेलू उद्योगों को वैश्विक स्तर पर प्रतिस्पर्धी बनाने के लिए अनुसंधान और विकास (R&D) तथा बुनियादी ढांचे में भारी निवेश की आवश्यकता है।</li>
-                    </ul>
-                </div>
-                <div class="way-forward"><strong>आगे की राह (Way Forward):</strong> भारत को एक व्यावहारिक दृष्टिकोण अपनाना चाहिए जहां चीनी कच्चे माल का उपयोग करके मूल्य संवर्धन किया जाए और अंतिम उत्पादों का निर्यात कर रणनीतिक स्वायत्तता हासिल की जाए।</div>
+                <div class="way-forward"><strong>आगे की राह (Way Forward):</strong> भारत जैसे तेजी से बढ़ते डेटा सेंटर बाजारों को परियोजनाओं की मंजूरी के लिए स्थानीय समुदायों की 'बाध्यकारी भागीदारी' (Binding Community Participation) सुनिश्चित करनी चाहिए और सख्त जल-ऊर्जा ऑडिट कानून लागू करने चाहिए।</div>
             </div>
             
 
@@ -521,29 +607,56 @@
             <div class="mains-card" style="border-left: 8px solid #0284c7; margin-bottom: 25px;">
                 <div class="mains-header">
                     <span class="badge" style="background:#0284c7; color:white;">5 अंक (~50 शब्द)</span>
-                    <span class="badge" style="background:#1e3a8a; color:white;">RPSC RAS Exam Prep</span>
-                    <span class="subject-tag">Paper 1 - राजस्थान का इतिहास, कला एवं संस्कृति</span>
+                    <span class="badge" style="background:#1e3a8a; color:white;">@Rajasthan_History_Polity_Culture</span>
+                    <span class="subject-tag">Paper 1 (Unit 1: राजस्थान का इतिहास, कला, संस्कृति, साहित्य, परंपरा और विरासत)</span>
                 </div>
-                <h3 class="question-text">प्रश्न: राजस्थान के लोक देवताओं में से किन्हें 'चार हाथों वाले देवता' के रूप में पूजा जाता है और उनका ऐतिहासिक संदर्भ क्या है?</h3>
+                <h3 class="question-text">प्रश्न: रतवाई लोक गीत किस क्षेत्र में गाए जाते हैं?</h3>
                 <div class="answer-box">
                     <strong class="ans-label">उत्तर ढांचा एवं विस्तृत नोट्स (~50 शब्द):</strong>
-                    <div class="answer-content">1. सही उत्तर एवं मुख्य तथ्य: वीर कल्लाजी राठौड़ को 'चार हाथों वाले लोक देवता' के रूप में पूजा जाता है।<br>2. ऐतिहासिक संदर्भ: 1567-68 ई. में अकबर द्वारा चित्तौड़गढ़ दुर्ग के घेराव के दौरान, कल्लाजी ने अपने घायल चाचा जयमल मेड़तिया को अपने कंधों पर बिठाकर युद्ध लड़ा था, जिससे युद्ध मैदान में उनके चार हाथ दिखाई दे रहे थे। वे लड़ते हुए वीरगति को प्राप्त हुए।<br>3. RPSC प्रासंगिकता: राजस्थान की कला, संस्कृति और इतिहास (पेपर 1) के तहत लोक देवताओं पर अक्सर प्रश्न पूछे जाते हैं।</div>
+                    <div class="answer-content">1. सही उत्तर एवं मुख्य तथ्य: मेवात क्षेत्र (अलवर और भरतपुर)। रतवाई लोक गीत मुख्य रूप से मेव समुदाय की महिलाओं द्वारा वर्षा ऋतु या विवाह के अवसरों पर गाया जाने वाला एक अत्यंत लोकप्रिय लोकगीत है।<br>2. सांस्कृतिक संदर्भ: यह गीत सामूहिक रूप से गाया जाता है और इसके साथ 'रणबाजा' और 'खारी' नृत्य भी किया जाता है, जो मेवात की अनूठी सांस्कृतिक पहचान को दर्शाता है।<br>3. RPSC परीक्षा प्रासंगिकता: RPSC RAS मुख्य परीक्षा के पेपर-1 (राजस्थान की कला एवं संस्कृति) के तहत लोकगीत और लोकनृत्य खंड के लिए यह एक महत्वपूर्ण लघुउत्तरीय विषय है।</div>
                 </div>
             </div>
             
             <div class="mains-card" style="border-left: 8px solid #0284c7; margin-bottom: 25px;">
                 <div class="mains-header">
                     <span class="badge" style="background:#0284c7; color:white;">5 अंक (~50 शब्द)</span>
-                    <span class="badge" style="background:#1e3a8a; color:white;">RPSC RAS Exam Prep</span>
-                    <span class="subject-tag">Paper 1 - राजस्थान का भूगोल</span>
+                    <span class="badge" style="background:#1e3a8a; color:white;">@Rajasthan_History_Polity_Culture</span>
+                    <span class="subject-tag">Paper 1 (Unit 1: राजस्थानी भाषा और साहित्य)</span>
                 </div>
-                <h3 class="question-text">प्रश्न: राजस्थान की 'किशाऊ परियोजना' क्या है और इसके लाभार्थी राज्य कौन-कौन से हैं?</h3>
+                <h3 class="question-text">प्रश्न: राजस्थानी गद्य और पद्य की विधाओं में 'वचनिका' से क्या तात्पर्य है?</h3>
                 <div class="answer-box">
                     <strong class="ans-label">उत्तर ढांचा एवं विस्तृत नोट्स (~50 शब्द):</strong>
-                    <div class="answer-content">1. सही उत्तर एवं मुख्य तथ्य: किशाऊ परियोजना टोंस नदी पर प्रस्तावित एक बहुउद्देश्यीय राष्ट्रीय परियोजना है।<br>2. नीतिगत संदर्भ: यह उत्तराखंड और हिमाचल प्रदेश की सीमा पर स्थित है। इससे राजस्थान, हरियाणा, दिल्ली, उत्तर प्रदेश, उत्तराखंड और हिमाचल प्रदेश को पेयजल और सिंचाई हेतु जल प्राप्त होगा।<br>3. RPSC प्रासंगिकता: आरपीएससी मुख्य परीक्षा के पेपर 1 (राजस्थान का भूगोल - बहुउद्देश्यीय परियोजनाएं) के लिए यह एक अत्यंत महत्वपूर्ण समसामयिक विषय है।</div>
+                    <div class="answer-content">1. सही उत्तर एवं मुख्य तथ्य: 'वचनिका' राजस्थानी साहित्य की एक गद्य-पद्य मिश्रित (चंपू काव्य) विधा है, जो किसी ऐतिहासिक व्यक्ति, राजवंश की उपलब्धियों, वीरतापूर्ण युद्धों या महत्वपूर्ण घटनाओं पर प्रकाश डालती है।<br>2. साहित्यिक संदर्भ: यह विधा तुकबंदी युक्त और काव्यात्मक होती है। 'अचलदास खींची री वचनिका' (शिवदास गाडण द्वारा रचित) राजस्थानी साहित्य की सबसे प्रसिद्ध और प्राचीनतम वचनिका मानी जाती है।<br>3. RPSC परीक्षा प्रासंगिकता: RAS मुख्य परीक्षा में राजस्थानी साहित्य की विभिन्न विधाओं (जैसे वात, वेली, वचनिका, ख्यात) पर सीधे 2-अंक या 5-अंक के प्रश्न पूछे जाते हैं।</div>
                 </div>
             </div>
             
     </div>
+
+    <script>
+        function setFontSize(size) {
+            document.documentElement.style.setProperty('--base-font-size', size + 'px');
+            localStorage.setItem('ras_notes_font_size', size);
+            document.querySelectorAll('.toolbar-btns .t-btn').forEach(b => {
+                if (b.innerText.includes(size + 'px')) b.classList.add('active');
+                else if (b.innerText.includes('px')) b.classList.remove('active');
+            });
+        }
+
+        function toggleTheme(theme) {
+            document.body.classList.remove('dark-mode', 'sepia-mode');
+            if (theme === 'dark') document.body.classList.add('dark-mode');
+            else if (theme === 'sepia') document.body.classList.add('sepia-mode');
+            localStorage.setItem('ras_notes_theme', theme);
+        }
+
+        // Load saved preferences
+        (function() {
+            const savedSize = localStorage.getItem('ras_notes_font_size') || 26;
+            setFontSize(savedSize);
+            const savedTheme = localStorage.getItem('ras_notes_theme');
+            if (savedTheme) toggleTheme(savedTheme);
+        })();
+    </script>
+
 </body>
 </html>
