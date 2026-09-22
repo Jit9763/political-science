@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RAS & UPSC Daily Notes - 2026-09-22</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style id="customStyle">
+        :root {
+            --base-font-size: 24px;
+            --base-line-height: 1.85;
+            --primary: #1e1b4b;
+            --primary-light: #2563eb;
+            --secondary: #0f766e;
+            --accent-gold: #b45309;
+            --accent-purple: #6b21a8;
+            --accent-red: #9f1239;
+            --bg-main: #f8fafc;
+            --card-bg: #ffffff;
+            --text-dark: #020617;
+            --border-color: #cbd5e1;
+            --box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+        }
+
+        body.dark-mode {
+            --bg-main: #090d16;
+            --card-bg: #111827;
+            --text-dark: #f8fafc;
+            --border-color: #374151;
+            --box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+        }
+
+        body.sepia-mode {
+            --bg-main: #fbf0d9;
+            --card-bg: #fffdf7;
+            --text-dark: #2d2215;
+            --border-color: #e2d3b5;
+        }
+
+        body {
+            font-family: 'Noto Sans Devanagari', 'Segoe UI', Tahoma, sans-serif;
+            background-color: var(--bg-main);
+            color: var(--text-dark);
+            margin: 0;
+            padding: 25px;
+            line-height: var(--base-line-height);
+            font-size: var(--base-font-size);
+            transition: background-color 0.2s, font-size 0.15s;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* Eye-Comfort High Definition Typography */
+        p, li, div, span, td, th {
+            font-size: var(--base-font-size);
+            line-height: var(--base-line-height);
+        }
+
+        b, strong {
+            color: #b91c1c;
+            font-weight: 800;
+        }
+        body.dark-mode b, body.dark-mode strong {
+            color: #f87171;
+        }
+
+        .blue-highlight {
+            color: #1e3a8a;
+            font-weight: 800;
+        }
+        body.dark-mode .blue-highlight {
+            color: #60a5fa;
+        }
+
+        .container {
+            max-width: 1300px;
+            margin: 0 auto;
+        }
+
+        /* Sticky Eye-Comfort Controls Toolbar */
+        .reader-toolbar {
+            position: sticky;
+            top: 15px;
+            z-index: 999;
+            background: rgba(15, 23, 42, 0.95);
+            backdrop-filter: blur(10px);
+            color: white;
+            padding: 12px 24px;
+            border-radius: 50px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+            margin-bottom: 25px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 12px;
+            border: 2px solid #334155;
+        }
+
+        .toolbar-title {
+            font-size: 19px;
+            font-weight: 800;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .toolbar-btns {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .t-btn {
+            background: #1e293b;
+            color: white;
+            border: 1px solid #475569;
+            padding: 8px 16px;
+            border-radius: 25px;
+            font-size: 16px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.2s;
+            font-family: inherit;
+        }
+
+        .t-btn:hover, .t-btn.active {
+            background: #2563eb;
+            border-color: #60a5fa;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 10px rgba(37,99,235,0.4);
+        }
+
+        .header {
+            background: linear-gradient(135deg, #09090b 0%, #1e1b4b 50%, #0f766e 100%);
+            color: white;
+            padding: 35px 40px;
+            border-radius: 20px;
+            box-shadow: 0 15px 30px -5px rgba(0,0,0,0.25);
+            margin-bottom: 35px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border: 3px solid #3b82f6;
+        }
+        .header h1 { margin: 0 0 10px 0; font-size: 36px; font-weight: 900; letter-spacing: -0.5px; }
+        .header p { margin: 0; opacity: 0.95; font-size: 22px; font-weight: 600; }
+
+        /* Large Chapter 7 Style Section Headers */
+        .section-title {
+            font-size: 32px;
+            font-weight: 900;
+            margin: 45px 0 25px 0;
+            padding: 18px 26px;
+            background: var(--card-bg);
+            border-radius: 14px;
+            border-left: 14px solid var(--primary-light);
+            box-shadow: var(--box-shadow);
+            color: var(--text-dark);
+            border-top: 1px solid var(--border-color);
+            border-right: 1px solid var(--border-color);
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .badge {
+            padding: 8px 16px;
+            border-radius: 10px;
+            font-size: 17px;
+            font-weight: 800;
+            color: white;
+            display: inline-block;
+        }
+        .badge-pre { background-color: var(--accent-gold); }
+        .badge-raj { background-color: var(--accent-purple); }
+        .badge-5m { background-color: #0284c7; }
+        .badge-10m { background-color: #4338ca; }
+        .badge-sujas { background-color: #0d9488; }
+        .badge-ed { background-color: var(--accent-red); }
+        .badge-yt { background-color: #dc2626; }
+
+        /* Big, Comfortable Eye-Friendly Cards */
+        .fact-card, .mains-card, .sujas-card, .editorial-card, .yt-card {
+            background: var(--card-bg);
+            border-radius: 18px;
+            padding: 32px;
+            margin-bottom: 30px;
+            box-shadow: var(--box-shadow);
+            border: 2px solid var(--border-color);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .fact-card:hover, .mains-card:hover, .sujas-card:hover, .editorial-card:hover, .yt-card:hover {
+            box-shadow: 0 12px 28px rgba(0,0,0,0.1);
+        }
+
+        .fact-card { border-left: 14px solid var(--accent-gold); }
+        .mains-card { border-left: 14px solid #4338ca; }
+        .sujas-card { border-left: 14px solid var(--accent-purple); }
+        .editorial-card { border-left: 14px solid var(--accent-red); }
+        .yt-card { border-left: 14px solid #dc2626; background: var(--card-bg); }
+
+        .card-header, .mains-header, .sujas-header, .editorial-header, .yt-header {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 16px;
+            flex-wrap: wrap;
+        }
+        .topic-title { font-weight: 900; font-size: 26px; color: var(--text-dark); }
+        .fact-text { margin: 0; color: var(--text-dark); font-size: var(--base-font-size); line-height: var(--base-line-height); font-weight: 500; }
+        .question-text { margin: 12px 0 18px 0; color: #1e3a8a; font-size: calc(var(--base-font-size) + 4px); font-weight: 900; line-height: 1.6; }
+        body.dark-mode .question-text { color: #93c5fd; }
+
+        .answer-box {
+            background: #f1f5f9;
+            padding: 26px;
+            border-radius: 14px;
+            font-size: var(--base-font-size);
+            border: 2px solid #cbd5e1;
+            line-height: var(--base-line-height);
+        }
+        body.dark-mode .answer-box {
+            background: #1f2937;
+            border-color: #4b5563;
+        }
+        body.sepia-mode .answer-box {
+            background: #f4ebd0;
+            border-color: #dcd0b1;
+        }
+
+        .ans-label {
+            font-size: calc(var(--base-font-size) + 2px);
+            color: #1e3a8a;
+            display: block;
+            margin-bottom: 10px;
+            font-weight: 800;
+        }
+        body.dark-mode .ans-label { color: #60a5fa; }
+
+        .relevance-box, .way-forward {
+            background: #ecfdf5;
+            color: #065f46;
+            padding: 18px 24px;
+            border-radius: 12px;
+            margin-top: 20px;
+            font-size: calc(var(--base-font-size) - 1px);
+            border-left: 8px solid #10b981;
+            font-weight: 600;
+            border: 1px solid #a7f3d0;
+            border-left-width: 8px;
+        }
+        body.dark-mode .relevance-box, body.dark-mode .way-forward {
+            background: #064e3b;
+            color: #a7f3d0;
+            border-color: #059669;
+        }
+
+        .exam-tip-box {
+            background: #fefce8;
+            color: #854d0e;
+            padding: 18px 24px;
+            border-radius: 12px;
+            margin-top: 20px;
+            font-size: calc(var(--base-font-size) - 1px);
+            border-left: 8px solid #eab308;
+            font-weight: 600;
+            border: 1px solid #fef08a;
+            border-left-width: 8px;
+        }
+        body.dark-mode .exam-tip-box {
+            background: #713f12;
+            color: #fef08a;
+            border-color: #eab308;
+        }
+
+        ul { margin: 12px 0; padding-left: 30px; }
+        li { margin-bottom: 12px; font-size: var(--base-font-size); line-height: var(--base-line-height); }
+
+        @media print {
+            .reader-toolbar, .print-btn { display: none !important; }
+            body { background: white !important; color: black !important; padding: 0 !important; font-size: 16pt !important; }
+            .container { max-width: 100% !important; }
+            .fact-card, .mains-card, .sujas-card, .editorial-card, .yt-card { page-break-inside: avoid; border: 1px solid #999 !important; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Floating Interactive Eye-Comfort Toolbar -->
+        <div class="reader-toolbar">
+            <div class="toolbar-title">
+                <span>👁️ नेत्र-अनुकूल फॉन्ट व पठन मोड</span>
+            </div>
+            <div class="toolbar-btns">
+                <button class="t-btn" onclick="setFontSize(22)">A सामान्य (22px)</button>
+                <button class="t-btn active" id="btn-ch7" onclick="setFontSize(26)">🔠 बड़ा / Ch-7 स्टाइल (26px)</button>
+                <button class="t-btn" onclick="setFontSize(30)">🔍 अल्ट्रा लार्ज (30px)</button>
+                <button class="t-btn" onclick="toggleTheme('light')">☀️ लाइट</button>
+                <button class="t-btn" onclick="toggleTheme('sepia')">📜 सेपिया</button>
+                <button class="t-btn" onclick="toggleTheme('dark')">🌙 डार्क मोड</button>
+                <button class="t-btn" style="background:#059669; border-color:#10b981;" onclick="window.print()">🖨️ PDF प्रिंट</button>
+            </div>
+        </div>
+
+        <div class="header">
+            <div>
+                <h1>RPSC RAS & UPSC दैनिक समसामयिकी एवं सम्पादकीय विश्लेषण</h1>
+                <p>दिनांक: 2026-09-22 | RAS Pre & Mains (5M & 10M) विशेष मास्टर नोट्स</p>
+            </div>
+        </div>
+
+        <div class="section-title">🟡 प्रारंभिक परीक्षा तथ्य (RAS & UPSC Prelims Tracker)</div>
+        
+            <div class="fact-card">
+                <div class="card-header">
+                    <span class="badge badge-pre">UPSC Pre / RAS Pre</span>
+                    <span class="topic-title">भारत-न्यूजीलैंड मुक्त व्यापार समझौता (FTA)</span>
+                </div>
+                <p class="fact-text">भारत और न्यूजीलैंड के बीच मुक्त व्यापार समझौता 20 अक्टूबर 2026 से लागू होगा। इसके तहत भारतीय निर्यातकों को पहले ही दिन से न्यूजीलैंड के सभी टैरिफ लाइनों पर शुल्क-मुक्त पहुंच (Duty-free access) प्राप्त होगी। दोनों देशों ने वर्ष 2030 तक द्विपक्षीय व्यापार को 35,000 करोड़ रुपये तक पहुंचाने का लक्ष्य रखा है। संवेदनशील क्षेत्रों जैसे डेयरी और कृषि को सुरक्षा प्रदान की गई है।</p>
+            </div>
+            
+            <div class="fact-card">
+                <div class="card-header">
+                    <span class="badge badge-pre">UPSC Pre / RAS Pre</span>
+                    <span class="topic-title">FCNR(B) विशेष विदेशी मुद्रा विनिमय (Forex Swap) योजना</span>
+                </div>
+                <p class="fact-text">भारतीय रिजर्व बैंक (RBI) की विशेष विदेशी मुद्रा विनिमय खिड़की के तहत बैंकों ने FCNR(B) जमा के माध्यम से 132.9 बिलियन डॉलर जुटाए हैं। कुल विदेशी मुद्रा प्रवाह (ECB और OFCB सहित) 18 सितंबर 2026 तक 143.5 बिलियन डॉलर तक पहुंच गया, जो वर्ष 2013 की समान योजना की तुलना में पांच गुना अधिक है।</p>
+            </div>
+            
+            <div class="fact-card">
+                <div class="card-header">
+                    <span class="badge badge-pre">UPSC Pre / RAS Pre</span>
+                    <span class="topic-title">प्लेटो का 'बौना ग्रह' (Dwarf Planet) वर्गीकरण एवं 20वीं वर्षगांठ</span>
+                </div>
+                <p class="fact-text">24 अगस्त 2006 को प्राग (चेक गणराज्य) में अंतर्राष्ट्रीय खगोलीय संघ (IAU) के प्रस्ताव 5A और 6A के तहत प्लूटो को ग्रह की श्रेणी से हटाकर 'बौना ग्रह' घोषित किया गया था। ग्रह होने की तीन शर्तें हैं: सूर्य की परिक्रमा करना, पर्याप्त द्रव्यमान (जलस्थैतिक संतुलन/गोल आकार), और अपनी कक्षा के आसपास के क्षेत्र को साफ रखना (Clearing the neighborhood)। प्लूटो तीसरी शर्त को पूरा करने में विफल रहा था।</p>
+            </div>
+            
+            <div class="fact-card">
+                <div class="card-header">
+                    <span class="badge badge-pre">UPSC Pre / RAS Pre</span>
+                    <span class="topic-title">बैरन द्वीप ज्वालामुखी (Barren Island Volcano)</span>
+                </div>
+                <p class="fact-text">अंडमान और निकोबार द्वीप समूह में स्थित भारत का एकमात्र सक्रिय ज्वालामुखी बैरन द्वीप सितंबर 2025 में पुनः सक्रिय हुआ। इसका पहला दर्ज विस्फोट 1787 में हुआ था। यह ज्वालामुखी भारतीय प्लेट और बर्मी प्लेट की सीमा पर स्थित जावा-सुमात्रा-अंडमान सबडक्शन जोन का हिस्सा है।</p>
+            </div>
+            
+            <div class="fact-card">
+                <div class="card-header">
+                    <span class="badge badge-pre">UPSC Pre</span>
+                    <span class="topic-title">अगस्त्यमलाई बायोस्फीयर रिजर्व फ्लोरा चेकलिस्ट</span>
+                </div>
+                <p class="fact-text">जवाहरलाल नेहरू ट्रॉपिकल बोटेनिक गार्डन एंड रिसर्च इंस्टीट्यूट (JNTBGRI) के केरल के शोधकर्ताओं द्वारा तैयार की गई नई चेकलिस्ट के अनुसार, पश्चिमी घाट के अगस्त्यमलाई बायोस्फीयर रिजर्व में पुष्पीय पौधों (Flowering Plants) की 3,261 प्रजातियां दर्ज की गई हैं, जो इसकी वैश्विक जैव विविधता महत्ता को दर्शाती हैं।</p>
+            </div>
+            
+            <div class="fact-card">
+                <div class="card-header">
+                    <span class="badge badge-pre">UPSC Pre</span>
+                    <span class="topic-title">बोलीविया में बिल्ली की नई प्रजाति</span>
+                </div>
+                <p class="fact-text">दक्षिण अमेरिकी देश बोलीविया में एक सदी से भी अधिक समय के बाद बिल्ली की एक नई जंगली प्रजाति की पहचान की गई है। कैमरा-ट्रैप साक्ष्यों के अनुसार यह प्रजाति रात्रिचर (Nocturnal) है और छोटे कृन्तकों (Rodents) का शिकार करती है।</p>
+            </div>
+            
+            <div class="fact-card">
+                <div class="card-header">
+                    <span class="badge badge-raj">RAS Pre</span>
+                    <span class="topic-title">युद्धाभ्यास रोटर क्लैप-III (Rotor Clap-III)</span>
+                </div>
+                <p class="fact-text">भारतीय वायुसेना द्वारा 26 जुलाई से 1 अगस्त 2026 तक पोखरण फील्ड फायरिंग रेंज, जैसलमेर (राजस्थान) में 'रोटर क्लैप-III' युद्धाभ्यास का आयोजन किया गया। इसका मुख्य उद्देश्य कम ऊंचाई पर उड़ने वाले दुश्मन के ड्रोन और मानव रहित हवाई वाहनों (UAVs) की पहचान कर उन्हें नष्ट करने की क्षमता का परीक्षण करना था।</p>
+            </div>
+            
+            <div class="fact-card">
+                <div class="card-header">
+                    <span class="badge badge-raj">RAS Pre</span>
+                    <span class="topic-title">कॉप्स टर्फ ग्राउंड (Cops Turf Ground)</span>
+                </div>
+                <p class="fact-text">राजस्थान के उदयपुर जिले में आधुनिक खेल सुविधाओं से युक्त नए इंडोर क्रिकेट स्टेडियम 'कॉप्स टर्फ ग्राउंड' का निर्माण किया गया है। यह राज्य में खेल अवसंरचना विकास की एक महत्वपूर्ण पहल है।</p>
+            </div>
+            
+            <div class="fact-card">
+                <div class="card-header">
+                    <span class="badge badge-raj">RAS Pre</span>
+                    <span class="topic-title">राजस्थान इंटीग्रेटेड एडवेंचर इंस्टीट्यूट</span>
+                </div>
+                <p class="fact-text">राजस्थान में एडवेंचर स्पोर्ट्स, प्रशिक्षण और साहसिक पर्यटन को बढ़ावा देने के लिए 'राजस्थान इंटीग्रेटेड एडवेंचर इंस्टीट्यूट' की स्थापना उदयपुर जिले में की जाएगी।</p>
+            </div>
+            
+            <div class="fact-card">
+                <div class="card-header">
+                    <span class="badge badge-raj">RAS Pre</span>
+                    <span class="topic-title">मिशन पढ़ो राजस्थान</span>
+                </div>
+                <p class="fact-text">राजस्थान स्कूल शिक्षा विभाग द्वारा प्राथमिक स्तर पर छात्रों के सीखने के प्रतिफल (Learning Outcomes) में सुधार हेतु 'मिशन पढ़ो राजस्थान' का संचालन कक्षा 1 से कक्षा 8 तक के विद्यार्थियों के लिए किया जा रहा है।</p>
+            </div>
+            
+            <div class="fact-card">
+                <div class="card-header">
+                    <span class="badge badge-raj">RAS Pre</span>
+                    <span class="topic-title">प्रवासी राजस्थानी संगम कार्यक्रम</span>
+                </div>
+                <p class="fact-text">आगामी प्रवासी राजस्थानी दिवस के प्रचार-प्रसार और प्रवासी राजस्थानियों को राज्य की विकास यात्रा से जोड़ने हेतु 'प्रवासी राजस्थानी संगम कार्यक्रम' का आयोजन बेंगलुरु (कर्नाटक) में किया गया।</p>
+            </div>
+            
+            <div class="fact-card">
+                <div class="card-header">
+                    <span class="badge badge-pre">UPSC Pre / RAS Pre</span>
+                    <span class="topic-title">सहर्ष विशेष शिक्षा कार्यक्रम</span>
+                </div>
+                <p class="fact-text">त्रिपुरा राज्य सरकार ने सरकारी स्कूलों में सामाजिक और भावनात्मक शिक्षा (Social and Emotional Learning - SEL) को बढ़ावा देने के लिए 'सहर्ष' (Saharsh) विशेष शिक्षा कार्यक्रम की शुरुआत की है।</p>
+            </div>
+            
+
+        <div class="section-title">🔵 मुख्य परीक्षा उत्तर लेखन मॉडल सेट (RAS Mains - 5M & 10M)</div>
+        
+            <div class="mains-card">
+                <div class="mains-header">
+                    <span class="badge badge-5m">5 अंक (Paper 1)</span>
+                    <span class="subject-tag">अर्थव्यवस्था (Economy)</span>
+                </div>
+                <h3 class="question-text">प्रश्न: भारत-चिली व्यापक आर्थिक भागीदारी समझौता (CEPA) के आर्थिक निहितार्थों को स्पष्ट कीजिए।</h3>
+                
+                <div class="answer-box">
+                    <strong class="ans-label">उत्तर ढांचा (~50 शब्द):</strong>
+                    <div class="answer-content">1. व्यापार संवर्धन: वर्ष 2025 में दोनों देशों के मध्य द्विपक्षीय व्यापार 5.6 बिलियन डॉलर को पार कर चुका है। CEPA से इसमें और तीव्र वृद्धि होगी।<br>2. बाजार पहुंच: भारतीय निर्यातकों को लैटिन अमेरिकी बाजार में और चिली के व्यवसायों को भारतीय बाजार (विशेषकर तमिलनाडु जैसे औद्योगिक राज्यों) में शुल्क-मुक्त या रियायती पहुंच मिलेगी।<br>3. रणनीतिक खनिज आपूर्ति: चिली विश्व का प्रमुख लिथियम और तांबा उत्पादक है, जो भारत के इलेक्ट्रिक वाहन (EV) और नवीकरणीय ऊर्जा क्षेत्र के लिए अत्यंत महत्वपूर्ण है।</div>
+                </div>
+                
+            </div>
+            
+            <div class="mains-card">
+                <div class="mains-header">
+                    <span class="badge badge-10m">10 अंक (Paper 3)</span>
+                    <span class="subject-tag">विज्ञान एवं प्रौद्योगिकी (Science & Technology)</span>
+                </div>
+                <h3 class="question-text">प्रश्न: आर्टिफिशियल इंटेलिजेंस (AI) के युग में डेटा सेंटर्स की बढ़ती संख्या के पर्यावरणीय प्रभावों का आलोचनात्मक विश्लेषण कीजिए। भारत के संदर्भ में इसके नियमन हेतु क्या उपाय किए जाने चाहिए?</h3>
+                
+                <div class="answer-box">
+                    <div class="ans-section"><strong class="ans-label">भूमिका (Introduction):</strong><br>आर्टिफिशियल इंटेलिजेंस (AI) और क्लाउड कंप्यूटिंग के प्रसार ने वैश्विक स्तर पर डेटा सेंटर्स की मांग को अत्यधिक बढ़ा दिया है, जो डिजिटल अर्थव्यवस्था की रीढ़ हैं परंतु इनके गंभीर पर्यावरणीय दुष्प्रभाव भी हैं।</div>
+                    <div class="ans-section"><strong class="ans-label">मुख्य भाग (Body & Rajasthan Context):</strong><br>डेटा सेंटर्स के प्रमुख पर्यावरणीय प्रभाव:<br>1. अत्यधिक जल उपभोग: कूलिंग प्रणालियों के लिए भारी मात्रा में जल की आवश्यकता होती है। रिस्टैड एनर्जी के अनुसार, वर्ष 2030 तक इनका जल उपभोग तिगुना होकर 644 बिलियन लीटर हो सकता है। भारत के जामनगर और ठाणे जैसे जल-तनाव वाले क्षेत्र इससे अत्यधिक प्रभावित हैं।<br>2. उच्च ऊर्जा मांग: डेटा सेंटर्स को 24x7 संचालित करने के लिए भारी मात्रा में बिजली की आवश्यकता होती है, जिससे कोयला आधारित बिजली उत्पादन पर निर्भरता और कार्बन उत्सर्जन बढ़ता है।<br>3. हीट आइलैंड प्रभाव: डेटा सेंटर्स के 10 किमी के दायरे में तापमान में 9 डिग्री सेल्सियस तक की वृद्धि देखी गई है।<br><br>नियमन हेतु आवश्यक उपाय:<br>- जल उपयोग प्रभावशीलता (WUE) मानकों को अनिवार्य बनाना (जैसे सिंगापुर का ग्रीन डेटा सेंटर रोडमैप - 2 लीटर प्रति kWh से कम)।<br>- शुष्क शीतलन (Dry Cooling) और नवीकरणीय ऊर्जा स्रोतों के उपयोग को बढ़ावा देना।<br>- स्थानीय समुदायों की भागीदारी के साथ अनिवार्य पर्यावरणीय प्रभाव आकलन (EIA) लागू करना।</div>
+                    <div class="ans-section"><strong class="ans-label">निष्कर्ष (Conclusion):</strong><br>अतः भारत को डिजिटल संप्रभुता और पर्यावरणीय संधारणीयता के मध्य संतुलन स्थापित करने के लिए एक सुदृढ़ 'हरित डेटा सेंटर नीति' को शीघ्र लागू करना चाहिए।</div>
+                </div>
+                
+            </div>
+            
+            <div class="mains-card">
+                <div class="mains-header">
+                    <span class="badge badge-5m">5 अंक (Paper 1)</span>
+                    <span class="subject-tag">इतिहास, कला एवं संस्कृति (Rajasthan History & Culture)</span>
+                </div>
+                <h3 class="question-text">प्रश्न: राजस्थानी साहित्य की प्रमुख विधाओं 'वचनिका' और 'वेली' में अंतर स्पष्ट कीजिए।</h3>
+                
+                <div class="answer-box">
+                    <strong class="ans-label">उत्तर ढांचा (~50 शब्द):</strong>
+                    <div class="answer-content">1. वचनिका: यह गद्य-पद्य मिश्रित (चंपू काव्य) विधा है, जिसमें अंत्यानुप्रास मिलता है। यह ऐतिहासिक युद्धों और वीरों की उपलब्धियों पर प्रकाश डालती है (जैसे- खिड़िया जगा कृत 'राव जेणसी री वचनिका')।<br>2. वेली: यह पूर्णतः पद्यबद्ध विधा है, जो डिंगल भाषा के 'वेली' छंद में लिखी जाती है। इसमें ऐतिहासिक घटनाओं, वीरता और धार्मिक विषयों का वर्णन होता है (जैसे- पृथ्वीराज राठौड़ कृत 'वेली क्रिसन रुकमणी री')।</div>
+                </div>
+                
+            </div>
+            
+
+        <div class="section-title">📺 कोचिंग शिक्षक विश्लेषण एवं यूट्यूब लाइव क्लास सार</div>
+            <div class="yt-card">
+                <div class="yt-header">
+                    <span class="badge badge-yt">📺 कोचिंग शिक्षक विश्लेषण</span>
+                    <span class="topic-title">भारत की नई जीडीपी (GDP) गणना पद्धति और जीएसटी डेटा का एकीकरण</span>
+                </div>
+                <div class="yt-explanation">
+                    <strong>शिक्षक व्याख्यान एवं ट्रिक्स:</strong>
+                    <p>सांख्यिकी और कार्यक्रम कार्यान्वयन मंत्रालय (MoSPI) द्वारा जीडीपी की नई श्रृंखला में कॉर्पोरेट फाइलिंग और जीएसटी (GST) डेटा को व्यापक रूप से शामिल किया जा रहा है। शिक्षक ने समझाया कि यह कदम असंगठित और निजी कॉर्पोरेट क्षेत्र की गतिविधियों के अधिक सटीक आकलन में मदद करेगा। पूर्व में उपयोग किए जाने वाले 'एमसीए-21' डेटाबेस की कमियों को दूर करने के लिए अब सीधे जीएसटीआर (GSTR) और एलएलपी (LLP) रिकॉर्ड्स का उपयोग किया जा रहा है।</p>
+                </div>
+                <div class="key-args">
+                    <strong>क्लास के मुख्य बिंदु (Key Lecture Points):</strong>
+                    <ul>
+                        <li>जीएसटी डेटा का उपयोग करने से राज्यों के स्तर पर आर्थिक गतिविधियों का वास्तविक समय (Real-time) आकलन संभव होगा।</li><li>निजी कॉर्पोरेट क्षेत्र के वर्गीकरण में सुधार के लिए उद्योग-वार नए मानकों को अपनाया गया है।</li><li>घरेलू और असंगठित क्षेत्र के प्रत्यक्ष मूल्यांकन के लिए नए सर्वेक्षणों को आधार बनाया गया है।</li>
+                    </ul>
+                </div>
+                <div class="exam-tip-box"><strong>💡 परीक्षा टिप (Exam Tip):</strong> मेन्स परीक्षा (GS-3/Paper-1) में राष्ट्रीय आय लेखांकन की पद्धतियों में सुधार पर प्रश्न पूछे जाने पर जीएसटी एकीकरण और कॉर्पोरेट डेटाबेस के उपयोग को 'सकारात्मक सुधार' के रूप में प्रस्तुत करें।</div>
+            </div>
+            
+
+        <div class="section-title">🟣 राजस्थान सुजस, पत्रिका एवं दैनिक भास्कर (Rajasthan Sujas, Patrika & Bhaskar)</div>
+        
+            <div class="sujas-card">
+                <div class="sujas-header">
+                    <span class="badge badge-sujas">राजस्थान सुजस विशेष</span>
+                    <strong>जल संसाधन विभाग, राजस्थान सरकार</strong>
+                </div>
+                <h3>किशाऊ बहुउद्देशीय परियोजना और राजस्थान का हित</h3>
+                <ul>
+                    <li>किशाऊ परियोजना यमुना की सहायक टोंस नदी पर हिमाचल प्रदेश और उत्तराखंड की सीमा पर निर्मित की जा रही है।</li><li>इस परियोजना से राजस्थान को पेयजल और सिंचाई हेतु अतिरिक्त जल प्राप्त होगा, जिससे पूर्वी राजस्थान के जिलों को लाभ मिलेगा।</li><li>राजस्थान सरकार ने परियोजना के त्वरित क्रियान्वयन और अपने हिस्से के वित्तीय अंशदान को मंजूरी दी है।</li>
+                </ul>
+                <div class="relevance-box"><strong>RPSC महत्व:</strong> RAS Mains Paper 1 (राजस्थान की भूगोल - जल संसाधन परियोजनाएं)</div>
+            </div>
+            
+            <div class="sujas-card">
+                <div class="sujas-header">
+                    <span class="badge badge-sujas">राजस्थान सुजस विशेष</span>
+                    <strong>पशुपालन एवं गोपालन विभाग, राजस्थान</strong>
+                </div>
+                <h3>पन्नाधाय बाल गोपाल योजना एवं लंपी रोग नियंत्रण निर्देश</h3>
+                <ul>
+                    <li>राज्य में पशुपालकों के आर्थिक संबलन हेतु विभिन्न कल्याणकारी योजनाओं का सुदृढ़ीकरण किया जा रहा है।</li><li>लंपी त्वचा रोग (Lumpy Skin Disease) के संभावित प्रसार को रोकने के लिए विभाग ने जिला स्तरीय नियंत्रण कक्ष स्थापित करने और सघन टीकाकरण के निर्देश दिए हैं।</li><li>पशुओं के स्वास्थ्य प्रबंधन हेतु स्थानीय स्तर पर औषधियों की उपलब्धता सुनिश्चित की गई है।</li>
+                </ul>
+                <div class="relevance-box"><strong>RPSC महत्व:</strong> RAS Mains Paper 1 (राजस्थान की अर्थव्यवस्था - पशुपालन)</div>
+            </div>
+            
+
+        <div class="section-title">🔴 सम्पादकीय एवं पत्रिका गहन विश्लेषण (The Hindu, Indian Express, ET, DownToEarth, योजना व कुरुक्षेत्र)</div>
+        
+            <div class="editorial-card">
+                <div class="editorial-header">
+                    <span class="badge badge-ed">The Hindu</span>
+                    <span class="syllabus-tag">GS2 - भारतीय संविधान, महत्वपूर्ण संस्थाएं एवं चुनाव प्रक्रिया</span>
+                </div>
+                <h3>Presumed ineligible: On the Election Commission of India’s SIR process</h3>
+                <p class="context"><strong>समसामयिक संदर्भ:</strong> भारत निर्वाचन आयोग (ECI) द्वारा मतदाता सूचियों के शुद्धिकरण के नाम पर मतदाताओं के नाम हटाने और बाद में सत्यापन करने की प्रक्रिया (SIR) पर उठ रहे सवाल।</p>
+                <div class="key-args">
+                    <strong>सम्पादकीय का पूरा सार एवं तर्क (Deep Dive Takeaways):</strong>
+                    <ul>
+                        <li>मतदाता सूची से नाम हटाने की प्रक्रिया में पारदर्शिता का अभाव लोकतांत्रिक अधिकारों का हनन करता है।</li><li>पहले नाम हटाना और बाद में सत्यापन (Delete first, verify later) की नीति से कई वास्तविक मतदाता अपने मताधिकार से वंचित हो जाते हैं।</li><li>प्रक्रियात्मक खामियों के कारण हाशिए के समुदायों और प्रवासियों के नाम अनजाने में या दुर्भावनापूर्ण तरीके से हटा दिए जाते हैं।</li><li>सत्यापन प्रक्रिया को पूरी तरह से डिजिटल और त्रुटिहीन बनाने के लिए जमीनी स्तर पर बीएलओ (BLO) की जवाबदेही तय की जानी चाहिए।</li>
+                    </ul>
+                </div>
+                <div class="way-forward"><strong>आगे की राह (Way Forward):</strong> निर्वाचन आयोग को 'सत्यापन पहले, विलोपन बाद में' (Verify first, delete later) के सिद्धांत को कड़ाई से लागू करना चाहिए और मतदाता सूची में किसी भी बदलाव से पूर्व संबंधित नागरिक को पर्याप्त सुनवाई का अवसर देना चाहिए।</div>
+            </div>
+            
+            <div class="editorial-card">
+                <div class="editorial-header">
+                    <span class="badge badge-ed">The Hindu</span>
+                    <span class="syllabus-tag">GS3 - विज्ञान एवं प्रौद्योगिकी तथा अंतरिक्ष सुरक्षा</span>
+                </div>
+                <h3>Unsafe space: On the U.S. and ‘on-orbit space control weapons‘</h3>
+                <p class="context"><strong>समसामयिक संदर्भ:</strong> अंतरिक्ष में हथियारों की होड़ और अमेरिका द्वारा 'ऑन-ऑर्बिट स्पेस कंट्रोल वेपन्स' के विकास से उत्पन्न वैश्विक सुरक्षा चुनौतियां।</p>
+                <div class="key-args">
+                    <strong>सम्पादकीय का पूरा सार एवं तर्क (Deep Dive Takeaways):</strong>
+                    <ul>
+                        <li>अंतरिक्ष का सैन्यीकरण बाह्य अंतरिक्ष संधि (Outer Space Treaty, 1967) की मूल भावना के विपरीत है।</li><li>कक्षा में स्थित हथियारों के प्रयोग से उत्पन्न होने वाला अंतरिक्ष मलबे (Space Debris) का संकट वैश्विक उपग्रह प्रणालियों को नष्ट कर सकता है।</li><li>अंतरिक्ष संपत्तियों पर निर्भरता बढ़ने के कारण किसी भी हमले से वैश्विक संचार, नौवहन और मौसम प्रणालियां ठप हो सकती हैं।</li><li>अंतरिक्ष हथियारों के विकास पर रोक लगाने के लिए वैश्विक शक्तियों के बीच बहुपक्षीय शासन और पारदर्शी संधियों का अभाव है।</li>
+                    </ul>
+                </div>
+                <div class="way-forward"><strong>आगे की राह (Way Forward):</strong> अंतरिक्ष को 'मानवता की साझी विरासत' बनाए रखने के लिए संयुक्त राष्ट्र के तत्वावधान में एक बाध्यकारी बहुपक्षीय संधि (जैसे PAROS - Prevention of an Arms Race in Outer Space) को अंतिम रूप दिया जाना अत्यंत आवश्यक है।</div>
+            </div>
+            
+            <div class="editorial-card">
+                <div class="editorial-header">
+                    <span class="badge badge-ed">LiveMint</span>
+                    <span class="syllabus-tag">GS1 / GS3 - जनसांख्यिकी, सामाजिक मुद्दे एवं मानव संसाधन</span>
+                </div>
+                <h3>Demographic U-turn: Indian states are reversing their population policies</h3>
+                <p class="context"><strong>समसामयिक संदर्भ:</strong> भारत के कुछ राज्यों द्वारा अपनी जनसंख्या नियंत्रण नीतियों को वापस लेने और प्रजनन दर बढ़ाने (Pro-natalist) हेतु प्रोत्साहन देने की प्रवृत्ति का विश्लेषण।</p>
+                <div class="key-args">
+                    <strong>सम्पादकीय का पूरा सार एवं तर्क (Deep Dive Takeaways):</strong>
+                    <ul>
+                        <li>भारत के दक्षिणी और कुछ पश्चिमी राज्यों में कुल प्रजनन दर (TFR) प्रतिस्थापन स्तर (2.1) से काफी नीचे जा चुकी है, जिससे भविष्य में कार्यशील जनसंख्या की कमी का संकट है।</li><li>केवल 'बेबी बोनस' या वित्तीय प्रोत्साहन देने से जन्म दर में स्थायी सुधार नहीं होता, जैसा कि वैश्विक अनुभव (जैसे पूर्वी एशिया) दर्शाते हैं।</li><li>कार्यस्थल पर महिलाओं के लिए अनुकूल वातावरण, गुणवत्तापूर्ण शिशु देखभाल (Infant Care) और सवैतनिक पैतृक अवकाश अधिक प्रभावी सिद्ध होते हैं।</li><li>जनसांख्यिकीय असंतुलन के कारण राज्यों के बीच राजनीतिक प्रतिनिधित्व (परिसीमन) और वित्तीय आवंटन (वित्त आयोग) को लेकर विवाद बढ़ रहे हैं।</li>
+                    </ul>
+                </div>
+                <div class="way-forward"><strong>आगे की राह (Way Forward):</strong> राज्यों को केवल जनसंख्या बढ़ाने पर ध्यान केंद्रित करने के बजाय महिलाओं की श्रम बल में भागीदारी बढ़ाने और बुजुर्ग होती आबादी के लिए सामाजिक सुरक्षा प्रणालियों को सुदृढ़ करने पर निवेश करना चाहिए।</div>
+            </div>
+            
+
+        <div class="section-title">📲 टेलीग्राम चैनल दैनिक प्रश्नोत्तरी व नोट्स (Telegram Daily Quiz & Notes)</div>
+            <div class="mains-card" style="border-left: 8px solid #0284c7; margin-bottom: 25px;">
+                <div class="mains-header">
+                    <span class="badge" style="background:#0284c7; color:white;">5 अंक (~50 शब्द)</span>
+                    <span class="badge" style="background:#1e3a8a; color:white;">@Rajasthan_History_Polity_Culture</span>
+                    <span class="subject-tag">Paper 1 - राजस्थान का इतिहास, कला एवं संस्कृति</span>
+                </div>
+                <h3 class="question-text">प्रश्न: रतवाई लोक गीत किस क्षेत्र में गाए जाते हैं?</h3>
+                <div class="answer-box">
+                    <strong class="ans-label">उत्तर ढांचा एवं विस्तृत नोट्स (~50 शब्द):</strong>
+                    <div class="answer-content">1. सही उत्तर एवं मुख्य तथ्य: मेवात क्षेत्र (अलवर-भरतपुर) - रतवाई लोक गीत मुख्य रूप से मेवात क्षेत्र के मेव समुदाय द्वारा गाया जाता है।<br>2. ऐतिहासिक/भौगोलिक/नीतिगत संदर्भ: यह गीत वर्षा ऋतु में अथवा विवाह के अवसरों पर स्त्रियों द्वारा गाया जाता है। इसके गायन के समय 'दमामी' और 'खंजरी' वाद्य यंत्रों का प्रयोग किया जाता है। पुरुषों द्वारा इसमें 'अलगोजा' बजाया जाता है।<br>3. RPSC परीक्षा प्रासंगिकता: राजस्थान के लोक संगीत और क्षेत्रीय सांस्कृतिक विविधताओं के अंतर्गत यह प्रश्न अत्यंत महत्वपूर्ण है।</div>
+                </div>
+            </div>
+            
+            <div class="mains-card" style="border-left: 8px solid #0284c7; margin-bottom: 25px;">
+                <div class="mains-header">
+                    <span class="badge" style="background:#0284c7; color:white;">5 अंक (~50 शब्द)</span>
+                    <span class="badge" style="background:#1e3a8a; color:white;">@Rajasthan_History_Polity_Culture</span>
+                    <span class="subject-tag">Paper 1 - राजस्थानी साहित्य एवं बोलियां</span>
+                </div>
+                <h3 class="question-text">प्रश्न: राजस्थानी गद्य और पद्य की विधाओं में वे रचनाएँ जो किसी व्यक्ति एवं राजवंश की उपलब्धियों एवं घटनाओं पर प्रकाश डालती हैं, क्या कहलाती हैं?</h3>
+                <div class="answer-box">
+                    <strong class="ans-label">उत्तर ढांचा एवं विस्तृत नोट्स (~50 शब्द):</strong>
+                    <div class="answer-content">1. सही उत्तर एवं मुख्य तथ्य: 'प्रकास' (जैसे- पाबू प्रकास, राज प्रकास) - यह किसी विशिष्ट व्यक्ति या राजवंश की कीर्ति पर प्रकाश डालने वाली रचना होती है।<br>2. ऐतिहासिक/भौगोलिक/नीतिगत संदर्भ: राजस्थानी चारण साहित्य में ऐतिहासिक पुरुषों के शौर्य, दानशीलता और चरित्र को अमर बनाने के लिए गद्य-पद्य मिश्रित शैली में 'प्रकास' ग्रंथों की रचना की जाती थी।<br>3. RPSC परीक्षा प्रासंगिकता: आरपीएससी द्वारा राजस्थानी साहित्य की विभिन्न शैलियों और शब्दावलियों पर लगातार प्रश्न पूछे जाते हैं।</div>
+                </div>
+            </div>
+            
+    </div>
+
+    <script>
+        function setFontSize(size) {
+            document.documentElement.style.setProperty('--base-font-size', size + 'px');
+            localStorage.setItem('ras_notes_font_size', size);
+            document.querySelectorAll('.toolbar-btns .t-btn').forEach(b => {
+                if (b.innerText.includes(size + 'px')) b.classList.add('active');
+                else if (b.innerText.includes('px')) b.classList.remove('active');
+            });
+        }
+
+        function toggleTheme(theme) {
+            document.body.classList.remove('dark-mode', 'sepia-mode');
+            if (theme === 'dark') document.body.classList.add('dark-mode');
+            else if (theme === 'sepia') document.body.classList.add('sepia-mode');
+            localStorage.setItem('ras_notes_theme', theme);
+        }
+
+        // Load saved preferences
+        (function() {
+            const savedSize = localStorage.getItem('ras_notes_font_size') || 26;
+            setFontSize(savedSize);
+            const savedTheme = localStorage.getItem('ras_notes_theme');
+            if (savedTheme) toggleTheme(savedTheme);
+        })();
+    </script>
+</body>
+</html>
