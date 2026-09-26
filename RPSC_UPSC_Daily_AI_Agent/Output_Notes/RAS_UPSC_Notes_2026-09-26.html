@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RAS & UPSC Daily Notes - 2026-09-26</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style id="customStyle">
+        :root {
+            --base-font-size: 24px;
+            --base-line-height: 1.85;
+            --primary: #1e1b4b;
+            --primary-light: #2563eb;
+            --secondary: #0f766e;
+            --accent-gold: #b45309;
+            --accent-purple: #6b21a8;
+            --accent-red: #9f1239;
+            --bg-main: #f8fafc;
+            --card-bg: #ffffff;
+            --text-dark: #020617;
+            --border-color: #cbd5e1;
+            --box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+        }
+
+        body.dark-mode {
+            --bg-main: #090d16;
+            --card-bg: #111827;
+            --text-dark: #f8fafc;
+            --border-color: #374151;
+            --box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+        }
+
+        body.sepia-mode {
+            --bg-main: #fbf0d9;
+            --card-bg: #fffdf7;
+            --text-dark: #2d2215;
+            --border-color: #e2d3b5;
+        }
+
+        body {
+            font-family: 'Noto Sans Devanagari', 'Segoe UI', Tahoma, sans-serif;
+            background-color: var(--bg-main);
+            color: var(--text-dark);
+            margin: 0;
+            padding: 25px;
+            line-height: var(--base-line-height);
+            font-size: var(--base-font-size);
+            transition: background-color 0.2s, font-size 0.15s;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* Eye-Comfort High Definition Typography */
+        p, li, div, span, td, th {
+            font-size: var(--base-font-size);
+            line-height: var(--base-line-height);
+        }
+
+        b, strong {
+            color: #b91c1c;
+            font-weight: 800;
+        }
+        body.dark-mode b, body.dark-mode strong {
+            color: #f87171;
+        }
+
+        .blue-highlight {
+            color: #1e3a8a;
+            font-weight: 800;
+        }
+        body.dark-mode .blue-highlight {
+            color: #60a5fa;
+        }
+
+        .container {
+            max-width: 1300px;
+            margin: 0 auto;
+        }
+
+        /* Sticky Eye-Comfort Controls Toolbar */
+        .reader-toolbar {
+            position: sticky;
+            top: 15px;
+            z-index: 999;
+            background: rgba(15, 23, 42, 0.95);
+            backdrop-filter: blur(10px);
+            color: white;
+            padding: 12px 24px;
+            border-radius: 50px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+            margin-bottom: 25px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 12px;
+            border: 2px solid #334155;
+        }
+
+        .toolbar-title {
+            font-size: 19px;
+            font-weight: 800;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .toolbar-btns {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .t-btn {
+            background: #1e293b;
+            color: white;
+            border: 1px solid #475569;
+            padding: 8px 16px;
+            border-radius: 25px;
+            font-size: 16px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.2s;
+            font-family: inherit;
+        }
+
+        .t-btn:hover, .t-btn.active {
+            background: #2563eb;
+            border-color: #60a5fa;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 10px rgba(37,99,235,0.4);
+        }
+
+        .header {
+            background: linear-gradient(135deg, #09090b 0%, #1e1b4b 50%, #0f766e 100%);
+            color: white;
+            padding: 35px 40px;
+            border-radius: 20px;
+            box-shadow: 0 15px 30px -5px rgba(0,0,0,0.25);
+            margin-bottom: 35px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border: 3px solid #3b82f6;
+        }
+        .header h1 { margin: 0 0 10px 0; font-size: 36px; font-weight: 900; letter-spacing: -0.5px; }
+        .header p { margin: 0; opacity: 0.95; font-size: 22px; font-weight: 600; }
+
+        /* Large Chapter 7 Style Section Headers */
+        .section-title {
+            font-size: 32px;
+            font-weight: 900;
+            margin: 45px 0 25px 0;
+            padding: 18px 26px;
+            background: var(--card-bg);
+            border-radius: 14px;
+            border-left: 14px solid var(--primary-light);
+            box-shadow: var(--box-shadow);
+            color: var(--text-dark);
+            border-top: 1px solid var(--border-color);
+            border-right: 1px solid var(--border-color);
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .badge {
+            padding: 8px 16px;
+            border-radius: 10px;
+            font-size: 17px;
+            font-weight: 800;
+            color: white;
+            display: inline-block;
+        }
+        .badge-pre { background-color: var(--accent-gold); }
+        .badge-raj { background-color: var(--accent-purple); }
+        .badge-5m { background-color: #0284c7; }
+        .badge-10m { background-color: #4338ca; }
+        .badge-sujas { background-color: #0d9488; }
+        .badge-ed { background-color: var(--accent-red); }
+        .badge-yt { background-color: #dc2626; }
+
+        /* Big, Comfortable Eye-Friendly Cards */
+        .fact-card, .mains-card, .sujas-card, .editorial-card, .yt-card {
+            background: var(--card-bg);
+            border-radius: 18px;
+            padding: 32px;
+            margin-bottom: 30px;
+            box-shadow: var(--box-shadow);
+            border: 2px solid var(--border-color);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .fact-card:hover, .mains-card:hover, .sujas-card:hover, .editorial-card:hover, .yt-card:hover {
+            box-shadow: 0 12px 28px rgba(0,0,0,0.1);
+        }
+
+        .fact-card { border-left: 14px solid var(--accent-gold); }
+        .mains-card { border-left: 14px solid #4338ca; }
+        .sujas-card { border-left: 14px solid var(--accent-purple); }
+        .editorial-card { border-left: 14px solid var(--accent-red); }
+        .yt-card { border-left: 14px solid #dc2626; background: var(--card-bg); }
+
+        .card-header, .mains-header, .sujas-header, .editorial-header, .yt-header {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 16px;
+            flex-wrap: wrap;
+        }
+        .topic-title { font-weight: 900; font-size: 26px; color: var(--text-dark); }
+        .fact-text { margin: 0; color: var(--text-dark); font-size: var(--base-font-size); line-height: var(--base-line-height); font-weight: 500; }
+        .question-text { margin: 12px 0 18px 0; color: #1e3a8a; font-size: calc(var(--base-font-size) + 4px); font-weight: 900; line-height: 1.6; }
+        body.dark-mode .question-text { color: #93c5fd; }
+
+        .answer-box {
+            background: #f1f5f9;
+            padding: 26px;
+            border-radius: 14px;
+            font-size: var(--base-font-size);
+            border: 2px solid #cbd5e1;
+            line-height: var(--base-line-height);
+        }
+        body.dark-mode .answer-box {
+            background: #1f2937;
+            border-color: #4b5563;
+        }
+        body.sepia-mode .answer-box {
+            background: #f4ebd0;
+            border-color: #dcd0b1;
+        }
+
+        .ans-label {
+            font-size: calc(var(--base-font-size) + 2px);
+            color: #1e3a8a;
+            display: block;
+            margin-bottom: 10px;
+            font-weight: 800;
+        }
+        body.dark-mode .ans-label { color: #60a5fa; }
+
+        .relevance-box, .way-forward {
+            background: #ecfdf5;
+            color: #065f46;
+            padding: 18px 24px;
+            border-radius: 12px;
+            margin-top: 20px;
+            font-size: calc(var(--base-font-size) - 1px);
+            border-left: 8px solid #10b981;
+            font-weight: 600;
+            border: 1px solid #a7f3d0;
+            border-left-width: 8px;
+        }
+        body.dark-mode .relevance-box, body.dark-mode .way-forward {
+            background: #064e3b;
+            color: #a7f3d0;
+            border-color: #059669;
+        }
+
+        .exam-tip-box {
+            background: #fefce8;
+            color: #854d0e;
+            padding: 18px 24px;
+            border-radius: 12px;
+            margin-top: 20px;
+            font-size: calc(var(--base-font-size) - 1px);
+            border-left: 8px solid #eab308;
+            font-weight: 600;
+            border: 1px solid #fef08a;
+            border-left-width: 8px;
+        }
+        body.dark-mode .exam-tip-box {
+            background: #713f12;
+            color: #fef08a;
+            border-color: #eab308;
+        }
+
+        ul { margin: 12px 0; padding-left: 30px; }
+        li { margin-bottom: 12px; font-size: var(--base-font-size); line-height: var(--base-line-height); }
+
+        @media print {
+            .reader-toolbar, .print-btn { display: none !important; }
+            body { background: white !important; color: black !important; padding: 0 !important; font-size: 16pt !important; }
+            .container { max-width: 100% !important; }
+            .fact-card, .mains-card, .sujas-card, .editorial-card, .yt-card { page-break-inside: avoid; border: 1px solid #999 !important; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Floating Interactive Eye-Comfort Toolbar -->
+        <div class="reader-toolbar">
+            <div class="toolbar-title">
+                <span>👁️ नेत्र-अनुकूल फॉन्ट व पठन मोड</span>
+            </div>
+            <div class="toolbar-btns">
+                <button class="t-btn" onclick="setFontSize(22)">A सामान्य (22px)</button>
+                <button class="t-btn active" id="btn-ch7" onclick="setFontSize(26)">🔠 बड़ा / Ch-7 स्टाइल (26px)</button>
+                <button class="t-btn" onclick="setFontSize(30)">🔍 अल्ट्रा लार्ज (30px)</button>
+                <button class="t-btn" onclick="toggleTheme('light')">☀️ लाइट</button>
+                <button class="t-btn" onclick="toggleTheme('sepia')">📜 सेपिया</button>
+                <button class="t-btn" onclick="toggleTheme('dark')">🌙 डार्क मोड</button>
+                <button class="t-btn" style="background:#059669; border-color:#10b981;" onclick="window.print()">🖨️ PDF प्रिंट</button>
+            </div>
+        </div>
+
+        <div class="header">
+            <div>
+                <h1>RPSC RAS & UPSC दैनिक समसामयिकी एवं सम्पादकीय विश्लेषण</h1>
+                <p>दिनांक: 2026-09-26 | RAS Pre & Mains (5M & 10M) विशेष मास्टर नोट्स</p>
+            </div>
+        </div>
+
+        <div class="section-title">🟡 प्रारंभिक परीक्षा तथ्य (RAS & UPSC Prelims Tracker)</div>
+        
+            <div class="fact-card">
+                <div class="card-header">
+                    <span class="badge badge-pre">UPSC Pre / RAS Pre</span>
+                    <span class="topic-title">कस्तूरीरंगन समिति रिपोर्ट</span>
+                </div>
+                <p class="fact-text">पश्चिमी घाट के पारिस्थितिक रूप से संवेदनशील क्षेत्रों (ESA) के संरक्षण हेतु कस्तूरीरंगन समिति ने 37% क्षेत्र को ESA घोषित करने की सिफारिश की थी, जिसे कर्नाटक सरकार ने अस्वीकार कर दिया है।</p>
+            </div>
+            
+            <div class="fact-card">
+                <div class="card-header">
+                    <span class="badge badge-pre">UPSC Pre</span>
+                    <span class="topic-title">प्लूटो का ग्रहीय वर्गीकरण और न्यू होराइजन्स मिशन</span>
+                </div>
+                <p class="fact-text">वर्ष 2006 में अंतर्राष्ट्रीय खगोलीय संघ (IAU) के संकल्प 5A व 6A द्वारा प्लूटो को 'बौना ग्रह' घोषित किया गया था। नासा के न्यू होराइजन्स मिशन (2015) ने प्लूटो पर नाइट्रोजन ग्लेशियर, 3000 मीटर ऊंचे बर्फ के पर्वत और 5 चंद्रमाओं की खोज की है।</p>
+            </div>
+            
+            <div class="fact-card">
+                <div class="card-header">
+                    <span class="badge badge-pre">UPSC Pre</span>
+                    <span class="topic-title">डेटा सेंटर जल खपत रिपोर्ट 2030</span>
+                </div>
+                <p class="fact-text">रिस्टैड एनर्जी (Rystad Energy) के अनुसार, एआई (AI) के विस्तार के कारण वैश्विक डेटा सेंटरों की प्रत्यक्ष जल खपत वर्ष 2025 के 222 बिलियन लीटर से बढ़कर 2030 तक 644 बिलियन लीटर (लगभग तीन गुना) हो सकती है।</p>
+            </div>
+            
+            <div class="fact-card">
+                <div class="card-header">
+                    <span class="badge badge-pre">UPSC Pre</span>
+                    <span class="topic-title">डीम्ड डिस्कॉम (Deemed DISCOM) लाइसेंस</span>
+                </div>
+                <p class="fact-text">आंध्र प्रदेश सरकार ने गूगल के प्रस्तावित 1 गीगावाट (GW) डेटा सेंटर प्रोजेक्ट को 'डीम्ड डिस्कॉम' लाइसेंस प्रदान किया है, जिससे गूगल अपने प्रोजेक्ट क्षेत्र में स्वयं बिजली खरीद और प्रबंधित कर सकेगा।</p>
+            </div>
+            
+            <div class="fact-card">
+                <div class="card-header">
+                    <span class="badge badge-pre">UPSC Pre</span>
+                    <span class="topic-title">लार्ज हैड्रॉन कोलाइडर (LHC) अपग्रेडेशन</span>
+                </div>
+                <p class="fact-text">सर्न (CERN) ने अपने हाई-ल्यूमिनोसिटी (High-Luminosity) अपग्रेड के तहत LHC के पुराने सुपरकंडक्टिंग मैग्नेट को बदलना शुरू किया है, जो 40% अधिक मजबूत चुंबकीय क्षेत्र उत्पन्न करेंगे।</p>
+            </div>
+            
+            <div class="fact-card">
+                <div class="card-header">
+                    <span class="badge badge-pre">UPSC Pre / RAS Pre</span>
+                    <span class="topic-title">सी-आईआरबी (CIRB) स्वच्छता संवाद</span>
+                </div>
+                <p class="fact-text">केंद्रीय भैंस अनुसंधान संस्थान (ICAR-CIRB) ने स्वच्छता ही सेवा और जनभागीदारी को बढ़ावा देने के लिए स्वच्छता संवाद का आयोजन किया है।</p>
+            </div>
+            
+            <div class="fact-card">
+                <div class="card-header">
+                    <span class="badge badge-pre">UPSC Pre</span>
+                    <span class="topic-title">विशेष अभियान 6.0</span>
+                </div>
+                <p class="fact-text">रसायन एवं पेट्रो-रसायन विभाग द्वारा ई-कचरा निपटान, स्वच्छता और कार्यस्थल दक्षता में सुधार हेतु विशेष अभियान 6.0 शुरू किया जा रहा है।</p>
+            </div>
+            
+            <div class="fact-card">
+                <div class="card-header">
+                    <span class="badge badge-pre">UPSC Pre</span>
+                    <span class="topic-title">द्विपक्षीय निवेश संधि (BIT) और कराधान</span>
+                </div>
+                <p class="fact-text">भारत सरकार ने स्पष्ट किया है कि वह अपनी द्विपक्षीय निवेश संधियों (BIT) के दायरे से कराधान (Taxation) को पूरी तरह बाहर रखेगी। इसके तहत विदेशी निवेशकों को मध्यस्थता से पहले स्थानीय कानूनी उपचारों का उपयोग करना अनिवार्य होगा।</p>
+            </div>
+            
+            <div class="fact-card">
+                <div class="card-header">
+                    <span class="badge badge-pre">UPSC Pre</span>
+                    <span class="topic-title">व्यापार रहस्य कानून (Trade Secrets Law)</span>
+                </div>
+                <p class="fact-text">उद्योग संवर्धन और आंतरिक व्यापार विभाग (DPIIT) भारत में व्यापार रहस्यों के संरक्षण, व्हिसलब्लोअर सुरक्षा और अनुबंध प्रवर्तन के लिए एक समर्पित कानून या भारतीय अनुबंध अधिनियम में संशोधन पर विचार कर रहा है।</p>
+            </div>
+            
+            <div class="fact-card">
+                <div class="card-header">
+                    <span class="badge badge-raj">RAS Pre</span>
+                    <span class="topic-title">किशाऊ बहुउद्देशीय परियोजना</span>
+                </div>
+                <p class="fact-text">हिमाचल प्रदेश और उत्तराखंड की सीमा पर टोंस नदी पर प्रस्तावित किशाऊ परियोजना से राजस्थान सहित 6 राज्यों को पेयजल और सिंचाई जल प्राप्त होगा। राजस्थान सुजस के अनुसार इस पर त्वरित कार्य हेतु समन्वय किया जा रहा है।</p>
+            </div>
+            
+            <div class="fact-card">
+                <div class="card-header">
+                    <span class="badge badge-raj">RAS Pre</span>
+                    <span class="topic-title">राजस्थान ग्रीन एनर्जी कॉरिडोर</span>
+                </div>
+                <p class="fact-text">राजस्थान में सौर और पवन ऊर्जा की निकासी हेतु इंट्रा-स्टेट ट्रांसमिशन सिस्टम के तहत ग्रीन एनर्जी कॉरिडोर का विकास किया जा रहा है, जिससे पश्चिमी राजस्थान के ग्रिड को सुदृढ़ किया जाएगा।</p>
+            </div>
+            
+            <div class="fact-card">
+                <div class="card-header">
+                    <span class="badge badge-raj">RAS Pre</span>
+                    <span class="topic-title">राजस्थान पंचायती राज चुनाव स्थगन</span>
+                </div>
+                <p class="fact-text">राज्य निर्वाचन आयुक्त राजेश्वर सिंह ने स्पष्ट किया है कि पंचायती राज संस्थाओं के वार्ड पुनर्गठन और लॉटरी प्रक्रियाओं के प्रशासनिक कारणों से चुनाव की तैयारियों को सुव्यवस्थित किया जा रहा है।</p>
+            </div>
+            
+            <div class="fact-card">
+                <div class="card-header">
+                    <span class="badge badge-raj">RAS Pre</span>
+                    <span class="topic-title">अंतर्राष्ट्रीय सीमा सुरक्षा एवं युद्धाभ्यास</span>
+                </div>
+                <p class="fact-text">राजस्थान के सीमावर्ती जिलों (बाड़मेर-जैसलमेर) में वायुसेना के युद्धाभ्यास के साथ-साथ सीमा पार से ड्रोन द्वारा नशीले पदार्थों की तस्करी को रोकने हेतु बीएसएफ (BSF) ने विशेष निगरानी अभियान शुरू किया है।</p>
+            </div>
+            
+            <div class="fact-card">
+                <div class="card-header">
+                    <span class="badge badge-raj">RAS Pre</span>
+                    <span class="topic-title">मुफ्त कोचिंग योजना (UPSC/RPSC)</span>
+                </div>
+                <p class="fact-text">राजस्थान सरकार की अनुप्रति कोचिंग योजना और केंद्र सरकार की मुफ्त कोचिंग योजना के तहत चयनित अभ्यर्थियों को सिविल सेवा परीक्षा की तैयारी हेतु वित्तीय सहायता और निःशुल्क कोचिंग प्रदान की जाती है।</p>
+            </div>
+            
+
+        <div class="section-title">🔵 मुख्य परीक्षा उत्तर लेखन मॉडल सेट (RAS Mains - 5M & 10M)</div>
+        
+            <div class="mains-card">
+                <div class="mains-header">
+                    <span class="badge badge-5m">5 अंक (Paper 3)</span>
+                    <span class="subject-tag">अंतर्राष्ट्रीय संबंध</span>
+                </div>
+                <h3 class="question-text">प्रश्न: संयुक्त राष्ट्र महासभा (UNGA) के 81वें सत्र के संदर्भ में संयुक्त राष्ट्र में सुधारों की आवश्यकता को स्पष्ट कीजिए।</h3>
+                
+                <div class="answer-box">
+                    <strong class="ans-label">उत्तर ढांचा (~50 शब्द):</strong>
+                    <div class="answer-content">संयुक्त राष्ट्र (UN) वर्तमान में महाशक्तियों के आधिपत्य और अप्रभावी बहुपक्षवाद के कारण संरचनात्मक संकट से जूझ रहा है। सुधारों की आवश्यकता के प्रमुख बिंदु निम्नलिखित हैं:<br>1. प्रतिनिधित्व का अभाव: सुरक्षा परिषद (UNSC) में अफ्रीका, लैटिन अमेरिका और भारत जैसे उभरते देशों को स्थायी प्रतिनिधित्व न मिलना।<br>2. वीटो पावर का दुरुपयोग: वैश्विक संकटों (जैसे यूक्रेन, मध्य पूर्व) में महाशक्तियों द्वारा वीटो के प्रयोग से निर्णय प्रक्रिया का पंगु होना।<br>3. समकालीन चुनौतियों में विफलता: जलवायु परिवर्तन, एआई (AI) विनियमन और महामारी जैसी गैर-पारंपरिक सुरक्षा चुनौतियों से निपटने में असमर्थता। अतः वैश्विक शांति हेतु लोकतांत्रिक और समावेशी सुधार अपरिहार्य हैं।</div>
+                </div>
+                
+            </div>
+            
+            <div class="mains-card">
+                <div class="mains-header">
+                    <span class="badge badge-5m">5 अंक (Paper 1)</span>
+                    <span class="subject-tag">अर्थव्यवस्था</span>
+                </div>
+                <h3 class="question-text">प्रश्न: भारत द्वारा द्विपक्षीय निवेश संधियों (BIT) में कराधान को बाहर रखने और स्थानीय उपचारों को अनिवार्य करने के नीतिगत निहितार्थ क्या हैं?</h3>
+                
+                <div class="answer-box">
+                    <strong class="ans-label">उत्तर ढांचा (~50 शब्द):</strong>
+                    <div class="answer-content">भारत सरकार द्वारा संशोधित मॉडल BIT के तहत कराधान को बाहर रखने और 'स्थानीय उपचारों की समाप्ति' (Exhaustion of Local Remedies) को अनिवार्य करने के निम्नलिखित निहितार्थ हैं:<br>1. संप्रभुता का संरक्षण: वोडाफोन और केयर्न जैसे पूर्वव्यापी कर विवादों से सीख लेते हुए भारत अपनी कर संप्रभुता को अंतर्राष्ट्रीय मध्यस्थता न्यायाधिकरणों से सुरक्षित रखना चाहता है।<br>2. न्यायिक सुदृढ़ीकरण: विदेशी निवेशकों को अंतर्राष्ट्रीय मंच पर जाने से पहले कम से कम पांच वर्ष तक भारतीय अदालतों में कानूनी उपचार तलाशने होंगे, जिससे घरेलू न्याय प्रणाली पर विश्वास बढ़ेगा।<br>3. निवेश पर प्रभाव: इससे अल्पावधि में विदेशी निवेशकों में अनिश्चितता बढ़ सकती है, किंतु दीर्घकाल में यह एक पारदर्शी और पूर्वानुमेय विनियामक ढांचा प्रदान करेगा।</div>
+                </div>
+                
+            </div>
+            
+            <div class="mains-card">
+                <div class="mains-header">
+                    <span class="badge badge-10m">10 अंक (Paper 3)</span>
+                    <span class="subject-tag">पर्यावरण एवं पारिस्थितिकी</span>
+                </div>
+                <h3 class="question-text">प्रश्न: कस्तूरीरंगन समिति की सिफारिशों के आलोक में पश्चिमी घाट के पारिस्थितिक संवेदनशील क्षेत्रों (ESA) के संरक्षण में आने वाली चुनौतियों और राज्यों के प्रतिरोध का समालोचनात्मक विश्लेषण कीजिए।</h3>
+                
+                <div class="answer-box">
+                    <div class="ans-section"><strong class="ans-label">भूमिका (Introduction):</strong><br>पश्चिमी घाट वैश्विक जैव विविधता हॉटस्पॉट है। इसके संरक्षण हेतु कस्तूरीरंगन समिति ने 37% क्षेत्र को पारिस्थितिक रूप से संवेदनशील क्षेत्र (ESA) घोषित करने की सिफारिश की थी, जिसका कर्नाटक सहित कई राज्य विरोध कर रहे हैं।</div>
+                    <div class="ans-section"><strong class="ans-label">मुख्य भाग (Body & Rajasthan Context):</strong><br>राज्यों के प्रतिरोध के मुख्य कारण:<br>1. विकासात्मक गतिविधियों पर रोक: ESA घोषित होने से खनन, उत्खनन, रेत खनन, और लाल श्रेणी के उद्योगों पर पूर्ण प्रतिबंध लग जाएगा, जिससे राज्यों का आर्थिक विकास प्रभावित होगा।<br>2. स्थानीय विस्थापन का भय: कृषि गतिविधियों, बुनियादी ढांचा परियोजनाओं (सड़क, बिजली) के बाधित होने से स्थानीय आबादी में विस्थापन और आजीविका खोने का डर है।<br>3. जलविद्युत परियोजनाओं पर प्रभाव: कर्नाटक जैसी सरकारें अपनी प्रस्तावित जलविद्युत और बुनियादी ढांचा परियोजनाओं के बाधित होने के कारण संपूर्ण रूपरेखा को खारिज कर रही हैं।<br><br>संरक्षण की चुनौतियाँ:<br>- जलवायु परिवर्तन के कारण भूस्खलन और बाढ़ की घटनाओं में वृद्धि (जैसे वायनाड आपदा)।<br>- पर्यावरण संरक्षण और मानव विकास के बीच संतुलन का अभाव।<br>- वैज्ञानिक डेटा और स्थानीय समुदायों की भागीदारी के बीच समन्वय की कमी।</div>
+                    <div class="ans-section"><strong class="ans-label">निष्कर्ष (Conclusion):</strong><br>आगे की राह के रूप में, राज्यों को संपूर्ण कस्तूरीरंगन रिपोर्ट को खारिज करने के बजाय वैज्ञानिक मैपिंग और स्थानीय समुदायों को विश्वास में लेकर एक मध्यम मार्ग अपनाना चाहिए, ताकि पारिस्थितिकी और विकास दोनों का सह-अस्तित्व सुनिश्चित हो सके।</div>
+                </div>
+                
+            </div>
+            
+            <div class="mains-card">
+                <div class="mains-header">
+                    <span class="badge badge-10m">10 अंक (Paper 1)</span>
+                    <span class="subject-tag">अर्थव्यवस्था एवं समाजशास्त्र</span>
+                </div>
+                <h3 class="question-text">प्रश्न: एआई (AI) और डिजिटल अवसंरचना के तेजी से होते विस्तार के बीच 'अदृश्य श्रम' (Invisible Labour) और महिलाओं के अवैतनिक देखभाल कार्य (Unpaid Care Work) के आर्थिक व सामाजिक सशक्तिकरण पर प्रभाव का मूल्यांकन कीजिए।</h3>
+                
+                <div class="answer-box">
+                    <div class="ans-section"><strong class="ans-label">भूमिका (Introduction):</strong><br>आधुनिक अर्थव्यवस्था में प्रौद्योगिकी के 'स्वच्छ' और 'अमूर्त' होने के भ्रम के पीछे बड़े पैमाने पर अदृश्य मानवीय श्रम कार्य कर रहा है, जिसमें महिलाओं का अवैतनिक देखभाल कार्य और डेटा लेबलिंग जैसे डिजिटल श्रम शामिल हैं।</div>
+                    <div class="ans-section"><strong class="ans-label">मुख्य भाग (Body & Rajasthan Context):</strong><br>मुख्य प्रभाव और चुनौतियाँ:<br>1. जीडीपी गणना से बाहर: महिलाओं द्वारा किए जाने वाले घरेलू और देखभाल कार्य को सकल घरेलू उत्पाद (GDP) में शामिल नहीं किया जाता है, जिससे उनका आर्थिक योगदान अदृश्य रहता है। यह महिलाओं के आर्थिक और सामाजिक विसशक्तिकरण का मुख्य कारण है।<br>2. डिजिटल श्रम का शोषण (Humans in the Loop): एआई एल्गोरिदम को प्रशिक्षित करने के लिए डेटा लेबलिंग (जैसे छवियों को टैग करना) का कार्य विकासशील देशों (जैसे भारत के आदिवासी क्षेत्रों) में कम वेतन और बिना किसी सुरक्षा के कराया जाता है। यह श्रम अत्यधिक दोहराव वाला और थकाऊ होता है।<br>3. लैंगिक असमानता: देखभाल कार्य के असमान वितरण के कारण महिलाएं औपचारिक श्रम बल में शामिल नहीं हो पाती हैं, जिससे श्रम बल भागीदारी दर (LFPR) में लैंगिक अंतर बढ़ता है।<br>4. एआई जनित विस्थापन: एआई के कारण प्रवेश स्तर की नौकरियों (Entry-level jobs) में कमी आ रही है, जिससे युवा पेशेवरों (Gen-Z) में 'क्वाइट क्विटिंग' (Quiet Quitting) और मानसिक तनाव बढ़ रहा है।</div>
+                    <div class="ans-section"><strong class="ans-label">निष्कर्ष (Conclusion):</strong><br>अतः नीतिगत स्तर पर महिलाओं के अवैतनिक श्रम को राष्ट्रीय खातों में शामिल करने, डेटा लेबलर्स के लिए श्रम कानून बनाने और एआई के विकास को केवल कॉर्पोरेट हितों के बजाय मानव-केंद्रित और समावेशी बनाने की आवश्यकता है।</div>
+                </div>
+                
+            </div>
+            
+
+        <div class="section-title">📺 कोचिंग शिक्षक विश्लेषण एवं यूट्यूब लाइव क्लास सार</div>
+            <div class="yt-card">
+                <div class="yt-header">
+                    <span class="badge badge-yt">📺 कोचिंग शिक्षक विश्लेषण</span>
+                    <span class="topic-title">संयुक्त राष्ट्र महासभा (UNGA) का 81वां सत्र और बहुपक्षवाद का संकट</span>
+                </div>
+                <div class="yt-explanation">
+                    <strong>शिक्षक व्याख्यान एवं ट्रिक्स:</strong>
+                    <p>प्रशांत सर (UPSC Wallah) ने समझाया कि संयुक्त राष्ट्र (UN) वर्तमान में 'ओवरवेट और कमजोर' हो चुका है। इसका अर्थ है कि इसकी नौकरशाही और सदस्य संख्या तो बढ़ गई है, लेकिन इसकी निर्णय लेने की क्षमता और प्रभावशीलता अत्यंत कमजोर हो गई है। उन्होंने 'वीटो पावर' के गतिरोध को दूर करने के लिए 'लीग ऑफ नेशंस' की विफलताओं से तुलना करते हुए बहुपक्षीय सुधारों पर जोर दिया।</p>
+                </div>
+                <div class="key-args">
+                    <strong>क्लास के मुख्य बिंदु (Key Lecture Points):</strong>
+                    <ul>
+                        <li>UNSC में सुधार के बिना वैश्विक शांति संभव नहीं है।</li><li>वैश्विक दक्षिण (Global South) को निर्णय लेने की प्रक्रिया में शामिल करना अनिवार्य है।</li><li>एआई (AI) और साइबर सुरक्षा जैसी नई वैश्विक चुनौतियों के लिए संयुक्त राष्ट्र के पास कोई ठोस विनियामक ढांचा नहीं है।</li>
+                    </ul>
+                </div>
+                <div class="exam-tip-box"><strong>💡 परीक्षा टिप (Exam Tip):</strong> मेन्स परीक्षा में संयुक्त राष्ट्र सुधारों पर प्रश्न आने पर 'ओवरवेट और कमजोर' (Overweight and Weak) जैसे कीवर्ड्स का उपयोग करें। उत्तर संरचना में: 1. ऐतिहासिक पृष्ठभूमि, 2. वर्तमान संकट (उदाहरणों सहित), 3. भारत की स्थायी सदस्यता का दावा, और 4. 'समिट ऑफ द फ्यूचर' के प्रस्तावों को शामिल करें।</div>
+            </div>
+            
+            <div class="yt-card">
+                <div class="yt-header">
+                    <span class="badge badge-yt">📺 कोचिंग शिक्षक विश्लेषण</span>
+                    <span class="topic-title">भारत की आर्थिक विकास दर और प्रौद्योगिकी का एकीकरण</span>
+                </div>
+                <div class="yt-explanation">
+                    <strong>शिक्षक व्याख्यान एवं ट्रिक्स:</strong>
+                    <p>वित्त मंत्री निर्मला सीतारमण के वक्तव्य का विश्लेषण करते हुए शिक्षक ने बताया कि भारत 10% से अधिक की आर्थिक विकास दर हासिल करने की क्षमता रखता है। इसके लिए कृषि क्षेत्र में प्रौद्योगिकी (Agri-Tech) और स्टार्टअप्स के एकीकरण को मुख्य चालक (Driver) बताया गया है।</p>
+                </div>
+                <div class="key-args">
+                    <strong>क्लास के मुख्य बिंदु (Key Lecture Points):</strong>
+                    <ul>
+                        <li>स्टार्टअप पारिस्थितिकी तंत्र (2015 से) ने भारत की नवाचार क्षमता को वैश्विक स्तर पर स्थापित किया है।</li><li>कृषि में ड्रोन, एआई और सटीक खेती (Precision Farming) से उत्पादकता दोगुनी की जा सकती है।</li><li>उच्च विकास दर के लिए विनिर्माण (Manufacturing) और सेवा क्षेत्र में तकनीकी समावेशन आवश्यक है।</li>
+                    </ul>
+                </div>
+                <div class="exam-tip-box"><strong>💡 परीक्षा टिप (Exam Tip):</strong> जीएस पेपर 3 (भारतीय अर्थव्यवस्था) में आर्थिक संवृद्धि पर उत्तर लिखते समय वित्त मंत्री के 10% विकास दर के दृष्टिकोण और 'प्रौद्योगिकी-आधारित समावेशी विकास' के तर्कों को शामिल करें।</div>
+            </div>
+            
+
+        <div class="section-title">🟣 राजस्थान सुजस, पत्रिका एवं दैनिक भास्कर (Rajasthan Sujas, Patrika & Bhaskar)</div>
+        
+            <div class="sujas-card">
+                <div class="sujas-header">
+                    <span class="badge badge-sujas">राजस्थान सुजस विशेष</span>
+                    <strong>सूचना एवं जनसंपर्क विभाग (DIPR), राजस्थान</strong>
+                </div>
+                <h3>राजस्थान सुजस: युवाओं को नियुक्ति पत्र और रोजगार संवर्धन</h3>
+                <ul>
+                    <li>राज्य सरकार द्वारा आयोजित रोजगार उत्सव के तहत 51 हजार से अधिक युवाओं को सरकारी नौकरियों के नियुक्ति पत्र वितरित किए गए हैं।</li><li>युवाओं को कौशल विकास और स्वरोजगार से जोड़ने के लिए मुख्यमंत्री युवा संबल योजना और अन्य कौशल प्रशिक्षण कार्यक्रमों को सुदृढ़ किया जा रहा है।</li><li>प्रशासनिक पारदर्शिता सुनिश्चित करने के लिए भर्ती परीक्षाओं के आयोजन हेतु कड़े नियम और पेपर लीक विरोधी कानून लागू किए गए हैं।</li>
+                </ul>
+                <div class="relevance-box"><strong>RPSC महत्व:</strong> RAS Mains Paper 1 (अर्थव्यवस्था - राजस्थान के संदर्भ में मानव संसाधन और रोजगार) हेतु अत्यंत महत्वपूर्ण।</div>
+            </div>
+            
+            <div class="sujas-card">
+                <div class="sujas-header">
+                    <span class="badge badge-sujas">राजस्थान सुजस विशेष</span>
+                    <strong>राज्य निर्वाचन आयोग, राजस्थान</strong>
+                </div>
+                <h3>राजस्थान पंचायती राज चुनाव और वार्ड पुनर्गठन</h3>
+                <ul>
+                    <li>राज्य निर्वाचन आयुक्त राजेश्वर सिंह ने पंचायती राज संस्थाओं के आगामी चुनावों की तैयारियों की समीक्षा की है।</li><li>वार्डों के पुनर्गठन, आरक्षण लॉटरी और मतदाता सूचियों के अद्यतनीकरण की प्रक्रियाओं को पारदर्शी बनाने के निर्देश दिए गए हैं।</li><li>पंचायती राज संस्थाओं में महिलाओं और कमजोर वर्गों की भागीदारी सुनिश्चित करने के लिए विनियामक प्रावधानों का कड़ाई से पालन किया जा रहा है।</li>
+                </ul>
+                <div class="relevance-box"><strong>RPSC महत्व:</strong> RAS Mains Paper 3 (राजनीतिक व्यवस्था - राजस्थान में स्थानीय स्वशासन) हेतु प्रासंगिक।</div>
+            </div>
+            
+
+        <div class="section-title">🔴 सम्पादकीय एवं पत्रिका गहन विश्लेषण (The Hindu, Indian Express, ET, DownToEarth, योजना व कुरुक्षेत्र)</div>
+        
+            <div class="editorial-card">
+                <div class="editorial-header">
+                    <span class="badge badge-ed">The Hindu</span>
+                    <span class="syllabus-tag">GS2: महत्वपूर्ण अंतर्राष्ट्रीय संस्थान, संस्थाएं और मंच- उनकी संरचना, जनादेश</span>
+                </div>
+                <h3>Overweight and weak: On the UN and the 81st session of the UN General Assembly</h3>
+                <p class="context"><strong>समसामयिक संदर्भ:</strong> संयुक्त राष्ट्र महासभा (UNGA) के 81वें सत्र के आयोजन के अवसर पर संयुक्त राष्ट्र की अप्रभावी कार्यप्रणाली और महाशक्तियों के आधिपत्य पर चिंता व्यक्त की गई है।</p>
+                <div class="key-args">
+                    <strong>सम्पादकीय का पूरा सार एवं तर्क (Deep Dive Takeaways):</strong>
+                    <ul>
+                        <li>संयुक्त राष्ट्र वर्तमान में अत्यधिक बोझिल (unwieldy) और निर्णय लेने में अक्षम संगठन बन चुका है, जो वैश्विक संकटों को टालने में विफल रहा है।</li><li>सुरक्षा परिषद (UNSC) में पांच स्थायी सदस्यों (P5) का वीटो पावर वैश्विक लोकतांत्रिक मूल्यों के विपरीत है और यह बहुपक्षवाद को कमजोर करता है।</li><li>वैश्विक दक्षिण (Global South) के देशों, विशेषकर भारत और अफ्रीकी देशों को वैश्विक निर्णय प्रक्रिया में उचित प्रतिनिधित्व नहीं मिल रहा है।</li><li>भू-राजनीतिक ध्रुवीकरण (जैसे रूस-यूक्रेन युद्ध और पश्चिम एशिया संकट) ने संयुक्त राष्ट्र को केवल एक चर्चा के मंच (Debating Club) में बदल दिया है।</li>
+                    </ul>
+                </div>
+                <div class="way-forward"><strong>आगे की राह (Way Forward):</strong> संयुक्त राष्ट्र को अपनी प्रासंगिकता बनाए रखने के लिए सुरक्षा परिषद का विस्तार करना होगा, वीटो शक्ति को सीमित करना होगा और वैश्विक दक्षिण की आवाज़ को निर्णय लेने की प्रक्रियाओं में प्राथमिकता देनी होगी।</div>
+            </div>
+            
+            <div class="editorial-card">
+                <div class="editorial-header">
+                    <span class="badge badge-ed">The Hindu</span>
+                    <span class="syllabus-tag">GS3: संरक्षण, पर्यावरण प्रदूषण और क्षरण, पर्यावरणीय प्रभाव मूल्यांकन</span>
+                </div>
+                <h3>Narrowed posture: On Karnataka and the Kasturirangan Report</h3>
+                <p class="context"><strong>समसामयिक संदर्भ:</strong> कर्नाटक सरकार द्वारा पश्चिमी घाट के संरक्षण से संबंधित कस्तूरीरंगन समिति की रिपोर्ट के तहत पारिस्थितिक रूप से संवेदनशील क्षेत्रों (ESA) के निर्धारण को पूरी तरह से खारिज करने के रुख की आलोचना की गई है।</p>
+                <div class="key-args">
+                    <strong>सम्पादकीय का पूरा सार एवं तर्क (Deep Dive Takeaways):</strong>
+                    <ul>
+                        <li>पश्चिमी घाट भारत की मानसून प्रणाली और जल सुरक्षा के लिए अत्यंत महत्वपूर्ण है; इसके क्षरण से बाढ़ और भूस्खलन जैसी आपदाएं बढ़ रही हैं।</li><li>कर्नाटक सरकार का तर्क है कि ESA घोषित होने से बुनियादी ढांचा विकास और स्थानीय लोगों की आजीविका बाधित होगी, जो कि आंशिक रूप से भ्रामक है।</li><li>पारिस्थितिक संरक्षण को विकास के विरोधी के रूप में देखना एक संकीर्ण दृष्टिकोण है, क्योंकि दीर्घकालिक आर्थिक स्थिरता पर्यावरण की रक्षा पर ही निर्भर है।</li><li>वायनाड (केरल) में हाल ही में हुए विनाशकारी भूस्खलन इस बात के स्पष्ट प्रमाण हैं कि पश्चिमी घाट के संवेदनशील क्षेत्रों में मानवीय हस्तक्षेप को नियंत्रित करना कितना आवश्यक है।</li>
+                    </ul>
+                </div>
+                <div class="way-forward"><strong>आगे की राह (Way Forward):</strong> राज्य सरकारों को पर्यावरणविदों, वैज्ञानिकों और स्थानीय समुदायों के साथ मिलकर एक सहभागी दृष्टिकोण अपनाना चाहिए, जिसमें संवेदनशील क्षेत्रों की सूक्ष्म-स्तरीय मैपिंग की जाए और सतत विकास को बढ़ावा दिया जाए।</div>
+            </div>
+            
+            <div class="editorial-card">
+                <div class="editorial-header">
+                    <span class="badge badge-ed">LiveMint</span>
+                    <span class="syllabus-tag">GS1 / GS3: भारतीय समाज, महिलाओं की भूमिका और महिला संगठन, आर्थिक विकास</span>
+                </div>
+                <h3>Invisible work: Why unpaid labour done by women mustn't go unaccounted for</h3>
+                <p class="context"><strong>समसामयिक संदर्भ:</strong> महिलाओं द्वारा किए जाने वाले अवैतनिक देखभाल कार्य (Unpaid Care Work) को सकल घरेलू उत्पाद (GDP) की गणना में शामिल करने और उनके आर्थिक सशक्तिकरण की आवश्यकता पर बल।</p>
+                <div class="key-args">
+                    <strong>सम्पादकीय का पूरा सार एवं तर्क (Deep Dive Takeaways):</strong>
+                    <ul>
+                        <li>घरेलू काम, बच्चों और बुजुर्गों की देखभाल जैसे अवैतनिक कार्यों में महिलाओं का योगदान पुरुषों की तुलना में कई गुना अधिक है, जिसे आर्थिक रूप से शून्य माना जाता है।</li><li>यह लैंगिक असमानता महिलाओं के आर्थिक और सामाजिक विसशक्तिकरण का मुख्य कारण है, क्योंकि यह उन्हें औपचारिक रोजगार और शिक्षा के अवसरों से वंचित करती है।</li><li>अवैतनिक श्रम को जीडीपी में शामिल न करने से देश की वास्तविक आर्थिक उत्पादकता का सही आकलन नहीं हो पाता है।</li><li>केयर इकोनॉमी (Care Economy) में निवेश करने से न केवल रोजगार के नए अवसर पैदा होंगे, बल्कि लैंगिक समानता भी सुनिश्चित होगी।</li>
+                    </ul>
+                </div>
+                <div class="way-forward"><strong>आगे की राह (Way Forward):</strong> सरकार को समय-उपयोग सर्वेक्षणों (Time Use Surveys) के आधार पर अवैतनिक श्रम का मौद्रिक मूल्यांकन करना चाहिए और सामाजिक सुरक्षा नेट का विस्तार कर महिलाओं के कार्यभार को कम करने के उपाय करने चाहिए।</div>
+            </div>
+            
+            <div class="editorial-card">
+                <div class="editorial-header">
+                    <span class="badge badge-ed">Down To Earth</span>
+                    <span class="syllabus-tag">GS3: विज्ञान एवं प्रौद्योगिकी- विकास और उनके अनुप्रयोग, पर्यावरण प्रभाव</span>
+                </div>
+                <h3>Data centre water consumption could triple to 644 billion litres by 2030</h3>
+                <p class="context"><strong>समसामयिक संदर्भ:</strong> आर्टिफिशियल इंटेलिजेंस (AI) और क्लाउड कंप्यूटिंग के विस्तार के कारण डेटा सेंटरों की शीतलन (Cooling) के लिए पानी की मांग में भारी वृद्धि की चेतावनी।</p>
+                <div class="key-args">
+                    <strong>सम्पादकीय का पूरा सार एवं तर्क (Deep Dive Takeaways):</strong>
+                    <ul>
+                        <li>वर्ष 2030 तक वैश्विक डेटा सेंटरों की प्रत्यक्ष जल खपत बढ़कर 644 बिलियन लीटर हो सकती है, जो जल संकट से जूझ रहे क्षेत्रों के लिए बड़ा खतरा है।</li><li>एआई सर्वर सामान्य सर्वरों की तुलना में अत्यधिक गर्मी उत्पन्न करते हैं, जिससे उनके लिए तरल शीतलन (Liquid Cooling) और पानी की आवश्यकता बढ़ जाती है।</li><li>डेटा सेंटरों का अप्रत्यक्ष जल पदचिह्न (Indirect Water Footprint) उनके द्वारा उपयोग की जाने वाली बिजली के उत्पादन में होने वाली जल खपत के कारण और भी अधिक (लगभग दोगुना) है।</li><li>भारत के जामनगर और ठाणे जैसे क्षेत्र डेटा सेंटर निर्माण के कारण अत्यधिक जल तनाव (Water Stress) के जोखिम वाले क्षेत्रों में शामिल हैं।</li>
+                    </ul>
+                </div>
+                <div class="way-forward"><strong>आगे की राह (Way Forward):</strong> डेटा सेंटर ऑपरेटरों को 'शुष्क शीतलन' (Dry Cooling) तकनीकों को अपनाना चाहिए, जल उपयोग प्रभावशीलता (WUE) के कड़े मानक लागू करने चाहिए और वर्ष 2030 तक 'वॉटर पॉजिटिव' (Water Positive) बनने के लक्ष्यों को कड़ाई से पूरा करना चाहिए।</div>
+            </div>
+            
+
+        <div class="section-title">📲 टेलीग्राम चैनल दैनिक प्रश्नोत्तरी व नोट्स (Telegram Daily Quiz & Notes)</div>
+            <div class="mains-card" style="border-left: 8px solid #0284c7; margin-bottom: 25px;">
+                <div class="mains-header">
+                    <span class="badge" style="background:#0284c7; color:white;">5 अंक (~50 शब्द)</span>
+                    <span class="badge" style="background:#1e3a8a; color:white;">@RPSC_RAS_Exam_Prep</span>
+                    <span class="subject-tag">Paper 1: राजस्थान की अर्थव्यवस्था (अक्षय ऊर्जा)</span>
+                </div>
+                <h3 class="question-text">प्रश्न: राजस्थान में 'ग्रीन एनर्जी कॉरिडोर' परियोजना का मुख्य उद्देश्य क्या है और यह किन जिलों से होकर गुजरती है?</h3>
+                <div class="answer-box">
+                    <strong class="ans-label">उत्तर ढांचा एवं विस्तृत नोट्स (~50 शब्द):</strong>
+                    <div class="answer-content">1. सही उत्तर एवं मुख्य तथ्य: ग्रीन एनर्जी कॉरिडोर का मुख्य उद्देश्य पश्चिमी राजस्थान में उत्पादित सौर और पवन ऊर्जा को राष्ट्रीय ग्रिड से जोड़ना है।<br>2. भौगोलिक संदर्भ: यह मुख्य रूप से जैसलमेर, बाड़मेर, जोधपुर और बीकानेर जिलों में स्थापित अक्षय ऊर्जा पार्कों से विद्युत निकासी हेतु ट्रांसमिशन ग्रिड का विकास करती है।<br>3. RPSC परीक्षा प्रासंगिकता: यह परियोजना राजस्थान को देश का प्रमुख ऊर्जा हब बनाने और सतत विकास लक्ष्यों (SDG 7) को प्राप्त करने में सहायक है।</div>
+                </div>
+            </div>
+            
+    </div>
+
+    <script>
+        function setFontSize(size) {
+            document.documentElement.style.setProperty('--base-font-size', size + 'px');
+            localStorage.setItem('ras_notes_font_size', size);
+            document.querySelectorAll('.toolbar-btns .t-btn').forEach(b => {
+                if (b.innerText.includes(size + 'px')) b.classList.add('active');
+                else if (b.innerText.includes('px')) b.classList.remove('active');
+            });
+        }
+
+        function toggleTheme(theme) {
+            document.body.classList.remove('dark-mode', 'sepia-mode');
+            if (theme === 'dark') document.body.classList.add('dark-mode');
+            else if (theme === 'sepia') document.body.classList.add('sepia-mode');
+            localStorage.setItem('ras_notes_theme', theme);
+        }
+
+        // Load saved preferences
+        (function() {
+            const savedSize = localStorage.getItem('ras_notes_font_size') || 26;
+            setFontSize(savedSize);
+            const savedTheme = localStorage.getItem('ras_notes_theme');
+            if (savedTheme) toggleTheme(savedTheme);
+        })();
+    </script>
+</body>
+</html>
