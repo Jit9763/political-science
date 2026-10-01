@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RAS & UPSC Daily Notes - 2026-10-01</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style id="customStyle">
+        :root {
+            --base-font-size: 24px;
+            --base-line-height: 1.85;
+            --primary: #1e1b4b;
+            --primary-light: #2563eb;
+            --secondary: #0f766e;
+            --accent-gold: #b45309;
+            --accent-purple: #6b21a8;
+            --accent-red: #9f1239;
+            --bg-main: #f8fafc;
+            --card-bg: #ffffff;
+            --text-dark: #020617;
+            --border-color: #cbd5e1;
+            --box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+        }
+
+        body.dark-mode {
+            --bg-main: #090d16;
+            --card-bg: #111827;
+            --text-dark: #f8fafc;
+            --border-color: #374151;
+            --box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+        }
+
+        body.sepia-mode {
+            --bg-main: #fbf0d9;
+            --card-bg: #fffdf7;
+            --text-dark: #2d2215;
+            --border-color: #e2d3b5;
+        }
+
+        body {
+            font-family: 'Noto Sans Devanagari', 'Segoe UI', Tahoma, sans-serif;
+            background-color: var(--bg-main);
+            color: var(--text-dark);
+            margin: 0;
+            padding: 25px;
+            line-height: var(--base-line-height);
+            font-size: var(--base-font-size);
+            transition: background-color 0.2s, font-size 0.15s;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* Eye-Comfort High Definition Typography */
+        p, li, div, span, td, th {
+            font-size: var(--base-font-size);
+            line-height: var(--base-line-height);
+        }
+
+        b, strong {
+            color: #b91c1c;
+            font-weight: 800;
+        }
+        body.dark-mode b, body.dark-mode strong {
+            color: #f87171;
+        }
+
+        .blue-highlight {
+            color: #1e3a8a;
+            font-weight: 800;
+        }
+        body.dark-mode .blue-highlight {
+            color: #60a5fa;
+        }
+
+        .container {
+            max-width: 1300px;
+            margin: 0 auto;
+        }
+
+        /* Sticky Eye-Comfort Controls Toolbar */
+        .reader-toolbar {
+            position: sticky;
+            top: 15px;
+            z-index: 999;
+            background: rgba(15, 23, 42, 0.95);
+            backdrop-filter: blur(10px);
+            color: white;
+            padding: 12px 24px;
+            border-radius: 50px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+            margin-bottom: 25px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 12px;
+            border: 2px solid #334155;
+        }
+
+        .toolbar-title {
+            font-size: 19px;
+            font-weight: 800;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .toolbar-btns {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .t-btn {
+            background: #1e293b;
+            color: white;
+            border: 1px solid #475569;
+            padding: 8px 16px;
+            border-radius: 25px;
+            font-size: 16px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.2s;
+            font-family: inherit;
+        }
+
+        .t-btn:hover, .t-btn.active {
+            background: #2563eb;
+            border-color: #60a5fa;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 10px rgba(37,99,235,0.4);
+        }
+
+        .header {
+            background: linear-gradient(135deg, #09090b 0%, #1e1b4b 50%, #0f766e 100%);
+            color: white;
+            padding: 35px 40px;
+            border-radius: 20px;
+            box-shadow: 0 15px 30px -5px rgba(0,0,0,0.25);
+            margin-bottom: 35px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border: 3px solid #3b82f6;
+        }
+        .header h1 { margin: 0 0 10px 0; font-size: 36px; font-weight: 900; letter-spacing: -0.5px; }
+        .header p { margin: 0; opacity: 0.95; font-size: 22px; font-weight: 600; }
+
+        /* Large Chapter 7 Style Section Headers */
+        .section-title {
+            font-size: 32px;
+            font-weight: 900;
+            margin: 45px 0 25px 0;
+            padding: 18px 26px;
+            background: var(--card-bg);
+            border-radius: 14px;
+            border-left: 14px solid var(--primary-light);
+            box-shadow: var(--box-shadow);
+            color: var(--text-dark);
+            border-top: 1px solid var(--border-color);
+            border-right: 1px solid var(--border-color);
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .badge {
+            padding: 8px 16px;
+            border-radius: 10px;
+            font-size: 17px;
+            font-weight: 800;
+            color: white;
+            display: inline-block;
+        }
+        .badge-pre { background-color: var(--accent-gold); }
+        .badge-raj { background-color: var(--accent-purple); }
+        .badge-5m { background-color: #0284c7; }
+        .badge-10m { background-color: #4338ca; }
+        .badge-sujas { background-color: #0d9488; }
+        .badge-ed { background-color: var(--accent-red); }
+        .badge-yt { background-color: #dc2626; }
+
+        /* Big, Comfortable Eye-Friendly Cards */
+        .fact-card, .mains-card, .sujas-card, .editorial-card, .yt-card {
+            background: var(--card-bg);
+            border-radius: 18px;
+            padding: 32px;
+            margin-bottom: 30px;
+            box-shadow: var(--box-shadow);
+            border: 2px solid var(--border-color);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .fact-card:hover, .mains-card:hover, .sujas-card:hover, .editorial-card:hover, .yt-card:hover {
+            box-shadow: 0 12px 28px rgba(0,0,0,0.1);
+        }
+
+        .fact-card { border-left: 14px solid var(--accent-gold); }
+        .mains-card { border-left: 14px solid #4338ca; }
+        .sujas-card { border-left: 14px solid var(--accent-purple); }
+        .editorial-card { border-left: 14px solid var(--accent-red); }
+        .yt-card { border-left: 14px solid #dc2626; background: var(--card-bg); }
+
+        .card-header, .mains-header, .sujas-header, .editorial-header, .yt-header {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 16px;
+            flex-wrap: wrap;
+        }
+        .topic-title { font-weight: 900; font-size: 26px; color: var(--text-dark); }
+        .fact-text { margin: 0; color: var(--text-dark); font-size: var(--base-font-size); line-height: var(--base-line-height); font-weight: 500; }
+        .question-text { margin: 12px 0 18px 0; color: #1e3a8a; font-size: calc(var(--base-font-size) + 4px); font-weight: 900; line-height: 1.6; }
+        body.dark-mode .question-text { color: #93c5fd; }
+
+        .answer-box {
+            background: #f1f5f9;
+            padding: 26px;
+            border-radius: 14px;
+            font-size: var(--base-font-size);
+            border: 2px solid #cbd5e1;
+            line-height: var(--base-line-height);
+        }
+        body.dark-mode .answer-box {
+            background: #1f2937;
+            border-color: #4b5563;
+        }
+        body.sepia-mode .answer-box {
+            background: #f4ebd0;
+            border-color: #dcd0b1;
+        }
+
+        .ans-label {
+            font-size: calc(var(--base-font-size) + 2px);
+            color: #1e3a8a;
+            display: block;
+            margin-bottom: 10px;
+            font-weight: 800;
+        }
+        body.dark-mode .ans-label { color: #60a5fa; }
+
+        .relevance-box, .way-forward {
+            background: #ecfdf5;
+            color: #065f46;
+            padding: 18px 24px;
+            border-radius: 12px;
+            margin-top: 20px;
+            font-size: calc(var(--base-font-size) - 1px);
+            border-left: 8px solid #10b981;
+            font-weight: 600;
+            border: 1px solid #a7f3d0;
+            border-left-width: 8px;
+        }
+        body.dark-mode .relevance-box, body.dark-mode .way-forward {
+            background: #064e3b;
+            color: #a7f3d0;
+            border-color: #059669;
+        }
+
+        .exam-tip-box {
+            background: #fefce8;
+            color: #854d0e;
+            padding: 18px 24px;
+            border-radius: 12px;
+            margin-top: 20px;
+            font-size: calc(var(--base-font-size) - 1px);
+            border-left: 8px solid #eab308;
+            font-weight: 600;
+            border: 1px solid #fef08a;
+            border-left-width: 8px;
+        }
+        body.dark-mode .exam-tip-box {
+            background: #713f12;
+            color: #fef08a;
+            border-color: #eab308;
+        }
+
+        ul { margin: 12px 0; padding-left: 30px; }
+        li { margin-bottom: 12px; font-size: var(--base-font-size); line-height: var(--base-line-height); }
+
+        @media print {
+            .reader-toolbar, .print-btn { display: none !important; }
+            body { background: white !important; color: black !important; padding: 0 !important; font-size: 16pt !important; }
+            .container { max-width: 100% !important; }
+            .fact-card, .mains-card, .sujas-card, .editorial-card, .yt-card { page-break-inside: avoid; border: 1px solid #999 !important; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Floating Interactive Eye-Comfort Toolbar -->
+        <div class="reader-toolbar">
+            <div class="toolbar-title">
+                <span>👁️ नेत्र-अनुकूल फॉन्ट व पठन मोड</span>
+            </div>
+            <div class="toolbar-btns">
+                <button class="t-btn" onclick="setFontSize(22)">A सामान्य (22px)</button>
+                <button class="t-btn active" id="btn-ch7" onclick="setFontSize(26)">🔠 बड़ा / Ch-7 स्टाइल (26px)</button>
+                <button class="t-btn" onclick="setFontSize(30)">🔍 अल्ट्रा लार्ज (30px)</button>
+                <button class="t-btn" onclick="toggleTheme('light')">☀️ लाइट</button>
+                <button class="t-btn" onclick="toggleTheme('sepia')">📜 सेपिया</button>
+                <button class="t-btn" onclick="toggleTheme('dark')">🌙 डार्क मोड</button>
+                <button class="t-btn" style="background:#059669; border-color:#10b981;" onclick="window.print()">🖨️ PDF प्रिंट</button>
+            </div>
+        </div>
+
+        <div class="header">
+            <div>
+                <h1>RPSC RAS & UPSC दैनिक समसामयिकी एवं सम्पादकीय विश्लेषण</h1>
+                <p>दिनांक: 2026-10-01 | RAS Pre & Mains (5M & 10M) विशेष मास्टर नोट्स</p>
+            </div>
+        </div>
+
+        <div class="section-title">🟡 प्रारंभिक परीक्षा तथ्य (RAS & UPSC Prelims Tracker)</div>
+        
+            <div class="fact-card">
+                <div class="card-header">
+                    <span class="badge badge-pre">UPSC Pre / RAS Pre</span>
+                    <span class="topic-title">ओपन-सोर्स सॉफ्टवेयर क्रांति और EDIC</span>
+                </div>
+                <p class="fact-text">यूरोप में डिजिटल संप्रभुता सुनिश्चित करने के लिए 'डिजिटल कॉमन्स यूरोपियन डिजिटल इंफ्रास्ट्रक्चर कंसोर्टियम' (EDIC) की स्थापना की गई है। इसके पांच संस्थापक सदस्य फ्रांस, जर्मनी, नीदरलैंड, इटली और लक्ज़मबर्ग हैं। इसका उद्देश्य संप्रभु और इंटरऑपरेबल ओपन-सोर्स घटकों का निर्माण करना है।</p>
+            </div>
+            
+            <div class="fact-card">
+                <div class="card-header">
+                    <span class="badge badge-pre">UPSC Pre</span>
+                    <span class="topic-title">यूएस क्लाउड (CLOUD) एक्ट 2018</span>
+                </div>
+                <p class="fact-text">Clarifying Lawful Overseas Use of Data (CLOUD) Act अमेरिकी कानून प्रवर्तन एजेंसियों को विदेशों में संग्रहीत संवेदनशील डेटा तक पहुंच की अनुमति देता है, भले ही वह डेटा विदेशी सरकारों का हो। यह यूरोपीय संघ के जीडीपीआर (GDPR) नियमों के साथ सीधे टकराव में है।</p>
+            </div>
+            
+            <div class="fact-card">
+                <div class="card-header">
+                    <span class="badge badge-pre">UPSC Pre / RAS Pre</span>
+                    <span class="topic-title">यूएन वीमेन (UN Women) डिजिटल, इनोवेशन और एआई हब</span>
+                </div>
+                <p class="fact-text">संयुक्त राष्ट्र महिला (UN Women) ने डिजिटल परिवर्तन में लैंगिक समानता सुनिश्चित करने के लिए एक वैश्विक 'डिजिटल, इनोवेशन और एआई हब' लॉन्च किया है। इसका उद्देश्य एआई प्रणालियों में लैंगिक पूर्वाग्रह और ऑनलाइन हिंसा को रोकना है।</p>
+            </div>
+            
+            <div class="fact-card">
+                <div class="card-header">
+                    <span class="badge badge-pre">UPSC Pre / RAS Pre</span>
+                    <span class="topic-title">प्लूटो का 'बौना ग्रह' वर्गीकरण</span>
+                </div>
+                <p class="fact-text">24 अगस्त 2006 को प्राग (चेक गणराज्य) में अंतर्राष्ट्रीय खगोलीय संघ (IAU) के प्रस्ताव 5A और 6A के तहत प्लूटो को ग्रह की श्रेणी से हटाकर 'बौना ग्रह' (Dwarf Planet) घोषित किया गया था, क्योंकि यह अपनी कक्षा के आस-पास के खगोलीय पिंडों को साफ करने की तीसरी शर्त पूरी नहीं करता था।</p>
+            </div>
+            
+            <div class="fact-card">
+                <div class="card-header">
+                    <span class="badge badge-pre">UPSC Pre / RAS Pre</span>
+                    <span class="topic-title">डीम्ड डिस्कॉम (Deemed DISCOM) लाइसेंस</span>
+                </div>
+                <p class="fact-text">आंध्र प्रदेश सरकार ने गूगल के प्रस्तावित 1 गीगावाट (GW) डेटा सेंटर प्रोजेक्ट को 'डीम्ड डिस्कॉम' लाइसेंस प्रदान किया है, जिससे कंपनी अपने प्रोजेक्ट क्षेत्र के भीतर स्वयं बिजली की खरीद और प्रबंधन कर सकेगी।</p>
+            </div>
+            
+            <div class="fact-card">
+                <div class="card-header">
+                    <span class="badge badge-pre">UPSC Pre / RAS Pre</span>
+                    <span class="topic-title">नदी जोड़ो परियोजना और आक्रामक प्रजातियां</span>
+                </div>
+                <p class="fact-text">एक हालिया वैज्ञानिक अध्ययन के अनुसार, निचला गंगा बेसिन 13-15 आक्रामक विदेशी प्रजातियों (Invasive Alien Species) का घर है। नदी जोड़ने की परियोजनाओं के माध्यम से ये प्रजातियां महानदी बेसिन (जो 69 संकटग्रस्त प्रजातियों का घर है) में फैल सकती हैं।</p>
+            </div>
+            
+            <div class="fact-card">
+                <div class="card-header">
+                    <span class="badge badge-pre">UPSC Pre / RAS Pre</span>
+                    <span class="topic-title">इन-स्पेस (IN-SPACe) होस्टेड-पेलोड दिशानिर्देश</span>
+                </div>
+                <p class="fact-text">भारतीय राष्ट्रीय अंतरिक्ष संवर्धन और प्राधिकरण केंद्र (IN-SPACe) ने भारतीय और विदेशी संस्थाओं के लिए होस्टेड-पेलोड (Hosted-Payloads) हेतु नए दिशानिर्देश जारी किए हैं, जिसमें आईटीयू (ITU) फाइलिंग, सुरक्षा मंजूरी और नियामक अनुपालन के नियम शामिल हैं।</p>
+            </div>
+            
+            <div class="fact-card">
+                <div class="card-header">
+                    <span class="badge badge-pre">UPSC Pre</span>
+                    <span class="topic-title">ब्लैकटिप शार्क की श्रवण क्षमता</span>
+                </div>
+                <p class="fact-text">फ्लोरिडा तट पर हुए शोध के अनुसार, जंगली ब्लैकटिप शार्क (Blacktip Sharks) 250 फीट की दूरी से कम आवृत्ति वाली ध्वनियों का पता लगा सकती हैं और ध्वनि के सटीक स्रोत की दिशा में तेजी से बदलाव कर सकती हैं।</p>
+            </div>
+            
+            <div class="fact-card">
+                <div class="card-header">
+                    <span class="badge badge-pre">UPSC Pre</span>
+                    <span class="topic-title">चमगादड़ों का विकासवादी इतिहास</span>
+                </div>
+                <p class="fact-text">एक नए जीनोमिक और जीवाश्म अध्ययन से संकेत मिलता है कि चमगादड़ों का विकास सर्वप्रथम लगभग 65 से 60 मिलियन वर्ष पूर्व यूरोप में हुआ था, जहां से वे वैश्विक स्तर पर फैले। उड़ान और इकोलोकेशन (Echolocation) की क्षमता इनके विकास के प्रारंभिक चरण में ही विकसित हो गई थी।</p>
+            </div>
+            
+            <div class="fact-card">
+                <div class="card-header">
+                    <span class="badge badge-raj">RAS Pre</span>
+                    <span class="topic-title">राजस्थान छात्रवृत्ति एवं स्कूटी योजना आवेदन</span>
+                </div>
+                <p class="fact-text">राजस्थान सरकार के उच्च शिक्षा विभाग द्वारा विभिन्न छात्रवृत्ति एवं स्कूटी योजनाओं के लिए ऑनलाइन आवेदन प्रक्रिया शुरू कर दी गई है, जिसकी अंतिम तिथि 30 नवंबर 2026 निर्धारित की गई है।</p>
+            </div>
+            
+            <div class="fact-card">
+                <div class="card-header">
+                    <span class="badge badge-raj">RAS Pre</span>
+                    <span class="topic-title">सीकर रेलवे स्टेशन द्वितीय प्रवेश द्वार</span>
+                </div>
+                <p class="fact-text">राजस्थान के सीकर रेलवे स्टेशन पर कोचिंग हब के लाखों विद्यार्थियों की सुविधा हेतु दूसरा प्रवेश द्वार (एंट्री गेट) शुरू किया गया है, जिससे स्टेशन पर भीड़ प्रबंधन और सुगम आवागमन सुनिश्चित होगा।</p>
+            </div>
+            
+            <div class="fact-card">
+                <div class="card-header">
+                    <span class="badge badge-pre">RAS Pre / UPSC Pre</span>
+                    <span class="topic-title">जीएसटी संग्रह सितंबर 2026</span>
+                </div>
+                <p class="fact-text">सितंबर 2026 में भारत का सकल जीएसटी (GST) संग्रह 2.04 लाख करोड़ रुपये रहा। इसमें शुद्ध जीएसटी राजस्व में 18.1% की वृद्धि दर्ज की गई, जो पिछले छह महीनों में सबसे तेज वृद्धि दर है।</p>
+            </div>
+            
+
+        <div class="section-title">🔵 मुख्य परीक्षा उत्तर लेखन मॉडल सेट (RAS Mains - 5M & 10M)</div>
+        
+            <div class="mains-card">
+                <div class="mains-header">
+                    <span class="badge badge-5m">5 अंक (Paper 1)</span>
+                    <span class="subject-tag">अर्थव्यवस्था (Economy)</span>
+                </div>
+                <h3 class="question-text">प्रश्न: ऋण शोधन अक्षमता और दिवाला संहिता (IBC) के तहत वसूली दरों में सुधार हेतु हाल ही में क्या सुधार सुझाए गए हैं?</h3>
+                
+                <div class="answer-box">
+                    <strong class="ans-label">उत्तर ढांचा (~50 शब्द):</strong>
+                    <div class="answer-content">दिवाला और शोधन अक्षमता बोर्ड (IBBI) के अध्यक्ष जयंती प्रसाद और न्यायिक विशेषज्ञों द्वारा निम्नलिखित सुधार सुझाए गए हैं:<br>1. वित्तीय सीमा में वृद्धि: दिवाला मामलों के प्रवेश के लिए न्यूनतम वित्तीय सीमा को बढ़ाना ताकि छोटे मामलों के बोझ से बचकर दक्षता बढ़ाई जा सके।<br>2. समयबद्ध समाधान: संहिता के दुरुपयोग और प्रक्रियात्मक देरी को रोकने के लिए सख्त समय-सीमा का अनुपालन सुनिश्चित करना।<br>3. परिसंपत्ति मूल्य संरक्षण: समाधान प्रक्रिया के दौरान परिसंपत्तियों के मूल्य ह्रास को रोकने के लिए त्वरित सुरक्षा उपाय लागू करना।</div>
+                </div>
+                
+            </div>
+            
+            <div class="mains-card">
+                <div class="mains-header">
+                    <span class="badge badge-10m">10 अंक (Paper 3)</span>
+                    <span class="subject-tag">विज्ञान एवं प्रौद्योगिकी (Science & Technology)</span>
+                </div>
+                <h3 class="question-text">प्रश्न: डेटा संप्रभुता (Data Sovereignty) क्या है? यूरोपीय देशों द्वारा अमेरिकी तकनीकी दिग्गजों पर निर्भरता कम करने के लिए ओपन-सोर्स सॉफ्टवेयर की ओर बढ़ने के कारणों का विश्लेषण कीजिए।</h3>
+                
+                <div class="answer-box">
+                    <div class="ans-section"><strong class="ans-label">भूमिका (Introduction):</strong><br>डेटा संप्रभुता का तात्पर्य यह है कि किसी देश का डेटा उसी देश के कानूनों और नियामक ढांचे के अधीन होना चाहिए। हाल ही में यूरोपीय देशों द्वारा ओपन-सोर्स सॉफ्टवेयर (OSS) को अपनाना इसी दिशा में एक बड़ा कदम है।</div>
+                    <div class="ans-section"><strong class="ans-label">मुख्य भाग (Body & Rajasthan Context):</strong><br>ओपन-सोर्स सॉफ्टवेयर की ओर बढ़ने के प्रमुख कारण निम्नलिखित हैं:<br>1. अमेरिकी क्लाउड (CLOUD) एक्ट का खतरा: 2018 का यह अमेरिकी कानून अमेरिकी एजेंसियों को विदेशों में संग्रहीत डेटा तक पहुंचने की अनुमति देता है, जो यूरोपीय संघ के जीडीपीआर (GDPR) का उल्लंघन है।<br>2. भू-राजनीतिक हथियार के रूप में तकनीक का उपयोग: अमेरिका द्वारा प्रतिबंधों के तहत माइक्रोसॉफ्ट जैसी कंपनियों के माध्यम से विदेशी अधिकारियों के खाते ब्लॉक करने जैसी घटनाओं ने देशों को सतर्क किया है।<br>3. वित्तीय बचत: फ्रांस, जर्मनी और इटली जैसे देशों ने लिनक्स (Linux) और लिब्रेऑफिस (LibreOffice) अपनाकर करोड़ों यूरो की लाइसेंसिंग फीस बचाई है।<br>4. राष्ट्रीय सुरक्षा और संप्रभुता: रक्षा और संवेदनशील सरकारी विभागों में डेटा सुरक्षा सुनिश्चित करने के लिए ओपन-सोर्स को मुख्य कंप्यूटिंग रणनीति का हिस्सा बनाया जा रहा है।</div>
+                    <div class="ans-section"><strong class="ans-label">निष्कर्ष (Conclusion):</strong><br>निष्कर्षतः, डिजिटल संप्रभुता अब केवल एक तकनीकी विकल्प नहीं बल्कि राष्ट्रीय सुरक्षा का अनिवार्य हिस्सा बन गई है, जिसे भारत को भी केरल मॉडल की तर्ज पर राष्ट्रीय स्तर पर अपनाना चाहिए।</div>
+                </div>
+                
+            </div>
+            
+            <div class="mains-card">
+                <div class="mains-header">
+                    <span class="badge badge-10m">10 अंक (Paper 1)</span>
+                    <span class="subject-tag">अर्थव्यवस्था एवं कृषि (Economy & Agriculture)</span>
+                </div>
+                <h3 class="question-text">प्रश्न: कमजोर मानसून और ग्रामीण संकट के दोहरे झटके भारतीय अर्थव्यवस्था को किस प्रकार प्रभावित करते हैं? इसके समाधान हेतु नीतिगत उपायों की चर्चा कीजिए।</h3>
+                
+                <div class="answer-box">
+                    <div class="ans-section"><strong class="ans-label">भूमिका (Introduction):</strong><br>चालू वर्ष में मानसून की 13% कमी ने कृषि उत्पादन और ग्रामीण आय को गंभीर रूप से प्रभावित किया है, जिससे ग्रामीण संकट गहरा गया है।</div>
+                    <div class="ans-section"><strong class="ans-label">मुख्य भाग (Body & Rajasthan Context):</strong><br>अर्थव्यवस्था पर प्रभाव:<br>1. खाद्य सुरक्षा और मुद्रास्फीति: दालों और तिलहनों के कमजोर उत्पादन से खाद्य मुद्रास्फीति में वृद्धि हुई है, जिससे निपटने के लिए सरकार आयात शुल्क में कटौती पर विचार कर रही है।<br>2. ग्रामीण मांग में गिरावट: कृषि आय में कमी के कारण एफएमसीजी (FMCG) और ऑटोमोबाइल जैसे क्षेत्रों में ग्रामीण मांग कमजोर हुई है।<br>3. दोहरी मार: एक तरफ बढ़ती कीमतें और दूसरी तरफ कमजोर कृषि मजदूरी ने ग्रामीण परिवारों की क्रय शक्ति को समाप्त कर दिया है।<br><br>नीतिगत समाधान:<br>1. आयात नीति में लचीलापन: दालों (मसूर, पीली मटर) पर आयात शुल्क कम करके घरेलू आपूर्ति बढ़ाना।<br>2. सिंचाई अवसंरचना का सुदृढ़ीकरण: वर्षा पर निर्भरता कम करने के लिए सूक्ष्म सिंचाई और जल संचयन प्रणालियों का विस्तार।<br>3. गैर-कृषि रोजगार सृजन: मनरेगा (MGNREGA) के तहत कार्य दिवसों और मजदूरी में वृद्धि करना ताकि वैकल्पिक आय सुनिश्चित हो सके।</div>
+                    <div class="ans-section"><strong class="ans-label">निष्कर्ष (Conclusion):</strong><br>ग्रामीण संकट का समय पर समाधान न केवल खाद्य सुरक्षा सुनिश्चित करेगा बल्कि समग्र आर्थिक विकास दर (GDP) को भी स्थिरता प्रदान करेगा।</div>
+                </div>
+                
+            </div>
+            
+
+        <div class="section-title">📺 कोचिंग शिक्षक विश्लेषण एवं यूट्यूब लाइव क्लास सार</div>
+            <div class="yt-card">
+                <div class="yt-header">
+                    <span class="badge badge-yt">📺 कोचिंग शिक्षक विश्लेषण</span>
+                    <span class="topic-title">भारत-यूरोपीय संघ मुक्त व्यापार समझौता (India-EU FTA)</span>
+                </div>
+                <div class="yt-explanation">
+                    <strong>शिक्षक व्याख्यान एवं ट्रिक्स:</strong>
+                    <p>वाणिज्य मंत्री पीयूष गोयल और यूरोपीय व्यापार आयुक्त के बीच बैठक में इस वर्ष के अंत तक एफटीए पर हस्ताक्षर करने की प्रतिबद्धता दोहराई गई है। इसका उद्देश्य दोनों पक्षों के बीच 180 बिलियन यूरो से अधिक के वार्षिक व्यापार को सुगम बनाना और बाजार पहुंच की बाधाओं को दूर करना है।</p>
+                </div>
+                <div class="key-args">
+                    <strong>क्लास के मुख्य बिंदु (Key Lecture Points):</strong>
+                    <ul>
+                        <li>वार्षिक व्यापार लक्ष्य 180 बिलियन यूरो से अधिक का है।</li><li>गैर-टैरिफ बाधाओं (Non-tariff barriers) को कम करने पर विशेष ध्यान दिया जा रहा है।</li><li>यह समझौता भारत के कपड़ा, कृषि और सेवा क्षेत्र के लिए नए अवसर खोलेगा।</li>
+                    </ul>
+                </div>
+                <div class="exam-tip-box"><strong>💡 परीक्षा टिप (Exam Tip):</strong> मेन्स परीक्षा में भारत-यूरोपीय संघ संबंधों पर प्रश्न आने पर इस एफटीए वार्ता की प्रगति और इसके आर्थिक प्रभावों (जैसे निर्यात विविधीकरण) को उत्तर में अवश्य शामिल करें।</div>
+            </div>
+            
+            <div class="yt-card">
+                <div class="yt-header">
+                    <span class="badge badge-yt">📺 कोचिंग शिक्षक विश्लेषण</span>
+                    <span class="topic-title">भारत में एआई बूम और सौर ऊर्जा नीति का अंतर्संबंध</span>
+                </div>
+                <div class="yt-explanation">
+                    <strong>शिक्षक व्याख्यान एवं ट्रिक्स:</strong>
+                    <p>एआई डेटा सेंटरों को संचालित करने के लिए भारी मात्रा में निरंतर बिजली की आवश्यकता होती है। भारत को एआई निवेश आकर्षित करने के लिए अपनी सौर ऊर्जा नीतियों को अधिक सुसंगत और स्थिर बनाना होगा ताकि डेटा सेंटरों को सस्ती और स्वच्छ ऊर्जा मिल सके।</p>
+                </div>
+                <div class="key-args">
+                    <strong>क्लास के मुख्य बिंदु (Key Lecture Points):</strong>
+                    <ul>
+                        <li>डेटा सेंटरों की उच्च ऊर्जा मांग को केवल पारंपरिक ग्रिड से पूरा नहीं किया जा सकता।</li><li>अस्थिर सौर नीतियां और टैरिफ अनिश्चितता बड़े एआई निवेशकों को हतोत्साहित करती हैं।</li><li>स्वच्छ ऊर्जा से संचालित डेटा सेंटर भारत को वैश्विक स्तर पर एक 'ग्रीन एआई हब' के रूप में स्थापित कर सकते हैं।</li>
+                    </ul>
+                </div>
+                <div class="exam-tip-box"><strong>💡 परीक्षा टिप (Exam Tip):</strong> विज्ञान एवं पर्यावरण के अंतर्संबंध वाले प्रश्नों में यह दर्शाएं कि डिजिटल क्रांति (AI) का भविष्य सीधे तौर पर नवीकरणीय ऊर्जा नीतियों की सफलता पर निर्भर करता है।</div>
+            </div>
+            
+
+        <div class="section-title">🟣 राजस्थान सुजस, पत्रिका एवं दैनिक भास्कर (Rajasthan Sujas, Patrika & Bhaskar)</div>
+        
+            <div class="sujas-card">
+                <div class="sujas-header">
+                    <span class="badge badge-sujas">राजस्थान सुजस विशेष</span>
+                    <strong>उच्च शिक्षा विभाग, राजस्थान सरकार</strong>
+                </div>
+                <h3>राजस्थान छात्रवृत्ति एवं स्कूटी योजनाएं 2026</h3>
+                <ul>
+                    <li>विभिन्न श्रेणियों के छात्रों के लिए ऑनलाइन आवेदन पोर्टल खोल दिया गया है।</li><li>आवेदन की अंतिम तिथि 30 नवंबर 2026 निर्धारित की गई है।</li><li>इसका उद्देश्य मेधावी छात्राओं को उच्च शिक्षा के लिए प्रोत्साहित करना और परिवहन सुगमता प्रदान करना है।</li>
+                </ul>
+                <div class="relevance-box"><strong>RPSC महत्व:</strong> राजस्थान में महिला सशक्तिकरण और शिक्षा प्रोत्साहन से जुड़ी कल्याणकारी योजनाओं के तहत महत्वपूर्ण।</div>
+            </div>
+            
+            <div class="sujas-card">
+                <div class="sujas-header">
+                    <span class="badge badge-sujas">राजस्थान सुजस विशेष</span>
+                    <strong>उत्तर पश्चिम रेलवे एवं स्थानीय प्रशासन</strong>
+                </div>
+                <h3>सीकर रेलवे स्टेशन का द्वितीय प्रवेश द्वार और बुनियादी ढांचा विकास</h3>
+                <ul>
+                    <li>कोचिंग सिटी सीकर में छात्रों की भारी आवाजाही को देखते हुए दूसरे प्रवेश द्वार का संचालन शुरू किया गया है।</li><li>यह कोचिंग जोन से सीधे जुड़ाव प्रदान करता है जिससे मुख्य शहर पर यातायात का दबाव कम होगा।</li><li>यह परियोजना रेलवे के आधुनिकीकरण और यात्री सुविधाओं के विस्तार का हिस्सा है।</li>
+                </ul>
+                <div class="relevance-box"><strong>RPSC महत्व:</strong> राजस्थान के बुनियादी ढांचा विकास और शहरी नियोजन से संबंधित मुख्य परीक्षा के प्रश्नों हेतु प्रासंगिक।</div>
+            </div>
+            
+
+        <div class="section-title">🔴 सम्पादकीय एवं पत्रिका गहन विश्लेषण (The Hindu, Indian Express, ET, DownToEarth, योजना व कुरुक्षेत्र)</div>
+        
+            <div class="editorial-card">
+                <div class="editorial-header">
+                    <span class="badge badge-ed">Down To Earth</span>
+                    <span class="syllabus-tag">GS3 / RAS Paper 2 (Science & Technology)</span>
+                </div>
+                <h3>The new open-source software revolution</h3>
+                <p class="context"><strong>समसामयिक संदर्भ:</strong> यूरोपीय देशों द्वारा डेटा सुरक्षा और संप्रभुता चिंताओं के कारण अमेरिकी तकनीकी कंपनियों के स्वामित्व वाले सॉफ्टवेयर के स्थान पर ओपन-सोर्स सॉफ्टवेयर को अपनाना।</p>
+                <div class="key-args">
+                    <strong>सम्पादकीय का पूरा सार एवं तर्क (Deep Dive Takeaways):</strong>
+                    <ul>
+                        <li>अमेरिकी क्लाउड एक्ट (2018) विदेशी सरकारों के संवेदनशील डेटा की सुरक्षा के लिए एक बड़ा खतरा बन गया है क्योंकि यह अमेरिकी कंपनियों को विदेशों में रखे डेटा को भी अमेरिकी एजेंसियों को सौंपने के लिए बाध्य करता है।</li><li>फ्रांस ने अपनी संप्रभु कंप्यूटिंग रणनीति के तहत माइक्रोसॉफ्ट विंडोज को हटाकर सरकारी प्रणालियों में लिनक्स (Linux) को मुख्य आधार बनाया है, जिसका उपयोग एआई प्रणालियों में भी किया जाएगा।</li><li>इटली के रक्षा मंत्रालय और जर्मनी के श्लेसविग-होल्स्टीन राज्य ने ओपन-सोर्स सॉफ्टवेयर (जैसे लिब्रेऑफिस) अपनाकर क्रमशः 29 मिलियन यूरो और लाखों यूरो की वार्षिक लाइसेंसिंग फीस बचाई है।</li><li>तंजानिया जैसे विकासशील देशों ने अपने 90% से अधिक सरकारी प्रणालियों को ओपन-सोर्स पर स्थानांतरित कर दिया है, जो यह दर्शाता है कि डिजिटल संप्रभुता का अर्थ तकनीकी निर्भरता के बजाय स्वामित्व है।</li>
+                    </ul>
+                </div>
+                <div class="way-forward"><strong>आगे की राह (Way Forward):</strong> भारत को भी केरल के सफल ओपन-सोर्स शिक्षा मॉडल से सीख लेते हुए राष्ट्रीय स्तर पर सरकारी विभागों और रक्षा क्षेत्र में ओपन-सोर्स सॉफ्टवेयर को प्राथमिकता देनी चाहिए ताकि डिजिटल संप्रभुता सुरक्षित रहे।</div>
+            </div>
+            
+            <div class="editorial-card">
+                <div class="editorial-header">
+                    <span class="badge badge-ed">Down To Earth</span>
+                    <span class="syllabus-tag">GS2 / RAS Paper 3 (Social Justice & Tech)</span>
+                </div>
+                <h3>UN Women launches AI hub to put gender equality at centre of digital transformation</h3>
+                <p class="context"><strong>समसामयिक संदर्भ:</strong> संयुक्त राष्ट्र महिला (UN Women) द्वारा एआई और डिजिटल परिवर्तन में महिलाओं की भागीदारी और लैंगिक समानता सुनिश्चित करने के लिए एक वैश्विक हब की स्थापना।</p>
+                <div class="key-args">
+                    <strong>सम्पादकीय का पूरा सार एवं तर्क (Deep Dive Takeaways):</strong>
+                    <ul>
+                        <li>वर्तमान में एआई क्षेत्र के केवल 20% रोजगारों और 10% वरिष्ठ नेतृत्व पदों पर ही महिलाएं काबिज हैं, जिससे एआई के विकास में महिलाओं के दृष्टिकोण की भारी कमी है।</li><li>एक वैश्विक विश्लेषण के अनुसार, वर्तमान में संचालित 133 एआई प्रणालियों में से 44% प्रणालियां स्पष्ट रूप से लैंगिक पूर्वाग्रह (Gender Bias) प्रदर्शित करती हैं।</li><li>महिला मानवाधिकार कार्यकर्ताओं और पत्रकारों में से लगभग 25% ने एआई-सहायता प्राप्त ऑनलाइन हिंसा और उत्पीड़न का सामना करने की रिपोर्ट की है।</li><li>यह नया हब सरकारों और तकनीकी कंपनियों के साथ मिलकर ऐसी नीतियां बनाएगा जो उभरती प्रौद्योगिकियों के डिजाइन चरण में ही लैंगिक समानता के सिद्धांतों को शामिल कर सकें।</li>
+                    </ul>
+                </div>
+                <div class="way-forward"><strong>आगे की राह (Way Forward):</strong> तकनीकी विकास को समावेशी बनाने के लिए एआई के कोडिंग, एल्गोरिदम डिजाइन और नीति निर्माण में महिलाओं की भागीदारी को अनिवार्य किया जाना चाहिए ताकि भविष्य की तकनीक वर्तमान के पूर्वाग्रहों को आगे न बढ़ाए।</div>
+            </div>
+            
+            <div class="editorial-card">
+                <div class="editorial-header">
+                    <span class="badge badge-ed">Down To Earth</span>
+                    <span class="syllabus-tag">GS3 / RAS Paper 2 (Environment & Tech)</span>
+                </div>
+                <h3>We saw a state apparatus completely subordinated to corporate interests</h3>
+                <p class="context"><strong>समसामयिक संदर्भ:</strong> चिली के सेरिलोस में गूगल के डेटा सेंटर के खिलाफ स्थानीय समुदाय (MOSACAT) के सफल आंदोलन के आलोक में डेटा सेंटरों के पर्यावरणीय प्रभावों का विश्लेषण।</p>
+                <div class="key-args">
+                    <strong>सम्पादकीय का पूरा सार एवं तर्क (Deep Dive Takeaways):</strong>
+                    <ul>
+                        <li>डेटा सेंटरों को ठंडा रखने के लिए अत्यधिक मात्रा में पानी (प्रति सेकंड सैकड़ों लीटर) की आवश्यकता होती है, जो सूखे से जूझ रहे क्षेत्रों में स्थानीय जलभृतों (Aquifers) को समाप्त कर देता है।</li><li>डेटा सेंटर भारी मात्रा में बिजली की खपत करते हैं और इनके बैकअप के लिए बड़ी मात्रा में डीजल का भंडारण किया जाता है, जो स्थानीय पर्यावरण और वायु गुणवत्ता के लिए खतरा है।</li><li>डेटा सेंटरों के संचालन से आस-पास के 10 किलोमीटर के दायरे में तापमान में लगभग 9 डिग्री सेल्सियस तक की वृद्धि हो सकती है, जिससे 'हीट आइलैंड' का निर्माण होता है।</li><li>डेटा सेंटरों द्वारा स्थानीय स्तर पर रोजगार सृजन के दावे भ्रामक हैं; एक विशाल डेटा सेंटर में केवल 60 के आसपास ही स्थायी और कुशल नौकरियां मिलती हैं।</li>
+                    </ul>
+                </div>
+                <div class="way-forward"><strong>आगे की राह (Way Forward):</strong> भारत जैसे देश जो डेटा सेंटर हब बनने की दिशा में अग्रसर हैं, उन्हें सख्त पर्यावरणीय प्रभाव आकलन (EIA), अनिवार्य जनसुनवाई और जल-गहन कूलिंग प्रणालियों के स्थान पर वायु-शीतलन (Air-cooling) प्रणालियों को अनिवार्य करना चाहिए।</div>
+            </div>
+            
+
+        <div class="section-title">📲 टेलीग्राम चैनल दैनिक प्रश्नोत्तरी व नोट्स (Telegram Daily Quiz & Notes)</div>
+            <div class="mains-card" style="border-left: 8px solid #0284c7; margin-bottom: 25px;">
+                <div class="mains-header">
+                    <span class="badge" style="background:#0284c7; color:white;">5 अंक (~50 शब्द)</span>
+                    <span class="badge" style="background:#1e3a8a; color:white;">@RPSC_RAS_Exam_Prep</span>
+                    <span class="subject-tag">Paper 3</span>
+                </div>
+                <h3 class="question-text">प्रश्न: राजस्थान में पंचायती राज संस्थाओं के आगामी चुनावों की घोषणा और राज्य चुनाव आयोग की भूमिका स्पष्ट कीजिए।</h3>
+                <div class="answer-box">
+                    <strong class="ans-label">उत्तर ढांचा एवं विस्तृत नोट्स (~50 शब्द):</strong>
+                    <div class="answer-content">1. सही उत्तर एवं मुख्य तथ्य: राज्य चुनाव आयोग (SEC) द्वारा इस सप्ताह के अंत तक पंचायत चुनावों की तिथियों की घोषणा संभावित है।<br>2. नीतिगत संदर्भ: भारतीय संविधान के अनुच्छेद 243K के तहत राज्य चुनाव आयोग एक स्वायत्त निकाय है जो राज्य में निष्पक्ष स्थानीय निकाय चुनाव कराने के लिए उत्तरदायी है।<br>3. RPSC परीक्षा प्रासंगिकता: यह आरएएस मुख्य परीक्षा पेपर 3 के 'राज्य प्रशासनिक ढांचा एवं स्थानीय स्वशासन' खंड के लिए अत्यंत महत्वपूर्ण है।</div>
+                </div>
+            </div>
+            
+    </div>
+
+    <script>
+        function setFontSize(size) {
+            document.documentElement.style.setProperty('--base-font-size', size + 'px');
+            localStorage.setItem('ras_notes_font_size', size);
+            document.querySelectorAll('.toolbar-btns .t-btn').forEach(b => {
+                if (b.innerText.includes(size + 'px')) b.classList.add('active');
+                else if (b.innerText.includes('px')) b.classList.remove('active');
+            });
+        }
+
+        function toggleTheme(theme) {
+            document.body.classList.remove('dark-mode', 'sepia-mode');
+            if (theme === 'dark') document.body.classList.add('dark-mode');
+            else if (theme === 'sepia') document.body.classList.add('sepia-mode');
+            localStorage.setItem('ras_notes_theme', theme);
+        }
+
+        // Load saved preferences
+        (function() {
+            const savedSize = localStorage.getItem('ras_notes_font_size') || 26;
+            setFontSize(savedSize);
+            const savedTheme = localStorage.getItem('ras_notes_theme');
+            if (savedTheme) toggleTheme(savedTheme);
+        })();
+    </script>
+</body>
+</html>
