@@ -1,0 +1,844 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RAS & UPSC Daily Notes - 2026-10-02</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style id="customStyle">
+        :root {
+            --base-font-size: 24px;
+            --base-line-height: 1.85;
+            --primary: #1e1b4b;
+            --primary-light: #2563eb;
+            --secondary: #0f766e;
+            --accent-gold: #b45309;
+            --accent-purple: #6b21a8;
+            --accent-red: #9f1239;
+            --bg-main: #f8fafc;
+            --card-bg: #ffffff;
+            --text-dark: #020617;
+            --border-color: #cbd5e1;
+            --box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+        }
+
+        body.dark-mode {
+            --bg-main: #090d16;
+            --card-bg: #111827;
+            --text-dark: #f8fafc;
+            --border-color: #374151;
+            --box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+        }
+
+        body.sepia-mode {
+            --bg-main: #fbf0d9;
+            --card-bg: #fffdf7;
+            --text-dark: #2d2215;
+            --border-color: #e2d3b5;
+        }
+
+        body {
+            font-family: 'Noto Sans Devanagari', 'Segoe UI', Tahoma, sans-serif;
+            background-color: var(--bg-main);
+            color: var(--text-dark);
+            margin: 0;
+            padding: 25px;
+            line-height: var(--base-line-height);
+            font-size: var(--base-font-size);
+            transition: background-color 0.2s, font-size 0.15s;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* Eye-Comfort High Definition Typography */
+        p, li, div, span, td, th {
+            font-size: var(--base-font-size);
+            line-height: var(--base-line-height);
+        }
+
+        b, strong {
+            color: #b91c1c;
+            font-weight: 800;
+        }
+        body.dark-mode b, body.dark-mode strong {
+            color: #f87171;
+        }
+
+        .blue-highlight {
+            color: #1e3a8a;
+            font-weight: 800;
+        }
+        body.dark-mode .blue-highlight {
+            color: #60a5fa;
+        }
+
+        .container {
+            max-width: 1300px;
+            margin: 0 auto;
+        }
+
+        /* Sticky Eye-Comfort Controls Toolbar */
+        .reader-toolbar {
+            position: sticky;
+            top: 15px;
+            z-index: 999;
+            background: rgba(15, 23, 42, 0.95);
+            backdrop-filter: blur(10px);
+            color: white;
+            padding: 12px 24px;
+            border-radius: 50px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+            margin-bottom: 25px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 12px;
+            border: 2px solid #334155;
+        }
+
+        .toolbar-title {
+            font-size: 19px;
+            font-weight: 800;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .toolbar-btns {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .t-btn {
+            background: #1e293b;
+            color: white;
+            border: 1px solid #475569;
+            padding: 8px 16px;
+            border-radius: 25px;
+            font-size: 16px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.2s;
+            font-family: inherit;
+        }
+
+        .t-btn:hover, .t-btn.active {
+            background: #2563eb;
+            border-color: #60a5fa;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 10px rgba(37,99,235,0.4);
+        }
+
+        .header {
+            background: linear-gradient(135deg, #09090b 0%, #1e1b4b 50%, #0f766e 100%);
+            color: white;
+            padding: 35px 40px;
+            border-radius: 20px;
+            box-shadow: 0 15px 30px -5px rgba(0,0,0,0.25);
+            margin-bottom: 35px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border: 3px solid #3b82f6;
+        }
+        .header h1 { margin: 0 0 10px 0; font-size: 36px; font-weight: 900; letter-spacing: -0.5px; }
+        .header p { margin: 0; opacity: 0.95; font-size: 22px; font-weight: 600; }
+
+        /* Large Chapter 7 Style Section Headers */
+        .section-title {
+            font-size: 32px;
+            font-weight: 900;
+            margin: 45px 0 25px 0;
+            padding: 18px 26px;
+            background: var(--card-bg);
+            border-radius: 14px;
+            border-left: 14px solid var(--primary-light);
+            box-shadow: var(--box-shadow);
+            color: var(--text-dark);
+            border-top: 1px solid var(--border-color);
+            border-right: 1px solid var(--border-color);
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .badge {
+            padding: 8px 16px;
+            border-radius: 10px;
+            font-size: 17px;
+            font-weight: 800;
+            color: white;
+            display: inline-block;
+        }
+        .badge-pre { background-color: var(--accent-gold); }
+        .badge-raj { background-color: var(--accent-purple); }
+        .badge-5m { background-color: #0284c7; }
+        .badge-10m { background-color: #4338ca; }
+        .badge-sujas { background-color: #0d9488; }
+        .badge-ed { background-color: var(--accent-red); }
+        .badge-yt { background-color: #dc2626; }
+
+        /* Big, Comfortable Eye-Friendly Cards */
+        .fact-card, .mains-card, .sujas-card, .editorial-card, .yt-card {
+            background: var(--card-bg);
+            border-radius: 18px;
+            padding: 32px;
+            margin-bottom: 30px;
+            box-shadow: var(--box-shadow);
+            border: 2px solid var(--border-color);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .fact-card:hover, .mains-card:hover, .sujas-card:hover, .editorial-card:hover, .yt-card:hover {
+            box-shadow: 0 12px 28px rgba(0,0,0,0.1);
+        }
+
+        .fact-card { border-left: 14px solid var(--accent-gold); }
+        .mains-card { border-left: 14px solid #4338ca; }
+        .sujas-card { border-left: 14px solid var(--accent-purple); }
+        .editorial-card { border-left: 14px solid var(--accent-red); }
+        .yt-card { border-left: 14px solid #dc2626; background: var(--card-bg); }
+
+        .card-header, .mains-header, .sujas-header, .editorial-header, .yt-header {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 16px;
+            flex-wrap: wrap;
+        }
+        .topic-title { font-weight: 900; font-size: 26px; color: var(--text-dark); }
+        .fact-text { margin: 0; color: var(--text-dark); font-size: var(--base-font-size); line-height: var(--base-line-height); font-weight: 500; }
+        .question-text { margin: 12px 0 18px 0; color: #1e3a8a; font-size: calc(var(--base-font-size) + 4px); font-weight: 900; line-height: 1.6; }
+        body.dark-mode .question-text { color: #93c5fd; }
+
+        .answer-box {
+            background: #f1f5f9;
+            padding: 26px;
+            border-radius: 14px;
+            font-size: var(--base-font-size);
+            border: 2px solid #cbd5e1;
+            line-height: var(--base-line-height);
+        }
+        body.dark-mode .answer-box {
+            background: #1f2937;
+            border-color: #4b5563;
+        }
+        body.sepia-mode .answer-box {
+            background: #f4ebd0;
+            border-color: #dcd0b1;
+        }
+
+        .ans-label {
+            font-size: calc(var(--base-font-size) + 2px);
+            color: #1e3a8a;
+            display: block;
+            margin-bottom: 10px;
+            font-weight: 800;
+        }
+        body.dark-mode .ans-label { color: #60a5fa; }
+
+        .relevance-box, .way-forward {
+            background: #ecfdf5;
+            color: #065f46;
+            padding: 18px 24px;
+            border-radius: 12px;
+            margin-top: 20px;
+            font-size: calc(var(--base-font-size) - 1px);
+            border-left: 8px solid #10b981;
+            font-weight: 600;
+            border: 1px solid #a7f3d0;
+            border-left-width: 8px;
+        }
+        body.dark-mode .relevance-box, body.dark-mode .way-forward {
+            background: #064e3b;
+            color: #a7f3d0;
+            border-color: #059669;
+        }
+
+        .exam-tip-box {
+            background: #fefce8;
+            color: #854d0e;
+            padding: 18px 24px;
+            border-radius: 12px;
+            margin-top: 20px;
+            font-size: calc(var(--base-font-size) - 1px);
+            border-left: 8px solid #eab308;
+            font-weight: 600;
+            border: 1px solid #fef08a;
+            border-left-width: 8px;
+        }
+        body.dark-mode .exam-tip-box {
+            background: #713f12;
+            color: #fef08a;
+            border-color: #eab308;
+        }
+
+        ul { margin: 12px 0; padding-left: 30px; }
+        li { margin-bottom: 12px; font-size: var(--base-font-size); line-height: var(--base-line-height); }
+
+        @media print {
+            .reader-toolbar, .print-btn { display: none !important; }
+            body { background: white !important; color: black !important; padding: 0 !important; font-size: 16pt !important; }
+            .container { max-width: 100% !important; }
+            .fact-card, .mains-card, .sujas-card, .editorial-card, .yt-card { page-break-inside: avoid; border: 1px solid #999 !important; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Floating Interactive Eye-Comfort Toolbar -->
+        <div class="reader-toolbar">
+            <div class="toolbar-title">
+                <span>👁️ नेत्र-अनुकूल फॉन्ट व पठन मोड</span>
+            </div>
+            <div class="toolbar-btns">
+                <button class="t-btn" onclick="setFontSize(22)">A सामान्य (22px)</button>
+                <button class="t-btn active" id="btn-ch7" onclick="setFontSize(26)">🔠 बड़ा / Ch-7 स्टाइल (26px)</button>
+                <button class="t-btn" onclick="setFontSize(30)">🔍 अल्ट्रा लार्ज (30px)</button>
+                <button class="t-btn" onclick="toggleTheme('light')">☀️ लाइट</button>
+                <button class="t-btn" onclick="toggleTheme('sepia')">📜 सेपिया</button>
+                <button class="t-btn" onclick="toggleTheme('dark')">🌙 डार्क मोड</button>
+                <button class="t-btn" style="background:#059669; border-color:#10b981;" onclick="window.print()">🖨️ PDF प्रिंट</button>
+            </div>
+        </div>
+
+        <div class="header">
+            <div>
+                <h1>RPSC RAS & UPSC दैनिक समसामयिकी एवं सम्पादकीय विश्लेषण</h1>
+                <p>दिनांक: 2026-10-02 | RAS Pre & Mains (5M & 10M) विशेष मास्टर नोट्स</p>
+            </div>
+        </div>
+
+        <div class="section-title">🟡 प्रारंभिक परीक्षा तथ्य (RAS & UPSC Prelims Tracker)</div>
+        
+            <div class="fact-card">
+                <div class="card-header">
+                    <span class="badge badge-pre">UPSC Pre / GS3 IT & Cyber Security</span>
+                    <span class="topic-title">ओपन-सोर्स डिजिटल संप्रभुता और US CLOUD Act</span>
+                </div>
+                <p class="fact-text">यूरोपीय देशों (फ्रांस, जर्मनी, इटली) ने 2018 के अमेरिकी CLOUD Act के तहत विदेशी डेटा एक्सेस के खतरों से बचने के लिए माइक्रोसॉफ्ट विंडोज की जगह 'Linux' और 'LibreOffice' जैसे ओपन-सोर्स सॉफ्टवेयर अपनाना शुरू किया है। फ्रांस ने 'GendBuntu' और तंजानिया ने 90% से अधिक सरकारी प्रणालियों को ओपन-सोर्स पर स्थानांतरित किया है।</p>
+            </div>
+            
+            <div class="fact-card">
+                <div class="card-header">
+                    <span class="badge badge-pre">UPSC Pre / GS2 Social Justice & Tech Governance</span>
+                    <span class="topic-title">UN Women का AI में लैंगिक समानता हेतु 'Digital, Innovation and AI Hub'</span>
+                </div>
+                <p class="fact-text">संयुक्त राष्ट्र महासभा के 81वें सत्र के दौरान UN Women ने AI और डिजिटल परिवर्तन में लैंगिक पूर्वाग्रह (Gender Bias) को समाप्त करने हेतु वैश्विक 'Digital, Innovation and AI Hub' का शुभारंभ किया। वैश्विक अध्ययन के अनुसार 133 AI प्रणालियों में से 44% में लैंगिक भेदभाव पाया गया।</p>
+            </div>
+            
+            <div class="fact-card">
+                <div class="card-header">
+                    <span class="badge badge-pre">UPSC Pre / GS3 Space Technology & Astronomy</span>
+                    <span class="topic-title">प्लूटो (Pluto) का बौना ग्रह (Dwarf Planet) दर्जा एवं IAU प्रस्ताव 5A/6A</span>
+                </div>
+                <p class="fact-text">24 अगस्त 2006 को प्राग में अंतर्राष्ट्रीय खगोलीय संघ (IAU) ने प्रस्ताव 5A एवं 6A पारित कर प्लूटो से ग्रह का दर्जा छीन लिया था क्योंकि यह अपनी कक्षा के अन्य पिंडों को साफ (Clear the neighbourhood) करने की शर्त पूरी नहीं करता। 2026 में इसकी 20वीं वर्षगांठ पर 'Make Pluto a Planet Again' बहस पुनः चर्चा में है।</p>
+            </div>
+            
+            <div class="fact-card">
+                <div class="card-header">
+                    <span class="badge badge-pre">UPSC Pre / GS3 Economy & Agriculture</span>
+                    <span class="topic-title">यूरिया सब्सिडी संरचना और वैश्विक उर्वरक मूल्य संतुलन</span>
+                </div>
+                <p class="fact-text">केंद्रीय वित्त मंत्री के अनुसार, वैश्विक बाजार में यूरिया बैग की कीमत लगभग ₹3,000 तक पहुंचने के बावजूद भारत सरकार किसानों को लागत राहत देने हेतु प्रति बैग ₹2,700 तक की प्रत्यक्ष सब्सिडी वहन कर रही है।</p>
+            </div>
+            
+            <div class="fact-card">
+                <div class="card-header">
+                    <span class="badge badge-pre">UPSC Pre / GS3 Agriculture Development</span>
+                    <span class="topic-title">लद्दाख का 'स्पितुक फरका' केसर पायलट प्रोजेक्ट</span>
+                </div>
+                <p class="fact-text">लद्दाख के लेह जिले में स्थित स्पितुक फरका (Spituk Pharka) की 4,000 वर्ग मीटर बंजर भूमि पर 90,000 ईरानी केसर के कॉर्म्स (Corms) रोपकर शीत-मरुस्थलीय केसर खेती का सफल पायलट प्रोजेक्ट लॉन्च किया गया है।</p>
+            </div>
+            
+            <div class="fact-card">
+                <div class="card-header">
+                    <span class="badge badge-pre">UPSC Pre / GS3 Biotechnology & Health</span>
+                    <span class="topic-title">सिक्कल सेल एनीमिया (SCA) हेतु भारत-विशिष्ट रोग तीव्रता पूर्वानुमान उपकरण</span>
+                </div>
+                <p class="fact-text">CSIR-सेंटर फॉर सेल्यूलर एंड मॉलिक्यूलर बायोलॉजी (CCMB) ने भारतीय रोगियों के नैदानिक प्रोफाइल के अनुकूल सिक्कल सेल एनीमिया (Sickle Cell Anemia) की गंभीरता और जोखिम का सटीक पूर्वानुमान लगाने हेतु भारत का पहला विशिष्ट जेनेटिक टूल विकसित किया है।</p>
+            </div>
+            
+            <div class="fact-card">
+                <div class="card-header">
+                    <span class="badge badge-pre">UPSC Pre / GS3 Space Technology</span>
+                    <span class="topic-title">फाल्कन 9 (Falcon 9) का ट्रांसपोर्टर-18 (Transporter-18) मिशन</span>
+                </div>
+                <p class="fact-text">स्पेसएक्स (SpaceX) के फाल्कन 9 रॉकेट द्वारा Transporter-18 मिशन के तहत भारतीय अंतरिक्ष स्टार्टअप ध्रुव स्पेस (Dhruva Space) के LEAP-2 पेलोड और Satleo Labs के TAPAS-1 पेलोड को सफलतापूर्वक कक्षा में स्थापित किया गया।</p>
+            </div>
+            
+            <div class="fact-card">
+                <div class="card-header">
+                    <span class="badge badge-pre">UPSC Pre / GS3 Economy</span>
+                    <span class="topic-title">कृषि अवसंरचना कोष (Agriculture Infrastructure Fund - AIF)</span>
+                </div>
+                <p class="fact-text">कृषि अवसंरचना कोष (AIF) के तहत स्वीकृत ऋणों का आंकड़ा ₹1 ट्रिलियन (₹1 लाख करोड़) को पार कर गया है। यह कोष कटाई-पश्चात प्रबंधन अवसंरचना और सामुदायिक कृषि संपत्तियों के विकास हेतु दीर्घकालिक ऋण वित्तपोषण प्रदान करता है।</p>
+            </div>
+            
+            <div class="fact-card">
+                <div class="card-header">
+                    <span class="badge badge-pre">UPSC Pre / GS3 Environment & Climate Change</span>
+                    <span class="topic-title">कार्बन इम्पैक्ट्स ट्रेसर (Carbon Impacts Tracer) टूल</span>
+                </div>
+                <p class="fact-text">वैज्ञानिकों द्वारा विकसित 'Carbon Impacts Tracer' नया डिजिटल मॉडल है जो नई कोयला खदानों की स्थापना से स्थानीय पर्यावरण, जनस्वास्थ्य और जलवायु क्षति के प्रत्यक्ष कारण-प्रभाव (Causal Link) संबंधों की सटीक गणना करता है।</p>
+            </div>
+            
+            <div class="fact-card">
+                <div class="card-header">
+                    <span class="badge badge-pre">RAS Pre / UPSC Pre Sports & International Events</span>
+                    <span class="topic-title">एशियन गेम्स 2026 (Aichi-Nagoya Asian Games)</span>
+                </div>
+                <p class="fact-text">जापान के आइची-नागोया (Aichi-Nagoya) में आयोजित एशियन गेम्स 2026 में भारतीय एथलीटों के आधिकारिक पदक विजेताओं की सूची जारी की गई, जिसमें शूटिंग, तीरंदाजी और एथलेटिक्स में भारत का दबदबा कायम रहा।</p>
+            </div>
+            
+            <div class="fact-card">
+                <div class="card-header">
+                    <span class="badge badge-pre">UPSC Pre / GS2 e-Governance</span>
+                    <span class="topic-title">केरल फाइबर ऑप्टिक नेटवर्क (KFON) मील का पत्थर</span>
+                </div>
+                <p class="fact-text">डिजिटल अंतर को समाप्त करने हेतु केरल सरकार के फ्लैगशिप प्रोजेक्ट 'केरल फाइबर ऑप्टिक नेटवर्क' (KFON) ने 2 लाख से अधिक इंटरनेट कनेक्शन प्रदान करने की उपलब्धि हासिल की है।</p>
+            </div>
+            
+            <div class="fact-card">
+                <div class="card-header">
+                    <span class="badge badge-pre">UPSC Pre / GS3 Public Health & Science</span>
+                    <span class="topic-title">एमआईएनडी डाइट (MIND Diet) और मस्तिष्क स्वास्थ्य</span>
+                </div>
+                <p class="fact-text">नवीनतम स्नायु-वैज्ञानिक (Neuro-scientific) अध्ययन के अनुसार 'MIND Diet' (जिसमें बेरीज, हरी सब्जियां और पोल्ट्री शामिल हैं) का नियमित पालन मस्तिष्क के सिकुड़ने (Gray Matter Loss) की दर को धीमा कर मस्तिष्क की उम्र बढ़ने में 2.5 वर्ष का विलंब कर सकता है।</p>
+            </div>
+            
+            <div class="fact-card">
+                <div class="card-header">
+                    <span class="badge badge-raj">RAS Pre / राजस्थान खेल एवं खिलाड़ी</span>
+                    <span class="topic-title">अजमेर की तैराक गौरवी सिंह का राष्ट्रीय कीर्तिमान</span>
+                </div>
+                <p class="fact-text">अजमेर (राजस्थान) की उभरती अंतरराष्ट्रीय खिलाड़ी गौरवी सिंह ने राष्ट्रीय तैराकी/जलीय खेल प्रतियोगिता में राजस्थान का प्रतिनिधित्व करते हुए स्वर्ण पदक जीतकर प्रदेश का नाम रोशन किया।</p>
+            </div>
+            
+            <div class="fact-card">
+                <div class="card-header">
+                    <span class="badge badge-raj">RAS Pre / राजस्थान प्रशासनिक व्यवस्था</span>
+                    <span class="topic-title">राजस्थान पंचायती राज चुनाव एवं आचार संहिता</span>
+                </div>
+                <p class="fact-text">राजस्थान राज्य निर्वाचन आयोग (SEC Rajasthan) द्वारा प्रदेश की ग्राम पंचायतों व पंचायत समितियों के चुनाव हेतु अधिसूचना जारी करने और मॉडल कोड ऑफ कंडक्ट (MCC) लागू करने की तैयारियां अंतिम चरण में हैं।</p>
+            </div>
+            
+            <div class="fact-card">
+                <div class="card-header">
+                    <span class="badge badge-raj">RAS Pre / राजस्थान योजनाएं व विकास</span>
+                    <span class="topic-title">जोधपुर संभाग सुजस स्पेशल विकास पैकेज</span>
+                </div>
+                <p class="fact-text">राजस्थान DIPR द्वारा जारी सुजस बुलेटिन के अनुसार जोधपुर संभाग के 8 जिलों (जोधपुर, पाली, बाड़मेर, जैसलमेर, जालोर, सिरोही, फलौदी, बालोतरा) हेतु बुनियादी ढांचे और जलापूर्ति विकास परियोजनाओं की घोषणा की गई है।</p>
+            </div>
+            
+            <div class="fact-card">
+                <div class="card-header">
+                    <span class="badge badge-raj">RAS Pre / internal Security & Policing</span>
+                    <span class="topic-title">राजस्थान में हाइड्रोपोनिक गांजे की जब्ती (CBN कार्यवाही)</span>
+                </div>
+                <p class="fact-text">सेंट्रल ब्यूरो ऑफ नारकोटिक्स (CBN) राजस्थान यूनिट ने थाईलैंड से आए एक अंतरराष्ट्रीय पार्सल से 1.080 किग्रा उच्च-गुणवत्ता वाले 'हाइड्रोपोनिक गांजे' की अवैध तस्करी को नाकाम किया।</p>
+            </div>
+            
+
+        <div class="section-title">🔵 मुख्य परीक्षा उत्तर लेखन मॉडल सेट (RAS Mains - 5M & 10M)</div>
+        
+            <div class="mains-card">
+                <div class="mains-header">
+                    <span class="badge badge-5m">5 अंक (Paper 3)</span>
+                    <span class="subject-tag">विज्ञान एवं प्रौद्योगिकी (Science & Technology)</span>
+                </div>
+                <h3 class="question-text">प्रश्न: डेटा संप्रभुता (Data Sovereignty) से आप क्या समझते हैं? यूरोपीय संघ द्वारा ओपन-सोर्स सॉफ्टवेयर अपनाने के प्रमुख कारणों को रेखांकित कीजिए।</h3>
+                
+                <div class="answer-box">
+                    <strong class="ans-label">उत्तर ढांचा (~50 शब्द):</strong>
+                    <div class="answer-content">1. **अवधारणा:** डेटा संप्रभुता का तात्पर्य यह सुनिश्चित करना है कि किसी देश के नागरिकों और सरकार का डेटा उसी देश के कानूनी व नियामक ढाँचे के अधीन रहे तथा विदेशी शक्तियों के नियंत्रण से मुक्त हो।<br>2. **ओपन-सोर्स अपनाने के कारण:** <br>   - **कानूनी सुरक्षा:** अमेरिकी 'CLOUD Act 2018' जैसे कानूनों से घरेलू डेटा की सुरक्षा, जो अमेरिकी टेक कंपनियों को विदेशी सरकारों का डेटा सौंपने के लिए बाध्य करता है।<br>   - **वित्तीय बचत:** लाइसेंसिंग शुल्क में करोड़ों यूरो की बचत (उदा. फ्रांस और इटली द्वारा लाखों यूरो की बचत)।<br>3. **रणनीतिक स्वायत्तता:** बिग-टेक कंपनियों के एकाधिकार को समाप्त कर अपनी डिजिटल संरचना खुद विकसित करना।</div>
+                </div>
+                
+            </div>
+            
+            <div class="mains-card">
+                <div class="mains-header">
+                    <span class="badge badge-5m">5 अंक (Paper 1)</span>
+                    <span class="subject-tag">अर्थशास्त्र (Economy - Agricultural Infra)</span>
+                </div>
+                <h3 class="question-text">प्रश्न: खाद्य हानि और अपव्यय (Food Loss and Waste) को कम करने में 'कृषि अवसंरचना कोष' (AIF) की भूमिका का संक्षिप्त मूल्यांकन कीजिए।</h3>
+                
+                <div class="answer-box">
+                    <strong class="ans-label">उत्तर ढांचा (~50 शब्द):</strong>
+                    <div class="answer-content">1. **वित्तीय संबल:** AIF ने ₹1 ट्रिलियन से अधिक के ऋण स्वीकृत किए हैं, जो प्राथमिक प्रसंस्करण, कोल्ड चेन और गोदामों के निर्माण हेतु 3% ब्याज छूट (Interest Subvention) प्रदान करता है।<br>2. **कटाई-पश्चात क्षति नियंत्रण:** भारत में प्रतिवर्ष ₹1.5 लाख करोड़ से अधिक मूल्य का अनाज व फल-सब्जियां उचित भंडारण के अभाव में नष्ट हो जाती हैं; AIF स्थानीय स्तर पर वैज्ञानिक साइलो व कोल्ड स्टोरेज निर्मित कर इस क्षति को रोकता है।<br>3. **FPO और किसानों का सशक्तिकरण:** किसान उत्पादक संगठनों को अंतरराष्ट्रीय मूल्य-श्रृंखला और निर्यात बाजारों से जोड़ने में सक्षम बनाता है।</div>
+                </div>
+                
+            </div>
+            
+            <div class="mains-card">
+                <div class="mains-header">
+                    <span class="badge badge-10m">10 अंक (Paper 3)</span>
+                    <span class="subject-tag">प्रौद्योगिकी एवं एआई सुशासन (AI Governance & Social Issues)</span>
+                </div>
+                <h3 class="question-text">प्रश्न: कृत्रिम बुद्धिमत्ता (AI) प्रणालियों के विकास और प्रशासन में लैंगिक असमानता (Gender Bias) एवं अदृश्य श्रम (Invisible Labour) की चुनौतियों का विश्लेषणात्मक परीक्षण कीजिए। समाधान के उपाय भी सुझाइए।</h3>
+                
+                <div class="answer-box">
+                    <div class="ans-section"><strong class="ans-label">भूमिका (Introduction):</strong><br>वैश्विक डिजिटल क्रांति के केंद्र में स्थित कृत्रिम बुद्धिमत्ता (AI) जहाँ आर्थिक संवर्द्धन का माध्यम बनी है, वहीं इसके डिजाइन, डेटा लेबलिंग और प्रशासन में लैंगिक विषमता तथा अदृश्य मानवीय श्रम का दोहन एक गंभीर नैतिक प्रश्न बन चुका है।</div>
+                    <div class="ans-section"><strong class="ans-label">मुख्य भाग (Body & Rajasthan Context):</strong><br>### 1. AI विकास में लैंगिक असमानता की स्थिति<br>- **डिजाइनरों का अभाव:** UN Women के अनुसार, AI क्षेत्र में केवल 20% तकनीकी नौकरियां और 10% से कम वरिष्ठ नेतृत्व पद महिलाओं के पास हैं।<br>- **एल्गोरिदम में पूर्वाग्रह:** वैश्विक विश्लेषण में 44% AI प्रणालियों में लैंगिक विषमता पाई गई है (उदा. भर्ती सॉफ्टवेयर में महिलाओं का निरसन)।<br>- **ऑनलाइन हिंसा:** लगभग 25% महिला मानवाधिकार कार्यकर्ताओं व पत्रकारों को AI-जनित जनरेटिव डीपफेक और ऑनलाइन उत्पीड़न का सामना करना पड़ रहा है।<br><br>### 2. 'ह्यूमन्स इन द लूप' एवं अदृश्य श्रम की त्रासदी<br>- **डेटा लेबलिंग में शोषण:** AI मॉडल स्वयं नहीं सीखते; उनके पीछे वैश्विक दक्षिण (Global South) के हजारों अदृश्य मजदूर (उदा. भारत के आदिवासी व ग्रामीण क्षेत्र) कम वेतन पर डेटा टैगिंग करते हैं।<br>- **अनिश्चित कार्य परिस्थितियां:** इस डिजिटल श्रम को न तो औपचारिक श्रमिक अधिकार प्राप्त हैं और न ही सामाजिक सुरक्षा कवच।<br>- **पारिस्थितिकी व निष्कर्षण:** डेटा सेंटरों हेतु भारी मात्रा में बिजली व जल का दोहन तथा दुर्लभ खनिजों का निष्कर्षण जनसांख्यिकी व पर्यावरण पर विपरीत प्रभाव डालता है।<br><br>### 3. समाधान हेतु भावी मार्ग<br>- **समानुभूतिपूर्ण नीति ढांचा:** UN Women के 'Digital, Innovation and AI Hub' के सिद्धांतों को राष्ट्रीय नीति (जैसे NITI Aayog की National Strategy for AI) में एकीकृत करना।<br>- **डिजिटल श्रमिकों हेतु श्रम नियम:** डेटा लेबलर्स हेतु न्यूनतम मजदूरी, गरिमापूर्ण कार्य स्थिति और सामूहिक स्वामित्व मॉडल लागू करना।<br>- **डेटासेट विविधता:** AI मॉडलों के प्रशिक्षण हेतु समावेशी और निष्पक्ष डेटा समुच्चय (Representative Datasets) का अनिवार्य प्रयोग।</div>
+                    <div class="ans-section"><strong class="ans-label">निष्कर्ष (Conclusion):</strong><br>AI का भविष्य केवल तकनीकी गति पर निर्भर नहीं होना चाहिए, बल्कि यह लैंगिक समानता, श्रम गरिमा और समावेशी सुशासन के मानवीय मूल्यों पर आधारित होना चाहिए।</div>
+                </div>
+                
+            </div>
+            
+            <div class="mains-card">
+                <div class="mains-header">
+                    <span class="badge badge-10m">10 अंक (Paper 1)</span>
+                    <span class="subject-tag">राजस्थान की अर्थव्यवस्था एवं ग्रामीण विकास</span>
+                </div>
+                <h3 class="question-text">प्रश्न: राजस्थान में आगामी पंचायती राज चुनावों के संदर्भ में, ग्रामीण स्थानीय स्वशासन के समक्ष विद्यमान वित्तीय, प्रशासनिक व सामाजिक चुनौतियों का मूल्यांकन कीजिए तथा सुधार हेतु सुझाव दीजिए।</h3>
+                
+                <div class="answer-box">
+                    <div class="ans-section"><strong class="ans-label">भूमिका (Introduction):</strong><br>73वें संविधान संशोधन अधिनियम के तहत राजस्थान में स्थापित पंचायती राज व्यवस्था ग्रामीण लोकतंत्र की आधारशिला है। हालांकि, चुनावों की सुगबुगाहट के बीच इन संस्थाओं के कार्यकरण में संरचनात्मक सीमाएं स्पष्ट दिखाई दे रही हैं।</div>
+                    <div class="ans-section"><strong class="ans-label">मुख्य भाग (Body & Rajasthan Context):</strong><br>### 1. प्रमुख चुनौतियां<br>- **वित्तीय निर्भरता (3Fs - Funds):** पंचायतों के अपने कर राजस्व (Own Source Revenue - OSR) का दायरा अत्यंत सीमित है। वे पूरी तरह से राज्य वित्त आयोग (SFC) और केंद्र सरकार के अनुदान पर निर्भर हैं।<br>- **प्रशासनिक सीमाएं (Functions & Functionaries):** ग्राम पंचायतों के पास तकनीकी विशेषज्ञता और समर्पित मानव संसाधन (जैसे ग्राम विकास अधिकारी/अभियंता) की भारी कमी है, जिससे विकास कार्यों में गुणवत्ता का अभाव रहता है।<br>- **राजनीतिक व सामाजिक संरचना:** 'सरपंच पति' या प्रॉक्सी शासन की प्रथा महिलाओं के वास्तविक सशक्तिकरण में बाधा बनी हुई है। साथ ही स्थानीय स्तर पर धनबल और गुटबाजी का प्रभाव बढ़ा है।<br>- **जवाबदेही का अभाव:** सोशल ऑडिट (Social Audit) की प्रक्रियाओं का नियमित और निष्पक्ष न होना तथा बुनियादी सुविधाओं (सड़क, नाली, कचरा प्रबंधन) के रखरखाव में विफलता।<br><br>### 2. सुधारात्मक रणनीति व आगे की राह<br>- **वित्तीय स्वायत्तता:** ग्राम पंचायतों को स्थानीय संपत्तियों, मेलों, और व्यावसायिक गतिविधियों पर विवेकपूर्ण कर व शुल्क लगाने का अधिकार देना।<br>- **क्षमता निर्माण:** 'राजस्थान सर्वोदय व पंचायती राज संस्थान' द्वारा नवनिर्वाचित प्रतिनिधियों (विशेषकर महिला प्रतिनिधियों) हेतु गहन डिजिटल व प्रशासनिक प्रशिक्षण।<br>- **सुजस व ई-ग्राम स्वराज का प्रभावी उपयोग:** योजनाओं के पारदर्शी क्रियान्वयन और निधियों के सीधे हस्तांतरण हेतु 'e-GramSwaraj' पोर्टल को मजबूत करना।<br>- **जन-सहभागिता एवं सोशल ऑडिट:** ग्राम सभाओं की नियमित बैठकें अनिवार्य करना तथा नागरिक चार्टर (Citizen Charter) को कड़ाई से लागू करना।</div>
+                    <div class="ans-section"><strong class="ans-label">निष्कर्ष (Conclusion):</strong><br>पंचायती राज संस्थाओं को केवल राजनीतिक चुनाव का अखाड़ा न बनाकर वास्तविक 'समीपस्थ स्वशासन' (Principle of Subsidiarity) की इकाई बनाना ही राजस्थान के समावेशी विकास की कुंजी है।</div>
+                </div>
+                
+            </div>
+            
+
+        <div class="section-title">📺 कोचिंग शिक्षक विश्लेषण एवं यूट्यूब लाइव क्लास सार</div>
+            <div class="yt-card">
+                <div class="yt-header">
+                    <span class="badge badge-yt">📺 कोचिंग शिक्षक विश्लेषण</span>
+                    <span class="topic-title">कृषि अवसंरचना कोष (AIF) एवं खाद्य अपव्यय निवारण (Food Loss Reduction)</span>
+                </div>
+                <div class="yt-explanation">
+                    <strong>शिक्षक व्याख्यान एवं ट्रिक्स:</strong>
+                    <p>कोचिंग व्याख्यान में शिक्षक ने समझाया कि भारत में कृषि अवसंरचना कोष (AIF) ने ₹1 लाख करोड़ का आंकड़ा पार कर लिया है, परंतु भारत में प्रतिवर्ष खाद्य क्षति का मूल्य इससे कहीं अधिक (~₹1.5 लाख करोड़) है। शिक्षक ने कटाई-पश्चात प्रबंधन (Post-Harvest Management) के लिए '3 Pillars Matrix' का सुझाव दिया।</p>
+                </div>
+                <div class="key-args">
+                    <strong>क्लास के मुख्य बिंदु (Key Lecture Points):</strong>
+                    <ul>
+                        <li>AIF के तहत प्राथमिक कृषि ऋण समितियों (PACS), FPOs और कृषि-उद्यमियों को 3% ब्याज छूट पर ऋणी सहायता मिलती है।</li><li>ग्लोबल मेज़रमेंट स्टैंडर्ड्स (जैसे FLW Standard) अपनाकर बर्बादी का सटीक आकलन आवश्यक है।</li><li>सप्लाई चेन में आधुनिक साइलो, कोल्ड स्टोरेज और सोलर ड्रायर्स का उपयोग गाँव के स्तर पर होना चाहिए।</li>
+                    </ul>
+                </div>
+                <div class="exam-tip-box"><strong>💡 परीक्षा टिप (Exam Tip):</strong> UPSC GS3/RAS Paper 1 में कृषि उत्तर लिखते समय AIF आंकड़ों के साथ-साथ 'Food Loss vs Food Waste' के बीच का अंतर स्पष्ट करें (Loss खेत से बाजार तक होता है, Waste उपभोक्ता स्तर पर)।</div>
+            </div>
+            
+            <div class="yt-card">
+                <div class="yt-header">
+                    <span class="badge badge-yt">📺 कोचिंग शिक्षक विश्लेषण</span>
+                    <span class="topic-title">भारत की औद्योगिक वृद्धि एवं विनिर्माण क्षमता (Structural Manufacturing Capacity)</span>
+                </div>
+                <div class="yt-explanation">
+                    <strong>शिक्षक व्याख्यान एवं ट्रिक्स:</strong>
+                    <p>केंद्रीय वाणिज्य मंत्री के G20 वक्तव्य का विश्लेषण करते हुए शिक्षक ने स्पष्ट किया कि भारत में 'संरचनात्मक अतिरिक्त क्षमता' (Structural Excess Capacity) नहीं है, जैसा कि चीन पर आरोप लगता है। भारत का उत्पादन घरेलू माँग और निष्पक्ष निर्यात पर आधारित है।</p>
+                </div>
+                <div class="key-args">
+                    <strong>क्लास के मुख्य बिंदु (Key Lecture Points):</strong>
+                    <ul>
+                        <li>चीन सब्सिडी के बल पर अधिक विनिर्माण कर वैश्विक बाजारों में 'डंपिंग' करता है, जबकि भारत 'डमांड-ड्रिवेन' विनिर्माण मॉडल अपनाता है।</li><li>WTO नियमों का अनुपालन और आपूर्ति श्रृंखला में विविधीकरण (Supply Chain Diversification) भारत की प्राथमिकता है।</li><li>उत्पादन-जुड़ी प्रोत्साहन (PLI) योजना भारत की विनिर्माण क्षमता को संतुलित तरीके से मजबूत कर रही है।</li>
+                    </ul>
+                </div>
+                <div class="exam-tip-box"><strong>💡 परीक्षा टिप (Exam Tip):</strong> अर्थव्यवस्था के प्रश्नों में भारत-चीन विनिर्माण मॉडल की तुलना करते समय 'Excess Capacity vs Domestic Demand Capacity' की अवधारणा का प्रयोग करें।</div>
+            </div>
+            
+            <div class="yt-card">
+                <div class="yt-header">
+                    <span class="badge badge-yt">📺 कोचिंग शिक्षक विश्लेषण</span>
+                    <span class="topic-title">गांधीवादी अर्थशास्त्र एवं 'अंतिम व्यक्ति' का परीक्षण (Gandhi's Talisman in Modern Economy)</span>
+                </div>
+                <div class="yt-explanation">
+                    <strong>शिक्षक व्याख्यान एवं ट्रिक्स:</strong>
+                    <p>2 अक्टूबर (गांधी जयंती) के अवसर पर शिक्षक ने महात्मा गांधी के 'जंतर' (Talisman) की प्रासंगिकता को आज की 5 ट्रिलियन डॉलर अर्थव्यवस्था की आकांक्षा से जोड़ा। उन्होंने बताया कि आर्थिक समृद्धि का मापदण्ड केवल GDP नहीं बल्कि सबसे गरीब व्यक्ति की स्थिति होनी चाहिए।</p>
+                </div>
+                <div class="key-args">
+                    <strong>क्लास के मुख्य बिंदु (Key Lecture Points):</strong>
+                    <ul>
+                        <li>विकास का लाभ जब तक समाज के अंतिम व्यक्ति (Antyodaya) तक नहीं पहुँचता, वह विकास टिकाऊ नहीं है।</li><li>पर्यावरणीय सततता और सीमित आवश्यकताओं (Minimalism) का गांधीवादी सिद्धांत आज के जलवायु संकट का एकमात्र स्थायी समाधान है।</li><li>आर्टिफिशियल इंटेलिजेंस और ऑटोमेशन के दौर में 'श्रमिकों की गरिमा' (Dignity of Labour) को बनाए रखना गांधीवादी नीति का आधार है।</li>
+                    </ul>
+                </div>
+                <div class="exam-tip-box"><strong>💡 परीक्षा टिप (Exam Tip):</strong> Ethics (GS4) और निबंध में जब 'आर्थिक विकास बनाम नैतिक मूल्य' पर प्रश्न आए, तो गांधी जी के 'Talisman' और 'Trusteeship Model' को उद्धृत करें।</div>
+            </div>
+            
+            <div class="yt-card">
+                <div class="yt-header">
+                    <span class="badge badge-yt">📺 कोचिंग शिक्षक विश्लेषण</span>
+                    <span class="topic-title">सिक्कल सेल एनीमिया उन्मूलन और भारत-विशिष्ट जेनेटिक टूल</span>
+                </div>
+                <div class="yt-explanation">
+                    <strong>शिक्षक व्याख्यान एवं ट्रिक्स:</strong>
+                    <p>CSIR-CCMB द्वारा विकसित नए जेनेटिक प्रेडिक्शन टूल का विश्लेषण करते हुए शिक्षक ने बताया कि वैश्विक स्कोरिंग सिस्टम भारतीय आदिवासी आबादी के नैदानिक प्रोफाइल से मेल नहीं खाते थे, जिससे सही इलाज में बाधा आती थी।</p>
+                </div>
+                <div class="key-args">
+                    <strong>क्लास के मुख्य बिंदु (Key Lecture Points):</strong>
+                    <ul>
+                        <li>सिक्कल सेल राष्ट्रीय मिशन का लक्ष्य 2047 तक भारत से इस बीमारी का पूरी तरह उन्मूलन करना है।</li><li>यह एक आनुवंशिक रक्त विकार है जो मुख्य रूप से भारत के जनजातीय बहुल क्षेत्रों में व्यापक है।</li><li>भारत-विशिष्ट टूल से डॉक्टरों को यह पहले से पता चल जाएगा कि किस मरीज में बीमारी के गंभीर लक्षण विकसित होने की संभावना है।</li>
+                    </ul>
+                </div>
+                <div class="exam-tip-box"><strong>💡 परीक्षा टिप (Exam Tip):</strong> विज्ञान व प्रौद्योगिकी (GS3) के उत्तर में CSIR के स्वदेशी नवाचारों का उल्लेख करने से उत्तर की प्रामाणिकता बढ़ती है।</div>
+            </div>
+            
+            <div class="yt-card">
+                <div class="yt-header">
+                    <span class="badge badge-yt">📺 कोचिंग शिक्षक विश्लेषण</span>
+                    <span class="topic-title">ओपन-सोर्स तकनीक एवं डिजिटल संप्रभुता (Open Source vs Proprietary Tech)</span>
+                </div>
+                <div class="yt-explanation">
+                    <strong>शिक्षक व्याख्यान एवं ट्रिक्स:</strong>
+                    <p>Down To Earth के लेख के संदर्भ में शिक्षक ने बताया कि कैसे बिग-टेक (Big Tech) का एकाधिकार देशों की राष्ट्रीय सुरक्षा और साइबर संप्रभुता के लिए खतरा बन रहा है। उन्होंने ओपन-सोर्स (Linux/LibreOffice) के रणनीतिक महत्व पर प्रकाश डाला।</p>
+                </div>
+                <div class="key-args">
+                    <strong>क्लास के मुख्य बिंदु (Key Lecture Points):</strong>
+                    <ul>
+                        <li>प्रोप्रायटरी सॉफ्टवेयर (जैसे Windows) में कोड गुप्त होता है, जिससे बैकडोर प्रविष्टि और डेटा जासूसी का जोखिम रहता है।</li><li>ओपन-सोर्स सॉफ्टवेयर में कोड पारदर्शी होता है, जिसे देश अपनी सुरक्षा जरूरतों के अनुसार संशोधित कर सकते हैं।</li><li>अमेरिकी CLOUD Act विदेशी सरकारों के डेटा पर भी अमेरिकी क्षेत्राधिकार का दावा करता है।</li>
+                    </ul>
+                </div>
+                <div class="exam-tip-box"><strong>💡 परीक्षा टिप (Exam Tip):</strong> आंतरिक सुरक्षा और साइबर सुरक्षा के उत्तरों में 'सॉफ़्टवेयर आत्मनिर्भरता' को राष्ट्रीय सुरक्षा का मुख्य स्तंभ बताएं।</div>
+            </div>
+            
+            <div class="yt-card">
+                <div class="yt-header">
+                    <span class="badge badge-yt">📺 कोचिंग शिक्षक विश्लेषण</span>
+                    <span class="topic-title">एविएशन सुरक्षा एवं फ्लाईदुबई घटना के बाद सुधारात्मक कदम</span>
+                </div>
+                <div class="yt-explanation">
+                    <strong>शिक्षक व्याख्यान एवं ट्रिक्स:</strong>
+                    <p>नागरिक उड्डयन सुरक्षा में नए खतरों का विश्लेषण करते हुए शिक्षक ने फ्लाईदुबई घटना के बाद एयरलाइंस द्वारा अपनाए जा रहे सुरक्षा सुधारों जैसे पोस्ट-हायरिंग मनोवैज्ञानिक जांच (Psychological Screening) और बायोमीट्रिक आव्रजन पर विस्तृत चर्चा की।</p>
+                </div>
+                <div class="key-args">
+                    <strong>क्लास के मुख्य बिंदु (Key Lecture Points):</strong>
+                    <ul>
+                        <li>उड़ान चालक दल (Flight Crew) की मानसिक स्वास्थ्य और मनोवैज्ञानिक जांच अब नियमित अंतराल पर होगी।</li><li>हवाई अड्डों पर एआई-संचालित इंटेलिजेंट सर्विलांस सिस्टम से यात्रियों की व्यवहार संबंधी असामान्यताओं को पहचाना जाएगा।</li><li>आंतरिक सुरक्षा और एविएशन ओवरहाल में मानकीकृत संचालन प्रक्रियाओं (SOPs) का कड़ाई से पालन आवश्यक है।</li>
+                    </ul>
+                </div>
+                <div class="exam-tip-box"><strong>💡 परीक्षा टिप (Exam Tip):</strong> आंतरिक सुरक्षा/अवसंरचना के उत्तरों में 'मानव कारक सुरक्षा' (Human-Factor Security) का बिंदु अवश्य शामिल करें।</div>
+            </div>
+            
+
+        <div class="section-title">🟣 राजस्थान सुजस, पत्रिका एवं दैनिक भास्कर (Rajasthan Sujas, Patrika & Bhaskar)</div>
+        
+            <div class="sujas-card">
+                <div class="sujas-header">
+                    <span class="badge badge-sujas">राजस्थान सुजस विशेष</span>
+                    <strong>सूचना एवं जनसंपर्क विभाग (DIPR), राजस्थान सरकार</strong>
+                </div>
+                <h3>जोधपुर संभाग के 8 जिलों हेतु बुनियादी ढांचा व सुजस विकास योजनाएं</h3>
+                <ul>
+                    <li>सुजस स्पेशल बुलेटिन के अनुसार जोधपुर संभाग के 8 जिलों (जोधपुर, बाड़मेर, जैसलमेर, जालोर, सिरोही, पाली, फलौदी, बालोतरा) में पेयजल और सड़क सुदृढ़ीकरण हेतु बजट स्वीकृत किया गया।</li><li>मरुस्थलीय क्षेत्रों में सौर ऊर्जा और कृषि-प्रसंस्करण इकाइयों को बढ़ावा देने हेतु विशेष आर्थिक प्रोत्साहन।</li><li>ग्रामीण क्षेत्रों में अंतिम मील तक सरकारी योजनाओं का लाभ पहुंचाने के लिए 'सुजस जन-सेवा शिविरों' का आयोजन।</li>
+                </ul>
+                <div class="relevance-box"><strong>RPSC महत्व:</strong> RAS Mains Paper 1 (राजस्थान अर्थशास्त्र) और Paper 3 (प्रशासनिक पहल) हेतु अत्यधिक महत्वपूर्ण।</div>
+            </div>
+            
+            <div class="sujas-card">
+                <div class="sujas-header">
+                    <span class="badge badge-sujas">राजस्थान सुजस विशेष</span>
+                    <strong>पंचायती राज विभाग एवं राज्य निर्वाचन आयोग, राजस्थान</strong>
+                </div>
+                <h3>राजस्थान पंचायती राज चुनाव और 'मिशन गांव' संवाद</h3>
+                <ul>
+                    <li>प्रदेश में पंचायती राज संस्थाओं (ग्राम पंचायत, पंचायत समिति) के चुनाव की तिथियों का काउंटडाउन शुरू हो गया है और राज्य निर्वाचन आयोग आचार संहिता लागू करने की तैयारी में है।</li><li>मुख्यमंत्री द्वारा प्रदेशभर के सरपंचों और प्रतिनिधियों से 'मिशन गांव' के तहत सीधे संवाद कर ग्रामीण प्राथमिकताओं की समीक्षा की गई।</li><li>ग्राम पंचायतों में ई-गवर्नेस लागू करने और सुजस पोर्टल से योजनाओं के सीधे निरीक्षण पर जोर दिया गया।</li>
+                </ul>
+                <div class="relevance-box"><strong>RPSC महत्व:</strong> RAS Mains Paper 3 (राजस्थान में राज्य व स्थानीय प्रशासन) हेतु प्रासंगिक।</div>
+            </div>
+            
+            <div class="sujas-card">
+                <div class="sujas-header">
+                    <span class="badge badge-sujas">राजस्थान सुजस विशेष</span>
+                    <strong>सेंट्रल ब्यूरो ऑफ नारकोटिक्स (CBN) राजस्थान यूनिट</strong>
+                </div>
+                <h3>राजस्थान में अंतरराष्ट्रीय हाइड्रोपोनिक गांजे की तस्करी पर नकेल</h3>
+                <ul>
+                    <li>सीबीएन राजस्थान यूनिट ने त्वरित कार्रवाई करते हुए थाईलैंड से आए कूरियर पार्सल में छिपाकर लाए गए 1.080 किग्रा Hydroponic Weed (उच्च-सांद्रता वाला मादक पदार्थ) को जब्त किया।</li><li>मादक पदार्थों के नए रास्तों (Courier Tunnels) और डार्कवेब-आधारित सिंडिकेट को ध्वस्त करने हेतु विशेष अभियान चलाया जा रहा है।</li><li>प्रदेश की युवाओं को नशे से बचाने के लिए राज्य सरकार द्वारा 'नशा मुक्त राजस्थान' अभियान के तहत कठोर कानूनी कार्रवाई की जा रही है।</li>
+                </ul>
+                <div class="relevance-box"><strong>RPSC महत्व:</strong> RAS Mains Paper 3 (राजस्थान में कानून-व्यवस्था व आंतरिक सुरक्षा) हेतु महत्वपूर्ण।</div>
+            </div>
+            
+            <div class="sujas-card">
+                <div class="sujas-header">
+                    <span class="badge badge-sujas">राजस्थान सुजस विशेष</span>
+                    <strong>राजस्थान राज्य क्रीड़ा परिषद एवं युवा मामले विभाग</strong>
+                </div>
+                <h3>अजमेर की गौरवी सिंह का राष्ट्रीय स्वर्ण पदक (राजस्थान खेल जगत)</h3>
+                <ul>
+                    <li>अजमेर की होनहार खिलाड़ी गौरवी सिंह ने राष्ट्रीय जलीय खेल/तैराकी प्रतियोगिता में स्वर्ण पदक जीतकर राज्य को गौरवान्वित किया।</li><li>राजस्थान की 'आउट ऑफ टर्न स्पोर्ट्स पॉलिसी' के तहत पदक विजेता खिलाड़ियों को सरकारी सेवाओं में सीधी नियुक्ति और वित्तीय प्रोत्साहन दिए जा रहे हैं।</li><li>प्रदेश में खेल अवसंरचना (Sports Infrastructure) को जिला स्तर पर मजबूत करने की रणनीति लागू है।</li>
+                </ul>
+                <div class="relevance-box"><strong>RPSC महत्व:</strong> RAS Pre एवं Mains Paper 3 (राजस्थान के प्रमुख खेल एवं खिलाड़ी) हेतु अति-महत्वपूर्ण।</div>
+            </div>
+            
+
+        <div class="section-title">🔴 सम्पादकीय एवं पत्रिका गहन विश्लेषण (The Hindu, Indian Express, ET, DownToEarth, योजना व कुरुक्षेत्र)</div>
+        
+            <div class="editorial-card">
+                <div class="editorial-header">
+                    <span class="badge badge-ed">Down To Earth</span>
+                    <span class="syllabus-tag">UPSC GS3 / RAS Paper 3: Science & Tech, Cyber Security, Governance</span>
+                </div>
+                <h3>डिजिटल संप्रभुता और ओपन-सोर्स सॉफ्टवेयर क्रांति</h3>
+                <p class="context"><strong>समसामयिक संदर्भ:</strong> यूरोपीय देश (फ्रांस, जर्मनी, इटली) और अफ्रीकी राष्ट्र (तंजानिया) अमेरिकी बिग-टेक एकाधिकार और US CLOUD Act के बढ़ते भू-राजनीतिक जोखिमों से बचने के लिए सरकारी तंत्र में व्यापक स्तर पर ओपन-सोर्स सॉफ्टवेयर लागू कर रहे हैं।</p>
+                <div class="key-args">
+                    <strong>सम्पादकीय का पूरा सार एवं तर्क (Deep Dive Takeaways):</strong>
+                    <ul>
+                        <li>**अमेरिकी CLOUD Act 2018 का खतरा:** यह कानून अमेरिकी एजेंसियों को विदेशों में स्थित सर्वरों पर संग्रहित अमेरिकी कंपनियों के डेटा को एक्सेस करने का असीमित अधिकार देता है, जो यूरोपीय संघ के GDPR नियमों का सीधा उल्लंघन है।</li><li>**बिग-टेक की भू-राजनीतिक मनमानी:** अंतरराष्ट्रीय आपराधिक न्यायालय (ICC) के अभियोजक पर अमेरिकी प्रतिबंधों के बाद उनके माइक्रोसॉफ्ट ईमेल को ब्लॉक किए जाने की रिपोर्टों ने विदेशी सरकारों में अपनी डिजिटल निर्भरता को लेकर गहरा अविश्वास पैदा किया है।</li><li>**फ्रांस और जर्मनी का ' sovereign computing' मॉडल:** फ्रांस ने अपने डिजिटल मामलों के अंतर-मंत्रालयी निदेशालय के माध्यम से विंडोज को हटाकर पूरे तंत्र को 'Linux' पर आधारित किया है। फ्रांसीसी पुलिस 'GendBuntu' का उपयोग कर प्रतिवर्ष €7 मिलियन का लाइसेंस शुल्क बचा रही है।</li><li>**भारत हेतु सबक (केरल मॉडल):** भारत में डेटा संप्रभुता हेतु अभी ठोस राष्ट्रीय रणनीति का अभाव है, यद्यपि केरल ने 2007 में अपने स्कूली शिक्षा तंत्र में लिनक्स अपनाकर सैकड़ों करोड़ रुपये बचाए थे।</li>
+                    </ul>
+                </div>
+                <div class="way-forward"><strong>आगे की राह (Way Forward):</strong> भारत को 'डिजिटल इंडिया' के तहत राष्ट्रीय स्तर पर ओपन-सोर्स सॉफ्टवेयर अपनाने की अनिवार्य नीति बनानी चाहिए, देशी ऑपरेटिंग सिस्टम (जैसे BharOS) को बढ़ावा देना चाहिए और डेटा सेंटरों को स्वदेशी कानूनी ढांचे के अधीन संचालित करना चाहिए।</div>
+            </div>
+            
+            <div class="editorial-card">
+                <div class="editorial-header">
+                    <span class="badge badge-ed">Down To Earth</span>
+                    <span class="syllabus-tag">UPSC GS2 / RAS Paper 3: Social Justice, Ethics in AI, Gender Mainstreaming</span>
+                </div>
+                <h3>कृत्रिम बुद्धिमत्ता (AI) में लैंगिक विषमता और UN Women की पहल</h3>
+                <p class="context"><strong>समसामयिक संदर्भ:</strong> UN Women ने संयुक्त राष्ट्र महासभा के 81वें सत्र के दौरान AI विकास, डिजाइन और सुशासन में महिलाओं की उपेक्षा को समाप्त करने हेतु 'Digital, Innovation and AI Hub' की स्थापना की है।</p>
+                <div class="key-args">
+                    <strong>सम्पादकीय का पूरा सार एवं तर्क (Deep Dive Takeaways):</strong>
+                    <ul>
+                        <li>**डिजाइन और नेतृत्व में असमानता:** टेक उद्योग में पुरुष प्रधानता इतनी अधिक है कि लगभग 80% AI नौकरियां और 90% वरिष्ठ नेतृत्व पद पुरुषों के पास हैं, जिससे महिलाओं के अनुभव और सुरक्षा आवश्यकताएं उपेक्षित रह जाती हैं।</li><li>**एल्गोरिदम में पूर्वाग्रह (Algorithmic Bias):** 133 AI प्रणालियों के अध्ययन में पाया गया कि 44% प्रणालियां महिलाओं के प्रति पक्षपाती हैं, जिससे ऋण स्वीकृति, नौकरी चयन और सामाजिक कल्याण में भेदभाव बढ़ता है।</li><li>**साइबर हिंसा और जनरेटिव खतरे:** लगभग 25% महिला अधिकार कार्यकर्ताओं ने AI-जनित डीपफेक, वॉयस क्लोनिंग और ऑनलाइन हिंसा का सामना किया है।</li><li>**सत्ता संतुलन का मुद्दा:** AI केवल एक तकनीकी उपकरण नहीं बल्कि भविष्य के सामाजिक और आर्थिक ढाँचे का पुनर्निर्धारण है; यदि महिलाएँ इसके निर्णय-निर्माण से बाहर रहीं, तो वर्तमान असमानताएँ भविष्य में भी जारी रहेंगी।</li>
+                    </ul>
+                </div>
+                <div class="way-forward"><strong>आगे की राह (Way Forward):</strong> एआई कंपनियों के लिए 'Gender Impact Assessment' अनिवार्य किया जाए, डेटासेट में विविधता सुनिश्चित हो और राष्ट्रीय एआई नीतियों में 'Gender-responsive AI Policy' का स्पष्ट खाका शामिल किया जाए।</div>
+            </div>
+            
+            <div class="editorial-card">
+                <div class="editorial-header">
+                    <span class="badge badge-ed">Down To Earth</span>
+                    <span class="syllabus-tag">UPSC GS3 / RAS Paper 1 & 3: Energy, Environment, Corporate Regulation</span>
+                </div>
+                <h3>डेटा सेंटर अवसंरचना का पारिस्थितिकीय और सामाजिक मूल्य</h3>
+                <p class="context"><strong>समसामयिक संदर्भ:</strong> भारत में अगले 5 वर्षों में $60-$70 बिलियन के डेटा सेंटर निवेश की योजना है (उदा. आंध्र प्रदेश में गूगल का 1GW प्रोजेक्ट)। हालांकि, चिली में जन-आंदोलन (MOSACAT) के बाद गूगल को अपना डेटा सेंटर रद्द करना पड़ा, जो भारत के लिए चेतावनी है।</p>
+                <div class="key-args">
+                    <strong>सम्पादकीय का पूरा सार एवं तर्क (Deep Dive Takeaways):</strong>
+                    <ul>
+                        <li>**संसाधनों का अत्यधिक दोहन:** एआई और डेटा सेंटरों के कूलिंग तंत्र के लिए प्रतिदिन लाखों लीटर ताजे पानी और निरंतर विशाल बिजली आपूर्ति (169-228 लीटर/सेकंड जल) की आवश्यकता होती है, जो स्थानीय जलभृतों (Aquifers) को सुखा देती है।</li><li>**कम रोजगार सृजन की मिथक:** बड़े डेटा सेंटर व्यापक भूमि और ऊर्जा लेते हैं, लेकिन स्थायी स्थानीय रोजगार (केवल 50-60 गार्ड/तकनीशियन) बेहद कम पैदा करते हैं।</li><li>**हीट आइलैंड प्रभाव:** डेटा सेंटरों के 10 किलोमीटर के दायरे में स्थानीय तापमान में 9 डिग्री सेल्सियस तक की वृद्धि दर्ज की गई है, जिससे स्थानीय सूक्ष्म-जलवायु प्रभावित होती है।</li><li>**नियामक छूट की अनैतिकता:** सरकारों द्वारा कॉर्पोरेट हितों के अधीन होकर 'पर्यावरण प्रभाव आकलन' (EIA) को दरकिनार करना या विशेष बिजली रियायतें (जैसे Deemed DISCOM) देना स्थानीय आबादी के अधिकारों का हनन है।</li>
+                    </ul>
+                </div>
+                <div class="way-forward"><strong>आगे की राह (Way Forward):</strong> डेटा सेंटरों के लिए अनिवार्य पर्यावरण प्रभाव अध्ययन (EIA), एयर-कूलिंग तकनीकों का उपयोग, हरित ऊर्जा (Renewable Energy) का बाध्यकारी प्रयोग और स्थानीय समुदायों की बाध्यकारी भागीदारी (Binding Public Consultation) लागू की जानी चाहिए।</div>
+            </div>
+            
+            <div class="editorial-card">
+                <div class="editorial-header">
+                    <span class="badge badge-ed">Economic Times / LiveMint</span>
+                    <span class="syllabus-tag">UPSC GS3 / RAS Paper 1: Indian Economy, Monsoon Dynamics, Food Security</span>
+                </div>
+                <h3>कमजोर मानसून और कृषि विकास दर पर मंडराता संकट</h3>
+                <p class="context"><strong>समसामयिक संदर्भ:</strong> 2026 में दक्षिण-पश्चिम मानसून दीर्घकालिक औसत (LPA) का केवल 87% रहा, जो 2015 के बाद सबसे कम है। इसके परिणामस्वरूप रेटिंग एजेंसी ICRA ने वित्त वर्ष 2027 के लिए भारत की कृषि विकास दर के अनुमान को घटाकर 1% कर दिया है।</p>
+                <div class="key-args">
+                    <strong>सम्पादकीय का पूरा सार एवं तर्क (Deep Dive Takeaways):</strong>
+                    <ul>
+                        <li>**खरीफ बुवाई में गिरावट:** मुख्य रूप से चावल और कपास के रकबे में 1.2% की कमी आई है, जिससे ग्रामीण आय और मांग पर नकारात्मक असर पड़ेगा।</li><li>**जलाशयों के स्तर में कमी:** दक्षिण और पश्चिम भारत के प्रमुख जलाशयों में जल स्तर घटने से आगामी रबी फसल (गेहूँ, चना, सरसों) की सिंचाई और उत्पादन पर गंभीर अनिश्चितता पैदा हो गई है।</li><li>**VB-G RAM G / मनरेगा मांग में उछाल:** ग्रामीण क्षेत्रों में कृषि रोजगार घटने के कारण सितंबर माह में ग्रामीण परिवारों द्वारा काम की मांग में 34% (15.64 मिलियन परिवार) की भारी वृद्धि दर्ज की गई है।</li><li>**खाद्य मुद्रास्फीति का जोखिम:** अनाज उत्पादन घटने से खाद्य मुद्रास्फीति बढ़ेगी, जिससे भारतीय रिजर्व बैंक (RBI) द्वारा ब्याज दरों में कटौती की संभावना सीमित हो जाएगी।</li>
+                    </ul>
+                </div>
+                <div class="way-forward"><strong>आगे की राह (Way Forward):</strong> फसल विविधीकरण (Crop Diversification), सूक्ष्म-सिंचाई (Micro-irrigation) का त्वरित प्रसार, और कृषि अवसंरचना कोष (AIF) के माध्यम से कटाई-पश्चात प्रबंधन को सुदृढ़ कर जलवायु-सहनशील (Climate-resilient) कृषि अपनाना अनिवार्य है।</div>
+            </div>
+            
+            <div class="editorial-card">
+                <div class="editorial-header">
+                    <span class="badge badge-ed">The Hindu Editorial</span>
+                    <span class="syllabus-tag">UPSC GS2 / RAS Paper 2 & 3: Health Policy, Supreme Court Directives, Public Welfare</span>
+                </div>
+                <h3>औषधि मूल्य नियंत्रण में न्यायपालिका का हस्तक्षेप</h3>
+                <p class="context"><strong>समसामयिक संदर्भ:</strong> सर्वोच्च न्यायालय ने खुदरा दवा विक्रेताओं द्वारा जीवन रक्षक दवाओं पर वसूले जाने वाले अत्यधिक लाभ (Profit Margin) और मूल्य निर्धारण में पारदर्शिता की कमी पर कड़ा रुख अपनाया है।</p>
+                <div class="key-args">
+                    <strong>सम्पादकीय का पूरा सार एवं तर्क (Deep Dive Takeaways):</strong>
+                    <ul>
+                        <li>**जेनेरिक बनाम ब्रांडेड दवाओं का अंतर:** खुदरा विक्रेताओं द्वारा एमआरपी (MRP) पर भारी छूट देने के बावजूद वास्तविक विनिर्माण लागत और बिक्री मूल्य के बीच 500% से 1000% तक का अंतर देखा जाता है।</li><li>**स्वास्थ्य पर आउट-ऑफ-पॉकेट खर्च (OOPE):** भारत में स्वास्थ्य पर होने वाले कुल निजी खर्च का लगभग 60% भाग केवल दवाओं की खरीद में चला जाता है, जो लाखों परिवारों को गरीबी रेखा से नीचे धकेल देता है।</li><li>**NPPA की सीमाएं:** राष्ट्रीय औषधि मूल्य निर्धारण प्राधिकरण (NPPA) केवल अनुसूचित (Scheduled) दवाओं का मूल्य नियंत्रित करता है, जबकि गैर-अनुसूचित दवाएं नियंत्रण से बाहर हैं।</li><li>**नैतिक संकट:** फार्मास्युटिकल कंपनियों, डॉक्टरों और खुदरा विक्रेताओं के अनैतिक गठजोड़ के कारण मरीज महंगी दवाएं खरीदने पर मजबूर होते हैं।</li>
+                    </ul>
+                </div>
+                <div class="way-forward"><strong>आगे की राह (Way Forward):</strong> सभी आवश्यक दवाओं (NLEM) के लिए ट्रेड मार्जिन कैपिंग (Trade Margin Capping) लागू की जाए, 'जन औषधि केंद्रों' का विस्तार हो और ऑनलाइन दवा ट्रेसेबिलिटी सिस्टम अनिवार्य किया जाए।</div>
+            </div>
+            
+            <div class="editorial-card">
+                <div class="editorial-header">
+                    <span class="badge badge-ed">The Hindu Editorial</span>
+                    <span class="syllabus-tag">UPSC GS2 / RAS Paper 3: Indian Polity, Federalism, Constitutional Law</span>
+                </div>
+                <h3>जम्मू और कश्मीर को पूर्ण राज्य का दर्जा देने की आवश्यकता</h3>
+                <p class="context"><strong>समसामयिक संदर्भ:</strong> जम्मू-कश्मीर में हाल ही में संपन्न हुए लोकतांत्रिक विधानसभा चुनावों के बाद, केंद्र सरकार द्वारा क्षेत्र को जल्द से जल्द पूर्ण राज्य (Statehood) का दर्जा वापस दिए जाने की मांग जोर पकड़ रही है।</p>
+                <div class="key-args">
+                    <strong>सम्पादकीय का पूरा सार एवं तर्क (Deep Dive Takeaways):</strong>
+                    <ul>
+                        <li>**लोकतांत्रिक प्रतिनिधित्व की बहाली:** केंद्र शासित प्रदेश के रूप में शासन से निर्वाचित सरकार और उपराज्यपाल (LG) के बीच अधिकारों का टकराव पैदा होता है, जो जनमत का अनादर है।</li><li>**सुप्रीम कोर्ट का आश्वासन:** अनुच्छेद 370 को निरस्त करते समय केंद्र सरकार ने शीर्ष अदालत के समक्ष प्रतिबद्धता जताई थी कि यूटी का दर्जा अस्थायी है और यथाशीघ्र राज्य का दर्जा बहाल किया जाएगा।</li><li>**सहकारी संघवाद (Cooperative Federalism):** एक पूर्ण राज्य के रूप में जम्मू-कश्मीर की प्रशासनिक मशीनरी को अधिक स्वायत्तता मिलेगी, जिससे निवेश, पर्यटन और सुरक्षा स्थितियों में सुधार होगा।</li><li>**सुरक्षा और विकास का संतुलन:** निर्वाचित प्रतिनिधियों को कानून-व्यवस्था के मामलों में सीमित अधिकार मिलने से जनता और प्रशासन के बीच विश्वास का अंतर समाप्त होगा।</li>
+                    </ul>
+                </div>
+                <div class="way-forward"><strong>आगे की राह (Way Forward):</strong> संसद के आगामी सत्र में पुनर्गठन अधिनियम में संशोधन कर जम्मू-कश्मीर को पूर्ण राज्य का दर्जा दिया जाए, जिससे भारत के संघीय ढाँचे की साख मजबूत हो सके।</div>
+            </div>
+            
+
+        <div class="section-title">📲 टेलीग्राम चैनल दैनिक प्रश्नोत्तरी व नोट्स (Telegram Daily Quiz & Notes)</div>
+            <div class="mains-card" style="border-left: 8px solid #0284c7; margin-bottom: 25px;">
+                <div class="mains-header">
+                    <span class="badge" style="background:#0284c7; color:white;">5 अंक (~50 शब्द)</span>
+                    <span class="badge" style="background:#1e3a8a; color:white;">@rpsc_ras_exam_official</span>
+                    <span class="subject-tag">Paper 3</span>
+                </div>
+                <h3 class="question-text">प्रश्न: राजस्थान में पंचायती राज संस्थाओं को वित्तीय स्वायत्तता प्रदान करने हेतु राज्य वित्त आयोग (State Finance Commission) के संवैधानिक प्रावधानों का वर्णन कीजिए।</h3>
+                <div class="answer-box">
+                    <strong class="ans-label">उत्तर ढांचा एवं विस्तृत नोट्स (~50 शब्द):</strong>
+                    <div class="answer-content">1. सही उत्तर एवं मुख्य तथ्य: संविधान का अनुच्छेद 243-I राज्य वित्त आयोग के गठन का प्रावधान करता है। राज्यपाल द्वारा प्रत्येक 5 वर्ष में इसका गठन किया जाता है।<br>2. ऐतिहासिक/भौगोलिक/नीतिगत संदर्भ: यह आयोग राज्य के करों, शुल्कों और पथकरों से प्राप्त शुद्ध आगमों का राज्य सरकार और पंचायती राज संस्थाओं के बीच विभाजन का सूत्र निर्धारित करता है।<br>3. RPSC परीक्षा प्रासंगिकता: RPSC RAS Mains Paper 3 (इकाई 2) के 'राजस्थान की प्रशासनिक व्यवस्था एवं स्थानीय स्वशासन' पाठ्यक्रम हेतु अत्यंत महत्वपूर्ण।</div>
+                </div>
+            </div>
+            
+            <div class="mains-card" style="border-left: 8px solid #0284c7; margin-bottom: 25px;">
+                <div class="mains-header">
+                    <span class="badge" style="background:#0284c7; color:white;">5 अंक (~50 शब्द)</span>
+                    <span class="badge" style="background:#1e3a8a; color:white;">@upsc_civil_services_notes</span>
+                    <span class="subject-tag">Paper 3</span>
+                </div>
+                <h3 class="question-text">प्रश्न: अमेरिकी 'CLOUD Act 2018' क्या है और यह वैश्विक डेटा गोपनीयता के लिए किस प्रकार चुनौती प्रस्तुत करता है?</h3>
+                <div class="answer-box">
+                    <strong class="ans-label">उत्तर ढांचा एवं विस्तृत नोट्स (~50 शब्द):</strong>
+                    <div class="answer-content">1. सही उत्तर एवं मुख्य तथ्य: Clarifying Lawful Overseas Use of Data (CLOUD) Act एक अमेरिकी कानून है जो अमेरिकी कानून प्रवर्तन एजेंसियों को अमेरिकी टेक कंपनियों द्वारा विदेश में संग्रहित डेटा को प्राप्त करने की शक्ति देता है।<br>2. ऐतिहासिक/भौगोलिक/नीतिगत संदर्भ: यह कानून यूरोपीय संघ के GDPR जैसे डेटा संरक्षण कानूनों से टकराता है और अन्य देशों की डिजिटल संप्रभुता (Data Sovereignty) का उल्लंघन करता है।<br>3. RPSC परीक्षा प्रासंगिकता: UPSC GS3 / RAS Paper 3 में 'साइबर सुरक्षा, डेटा कानून एवं अंतरराष्ट्रीय संबंध' विषय से सीधे संबंधित।</div>
+                </div>
+            </div>
+            
+            <div class="mains-card" style="border-left: 8px solid #0284c7; margin-bottom: 25px;">
+                <div class="mains-header">
+                    <span class="badge" style="background:#0284c7; color:white;">5 अंक (~50 शब्द)</span>
+                    <span class="badge" style="background:#1e3a8a; color:white;">@ras_prep_community</span>
+                    <span class="subject-tag">Paper 1</span>
+                </div>
+                <h3 class="question-text">प्रश्न: लद्दाख में हाल ही में प्रारंभ किए गए 'केसर पायलट प्रोजेक्ट' की भौगोलिक अनुकूलता और महत्व को स्पष्ट कीजिए।</h3>
+                <div class="answer-box">
+                    <strong class="ans-label">उत्तर ढांचा एवं विस्तृत नोट्स (~50 शब्द):</strong>
+                    <div class="answer-content">1. सही उत्तर एवं मुख्य तथ्य: लद्दाख के लेह स्थित स्पितुक फरका में 90,000 ईरानी केसर corms रोपकर शीत-मरुस्थलीय केसर खेती का सफल प्रयोग किया गया।<br>2. ऐतिहासिक/भौगोलिक/नीतिगत संदर्भ: लेह का शुष्क, ठंडा मौसम और मरुस्थलीय मिट्टी (जहाँ पानी की निकासी अच्छी होती है) केसर की फसल के लिए आदर्श परिस्थितियाँ प्रदान करती हैं।<br>3. RPSC परीक्षा प्रासंगिकता: RAS Mains Paper 1 (भूगोल - कृषि एवं जलवायु क्षेत्र) और UPSC GS3 हेतु अत्यधिक उपयोगी।</div>
+                </div>
+            </div>
+            
+            <div class="mains-card" style="border-left: 8px solid #0284c7; margin-bottom: 25px;">
+                <div class="mains-header">
+                    <span class="badge" style="background:#0284c7; color:white;">5 अंक (~50 शब्द)</span>
+                    <span class="badge" style="background:#1e3a8a; color:white;">@daily_current_affairs_quiz</span>
+                    <span class="subject-tag">Paper 2</span>
+                </div>
+                <h3 class="question-text">प्रश्न: सिक्कल सेल एनीमिया (Sickle Cell Anemia) के निदान हेतु CSIR-CCMB द्वारा विकसित भारत-विशिष्ट टूल का क्या महत्व है?</h3>
+                <div class="answer-box">
+                    <strong class="ans-label">उत्तर ढांचा एवं विस्तृत नोट्स (~50 शब्द):</strong>
+                    <div class="answer-content">1. सही उत्तर एवं मुख्य तथ्य: CSIR-CCMB ने भारतीय Sickle Cell रोगियों के जेनेटिक प्रोफाइल के आधार पर बीमारी की गंभीरता का सटीक अनुमान लगाने वाला स्वदेशी टूल विकसित किया है।<br>2. ऐतिहासिक/भौगोलिक/नीतिगत संदर्भ: यह टूल अंतरराष्ट्रीय मापदंडों की सीमाओं को दूर करता है और भारत के 'राष्ट्रीय सिक्कल सेल एनीमिया उन्मूलन मिशन 2047' को तकनीकी संबल प्रदान करता है।<br>3. RPSC परीक्षा प्रासंगिकता: RPSC RAS Paper 2 (विज्ञान एवं प्रौद्योगिकी - जैव प्रौद्योगिकी व स्वास्थ्य) हेतु प्रासंगिक।</div>
+                </div>
+            </div>
+            
+    </div>
+
+    <script>
+        function setFontSize(size) {
+            document.documentElement.style.setProperty('--base-font-size', size + 'px');
+            localStorage.setItem('ras_notes_font_size', size);
+            document.querySelectorAll('.toolbar-btns .t-btn').forEach(b => {
+                if (b.innerText.includes(size + 'px')) b.classList.add('active');
+                else if (b.innerText.includes('px')) b.classList.remove('active');
+            });
+        }
+
+        function toggleTheme(theme) {
+            document.body.classList.remove('dark-mode', 'sepia-mode');
+            if (theme === 'dark') document.body.classList.add('dark-mode');
+            else if (theme === 'sepia') document.body.classList.add('sepia-mode');
+            localStorage.setItem('ras_notes_theme', theme);
+        }
+
+        // Load saved preferences
+        (function() {
+            const savedSize = localStorage.getItem('ras_notes_font_size') || 26;
+            setFontSize(savedSize);
+            const savedTheme = localStorage.getItem('ras_notes_theme');
+            if (savedTheme) toggleTheme(savedTheme);
+        })();
+    </script>
+</body>
+</html>
