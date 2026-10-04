@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RAS & UPSC Daily Notes - 2026-10-04</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style id="customStyle">
+        :root {
+            --base-font-size: 24px;
+            --base-line-height: 1.85;
+            --primary: #1e1b4b;
+            --primary-light: #2563eb;
+            --secondary: #0f766e;
+            --accent-gold: #b45309;
+            --accent-purple: #6b21a8;
+            --accent-red: #9f1239;
+            --bg-main: #f8fafc;
+            --card-bg: #ffffff;
+            --text-dark: #020617;
+            --border-color: #cbd5e1;
+            --box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+        }
+
+        body.dark-mode {
+            --bg-main: #090d16;
+            --card-bg: #111827;
+            --text-dark: #f8fafc;
+            --border-color: #374151;
+            --box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+        }
+
+        body.sepia-mode {
+            --bg-main: #fbf0d9;
+            --card-bg: #fffdf7;
+            --text-dark: #2d2215;
+            --border-color: #e2d3b5;
+        }
+
+        body {
+            font-family: 'Noto Sans Devanagari', 'Segoe UI', Tahoma, sans-serif;
+            background-color: var(--bg-main);
+            color: var(--text-dark);
+            margin: 0;
+            padding: 25px;
+            line-height: var(--base-line-height);
+            font-size: var(--base-font-size);
+            transition: background-color 0.2s, font-size 0.15s;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* Eye-Comfort High Definition Typography */
+        p, li, div, span, td, th {
+            font-size: var(--base-font-size);
+            line-height: var(--base-line-height);
+        }
+
+        b, strong {
+            color: #b91c1c;
+            font-weight: 800;
+        }
+        body.dark-mode b, body.dark-mode strong {
+            color: #f87171;
+        }
+
+        .blue-highlight {
+            color: #1e3a8a;
+            font-weight: 800;
+        }
+        body.dark-mode .blue-highlight {
+            color: #60a5fa;
+        }
+
+        .container {
+            max-width: 1300px;
+            margin: 0 auto;
+        }
+
+        /* Sticky Eye-Comfort Controls Toolbar */
+        .reader-toolbar {
+            position: sticky;
+            top: 15px;
+            z-index: 999;
+            background: rgba(15, 23, 42, 0.95);
+            backdrop-filter: blur(10px);
+            color: white;
+            padding: 12px 24px;
+            border-radius: 50px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+            margin-bottom: 25px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 12px;
+            border: 2px solid #334155;
+        }
+
+        .toolbar-title {
+            font-size: 19px;
+            font-weight: 800;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .toolbar-btns {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .t-btn {
+            background: #1e293b;
+            color: white;
+            border: 1px solid #475569;
+            padding: 8px 16px;
+            border-radius: 25px;
+            font-size: 16px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.2s;
+            font-family: inherit;
+        }
+
+        .t-btn:hover, .t-btn.active {
+            background: #2563eb;
+            border-color: #60a5fa;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 10px rgba(37,99,235,0.4);
+        }
+
+        .header {
+            background: linear-gradient(135deg, #09090b 0%, #1e1b4b 50%, #0f766e 100%);
+            color: white;
+            padding: 35px 40px;
+            border-radius: 20px;
+            box-shadow: 0 15px 30px -5px rgba(0,0,0,0.25);
+            margin-bottom: 35px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border: 3px solid #3b82f6;
+        }
+        .header h1 { margin: 0 0 10px 0; font-size: 36px; font-weight: 900; letter-spacing: -0.5px; }
+        .header p { margin: 0; opacity: 0.95; font-size: 22px; font-weight: 600; }
+
+        /* Large Chapter 7 Style Section Headers */
+        .section-title {
+            font-size: 32px;
+            font-weight: 900;
+            margin: 45px 0 25px 0;
+            padding: 18px 26px;
+            background: var(--card-bg);
+            border-radius: 14px;
+            border-left: 14px solid var(--primary-light);
+            box-shadow: var(--box-shadow);
+            color: var(--text-dark);
+            border-top: 1px solid var(--border-color);
+            border-right: 1px solid var(--border-color);
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .badge {
+            padding: 8px 16px;
+            border-radius: 10px;
+            font-size: 17px;
+            font-weight: 800;
+            color: white;
+            display: inline-block;
+        }
+        .badge-pre { background-color: var(--accent-gold); }
+        .badge-raj { background-color: var(--accent-purple); }
+        .badge-5m { background-color: #0284c7; }
+        .badge-10m { background-color: #4338ca; }
+        .badge-sujas { background-color: #0d9488; }
+        .badge-ed { background-color: var(--accent-red); }
+        .badge-yt { background-color: #dc2626; }
+
+        /* Big, Comfortable Eye-Friendly Cards */
+        .fact-card, .mains-card, .sujas-card, .editorial-card, .yt-card {
+            background: var(--card-bg);
+            border-radius: 18px;
+            padding: 32px;
+            margin-bottom: 30px;
+            box-shadow: var(--box-shadow);
+            border: 2px solid var(--border-color);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .fact-card:hover, .mains-card:hover, .sujas-card:hover, .editorial-card:hover, .yt-card:hover {
+            box-shadow: 0 12px 28px rgba(0,0,0,0.1);
+        }
+
+        .fact-card { border-left: 14px solid var(--accent-gold); }
+        .mains-card { border-left: 14px solid #4338ca; }
+        .sujas-card { border-left: 14px solid var(--accent-purple); }
+        .editorial-card { border-left: 14px solid var(--accent-red); }
+        .yt-card { border-left: 14px solid #dc2626; background: var(--card-bg); }
+
+        .card-header, .mains-header, .sujas-header, .editorial-header, .yt-header {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 16px;
+            flex-wrap: wrap;
+        }
+        .topic-title { font-weight: 900; font-size: 26px; color: var(--text-dark); }
+        .fact-text { margin: 0; color: var(--text-dark); font-size: var(--base-font-size); line-height: var(--base-line-height); font-weight: 500; }
+        .question-text { margin: 12px 0 18px 0; color: #1e3a8a; font-size: calc(var(--base-font-size) + 4px); font-weight: 900; line-height: 1.6; }
+        body.dark-mode .question-text { color: #93c5fd; }
+
+        .answer-box {
+            background: #f1f5f9;
+            padding: 26px;
+            border-radius: 14px;
+            font-size: var(--base-font-size);
+            border: 2px solid #cbd5e1;
+            line-height: var(--base-line-height);
+        }
+        body.dark-mode .answer-box {
+            background: #1f2937;
+            border-color: #4b5563;
+        }
+        body.sepia-mode .answer-box {
+            background: #f4ebd0;
+            border-color: #dcd0b1;
+        }
+
+        .ans-label {
+            font-size: calc(var(--base-font-size) + 2px);
+            color: #1e3a8a;
+            display: block;
+            margin-bottom: 10px;
+            font-weight: 800;
+        }
+        body.dark-mode .ans-label { color: #60a5fa; }
+
+        .relevance-box, .way-forward {
+            background: #ecfdf5;
+            color: #065f46;
+            padding: 18px 24px;
+            border-radius: 12px;
+            margin-top: 20px;
+            font-size: calc(var(--base-font-size) - 1px);
+            border-left: 8px solid #10b981;
+            font-weight: 600;
+            border: 1px solid #a7f3d0;
+            border-left-width: 8px;
+        }
+        body.dark-mode .relevance-box, body.dark-mode .way-forward {
+            background: #064e3b;
+            color: #a7f3d0;
+            border-color: #059669;
+        }
+
+        .exam-tip-box {
+            background: #fefce8;
+            color: #854d0e;
+            padding: 18px 24px;
+            border-radius: 12px;
+            margin-top: 20px;
+            font-size: calc(var(--base-font-size) - 1px);
+            border-left: 8px solid #eab308;
+            font-weight: 600;
+            border: 1px solid #fef08a;
+            border-left-width: 8px;
+        }
+        body.dark-mode .exam-tip-box {
+            background: #713f12;
+            color: #fef08a;
+            border-color: #eab308;
+        }
+
+        ul { margin: 12px 0; padding-left: 30px; }
+        li { margin-bottom: 12px; font-size: var(--base-font-size); line-height: var(--base-line-height); }
+
+        @media print {
+            .reader-toolbar, .print-btn { display: none !important; }
+            body { background: white !important; color: black !important; padding: 0 !important; font-size: 16pt !important; }
+            .container { max-width: 100% !important; }
+            .fact-card, .mains-card, .sujas-card, .editorial-card, .yt-card { page-break-inside: avoid; border: 1px solid #999 !important; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Floating Interactive Eye-Comfort Toolbar -->
+        <div class="reader-toolbar">
+            <div class="toolbar-title">
+                <span>👁️ नेत्र-अनुकूल फॉन्ट व पठन मोड</span>
+            </div>
+            <div class="toolbar-btns">
+                <button class="t-btn" onclick="setFontSize(22)">A सामान्य (22px)</button>
+                <button class="t-btn active" id="btn-ch7" onclick="setFontSize(26)">🔠 बड़ा / Ch-7 स्टाइल (26px)</button>
+                <button class="t-btn" onclick="setFontSize(30)">🔍 अल्ट्रा लार्ज (30px)</button>
+                <button class="t-btn" onclick="toggleTheme('light')">☀️ लाइट</button>
+                <button class="t-btn" onclick="toggleTheme('sepia')">📜 सेपिया</button>
+                <button class="t-btn" onclick="toggleTheme('dark')">🌙 डार्क मोड</button>
+                <button class="t-btn" style="background:#059669; border-color:#10b981;" onclick="window.print()">🖨️ PDF प्रिंट</button>
+            </div>
+        </div>
+
+        <div class="header">
+            <div>
+                <h1>RPSC RAS & UPSC दैनिक समसामयिकी एवं सम्पादकीय विश्लेषण</h1>
+                <p>दिनांक: 2026-10-04 | RAS Pre & Mains (5M & 10M) विशेष मास्टर नोट्स</p>
+            </div>
+        </div>
+
+        <div class="section-title">🟡 प्रारंभिक परीक्षा तथ्य (RAS & UPSC Prelims Tracker)</div>
+        
+            <div class="fact-card">
+                <div class="card-header">
+                    <span class="badge badge-pre">UPSC Pre / RAS Pre</span>
+                    <span class="topic-title">बुक्सा टाइगर रिजर्व (BTR) - बाघ पुनर्स्थापन</span>
+                </div>
+                <p class="fact-text">पश्चिम बंगाल के अलीपुरद्वार जिले में स्थित बुक्सा टाइगर रिजर्व (BTR) में पारिस्थितिक तंत्र की बहाली और शिकार आधार (Prey Base) को बढ़ाकर बाघों के पुनर्स्थापन (Tiger Reintroduction) का प्रयास किया जा रहा है। इसकी सीमाएं भूटान और असम के मानस नेशनल पार्क से लगती हैं।</p>
+            </div>
+            
+            <div class="fact-card">
+                <div class="card-header">
+                    <span class="badge badge-pre">UPSC Pre / RAS Pre</span>
+                    <span class="topic-title">पॉलीमर बैंकनोट कार्यक्रम (Polymer Banknote Programme)</span>
+                </div>
+                <p class="fact-text">भारतीय रिजर्व बैंक (RBI) की पूर्ण स्वामित्व वाली सहायक कंपनी भारतीय रिजर्व बैंक नोट मुद्रण प्राइवेट लिमिटेड (BRBNMPL) ने ₹10 और ₹20 के नोटों के लिए 68,000 रीम बाइअक्षीय रूप से उन्मुख पॉलीप्रोपाइलीन (BOPP) की आपूर्ति हेतु निविदा जारी की है। भारत में स्वदेशी पॉलीमर विज्ञान फर्म 'Uflex' ने अमेरिकी फर्म 'Spectra Systems' के साथ मिलकर इसमें बोली लगाई है। ऑस्ट्रेलिया 1988 में पॉलीमर नोट पेश करने वाला पहला देश था।</p>
+            </div>
+            
+            <div class="fact-card">
+                <div class="card-header">
+                    <span class="badge badge-pre">UPSC Pre / RAS Pre</span>
+                    <span class="topic-title">प्राकृतिक गैस मूल्य सीमा (Natural Gas Price Ceiling)</span>
+                </div>
+                <p class="fact-text">पेट्रोलियम मंत्रालय के पेट्रोलियम योजना और विश्लेषण सेल (PPAC) ने गहरे पानी (Deepwater), अति-गहरे पानी (Ultra-deepwater) और उच्च-दबाव उच्च-तापमान (HPHT) जैसे कठिन क्षेत्रों से उत्पादित प्राकृतिक गैस की अधिकतम कीमत सीमा को बढ़ाकर $9.89 प्रति MMBtu कर दिया है। वहीं, ONGC और OIL के पुराने (Legacy) क्षेत्रों के लिए मूल्य सीमा $7 प्रति MMBtu पर अपरिवर्तित रखी गई है।</p>
+            </div>
+            
+            <div class="fact-card">
+                <div class="card-header">
+                    <span class="badge badge-raj">RAS Pre / UPSC Pre</span>
+                    <span class="topic-title">ग्रेट इंडियन बस्टर्ड (गोडावण) का वन क्षेत्र में विमोचन</span>
+                </div>
+                <p class="fact-text">केंद्रीय पर्यावरण मंत्री ने जैसलमेर के डेजर्ट नेशनल पार्क (DNP) में कृत्रिम हैचरी और संरक्षण प्रजनन केंद्र में पाले गए दो नर ग्रेट इंडियन बस्टर्ड (गोडावण) को सफलतापूर्वक प्राकृतिक वन्य क्षेत्र में छोड़ा है। गोडावण राजस्थान का राज्य पक्षी है और IUCN की रेड लिस्ट में 'गंभीर रूप से संकटग्रस्त' (Critically Endangered) श्रेणी में शामिल है।</p>
+            </div>
+            
+            <div class="fact-card">
+                <div class="card-header">
+                    <span class="badge badge-pre">UPSC Pre</span>
+                    <span class="topic-title">यूरोपीय डिजिटल इन्फ्रास्ट्रक्चर कंसोर्टियम (EDIC) और EU-STF</span>
+                </div>
+                <p class="fact-text">यूरोप ने अपनी डिजिटल संप्रभुता को मजबूत करने के लिए 'डिजिटल कॉमन्स यूरोपीय डिजिटल इन्फ्रास्ट्रक्चर कंसोर्टियम' (EDIC) की स्थापना की है। इसके पांच संस्थापक सदस्य फ्रांस, जर्मनी, नीदरलैंड, इटली और लक्ज़मबर्ग हैं। यह जर्मनी की सॉवरेन टेक एजेंसी के सहयोग से 'यूरोपीय सॉवरेन टेक फंड' (EU-STF) का संचालन कर रहा है ताकि ओपन-सोर्स सॉफ्टवेयर को बढ़ावा दिया जा सके।</p>
+            </div>
+            
+            <div class="fact-card">
+                <div class="card-header">
+                    <span class="badge badge-pre">UPSC Pre</span>
+                    <span class="topic-title">यूएस क्लाउड एक्ट (US CLOUD Act, 2018)</span>
+                </div>
+                <p class="fact-text">Clarifying Lawful Overseas Use of Data (CLOUD) Act अमेरिकी कानून प्रवर्तन एजेंसियों को अमेरिकी तकनीकी कंपनियों (जैसे माइक्रोसॉफ्ट, गूगल) के विदेशी डेटा केंद्रों में संग्रहीत संवेदनशील डेटा तक पहुंच प्राप्त करने की अनुमति देता है। यह कानून यूरोपीय संघ के जनरल डेटा प्रोटेक्शन रेगुलेशन (GDPR) के साथ सीधे टकराव में है और वैश्विक डिजिटल संप्रभुता के लिए चिंता का विषय है।</p>
+            </div>
+            
+            <div class="fact-card">
+                <div class="card-header">
+                    <span class="badge badge-pre">UPSC Pre / RAS Pre</span>
+                    <span class="topic-title">संयुक्त राष्ट्र महिला (UN Women) का डिजिटल, इनोवेशन और AI हब</span>
+                </div>
+                <p class="fact-text">UN Women ने डिजिटल परिवर्तन और कृत्रिम बुद्धिमत्ता (AI) के क्षेत्र में लैंगिक समानता को केंद्र में रखने के लिए वैश्विक 'डिजिटल, इनोवेशन और AI हब' लॉन्च किया है। इसका उद्देश्य AI प्रणालियों में लैंगिक पूर्वाग्रह (Gender Bias) को समाप्त करना और ऑनलाइन हिंसा को रोकना है। वर्तमान में AI से जुड़ी नौकरियों में महिलाओं की भागीदारी केवल 20% और वरिष्ठ नेतृत्व में केवल 10% है।</p>
+            </div>
+            
+            <div class="fact-card">
+                <div class="card-header">
+                    <span class="badge badge-pre">UPSC Pre / RAS Pre</span>
+                    <span class="topic-title">प्लूटो का 'बौना ग्रह' (Dwarf Planet) वर्गीकरण</span>
+                </div>
+                <p class="fact-text">24 अगस्त 2006 को प्राग (चेक गणराज्य) में अंतर्राष्ट्रीय खगोलीय संघ (IAU) के महासभा सत्र में संकल्प 5A और 6A के तहत प्लूटो को ग्रह की श्रेणी से हटाकर 'बौना ग्रह' घोषित किया गया था। ग्रह होने की तीन शर्तें हैं: सूर्य की परिक्रमा करना, पर्याप्त द्रव्यमान (जलस्थैतिक संतुलन/गोल आकार) होना, और अपनी कक्षा के आसपास के क्षेत्र को साफ रखना (Clear the neighborhood)। प्लूटो तीसरी शर्त पूरी नहीं करता है।</p>
+            </div>
+            
+            <div class="fact-card">
+                <div class="card-header">
+                    <span class="badge badge-pre">UPSC Pre / RAS Pre</span>
+                    <span class="topic-title">चांग'ई-6 (Chang'e-6) चंद्र मृदा विश्लेषण</span>
+                </div>
+                <p class="fact-text">चीन के चांग'ई-6 मिशन द्वारा चंद्रमा के सुदूर हिस्से (Far Side) से लाए गए चंद्र मृदा के नमूनों में वैज्ञानिकों ने एक दुर्लभ धात्विक लौह खनिज 'γ-Fe' (गामा-आयरन) की खोज की है। यह नैनोस्केल आयरन चंद्रमा के प्राचीन और अब लुप्त हो चुके चुंबकीय क्षेत्र के लिए एक 'चुंबकीय टाइम कैप्सूल' के रूप में कार्य कर सकता है।</p>
+            </div>
+            
+            <div class="fact-card">
+                <div class="card-header">
+                    <span class="badge badge-pre">UPSC Pre / RAS Pre</span>
+                    <span class="topic-title">एंजाइम UBE2N और फैटी लीवर रोग</span>
+                </div>
+                <p class="fact-text">वैज्ञानिकों ने 'UBE2N' नामक एक सुरक्षात्मक एंजाइम की पहचान की है जो लीवर कोशिकाओं को क्षतिग्रस्त माइटोकॉन्ड्रिया को साफ करने और वसा को तोड़ने में मदद करता है। यह एंजाइम गैर-अल्कोहलिक फैटी लीवर रोग को अधिक खतरनाक स्थिति 'MASH' (मेटाबॉलिक डिसफंक्शन-एसोसिएटेड स्टीटोहेपेटाइटिस) में बदलने से रोकता है।</p>
+            </div>
+            
+            <div class="fact-card">
+                <div class="card-header">
+                    <span class="badge badge-pre">RAS Pre / UPSC Pre</span>
+                    <span class="topic-title">अदिति अशोक, प्रणवी शरथ उर्स और दीक्षा डागर</span>
+                </div>
+                <p class="fact-text">इन तीनों भारतीय महिला गोल्फ खिलाड़ियों ने एशियाई खेलों की महिला टीम गोल्फ स्पर्धा में भारत के लिए ऐतिहासिक रजत पदक (Silver Medal) जीता है, जिसके लिए प्रधानमंत्री ने उन्हें बधाई दी।</p>
+            </div>
+            
+            <div class="fact-card">
+                <div class="card-header">
+                    <span class="badge badge-raj">RAS Pre</span>
+                    <span class="topic-title">राजस्थान सुजस: वेडिंग टूरिज्म और निवेश अनुकूलता</span>
+                </div>
+                <p class="fact-text">राजस्थान सरकार द्वारा राज्य को वैश्विक 'वेडिंग टूरिज्म डेस्टिनेशन' (शादी पर्यटन स्थल) के रूप में बढ़ावा देने और निवेश अनुकूल माहौल बनाने के लिए सिंगल विंडो क्लीयरेंस और रीको (RIICO) औद्योगिक क्षेत्रों में विशेष रियायतें प्रदान की जा रही हैं।</p>
+            </div>
+            
+
+        <div class="section-title">🔵 मुख्य परीक्षा उत्तर लेखन मॉडल सेट (RAS Mains - 5M & 10M)</div>
+        
+            <div class="mains-card">
+                <div class="mains-header">
+                    <span class="badge badge-5m">5 अंक (Paper 1)</span>
+                    <span class="subject-tag">अर्थव्यवस्था (औद्योगिक विकास एवं विनिर्माण)</span>
+                </div>
+                <h3 class="question-text">प्रश्न: भारत के कपड़ा (Textile) और परिधान (Apparel) उत्पादन सूचकांकों में हालिया विचलन (Divergence) के प्रमुख कारणों को स्पष्ट कीजिए।</h3>
+                
+                <div class="answer-box">
+                    <strong class="ans-label">उत्तर ढांचा (~50 शब्द):</strong>
+                    <div class="answer-content">अगस्त 2026 के औद्योगिक उत्पादन आंकड़ों के अनुसार, भारत के कपड़ा उद्योग में जहाँ 13.1% की मजबूत वृद्धि दर्ज की गई, वहीं परिधान (Apparel) उत्पादन में 7.4% की गिरावट देखी गई। इस विचलन के प्रमुख कारण निम्नलिखित हैं:<br>1. वैश्विक मांग में मंदी: प्रमुख निर्यातक बाजारों (अमेरिका और यूरोप) में उच्च मुद्रास्फीति के कारण तैयार परिधानों की विवेकाधीन मांग में कमी आई है।<br>2. इनपुट लागत और प्रतिस्पर्धा: बांग्लादेश और वियतनाम जैसे कम श्रम लागत वाले देशों से कड़ी प्रतिस्पर्धा तथा घरेलू स्तर पर मूल्य संवर्धन (Value Addition) की उच्च लागत।<br>3. संरचनात्मक चुनौतियाँ: परिधान क्षेत्र मुख्य रूप से MSMEs पर निर्भर है, जो तरलता की कमी, व्यापार वित्तपोषण और वैश्विक अनुपालन मानकों को पूरा करने में कठिनाई का सामना कर रहे हैं।</div>
+                </div>
+                
+            </div>
+            
+            <div class="mains-card">
+                <div class="mains-header">
+                    <span class="badge badge-10m">10 अंक (Paper 3)</span>
+                    <span class="subject-tag">विज्ञान एवं प्रौद्योगिकी (कृत्रिम बुद्धिमत्ता एवं नीति)</span>
+                </div>
+                <h3 class="question-text">प्रश्न: डेटा सेंटर और कृत्रिम बुद्धिमत्ता (AI) अवसंरचना के तीव्र विस्तार से उत्पन्न होने वाली पर्यावरणीय और सामाजिक चुनौतियों का समालोचनात्मक विश्लेषण कीजिए। भारत को इस संदर्भ में क्या नीतिगत उपाय अपनाने चाहिए?</h3>
+                
+                <div class="answer-box">
+                    <div class="ans-section"><strong class="ans-label">भूमिका (Introduction):</strong><br>भारत वर्तमान में वैश्विक तकनीकी कंपनियों को आकर्षित कर अपने डेटा सेंटर और AI अवसंरचना का तेजी से विस्तार कर रहा है, लेकिन यह विकास गंभीर पर्यावरणीय और सामाजिक चिंताओं को भी जन्म दे रहा है।</div>
+                    <div class="ans-section"><strong class="ans-label">मुख्य भाग (Body & Rajasthan Context):</strong><br>प्रमुख चुनौतियाँ:<br>1. अत्यधिक जल और ऊर्जा की खपत: डेटा सेंटरों को ठंडा रखने के लिए लाखों लीटर पानी (कूलिंग सिस्टम हेतु) और भारी मात्रा में बिजली की आवश्यकता होती है। चिली के सेरिलोस में गूगल परियोजना का विरोध इसका प्रमुख उदाहरण है।<br>2. 'हीट आइलैंड' प्रभाव: डेटा सेंटरों के संचालन से आसपास के 10 किमी के दायरे में तापमान में 9 डिग्री सेल्सियस तक की वृद्धि हो सकती है।<br>3. स्थानीय समुदायों का विस्थापन और संसाधन संघर्ष: भूजल दोहन से स्थानीय जल सुरक्षा खतरे में पड़ती है, जिससे सामाजिक असंतोष और कानूनी विवाद बढ़ते हैं।<br>4. रोजगार का भ्रम: ये परियोजनाएं अत्यधिक पूंजी-गहन होती हैं लेकिन इनमें स्थानीय स्तर पर बहुत कम (लगभग 50-60) कुशल रोजगार सृजित होते हैं।<br><br>भारत के लिए आवश्यक नीतिगत उपाय:<br>- अनिवार्य पर्यावरणीय प्रभाव आकलन (EIA): डेटा सेंटरों को केवल 'घोषणा' के बजाय पूर्ण प्रभाव अध्ययन के दायरे में लाया जाए।<br>- हरित प्रौद्योगिकियों का उपयोग: जल-कूलिंग के स्थान पर अनिवार्य रूप से 'एयर-कूलिंग' और नवीकरणीय ऊर्जा स्रोतों (सौर/पवन) के उपयोग को बढ़ावा दिया जाए।<br>- समुदाय की भागीदारी: स्थानीय निकायों और ग्राम सभाओं को निर्णय लेने की प्रक्रिया में शामिल कर उनकी सहमति को बाध्यकारी बनाया जाए।</div>
+                    <div class="ans-section"><strong class="ans-label">निष्कर्ष (Conclusion):</strong><br>अतः भारत को तकनीकी प्रगति और पारिस्थितिक संप्रभुता के बीच संतुलन स्थापित करते हुए एक समावेशी और विनियमित 'हरित डेटा सेंटर नीति' का निर्माण करना चाहिए।</div>
+                </div>
+                
+            </div>
+            
+
+        <div class="section-title">📺 कोचिंग शिक्षक विश्लेषण एवं यूट्यूब लाइव क्लास सार</div>
+            <div class="yt-card">
+                <div class="yt-header">
+                    <span class="badge badge-yt">📺 कोचिंग शिक्षक विश्लेषण</span>
+                    <span class="topic-title">भारत का सुपरकंप्यूटिंग परितंत्र और राष्ट्रीय सुपरकंप्यूटिंग मिशन (NSM)</span>
+                </div>
+                <div class="yt-explanation">
+                    <strong>शिक्षक व्याख्यान एवं ट्रिक्स:</strong>
+                    <p>शिक्षक ने भारत के सुपरकंप्यूटिंग परिदृश्य का विश्लेषण करते हुए बताया कि राष्ट्रीय सुपरकंप्यूटिंग मिशन (NSM) के तहत देश में अनुसंधान और विकास को बढ़ावा देने के लिए ग्रिड-आधारित सुपरकंप्यूटिंग अवसंरचना स्थापित की जा रही है। इसका उद्देश्य भारत को उच्च-प्रदर्शन कंप्यूटिंग (HPC) में आत्मनिर्भर बनाना है।</p>
+                </div>
+                <div class="key-args">
+                    <strong>क्लास के मुख्य बिंदु (Key Lecture Points):</strong>
+                    <ul>
+                        <li>NSM को इलेक्ट्रॉनिक्स और सूचना प्रौद्योगिकी मंत्रालय (MeitY) और विज्ञान एवं प्रौद्योगिकी विभाग (DST) द्वारा संयुक्त रूप से संचालित किया जा रहा है।</li><li>इसका क्रियान्वयन C-DAC (पुणे) और IISc (बेंगलुरु) द्वारा किया जा रहा है।</li><li>परम शिवाय, परम शक्ति, परम ब्रह्मा और परम संगणक जैसे स्वदेशी सुपरकंप्यूटर देश के प्रमुख शैक्षणिक संस्थानों में स्थापित किए गए हैं।</li>
+                    </ul>
+                </div>
+                <div class="exam-tip-box"><strong>💡 परीक्षा टिप (Exam Tip):</strong> मेन्स परीक्षा में विज्ञान एवं प्रौद्योगिकी खंड के तहत भारत की सुपरकंप्यूटिंग क्षमताओं और राष्ट्रीय सुपरकंप्यूटिंग मिशन (NSM) के उद्देश्यों, चुनौतियों (जैसे सेमीकंडक्टर चिप्स के लिए आयात निर्भरता) और अनुप्रयोगों (मौसम पूर्वानुमान, दवा खोज) पर 10-अंक का प्रश्न पूछा जा सकता है।</div>
+            </div>
+            
+            <div class="yt-card">
+                <div class="yt-header">
+                    <span class="badge badge-yt">📺 कोचिंग शिक्षक विश्लेषण</span>
+                    <span class="topic-title">विशेष गहन पुनरीक्षण (Special Intensive Revision - SIR) अभ्यास और मतदाता अधिकार</span>
+                </div>
+                <div class="yt-explanation">
+                    <strong>शिक्षक व्याख्यान एवं ट्रिक्स:</strong>
+                    <p>शिक्षक ने द हिंदू के संपादकीय का विश्लेषण करते हुए बताया कि चुनाव आयोग द्वारा मतदाता सूचियों के विशेष गहन पुनरीक्षण (SIR) अभ्यास से सार्वभौमिक वयस्क मताधिकार के समक्ष उत्पन्न चुनौतियों पर चर्चा की गई। तकनीकी त्रुटियों के कारण वास्तविक मतदाताओं के नाम कटने की चिंताओं को रेखांकित किया गया।</p>
+                </div>
+                <div class="key-args">
+                    <strong>क्लास के मुख्य बिंदु (Key Lecture Points):</strong>
+                    <ul>
+                        <li>संविधान सभा के संस्थापक बहसों में सार्वभौमिक वयस्क मताधिकार को लोकतंत्र की आधारशिला माना गया था।</li><li>मतदाता सूची में संशोधन की प्रक्रिया अत्यंत पारदर्शी, समावेशी और त्रुटिहीन होनी चाहिए ताकि कोई भी पात्र नागरिक मताधिकार से वंचित न हो।</li><li>न्यायपालिका ने भी समय-समय पर स्वतंत्र और निष्पक्ष चुनाव सुनिश्चित करने में चुनाव आयोग (ECI) की भूमिका को सुदृढ़ किया है।</li>
+                    </ul>
+                </div>
+                <div class="exam-tip-box"><strong>💡 परीक्षा टिप (Exam Tip):</strong> RAS Mains Paper 3 (भारतीय राजनीतिक व्यवस्था) में चुनाव आयोग की भूमिका, मतदाता सूची पुनरीक्षण की चुनौतियाँ और लोकतांत्रिक सुधारों पर 5-अंक या 10-अंक का विश्लेषणात्मक उत्तर लिखने के लिए इस केस स्टडी का उपयोग करें।</div>
+            </div>
+            
+
+        <div class="section-title">🟣 राजस्थान सुजस, पत्रिका एवं दैनिक भास्कर (Rajasthan Sujas, Patrika & Bhaskar)</div>
+        
+            <div class="sujas-card">
+                <div class="sujas-header">
+                    <span class="badge badge-sujas">राजस्थान सुजस विशेष</span>
+                    <strong>राज्य निर्वाचन आयोग, राजस्थान / राजस्थान पत्रिका समाचार</strong>
+                </div>
+                <h3>राजस्थान पंचायत चुनाव कार्यक्रम और चुनौतियाँ</h3>
+                <ul>
+                    <li>राजस्थान में आगामी पंचायत चुनावों की घोषणा के साथ ही सरपंच उम्मीदवारों के लिए प्रचार अवधि को लेकर सवाल उठाए जा रहे हैं, जहाँ कुछ मामलों में प्रचार के लिए 24 घंटे से भी कम का समय मिल रहा है।</li><li>राज्य निर्वाचन आयोग पंचायती राज संस्थाओं के स्वतंत्र और निष्पक्ष चुनाव कराने के लिए उत्तरदायी है।</li><li>चुनावों में कांग्रेस और भाजपा दोनों प्रमुख दलों द्वारा ग्रामीण मतदाताओं को आकर्षित करने के लिए व्यापक रणनीतियां तैयार की जा रही हैं।</li>
+                </ul>
+                <div class="relevance-box"><strong>RPSC महत्व:</strong> RAS Mains Paper 3 में स्थानीय स्वशासन (पंचायती राज) और राज्य निर्वाचन आयोग की कार्यप्रणाली तथा चुनाव सुधारों से संबंधित प्रश्नों के लिए अत्यंत प्रासंगिक।</div>
+            </div>
+            
+            <div class="sujas-card">
+                <div class="sujas-header">
+                    <span class="badge badge-sujas">राजस्थान सुजस विशेष</span>
+                    <strong>स्वायत्त शासन विभाग, राजस्थान / राजस्थान पत्रिका विशेष</strong>
+                </div>
+                <h3>राजस्थान में अग्निशमन रोबोटिक्स तकनीक की आवश्यकता</h3>
+                <ul>
+                    <li>जयपुर और जोधपुर में हाल ही में हुए बड़े अग्निकांडों के बाद राज्य में आधुनिक अग्निशमन तकनीकों की कमी उजागर हुई है।</li><li>दिल्ली और मुंबई जैसे महानगरों में संकरी गलियों और बहुमंजिला इमारतों में आग बुझाने के लिए रोबोटिक फायरफाइटिंग तकनीक का उपयोग किया जा रहा है, जबकि राजस्थान में यह अभी केवल प्रदर्शन (Demo) स्तर तक ही सीमित है।</li><li>शहरी नियोजन और आपदा प्रबंधन में रोबोटिक्स और AI का एकीकरण समय की मांग है।</li>
+                </ul>
+                <div class="relevance-box"><strong>RPSC महत्व:</strong> RAS Mains Paper 1 (आपदा प्रबंधन) और Paper 2 (तकनीकी अनुप्रयोग) में आपदा न्यूनीकरण और शहरी सुरक्षा पर उत्तर संवर्धन हेतु उपयोगी।</div>
+            </div>
+            
+
+        <div class="section-title">🔴 सम्पादकीय एवं पत्रिका गहन विश्लेषण (The Hindu, Indian Express, ET, DownToEarth, योजना व कुरुक्षेत्र)</div>
+        
+            <div class="editorial-card">
+                <div class="editorial-header">
+                    <span class="badge badge-ed">Down To Earth</span>
+                    <span class="syllabus-tag">GS3 / RAS Paper 2 (विज्ञान एवं प्रौद्योगिकी - आईटी और साइबर सुरक्षा)</span>
+                </div>
+                <h3>The new open-source software revolution (ओपन-सोर्स सॉफ्टवेयर क्रांति और डिजिटल संप्रभुता)</h3>
+                <p class="context"><strong>समसामयिक संदर्भ:</strong> यूरोपीय और अफ्रीकी देश अमेरिकी तकनीकी दिग्गजों (जैसे माइक्रोसॉफ्ट) पर निर्भरता कम करने और अपनी डिजिटल संप्रभुता की रक्षा के लिए तेजी से ओपन-सोर्स सॉफ्टवेयर (OSS) अपना रहे हैं।</p>
+                <div class="key-args">
+                    <strong>सम्पादकीय का पूरा सार एवं तर्क (Deep Dive Takeaways):</strong>
+                    <ul>
+                        <li>अमेरिकी क्लाउड एक्ट (CLOUD Act 2018) के तहत अमेरिकी सुरक्षा एजेंसियां विदेशों में स्थित डेटा सेंटरों से भी संवेदनशील डेटा प्राप्त कर सकती हैं, जो अन्य देशों की संप्रभुता और गोपनीयता के लिए बड़ा खतरा है।</li><li>फ्रांस, जर्मनी और इटली जैसे यूरोपीय देशों ने अपने रक्षा और प्रशासनिक विभागों में विंडोज को हटाकर लिनक्स (Linux) और लिब्रेऑफिस (LibreOffice) को अपनाया है, जिससे करोड़ों यूरो के लाइसेंस शुल्क की बचत हुई है।</li><li>तंजानिया जैसे विकासशील देशों ने अपने 90% से अधिक सरकारी प्रणालियों को ओपन-सोर्स पर स्थानांतरित कर दिया है, जो निष्क्रिय उपभोग से सक्रिय तकनीकी सृजन की ओर संक्रमण को दर्शाता है।</li><li>भारत में केरल इस दिशा में अग्रणी रहा है, जिसने 2007 में स्कूली शिक्षा में कस्टमाइज्ड लिनक्स प्रणालियों को लागू कर सैकड़ों करोड़ रुपये के लाइसेंस शुल्क की बचत की और डिजिटल साक्षरता को लोकतांत्रिक बनाया।</li>
+                    </ul>
+                </div>
+                <div class="way-forward"><strong>आगे की राह (Way Forward):</strong> भारत को राष्ट्रीय स्तर पर एक सुदृढ़ 'ओपन-सोर्स सॉफ्टवेयर नीति' अपनानी चाहिए। रक्षा, बैंकिंग और सार्वजनिक प्रशासन जैसे संवेदनशील क्षेत्रों में मालिकाना (Proprietary) सॉफ्टवेयर के स्थान पर स्वदेशी रूप से विकसित ओपन-सोर्स प्रणालियों को प्राथमिकता देकर ही वास्तविक डिजिटल संप्रभुता हासिल की जा सकती है।</div>
+            </div>
+            
+            <div class="editorial-card">
+                <div class="editorial-header">
+                    <span class="badge badge-ed">Down To Earth</span>
+                    <span class="syllabus-tag">GS2 / RAS Paper 3 (सामाजिक न्याय एवं महिला अधिकारिता)</span>
+                </div>
+                <h3>UN Women launches AI hub to put gender equality at centre of digital transformation (AI और डिजिटल परिवर्तन में लैंगिक समानता)</h3>
+                <p class="context"><strong>समसामयिक संदर्भ:</strong> UN Women ने वैश्विक स्तर पर डिजिटल परिवर्तन और कृत्रिम बुद्धिमत्ता (AI) के विकास में महिलाओं की भागीदारी सुनिश्चित करने और लैंगिक पूर्वाग्रहों को दूर करने के लिए 'डिजिटल, इनोवेशन और AI हब' लॉन्च किया है।</p>
+                <div class="key-args">
+                    <strong>सम्पादकीय का पूरा सार एवं तर्क (Deep Dive Takeaways):</strong>
+                    <ul>
+                        <li>AI के डिजाइन और प्रशासन में महिलाओं की भारी कमी है; वैश्विक स्तर पर AI से जुड़ी नौकरियों में केवल 20% और वरिष्ठ नेतृत्व में केवल 10% महिलाएं हैं।</li><li>एक वैश्विक विश्लेषण के अनुसार, 44% AI प्रणालियाँ स्पष्ट रूप से लैंगिक पूर्वाग्रह (Gender Bias) प्रदर्शित करती हैं, जो समाज में पहले से मौजूद असमानताओं को भविष्य में भी ले जाने का जोखिम पैदा करती हैं।</li><li>लगभग 25% महिला मानवाधिकार कार्यकर्ताओं और पत्रकारों को AI-सहायता प्राप्त ऑनलाइन हिंसा और डीपफेक जैसी प्रताड़ना का सामना करना पड़ रहा है।</li><li>यह हब सदस्य देशों को लैंगिक-उत्तरदायी (Gender-responsive) डिजिटल नीतियां बनाने और तकनीकी कंपनियों के साथ मिलकर डिजाइन स्तर पर ही समानता के सिद्धांतों को शामिल करने में मदद करेगा।</li>
+                    </ul>
+                </div>
+                <div class="way-forward"><strong>आगे की राह (Way Forward):</strong> तकनीकी विकास को केवल तकनीकी दृष्टिकोण से नहीं बल्कि सामाजिक न्याय के दृष्टिकोण से देखा जाना चाहिए। सरकारों और कॉर्पोरेट्स को AI एल्गोरिदम के ऑडिट में महिलाओं की भागीदारी अनिवार्य करनी चाहिए और स्टेम (STEM) शिक्षा में महिलाओं को विशेष प्रोत्साहन देना चाहिए।</div>
+            </div>
+            
+            <div class="editorial-card">
+                <div class="editorial-header">
+                    <span class="badge badge-ed">Down To Earth</span>
+                    <span class="syllabus-tag">GS3 / RAS Paper 1 (अर्थव्यवस्था और श्रम मुद्दे)</span>
+                </div>
+                <h3>The question of labour, dignity, and protection in AI (AI के पीछे का अदृश्य मानव श्रम)</h3>
+                <p class="context"><strong>समसामयिक संदर्भ:</strong> फिल्म 'ह्यूमन्स इन द लूप' के माध्यम से AI और स्वचालित प्रणालियों को प्रशिक्षित करने वाले डेटा लेबलर्स (Data Labelers) के अदृश्य और शोषित श्रम की ओर ध्यान आकर्षित किया गया है।</p>
+                <div class="key-args">
+                    <strong>सम्पादकीय का पूरा सार एवं तर्क (Deep Dive Takeaways):</strong>
+                    <ul>
+                        <li>AI प्रणालियाँ पूरी तरह से स्वायत्त नहीं हैं; वे लगातार मानव हस्तक्षेप, सुधार, डेटा लेबलिंग और मॉडरेशन पर निर्भर हैं, जिसे 'अदृश्य डिजिटल श्रम' कहा जाता है।</li><li>भारत जैसे विकासशील देशों में, जहाँ अनौपचारिक श्रम संरचनाएं पहले से मौजूद हैं, डिजिटल प्लेटफॉर्म इस श्रम का उपयोग अत्यधिक कम वेतन और बिना किसी सामाजिक सुरक्षा के कर रहे हैं।</li><li>डेटा लेबलिंग का कार्य अत्यंत थकाऊ, दोहराव वाला और मनोवैज्ञानिक रूप से प्रभावित करने वाला होता है, लेकिन इन श्रमिकों को तकनीकी प्रगति के मुख्य आख्यानों से पूरी तरह बाहर रखा जाता है।</li><li>चूंकि ये प्रणालियाँ सामूहिक मानव श्रम से बनती हैं, इसलिए इनके स्वामित्व और इनसे होने वाले लाभ का वितरण भी केवल कुछ बड़ी टेक कंपनियों तक सीमित न रहकर सामूहिक होना चाहिए।</li>
+                    </ul>
+                </div>
+                <div class="way-forward"><strong>आगे की राह (Way Forward):</strong> सरकारों को श्रम कानूनों का विस्तार कर डिजिटल प्लेटफॉर्म श्रमिकों (Gig and Platform Workers) को कानूनी संरक्षण, न्यूनतम मजदूरी, और गरिमापूर्ण कार्य परिस्थितियां प्रदान करनी चाहिए। AI के विकास में नैतिक श्रम मानकों को अनिवार्य किया जाना चाहिए।</div>
+            </div>
+            
+
+        <div class="section-title">📲 टेलीग्राम चैनल दैनिक प्रश्नोत्तरी व नोट्स (Telegram Daily Quiz & Notes)</div>
+            <div class="mains-card" style="border-left: 8px solid #0284c7; margin-bottom: 25px;">
+                <div class="mains-header">
+                    <span class="badge" style="background:#0284c7; color:white;">5 अंक (~50 शब्द)</span>
+                    <span class="badge" style="background:#1e3a8a; color:white;">@RPSC_RAS_Exam_Prep</span>
+                    <span class="subject-tag">Paper 1 (राजस्थान का भूगोल एवं पर्यावरण)</span>
+                </div>
+                <h3 class="question-text">प्रश्न: राजस्थान के किस राष्ट्रीय उद्यान में हाल ही में गोडावण (Great Indian Bustard) के संरक्षण हेतु विशेष विमोचन कार्यक्रम आयोजित किया गया?</h3>
+                <div class="answer-box">
+                    <strong class="ans-label">उत्तर ढांचा एवं विस्तृत नोट्स (~50 शब्द):</strong>
+                    <div class="answer-content">1. सही उत्तर एवं मुख्य तथ्य: डेजर्ट नेशनल पार्क (जैसलमेर-बाड़मेर) - यहाँ हाल ही में दो नर गोडावण को कृत्रिम हैचरी से मुक्त कर प्राकृतिक आवास में छोड़ा गया।<br>2. ऐतिहासिक/भौगोलिक/नीतिगत संदर्भ: डेजर्ट नेशनल पार्क राजस्थान का सबसे बड़ा वन्यजीव अभयारण्य है, जो गोडावण के प्राकृतिक आवास और संरक्षण प्रजनन केंद्र (Conservation Breeding Centre) के लिए प्रसिद्ध है।<br>3. RPSC परीक्षा प्रासंगिकता: गोडावण राजस्थान का राज्य पक्षी है। इसके संरक्षण प्रयासों और अभयारण्य की भौगोलिक स्थिति पर RAS प्रारंभिक और मुख्य परीक्षा में बार-बार प्रश्न पूछे जाते हैं।</div>
+                </div>
+            </div>
+            
+    </div>
+
+    <script>
+        function setFontSize(size) {
+            document.documentElement.style.setProperty('--base-font-size', size + 'px');
+            localStorage.setItem('ras_notes_font_size', size);
+            document.querySelectorAll('.toolbar-btns .t-btn').forEach(b => {
+                if (b.innerText.includes(size + 'px')) b.classList.add('active');
+                else if (b.innerText.includes('px')) b.classList.remove('active');
+            });
+        }
+
+        function toggleTheme(theme) {
+            document.body.classList.remove('dark-mode', 'sepia-mode');
+            if (theme === 'dark') document.body.classList.add('dark-mode');
+            else if (theme === 'sepia') document.body.classList.add('sepia-mode');
+            localStorage.setItem('ras_notes_theme', theme);
+        }
+
+        // Load saved preferences
+        (function() {
+            const savedSize = localStorage.getItem('ras_notes_font_size') || 26;
+            setFontSize(savedSize);
+            const savedTheme = localStorage.getItem('ras_notes_theme');
+            if (savedTheme) toggleTheme(savedTheme);
+        })();
+    </script>
+</body>
+</html>
