@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RAS & UPSC Daily Notes - 2026-10-09</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style id="customStyle">
+        :root {
+            --base-font-size: 24px;
+            --base-line-height: 1.85;
+            --primary: #1e1b4b;
+            --primary-light: #2563eb;
+            --secondary: #0f766e;
+            --accent-gold: #b45309;
+            --accent-purple: #6b21a8;
+            --accent-red: #9f1239;
+            --bg-main: #f8fafc;
+            --card-bg: #ffffff;
+            --text-dark: #020617;
+            --border-color: #cbd5e1;
+            --box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+        }
+
+        body.dark-mode {
+            --bg-main: #090d16;
+            --card-bg: #111827;
+            --text-dark: #f8fafc;
+            --border-color: #374151;
+            --box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+        }
+
+        body.sepia-mode {
+            --bg-main: #fbf0d9;
+            --card-bg: #fffdf7;
+            --text-dark: #2d2215;
+            --border-color: #e2d3b5;
+        }
+
+        body {
+            font-family: 'Noto Sans Devanagari', 'Segoe UI', Tahoma, sans-serif;
+            background-color: var(--bg-main);
+            color: var(--text-dark);
+            margin: 0;
+            padding: 25px;
+            line-height: var(--base-line-height);
+            font-size: var(--base-font-size);
+            transition: background-color 0.2s, font-size 0.15s;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* Eye-Comfort High Definition Typography */
+        p, li, div, span, td, th {
+            font-size: var(--base-font-size);
+            line-height: var(--base-line-height);
+        }
+
+        b, strong {
+            color: #b91c1c;
+            font-weight: 800;
+        }
+        body.dark-mode b, body.dark-mode strong {
+            color: #f87171;
+        }
+
+        .blue-highlight {
+            color: #1e3a8a;
+            font-weight: 800;
+        }
+        body.dark-mode .blue-highlight {
+            color: #60a5fa;
+        }
+
+        .container {
+            max-width: 1300px;
+            margin: 0 auto;
+        }
+
+        /* Sticky Eye-Comfort Controls Toolbar */
+        .reader-toolbar {
+            position: sticky;
+            top: 15px;
+            z-index: 999;
+            background: rgba(15, 23, 42, 0.95);
+            backdrop-filter: blur(10px);
+            color: white;
+            padding: 12px 24px;
+            border-radius: 50px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+            margin-bottom: 25px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 12px;
+            border: 2px solid #334155;
+        }
+
+        .toolbar-title {
+            font-size: 19px;
+            font-weight: 800;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .toolbar-btns {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .t-btn {
+            background: #1e293b;
+            color: white;
+            border: 1px solid #475569;
+            padding: 8px 16px;
+            border-radius: 25px;
+            font-size: 16px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.2s;
+            font-family: inherit;
+        }
+
+        .t-btn:hover, .t-btn.active {
+            background: #2563eb;
+            border-color: #60a5fa;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 10px rgba(37,99,235,0.4);
+        }
+
+        .header {
+            background: linear-gradient(135deg, #09090b 0%, #1e1b4b 50%, #0f766e 100%);
+            color: white;
+            padding: 35px 40px;
+            border-radius: 20px;
+            box-shadow: 0 15px 30px -5px rgba(0,0,0,0.25);
+            margin-bottom: 35px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border: 3px solid #3b82f6;
+        }
+        .header h1 { margin: 0 0 10px 0; font-size: 36px; font-weight: 900; letter-spacing: -0.5px; }
+        .header p { margin: 0; opacity: 0.95; font-size: 22px; font-weight: 600; }
+
+        /* Large Chapter 7 Style Section Headers */
+        .section-title {
+            font-size: 32px;
+            font-weight: 900;
+            margin: 45px 0 25px 0;
+            padding: 18px 26px;
+            background: var(--card-bg);
+            border-radius: 14px;
+            border-left: 14px solid var(--primary-light);
+            box-shadow: var(--box-shadow);
+            color: var(--text-dark);
+            border-top: 1px solid var(--border-color);
+            border-right: 1px solid var(--border-color);
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .badge {
+            padding: 8px 16px;
+            border-radius: 10px;
+            font-size: 17px;
+            font-weight: 800;
+            color: white;
+            display: inline-block;
+        }
+        .badge-pre { background-color: var(--accent-gold); }
+        .badge-raj { background-color: var(--accent-purple); }
+        .badge-5m { background-color: #0284c7; }
+        .badge-10m { background-color: #4338ca; }
+        .badge-sujas { background-color: #0d9488; }
+        .badge-ed { background-color: var(--accent-red); }
+        .badge-yt { background-color: #dc2626; }
+
+        /* Big, Comfortable Eye-Friendly Cards */
+        .fact-card, .mains-card, .sujas-card, .editorial-card, .yt-card {
+            background: var(--card-bg);
+            border-radius: 18px;
+            padding: 32px;
+            margin-bottom: 30px;
+            box-shadow: var(--box-shadow);
+            border: 2px solid var(--border-color);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .fact-card:hover, .mains-card:hover, .sujas-card:hover, .editorial-card:hover, .yt-card:hover {
+            box-shadow: 0 12px 28px rgba(0,0,0,0.1);
+        }
+
+        .fact-card { border-left: 14px solid var(--accent-gold); }
+        .mains-card { border-left: 14px solid #4338ca; }
+        .sujas-card { border-left: 14px solid var(--accent-purple); }
+        .editorial-card { border-left: 14px solid var(--accent-red); }
+        .yt-card { border-left: 14px solid #dc2626; background: var(--card-bg); }
+
+        .card-header, .mains-header, .sujas-header, .editorial-header, .yt-header {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 16px;
+            flex-wrap: wrap;
+        }
+        .topic-title { font-weight: 900; font-size: 26px; color: var(--text-dark); }
+        .fact-text { margin: 0; color: var(--text-dark); font-size: var(--base-font-size); line-height: var(--base-line-height); font-weight: 500; }
+        .question-text { margin: 12px 0 18px 0; color: #1e3a8a; font-size: calc(var(--base-font-size) + 4px); font-weight: 900; line-height: 1.6; }
+        body.dark-mode .question-text { color: #93c5fd; }
+
+        .answer-box {
+            background: #f1f5f9;
+            padding: 26px;
+            border-radius: 14px;
+            font-size: var(--base-font-size);
+            border: 2px solid #cbd5e1;
+            line-height: var(--base-line-height);
+        }
+        body.dark-mode .answer-box {
+            background: #1f2937;
+            border-color: #4b5563;
+        }
+        body.sepia-mode .answer-box {
+            background: #f4ebd0;
+            border-color: #dcd0b1;
+        }
+
+        .ans-label {
+            font-size: calc(var(--base-font-size) + 2px);
+            color: #1e3a8a;
+            display: block;
+            margin-bottom: 10px;
+            font-weight: 800;
+        }
+        body.dark-mode .ans-label { color: #60a5fa; }
+
+        .relevance-box, .way-forward {
+            background: #ecfdf5;
+            color: #065f46;
+            padding: 18px 24px;
+            border-radius: 12px;
+            margin-top: 20px;
+            font-size: calc(var(--base-font-size) - 1px);
+            border-left: 8px solid #10b981;
+            font-weight: 600;
+            border: 1px solid #a7f3d0;
+            border-left-width: 8px;
+        }
+        body.dark-mode .relevance-box, body.dark-mode .way-forward {
+            background: #064e3b;
+            color: #a7f3d0;
+            border-color: #059669;
+        }
+
+        .exam-tip-box {
+            background: #fefce8;
+            color: #854d0e;
+            padding: 18px 24px;
+            border-radius: 12px;
+            margin-top: 20px;
+            font-size: calc(var(--base-font-size) - 1px);
+            border-left: 8px solid #eab308;
+            font-weight: 600;
+            border: 1px solid #fef08a;
+            border-left-width: 8px;
+        }
+        body.dark-mode .exam-tip-box {
+            background: #713f12;
+            color: #fef08a;
+            border-color: #eab308;
+        }
+
+        ul { margin: 12px 0; padding-left: 30px; }
+        li { margin-bottom: 12px; font-size: var(--base-font-size); line-height: var(--base-line-height); }
+
+        @media print {
+            .reader-toolbar, .print-btn { display: none !important; }
+            body { background: white !important; color: black !important; padding: 0 !important; font-size: 16pt !important; }
+            .container { max-width: 100% !important; }
+            .fact-card, .mains-card, .sujas-card, .editorial-card, .yt-card { page-break-inside: avoid; border: 1px solid #999 !important; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Floating Interactive Eye-Comfort Toolbar -->
+        <div class="reader-toolbar">
+            <div class="toolbar-title">
+                <span>👁️ नेत्र-अनुकूल फॉन्ट व पठन मोड</span>
+            </div>
+            <div class="toolbar-btns">
+                <button class="t-btn" onclick="setFontSize(22)">A सामान्य (22px)</button>
+                <button class="t-btn active" id="btn-ch7" onclick="setFontSize(26)">🔠 बड़ा / Ch-7 स्टाइल (26px)</button>
+                <button class="t-btn" onclick="setFontSize(30)">🔍 अल्ट्रा लार्ज (30px)</button>
+                <button class="t-btn" onclick="toggleTheme('light')">☀️ लाइट</button>
+                <button class="t-btn" onclick="toggleTheme('sepia')">📜 सेपिया</button>
+                <button class="t-btn" onclick="toggleTheme('dark')">🌙 डार्क मोड</button>
+                <button class="t-btn" style="background:#059669; border-color:#10b981;" onclick="window.print()">🖨️ PDF प्रिंट</button>
+            </div>
+        </div>
+
+        <div class="header">
+            <div>
+                <h1>RPSC RAS & UPSC दैनिक समसामयिकी एवं सम्पादकीय विश्लेषण</h1>
+                <p>दिनांक: 2026-10-09 | RAS Pre & Mains (5M & 10M) विशेष मास्टर नोट्स</p>
+            </div>
+        </div>
+
+        <div class="section-title">🟡 प्रारंभिक परीक्षा तथ्य (RAS & UPSC Prelims Tracker)</div>
+        
+            <div class="fact-card">
+                <div class="card-header">
+                    <span class="badge badge-pre">UPSC Pre / RAS Pre</span>
+                    <span class="topic-title">रसायन विज्ञान नोबेल पुरस्कार 2026</span>
+                </div>
+                <p class="fact-text">वर्ष 2026 का रसायन विज्ञान नोबेल पुरस्कार हेनरी बी. कगन (फ्रांस) और केन्सो सोआई (जापान) को 'असममित कार्बनिक संश्लेषण में गैर-रेखीय प्रभावों और ऑटो-उत्प्रेरण (autocatalysis) की खोज' के लिए प्रदान किया गया है। यह खोज जीवन की समरूपता (homochirality) के रहस्य को सुलझाती है।</p>
+            </div>
+            
+            <div class="fact-card">
+                <div class="card-header">
+                    <span class="badge badge-pre">UPSC Pre / RAS Pre</span>
+                    <span class="topic-title">भौतिक विज्ञान नोबेल पुरस्कार 2026</span>
+                </div>
+                <p class="fact-text">फ्रांसिस हाल्ज़ेन (विस्कॉन्सिन-मैडिसन विश्वविद्यालय, यूएसए) को 'आइसक्यूब न्यूट्रिनो वेधशाला (IceCube Neutrino Observatory) में निर्णायक योगदान और खगोलीय मूल के उच्च-ऊर्जा न्यूट्रिनो की खोज' के लिए भौतिकी का नोबेल पुरस्कार 2026 दिया गया है। यह वेधशाला अंटार्कटिका (दक्षिणी ध्रुव) के बर्फ में स्थापित है।</p>
+            </div>
+            
+            <div class="fact-card">
+                <div class="card-header">
+                    <span class="badge badge-pre">UPSC Pre / RAS Pre</span>
+                    <span class="topic-title">भारत का विदेशी मुद्रा भंडार (Forex Reserves)</span>
+                </div>
+                <p class="fact-text">भारतीय रिजर्व बैंक (RBI) के नवीनतम आंकड़ों के अनुसार, 2 अक्टूबर को समाप्त सप्ताह में भारत का विदेशी मुद्रा भंडार 12.95 बिलियन डॉलर घटकर 734.60 बिलियन डॉलर रह गया है। यह गिरावट विदेशी मुद्रा परिसंपत्तियों (FCA) और स्वर्ण भंडार में कमी के कारण हुई है।</p>
+            </div>
+            
+            <div class="fact-card">
+                <div class="card-header">
+                    <span class="badge badge-pre">UPSC Pre / RAS Pre</span>
+                    <span class="topic-title">आसियान-भारत वस्तु व्यापार समझौता (AITIGA) समीक्षा</span>
+                </div>
+                <p class="fact-text">भारत और आसियान (ASEAN) के बीच वर्ष 2009 के वस्तु व्यापार समझौते की समीक्षा बैठक जनवरी 2027 में आयोजित की जाएगी। आसियान देशों के साथ भारत का वैश्विक व्यापार का लगभग 11% हिस्सा संबद्ध है।</p>
+            </div>
+            
+            <div class="fact-card">
+                <div class="card-header">
+                    <span class="badge badge-pre">UPSC Pre / RAS Pre</span>
+                    <span class="topic-title">डीम्ड डिस्कॉम (Deemed DISCOM) लाइसेंस</span>
+                </div>
+                <p class="fact-text">आंध्र प्रदेश सरकार ने गूगल (Google) के प्रस्तावित 1 गीगावाट (GW) डेटा सेंटर प्रोजेक्ट को 'डीम्ड डिस्कॉम' का दर्जा दिया है, जिससे कंपनी अपने परियोजना क्षेत्र के भीतर स्वयं बिजली की खरीद और प्रबंधन कर सकेगी।</p>
+            </div>
+            
+            <div class="fact-card">
+                <div class="card-header">
+                    <span class="badge badge-pre">UPSC Pre / RAS Pre</span>
+                    <span class="topic-title">प्लेटो (Pluto) का 'बौना ग्रह' वर्गीकरण</span>
+                </div>
+                <p class="fact-text">अंतर्राष्ट्रीय खगोलीय संघ (IAU) ने 24 अगस्त 2006 को प्राग सम्मेलन में प्रस्ताव 5A और 6A पारित कर प्लेटो को ग्रह की श्रेणी से हटाकर 'बौना ग्रह' (Dwarf Planet) घोषित किया था, क्योंकि यह अपनी कक्षा के अन्य खगोलीय पिंडों को साफ (Clear the orbit) नहीं कर पाता है।</p>
+            </div>
+            
+            <div class="fact-card">
+                <div class="card-header">
+                    <span class="badge badge-pre">UPSC Pre / RAS Pre</span>
+                    <span class="topic-title">ग्लोबल डिजिटल, इनोवेशन और एआई हब</span>
+                </div>
+                <p class="fact-text">संयुक्त राष्ट्र महिला (UN Women) ने डिजिटल परिवर्तन और कृत्रिम बुद्धिमत्ता (AI) में लैंगिक समानता सुनिश्चित करने तथा एआई प्रणालियों में लैंगिक पूर्वाग्रहों को समाप्त करने के लिए एक वैश्विक 'डिजिटल, इनोवेशन और एआई हब' लॉन्च किया है।</p>
+            </div>
+            
+            <div class="fact-card">
+                <div class="card-header">
+                    <span class="badge badge-raj">RAS Pre</span>
+                    <span class="topic-title">दौसा का बाजरा निर्यात</span>
+                </div>
+                <p class="fact-text">राजस्थान के दौसा जिले का बाजरा बिना कीटनाशकों के पारंपरिक उत्पादन के कारण गुजरात के व्यापारियों को आकर्षित कर रहा है। इस वर्ष दौसा से 5 अरब रुपये से अधिक के बाजरा कारोबार की उम्मीद जताई जा रही है।</p>
+            </div>
+            
+            <div class="fact-card">
+                <div class="card-header">
+                    <span class="badge badge-raj">RAS Pre</span>
+                    <span class="topic-title">राजस्थान में घर बैठे गंभीर मरीजों का इलाज</span>
+                </div>
+                <p class="fact-text">राजस्थान सरकार की 'घर बैठे गंभीर मरीजों के इलाज' की पहल के तहत पिछले सवा साल में 3 लाख से अधिक लोगों को राहत प्रदान की गई है। इसके तहत गंभीर रूप से बीमार और चलने-फिरने में असमर्थ रोगियों को उनके घर पर ही चिकित्सा सुविधाएं दी जा रही हैं।</p>
+            </div>
+            
+            <div class="fact-card">
+                <div class="card-header">
+                    <span class="badge badge-pre">UPSC Pre</span>
+                    <span class="topic-title">उत्तर प्रदेश में इलेक्ट्रिक बसें (GCC मॉडल)</span>
+                </div>
+                <p class="fact-text">उत्तर प्रदेश सरकार ग्रॉस कॉस्ट कॉन्ट्रैक्ट (GCC) मॉडल के तहत राज्य के 18 शहरों में 1,725 इलेक्ट्रिक बसें संचालित करेगी। इसके तहत निजी ऑपरेटरों को प्रति बस 35 से 40 लाख रुपये की सब्सिडी और डिपो के लिए मुफ्त भूमि दी जाएगी।</p>
+            </div>
+            
+            <div class="fact-card">
+                <div class="card-header">
+                    <span class="badge badge-pre">UPSC Pre / RAS Pre</span>
+                    <span class="topic-title">परमाणु घड़ियाँ (Nuclear Clocks)</span>
+                </div>
+                <p class="fact-text">वैज्ञानिकों ने दुनिया की पहली कार्यशील 'परमाणु घड़ी' (Nuclear Clock) के विकास की घोषणा की है। यह घड़ी परमाणु के नाभिक के भीतर ऊर्जा संक्रमणों को मापने के लिए लेजर का उपयोग करती है, जो वर्तमान परमाणु घड़ियों (Atomic Clocks) की तुलना में अधिक सटीक समय मापन प्रदान करेगी।</p>
+            </div>
+            
+            <div class="fact-card">
+                <div class="card-header">
+                    <span class="badge badge-pre">UPSC Pre</span>
+                    <span class="topic-title">तमिलनाडु में अल नीनो (El Niño) का प्रभाव</span>
+                </div>
+                <p class="fact-text">मजबूत अल नीनो वर्षों में, बंगाल की खाड़ी और अरब सागर के बीच दबाव का अंतर तटीय तमिलनाडु में नम हवाओं को धकेलता है। जब अल नीनो बंगाल की खाड़ी के गर्म पानी के साथ मेल खाता है, तो नवंबर-दिसंबर में चक्रवाती परिसंचरण के कारण अत्यधिक स्थानीयकृत वर्षा होती है।</p>
+            </div>
+            
+
+        <div class="section-title">🔵 मुख्य परीक्षा उत्तर लेखन मॉडल सेट (RAS Mains - 5M & 10M)</div>
+        
+            <div class="mains-card">
+                <div class="mains-header">
+                    <span class="badge badge-5m">5 अंक (Paper 1)</span>
+                    <span class="subject-tag">अर्थव्यवस्था (औद्योगिक विकास एवं बुनियादी ढांचा)</span>
+                </div>
+                <h3 class="question-text">प्रश्न: भारत में डेटा सेंटर उद्योग के तीव्र विकास से जुड़ी पर्यावरणीय और ढांचागत चुनौतियों को स्पष्ट कीजिए।</h3>
+                
+                <div class="answer-box">
+                    <strong class="ans-label">उत्तर ढांचा (~50 शब्द):</strong>
+                    <div class="answer-content">1. **अत्यधिक ऊर्जा और जल की खपत:** डेटा सेंटरों को सर्वर कूलिंग के लिए लाखों लीटर पानी और निरंतर बिजली की आवश्यकता होती है, जिससे स्थानीय जलभृतों (Aquifers) और ग्रिड पर दबाव पड़ता है।<br>2. **ताप द्वीप प्रभाव (Heat Island Effect):** डेटा सेंटरों के आसपास के 10 किमी क्षेत्र में तापमान में 9 डिग्री सेल्सियस तक की वृद्धि देखी जा सकती है।<br>3. **सीमित रोजगार सृजन:** भारी पूंजी निवेश के बावजूद, ये केंद्र परिचालन चरण में केवल 50-60 कुशल प्रत्यक्ष रोजगार ही सृजित कर पाते हैं।</div>
+                </div>
+                
+            </div>
+            
+            <div class="mains-card">
+                <div class="mains-header">
+                    <span class="badge badge-10m">10 अंक (Paper 3)</span>
+                    <span class="subject-tag">अंतर्राष्ट्रीय संबंध एवं नीति</span>
+                </div>
+                <h3 class="question-text">प्रश्न: कृत्रिम बुद्धिमत्ता (AI) के विकास में लैंगिक असमानता और पूर्वाग्रहों के खतरों का विश्लेषण कीजिए। इस दिशा में संयुक्त राष्ट्र महिला (UN Women) के हालिया प्रयासों पर प्रकाश डालिए।</h3>
+                
+                <div class="answer-box">
+                    <div class="ans-section"><strong class="ans-label">भूमिका (Introduction):</strong><br>वैश्विक डिजिटल परिवर्तन के इस दौर में कृत्रिम बुद्धिमत्ता (AI) प्रणालियों का विकास तेजी से हो रहा है, परंतु इसमें महिलाओं की भागीदारी और उनके अधिकारों की उपेक्षा एक गंभीर चिंता का विषय बनी हुई है।</div>
+                    <div class="ans-section"><strong class="ans-label">मुख्य भाग (Body & Rajasthan Context):</strong><br>### AI में लैंगिक असमानता के प्रमुख आयाम:<br>1. **नेतृत्व और रोजगार में कमी:** वैश्विक स्तर पर एआई से जुड़े रोजगारों में पुरुषों की हिस्सेदारी लगभग 80% है, जबकि वरिष्ठ नेतृत्व पदों पर 90% पुरुष काबिज हैं।<br>2. **पूर्वाग्रह युक्त एल्गोरिदम:** यूएन वीमेन के विश्लेषण के अनुसार, 133 एआई प्रणालियों में से 44% में स्पष्ट रूप से लैंगिक पूर्वाग्रह (Gender Bias) पाए गए हैं।<br>3. **ऑनलाइन हिंसा:** लगभग 25% महिला मानवाधिकार कार्यकर्ताओं और पत्रकारों ने एआई-सहायता प्राप्त ऑनलाइन उत्पीड़न और हिंसा का सामना किया है।<br><br>### संयुक्त राष्ट्र महिला (UN Women) का हस्तक्षेप:<br>* **वैश्विक डिजिटल, इनोवेशन और एआई हब:** इसका उद्देश्य सरकारों, तकनीकी कंपनियों और नागरिक समाज को एक मंच पर लाकर एआई प्रणालियों में लैंगिक समानता को नीतिगत स्तर पर शामिल करना है।<br>* **लैंगिक-उत्तरदायी नीतियां:** यह हब उभरती प्रौद्योगिकियों के डिजाइन और प्रशासन में महिलाओं की वास्तविकताओं को शामिल करने हेतु सदस्य देशों का समर्थन करेगा।</div>
+                    <div class="ans-section"><strong class="ans-label">निष्कर्ष (Conclusion):</strong><br>एआई का भविष्य इस बात पर निर्भर करता है कि हम इसके निर्माण में किसे शामिल करते हैं। लैंगिक समानता केवल प्रतिनिधित्व का नहीं, बल्कि न्यायपूर्ण और समावेशी भविष्य के निर्धारण का विषय है।</div>
+                </div>
+                
+            </div>
+            
+            <div class="mains-card">
+                <div class="mains-header">
+                    <span class="badge badge-10m">10 अंक (Paper 1)</span>
+                    <span class="subject-tag">राजस्थान की अर्थव्यवस्था एवं कृषि</span>
+                </div>
+                <h3 class="question-text">प्रश्न: राजस्थान में मोटे अनाजों (विशेषकर बाजरा) के मूल्य संवर्धन (Value Addition) और विपणन की संभावनाओं का विश्लेषण कीजिए। दौसा जिले के हालिया संदर्भ में इसकी विवेचना करें।</h3>
+                
+                <div class="answer-box">
+                    <div class="ans-section"><strong class="ans-label">भूमिका (Introduction):</strong><br>राजस्थान देश में बाजरा उत्पादन में अग्रणी राज्य है। हाल के वर्षों में स्वास्थ्य के प्रति बढ़ती जागरूकता और जैविक खेती के प्रति रुझान ने राज्य के मोटे अनाजों के लिए नए राष्ट्रीय व अंतर्राष्ट्रीय बाजार खोले हैं।</div>
+                    <div class="ans-section"><strong class="ans-label">मुख्य भाग (Body & Rajasthan Context):</strong><br>### बाजरा विपणन और मूल्य संवर्धन की संभावनाएं:<br>1. **पारंपरिक एवं कीटनाशक मुक्त कृषि:** दौसा जैसे जिलों में किसान पारंपरिक रूप से बिना रासायनिक कीटनाशकों के बाजरे का उत्पादन कर रहे हैं, जिससे इसकी मांग पड़ोसी राज्यों जैसे गुजरात में तेजी से बढ़ी है।<br>2. **आर्थिक मूल्य:** इस वर्ष दौसा से बाजरे का व्यापार 5 अरब रुपये से अधिक होने का अनुमान है, जो स्थानीय ग्रामीण अर्थव्यवस्था को सुदृढ़ करेगा।<br>3. **प्रसंस्करण इकाइयां (Processing Units):** बाजरे से बने बिस्कुट, नमकीन, और रेडी-टू-ईट उत्पादों के माध्यम से मूल्य संवर्धन कर किसानों की आय को दोगुना किया जा सकता है।<br>4. **भौगोलिक संकेतक (GI Tag) और ब्रांडिंग:** राजस्थान के विशिष्ट बाजरा किस्मों की ब्रांडिंग कर इन्हें वैश्विक सुपरफूड के रूप में स्थापित करने की आवश्यकता है।</div>
+                    <div class="ans-section"><strong class="ans-label">निष्कर्ष (Conclusion):</strong><br>उचित विपणन अवसंरचना और प्रसंस्करण उद्योगों को बढ़ावा देकर राजस्थान का बाजरा राज्य के कृषि-व्यवसाय क्षेत्र में गेम-चेंजर साबित हो सकता है।</div>
+                </div>
+                
+            </div>
+            
+
+        <div class="section-title">📺 कोचिंग शिक्षक विश्लेषण एवं यूट्यूब लाइव क्लास सार</div>
+            <div class="yt-card">
+                <div class="yt-header">
+                    <span class="badge badge-yt">📺 कोचिंग शिक्षक विश्लेषण</span>
+                    <span class="topic-title">भारत का गिरता विदेशी मुद्रा भंडार और रुपये की स्थिरता</span>
+                </div>
+                <div class="yt-explanation">
+                    <strong>शिक्षक व्याख्यान एवं ट्रिक्स:</strong>
+                    <p>प्रशांत सर (UPSC Wallah) ने समझाया कि वैश्विक अनिश्चितताओं और कच्चे तेल की बढ़ती कीमतों के बीच भारतीय रिजर्व बैंक (RBI) रुपये को गिरने से बचाने के लिए डॉलर बेच रहा है। इसके कारण भारत के विदेशी मुद्रा भंडार में लगातार गिरावट आ रही है। उन्होंने 'LAF कॉरिडोर' (Liquidity Adjustment Facility) को चौड़ा करने के एसबीआई के सुझाव पर भी चर्चा की ताकि वित्तीय बाजारों को स्थिर किया जा सके।</p>
+                </div>
+                <div class="key-args">
+                    <strong>क्लास के मुख्य बिंदु (Key Lecture Points):</strong>
+                    <ul>
+                        <li>विदेशी मुद्रा भंडार में गिरावट का मुख्य कारण आरबीआई द्वारा रुपये के मूल्य को सहारा देने के लिए बाजार में हस्तक्षेप करना है।</li><li>कच्चे तेल की ऊंची कीमतें और विदेशी पोर्टफोलियो निवेशकों (FPI) द्वारा भारतीय बाजार से पूंजी निकालना अन्य प्रमुख कारण हैं।</li><li>एसबीआई की रिपोर्ट वित्तीय बाजारों में स्थिरता के लिए असममित एलएएफ कॉरिडोर और निर्यात प्राप्तियों के लिए कम समय सीमा की वकालत करती है।</li>
+                    </ul>
+                </div>
+                <div class="exam-tip-box"><strong>💡 परीक्षा टिप (Exam Tip):</strong> मुख्य परीक्षा में रुपये के मूल्यह्रास और आरबीआई के हस्तक्षेप के प्रभाव पर प्रश्न पूछा जा सकता है। उत्तर लिखते समय विदेशी मुद्रा भंडार के आंकड़ों (734.60 बिलियन डॉलर) और एलएएफ कॉरिडोर जैसे तकनीकी शब्दों का प्रयोग करें।</div>
+            </div>
+            
+            <div class="yt-card">
+                <div class="yt-header">
+                    <span class="badge badge-yt">📺 कोचिंग शिक्षक विश्लेषण</span>
+                    <span class="topic-title">चिली का डेटा सेंटर संघर्ष और भारत के लिए सबक</span>
+                </div>
+                <div class="yt-explanation">
+                    <strong>शिक्षक व्याख्यान एवं ट्रिक्स:</strong>
+                    <p>निर्माण आईएएस के विश्लेषक ने चिली के सेरिलोस (Cerrillos) में गूगल के डेटा सेंटर के खिलाफ हुए नागरिक आंदोलन (MOSACAT) का विश्लेषण किया। उन्होंने बताया कि कैसे पानी की कमी और पर्यावरणीय चिंताओं के कारण स्थानीय समुदाय ने इस परियोजना का विरोध किया और गूगल को अपनी योजना बदलनी पड़ी। भारत, जो तेजी से डेटा सेंटर हब बन रहा है, को इस संघर्ष से नीतिगत सबक लेने की आवश्यकता है।</p>
+                </div>
+                <div class="key-args">
+                    <strong>क्लास के मुख्य बिंदु (Key Lecture Points):</strong>
+                    <ul>
+                        <li>डेटा सेंटरों के लिए केवल 'पर्यावरणीय प्रभाव घोषणा' (Declaration) के बजाय व्यापक 'पर्यावरण प्रभाव अध्ययन' (EIA) अनिवार्य होना चाहिए।</li><li>स्थानीय समुदायों की भागीदारी और उनकी सहमति (Binding Participation) को नीतिगत निर्णयों में शामिल किया जाना चाहिए।</li><li>डेटा सेंटरों द्वारा पानी के बजाय एयर-कूलिंग तकनीकों का उपयोग और नवीकरणीय ऊर्जा स्रोतों पर निर्भरता बढ़ाई जानी चाहिए।</li>
+                    </ul>
+                </div>
+                <div class="exam-tip-box"><strong>💡 परीक्षा टिप (Exam Tip):</strong> जीएस पेपर 3 (पर्यावरण और अर्थव्यवस्था) के लिए यह एक उत्कृष्ट केस स्टडी है। भारत में डेटा सेंटर नीतियों के निर्माण में चिली के इस उदाहरण को 'आगे की राह' या 'केस स्टडी' के रूप में प्रस्तुत करें।</div>
+            </div>
+            
+
+        <div class="section-title">🟣 राजस्थान सुजस, पत्रिका एवं दैनिक भास्कर (Rajasthan Sujas, Patrika & Bhaskar)</div>
+        
+            <div class="sujas-card">
+                <div class="sujas-header">
+                    <span class="badge badge-sujas">राजस्थान सुजस विशेष</span>
+                    <strong>राज्य निर्वाचन आयोग, राजस्थान</strong>
+                </div>
+                <h3>पंचायती राज चुनाव और मतदाता पंजीकरण अभियान</h3>
+                <ul>
+                    <li>राजस्थान में आगामी पंचायती राज चुनावों को लेकर राज्य निर्वाचन आयोग ने तैयारियां तेज कर दी हैं।</li><li>मतदाता सूचियों के अद्यतनीकरण और नए मतदाताओं के पंजीकरण के लिए विशेष अभियान चलाया जा रहा है।</li><li>राजस्व वादों के त्वरित निस्तारण के लिए पंचायती स्तर पर विशेष शिविरों का आयोजन किया जा रहा है।</li>
+                </ul>
+                <div class="relevance-box"><strong>RPSC महत्व:</strong> RAS Paper 3 (Unit 2: राजस्थान का प्रशासनिक एवं राजनीतिक ढांचा - स्थानीय स्वशासन)</div>
+            </div>
+            
+            <div class="sujas-card">
+                <div class="sujas-header">
+                    <span class="badge badge-sujas">राजस्थान सुजस विशेष</span>
+                    <strong>आयोजन विभाग, राजस्थान सरकार</strong>
+                </div>
+                <h3>विश्व बैंक के सहयोग से राजस्थान में विकास परियोजनाएं</h3>
+                <ul>
+                    <li>विश्व बैंक के वित्तीय और तकनीकी सहयोग से राजस्थान में बुनियादी ढांचे, जल प्रबंधन और सार्वजनिक स्वास्थ्य सेवाओं को सुदृढ़ किया जा रहा है।</li><li>ग्रामीण क्षेत्रों में सड़क कनेक्टिविटी और कृषि उत्पादकता बढ़ाने के लिए विशेष बजट आवंटित किया गया है।</li><li>परियोजनाओं की पारदर्शिता और समयबद्धता सुनिश्चित करने के लिए डिजिटल मॉनिटरिंग प्रणाली लागू की गई है।</li>
+                </ul>
+                <div class="relevance-box"><strong>RPSC महत्व:</strong> RAS Paper 1 (राजस्थान की अर्थव्यवस्था - बाह्य सहायता प्राप्त परियोजनाएं)</div>
+            </div>
+            
+
+        <div class="section-title">🔴 सम्पादकीय एवं पत्रिका गहन विश्लेषण (The Hindu, Indian Express, ET, DownToEarth, योजना व कुरुक्षेत्र)</div>
+        
+            <div class="editorial-card">
+                <div class="editorial-header">
+                    <span class="badge badge-ed">The Hindu</span>
+                    <span class="syllabus-tag">GS3 / RAS Paper 1 (भारतीय अर्थव्यवस्था)</span>
+                </div>
+                <h3>Adequate response: on the RBI and inflation</h3>
+                <p class="context"><strong>समसामयिक संदर्भ:</strong> भारतीय रिजर्व बैंक (RBI) की मौद्रिक नीति समिति (MPC) द्वारा मुद्रास्फीति को नियंत्रित करने और आर्थिक विकास को संतुलित करने के प्रयासों का विश्लेषण।</p>
+                <div class="key-args">
+                    <strong>सम्पादकीय का पूरा सार एवं तर्क (Deep Dive Takeaways):</strong>
+                    <ul>
+                        <li>मुद्रास्फीति को लक्षित सीमा (4% के करीब) के भीतर बनाए रखने के लिए केंद्रीय बैंक को सतर्क रुख अपनाने की आवश्यकता है।</li><li>खाद्य मुद्रास्फीति में उतार-चढ़ाव अभी भी घरेलू स्तर पर एक बड़ी चुनौती बना हुआ है, जिसके लिए केवल मौद्रिक नीति पर्याप्त नहीं है।</li><li>आर्थिक विकास को गति देने के लिए ब्याज दरों में कटौती की मांग की जा रही है, लेकिन समय से पहले की गई कटौती से महंगाई दोबारा बढ़ सकती है।</li><li>राजकोषीय नीतियों और आपूर्ति पक्ष के सुधारों में केंद्र सरकार की सक्रिय सहायता के बिना आरबीआई अकेले मुद्रास्फीति से प्रभावी ढंग से नहीं लड़ सकता।</li>
+                    </ul>
+                </div>
+                <div class="way-forward"><strong>आगे की राह (Way Forward):</strong> आरबीआई और सरकार के बीच बेहतर नीतिगत समन्वय, विशेष रूप से कृषि आपूर्ति श्रृंखला को मजबूत करने और ईंधन की कीमतों को स्थिर रखने में, मुद्रास्फीति को स्थायी रूप से नियंत्रित करने का एकमात्र मार्ग है।</div>
+            </div>
+            
+            <div class="editorial-card">
+                <div class="editorial-header">
+                    <span class="badge badge-ed">The Hindu</span>
+                    <span class="syllabus-tag">GS3 / RAS Paper 2 (विज्ञान एवं प्रौद्योगिकी)</span>
+                </div>
+                <h3>Chance and happenstance: On the Nobel Prize in Chemistry</h3>
+                <p class="context"><strong>समसामयिक संदर्भ:</strong> वर्ष 2026 के रसायन विज्ञान नोबेल पुरस्कार के आलोक में जीवन की समरूपता (Homochirality) और रासायनिक प्रतिक्रियाओं में चयनात्मकता का विश्लेषण।</p>
+                <div class="key-args">
+                    <strong>सम्पादकीय का पूरा सार एवं तर्क (Deep Dive Takeaways):</strong>
+                    <ul>
+                        <li>प्रकृति में सभी अमीनो एसिड केवल एक ही दर्पण छवि (Mirror Image) या विन्यास में पाए जाते हैं, जिसे होमोचिरैलिटी कहा जाता है।</li><li>प्रयोगशालाओं में कृत्रिम रूप से रासायनिक प्रतिक्रियाएं कराने पर दोनों दर्पण छवियों का बराबर मिश्रण (Racemic Mixture) प्राप्त होता था, जो फार्मास्यूटिकल्स के लिए अनुपयुक्त था।</li><li>हेनरी कगन और केन्सो सोआई की खोजों ने रासायनिक प्रतिक्रियाओं को इस तरह नियंत्रित करना संभव बनाया कि केवल वांछित दर्पण छवि ही प्राप्त हो।</li><li>यह खोज दवाओं के निर्माण में क्रांतिकारी बदलाव लाई है, क्योंकि दवाओं में केवल एक विशिष्ट दर्पण छवि ही प्रभावी और सुरक्षित होती है, जबकि दूसरी हानिकारक हो सकती है।</li>
+                    </ul>
+                </div>
+                <div class="way-forward"><strong>आगे की राह (Way Forward):</strong> इस खोज का उपयोग भविष्य में अधिक सुरक्षित, लक्षित और प्रभावी जीवन रक्षक दवाओं के निर्माण के साथ-साथ जीवन की उत्पत्ति के अनसुलझे रहस्यों को समझने में किया जाना चाहिए।</div>
+            </div>
+            
+            <div class="editorial-card">
+                <div class="editorial-header">
+                    <span class="badge badge-ed">LiveMint</span>
+                    <span class="syllabus-tag">GS2 / GS3 (सूचना प्रौद्योगिकी और नागरिक अधिकार)</span>
+                </div>
+                <h3>Why privacy must survive the age of AI: Not just humans, even the economy needs it</h3>
+                <p class="context"><strong>समसामयिक संदर्भ:</strong> कृत्रिम बुद्धिमत्ता (AI) और बिग टेक के युग में व्यक्तिगत गोपनीयता (Privacy) के आर्थिक और सामाजिक महत्व का विश्लेषण।</p>
+                <div class="key-args">
+                    <strong>सम्पादकीय का पूरा सार एवं तर्क (Deep Dive Takeaways):</strong>
+                    <ul>
+                        <li>गोपनीयता केवल एक व्यक्तिगत अधिकार नहीं है, बल्कि यह आर्थिक नवाचार और बाजार की स्वस्थ प्रतिस्पर्धा के लिए भी अनिवार्य है।</li><li>बिग टेक कंपनियों द्वारा डेटा के अनियंत्रित संचय से एकाधिकार (Monopoly) की स्थिति पैदा हो रही है, जो छोटे स्टार्टअप्स को बाजार से बाहर कर रही है।</li><li>डेटा सुरक्षा के अभाव में उपभोक्ताओं का डिजिटल अर्थव्यवस्था और वित्तीय प्रणालियों पर से विश्वास उठ सकता है, जिससे डिजिटल लेनदेन प्रभावित होंगे।</li><li>एआई मॉडल को प्रशिक्षित करने के लिए व्यक्तिगत डेटा का अनधिकृत उपयोग बौद्धिक संपदा अधिकारों और व्यक्तिगत स्वतंत्रता का उल्लंघन है।</li>
+                    </ul>
+                </div>
+                <div class="way-forward"><strong>आगे की राह (Way Forward):</strong> सरकारों को सख्त डेटा संरक्षण कानून लागू करने चाहिए जो नवाचार को बाधित किए बिना व्यक्तिगत गोपनीयता की रक्षा करें और डेटा के व्यावसायिक उपयोग पर कड़े वित्तीय दंड का प्रावधान करें।</div>
+            </div>
+            
+
+        <div class="section-title">📲 टेलीग्राम चैनल दैनिक प्रश्नोत्तरी व नोट्स (Telegram Daily Quiz & Notes)</div>
+            <div class="mains-card" style="border-left: 8px solid #0284c7; margin-bottom: 25px;">
+                <div class="mains-header">
+                    <span class="badge" style="background:#0284c7; color:white;">5 अंक (~50 शब्द)</span>
+                    <span class="badge" style="background:#1e3a8a; color:white;">@RPSC_RAS_Exam_Prep</span>
+                    <span class="subject-tag">Paper 1 (राजस्थान का भूगोल एवं अर्थव्यवस्था)</span>
+                </div>
+                <h3 class="question-text">प्रश्न: राजस्थान में 'बाजरा' उत्पादन और इसके विपणन के संबंध में निम्नलिखित कथनों पर विचार कीजिए।</h3>
+                <div class="answer-box">
+                    <strong class="ans-label">उत्तर ढांचा एवं विस्तृत नोट्स (~50 शब्द):</strong>
+                    <div class="answer-content">1. सही उत्तर एवं मुख्य तथ्य: राजस्थान देश का सबसे बड़ा बाजरा उत्पादक राज्य है। दौसा जिले में बिना कीटनाशकों के उत्पादित बाजरा गुजरात और अन्य राज्यों में उच्च मांग में है।<br>2. ऐतिहासिक/भौगोलिक/नीतिगत संदर्भ: बाजरा एक शुष्क और अर्ध-शुष्क जलवायु की फसल है जिसे कम पानी की आवश्यकता होती है। राज्य सरकार मोटे अनाजों (श्री अन्न) के संवर्धन के लिए विशेष प्रोत्साहन दे रही है।<br>3. RPSC परीक्षा प्रासंगिकता: यह प्रश्न राजस्थान के कृषि भूगोल और कृषि-व्यवसाय नीतियों (Paper 1) के लिए अत्यंत महत्वपूर्ण है।</div>
+                </div>
+            </div>
+            
+    </div>
+
+    <script>
+        function setFontSize(size) {
+            document.documentElement.style.setProperty('--base-font-size', size + 'px');
+            localStorage.setItem('ras_notes_font_size', size);
+            document.querySelectorAll('.toolbar-btns .t-btn').forEach(b => {
+                if (b.innerText.includes(size + 'px')) b.classList.add('active');
+                else if (b.innerText.includes('px')) b.classList.remove('active');
+            });
+        }
+
+        function toggleTheme(theme) {
+            document.body.classList.remove('dark-mode', 'sepia-mode');
+            if (theme === 'dark') document.body.classList.add('dark-mode');
+            else if (theme === 'sepia') document.body.classList.add('sepia-mode');
+            localStorage.setItem('ras_notes_theme', theme);
+        }
+
+        // Load saved preferences
+        (function() {
+            const savedSize = localStorage.getItem('ras_notes_font_size') || 26;
+            setFontSize(savedSize);
+            const savedTheme = localStorage.getItem('ras_notes_theme');
+            if (savedTheme) toggleTheme(savedTheme);
+        })();
+    </script>
+</body>
+</html>
