@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RAS & UPSC Daily Notes - 2026-10-11</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style id="customStyle">
+        :root {
+            --base-font-size: 24px;
+            --base-line-height: 1.85;
+            --primary: #1e1b4b;
+            --primary-light: #2563eb;
+            --secondary: #0f766e;
+            --accent-gold: #b45309;
+            --accent-purple: #6b21a8;
+            --accent-red: #9f1239;
+            --bg-main: #f8fafc;
+            --card-bg: #ffffff;
+            --text-dark: #020617;
+            --border-color: #cbd5e1;
+            --box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+        }
+
+        body.dark-mode {
+            --bg-main: #090d16;
+            --card-bg: #111827;
+            --text-dark: #f8fafc;
+            --border-color: #374151;
+            --box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+        }
+
+        body.sepia-mode {
+            --bg-main: #fbf0d9;
+            --card-bg: #fffdf7;
+            --text-dark: #2d2215;
+            --border-color: #e2d3b5;
+        }
+
+        body {
+            font-family: 'Noto Sans Devanagari', 'Segoe UI', Tahoma, sans-serif;
+            background-color: var(--bg-main);
+            color: var(--text-dark);
+            margin: 0;
+            padding: 25px;
+            line-height: var(--base-line-height);
+            font-size: var(--base-font-size);
+            transition: background-color 0.2s, font-size 0.15s;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* Eye-Comfort High Definition Typography */
+        p, li, div, span, td, th {
+            font-size: var(--base-font-size);
+            line-height: var(--base-line-height);
+        }
+
+        b, strong {
+            color: #b91c1c;
+            font-weight: 800;
+        }
+        body.dark-mode b, body.dark-mode strong {
+            color: #f87171;
+        }
+
+        .blue-highlight {
+            color: #1e3a8a;
+            font-weight: 800;
+        }
+        body.dark-mode .blue-highlight {
+            color: #60a5fa;
+        }
+
+        .container {
+            max-width: 1300px;
+            margin: 0 auto;
+        }
+
+        /* Sticky Eye-Comfort Controls Toolbar */
+        .reader-toolbar {
+            position: sticky;
+            top: 15px;
+            z-index: 999;
+            background: rgba(15, 23, 42, 0.95);
+            backdrop-filter: blur(10px);
+            color: white;
+            padding: 12px 24px;
+            border-radius: 50px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+            margin-bottom: 25px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 12px;
+            border: 2px solid #334155;
+        }
+
+        .toolbar-title {
+            font-size: 19px;
+            font-weight: 800;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .toolbar-btns {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .t-btn {
+            background: #1e293b;
+            color: white;
+            border: 1px solid #475569;
+            padding: 8px 16px;
+            border-radius: 25px;
+            font-size: 16px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.2s;
+            font-family: inherit;
+        }
+
+        .t-btn:hover, .t-btn.active {
+            background: #2563eb;
+            border-color: #60a5fa;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 10px rgba(37,99,235,0.4);
+        }
+
+        .header {
+            background: linear-gradient(135deg, #09090b 0%, #1e1b4b 50%, #0f766e 100%);
+            color: white;
+            padding: 35px 40px;
+            border-radius: 20px;
+            box-shadow: 0 15px 30px -5px rgba(0,0,0,0.25);
+            margin-bottom: 35px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border: 3px solid #3b82f6;
+        }
+        .header h1 { margin: 0 0 10px 0; font-size: 36px; font-weight: 900; letter-spacing: -0.5px; }
+        .header p { margin: 0; opacity: 0.95; font-size: 22px; font-weight: 600; }
+
+        /* Large Chapter 7 Style Section Headers */
+        .section-title {
+            font-size: 32px;
+            font-weight: 900;
+            margin: 45px 0 25px 0;
+            padding: 18px 26px;
+            background: var(--card-bg);
+            border-radius: 14px;
+            border-left: 14px solid var(--primary-light);
+            box-shadow: var(--box-shadow);
+            color: var(--text-dark);
+            border-top: 1px solid var(--border-color);
+            border-right: 1px solid var(--border-color);
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .badge {
+            padding: 8px 16px;
+            border-radius: 10px;
+            font-size: 17px;
+            font-weight: 800;
+            color: white;
+            display: inline-block;
+        }
+        .badge-pre { background-color: var(--accent-gold); }
+        .badge-raj { background-color: var(--accent-purple); }
+        .badge-5m { background-color: #0284c7; }
+        .badge-10m { background-color: #4338ca; }
+        .badge-sujas { background-color: #0d9488; }
+        .badge-ed { background-color: var(--accent-red); }
+        .badge-yt { background-color: #dc2626; }
+
+        /* Big, Comfortable Eye-Friendly Cards */
+        .fact-card, .mains-card, .sujas-card, .editorial-card, .yt-card {
+            background: var(--card-bg);
+            border-radius: 18px;
+            padding: 32px;
+            margin-bottom: 30px;
+            box-shadow: var(--box-shadow);
+            border: 2px solid var(--border-color);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .fact-card:hover, .mains-card:hover, .sujas-card:hover, .editorial-card:hover, .yt-card:hover {
+            box-shadow: 0 12px 28px rgba(0,0,0,0.1);
+        }
+
+        .fact-card { border-left: 14px solid var(--accent-gold); }
+        .mains-card { border-left: 14px solid #4338ca; }
+        .sujas-card { border-left: 14px solid var(--accent-purple); }
+        .editorial-card { border-left: 14px solid var(--accent-red); }
+        .yt-card { border-left: 14px solid #dc2626; background: var(--card-bg); }
+
+        .card-header, .mains-header, .sujas-header, .editorial-header, .yt-header {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 16px;
+            flex-wrap: wrap;
+        }
+        .topic-title { font-weight: 900; font-size: 26px; color: var(--text-dark); }
+        .fact-text { margin: 0; color: var(--text-dark); font-size: var(--base-font-size); line-height: var(--base-line-height); font-weight: 500; }
+        .question-text { margin: 12px 0 18px 0; color: #1e3a8a; font-size: calc(var(--base-font-size) + 4px); font-weight: 900; line-height: 1.6; }
+        body.dark-mode .question-text { color: #93c5fd; }
+
+        .answer-box {
+            background: #f1f5f9;
+            padding: 26px;
+            border-radius: 14px;
+            font-size: var(--base-font-size);
+            border: 2px solid #cbd5e1;
+            line-height: var(--base-line-height);
+        }
+        body.dark-mode .answer-box {
+            background: #1f2937;
+            border-color: #4b5563;
+        }
+        body.sepia-mode .answer-box {
+            background: #f4ebd0;
+            border-color: #dcd0b1;
+        }
+
+        .ans-label {
+            font-size: calc(var(--base-font-size) + 2px);
+            color: #1e3a8a;
+            display: block;
+            margin-bottom: 10px;
+            font-weight: 800;
+        }
+        body.dark-mode .ans-label { color: #60a5fa; }
+
+        .relevance-box, .way-forward {
+            background: #ecfdf5;
+            color: #065f46;
+            padding: 18px 24px;
+            border-radius: 12px;
+            margin-top: 20px;
+            font-size: calc(var(--base-font-size) - 1px);
+            border-left: 8px solid #10b981;
+            font-weight: 600;
+            border: 1px solid #a7f3d0;
+            border-left-width: 8px;
+        }
+        body.dark-mode .relevance-box, body.dark-mode .way-forward {
+            background: #064e3b;
+            color: #a7f3d0;
+            border-color: #059669;
+        }
+
+        .exam-tip-box {
+            background: #fefce8;
+            color: #854d0e;
+            padding: 18px 24px;
+            border-radius: 12px;
+            margin-top: 20px;
+            font-size: calc(var(--base-font-size) - 1px);
+            border-left: 8px solid #eab308;
+            font-weight: 600;
+            border: 1px solid #fef08a;
+            border-left-width: 8px;
+        }
+        body.dark-mode .exam-tip-box {
+            background: #713f12;
+            color: #fef08a;
+            border-color: #eab308;
+        }
+
+        ul { margin: 12px 0; padding-left: 30px; }
+        li { margin-bottom: 12px; font-size: var(--base-font-size); line-height: var(--base-line-height); }
+
+        @media print {
+            .reader-toolbar, .print-btn { display: none !important; }
+            body { background: white !important; color: black !important; padding: 0 !important; font-size: 16pt !important; }
+            .container { max-width: 100% !important; }
+            .fact-card, .mains-card, .sujas-card, .editorial-card, .yt-card { page-break-inside: avoid; border: 1px solid #999 !important; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Floating Interactive Eye-Comfort Toolbar -->
+        <div class="reader-toolbar">
+            <div class="toolbar-title">
+                <span>👁️ नेत्र-अनुकूल फॉन्ट व पठन मोड</span>
+            </div>
+            <div class="toolbar-btns">
+                <button class="t-btn" onclick="setFontSize(22)">A सामान्य (22px)</button>
+                <button class="t-btn active" id="btn-ch7" onclick="setFontSize(26)">🔠 बड़ा / Ch-7 स्टाइल (26px)</button>
+                <button class="t-btn" onclick="setFontSize(30)">🔍 अल्ट्रा लार्ज (30px)</button>
+                <button class="t-btn" onclick="toggleTheme('light')">☀️ लाइट</button>
+                <button class="t-btn" onclick="toggleTheme('sepia')">📜 सेपिया</button>
+                <button class="t-btn" onclick="toggleTheme('dark')">🌙 डार्क मोड</button>
+                <button class="t-btn" style="background:#059669; border-color:#10b981;" onclick="window.print()">🖨️ PDF प्रिंट</button>
+            </div>
+        </div>
+
+        <div class="header">
+            <div>
+                <h1>RPSC RAS & UPSC दैनिक समसामयिकी एवं सम्पादकीय विश्लेषण</h1>
+                <p>दिनांक: 2026-10-11 | RAS Pre & Mains (5M & 10M) विशेष मास्टर नोट्स</p>
+            </div>
+        </div>
+
+        <div class="section-title">🟡 प्रारंभिक परीक्षा तथ्य (RAS & UPSC Prelims Tracker)</div>
+        
+            <div class="fact-card">
+                <div class="card-header">
+                    <span class="badge badge-pre">UPSC Pre / RAS Pre</span>
+                    <span class="topic-title">रसायन विज्ञान नोबेल पुरस्कार 2026: असममित कार्बनिक संश्लेषण में उत्प्रेरण</span>
+                </div>
+                <p class="fact-text">वर्ष 2026 का रसायन विज्ञान नोबेल पुरस्कार ऑनरी बी. कागन (Université Paris-Sud, फ्रांस) और केन्सो सोई (Tokyo University of Science, जापान) को 'असममित कार्बनिक संश्लेषण में गैर-रेखीय प्रभावों एवं स्व-उत्प्रेरण (Autocatalysis) की खोज' के लिए प्रदान किया गया है, जिसने होमोकिरालिटी (Homochirality) की गुत्थी सुलझाई।</p>
+            </div>
+            
+            <div class="fact-card">
+                <div class="card-header">
+                    <span class="badge badge-pre">UPSC Pre / RAS Pre</span>
+                    <span class="topic-title">भौतिकी नोबेल पुरस्कार 2026: आइसक्यूब न्यूट्रिनो वेधशाला</span>
+                </div>
+                <p class="fact-text">वर्ष 2026 का भौतिकी नोबेल पुरस्कार फ्रांसिस हैल्ज़न (University of Wisconsin-Madison) को दक्षिण ध्रुव (South Pole) पर स्थापित आइसक्यूब न्यूट्रिनो वेधशाला (IceCube Neutrino Observatory) के निर्माण एवं उच्च-ऊर्जा खगोलीय न्यूट्रिनो की खोज हेतु दिया गया है।</p>
+            </div>
+            
+            <div class="fact-card">
+                <div class="card-header">
+                    <span class="badge badge-pre">UPSC Pre / RAS Pre</span>
+                    <span class="topic-title">साहित्य नोबेल पुरस्कार 2026</span>
+                </div>
+                <p class="fact-text">वर्ष 2026 का साहित्य नोबेल पुरस्कार प्रसिद्ध लेखिका एवं कवियित्री ऐनी कार्सन (Anne Carson) को उनकी अनूठी काव्यात्मक प्रयोगधर्मिता और कल्पनाशीलता के लिए प्रदान किया गया है।</p>
+            </div>
+            
+            <div class="fact-card">
+                <div class="card-header">
+                    <span class="badge badge-raj">RAS Pre / Rajasthan Exams</span>
+                    <span class="topic-title">राजस्थान पुलिस: शक्ति सुरक्षा अभियान</span>
+                </div>
+                <p class="fact-text">राजस्थान पुलिस द्वारा नवरात्रि एवं त्यौहारों के दौरान सार्वजनिक स्थलों, धार्मिक स्थलों व दुर्गा पूजा पंडालों में महिलाओं एवं बालिकाओं की सुरक्षा सुनिश्चित करने हेतु 'शक्ति सुरक्षा अभियान' का संचालन किया जा रहा है।</p>
+            </div>
+            
+            <div class="fact-card">
+                <div class="card-header">
+                    <span class="badge badge-raj">RAS Pre / Rajasthan Exams</span>
+                    <span class="topic-title">ई-लीज सिस्टम (E-Lease System) - राजस्थान</span>
+                </div>
+                <p class="fact-text">राजस्थान सरकार के रीको (RIICO) एवं उद्योग विभाग द्वारा औद्योगिक निवेशकों को पारदर्शी व सुगम डिजिटल सेवाएं देने हेतु एकीकृत 'ई-लीज डीड प्रणाली' लागू की गई है, जिससे औद्योगिक भूमि आवंटन व लीज निष्पादन का समय घटेगा।</p>
+            </div>
+            
+            <div class="fact-card">
+                <div class="card-header">
+                    <span class="badge badge-pre">UPSC Pre / RAS Pre</span>
+                    <span class="topic-title">अभ्यास इंद्र-2026 (Indra-2026)</span>
+                </div>
+                <p class="fact-text">भारतीय नौसेना का मिसाइल युद्धपोत आईएनएस सह्याद्रि (INS Sahyadri) भारत और रूस के मध्य आयोजित द्विपक्षीय नौसेना अभ्यास 'इंद्र-2026' में भाग लेने हेतु व्लादिवोस्तोक (रूस) पहुंचा।</p>
+            </div>
+            
+            <div class="fact-card">
+                <div class="card-header">
+                    <span class="badge badge-pre">UPSC Pre / RAS Pre</span>
+                    <span class="topic-title">अभ्यास कोंकण-2026 (Konkan-2026)</span>
+                </div>
+                <p class="fact-text">भारतीय नौसेना का युद्धपोत आईएनएस त्रिशूल (INS Trishul) भारतीय नौसेना और ब्रिटेन की रॉयल नेवी के बीच वार्षिक द्विपक्षीय समुद्री अभ्यास 'कोंकण-2026' में भाग लेने के लिए प्लायमाउथ (UK) पहुंचा।</p>
+            </div>
+            
+            <div class="fact-card">
+                <div class="card-header">
+                    <span class="badge badge-pre">UPSC Pre / RAS Pre</span>
+                    <span class="topic-title">उच्च ऊंचाई चिकित्सा एवं सार्वजनिक स्वास्थ्य अनुसंधान केंद्र</span>
+                </div>
+                <p class="fact-text">केंद्रीय स्वास्थ्य एवं परिवार कल्याण मंत्री ने हिमाचल प्रदेश के केलांग (लाहौल-स्पीति) में आईसीएमआर (ICMR) के 'उच्च ऊंचाई चिकित्सा और सार्वजनिक स्वास्थ्य अनुसंधान केंद्र' की आधारशिला रखी।</p>
+            </div>
+            
+            <div class="fact-card">
+                <div class="card-header">
+                    <span class="badge badge-pre">UPSC Pre / RAS Pre</span>
+                    <span class="topic-title">विज़िनजम अंतरराष्ट्रीय बंदरगाह व एकीकृत पोर्ट सिटी परियोजना</span>
+                </div>
+                <p class="fact-text">केरल सरकार ने अपने 600 किमी तटीय नेटवर्क और विज़िनजम (Vizhinjam) अंतर्राष्ट्रीय ट्रांसशिपमेंट डीप-वॉटर सीपार्ट को जोड़कर पूरे राज्य को एक 'एकीकृत पोर्ट सिटी' लॉजिस्टिक्स हब के रूप में विकसित करने की योजना प्रस्तुत की।</p>
+            </div>
+            
+            <div class="fact-card">
+                <div class="card-header">
+                    <span class="badge badge-pre">UPSC Pre / RAS Pre</span>
+                    <span class="topic-title">थोरियम आधारित न्यूक्लियर क्लॉक (Nuclear Clock)</span>
+                </div>
+                <p class="fact-text">वियना के वैज्ञानिकों ने थोरियम-229 (Thorium-229) नाभिक का उपयोग करके विश्व की पहली स्व-स्थिर परमाणु नाभिकीय घड़ी (Self-stabilizing Nuclear Clock) विकसित की है, जो पारंपरिक परमाणु घड़ियों (Atomic Clocks) से अधिक सटीक है।</p>
+            </div>
+            
+            <div class="fact-card">
+                <div class="card-header">
+                    <span class="badge badge-pre">UPSC Pre / RAS Pre</span>
+                    <span class="topic-title">यूएन विमेन: डिजिटल, इनोवेशन एवं एआई हब</span>
+                </div>
+                <p class="fact-text">संयुक्त राष्ट्र महिला निकाय (UN Women) ने प्रौद्योगिकी, एआई डिजाइन एवं नीतिगत निर्णयों में लैंगिक समानता व महिलाओं की सुरक्षा सुनिश्चित करने हेतु वैश्विक 'डिजिटल, इनोवेशन एवं एआई हब' का शुभारंभ किया।</p>
+            </div>
+            
+            <div class="fact-card">
+                <div class="card-header">
+                    <span class="badge badge-pre">UPSC Pre / RAS Pre</span>
+                    <span class="topic-title">प्लूटो बौना ग्रह एवं अंतर्राष्ट्रीय खगोलीय संघ (IAU) प्रस्ताव 5A/6A</span>
+                </div>
+                <p class="fact-text">वर्ष 2006 में अंतर्राष्ट्रीय खगोलीय संघ (IAU) द्वारा प्राग सम्मेलन में पारित प्रस्ताव 5A/6A के तहत ग्रह की तीसरी शर्त (अपनी कक्षा को साफ रखना) पूरी न करने पर प्लूटो को ग्रह के दर्जे से हटाकर 'बौना ग्रह' (Dwarf Planet) घोषित किया गया था, जिसे 2026 में 20 वर्ष पूरे हो गए हैं।</p>
+            </div>
+            
+            <div class="fact-card">
+                <div class="card-header">
+                    <span class="badge badge-pre">UPSC Pre / RAS Pre</span>
+                    <span class="topic-title">राष्ट्रीय इस्पात नीति (ड्राफ्ट) 2047 लक्ष्यांक</span>
+                </div>
+                <p class="fact-text">भारत के नवीनतम ड्राफ्ट स्टील रोडमैप के अनुसार वर्ष 2047 तक भारत की इस्पात उत्पादन क्षमता को 604 मिलियन टन (MT) तक पहुंचाने, उत्सर्जन तीव्रता में 39% कटौती और 45 MT वार्षिक निर्यात का लक्ष्य रखा गया है।</p>
+            </div>
+            
+            <div class="fact-card">
+                <div class="card-header">
+                    <span class="badge badge-pre">UPSC Pre / RAS Pre</span>
+                    <span class="topic-title">काली इलायची (Black Cardamom) उत्पादन में नेपाल का वर्चस्व</span>
+                </div>
+                <p class="fact-text">सिक्किम में जलवायु परिवर्तन व फसलों में बीमारियों के कारण भारत का पारंपरिक बड़ी इलायची (काली इलायची) बाजार प्रभावित हुआ है, जिससे नेपाल अब वैश्विक उत्पादन में भारत को पीछे छोड़कर शीर्ष पर पहुंच गया है।</p>
+            </div>
+            
+
+        <div class="section-title">🔵 मुख्य परीक्षा उत्तर लेखन मॉडल सेट (RAS Mains - 5M & 10M)</div>
+        
+            <div class="mains-card">
+                <div class="mains-header">
+                    <span class="badge badge-5m">5 अंक (Paper 1)</span>
+                    <span class="subject-tag">भारतीय अर्थव्यवस्था एवं राजस्थान की अर्थव्यवस्था</span>
+                </div>
+                <h3 class="question-text">प्रश्न: वैधानिक तरलता अनुपात (SLR) में कटौती से विनिर्माण (Manufacturing) क्षेत्र को मिलने वाले आर्थिक लाभों की व्याख्या कीजिए।</h3>
+                
+                <div class="answer-box">
+                    <strong class="ans-label">उत्तर ढांचा (~50 शब्द):</strong>
+                    <div class="answer-content">1. **ऋण लागत में कमी:** नीति आयोग के पूर्व सीईओ अमिताभ कांत के अनुसार, एसएलआर (SLR) में कटौती से बैंकों की तरलता बढ़ती है, जिससे निजी निवेश हेतु वाणिज्यिक ऋण दरें सस्ती होती हैं।<br>2. **रोजगार सृजन:** सस्ती पूंजी से श्रम-गहन विनिर्माण (Job-intensive Manufacturing) और एमएसएमई (MSME) इकाइयों का विस्तार होता है।<br>3. **नवीन स्टार्टअप्स को समर्थन:** न्यू-एज एवं हाई-टेक विनिर्माण क्षेत्रों में पूंजी पहुंच आसान होती है, जिससे 'मेक इन इंडिया' को प्रोत्साहन मिलता है।</div>
+                </div>
+                
+            </div>
+            
+            <div class="mains-card">
+                <div class="mains-header">
+                    <span class="badge badge-5m">5 अंक (Paper 3)</span>
+                    <span class="subject-tag">प्रशासनिक कानून एवं राज्य व्यवस्था (राजस्थान)</span>
+                </div>
+                <h3 class="question-text">प्रश्न: राजस्थान सरकार की 'ई-लीज डीड प्रणाली' (E-Lease System) के मुख्य प्रशासनिक एवं निवेश संबंधी लाभ बताइए।</h3>
+                
+                <div class="answer-box">
+                    <strong class="ans-label">उत्तर ढांचा (~50 शब्द):</strong>
+                    <div class="answer-content">1. **पारदर्शिता एवं सुशासन:** लीज निष्पादन की पूरी प्रक्रिया ऑनलाइन होने से मानवीय हस्तक्षेप, भ्रष्टाचार एवं अनावश्यक कागजी विलंब समाप्त होगा।<br>2. **ईज ऑफ डूइंग बिजनेस:** रीको और औद्योगिक निवेशकों के मध्य निष्पादित लीज डीड प्रक्रिया त्वरित होने से राज्य में प्रत्यक्ष विदेशी व घरेलू निवेश आकर्षित होगा।<br>3. **निवेशक सुगमता:** रियल-टाइम ट्रैकिंग, डिजिटल हस्ताक्षरित दस्तावेज और जवाबदेह समयावधि से राजस्थान का औद्योगिक ढांचा सुदृढ़ होगा।</div>
+                </div>
+                
+            </div>
+            
+            <div class="mains-card">
+                <div class="mains-header">
+                    <span class="badge badge-10m">10 अंक (Paper 3)</span>
+                    <span class="subject-tag">प्रौद्योगिकी नीति, पर्यावरण एवं वैश्विक शासन (GS-3 / Paper 3)</span>
+                </div>
+                <h3 class="question-text">प्रश्न: डेटा सेंटर अवसंरचना (Data Center Infrastructure) एवं एआई क्रांति के तीव्र विस्तार से उत्पन्न होने वाले पर्यावरणीय व सामाजिक-आर्थिक संकटों का परीक्षण कीजिए। चिली के 'MOSACAT' आंदोलन के संदर्भ में भारत के लिए रणनीतिक सबक स्पष्ट कीजिए।</h3>
+                
+                <div class="answer-box">
+                    <div class="ans-section"><strong class="ans-label">भूमिका (Introduction):</strong><br>वैश्विक स्तर पर कृत्रिम बुद्धिमत्ता (AI) और डिजिटल डेटा भंडारण हेतु डेटा सेंटर्स का तेजी से विस्तार हो रहा है। भारत 5 वर्षों में $60-70 अरब डॉलर का डेटा सेंटर निवेश आकर्षित कर रहा है, परंतु यह अवसंरचना अत्यधिक ऊर्जा व जल-गहन है।</div>
+                    <div class="ans-section"><strong class="ans-label">मुख्य भाग (Body & Rajasthan Context):</strong><br>1. **पर्यावरणीय चिंताएं (Water & Power Footprint):**<br>   - **अत्यधिक जल खपत:** डेटा सेंटर्स को ठंडा रखने (Cooling) हेतु प्रतिदिन लाखों लीटर भूजल/पानी की खपत होती है, जिससे स्थानीय जलभृत (Aquifers) सूख जाते हैं।<br>   - **ऊर्जा संकट व कार्बन उत्सर्जन:** 24x7 बिजली आपूर्ति हेतु जीवाश्म ईंधन या कैप्टिव पावर प्लांट पर निर्भरता से कार्बन उत्सर्जन और स्थानीय स्तर पर हीट आइलैंड प्रभाव (तापमान 9°C तक वृद्धि) बनता है।<br>   <br>2. **सामाजिक-आर्थिक एवं नियामक चुनौतियां:**<br>   - **रोजगार निर्माण का भ्रम:** उच्च पूंजी निवेश के बावजूद यह क्षेत्र केवल सीमित (कम कुशल) रोजगार पैदा करता है।<br>   - **नियामक ढील (Regulatory Capture):** आंध्र प्रदेश में गूगल डेटा सेंटर हेतु 'deemed DISCOM' दर्जा और चिली में त्वरित 'पर्यावरण प्रभाव घोषणा (EIA bypass)' जैसे कदम कॉर्पोरेट हितों को प्राथमिकता देने की आशंका उत्पन्न करते हैं।<br><br>3. **चिली के 'MOSACAT' आंदोलन से सबक:**<br>   - चिली के सेरिलोस में स्थानीय नागरिकों (MOSACAT) के विरोध के बाद गूगल को जल-आधारित कूलिंग की जगह एयर-कूलिंग तकनीक अपनानी पड़ी।<br>   - सबक 1: भारत को अनिवार्य पर्यावरण प्रभाव आकलन (Full EIA) लागू करना चाहिए।<br>   - सबक 2: जल-दुर्लभ क्षेत्रों (जैसे पश्चिमी राजस्थान) में डेटा सेंटर की अनुमति न देकर केवल नवीकरणीय ऊर्जा समृद्ध एवं जल-सुरक्षित क्षेत्रों में स्थापित किया जाए।<br>   - सबक 3: स्थानीय समुदायों को बाध्यकारी निर्णय लेने वाली जन-सुनवाई प्रक्रिया में शामिल किया जाए।</div>
+                    <div class="ans-section"><strong class="ans-label">निष्कर्ष (Conclusion):</strong><br>डेटा संप्रभुता और एआई प्रगति आवश्यक है, परंतु यह सतत विकास (SDGs) और स्थानीय जन-समुदाय के पर्यावरण व जल अधिकारों की कीमत पर नहीं होनी चाहिए।</div>
+                </div>
+                
+            </div>
+            
+            <div class="mains-card">
+                <div class="mains-header">
+                    <span class="badge badge-10m">10 अंक (Paper 2)</span>
+                    <span class="subject-tag">विज्ञान एवं प्रौद्योगिकी (Science & Technology)</span>
+                </div>
+                <h3 class="question-text">प्रश्न: वर्ष 2026 के रसायन विज्ञान एवं भौतिकी नोबेल पुरस्कारों की प्रमुख वैज्ञानिक खोजों का विवरण दीजिए तथा मानव कल्याण एवं अंतरिक्ष अध्ययन में इनके अनुप्रयोगों को स्पष्ट कीजिए।</h3>
+                
+                <div class="answer-box">
+                    <div class="ans-section"><strong class="ans-label">भूमिका (Introduction):</strong><br>वर्ष 2026 का रसायन नोबेल असममित कार्बनिक संश्लेषण में होमोकिरालिटी (Homochirality) की खोज तथा भौतिकी नोबेल आइसक्यूब वेधशाला द्वारा उच्च-ऊर्जा खगोलीय न्यूट्रिनो की खोज हेतु प्रदान किया गया है।</div>
+                    <div class="ans-section"><strong class="ans-label">मुख्य भाग (Body & Rajasthan Context):</strong><br>1. **रसायन विज्ञान नोबेल 2026 (Henri Kagan एवं Kenso Soai):**<br>   - **वैज्ञानिक खोज:** असममित कार्बनिक संश्लेषण में गैर-रेखीय प्रभाव (Non-linear effects) और स्व-उत्प्रेरण (Autocatalysis) की खोज।<br>   - **महत्व:** प्रकृति में अणु 'दिए बाएं हाथ' (Chiral Mirror Images) की तरह दो रूपों में होते हैं। जीवन केवल एक रूप (Homochirality) का उपयोग करता है। सोई (Soai) प्रतिक्रिया ने सिद्ध किया कि कैसे रसायन विज्ञान में केवल एक ही प्रकार का दर्पण रूप स्वतः निर्मित किया जा सकता है।<br>   - **अनुप्रयोग:** औषधीय रसायन विज्ञान (Pharma Industry) में लक्षित व दुष्परिणाम-रहित दवाओं के निर्माण में क्रांतिकारी बदलाव।<br><br>2. **भौतिकी नोबेल 2026 (Francis Halzen):**<br>   - **वैज्ञानिक खोज:** अंटार्कटिका में दक्षिण ध्रुव के 1 घन किलोमीटर बर्फ के नीचे 'IceCube Neutrino Observatory' की स्थापना तथा सुदूर ब्रह्मांड से आने वाले उच्च-ऊर्जा खगोलीय न्यूट्रिनो की खोज।<br>   - **महत्व:** न्यूट्रिनो 'भूतिया कण' (Ghost particles) हैं जो बिना दिशा बदले या ऊर्जा खोए ब्रह्मांड के सबसे हिंसक पिंडों से सीधे पृथ्वी तक पहुँचते हैं।<br>   - **अनुप्रयोग:** न्यूट्रिनो एस्ट्रोनॉमी के माध्यम से ब्लैक होल, सुपरनोवा और ब्रह्मांडीय त्वरकों की उत्पत्ति के अनसुलझे रहस्यों को समझना।</div>
+                    <div class="ans-section"><strong class="ans-label">निष्कर्ष (Conclusion):</strong><br>इन दोनों खोजों ने मौलिक विज्ञान (Fundamental Science) के साथ-साथ व्यावहारिक औषधि विज्ञान और खगोलशास्त्र में एक नए युग की शुरुआत की है।</div>
+                </div>
+                
+            </div>
+            
+
+        <div class="section-title">📺 कोचिंग शिक्षक विश्लेषण एवं यूट्यूब लाइव क्लास सार</div>
+            <div class="yt-card">
+                <div class="yt-header">
+                    <span class="badge badge-yt">📺 कोचिंग शिक्षक विश्लेषण</span>
+                    <span class="topic-title">भारत की राष्ट्रीय इस्पात नीति (Draft Steel Policy 2047) व हरित इस्पात (Green Steel)</span>
+                </div>
+                <div class="yt-explanation">
+                    <strong>शिक्षक व्याख्यान एवं ट्रिक्स:</strong>
+                    <p>प्रशांत सर (UPSC Wallah) ने ड्राफ्ट स्टील नीति 2047 का विश्लेषण करते हुए बताया कि भारत अपने विनिर्माण क्षेत्र को गति देने के लिए इस्पात क्षमता को 604 मिलियन टन (MT) तक ले जाना चाहता है, लेकिन साथ ही उत्सर्जन तीव्रता को 39% कम करने की चुनौती है।</p>
+                </div>
+                <div class="key-args">
+                    <strong>क्लास के मुख्य बिंदु (Key Lecture Points):</strong>
+                    <ul>
+                        <li>**क्षमता विस्तार लक्ष्य:** वर्ष 2047 तक 604 MT क्षमता का लक्ष्य, जिसके लिए लौह अयस्क की आपूर्ति और स्क्रैप (Scrap Recycling) के उपयोग को बढ़ाना होगा।</li><li>**उत्सर्जन तीव्रता में 39% कटौती:** 'ग्रीन स्टील' उत्पादन हेतु हाइड्रोजन-आधारित स्पंज आयरन और स्लरी पाइपलाइनों का विस्तार (Viability Gap Funding से सहायता)।</li><li>**निर्यात रोडमैप:** भारत वर्ष 2047 तक वार्षिक 45 MT इस्पात निर्यात का लक्ष्य बना रहा है।</li>
+                    </ul>
+                </div>
+                <div class="exam-tip-box"><strong>💡 परीक्षा टिप (Exam Tip):</strong> Mains Paper 3 हेतु उत्तर लेखन रणनीति: 'हरित इस्पात (Green Steel)' पर प्रश्न आने पर VGF, स्लरी पाइपलाइन और राष्ट्रीय हरित हाइड्रोजन मिशन के साथ इस्पात नीति का संबंध दर्शाएं।</div>
+            </div>
+            
+            <div class="yt-card">
+                <div class="yt-header">
+                    <span class="badge badge-yt">📺 कोचिंग शिक्षक विश्लेषण</span>
+                    <span class="topic-title">भारतीय बाल बालों का अंतरराष्ट्रीय व्यापार और चीन की स्मगलिंग चुनौती</span>
+                </div>
+                <div class="yt-explanation">
+                    <strong>शिक्षक व्याख्यान एवं ट्रिक्स:</strong>
+                    <p>निर्माण आईएएस (Nirman IAS) व्याख्यान में समझाया गया कि भारत का प्राकृतिक बाल (Human Hair) उद्योग $940 मिलियन का है, जिसे इसके उच्च गुणवत्ता व प्राकृतिक रंगों के लिए 'काला सोना' कहा जाता है, परंतु भारत इस मूल्य-वर्धन (Value Addition) का लाभ नहीं उठा पा रहा है।</p>
+                </div>
+                <div class="key-args">
+                    <strong>क्लास के मुख्य बिंदु (Key Lecture Points):</strong>
+                    <ul>
+                        <li>**कच्चे माल का अवैध निर्यात:** भारत से कच्चे बालों की तस्करी म्यांमार के रास्ते चीन को होती है, जहाँ चीन विग (Wigs) और हेयर एक्सटेंशन बनाकर भारी मुनाफा कमाता है।</li><li>**भारत में विग प्रसंस्करण का अभाव:** भारत में बाल प्रसंस्करण और मूल्य-संवर्धन (Processing Units) की औद्योगिक क्षमता अत्यंत सीमित है।</li><li>**नीतिगत सुधार की आवश्यकता:** सीमा पार तस्करी पर रोक और भारत के भीतर एमएसएमई आधारित विग विनिर्माण इकाइयों को प्रोत्साहन देना।</li>
+                    </ul>
+                </div>
+                <div class="exam-tip-box"><strong>💡 परीक्षा टिप (Exam Tip):</strong> RAS Paper 1 - अर्थव्यवस्था: 'कृषि एवं संबद्ध उत्पादों के मूल्य-वर्धन (Value Addition)' की तर्ज पर यह कुटीर व एमएसएमई उद्योग का सटीक केस स्टडी है।</div>
+            </div>
+            
+            <div class="yt-card">
+                <div class="yt-header">
+                    <span class="badge badge-yt">📺 कोचिंग शिक्षक विश्लेषण</span>
+                    <span class="topic-title">संयुक्त राष्ट्र महिला 'डिजिटल, इनोवेशन एवं एआई हब'</span>
+                </div>
+                <div class="yt-explanation">
+                    <strong>शिक्षक व्याख्यान एवं ट्रिक्स:</strong>
+                    <p>कोचिंग विश्लेषकों ने यूएन विमेन द्वारा शुरू किए गए नए डिजिटल हब पर चर्चा की। वर्तमान में केवल 20% एआई नौकरियां महिलाओं के पास हैं और लगभग 44% एआई सिस्टम लैंगिक पूर्वाग्रह (Gender Bias) प्रदर्शित करते हैं।</p>
+                </div>
+                <div class="key-args">
+                    <strong>क्लास के मुख्य बिंदु (Key Lecture Points):</strong>
+                    <ul>
+                        <li>**एआई में लैंगिक असमानता:** एआई एल्गोरिदम के प्रशिक्षण डेटा में पूर्वाग्रह के कारण महिलाओं के खिलाफ भेदभाव और ऑनलाइन हिंसा (Deepfakes/Harassment) बढ़ रही है।</li><li>**डिजिटल समावेशिता:** एआई नीति निर्माण और एआई बोर्ड्स में महिलाओं की 50% भागीदारी सुनिश्चित करने का प्रयास।</li><li>**सुरक्षित डिजिटल पारिस्थितिकी तंत्र:** महिला अधिकार कार्यकर्ताओं व पत्रकारों की एआई-संचालित ऑनलाइन हिंसा से सुरक्षा।</li>
+                    </ul>
+                </div>
+                <div class="exam-tip-box"><strong>💡 परीक्षा टिप (Exam Tip):</strong> UPSC GS2 / GS3 (Ethics & Governance in AI): 'एआई का सामाजिक एवं नैतिक प्रभाव' पर निबंध या 10-अंक प्रश्न में इस डेटा का प्रयोग करें।</div>
+            </div>
+            
+
+        <div class="section-title">🟣 राजस्थान सुजस, पत्रिका एवं दैनिक भास्कर (Rajasthan Sujas, Patrika & Bhaskar)</div>
+        
+            <div class="sujas-card">
+                <div class="sujas-header">
+                    <span class="badge badge-sujas">राजस्थान सुजस विशेष</span>
+                    <strong>गृह विभाग, राजस्थान सरकार / राजस्थान पुलिस</strong>
+                </div>
+                <h3>राजस्थान पुलिस 'शक्ति सुरक्षा अभियान'</h3>
+                <ul>
+                    <li>नवरात्रि व आगामी त्यौहारी सीजन के दौरान भीड़भाड़ वाले स्थानों, पांडालों और शिक्षण संस्थानों के बाहर महिला सुरक्षा का विशेष दस्ता तैनात।</li><li>मनचलों और असमाजिक तत्वों पर त्वरित कार्रवाई हेतु निर्भया स्क्वाड (Nirbhaya Squad) और सादे कपड़ों में पुलिसकर्मी तैनात।</li><li>महिला हेल्पलाइन 1090 और 112 के व्यापक प्रचार-प्रसार से तत्काल सहायता सुनिश्चित करना।</li>
+                </ul>
+                <div class="relevance-box"><strong>RPSC महत्व:</strong> RAS Mains Paper 3 - कानून व्यवस्था, महिला सुरक्षा एवं राज्य प्रशासनिक सुधार।</div>
+            </div>
+            
+            <div class="sujas-card">
+                <div class="sujas-header">
+                    <span class="badge badge-sujas">राजस्थान सुजस विशेष</span>
+                    <strong>उद्योग एवं वाणिज्य विभाग, राजस्थान सरकार</strong>
+                </div>
+                <h3>रीको (RIICO) का एकीकृत ई-लीज सिस्टम (E-Lease System)</h3>
+                <ul>
+                    <li>राजस्थान में औद्योगिक भूमि आवंटन के बाद लीज डीड प्रक्रिया को शत-प्रतिशत ऑनलाइन किया गया।</li><li>निवेशकों को अब सरकारी दफ्तरों के चक्कर काटने से मुक्ति मिलेगी और डिजिटल हस्ताक्षरित दस्तावेज तुरंत जारी होंगे।</li><li>ईज ऑफ डूइंग बिजनेस में राजस्थान की रैंकिंग सुधारने और नए औद्योगिक पार्कों में आवंटन प्रक्रिया को पारदर्शी बनाने का लक्ष्य।</li>
+                </ul>
+                <div class="relevance-box"><strong>RPSC महत्व:</strong> RAS Mains Paper 1 - राजस्थान की अर्थव्यवस्था एवं औद्योगिक विकास नीतियां।</div>
+            </div>
+            
+            <div class="sujas-card">
+                <div class="sujas-header">
+                    <span class="badge badge-sujas">राजस्थान सुजस विशेष</span>
+                    <strong>संस्कृति एवं जनसंपर्क (पत्रिका समाचार)</strong>
+                </div>
+                <h3>राजस्थान पत्रिका कार्टूनिस्ट अभिषेक तिवारी को 'कार्टून वॉच' लाइफटाइम अचीवमेंट अवॉर्ड</h3>
+                <ul>
+                    <li>राजस्थान पत्रिका के वरिष्ठ कार्टूनिस्ट अभिषेक तिवारी को राजनीतिक व सामाजिक व्यंग्य में उत्कृष्ट योगदान हेतु राष्ट्रीय 'कार्टून वॉच' लाइफटाइम अचीवमेंट सम्मान देने की घोषणा।</li><li>कार्टून आधारित पत्रकारिता में नागरिक जागरूकता और समसामयिक मुद्दों के सटीक चित्रण हेतु सम्मानित।</li>
+                </ul>
+                <div class="relevance-box"><strong>RPSC महत्व:</strong> RAS Pre - राजस्थान के प्रमुख व्यक्तित्व एवं पुरस्कार।</div>
+            </div>
+            
+            <div class="sujas-card">
+                <div class="sujas-header">
+                    <span class="badge badge-sujas">राजस्थान सुजस विशेष</span>
+                    <strong>सूचना एवं जनसंपर्क विभाग (DIPR राजस्थान)</strong>
+                </div>
+                <h3>राजस्थान सुजस बुलेटिन: पंचायती राज व मतदाता पंजीकरण अभियान</h3>
+                <ul>
+                    <li>पंचायती राज संस्थाओं के आगामी चुनाव व राजस्व प्रकरणों के त्वरित निस्तारण हेतु राजस्व लोक अदालत की रूपरेखा।</li><li>विशेष मतदाता पुनरीक्षण अभियान (SSR) के तहत युवाओं के शत-प्रतिशत नाम मतदाता सूची में जोड़ने का निर्देश।</li><li>'विकसित राजस्थान 2047' के लक्ष्यों के तहत ग्रामीण सुशासन को सुदृढ़ करने पर बल।</li>
+                </ul>
+                <div class="relevance-box"><strong>RPSC महत्व:</strong> RAS Pre/Mains - राजस्थान पंचायती राज संस्थाएं एवं लोकतांत्रिक प्रक्रिया।</div>
+            </div>
+            
+
+        <div class="section-title">🔴 सम्पादकीय एवं पत्रिका गहन विश्लेषण (The Hindu, Indian Express, ET, DownToEarth, योजना व कुरुक्षेत्र)</div>
+        
+            <div class="editorial-card">
+                <div class="editorial-header">
+                    <span class="badge badge-ed">The Hindu Editorial</span>
+                    <span class="syllabus-tag">GS3 / RAS Paper 1 - भारतीय अर्थव्यवस्था एवं कर सुधार</span>
+                </div>
+                <h3>जीएसटी परिषद के नए सुधार: 'गुड एंड सिंपल टैक्स' की दिशा में कदम</h3>
+                <p class="context"><strong>समसामयिक संदर्भ:</strong> हालिया जीएसटी परिषद की बैठक में प्रक्रियाओं के सरलीकरण, अनुपालन भार कम करने और पूंजी दक्षता बढ़ाने हेतु व्यापक संस्थागत सुधारों को मंजूरी दी गई है।</p>
+                <div class="key-args">
+                    <strong>सम्पादकीय का पूरा सार एवं तर्क (Deep Dive Takeaways):</strong>
+                    <ul>
+                        <li>**प्रक्रियात्मक जटिलताओं में कमी:** टैक्स स्लैब का सरलीकरण और इनपुट टैक्स क्रेडिट (ITC) के दावों में तेजी से उद्योग जगत की कार्यशील पूंजी (Working Capital) की फंसी हुई राशि मुक्त होगी।</li><li>**जीडीपी वृद्धि को प्रोत्साहन:** प्रक्रियात्मक सुधारों से व्यापार करने की लागत (Cost of Doing Business) घटेगी, जिससे भारतीय विनिर्माता वैश्विक प्रतिस्पर्धी बनेंगे।</li><li>**लघु व मध्यम उद्योगों (MSME) को राहत:** छोटे कारोबारियों पर बार-बार नोटिस भेजने व जटिल रिटर्न दाखिल करने के प्रशासनिक दबाव को कम किया गया है।</li><li>**संघवाद की मजबूती:** केंद्र और राज्यों के बीच राजस्व साझाकरण एवं विवाद निवारण तंत्र को सुचारू बनाने हेतु आपसी सहमति पर बल दिया गया है।</li>
+                    </ul>
+                </div>
+                <div class="way-forward"><strong>आगे की राह (Way Forward):</strong> जीएसटी ढाँचे को पूरी तरह पारदर्शी बनाने के लिए पेट्रोलियम व बिजली को जीएसटी के दायरे में लाना और 3-स्तरीय सरल स्लैब संरचना को शीघ्र लागू करना अनिवार्य है।</div>
+            </div>
+            
+            <div class="editorial-card">
+                <div class="editorial-header">
+                    <span class="badge badge-ed">Economic Times / Business Standard</span>
+                    <span class="syllabus-tag">GS3 / RAS Paper 1 - बैंकिंग व्यवस्था एवं विदेशी मुद्रा विनिमय</span>
+                </div>
+                <h3>भारतीय रुपया स्थिरीकरण एवं रिजर्व बैंक की मौद्रिक रणनीति</h3>
+                <p class="context"><strong>समसामयिक संदर्भ:</strong> बाह्य भू-राजनीतिक दबावों, कच्चे तेल की बढ़ती कीमतों और विदेशी पूंजी की निकासी के बीच आरबीआई ने रुपये के मूल्य में भारी गिरावट को रोकने हेतु विशेष विदेशी मुद्रा उपाय लागू किए हैं।</p>
+                <div class="key-args">
+                    <strong>सम्पादकीय का पूरा सार एवं तर्क (Deep Dive Takeaways):</strong>
+                    <ul>
+                        <li>**सरकारी तेल रिफाइनरियों हेतु डॉलर विंडो:** आरबीआई ने सार्वजनिक क्षेत्र की तेल कंपनियों के लिए सीधे डॉलर आपूर्ति विंडो खोली है, ताकि स्पॉट फॉरेक्स मार्केट में डॉलर की अत्यधिक मांग को नियंत्रित किया जा सके।</li><li>**फॉरेक्स डेरिवेटिव नियमों में सख्ती:** सट्टेबाजी (Speculation) को रोकने और फॉरवर्ड प्रीमियम को नियंत्रित करने के लिए रिजर्व बैंक ने डेरिवेटिव सौदों पर नई आरक्षित आवश्यकताएं लागू की हैं।</li><li>**अल्पकालिक राहत बनाम दीर्घकालिक अनिश्चितता:** विश्लेषकों के अनुसार इन उपायों से रुपये को तत्काल राहत मिलेगी, परंतु वैश्विक अनिश्चितता और व्यापार घाटा दीर्घकालिक चुनौती बना हुआ है।</li><li>**विदेशी मुद्रा भंडार का विवेकपूर्ण उपयोग:** रुपये को सहारा देने के लिए आरबीआई के आक्रामक हस्तक्षेप से विदेशी मुद्रा भंडार पर दबाव बढ़ता है, जिससे आयात कवर प्रभावित हो सकता है।</li>
+                    </ul>
+                </div>
+                <div class="way-forward"><strong>आगे की राह (Way Forward):</strong> केवल बाजार हस्तक्षेप पर निर्भर रहने के बजाय भारत को अपने निर्यात को आक्रामक रूप से बढ़ाना होगा और व्यापार घाटे को कम करने हेतु वैकल्पिक मुद्रा व्यापार (जैसे INR निपटान) को बढ़ावा देना होगा।</div>
+            </div>
+            
+            <div class="editorial-card">
+                <div class="editorial-header">
+                    <span class="badge badge-ed">Economic Times (Piyush Goyal Speech Analysis)</span>
+                    <span class="syllabus-tag">GS2 / GS3 - अंतरराष्ट्रीय व्यापार एवं नीतियां</span>
+                </div>
+                <h3>वैश्विक व्यापार संरक्षणवाद के दौर में भारत का एफटीए (FTA) नेटवर्क का विस्तार</h3>
+                <p class="context"><strong>समसामयिक संदर्भ:</strong> भारत ने पिछले साढ़े चार वर्षों में 38 विकसित देशों के साथ 9 मुक्त व्यापार समझौते (FTA) संपन्न किए हैं और अब यूके, कनाडा, जीसीसी (GCC) तथा यूराशियन इकोनॉमिक यूनियन के साथ वार्ता अंतिम चरण में है।</p>
+                <div class="key-args">
+                    <strong>सम्पादकीय का पूरा सार एवं तर्क (Deep Dive Takeaways):</strong>
+                    <ul>
+                        <li>**वैश्विक आपूर्ति श्रृंखला में एकीकरण:** संरक्षणवाद और भू-राजनीतिक तनावों (जैसे अमेरिका-चीन व्यापार युद्ध) के बीच भारत विकसित अर्थव्यवस्थाओं के साथ दीर्घकालिक साझेदारी बना रहा है।</li><li>**एमएसएमई एवं निर्यात संवर्धन:** एफटीए समझौतों से भारतीय कपड़ा, चमड़ा, कृषि और आईटी सेवाओं को विकसित बाजारों में शून्य या कम शुल्क पर प्रवेश मिल रहा है।</li><li>**बदलती वैश्विक परिस्थितियां एवं अमेरिका वार्ता:** अमेरिका में बदलते शुल्क परिदृश्य (Tariff Landscape) के कारण द्विपक्षीय व्यापार ढांचे को समकालीन वास्तविकताओं के अनुरूप पुनः तैयार किया जा रहा है।</li><li>**हितधारक परामर्श आधारित व्यापार नीति:** नौकरशाही तक सीमित रहने के बजाय भारत सरकार उद्योग निकायों और निर्यातकों की वास्तविक मांगों को वार्ता का आधार बना रही है।</li>
+                    </ul>
+                </div>
+                <div class="way-forward"><strong>आगे की राह (Way Forward):</strong> एफटीए समझौतों पर हस्ताक्षर करने के साथ-साथ घरेलू विनिर्माण क्षमता, लॉजिस्टिक्स लागत (जीडीपी के 14% से घटाकर 8-9% करना) और गैर-शुल्क बाधाओं (Non-tariff barriers) को दूर करना आवश्यक है।</div>
+            </div>
+            
+            <div class="editorial-card">
+                <div class="editorial-header">
+                    <span class="badge badge-ed">Down To Earth (Special Interview Feature)</span>
+                    <span class="syllabus-tag">GS3 / GS2 - पर्यावरण कानून, एआई अवसंरचना एवं वैश्विक दक्षिण (Global South)</span>
+                </div>
+                <h3>चिली का 'राष्ट्रीय डेटा सेंटर प्लान' और पर्यावरण बनाम विकास का संघर्ष</h3>
+                <p class="context"><strong>समसामयिक संदर्भ:</strong> चिली के 'MOSACAT' नागरिक आंदोलन ने गूगल के $200 मिलियन के डेटा सेंटर प्रोजेक्ट को उसकी अत्यधिक जल-खपत और गोपनीयता उल्लंघन के कारण रद्द करने पर मजबूर कर दिया, जिससे एआई अवसंरचना की पर्यावरणीय लागत उजागर हुई है।</p>
+                <div class="key-args">
+                    <strong>सम्पादकीय का पूरा सार एवं तर्क (Deep Dive Takeaways):</strong>
+                    <ul>
+                        <li>**वैश्विक दक्षिण पर पर्यावरणीय बोझ:** ग्लोबल नॉर्थ (विकसित देश) अपनी एआई तकनीक और डेटा प्रोसेसिंग के लिए ग्लोबल साउथ (विकासशील देशों) के जल व बिजली संसाधनों का दोहन कर रहे हैं।</li><li>**नियामक विफलता व 'EIA bypass':** चिली में डेटा सेंटर परियोजनाओं को 'पूर्ण पर्यावरण प्रभाव अध्ययन (EIS)' के बजाय त्वरित 'पर्यावरण प्रभाव घोषणा (EIA)' के माध्यम से मंजूरी देकर जल संरक्षण कानूनों को कमज़ोर किया गया।</li><li>**तापमान में वृद्धि एवं 'हीट आइलैंड':** 10 किमी के दायरे में डेटा सेंटर के कारण स्थानीय तापमान 9 डिग्री सेल्सियस तक बढ़ सकता है, जिससे निकटवर्ती समुदायों का जीवन प्रभावित होता है।</li><li>**न्यूनतम स्थानीय रोजगार:** एआई डेटा सेंटर्स अरबों डॉलर की पूंजी मांगते हैं लेकिन परिचालन चरण में केवल 50-60 अकुशल या सीमित नौकरियां ही स्थानीय लोगों को मिलती हैं।</li>
+                    </ul>
+                </div>
+                <div class="way-forward"><strong>आगे की राह (Way Forward):</strong> भारत जैसे तेजी से बढ़ते डेटा सेंटर बाजार को कड़े पर्यावरणीय कानून, बाध्यकारी जन-भागीदारी, जल पुनर्चक्रण (Zero Liquid Discharge) और सौर/पवन ऊर्जा का उपयोग अनिवार्य बनाना चाहिए।</div>
+            </div>
+            
+
+        <div class="section-title">📲 टेलीग्राम चैनल दैनिक प्रश्नोत्तरी व नोट्स (Telegram Daily Quiz & Notes)</div>
+            <div class="mains-card" style="border-left: 8px solid #0284c7; margin-bottom: 25px;">
+                <div class="mains-header">
+                    <span class="badge" style="background:#0284c7; color:white;">5 अंक (~50 शब्द)</span>
+                    <span class="badge" style="background:#1e3a8a; color:white;">@RPSC_RAS_Exam_Official</span>
+                    <span class="subject-tag">Paper 3 - कानून एवं महिला सुरक्षा व्यवस्था</span>
+                </div>
+                <h3 class="question-text">प्रश्न: राजस्थान के किस पुलिस अभियान के तहत नवरात्रि में महिलाओं व बालिकाओं की सुरक्षा हेतु विशेष दस्ते तैनात किए गए हैं?</h3>
+                <div class="answer-box">
+                    <strong class="ans-label">उत्तर ढांचा एवं विस्तृत नोट्स (~50 शब्द):</strong>
+                    <div class="answer-content">1. सही उत्तर एवं मुख्य तथ्य: **शक्ति सुरक्षा अभियान** - राजस्थान पुलिस विभाग द्वारा अक्टूबर 2026 में प्रारंभ।<br>2. ऐतिहासिक/भौगोलिक/नीतिगत संदर्भ: त्यौहारी सीजन में भीड़भाड़ वाले क्षेत्रों, धार्मिक स्थलों व डांडिया पंडालों में महिलाओं को सुरक्षित वातावरण देने व एक्सीडेंटल/एंटी-सोशल एलिमेंट्स पर नकेल कसने हेतु निर्भया टीम और स्थानीय थानों को एकीकृत किया गया है।<br>3. RPSC परीक्षा प्रासंगिकता: RAS Mains Paper 3 में राज्य की महिला सुरक्षा नीति व पुलिस सुधार उत्तर लेखन हेतु उपयोगी।</div>
+                </div>
+            </div>
+            
+            <div class="mains-card" style="border-left: 8px solid #0284c7; margin-bottom: 25px;">
+                <div class="mains-header">
+                    <span class="badge" style="background:#0284c7; color:white;">5 अंक (~50 शब्द)</span>
+                    <span class="badge" style="background:#1e3a8a; color:white;">@UPSC_DTE_Environment_Notes</span>
+                    <span class="subject-tag">Paper 2 - विज्ञान एवं प्रौद्योगिकी</span>
+                </div>
+                <h3 class="question-text">प्रश्न: वर्ष 2026 के रसायन विज्ञान नोबेल पुरस्कार विजेता Henri Kagan और Kenso Soai की प्रमुख खोज क्या है?</h3>
+                <div class="answer-box">
+                    <strong class="ans-label">उत्तर ढांचा एवं विस्तृत नोट्स (~50 शब्द):</strong>
+                    <div class="answer-content">1. सही उत्तर एवं मुख्य तथ्य: **असममित कार्बनिक संश्लेषण में स्व-उत्प्रेरण (Autocatalysis) एवं गैर-रेखीय प्रभाव** की खोज।<br>2. ऐतिहासिक/भौगोलिक/नीतिगत संदर्भ: इस खोज ने रसायन विज्ञान की 100 साल पुरानी 'होमोकिरालिटी' (प्रकृति में अणुओं का एक ही दर्पण-रूप में पाया जाना) की पहेली को सुलझाया, जो जीवन की उत्पत्ति को समझने के लिए मौलिक है।<br>3. RPSC परीक्षा प्रासंगिकता: RAS Pre/Mains Paper 2 (विज्ञान व प्रौद्योगिकी - रसायन विज्ञान अनुसंधान)।</div>
+                </div>
+            </div>
+            
+            <div class="mains-card" style="border-left: 8px solid #0284c7; margin-bottom: 25px;">
+                <div class="mains-header">
+                    <span class="badge" style="background:#0284c7; color:white;">5 अंक (~50 शब्द)</span>
+                    <span class="badge" style="background:#1e3a8a; color:white;">@Rajasthan_Economy_DIPR</span>
+                    <span class="subject-tag">Paper 1 - राजस्थान की अर्थव्यवस्था</span>
+                </div>
+                <h3 class="question-text">प्रश्न: राजस्थान रीको द्वारा हाल ही में शुरू की गई 'ई-लीज प्रणाली' (E-Lease System) का मुख्य उद्देश्य क्या है?</h3>
+                <div class="answer-box">
+                    <strong class="ans-label">उत्तर ढांचा एवं विस्तृत नोट्स (~50 शब्द):</strong>
+                    <div class="answer-content">1. सही उत्तर एवं मुख्य तथ्य: **औद्योगिक लीज डीड निष्पादन प्रक्रिया का पूर्ण डिजिटलीकरण।**<br>2. ऐतिहासिक/भौगोलिक/नीतिगत संदर्भ: रीको औद्योगिक क्षेत्रों में आवंटियों को लीज डीड प्रक्रिया में होने वाले विलंब व भ्रष्टाचार को समाप्त कर ई-हस्ताक्षरित ऑनलाइन दस्तावेज प्रदान करना तथा पारदर्शी निवेश माहौल बनाना।<br>3. RPSC परीक्षा प्रासंगिकता: RAS Mains Paper 1 (राजस्थान की अर्थव्यवस्था एवं औद्योगिक विकास)।</div>
+                </div>
+            </div>
+            
+            <div class="mains-card" style="border-left: 8px solid #0284c7; margin-bottom: 25px;">
+                <div class="mains-header">
+                    <span class="badge" style="background:#0284c7; color:white;">5 अंक (~50 शब्द)</span>
+                    <span class="badge" style="background:#1e3a8a; color:white;">@UPSC_Science_Daily_MCQs</span>
+                    <span class="subject-tag">Paper 2 - उन्नत प्रौद्योगिकी</span>
+                </div>
+                <h3 class="question-text">प्रश्न: वियना के वैज्ञानिकों द्वारा विकसित 'थोरियम-229' आधारित न्यूक्लियर क्लॉक (Nuclear Clock) की मुख्य विशेषता क्या है?</h3>
+                <div class="answer-box">
+                    <strong class="ans-label">उत्तर ढांचा एवं विस्तृत नोट्स (~50 शब्द):</strong>
+                    <div class="answer-content">1. सही उत्तर एवं मुख्य तथ्य: **विश्व की पहली स्व-स्थिर परमाणु नाभिकीय घड़ी (Self-stabilizing Nuclear Clock)।**<br>2. ऐतिहासिक/भौगोलिक/नीतिगत संदर्भ: पारंपरिक परमाणु घड़ियों के विपरीत यह इलेक्ट्रॉनों के बजाय थोरियम नाभिक (Nucleus) की कंपन दर का उपयोग करती है, जिससे यह बाह्य विद्युत-चुंबकीय व्यवधानों से अप्रभावित रहती है और अत्यधिक सटीक समय मापती है।<br>3. RPSC परीक्षा प्रासंगिकता: UPSC/RAS Pre - अंतरिक्ष, जीपीएस एवं समय मापन प्रौद्योगिकी।</div>
+                </div>
+            </div>
+            
+    </div>
+
+    <script>
+        function setFontSize(size) {
+            document.documentElement.style.setProperty('--base-font-size', size + 'px');
+            localStorage.setItem('ras_notes_font_size', size);
+            document.querySelectorAll('.toolbar-btns .t-btn').forEach(b => {
+                if (b.innerText.includes(size + 'px')) b.classList.add('active');
+                else if (b.innerText.includes('px')) b.classList.remove('active');
+            });
+        }
+
+        function toggleTheme(theme) {
+            document.body.classList.remove('dark-mode', 'sepia-mode');
+            if (theme === 'dark') document.body.classList.add('dark-mode');
+            else if (theme === 'sepia') document.body.classList.add('sepia-mode');
+            localStorage.setItem('ras_notes_theme', theme);
+        }
+
+        // Load saved preferences
+        (function() {
+            const savedSize = localStorage.getItem('ras_notes_font_size') || 26;
+            setFontSize(savedSize);
+            const savedTheme = localStorage.getItem('ras_notes_theme');
+            if (savedTheme) toggleTheme(savedTheme);
+        })();
+    </script>
+</body>
+</html>
