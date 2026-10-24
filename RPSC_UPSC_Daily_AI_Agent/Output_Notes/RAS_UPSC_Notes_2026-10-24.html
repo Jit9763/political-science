@@ -1,0 +1,865 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RAS & UPSC Daily Notes - 2026-10-24</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style id="customStyle">
+        :root {
+            --base-font-size: 24px;
+            --base-line-height: 1.85;
+            --primary: #1e1b4b;
+            --primary-light: #2563eb;
+            --secondary: #0f766e;
+            --accent-gold: #b45309;
+            --accent-purple: #6b21a8;
+            --accent-red: #9f1239;
+            --bg-main: #f8fafc;
+            --card-bg: #ffffff;
+            --text-dark: #020617;
+            --border-color: #cbd5e1;
+            --box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+        }
+
+        body.dark-mode {
+            --bg-main: #090d16;
+            --card-bg: #111827;
+            --text-dark: #f8fafc;
+            --border-color: #374151;
+            --box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+        }
+
+        body.sepia-mode {
+            --bg-main: #fbf0d9;
+            --card-bg: #fffdf7;
+            --text-dark: #2d2215;
+            --border-color: #e2d3b5;
+        }
+
+        body {
+            font-family: 'Noto Sans Devanagari', 'Segoe UI', Tahoma, sans-serif;
+            background-color: var(--bg-main);
+            color: var(--text-dark);
+            margin: 0;
+            padding: 25px;
+            line-height: var(--base-line-height);
+            font-size: var(--base-font-size);
+            transition: background-color 0.2s, font-size 0.15s;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* Eye-Comfort High Definition Typography */
+        p, li, div, span, td, th {
+            font-size: var(--base-font-size);
+            line-height: var(--base-line-height);
+        }
+
+        b, strong {
+            color: #b91c1c;
+            font-weight: 800;
+        }
+        body.dark-mode b, body.dark-mode strong {
+            color: #f87171;
+        }
+
+        .blue-highlight {
+            color: #1e3a8a;
+            font-weight: 800;
+        }
+        body.dark-mode .blue-highlight {
+            color: #60a5fa;
+        }
+
+        .container {
+            max-width: 1300px;
+            margin: 0 auto;
+        }
+
+        /* Sticky Eye-Comfort Controls Toolbar */
+        .reader-toolbar {
+            position: sticky;
+            top: 15px;
+            z-index: 999;
+            background: rgba(15, 23, 42, 0.95);
+            backdrop-filter: blur(10px);
+            color: white;
+            padding: 12px 24px;
+            border-radius: 50px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+            margin-bottom: 25px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 12px;
+            border: 2px solid #334155;
+        }
+
+        .toolbar-title {
+            font-size: 19px;
+            font-weight: 800;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .toolbar-btns {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .t-btn {
+            background: #1e293b;
+            color: white;
+            border: 1px solid #475569;
+            padding: 8px 16px;
+            border-radius: 25px;
+            font-size: 16px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.2s;
+            font-family: inherit;
+        }
+
+        .t-btn:hover, .t-btn.active {
+            background: #2563eb;
+            border-color: #60a5fa;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 10px rgba(37,99,235,0.4);
+        }
+
+        .header {
+            background: linear-gradient(135deg, #09090b 0%, #1e1b4b 50%, #0f766e 100%);
+            color: white;
+            padding: 35px 40px;
+            border-radius: 20px;
+            box-shadow: 0 15px 30px -5px rgba(0,0,0,0.25);
+            margin-bottom: 35px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border: 3px solid #3b82f6;
+        }
+        .header h1 { margin: 0 0 10px 0; font-size: 36px; font-weight: 900; letter-spacing: -0.5px; }
+        .header p { margin: 0; opacity: 0.95; font-size: 22px; font-weight: 600; }
+
+        /* Large Chapter 7 Style Section Headers */
+        .section-title {
+            font-size: 32px;
+            font-weight: 900;
+            margin: 45px 0 25px 0;
+            padding: 18px 26px;
+            background: var(--card-bg);
+            border-radius: 14px;
+            border-left: 14px solid var(--primary-light);
+            box-shadow: var(--box-shadow);
+            color: var(--text-dark);
+            border-top: 1px solid var(--border-color);
+            border-right: 1px solid var(--border-color);
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .badge {
+            padding: 8px 16px;
+            border-radius: 10px;
+            font-size: 17px;
+            font-weight: 800;
+            color: white;
+            display: inline-block;
+        }
+        .badge-pre { background-color: var(--accent-gold); }
+        .badge-raj { background-color: var(--accent-purple); }
+        .badge-5m { background-color: #0284c7; }
+        .badge-10m { background-color: #4338ca; }
+        .badge-sujas { background-color: #0d9488; }
+        .badge-ed { background-color: var(--accent-red); }
+        .badge-yt { background-color: #dc2626; }
+
+        /* Big, Comfortable Eye-Friendly Cards */
+        .fact-card, .mains-card, .sujas-card, .editorial-card, .yt-card {
+            background: var(--card-bg);
+            border-radius: 18px;
+            padding: 32px;
+            margin-bottom: 30px;
+            box-shadow: var(--box-shadow);
+            border: 2px solid var(--border-color);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .fact-card:hover, .mains-card:hover, .sujas-card:hover, .editorial-card:hover, .yt-card:hover {
+            box-shadow: 0 12px 28px rgba(0,0,0,0.1);
+        }
+
+        .fact-card { border-left: 14px solid var(--accent-gold); }
+        .mains-card { border-left: 14px solid #4338ca; }
+        .sujas-card { border-left: 14px solid var(--accent-purple); }
+        .editorial-card { border-left: 14px solid var(--accent-red); }
+        .yt-card { border-left: 14px solid #dc2626; background: var(--card-bg); }
+
+        .card-header, .mains-header, .sujas-header, .editorial-header, .yt-header {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 16px;
+            flex-wrap: wrap;
+        }
+        .topic-title { font-weight: 900; font-size: 26px; color: var(--text-dark); }
+        .fact-text { margin: 0; color: var(--text-dark); font-size: var(--base-font-size); line-height: var(--base-line-height); font-weight: 500; }
+        .question-text { margin: 12px 0 18px 0; color: #1e3a8a; font-size: calc(var(--base-font-size) + 4px); font-weight: 900; line-height: 1.6; }
+        body.dark-mode .question-text { color: #93c5fd; }
+
+        .answer-box {
+            background: #f1f5f9;
+            padding: 26px;
+            border-radius: 14px;
+            font-size: var(--base-font-size);
+            border: 2px solid #cbd5e1;
+            line-height: var(--base-line-height);
+        }
+        body.dark-mode .answer-box {
+            background: #1f2937;
+            border-color: #4b5563;
+        }
+        body.sepia-mode .answer-box {
+            background: #f4ebd0;
+            border-color: #dcd0b1;
+        }
+
+        .ans-label {
+            font-size: calc(var(--base-font-size) + 2px);
+            color: #1e3a8a;
+            display: block;
+            margin-bottom: 10px;
+            font-weight: 800;
+        }
+        body.dark-mode .ans-label { color: #60a5fa; }
+
+        .relevance-box, .way-forward {
+            background: #ecfdf5;
+            color: #065f46;
+            padding: 18px 24px;
+            border-radius: 12px;
+            margin-top: 20px;
+            font-size: calc(var(--base-font-size) - 1px);
+            border-left: 8px solid #10b981;
+            font-weight: 600;
+            border: 1px solid #a7f3d0;
+            border-left-width: 8px;
+        }
+        body.dark-mode .relevance-box, body.dark-mode .way-forward {
+            background: #064e3b;
+            color: #a7f3d0;
+            border-color: #059669;
+        }
+
+        .exam-tip-box {
+            background: #fefce8;
+            color: #854d0e;
+            padding: 18px 24px;
+            border-radius: 12px;
+            margin-top: 20px;
+            font-size: calc(var(--base-font-size) - 1px);
+            border-left: 8px solid #eab308;
+            font-weight: 600;
+            border: 1px solid #fef08a;
+            border-left-width: 8px;
+        }
+        body.dark-mode .exam-tip-box {
+            background: #713f12;
+            color: #fef08a;
+            border-color: #eab308;
+        }
+
+        ul { margin: 12px 0; padding-left: 30px; }
+        li { margin-bottom: 12px; font-size: var(--base-font-size); line-height: var(--base-line-height); }
+
+        @media print {
+            .reader-toolbar, .print-btn { display: none !important; }
+            body { background: white !important; color: black !important; padding: 0 !important; font-size: 16pt !important; }
+            .container { max-width: 100% !important; }
+            .fact-card, .mains-card, .sujas-card, .editorial-card, .yt-card { page-break-inside: avoid; border: 1px solid #999 !important; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Floating Interactive Eye-Comfort Toolbar -->
+        <div class="reader-toolbar">
+            <div class="toolbar-title">
+                <span>👁️ नेत्र-अनुकूल फॉन्ट व पठन मोड</span>
+            </div>
+            <div class="toolbar-btns">
+                <button class="t-btn" onclick="setFontSize(22)">A सामान्य (22px)</button>
+                <button class="t-btn active" id="btn-ch7" onclick="setFontSize(26)">🔠 बड़ा / Ch-7 स्टाइल (26px)</button>
+                <button class="t-btn" onclick="setFontSize(30)">🔍 अल्ट्रा लार्ज (30px)</button>
+                <button class="t-btn" onclick="toggleTheme('light')">☀️ लाइट</button>
+                <button class="t-btn" onclick="toggleTheme('sepia')">📜 सेपिया</button>
+                <button class="t-btn" onclick="toggleTheme('dark')">🌙 डार्क मोड</button>
+                <button class="t-btn" style="background:#059669; border-color:#10b981;" onclick="window.print()">🖨️ PDF प्रिंट</button>
+            </div>
+        </div>
+
+        <div class="header">
+            <div>
+                <h1>RPSC RAS & UPSC दैनिक समसामयिकी एवं सम्पादकीय विश्लेषण</h1>
+                <p>दिनांक: 2026-10-24 | RAS Pre & Mains (5M & 10M) विशेष मास्टर नोट्स</p>
+            </div>
+        </div>
+
+        <div class="section-title">🟡 प्रारंभिक परीक्षा तथ्य (RAS & UPSC Prelims Tracker)</div>
+        
+            <div class="fact-card">
+                <div class="card-header">
+                    <span class="badge badge-pre">UPSC Pre / RAS Pre (विज्ञान एवं प्रौद्योगिकी)</span>
+                    <span class="topic-title">रसायन विज्ञान का नोबेल पुरस्कार 2026</span>
+                </div>
+                <p class="fact-text">रॉयल स्वीडिश एकेडमी ऑफ साइंसेज द्वारा वर्ष 2026 का रसायन नोबेल आंद्रे बी. कगान (फ्रांस) और केंसो सोई (जापान) को 'असममित कार्बनिक संश्लेषण में अरैखिक प्रभावों और स्व-उत्प्रेरण (autocatalysis)' की खोज के लिए संयुक्त रूप से प्रदान किया गया, जिसने जीवन की समरूपता (homochirality) की पहेली को सुलझाया।</p>
+            </div>
+            
+            <div class="fact-card">
+                <div class="card-header">
+                    <span class="badge badge-pre">UPSC Pre / RAS Pre (विज्ञान एवं प्रौद्योगिकी)</span>
+                    <span class="topic-title">भौतिकी का नोबेल पुरस्कार 2026</span>
+                </div>
+                <p class="fact-text">भौतिकी का 2026 का नोबेल पुरस्कार फ्रांसिस हाल्ज़ेन (विस्कॉन्सिन-मैडिसन विश्वविद्यालय, यूएसए) को दक्षिणी ध्रुव पर स्थित 'आइसक्यूब न्यूट्रिनो वेधशाला' में निर्णायक योगदान और खगोलीय मूल के उच्च-ऊर्जा न्यूट्रिनो की खोज के लिए दिया गया।</p>
+            </div>
+            
+            <div class="fact-card">
+                <div class="card-header">
+                    <span class="badge badge-pre">UPSC Pre / RAS Pre (विज्ञान)</span>
+                    <span class="topic-title">ऑस्कर क्लेन पदक (Oskar Klein Medal)</span>
+                </div>
+                <p class="fact-text">प्रख्यात भारतीय सैद्धांतिक भौतिक विज्ञानी प्रो. अशोक सेन ऑस्कर क्लेन पदक प्राप्त करने वाले पहले भारतीय भौतिक विज्ञानी बने; इन्हें स्ट्रिंग फील्ड थ्योरी, ब्लैक होल एन्ट्रापी और एस-डुएलिटी (S-duality) में उत्कृष्ट योगदान हेतु सम्मानित किया गया।</p>
+            </div>
+            
+            <div class="fact-card">
+                <div class="card-header">
+                    <span class="badge badge-pre">UPSC Pre / RAS Pre (भारतीय अर्थव्यवस्था व कृषि)</span>
+                    <span class="topic-title">एग्रीस्टैक (AgriStack) एवं डिजिटल फार्मर आईडी</span>
+                </div>
+                <p class="fact-text">केंद्रीय कृषि मंत्रालय ने मार्च 2027 के अपने निर्धारित लक्ष्य से पूर्व ही एग्रीस्टैक फ्रेमवर्क के तहत 11 करोड़ विशिष्ट किसान पहचान पत्र (Unique Farmer IDs) सृजित करने की ऐतिहासिक उपलब्धि हासिल की।</p>
+            </div>
+            
+            <div class="fact-card">
+                <div class="card-header">
+                    <span class="badge badge-pre">UPSC Pre / RAS Pre (भौतिक/रसायन विज्ञान)</span>
+                    <span class="topic-title">कार्बन का नवीन अपररूप: डायमंडायन (Diamondiyne)</span>
+                </div>
+                <p class="fact-text">वैज्ञानिकों द्वारा कार्बन के एक नए अति-कठोर क्रिस्टलीय अपररूप 'डायमंडायन' (Diamondiyne) की खोज की गई है, जिसमें sp3 और sp संकरित कार्बन परमाणुओं का संयोजन पाया जाता है।</p>
+            </div>
+            
+            <div class="fact-card">
+                <div class="card-header">
+                    <span class="badge badge-pre">UPSC Pre (खगोल विज्ञान)</span>
+                    <span class="topic-title">यूरेनस के चंद्रमा (एरियल और अम्ब्रिएल) खोज की 175वीं वर्षगांठ</span>
+                </div>
+                <p class="fact-text">24 अक्टूबर 1851 को शौकिया खगोलशास्त्री विलियम लासेल (William Lassell) द्वारा यूरेनस ग्रह के दो उपग्रहों - एरियल (Ariel) और अम्ब्रिएल (Umbriel) की खोज की गई थी।</p>
+            </div>
+            
+            <div class="fact-card">
+                <div class="card-header">
+                    <span class="badge badge-pre">UPSC Pre / RAS Pre (अंतर्राष्ट्रीय संगठन व सामाजिक मुद्दे)</span>
+                    <span class="topic-title">संयुक्त राष्ट्र महिला डिजिटल व एआई हब (UN Women Digital, Innovation & AI Hub)</span>
+                </div>
+                <p class="fact-text">यूएन विमेन (UN Women) ने 81वें संयुक्त राष्ट्र महासभा सत्र के दौरान डिजिटल परिवर्तन और कृत्रिम बुद्धिमत्ता के नीति-निर्माण में लैंगिक समानता को केंद्र में लाने हेतु वैश्विक 'डिजिटल, इनोवेशन एंड एआई हब' का शुभारंभ किया।</p>
+            </div>
+            
+            <div class="fact-card">
+                <div class="card-header">
+                    <span class="badge badge-pre">UPSC Pre / RAS Pre (अर्थव्यवस्था व सांख्यिकी)</span>
+                    <span class="topic-title">आवधिक श्रम बल सर्वेक्षण (PLFS) सुधार</span>
+                </div>
+                <p class="fact-text">राष्ट्रीय सांख्यिकी कार्यालय (NSO) ने घोषणा की है कि जनवरी 2027 से पीएलएफएस सर्वेक्षण में डिजिटल प्लेटफॉर्म/गिग वर्कर्स, अवैतनिक घरेलू श्रम, देखभाल कार्य (care economy) तथा श्रम अल्प-उपयोगिता को ट्रैक करने के लिए अलग प्रतिदर्श स्तर जोड़ा जाएगा।</p>
+            </div>
+            
+            <div class="fact-card">
+                <div class="card-header">
+                    <span class="badge badge-pre">UPSC Pre / RAS Pre (बैंकिंग एवं मौद्रिक प्रणाली)</span>
+                    <span class="topic-title">अपर-लेयर NBFCs की लिस्टिंग अनिवार्यता</span>
+                </div>
+                <p class="fact-text">भारतीय रिजर्व बैंक (RBI) के स्केल-आधारित विनियामक ढांचे के तहत अपर लेयर (Scale-Based Regulation Upper Layer) में वर्गीकृत गैर-बैंकिंग वित्तीय कंपनियों (NBFCs) को अनिवार्य रूप से शेयर बाजार में सूचीबद्ध होना आवश्यक है।</p>
+            </div>
+            
+            <div class="fact-card">
+                <div class="card-header">
+                    <span class="badge badge-pre">UPSC Pre / RAS Pre (स्वास्थ्य एवं जैव प्रौद्योगिकी)</span>
+                    <span class="topic-title">शमोंडा वायरस (Shamonda Virus)</span>
+                </div>
+                <p class="fact-text">फ्रांस में ऑर्थोबुन्यावायरस (Orthobunyavirus) कुल से संबंधित 'शमोंडा वायरस' के जूनोटिक संक्रमण के कारण पहली मानव मृत्यु दर्ज की गई, जो मुख्य रूप से जुगाली करने वाले मवेशियों और कीड़ों से फैलता है।</p>
+            </div>
+            
+            <div class="fact-card">
+                <div class="card-header">
+                    <span class="badge badge-pre">UPSC Pre / RAS Pre (पर्यावरण एवं पारिस्थितिकी)</span>
+                    <span class="topic-title">अंतर्राष्ट्रीय हिम तेंदुआ दिवस (International Snow Leopard Day)</span>
+                </div>
+                <p class="fact-text">प्रतिवर्ष 23-24 अक्टूबर को अंतर्राष्ट्रीय हिम तेंदुआ दिवस मनाया जाता है। इसका लक्ष्य मध्य एशिया और हिमालयी उच्च-पर्वतीय पारिस्थितिकी तंत्र के शीर्ष शिकारी 'पैंथरा अनकिया' (IUCN: Vulnerable, CITES: Appendix I) का संरक्षण करना है।</p>
+            </div>
+            
+            <div class="fact-card">
+                <div class="card-header">
+                    <span class="badge badge-pre">UPSC Pre (भौतिक भूगोल)</span>
+                    <span class="topic-title">किकाई काल्डेरा सुपरवोलकैनो (Kikai Caldera)</span>
+                </div>
+                <p class="fact-text">जापान के तट पर स्थित किकाई जलमग्न काल्डेरा (Kikai Submarine Caldera) में 7,300 वर्षों बाद पुनः ताजे मैग्मा का विशाल भंडार एकत्रित होने के भूकम्पीय साक्ष्य प्राप्त हुए हैं।</p>
+            </div>
+            
+            <div class="fact-card">
+                <div class="card-header">
+                    <span class="badge badge-raj">RAS Pre (राजस्थान भूगोल व जल संसाधन)</span>
+                    <span class="topic-title">राजस्थान नहरी जल ऑनलाइन शेड्यूलिंग प्रणाली</span>
+                </div>
+                <p class="fact-text">राजस्थान जल संसाधन विभाग द्वारा इंदिरा गांधी नहर परियोजना (IGNP) और गंग नहर कमान क्षेत्र के किसानों के लिए जल वितरण चक्र (बारी प्रणाली) को पारदर्शी बनाने हेतु ऑनलाइन रियल-टाइम शेड्यूलिंग पोर्टल प्रारंभ किया गया।</p>
+            </div>
+            
+            <div class="fact-card">
+                <div class="card-header">
+                    <span class="badge badge-raj">RAS Pre (राजस्थान का आर्थिक व भौगोलिक परिदृश्य)</span>
+                    <span class="topic-title">राजस्थान सुजस: हनुमानगढ़ जिला विशिष्टता</span>
+                </div>
+                <p class="fact-text">डीआईपीआर राजस्थान की जिला डायरी के अनुसार हनुमानगढ़ जिला कपास (सफेद सोना) उत्पादन, किन्नू के बागानों तथा खेल सामग्री (क्रिकेट बैट व वॉलीबॉल प्रतिभाओं) के प्रमुख केंद्र के रूप में पहचाना गया है।</p>
+            </div>
+            
+            <div class="fact-card">
+                <div class="card-header">
+                    <span class="badge badge-raj">RAS Pre / Mains (राजस्थान प्रशासनिक ढांचा)</span>
+                    <span class="topic-title">राजस्थान भ्रष्टाचार निरोधक अधिनियम 1988: धारा 17ए स्वीकृति</span>
+                </div>
+                <p class="fact-text">राजस्थान राज्य सरकार द्वारा भ्रष्टाचार निवारण (संशोधन) अधिनियम 2018 की धारा 17A के तहत राज्य सेवा और अखिल भारतीय सेवा के 27 वरिष्ठ अधिकारियों के विरुद्ध अभियोजन चलाने की औपचारिक स्वीकृति जारी की गई।</p>
+            </div>
+            
+
+        <div class="section-title">🔵 मुख्य परीक्षा उत्तर लेखन मॉडल सेट (RAS Mains - 5M & 10M)</div>
+        
+            <div class="mains-card">
+                <div class="mains-header">
+                    <span class="badge badge-5m">5 अंक (Paper 1)</span>
+                    <span class="subject-tag">भारतीय अर्थव्यवस्था एवं कृषि</span>
+                </div>
+                <h3 class="question-text">प्रश्न: डिजिटल सार्वजनिक अवसंरचना (DPI) के रूप में 'एग्रीस्टैक' (AgriStack) के मुख्य घटकों और भारतीय कृषि पर इसके प्रभावों को रेखांकित कीजिए। (शब्द सीमा: ~50 शब्द)</h3>
+                
+                <div class="answer-box">
+                    <strong class="ans-label">उत्तर ढांचा (~50 शब्द):</strong>
+                    <div class="answer-content">1. घटक: किसान रजिस्ट्री (विशिष्ट डिजिटल फार्मर आईडी), भू-संदर्भित ग्रामीण भूमि रिकॉर्ड (जियो-रेफरेंसिंग), और फसल बोने की रजिस्ट्री।<br>2. लाभ: पीएम-किसान, फसल बीमा, केसीसी और उर्वरक सब्सिडी का सीधा, पारदर्शी और पेपरलेस हस्तांतरण।<br>3. प्रभाव: बिचौलियों का उन्मूलन, सटीक कृषि ऋण मूल्यांकन, जलवायु अनुकूल डेटा-आधारित कृषि परामर्श और वित्तीय समावेशन में ऐतिहासिक प्रगति।</div>
+                </div>
+                
+            </div>
+            
+            <div class="mains-card">
+                <div class="mains-header">
+                    <span class="badge badge-5m">5 अंक (Paper 2)</span>
+                    <span class="subject-tag">विज्ञान एवं प्रौद्योगिकी (रसायन एवं फार्मा)</span>
+                </div>
+                <h3 class="question-text">प्रश्न: रसायन विज्ञान में 'होमोकायरैलिटी' (Homochirality) से क्या तात्पर्य है? फार्मास्युटिकल उद्योग में इसका क्या महत्व है? (शब्द सीमा: ~50 शब्द)</h3>
+                
+                <div class="answer-box">
+                    <strong class="ans-label">उत्तर ढांचा (~50 शब्द):</strong>
+                    <div class="answer-content">1. अर्थ: जीवन के रासायनिक अणुओं (जैसे अमीनो एसिड, शर्करा) का दो दर्पण प्रतिबिंबों (enantiomers) में से केवल एक ही विशिष्ट अभिविन्यास में प्राकृतिक रूप से उपस्थित होना।<br>2. फार्मास्युटिकल महत्व: कई औषधियों में केवल एक दर्पण-छवि (एनांशियोमर) ही चिकित्सीय रूप से प्रभावी होती है, जबकि दूसरा अक्रिय या थैलिडोमाइड जैसी भीषण विषाक्तता पैदा कर सकता है। अतः असममित संश्लेषण सुरक्षित दवाओं के निर्माण की पूर्वशर्त है।</div>
+                </div>
+                
+            </div>
+            
+            <div class="mains-card">
+                <div class="mains-header">
+                    <span class="badge badge-5m">5 अंक (Paper 3)</span>
+                    <span class="subject-tag">लोक प्रशासन एवं प्रशासनिक नैतिकता</span>
+                </div>
+                <h3 class="question-text">प्रश्न: भ्रष्टाचार निवारण (संशोधन) अधिनियम, 2018 की धारा 17A क्या है? इसके पक्ष और विपक्ष में मुख्य तर्क प्रस्तुत कीजिए। (शब्द सीमा: ~50 शब्द)</h3>
+                
+                <div class="answer-box">
+                    <strong class="ans-label">उत्तर ढांचा (~50 शब्द):</strong>
+                    <div class="answer-content">1. धारा 17A: लोक सेवकों द्वारा पदीय कर्तव्यों के तहत लिए गए निर्णयों की जांच/जांच शुरू करने से पहले सक्षम प्राधिकारी की पूर्व स्वीकृति अनिवार्य करती है।<br>2. पक्ष: दुर्भावनापूर्ण और झूठी शिकायतों से ईमानदार अधिकारियों को नीतिगत पक्षाघात (policy paralysis) से संरक्षण।<br>3. विपक्ष: सक्षम प्राधिकारियों द्वारा अनुमति देने में अत्यधिक विलंब के कारण भ्रष्ट अधिकारियों के लिए एक सुरक्षा कवच बन जाना।</div>
+                </div>
+                
+            </div>
+            
+            <div class="mains-card">
+                <div class="mains-header">
+                    <span class="badge badge-10m">10 अंक (Paper 3)</span>
+                    <span class="subject-tag">पर्यावरण, पारिस्थितिकी एवं नीतिशास्त्र</span>
+                </div>
+                <h3 class="question-text">प्रश्न: कृत्रिम बुद्धिमत्ता (AI) के बुनियादी ढांचे के रूप में 'डेटा केंद्रों' (Data Centers) के अंधाधुंध विस्तार से उत्पन्न सामाजिक-पारिस्थितिकीय चुनौतियों का समालोचनात्मक मूल्यांकन कीजिए। भारत के लिए इस संबंध में क्या नियामक सुरक्षा उपाय आवश्यक हैं? (शब्द सीमा: ~150-200 शब्द)</h3>
+                
+                <div class="answer-box">
+                    <div class="ans-section"><strong class="ans-label">भूमिका (Introduction):</strong><br>वैश्विक डिजिटल अर्थव्यवस्था और कृत्रिम बुद्धिमत्ता (AI) के तीव्र प्रसार ने बड़े पैमाने पर हाइपरस्केल डेटा केंद्रों की मांग बढ़ा दी है, जिसे प्रायः पर्यावरण-अनुकूल समझा जाता है किंतु यह अत्यधिक संसाधन-गहन उद्योग है।</div>
+                    <div class="ans-section"><strong class="ans-label">मुख्य भाग (Body & Rajasthan Context):</strong><br>1. प्रमुख सामाजिक-पारिस्थितिकीय चुनौतियां:<br>- जल संकट: डेटा सेंटरों के कूलिंग टावरों में लाखों लीटर भूजल और ताजे जल की खपत होती है, जिससे चिली (सैरिलोस संघर्ष) और भारत जैसे जल-तनावग्रस्त देशों में पेयजल व कृषि पर संकट पैदा होता है।<br>- अत्यधिक ऊर्जा खपत व उत्सर्जन: 1 गीगावाट (GW) डेटा केंद्र पूरे शहरों जितनी बिजली और निरंतर बैकअप हेतु विशाल डीजल जनरेटर का उपयोग करते हैं, जिससे कार्बन उत्सर्जन और 'अर्बन हीट आइलैंड' प्रभाव उत्पन्न होता है।<br>- सीमित रोजगार सृजन: विशाल पूंजीगत निवेश और भूमि अधिग्रहण के अनुपात में डेटा केंद्र नाममात्र के (अत्यंत कम और तकनीकी रूप से सीमित) स्थायी रोजगार देते हैं।<br>- नियामक रियायतें एवं पर्यावरण प्रभाव आकलन (EIA) का क्षरण: आंध्र प्रदेश द्वारा डेटा सेंटर को 'डीम्ड डिस्कॉम' का दर्जा देना या चिली में व्यापक EIA के बजाय त्वरित घोषणाओं (Declarations) से अनुमति देना पर्यावरणीय निगरानी को शिथिल करता है।<br><br>2. भारत हेतु आवश्यक सुरक्षा उपाय:<br>- अनिवार्य व्यापक ईआईए (EIA): डेटा केंद्रों को केवल औद्योगिक वर्ग में न रखकर उनके जल और वायु पदचिह्न की विस्तृत पर्यावरणीय जांच अनिवार्य हो।<br>- शून्य तरल निर्वहन (ZLD) व शुष्क/एयर-कूलिंग: जल-शीतलन तकनीकों के स्थान पर बंद लूप या गैर-पेयजल/शोधित अपशिष्ट जल का अनिवार्य उपयोग।<br>- अनिवार्य नवीकरणीय ऊर्जा खरीद (RPO): ऊर्जा आपूर्ति हेतु स्वच्छ ग्रिड से 100% हरित ऊर्जा का उपयोग।<br>- स्थानीय समुदाय की बाध्यकारी भागीदारी (FPIC): भूमि और स्थानीय जल संसाधनों पर अधिकार के लिए ग्राम सभाओं और नगर निकायों की जनसुनवाई बाध्यकारी बनाई जाए।</div>
+                    <div class="ans-section"><strong class="ans-label">निष्कर्ष (Conclusion):</strong><br>डिजिटल संप्रभुता और एआई महाशक्ति बनने की आकांक्षा को पारिस्थितिक सीमाओं और स्थानीय जल सुरक्षा की कीमत पर पूरा नहीं किया जा सकता; धारणीय डेटा-गवर्नेंस ढांचा समय की मांग है।</div>
+                </div>
+                
+            </div>
+            
+            <div class="mains-card">
+                <div class="mains-header">
+                    <span class="badge badge-10m">10 अंक (Paper 2)</span>
+                    <span class="subject-tag">प्रौद्योगिकी, समाज एवं श्रम अर्थशास्त्र</span>
+                </div>
+                <h3 class="question-text">प्रश्न: 'एआई क्रांति केवल एल्गोरिदम की नहीं, बल्कि अदृश्य मानवीय श्रम के दोहन की भी उपज है।' फिल्म 'ह्यूमन्स इन द लूप' और वैश्विक प्रवृत्तियों के संदर्भ में डिजिटल श्रम की असुरक्षा और नैतिक दुविधाओं का परीक्षण कीजिए। (शब्द सीमा: ~150-200 शब्द)</h3>
+                
+                <div class="answer-box">
+                    <div class="ans-section"><strong class="ans-label">भूमिका (Introduction):</strong><br>आधुनिक कृत्रिम बुद्धिमत्ता और मशीन लर्निंग मॉडल पूरी तरह स्वायत्त नहीं हैं; उनकी सटीकता लाखों श्रमिकों द्वारा किए जाने वाले डेटा लेबलिंग, एनोटेशन और कंटेंट मॉडरेशन के अदृश्य मानवीय श्रम पर टिकी है।</div>
+                    <div class="ans-section"><strong class="ans-label">मुख्य भाग (Body & Rajasthan Context):</strong><br>1. डिजिटल श्रम की अदृश्यता और प्रकृति:<br>- डेटा लेबलिंग की प्रकृति: स्वायत्त वाहनों, चेहरे की पहचान और चैटबॉट्स को सिखाने के लिए छवियों और वाक्यों को टैग करना एक थकाऊ, दोहरावदार और एकाकी कार्य है।<br>- प्लेटफॉर्म आधारित अमूर्तन: श्रमिकों को वैश्विक तकनीकी निगमों द्वारा सीधे कर्मचारी न मानकर दूरस्थ रूप से अनौपचारिक, कम पारिश्रमिक पर अनुबंधित किया जाता है।<br><br>2. भारत और ग्लोबल साउथ में श्रम असुरक्षा (Precarity):<br>- नव-उपनिवेशवादी श्रम विभाजन: उच्च मूल्य वाली तकनीक का स्वामित्व ग्लोबल नॉर्थ की कंपनियों के पास है, जबकि सबसे सस्ता, जोखिम भरा और सुरक्षा-विहीन डेटा-क्लीनिंग कार्य ग्लोबल साउथ (भारत, केन्या आदि) के युवाओं और हाशिए के वर्गों (जैसे आदिवासी समुदायों) से कराया जाता है।<br>- मनोवैज्ञानिक और सामाजिक दुष्प्रभाव: हिंसक या आपत्तिजनक सामग्री को मॉडरेट करने वाले श्रमिकों में गंभीर मानसिक आघात (PTSD) और अलगाव की स्थिति।<br>- सामाजिक सुरक्षा का अभाव: न्यूनतम वेतन, स्वास्थ्य बीमा, काम के निश्चित घंटे और संगठित होने के बुनियादी श्रम अधिकारों से वंचित होना।<br><br>3. नैतिक एवं नीतिगत दुविधाएं:<br>- सामूहिक निर्माण बनाम निजी लाभ: एआई मॉडल का निर्माण सामूहिक मानवीय बौद्धिक श्रम से होता है, लेकिन इसका आर्थिक लाभांश मुट्ठी भर तकनीकी कंपनियों तक केंद्रित है।</div>
+                    <div class="ans-section"><strong class="ans-label">निष्कर्ष (Conclusion):</strong><br>प्रौद्योगिकी विस्तार के साथ-साथ श्रम संहिताओं में गिग और डिजिटल डेटा श्रमिकों के लिए सामाजिक सुरक्षा, न्यूनतम आय और मानवीय गरिमा के विधिक संरक्षण को अनिवार्य किया जाना चाहिए।</div>
+                </div>
+                
+            </div>
+            
+            <div class="mains-card">
+                <div class="mains-header">
+                    <span class="badge badge-10m">10 अंक (Paper 1)</span>
+                    <span class="subject-tag">भारतीय अर्थव्यवस्था एवं औद्योगिक विकास</span>
+                </div>
+                <h3 class="question-text">प्रश्न: आठ प्रमुख कोर उद्योगों (Core Industries) के प्रदर्शन को समग्र औद्योगिक विकास का अग्रदूत ('Canary in the Coal Mine') क्यों माना जाता है? हालिया औद्योगिक सुस्ती के आलोक में आपूर्ति-पक्ष सुधारों की आवश्यकता स्पष्ट कीजिए। (शब्द सीमा: ~150-200 शब्द)</h3>
+                
+                <div class="answer-box">
+                    <div class="ans-section"><strong class="ans-label">भूमिका (Introduction):</strong><br>औद्योगिक उत्पादन सूचकांक (IIP) में 40.27% का भार रखने वाले 8 कोर सेक्टर (कोयला, कच्चा तेल, प्राकृतिक गैस, रिफाइनरी उत्पाद, उर्वरक, इस्पात, सीमेंट, बिजली) देश की बुनियादी आर्थिक सेहत और विनिर्माण गतिशीलता के मुख्य सूचक हैं।</div>
+                    <div class="ans-section"><strong class="ans-label">मुख्य भाग (Body & Rajasthan Context):</strong><br>1. कोर सेक्टर का 'कैनरी इन द कोल माइन' के रूप में महत्व:<br>- आधारभूत आपूर्ति श्रृंखला: इस्पात, सीमेंट और बिजली सीधे बुनियादी ढांचा परियोजनाओं, निर्माण और अचल परिसंपत्ति निर्माण (Gross Fixed Capital Formation) से जुड़े हैं।<br>- शुरुआती चेतावनी संकेत: यदि कोर क्षेत्रों के उत्पादन में गिरावट या ठहराव आता है, तो यह आगामी तिमाहियों में विनिर्माण, लॉजिस्टिक्स और समग्र जीडीपी वृद्धि में आसन्न मंदी का सीधा संकेत देता है।<br>- निजी निवेश (Capex) का बैरोमीटर: रिफाइनरी और इस्पात की खपत में कमी कॉर्पोरेट जगत के निजी निवेश में संकोच को दर्शाती है।<br><br>2. आपूर्ति-पक्ष सुधारों (Supply-Side Reforms) की अपरिहार्यता:<br>- मांग प्रबंधन की सीमाएं: मुद्रास्फीति के दबाव और वित्तीय घाटे की सीमाओं के चलते राजकोषीय व मौद्रिक प्रोत्साहन के माध्यम से केवल मांग बढ़ाने की गुंजाइश सीमित है।<br>- नियामक व लॉजिस्टिक्स लागत में कमी: विनिर्माण को प्रतिस्पर्धी बनाने के लिए बिजली की लागत, बंदरगाहों पर टर्नअराउंड समय और लॉजिस्टिक्स लागत (वर्तमान में जीडीपी का ~8-9%) को घटाना आवश्यक है।<br>- विनिर्माण में आयात निर्भरता घटाना: टनल बोरिंग मशीनों (TBM) और दुर्लभ खनिजों के चीनी निर्यात नियंत्रणों से सबक लेते हुए पूंजीगत वस्तुओं के घरेलू विनिर्माण और 'उत्पादन से जुड़ी प्रोत्साहन' (PLI) का पुनर्गठन आवश्यक है।<br>- श्रम और भूमि सुधार: राज्यों के स्तर पर श्रम संहिताओं का वास्तविक क्रियान्वयन और भूमि अधिग्रहण की प्रक्रियाओं का डिजिटलीकरण।</div>
+                    <div class="ans-section"><strong class="ans-label">निष्कर्ष (Conclusion):</strong><br>कोर उद्योगों की गति को बनाए रखने के लिए मांग-पक्षीय अस्थायी उपायों के स्थान पर ढांचागत आपूर्ति-पक्षीय सुधार और पूंजीगत व्यय की निरंतरता ही सतत विकास की गारंटी दे सकती है।</div>
+                </div>
+                
+            </div>
+            
+
+        <div class="section-title">📺 कोचिंग शिक्षक विश्लेषण एवं यूट्यूब लाइव क्लास सार</div>
+            <div class="yt-card">
+                <div class="yt-header">
+                    <span class="badge badge-yt">📺 कोचिंग शिक्षक विश्लेषण</span>
+                    <span class="topic-title">रसायन नोबेल 2026: होमोकायरैलिटी, अरैखिक प्रभाव और केंसो सोई की खोज (UPSC Wallah)</span>
+                </div>
+                <div class="yt-explanation">
+                    <strong>शिक्षक व्याख्यान एवं ट्रिक्स:</strong>
+                    <p>प्रशांत सर ने रसायन विज्ञान के नोबेल 2026 का विश्लेषण करते हुए बताया कि प्रकृति में जीवन के अणु (जैसे डीएनए, अमीनो एसिड) केवल 'बाएं हाथ' या 'दाएं हाथ' के विशिष्ट दर्पण-रूप (Homochiral) में ही क्यों पाए जाते हैं। केंसो सोई ने 'ऑटोकैटालिसिस' के माध्यम से सिद्ध किया कि कैसे थोड़ी सी कायरल विषमता स्वतः बढ़ते-बढ़ते 100% शुद्ध एकल एनांशियोमर बना देती है।</p>
+                </div>
+                <div class="key-args">
+                    <strong>क्लास के मुख्य बिंदु (Key Lecture Points):</strong>
+                    <ul>
+                        <li>असममित कार्बनिक संश्लेषण (Asymmetric Synthesis) में अरैखिक प्रभाव (Non-linear effects) की हेनरी कगान द्वारा 1986 में नींव रखी गई।</li><li>सोई अभिक्रिया (Soai Reaction - 1995/2003) विश्व की एकमात्र ऐसी रासायनिक अभिक्रिया है जो स्वतः प्रवर्धित होकर शुद्ध समरूपता उत्पन्न करती है।</li><li>फार्मास्युटिकल दवाओं (जैसे दर्द निवारक, एंटीबायोटिक्स) में अवांछित साइड-इफेक्ट्स को समाप्त करने में यह मील का पत्थर है।</li>
+                    </ul>
+                </div>
+                <div class="exam-tip-box"><strong>💡 परीक्षा टिप (Exam Tip):</strong> GS-3 और RAS Paper-2 (विज्ञान) में 'Thalidomide Tragedy' का उदाहरण देते हुए कायरैलिटी और दवा प्रभावशीलता पर 5-अंक का प्रश्न पूछा जा सकता है।</div>
+            </div>
+            
+            <div class="yt-card">
+                <div class="yt-header">
+                    <span class="badge badge-yt">📺 कोचिंग शिक्षक विश्लेषण</span>
+                    <span class="topic-title">आइसक्यूब वेधशाला और खगोलीय न्यूट्रिनो: भौतिकी नोबेल 2026 (Nirman IAS)</span>
+                </div>
+                <div class="yt-explanation">
+                    <strong>शिक्षक व्याख्यान एवं ट्रिक्स:</strong>
+                    <p>निर्माण आईएएस के व्याख्यान में बताया गया कि फ्रांसिस हाल्ज़ेन ने अंटार्कटिका के दक्षिणी ध्रुव पर 1 घन किलोमीटर विशाल हिमनद बर्फ के भीतर 'आइसक्यूब वेधशाला' स्थापित की। न्यूट्रिनो 'भूतिया कण' (Ghost particles) कहलाते हैं क्योंकि वे बिना किसी से टकराए ब्रह्मांड के आर-पार निकल जाते हैं, लेकिन जब वे बर्फ में परमाणुओं से टकराते हैं तो चेरेनकोव विकिरण की नीली चमक पैदा करते हैं।</p>
+                </div>
+                <div class="key-args">
+                    <strong>क्लास के मुख्य बिंदु (Key Lecture Points):</strong>
+                    <ul>
+                        <li>उच्च ऊर्जा न्यूट्रिनो ब्रह्मांडीय कण त्वरकों (सुपरनोवा, ब्लैक होल, सक्रिय गैलेक्टिक नाभिक) से उत्पन्न होते हैं।</li><li>न्यूट्रिनो बिना दिशा बदले और ऊर्जा गंवाए करोड़ों प्रकाश वर्ष दूर से सीधे पहुंचते हैं, जिससे ब्रह्मांड के रहस्यों का सीधा अध्ययन संभव होता है।</li><li>यह खोज पारंपरिक प्रकाश-आधारित खगोल विज्ञान के स्थान पर 'मल्टी-मैसेंजर एस्ट्रोनॉमी' के एक नए युग की शुरुआत करती है।</li>
+                    </ul>
+                </div>
+                <div class="exam-tip-box"><strong>💡 परीक्षा टिप (Exam Tip):</strong> प्रारंभिक परीक्षा में न्यूट्रिनो के भौतिक गुणधर्मों (द्रव्यमान, आवेशहीनता, क्षीण अंतःक्रिया) और आइसक्यूब के भौगोलिक स्थान पर सीधा प्रश्न बनेगा।</div>
+            </div>
+            
+            <div class="yt-card">
+                <div class="yt-header">
+                    <span class="badge badge-yt">📺 कोचिंग शिक्षक विश्लेषण</span>
+                    <span class="topic-title">भारत-जर्मनी रणनीतिक साझेदारी: 'बाजार' से 'इनोवेशन हब' में बदलाव (UPSC Wallah)</span>
+                </div>
+                <div class="yt-explanation">
+                    <strong>शिक्षक व्याख्यान एवं ट्रिक्स:</strong>
+                    <p>वाणिज्य मंत्री पीयूष गोयल की बर्लिन यात्रा पर चर्चा करते हुए शिक्षक ने स्पष्ट किया कि जर्मन उद्योग अब भारत को केवल 1.4 अरब लोगों का उपभोक्ता बाजार नहीं, बल्कि वैश्विक विनिर्माण, आरएंडडी और इनोवेशन बेस मान रहा है। सीमेंस, वोक्सवैगन और स्कोडा जैसी 2000 कंपनियां भारत में अपनी अनुसंधान प्रयोगशालाएं बढ़ा रही हैं।</p>
+                </div>
+                <div class="key-args">
+                    <strong>क्लास के मुख्य बिंदु (Key Lecture Points):</strong>
+                    <ul>
+                        <li>भारत-यूरोपीय संघ मुक्त व्यापार समझौता (India-EU FTA) अंतिम चरण में है, जो जर्मन इंजीनियरिंग को भारतीय सॉफ्टवेयर प्रतिभा से जोड़ेगा।</li><li>जर्मनी के समक्ष कुशल कार्यबल और ऊर्जा संकट की चुनौती है, जबकि भारत के पास कुशल जनसांख्यिकी और विशाल ग्रीन हाइड्रोजन क्षमता है।</li><li>चीन+1 (China+1) रणनीति के तहत यूरोपीय कंपनियां विनिर्माण जोखिमों को कम करने के लिए भारत में विविधता ला रही हैं।</li>
+                    </ul>
+                </div>
+                <div class="exam-tip-box"><strong>💡 परीक्षा टिप (Exam Tip):</strong> मेन्स उत्तर में 'जर्मन परिशुद्धता (Precision) + भारतीय कौशल व पैमाना (Scale)' के सहजीवन को औद्योगिक नीति उत्तरों में उद्धृत करें।</div>
+            </div>
+            
+            <div class="yt-card">
+                <div class="yt-header">
+                    <span class="badge badge-yt">📺 कोचिंग शिक्षक विश्लेषण</span>
+                    <span class="topic-title">भारत के विदेशी मुद्रा भंडार में गिरावट और बॉन्ड यील्ड की 10-सप्ताह की मंदी (Nirman IAS)</span>
+                </div>
+                <div class="yt-explanation">
+                    <strong>शिक्षक व्याख्यान एवं ट्रिक्स:</strong>
+                    <p>कक्षा में शिक्षक ने समझाया कि कच्चे तेल की ऊंची कीमतों और अमेरिकी ट्रेजरी यील्ड में वृद्धि के कारण भारतीय सरकारी बॉन्ड यील्ड लगातार दसवें सप्ताह बढ़ी है। रुपये को अत्यधिक अवमूल्यन से बचाने के लिए आरबीआई द्वारा बाजार हस्तक्षेप करने से 6 हफ्तों में विदेशी मुद्रा भंडार में 65 अरब डॉलर की कमी आई है।</p>
+                </div>
+                <div class="key-args">
+                    <strong>क्लास के मुख्य बिंदु (Key Lecture Points):</strong>
+                    <ul>
+                        <li>बॉन्ड यील्ड बढ़ने का अर्थ बॉन्ड की कीमतों का गिरना है, जिससे सरकार और कॉर्पोरेट्स के लिए उधारी लागत महंगी हो जाती है।</li><li>फॉरेक्स रिजर्व में गिरावट आरबीआई की आयात कवर क्षमता को प्रभावित करती है, हालांकि भारत का भंडार अभी भी आरामदायक स्थिति में है।</li><li>अमेरिकी फेडरल रिजर्व की मौद्रिक नीति और वैश्विक भू-राजनीतिक तनाव सीधे भारतीय पूंजी बाजार से विदेशी पोर्टफोलियो निवेश (FPI) को बाहर खींच रहे हैं।</li>
+                    </ul>
+                </div>
+                <div class="exam-tip-box"><strong>💡 परीक्षा टिप (Exam Tip):</strong> इकोनॉमिक्स में 'Bond Yield vs Bond Price' का व्युत्क्रमानुपाती संबंध और चालू खाता घाटे (CAD) पर क्रूड ऑयल के प्रभाव का फ्लोचार्ट बनाएं।</div>
+            </div>
+            
+            <div class="yt-card">
+                <div class="yt-header">
+                    <span class="badge badge-yt">📺 कोचिंग शिक्षक विश्लेषण</span>
+                    <span class="topic-title">एआई विकास में लैंगिक पूर्वाग्रह और यूएन विमेन हब (UPSC Wallah)</span>
+                </div>
+                <div class="yt-explanation">
+                    <strong>शिक्षक व्याख्यान एवं ट्रिक्स:</strong>
+                    <p>शिक्षक ने बताया कि एआई क्षेत्र में 80% नौकरियां और 90% नेतृत्व पद पुरुषों के पास हैं। इसके कारण एआई सिस्टम में लैंगिक पूर्वाग्रह (Gender Bias) गहराई से बैठ गया है; वैश्विक अध्ययन में 44% एआई एल्गोरिदम में महिलाओं के प्रति पक्षपात पाया गया है।</p>
+                </div>
+                <div class="key-args">
+                    <strong>क्लास के मुख्य बिंदु (Key Lecture Points):</strong>
+                    <ul>
+                        <li>यूएन विमेन ने डिजिटल ट्रांसफॉर्मेशन में महिलाओं के अधिकारों और सुरक्षा हेतु वैश्विक एआई हब लॉन्च किया है।</li><li>एआई-जनित डीपफेक और ऑनलाइन हिंसा मानवाधिकार रक्षकों और महिला पत्रकारों को असमान रूप से लक्षित कर रही है।</li><li>तकनीकी गवर्नेंस केवल कोड का विषय नहीं है, बल्कि यह शक्ति और सामाजिक संरचनाओं के पुनर्गठन से जुड़ा है।</li>
+                    </ul>
+                </div>
+                <div class="exam-tip-box"><strong>💡 परीक्षा टिप (Exam Tip):</strong> GS-1 (महिला मुद्दे) और GS-4 (एथिक्स) में 'Algorithmic Bias and Gender Justice' पर उदाहरण के रूप में इस रिपोर्ट का प्रयोग करें।</div>
+            </div>
+            
+            <div class="yt-card">
+                <div class="yt-header">
+                    <span class="badge badge-yt">📺 कोचिंग शिक्षक विश्लेषण</span>
+                    <span class="topic-title">आरबीआई का स्केल-आधारित विनियामक ढांचा और टाटा संस विवाद (Nirman IAS)</span>
+                </div>
+                <div class="yt-explanation">
+                    <strong>शिक्षक व्याख्यान एवं ट्रिक्स:</strong>
+                    <p>शिक्षक ने एनबीएफसी के विनियामक वर्गीकरण (Base, Middle, Upper, Top Layers) को विस्तार से समझाया। आरबीआई गवर्नर ने स्पष्ट किया है कि अपर-लेयर एनबीएफसी को वित्तीय प्रणाली में प्रणालीगत जोखिम रोकने के लिए शेयर बाजार में अनिवार्य रूप से सूचीबद्ध होना होगा, जिससे टाटा संस के सार्वजनिक होने पर कानूनी चर्चा छिड़ गई है।</p>
+                </div>
+                <div class="key-args">
+                    <strong>क्लास के मुख्य बिंदु (Key Lecture Points):</strong>
+                    <ul>
+                        <li>स्केल-आधारित विनियमन (SBR) वर्ष 2022 में एनबीएफसी के आकार और जोखिम प्रोफाइल के आधार पर लागू किया गया था।</li><li>अपर लेयर में देश की शीर्ष 10-15 सबसे बड़ी एनबीएफसी शामिल हैं, जिन पर बैंकों जैसे कठोर पूंजी पर्याप्तता और कॉरपोरेट प्रशासन नियम लागू होते हैं।</li><li>अनिवार्य लिस्टिंग से सार्वजनिक पारदर्शिता और खुदरा निवेशकों की सुरक्षा सुनिश्चित होती है।</li>
+                    </ul>
+                </div>
+                <div class="exam-tip-box"><strong>💡 परीक्षा टिप (Exam Tip):</strong> RAS Paper-1 और UPSC GS-3 हेतु 'Shadow Banking Regulation in India' पर एक संक्षिप्त 50-शब्द का नोट तैयार रखें।</div>
+            </div>
+            
+
+        <div class="section-title">🟣 राजस्थान सुजस, पत्रिका एवं दैनिक भास्कर (Rajasthan Sujas, Patrika & Bhaskar)</div>
+        
+            <div class="sujas-card">
+                <div class="sujas-header">
+                    <span class="badge badge-sujas">राजस्थान सुजस विशेष</span>
+                    <strong>राज्य निर्वाचन आयोग एवं कार्मिक विभाग, राजस्थान</strong>
+                </div>
+                <h3>पंचायती राज चुनाव: लोक सेवकों के दायित्व और अनुशासनात्मक कार्रवाई</h3>
+                <ul>
+                    <li>राजस्थान पंचायती राज चुनाव के दौरान चुनाव ड्यूटी से बचने हेतु झूठे चिकित्सा प्रमाण पत्र देने वाले पुलिस व प्रशासनिक कर्मियों के सेवा रिकॉर्ड की जांच शुरू।</li><li>लोक प्रतिनिधित्व अधिनियम, 1951 और राजस्थान सिविल सेवाएं (आचरण) नियम, 1971 के तहत चुनावी दायित्वों में लापरवाही पर कठोर अनुशासनात्मक कार्रवाई के निर्देश।</li><li>पारदर्शी, निष्पक्ष और भयमुक्त स्थानीय स्वशासन चुनाव संपन्न कराना राज्य प्रशासन की संवैधानिक प्राथमिकता घोषित।</li>
+                </ul>
+                <div class="relevance-box"><strong>RPSC महत्व:</strong> RAS Mains Paper 3: स्थानीय स्वशासन, चुनाव प्रशासन और लोक सेवकों की सत्यनिष्ठा व आचरण नियम।</div>
+            </div>
+            
+            <div class="sujas-card">
+                <div class="sujas-header">
+                    <span class="badge badge-sujas">राजस्थान सुजस विशेष</span>
+                    <strong>खान एवं भूविज्ञान विभाग तथा राजस्थान पुलिस</strong>
+                </div>
+                <h3>राजस्थान में अवैध खनन पर नियंत्रण हेतु बहु-विभागीय टास्क फोर्स</h3>
+                <ul>
+                    <li>राज्य में बजरी, संगमरमर और प्रमुख खनिजों के अवैध खनन व परिवहन को रोकने के लिए सेटेलाइट सर्विलांस और ड्रोन आधारित निगरानी तंत्र को मजबूत करने के आदेश।</li><li>खान विभाग, परिवहन और स्थानीय पुलिस का संयुक्त सचल दस्ता (Flying Squad) संवेदनशील जिलों में नियमित औचक निरीक्षण करेगा।</li><li>एम-सैंड (M-Sand) नीति 2020 को बढ़ावा देकर नदियों के प्राकृतिक पारिस्थितिकी तंत्र के क्षरण को रोकने का प्रयास।</li>
+                </ul>
+                <div class="relevance-box"><strong>RPSC महत्व:</strong> RAS Mains Paper 1 (राजस्थान की अर्थव्यवस्था में खनन क्षेत्र) एवं Paper 3 (पर्यावरण संरक्षण और पुलिस प्रशासन)।</div>
+            </div>
+            
+            <div class="sujas-card">
+                <div class="sujas-header">
+                    <span class="badge badge-sujas">राजस्थान सुजस विशेष</span>
+                    <strong>जल संसाधन विभाग, राजस्थान सरकार</strong>
+                </div>
+                <h3>नहरी जल वितरण में पारदर्शिता: ऑनलाइन शेड्यूलिंग पोर्टल</h3>
+                <ul>
+                    <li>इंदिरा गांधी नहर परियोजना (IGNP) और गंग नहर क्षेत्र के किसानों के लिए जल वितरण (बारी बंदी) का रीयल-टाइम डिजिटल शेड्यूलिंग सिस्टम लागू।</li><li>किसान घर बैठे अपने मोघे (Outlets) पर पानी के प्रवाह का समय, मात्रा और रोटेशन ऑनलाइन पोर्टल व एसएमएस अलर्ट से जान सकेंगे।</li><li>टेल-एंड (अंतिम छोर) के किसानों तक नहरी पानी की चोरी रोकने और भ्रष्टाचार समाप्त करने में सहायक ई-गवर्नेंस पहल।</li>
+                </ul>
+                <div class="relevance-box"><strong>RPSC महत्व:</strong> RAS Mains Paper 1 (कृषि जल प्रबंधन) एवं Paper 3 (सुशासन और ई-गवर्नेंस अनुप्रयोग)।</div>
+            </div>
+            
+            <div class="sujas-card">
+                <div class="sujas-header">
+                    <span class="badge badge-sujas">राजस्थान सुजस विशेष</span>
+                    <strong>भ्रष्टाचार निरोधक ब्यूरो (ACB) एवं कार्मिक विभाग</strong>
+                </div>
+                <h3>प्रशासनिक शुचिता: 27 भ्रष्ट अधिकारियों पर अभियोजन स्वीकृति</h3>
+                <ul>
+                    <li>राज्य सरकार ने भ्रष्टाचार निवारण अधिनियम के तहत विभिन्न विभागों के 27 राजपत्रित अधिकारियों के खिलाफ न्यायालय में चालान पेश करने की संस्वीकृति दी।</li><li>प्रशासन में 'जीरो टॉलरेंस' नीति के तहत वर्षों से लंबित धारा 17A और धारा 19 के मामलों का समयबद्ध निस्तारण।</li><li>सार्वजनिक सेवाओं की डिलीवरी में पारदर्शिता बढ़ाने हेतु ई-फाइलिंग और सेवा के अधिकार अधिनियम को कड़ाई से लागू करने का संकल्प।</li>
+                </ul>
+                <div class="relevance-box"><strong>RPSC महत्व:</strong> RAS Mains Paper 3 (लोक प्रशासन एवं नैतिकता: भ्रष्टाचार निवारण तंत्र, एसीबी की भूमिका)।</div>
+            </div>
+            
+
+        <div class="section-title">🔴 सम्पादकीय एवं पत्रिका गहन विश्लेषण (The Hindu, Indian Express, ET, DownToEarth, योजना व कुरुक्षेत्र)</div>
+        
+            <div class="editorial-card">
+                <div class="editorial-header">
+                    <span class="badge badge-ed">The Hindu</span>
+                    <span class="syllabus-tag">GS2 / RAS Paper 3: अंतर्राष्ट्रीय संबंध एवं कूटनीति</span>
+                </div>
+                <h3>Falling short: On Marco Rubio’s diplomatic engagement and US-India Strategic Realities</h3>
+                <p class="context"><strong>समसामयिक संदर्भ:</strong> अमेरिकी सीनेटर मार्को रुबियो की भारत यात्रा द्विपक्षीय व्यापार, सुरक्षा चिंताओं और भू-राजनीतिक संरेखण पर किसी ठोस समझौते या परिणाम के बिना संपन्न हुई।</p>
+                <div class="key-args">
+                    <strong>सम्पादकीय का पूरा सार एवं तर्क (Deep Dive Takeaways):</strong>
+                    <ul>
+                        <li>यात्रा के दौरान व्यापारिक बाधाओं, टैरिफ विवादों और प्रौद्योगिकी हस्तांतरण पर दोनों देशों के बीच स्पष्ट रणनीतिक विचलन (divergence) दिखाई दिया।</li><li>अमेरिका द्वारा हिंद-प्रशांत रणनीति में भारत को केंद्रीय धुरी मानने के बावजूद द्विपक्षीय व्यापार और आपूर्ति श्रृंखला संप्रभुता पर अमेरिकी संरक्षणवादी रुख बाधा बना हुआ है।</li><li>रूस-यूक्रेन संघर्ष और रूस के साथ भारत के निरंतर ऊर्जा व्यापार पर वाशिंगटन का असंतोष वार्ता में अंतर्निहित तनाव का कारण रहा।</li><li>द्विपक्षीय संबंधों में प्रतीकात्मक कूटनीति के स्थान पर रक्षा प्रौद्योगिकी सह-उत्पादन (जैसे iCET) और विश्वसनीय आपूर्ति श्रृंखलाओं पर व्यावहारिक प्रगति की आवश्यकता है।</li>
+                    </ul>
+                </div>
+                <div class="way-forward"><strong>आगे की राह (Way Forward):</strong> भारत और अमेरिका को सामरिक प्राथमिकताओं में समानता लाते हुए व्यापारिक मतभेदों को सुरक्षा सहयोग से अलग कर संस्थागत वार्ता तंत्र को सक्रिय करना चाहिए।</div>
+            </div>
+            
+            <div class="editorial-card">
+                <div class="editorial-header">
+                    <span class="badge badge-ed">The Hindu</span>
+                    <span class="syllabus-tag">GS2 / RAS Paper 3: पश्चिम एशिया में भारत के हित एवं सुरक्षा</span>
+                </div>
+                <h3>In the crossfire: On India and the Saudi-Houthi Conflict in West Asia</h3>
+                <p class="context"><strong>समसामयिक संदर्भ:</strong> लाल सागर और बाब-अल-मंदेब जलडमरूमध्य में हौथी विद्रोहियों के हमलों और सऊदी-हौथी तनाव ने भारत के समुद्री व्यापार और ऊर्जा सुरक्षा के समक्ष गंभीर चुनौती उत्पन्न कर दी है।</p>
+                <div class="key-args">
+                    <strong>सम्पादकीय का पूरा सार एवं तर्क (Deep Dive Takeaways):</strong>
+                    <ul>
+                        <li>लाल सागर मार्ग से भारत का यूरोप और अमेरिका जाने वाला निर्यात काफी हद तक निर्भर है; मालवाहक जहाजों के केप ऑफ गुड होप की ओर मुड़ने से भाड़ा (freight cost) और बीमा 30-40% बढ़ गया है।</li><li>सऊदी अरब और खाड़ी देशों में 90 लाख से अधिक भारतीय प्रवासी कार्यरत हैं, जिनकी सुरक्षा और प्रेषित धन (remittances) क्षेत्रीय शांति से जुड़े हैं।</li><li>भारत की पारम्परिक 'रणनीतिक स्वायत्तता' और रक्षात्मक रुख अब पर्याप्त नहीं है; नौसेना के 'ऑपरेशन संकल्प' के माध्यम से सक्रिय गश्त आवश्यक हो गई है।</li><li>हौथी हमलों का मुकाबला करने के साथ-साथ भारत को रियाद, तेहरान और यमन के स्टेकहोल्डर्स के साथ राजनयिक संतुलन बनाकर संवाद का सेतु बनना होगा।</li>
+                    </ul>
+                </div>
+                <div class="way-forward"><strong>आगे की राह (Way Forward):</strong> भारत को समुद्री सुरक्षा गठबंधनों में सक्रिय खुफिया सहयोग करते हुए ऊर्जा आपूर्ति श्रृंखलाओं का विविधीकरण और लाल सागर की सुरक्षा हेतु बहुपक्षीय कूटनीति अपनानी चाहिए।</div>
+            </div>
+            
+            <div class="editorial-card">
+                <div class="editorial-header">
+                    <span class="badge badge-ed">The Hindu</span>
+                    <span class="syllabus-tag">GS3 / RAS Paper 1: औद्योगिक रणनीति एवं आयात निर्भरता</span>
+                </div>
+                <h3>Tunnelling through: On China’s export control list and Critical Infrastructure Technologies</h3>
+                <p class="context"><strong>समसामयिक संदर्भ:</strong> चीन द्वारा टनल बोरिंग मशीनों (TBM) और रणनीतिक खनन उपकरणों पर निर्यात नियंत्रण सूची लागू करने से वैश्विक व भारतीय बुनियादी ढांचा परियोजनाएं प्रभावित होने की आशंका है।</p>
+                <div class="key-args">
+                    <strong>सम्पादकीय का पूरा सार एवं तर्क (Deep Dive Takeaways):</strong>
+                    <ul>
+                        <li>भारत में हिमालयी रेल परियोजनाओं (उदा. ऋषिकेश-कर्णप्रयाग), सीमावर्ती रणनीतिक सड़कों और मेट्रो रेल सुरंगों के निर्माण में उच्च तकनीकी टीबीएम का भारी उपयोग होता है।</li><li>पूंजीगत भारी मशीनरी (Heavy Engineering) में अत्यधिक चीनी निर्भरता राष्ट्रीय सुरक्षा और महत्वपूर्ण बुनियादी ढांचे के समय पर पूरा होने के लिए जोखिम बन गई है।</li><li>चीन द्वारा महत्वपूर्ण खनिजों, चुम्बकों और टनलिंग तकनीक को भू-आर्थिक हथियार (Geoeconomic weapon) के रूप में इस्तेमाल करने की प्रवृत्ति बढ़ी है।</li><li>घरेलू विनिर्माण क्षमता का त्वरित विकास और जर्मनी, जापान जैसे तकनीकी रूप से उन्नत लोकतांत्रिक साझेदारों के साथ संयुक्त उद्यम (Joint Ventures) अनिवार्य हो गए हैं।</li>
+                    </ul>
+                </div>
+                <div class="way-forward"><strong>आगे की राह (Way Forward):</strong> राष्ट्रीय अवसंरचना पाइपलाइन के तहत भारी इंजीनियरिंग उपकरणों के स्वदेशी डिजाइन और विनिर्माण के लिए एक समर्पित पीएलआई (PLI) योजना शुरू की जानी चाहिए।</div>
+            </div>
+            
+            <div class="editorial-card">
+                <div class="editorial-header">
+                    <span class="badge badge-ed">Down To Earth</span>
+                    <span class="syllabus-tag">GS3 / RAS Paper 3: पर्यावरणीय प्रभाव आकलन एवं सतत विकास</span>
+                </div>
+                <h3>Corporate Hegemony vs Ecological Survival: Lessons from Chile's Cerrillos Data Center Movement</h3>
+                <p class="context"><strong>समसामयिक संदर्भ:</strong> चिली के सैरिलोस में गूगल के 200 मिलियन डॉलर के डेटा केंद्र को स्थानीय नागरिकों (MOSACAT) के तीव्र प्रतिरोध के बाद जल-शीतलन योजनाओं को रद्द करने पर विवश होना पड़ा, जो भारत के डेटा केंद्र विस्तार हेतु चेतावनी है।</p>
+                <div class="key-args">
+                    <strong>सम्पादकीय का पूरा सार एवं तर्क (Deep Dive Takeaways):</strong>
+                    <ul>
+                        <li>डेटा केंद्र अत्यधिक मात्रा में भूजल (169-228 लीटर प्रति सेकंड) का उपभोग करते हैं, जो सूखे और जल संकट से जूझ रहे क्षेत्रों में जनजीवन पर प्रतिकूल प्रभाव डालते हैं।</li><li>राज्य तंत्र द्वारा बहुराष्ट्रीय तकनीकी कंपनियों को लुभाने हेतु पर्यावरणीय प्रभाव अध्ययन (EIA) को दरकिनार कर केवल सतही पर्यावरणीय घोषणाओं (Declarations) से अनापत्ति देना विनियामक विफलता है।</li><li>डेटा केंद्रों द्वारा किया जाने वाला रोजगार सृजन का दावा अतिरंजित है; एक विशाल सुविधा में मात्र 50-60 श्रमिकों की आवश्यकता होती है, जिनमें अधिकांश निम्न-वेतन सुरक्षा या सफाईकर्मी होते हैं।</li><li>डेटा केंद्रों के आसपास 10 किमी के दायरे में 9 डिग्री सेल्सियस तक तापमान वृद्धि (अर्बन हीट आइलैंड) और भारी डीजल भंडारण से प्रदूषण की गंभीर बाह्यताएं (externalities) उत्पन्न होती हैं।</li>
+                    </ul>
+                </div>
+                <div class="way-forward"><strong>आगे की राह (Way Forward):</strong> डेटा केंद्र स्थापना से पूर्व स्थानीय समुदायों की बाध्यकारी जनसुनवाई, वायु-शीतलन अनिवार्य करना और 'डीम्ड डिस्कॉम' जैसी अंधाधुंध रियायतों पर रोक लगाना आवश्यक है।</div>
+            </div>
+            
+            <div class="editorial-card">
+                <div class="editorial-header">
+                    <span class="badge badge-ed">LiveMint</span>
+                    <span class="syllabus-tag">GS3 / RAS Paper 1: समष्टि अर्थशास्त्र एवं राजकोषीय नीतियां</span>
+                </div>
+                <h3>Why Keynesian Demand-Management is Inadequate for India's Present Economic Impasse</h3>
+                <p class="context"><strong>समसामयिक संदर्भ:</strong> वैश्विक भू-राजनीतिक अनिश्चितताओं और कोर सेक्टर में नरमी के बीच परंपरागत कीन्सियन मांग-प्रबंधन (घाटे का वित्तपोषण) के स्थान पर आपूर्ति-पक्ष सुधारों पर बल देने की बहस तेज हो गई है।</p>
+                <div class="key-args">
+                    <strong>सम्पादकीय का पूरा सार एवं तर्क (Deep Dive Takeaways):</strong>
+                    <ul>
+                        <li>कीन्सियन मॉडल अल्पकालिक मंदी में मांग बढ़ाने के लिए सरकारी खर्च पर बल देता है, किंतु भारत की वर्तमान चुनौती संरचनात्मक अड़चनों और आपूर्ति शृंखला की लागत से जुड़ी है।</li><li>उच्च मुद्रास्फीति और गिरते विदेशी मुद्रा भंडार के दौर में राजकोषीय घाटा बढ़ाकर मांग को कृत्रिम रूप से प्रोत्साहित करना बॉन्ड यील्ड और रुपये पर दबाव बढ़ाएगा।</li><li>भारत को उद्यमशीलता की ऊर्जा मुक्त करने हेतु नियामकीय जटिलताओं (compliance burden) को कम करने और व्यापार सुगमता (Ease of Doing Business) को जमीनी स्तर पर लागू करने की जरूरत है।</li><li>कारक बाजार सुधारों (भूमि, श्रम, लॉजिस्टिक्स और सस्ता ऋण) के बिना केवल सरकारी पूंजीगत व्यय निजी कॉर्पोरेट निवेश (Crowding-in) को गति नहीं दे पा रहा है।</li>
+                    </ul>
+                </div>
+                <div class="way-forward"><strong>आगे की राह (Way Forward):</strong> राजकोषीय अनुशासन बनाए रखते हुए टैरिफ दरों का युक्तिकरण, बौद्धिक संपदा सुरक्षा और विनिर्माण क्षेत्र में लालफीताशाही की समाप्ति ही सतत दीर्घकालिक समाधान है।</div>
+            </div>
+            
+            <div class="editorial-card">
+                <div class="editorial-header">
+                    <span class="badge badge-ed">Economic Times / PIB</span>
+                    <span class="syllabus-tag">GS3 / RAS Paper 1: कृषि सुधार एवं डिजिटल प्रौद्योगिकी</span>
+                </div>
+                <h3>AgriStack and Digital Sovereignty of Indian Farmers: Beyond the 11-Crore Milestone</h3>
+                <p class="context"><strong>समसामयिक संदर्भ:</strong> केंद्र सरकार ने समय सीमा से पूर्व 11 करोड़ विशिष्ट किसान आईडी बनाकर कृषि क्षेत्र में डिजिटल पब्लिक इंफ्रास्ट्रक्चर का नया प्रतिमान स्थापित किया है।</p>
+                <div class="key-args">
+                    <strong>सम्पादकीय का पूरा सार एवं तर्क (Deep Dive Takeaways):</strong>
+                    <ul>
+                        <li>एग्रीस्टैक भूमि रिकॉर्ड, आधार और बायोमेट्रिक डेटा को एकीकृत कर योजनाओं (पीएम-किसान, फसल बीमा, केसीसी) में लीकेज और भ्रष्टाचार को समाप्त करता है।</li><li>डिजिटल पहचान से छोटे और सीमांत किसानों को औपचारिक बैंकिंग प्रणाली से संस्थागत ऋण प्राप्त करना सुगम और पारदर्शी हो गया है।</li><li>डेटा गोपनीयता, किरायेदार (कौजेदार) किसानों के बहिष्करण और भूमि स्वामित्व विवादों के चलते भूमिहीन कृषकों के डिजिटल विभाजन के शिकार होने का जोखिम बना हुआ है।</li><li>भू-स्थानिक मैपिंग और रीयल-टाइम फसल डेटा से सटीक जलवायु अनुकूल परामर्श और आपदा राहत का त्वरित वितरण संभव होगा।</li>
+                    </ul>
+                </div>
+                <div class="way-forward"><strong>आगे की राह (Way Forward):</strong> एग्रीस्टैक में काश्तकार और पट्टाधारक किसानों का समावेश सुनिश्चित किया जाए और डिजिटल पर्सनल डेटा प्रोटेक्शन एक्ट (DPDP) के तहत किसानों के कृषि डेटा की सुरक्षा की जाए।</div>
+            </div>
+            
+
+        <div class="section-title">📲 टेलीग्राम चैनल दैनिक प्रश्नोत्तरी व नोट्स (Telegram Daily Quiz & Notes)</div>
+            <div class="mains-card" style="border-left: 8px solid #0284c7; margin-bottom: 25px;">
+                <div class="mains-header">
+                    <span class="badge" style="background:#0284c7; color:white;">5 अंक (~50 शब्द)</span>
+                    <span class="badge" style="background:#1e3a8a; color:white;">@RPSC_RAS_Daily_Mentorship</span>
+                    <span class="subject-tag">Paper 1: राजस्थान की अर्थव्यवस्था एवं भूगोल (सिंचाई परियोजनाएं)</span>
+                </div>
+                <h3 class="question-text">प्रश्न: राजस्थान में 'गंग नहर' के ऐतिहासिक महत्व एवं इसकी वर्तमान सिंचाई प्रणाली की प्रमुख विशेषताओं का वर्णन कीजिए।</h3>
+                <div class="answer-box">
+                    <strong class="ans-label">उत्तर ढांचा एवं विस्तृत नोट्स (~50 शब्द):</strong>
+                    <div class="answer-content">1. सही उत्तर एवं मुख्य तथ्य: गंग नहर का निर्माण महाराजा गंगासिंह द्वारा 1927 में सतलुज नदी (हुसैनीवाला) से फिरोजपुर के माध्यम से कराया गया था, जो राजस्थान की पहली पक्की नहर प्रणाली है।<br>2. ऐतिहासिक/भौगोलिक/नीतिगत संदर्भ: इसने श्रीगंगानगर को 'राजस्थान का अन्न का कटोरा' बनाया। वर्तमान में इसके आधुनिकीकरण और ऑनलाइन शेड्यूलिंग से जल दक्षता में सुधार हुआ है।<br>3. RPSC परीक्षा प्रासंगिकता: RAS Pre एवं Mains (भूगोल व अर्थव्यवस्था) में राजस्थान की ऐतिहासिक जल प्रबंधन संरचनाओं और सिंचाई नेटवर्क पर निरंतर प्रश्न पूछे जाते हैं।</div>
+                </div>
+            </div>
+            
+            <div class="mains-card" style="border-left: 8px solid #0284c7; margin-bottom: 25px;">
+                <div class="mains-header">
+                    <span class="badge" style="background:#0284c7; color:white;">5 अंक (~50 शब्द)</span>
+                    <span class="badge" style="background:#1e3a8a; color:white;">@RAS_Mains_Target</span>
+                    <span class="subject-tag">Paper 3: प्रशासनिक ढांचा, स्थानीय स्वशासन एवं पंचायती राज</span>
+                </div>
+                <h3 class="question-text">प्रश्न: राजस्थान पंचायती राज अधिनियम, 1994 के तहत ग्राम सभा के मुख्य अधिकार और कार्य क्या हैं?</h3>
+                <div class="answer-box">
+                    <strong class="ans-label">उत्तर ढांचा एवं विस्तृत नोट्स (~50 शब्द):</strong>
+                    <div class="answer-content">1. सही उत्तर एवं मुख्य तथ्य: अधिनियम की धारा 7 के तहत ग्राम सभा ग्राम पंचायत की प्राथमिक लोकतांत्रिक इकाई है, जिसमें गाँव के सभी पंजीकृत मतदाता सदस्य होते हैं।<br>2. ऐतिहासिक/भौगोलिक/नीतिगत संदर्भ: यह वार्षिक बजट, विकास योजनाओं की प्राथमिकताओं का अनुमोदन, सामाजिक अंकेक्षण (Social Audit) और बीपीएल लाभार्थियों की पहचान करती है।<br>3. RPSC परीक्षा प्रासंगिकता: Paper 3 (स्थानीय स्वशासन एवं 73वां संविधान संशोधन) में प्रत्यक्ष लोकतंत्र और जवाबदेही तंत्र के अंतर्गत अत्यंत महत्वपूर्ण विषय।</div>
+                </div>
+            </div>
+            
+            <div class="mains-card" style="border-left: 8px solid #0284c7; margin-bottom: 25px;">
+                <div class="mains-header">
+                    <span class="badge" style="background:#0284c7; color:white;">5 अंक (~50 शब्द)</span>
+                    <span class="badge" style="background:#1e3a8a; color:white;">@RPSC_Ethics_Governance</span>
+                    <span class="subject-tag">Paper 3: लोक प्रशासन - नागरिक अधिकार पत्र एवं सामाजिक अंकेक्षण</span>
+                </div>
+                <h3 class="question-text">प्रश्न: प्रशासनिक जवाबदेही सुनिश्चित करने में 'सोशल ऑडिट' (सामाजिक अंकेक्षण) की क्या भूमिका है?</h3>
+                <div class="answer-box">
+                    <strong class="ans-label">उत्तर ढांचा एवं विस्तृत नोट्स (~50 शब्द):</strong>
+                    <div class="answer-content">1. सही उत्तर एवं मुख्य तथ्य: सोशल ऑडिट सरकारी योजनाओं के क्रियान्वयन और वित्तीय व्यय का जनता द्वारा प्रत्यक्ष रूप से किया जाने वाला मूल्यांकन व परीक्षण है।<br>2. ऐतिहासिक/भौगोलिक/नीतिगत संदर्भ: मनरेगा और राजस्थान जन सूचना पोर्टल के माध्यम से नागरिक सार्वजनिक अभिलेखों का सत्यापन करते हैं, जिससे लीकेज व भ्रष्टाचार पर अंकुश लगता है।<br>3. RPSC परीक्षा प्रासंगिकता: Paper 3 (लोक प्रशासन: नागरिक चार्टर, पारदर्शिता एवं सामाजिक जवाबदेही) हेतु प्रमुख 5-अंक का प्रश्न।</div>
+                </div>
+            </div>
+            
+            <div class="mains-card" style="border-left: 8px solid #0284c7; margin-bottom: 25px;">
+                <div class="mains-header">
+                    <span class="badge" style="background:#0284c7; color:white;">5 अंक (~50 शब्द)</span>
+                    <span class="badge" style="background:#1e3a8a; color:white;">@Rajasthan_Current_Affairs</span>
+                    <span class="subject-tag">Paper 1: राजस्थान में उद्योग एवं प्राकृतिक संसाधन</span>
+                </div>
+                <h3 class="question-text">प्रश्न: राजस्थान एम-सैंड (M-Sand) नीति, 2020 के प्रमुख उद्देश्य क्या हैं?</h3>
+                <div class="answer-box">
+                    <strong class="ans-label">उत्तर ढांचा एवं विस्तृत नोट्स (~50 शब्द):</strong>
+                    <div class="answer-content">1. सही उत्तर एवं मुख्य तथ्य: एम-सैंड नीति, 2020 का मुख्य उद्देश्य नदी बजरी पर निर्भरता समाप्त कर कंक्रीट निर्माण हेतु विनिर्मित रेत (Manufactured Sand) को विकल्प के रूप में बढ़ावा देना है।<br>2. ऐतिहासिक/भौगोलिक/नीतिगत संदर्भ: सरकारी निर्माण कार्यों में न्यूनतम 25% एम-सैंड का उपयोग अनिवार्य किया गया है। यह नदियों के अवैध खनन को रोककर पर्यावरण संरक्षण करती है।<br>3. RPSC परीक्षा प्रासंगिकता: RAS Mains Paper 1 (उद्योग व खनिज) तथा Paper 3 (सतत विकास एवं पारिस्थितिकी) में पर्यावरण-हितैषी नीतियों से संबंधित।</div>
+                </div>
+            </div>
+            
+    </div>
+
+    <script>
+        function setFontSize(size) {
+            document.documentElement.style.setProperty('--base-font-size', size + 'px');
+            localStorage.setItem('ras_notes_font_size', size);
+            document.querySelectorAll('.toolbar-btns .t-btn').forEach(b => {
+                if (b.innerText.includes(size + 'px')) b.classList.add('active');
+                else if (b.innerText.includes('px')) b.classList.remove('active');
+            });
+        }
+
+        function toggleTheme(theme) {
+            document.body.classList.remove('dark-mode', 'sepia-mode');
+            if (theme === 'dark') document.body.classList.add('dark-mode');
+            else if (theme === 'sepia') document.body.classList.add('sepia-mode');
+            localStorage.setItem('ras_notes_theme', theme);
+        }
+
+        // Load saved preferences
+        (function() {
+            const savedSize = localStorage.getItem('ras_notes_font_size') || 26;
+            setFontSize(savedSize);
+            const savedTheme = localStorage.getItem('ras_notes_theme');
+            if (savedTheme) toggleTheme(savedTheme);
+        })();
+    </script>
+</body>
+</html>
