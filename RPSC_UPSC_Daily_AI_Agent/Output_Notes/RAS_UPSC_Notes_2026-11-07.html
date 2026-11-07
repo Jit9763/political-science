@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RAS & UPSC Daily Notes - 2026-11-07</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style id="customStyle">
+        :root {
+            --base-font-size: 24px;
+            --base-line-height: 1.85;
+            --primary: #1e1b4b;
+            --primary-light: #2563eb;
+            --secondary: #0f766e;
+            --accent-gold: #b45309;
+            --accent-purple: #6b21a8;
+            --accent-red: #9f1239;
+            --bg-main: #f8fafc;
+            --card-bg: #ffffff;
+            --text-dark: #020617;
+            --border-color: #cbd5e1;
+            --box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+        }
+
+        body.dark-mode {
+            --bg-main: #090d16;
+            --card-bg: #111827;
+            --text-dark: #f8fafc;
+            --border-color: #374151;
+            --box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+        }
+
+        body.sepia-mode {
+            --bg-main: #fbf0d9;
+            --card-bg: #fffdf7;
+            --text-dark: #2d2215;
+            --border-color: #e2d3b5;
+        }
+
+        body {
+            font-family: 'Noto Sans Devanagari', 'Segoe UI', Tahoma, sans-serif;
+            background-color: var(--bg-main);
+            color: var(--text-dark);
+            margin: 0;
+            padding: 25px;
+            line-height: var(--base-line-height);
+            font-size: var(--base-font-size);
+            transition: background-color 0.2s, font-size 0.15s;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* Eye-Comfort High Definition Typography */
+        p, li, div, span, td, th {
+            font-size: var(--base-font-size);
+            line-height: var(--base-line-height);
+        }
+
+        b, strong {
+            color: #b91c1c;
+            font-weight: 800;
+        }
+        body.dark-mode b, body.dark-mode strong {
+            color: #f87171;
+        }
+
+        .blue-highlight {
+            color: #1e3a8a;
+            font-weight: 800;
+        }
+        body.dark-mode .blue-highlight {
+            color: #60a5fa;
+        }
+
+        .container {
+            max-width: 1300px;
+            margin: 0 auto;
+        }
+
+        /* Sticky Eye-Comfort Controls Toolbar */
+        .reader-toolbar {
+            position: sticky;
+            top: 15px;
+            z-index: 999;
+            background: rgba(15, 23, 42, 0.95);
+            backdrop-filter: blur(10px);
+            color: white;
+            padding: 12px 24px;
+            border-radius: 50px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+            margin-bottom: 25px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 12px;
+            border: 2px solid #334155;
+        }
+
+        .toolbar-title {
+            font-size: 19px;
+            font-weight: 800;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .toolbar-btns {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .t-btn {
+            background: #1e293b;
+            color: white;
+            border: 1px solid #475569;
+            padding: 8px 16px;
+            border-radius: 25px;
+            font-size: 16px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.2s;
+            font-family: inherit;
+        }
+
+        .t-btn:hover, .t-btn.active {
+            background: #2563eb;
+            border-color: #60a5fa;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 10px rgba(37,99,235,0.4);
+        }
+
+        .header {
+            background: linear-gradient(135deg, #09090b 0%, #1e1b4b 50%, #0f766e 100%);
+            color: white;
+            padding: 35px 40px;
+            border-radius: 20px;
+            box-shadow: 0 15px 30px -5px rgba(0,0,0,0.25);
+            margin-bottom: 35px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border: 3px solid #3b82f6;
+        }
+        .header h1 { margin: 0 0 10px 0; font-size: 36px; font-weight: 900; letter-spacing: -0.5px; }
+        .header p { margin: 0; opacity: 0.95; font-size: 22px; font-weight: 600; }
+
+        /* Large Chapter 7 Style Section Headers */
+        .section-title {
+            font-size: 32px;
+            font-weight: 900;
+            margin: 45px 0 25px 0;
+            padding: 18px 26px;
+            background: var(--card-bg);
+            border-radius: 14px;
+            border-left: 14px solid var(--primary-light);
+            box-shadow: var(--box-shadow);
+            color: var(--text-dark);
+            border-top: 1px solid var(--border-color);
+            border-right: 1px solid var(--border-color);
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .badge {
+            padding: 8px 16px;
+            border-radius: 10px;
+            font-size: 17px;
+            font-weight: 800;
+            color: white;
+            display: inline-block;
+        }
+        .badge-pre { background-color: var(--accent-gold); }
+        .badge-raj { background-color: var(--accent-purple); }
+        .badge-5m { background-color: #0284c7; }
+        .badge-10m { background-color: #4338ca; }
+        .badge-sujas { background-color: #0d9488; }
+        .badge-ed { background-color: var(--accent-red); }
+        .badge-yt { background-color: #dc2626; }
+
+        /* Big, Comfortable Eye-Friendly Cards */
+        .fact-card, .mains-card, .sujas-card, .editorial-card, .yt-card {
+            background: var(--card-bg);
+            border-radius: 18px;
+            padding: 32px;
+            margin-bottom: 30px;
+            box-shadow: var(--box-shadow);
+            border: 2px solid var(--border-color);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .fact-card:hover, .mains-card:hover, .sujas-card:hover, .editorial-card:hover, .yt-card:hover {
+            box-shadow: 0 12px 28px rgba(0,0,0,0.1);
+        }
+
+        .fact-card { border-left: 14px solid var(--accent-gold); }
+        .mains-card { border-left: 14px solid #4338ca; }
+        .sujas-card { border-left: 14px solid var(--accent-purple); }
+        .editorial-card { border-left: 14px solid var(--accent-red); }
+        .yt-card { border-left: 14px solid #dc2626; background: var(--card-bg); }
+
+        .card-header, .mains-header, .sujas-header, .editorial-header, .yt-header {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 16px;
+            flex-wrap: wrap;
+        }
+        .topic-title { font-weight: 900; font-size: 26px; color: var(--text-dark); }
+        .fact-text { margin: 0; color: var(--text-dark); font-size: var(--base-font-size); line-height: var(--base-line-height); font-weight: 500; }
+        .question-text { margin: 12px 0 18px 0; color: #1e3a8a; font-size: calc(var(--base-font-size) + 4px); font-weight: 900; line-height: 1.6; }
+        body.dark-mode .question-text { color: #93c5fd; }
+
+        .answer-box {
+            background: #f1f5f9;
+            padding: 26px;
+            border-radius: 14px;
+            font-size: var(--base-font-size);
+            border: 2px solid #cbd5e1;
+            line-height: var(--base-line-height);
+        }
+        body.dark-mode .answer-box {
+            background: #1f2937;
+            border-color: #4b5563;
+        }
+        body.sepia-mode .answer-box {
+            background: #f4ebd0;
+            border-color: #dcd0b1;
+        }
+
+        .ans-label {
+            font-size: calc(var(--base-font-size) + 2px);
+            color: #1e3a8a;
+            display: block;
+            margin-bottom: 10px;
+            font-weight: 800;
+        }
+        body.dark-mode .ans-label { color: #60a5fa; }
+
+        .relevance-box, .way-forward {
+            background: #ecfdf5;
+            color: #065f46;
+            padding: 18px 24px;
+            border-radius: 12px;
+            margin-top: 20px;
+            font-size: calc(var(--base-font-size) - 1px);
+            border-left: 8px solid #10b981;
+            font-weight: 600;
+            border: 1px solid #a7f3d0;
+            border-left-width: 8px;
+        }
+        body.dark-mode .relevance-box, body.dark-mode .way-forward {
+            background: #064e3b;
+            color: #a7f3d0;
+            border-color: #059669;
+        }
+
+        .exam-tip-box {
+            background: #fefce8;
+            color: #854d0e;
+            padding: 18px 24px;
+            border-radius: 12px;
+            margin-top: 20px;
+            font-size: calc(var(--base-font-size) - 1px);
+            border-left: 8px solid #eab308;
+            font-weight: 600;
+            border: 1px solid #fef08a;
+            border-left-width: 8px;
+        }
+        body.dark-mode .exam-tip-box {
+            background: #713f12;
+            color: #fef08a;
+            border-color: #eab308;
+        }
+
+        ul { margin: 12px 0; padding-left: 30px; }
+        li { margin-bottom: 12px; font-size: var(--base-font-size); line-height: var(--base-line-height); }
+
+        @media print {
+            .reader-toolbar, .print-btn { display: none !important; }
+            body { background: white !important; color: black !important; padding: 0 !important; font-size: 16pt !important; }
+            .container { max-width: 100% !important; }
+            .fact-card, .mains-card, .sujas-card, .editorial-card, .yt-card { page-break-inside: avoid; border: 1px solid #999 !important; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Floating Interactive Eye-Comfort Toolbar -->
+        <div class="reader-toolbar">
+            <div class="toolbar-title">
+                <span>👁️ नेत्र-अनुकूल फॉन्ट व पठन मोड</span>
+            </div>
+            <div class="toolbar-btns">
+                <button class="t-btn" onclick="setFontSize(22)">A सामान्य (22px)</button>
+                <button class="t-btn active" id="btn-ch7" onclick="setFontSize(26)">🔠 बड़ा / Ch-7 स्टाइल (26px)</button>
+                <button class="t-btn" onclick="setFontSize(30)">🔍 अल्ट्रा लार्ज (30px)</button>
+                <button class="t-btn" onclick="toggleTheme('light')">☀️ लाइट</button>
+                <button class="t-btn" onclick="toggleTheme('sepia')">📜 सेपिया</button>
+                <button class="t-btn" onclick="toggleTheme('dark')">🌙 डार्क मोड</button>
+                <button class="t-btn" style="background:#059669; border-color:#10b981;" onclick="window.print()">🖨️ PDF प्रिंट</button>
+            </div>
+        </div>
+
+        <div class="header">
+            <div>
+                <h1>RPSC RAS & UPSC दैनिक समसामयिकी एवं सम्पादकीय विश्लेषण</h1>
+                <p>दिनांक: 2026-11-07 | RAS Pre & Mains (5M & 10M) विशेष मास्टर नोट्स</p>
+            </div>
+        </div>
+
+        <div class="section-title">🟡 प्रारंभिक परीक्षा तथ्य (RAS & UPSC Prelims Tracker)</div>
+        
+            <div class="fact-card">
+                <div class="card-header">
+                    <span class="badge badge-pre">UPSC Pre / RAS Pre (Science & Tech)</span>
+                    <span class="topic-title">रसायन विज्ञान नोबेल पुरस्कार 2026</span>
+                </div>
+                <p class="fact-text">वर्ष 2026 का रसायन विज्ञान नोबेल पुरस्कार हेनरी बी. कागन (फ्रांस) और केन्सो सोआई (जापान) को 'असममित कार्बनिक संश्लेषण में गैर-रेखीय प्रभाव और स्व-उत्प्रेरण (Autocatalytic and non-linear effects in asymmetric synthesis)' की खोज के लिए दिया गया, जिसने होमोचिरलिटी (Homochirality) की उत्पत्ति को समझाया।</p>
+            </div>
+            
+            <div class="fact-card">
+                <div class="card-header">
+                    <span class="badge badge-pre">UPSC Pre / RAS Pre (Science & Tech)</span>
+                    <span class="topic-title">भौतिकी नोबेल पुरस्कार 2026 और आइसक्यूब ऑब्जर्वेटरी</span>
+                </div>
+                <p class="fact-text">भौतिकी का नोबेल 2026 फ्रांसिस हालजेन को अंटार्कटिका में 'IceCube Neutrino Observatory' के निर्माण और उच्च-ऊर्जा खगोलीय न्यूट्रिनो (High-energy neutrinos) की खोज के लिए दिया गया। न्यूट्रिनो बिना दिशा या ऊर्जा बदले ब्रह्मांड की दूरियों को तय करते हैं।</p>
+            </div>
+            
+            <div class="fact-card">
+                <div class="card-header">
+                    <span class="badge badge-raj">RAS Pre (Rajasthan Geography & Energy)</span>
+                    <span class="topic-title">कालीसिंध थर्मल पावर प्लांट, झालावाड़</span>
+                </div>
+                <p class="fact-text">झालावाड़ स्थित कालीसिंध थर्मल पावर प्लांट की बंद पड़ी 600 मेगावाट क्षमता की इकाई को दीपावली के अवसर पर पुनः शुरू कर राज्य बिजली ग्रिड को राहत दी गई।</p>
+            </div>
+            
+            <div class="fact-card">
+                <div class="card-header">
+                    <span class="badge badge-pre">UPSC Pre / RAS Pre (Infrastructure)</span>
+                    <span class="topic-title">एमएलएफएफ (Multi-Lane Free Flow) टोलिंग दिशानिर्देश</span>
+                </div>
+                <p class="fact-text">NHAI ने बिना टोल प्लाजा पर रुके बाधा-रहित टोल संग्रह हेतु Multi-Lane Free Flow (MLFF) टोलिंग इंफ्रास्ट्रक्चर और डिजाइन के मानकीकरण के लिए नए दिशानिर्देश जारी किए।</p>
+            </div>
+            
+            <div class="fact-card">
+                <div class="card-header">
+                    <span class="badge badge-pre">UPSC Pre / RAS Pre (Indian Economy)</span>
+                    <span class="topic-title">ई-वे बिल (E-Way Bill) नया रिकॉर्ड</span>
+                </div>
+                <p class="fact-text">अक्टूबर 2026 में फेस्टिव डिमांड और जीएसटी अनुपालन में सुधार के कारण ई-वे बिल जनरेशन 23.14% YoY बढ़कर 156.21 मिलियन के सर्वकालिक उच्च स्तर पर पहुंच गया।</p>
+            </div>
+            
+            <div class="fact-card">
+                <div class="card-header">
+                    <span class="badge badge-pre">UPSC Pre / RAS Pre (Science & Medicine)</span>
+                    <span class="topic-title">रेपामाइसिन (Rapamycin) एवं अल्जाइमर शोध</span>
+                </div>
+                <p class="fact-text">हालिया शोध के अनुसार, कम खुराक वाली एंटी-एजिंग दवा 'रेपामाइसिन' APOE4 जीन वाले व्यक्तियों में अल्जाइमर के लक्षण शुरू होने से पहले ही मस्तिष्क के रक्त प्रवाह (Brain Blood Flow) में सुधार कर सकती है।</p>
+            </div>
+            
+            <div class="fact-card">
+                <div class="card-header">
+                    <span class="badge badge-pre">UPSC Pre / RAS Pre (Space Tech)</span>
+                    <span class="topic-title">नासा का स्विफ्ट टेलीस्कोप (Swift Observatory)</span>
+                </div>
+                <p class="fact-text">22 वर्षों की सेवा के बाद नासा का 'स्विफ्ट ऑब्जर्वेटरी' (जो गामा-रे बर्स्ट और ब्लैक होल के अध्ययन हेतु 2004 में लॉन्च हुआ था) इंडोनेशिया के ऊपर पृथ्वी के वायुमंडल में पुनः प्रवेश कर नष्ट हो गया।</p>
+            </div>
+            
+            <div class="fact-card">
+                <div class="card-header">
+                    <span class="badge badge-pre">UPSC Pre / RAS Pre (Energy & Environment)</span>
+                    <span class="topic-title">E20 पेट्रोल मानक अनुपालन</span>
+                </div>
+                <p class="fact-text">पेट्रोलियम मंत्रालय और सार्वजनिक तेल कंपनियों के अनुसार, 27 राज्यों/केंद्र शासित प्रदेशों से लिए गए 893 ई-20 (20% इथेनॉल सम्मिश्रण) ईंधन के नमूने तय गुणवत्ता मानकों के शत-प्रतिशत अनुरूप पाए गए।</p>
+            </div>
+            
+            <div class="fact-card">
+                <div class="card-header">
+                    <span class="badge badge-pre">UPSC Pre (Science & Paleontology)</span>
+                    <span class="topic-title">115 मिलियन वर्ष पुराना डायनासोर रक्त अवशेष</span>
+                </div>
+                <p class="fact-text">वैज्ञानिकों ने 115 मिलियन वर्ष पुरानी डायनासोर जीवाश्म हड्डियों के भीतर जैविक रूप से पुष्टि किए गए प्राचीन रक्त (Blood traces) के अंश खोजे हैं, जो जैविक अणुओं के जीवनकाल की पारंपरिक मान्यताओं को चुनौती देते हैं।</p>
+            </div>
+            
+            <div class="fact-card">
+                <div class="card-header">
+                    <span class="badge badge-pre">UPSC Pre / RAS Pre (Space Sci)</span>
+                    <span class="topic-title">नासा वोयेजर 1 (Voyager 1) ऐतिहासिक मील का पत्थर</span>
+                </div>
+                <p class="fact-text">नासा का वोयेजर-1 अंतरिक्ष यान पृथ्वी से 1 प्रकाश-दिवस (1 Light-Day ≈ 25.9 बिलियन किमी) की दूरी तय करने वाला पहला मानव निर्मित उपकरण बन गया है।</p>
+            </div>
+            
+            <div class="fact-card">
+                <div class="card-header">
+                    <span class="badge badge-pre">UPSC Pre / RAS Pre (Polity & Governance)</span>
+                    <span class="topic-title">आंध्र प्रदेश का पहला 1 GW डाटा सेंटर और 'Deemed DISCOM' लाइसेंस</span>
+                </div>
+                <p class="fact-text">आंध्र प्रदेश सरकार ने गूगल के 1 गीगावाट डाटा सेंटर प्रोजेक्ट को 'डीम्ड डिस्कोम (Deemed DISCOM)' लाइसेंस प्रदान किया है, जिससे गूगल स्वयं बिजली खरीद और वितरण का प्रबंधन कर सकेगा।</p>
+            </div>
+            
+            <div class="fact-card">
+                <div class="card-header">
+                    <span class="badge badge-pre">UPSC Pre (Environment & Ecology)</span>
+                    <span class="topic-title">सेलॉफैन मधुमक्खियां (Cellophane Bees) बायोप्लास्टिक</span>
+                </div>
+                <p class="fact-text">जमीन में घोंसला बनाने वाली सेलॉफैन मधुमक्खियां अपने घोंसले की परत के लिए एक प्रकार का प्राकृतिक पारदर्शी और लचीला पॉलिमर बनाती हैं, जो एक वर्ष के भीतर स्वतः बायोडिग्रेड हो जाता है।</p>
+            </div>
+            
+            <div class="fact-card">
+                <div class="card-header">
+                    <span class="badge badge-pre">UPSC Pre / RAS Pre (Economy)</span>
+                    <span class="topic-title">SASCI योजना और राज्यों का पूंजीगत व्यय</span>
+                </div>
+                <p class="fact-text">Crisil Ratings के अनुसार, केंद्र सरकार की 'Special Assistance to States for Capital Investment (SASCI)' योजना के सहयोग से वित्त वर्ष 2026-27 में राज्यों का पूंजीगत परिव्यय (Capital Outlay) 10-12% बढ़कर ₹8.5 लाख करोड़ होने का अनुमान है।</p>
+            </div>
+            
+            <div class="fact-card">
+                <div class="card-header">
+                    <span class="badge badge-pre">UPSC Pre / RAS Pre (Agriculture & Industry)</span>
+                    <span class="topic-title">भारतीय चीनी एवं जैव-ऊर्जा निर्माता संघ (ISMA) रिपोर्ट</span>
+                </div>
+                <p class="fact-text">विपणन वर्ष 2026-27 के प्रारंभ में देश में चीनी उत्पादन बढ़कर 12.85 लाख टन पहुंच गया है और कुल 184 चीनी मिलों ने पेराई कार्य प्रारंभ कर दिया है।</p>
+            </div>
+            
+
+        <div class="section-title">🔵 मुख्य परीक्षा उत्तर लेखन मॉडल सेट (RAS Mains - 5M & 10M)</div>
+        
+            <div class="mains-card">
+                <div class="mains-header">
+                    <span class="badge badge-5m">5 अंक (Paper 2)</span>
+                    <span class="subject-tag">पर्यावरण एवं पारिस्थितिकी (Environment & Disaster Management)</span>
+                </div>
+                <h3 class="question-text">प्रश्न: डेटा सेंटरों के तीव्र विस्तार से उत्पन्न पर्यावरणीय एवं संसाधन संबंधी चिंताओं को स्पष्ट कीजिए।</h3>
+                
+                <div class="answer-box">
+                    <strong class="ans-label">उत्तर ढांचा (~50 शब्द):</strong>
+                    <div class="answer-content">• जल एवं ऊर्जा गहनता: 1 GW क्षमता वाला डेटा सेंटर अत्यधिक शीतलन हेतु लाखों लीटर जल (Water-cooling) और भारी विद्युत ऊर्जा की मांग करता है।<br>• स्थानीय ताप द्वीप (Heat Island Effect): डेटा सेंटरों के निकास से आसपास के 10 किमी क्षेत्र में तापमान 8-9°C तक बढ़ सकता है।<br>• अपशिष्ट एवं कार्बन पदचिह्न: बैकअप हेतु बड़े पैमाने पर डीजल जनरेटरों का उपयोग एवं एआई कंप्यूटिंग से कार्बन उत्सर्जन में वृद्धि होती है।<br>• नीतिगत आवश्यकता: निष्पक्ष जल-ऊर्जा ऑडिट एवं अनिवार्य पर्यावरण प्रभाव आकलन (EIA) लागू किया जाना चाहिए।</div>
+                </div>
+                
+            </div>
+            
+            <div class="mains-card">
+                <div class="mains-header">
+                    <span class="badge badge-5m">5 अंक (Paper 1)</span>
+                    <span class="subject-tag">भारतीय अर्थव्यवस्था (Indian Economy)</span>
+                </div>
+                <h3 class="question-text">प्रश्न: भारत में डिजिटल श्रम (Data Labelling & AI Moderation) की अदृश्यता और अनिश्चितता (Precarity) पर टिप्पणी कीजिए।</h3>
+                
+                <div class="answer-box">
+                    <strong class="ans-label">उत्तर ढांचा (~50 शब्द):</strong>
+                    <div class="answer-content">• अदृश्य मानवीय श्रम: कृत्रिम बुद्धिमत्ता (AI) और ऑटोमेशन के पीछे डेटा लेबलिंग, इमेज टैगिंग तथा कंटेंट मॉडरेशन का विशाल मानवीय कार्य छिपा है।<br>• सामाजिक-आर्थिक स्थिति: यह कार्य मुख्यतः ग्रामीण, अनौपचारिक और वंचित समुदायों (जैसे आदिवासी महिलाओं) द्वारा किया जा रहा है।<br>• प्रीकेरियटी (असुरक्षा): कम मजदूरी, सामाजिक सुरक्षा का अभाव, श्रम कानूनों का उल्लंघन और प्लेटफॉर्म आधारित अनुबंधों में अत्यधिक अस्थिरता।<br>• समाधान: डिजिटल गिग वर्कर्स को सामाजिक सुरक्षा कोड और न्यूनतम वेतन के दायरे में लाना अनिवार्य है।</div>
+                </div>
+                
+            </div>
+            
+            <div class="mains-card">
+                <div class="mains-header">
+                    <span class="badge badge-10m">10 अंक (Paper 3)</span>
+                    <span class="subject-tag">लोक प्रशासन, नीतियां एवं सुशासन (Governance & Public Policy)</span>
+                </div>
+                <h3 class="question-text">प्रश्न: कल्याणकारी योजनाओं के पात्र लाभार्थियों के निर्धारण के लिए 'मतदाता सूची' (Electoral Roll) के उपयोग से उत्पन्न विसंगतियों तथा प्रशासनिक चुनौतियों का आलोचनात्मक विश्लेषण कीजिए।</h3>
+                
+                <div class="answer-box">
+                    <div class="ans-section"><strong class="ans-label">भूमिका (Introduction):</strong><br></div>
+                    <div class="ans-section"><strong class="ans-label">मुख्य भाग (Body & Rajasthan Context):</strong><br>1. संवैधानिक एवं वैधानिक उद्देश्य में अंतर:<br>• मतदाता सूची का प्राथमिक उद्देश्य लोक प्रतिनिधित्व अधिनियम, 1950 के तहत नागरिकों के राजनीतिक अधिकार (मतदान) को सुनिश्चित करना है, न कि सामाजिक-आर्थिक स्थिति का आकलन करना।<br>• कल्याणकारी योजनाओं के लिए लक्षित डेटा (जैसे SECC या आधार-लिंक्ड आय वर्ग) की आवश्यकता होती है।<br><br>2. प्रशासनिक एवं तकनीकी सीमाएं:<br>• एकाधिक प्रविष्टियाँ एवं डुप्लीकेसी: कर्नाटक चुनाव आयोग द्वारा SIR के दौरान एक ही व्यक्ति के कई EPIC कार्ड और दो विधानसभाओं में एक ही नंबर पाए जाने की घटनाएँ इसके अप्रमाणिक होने का संकेत देती हैं।<br>• पात्र लाभार्थियों का निष्कासन (Exclusion Errors): स्थानांतरण, पता परिवर्तन या तकनीकी गड़बड़ी के कारण मतदाता सूची से नाम हटने पर गरीब नागरिक खाद्यान्न या पेंशन कल्याण योजनाओं से वंचित हो सकते हैं।<br><br>3. गोपनीयता और डेटा सुरक्षा का अधिकार:<br>• चुनावी डेटाबेस का कल्याणकारी डेटा के साथ अंधाधुंध एकीकरण नागरिकों की गोपनीयता और राजनीतिक संबद्धता के दुरुपयोग का जोखिम पैदा करता है।<br><br>4. नीतिगत सुधार:<br>• सामाजिक न्याय हेतु सटीक पहचान के लिए 'पारिवारिक पहचान पत्र' या अद्यतन SECC डेटा का उपयोग किया जाना चाहिए।</div>
+                    <div class="ans-section"><strong class="ans-label">निष्कर्ष (Conclusion):</strong><br>कल्याणकारी वितरण को मतदाता सूची से पृथक रखकर ही सार्वभौमिक सुशासन और नागरिक अधिकारों की सुरक्षा सुनिश्चित की जा सकती है।</div>
+                </div>
+                
+            </div>
+            
+            <div class="mains-card">
+                <div class="mains-header">
+                    <span class="badge badge-10m">10 अंक (Paper 2)</span>
+                    <span class="subject-tag">विज्ञान एवं प्रौद्योगिकी (Science & Tech Policy)</span>
+                </div>
+                <h3 class="question-text">प्रश्न: "भारतीय वैज्ञानिक पारिस्थितिकी तंत्र को केवल प्रकाशनों की संख्या (Publication Count) की बजाय नवाचार, दैनिक समस्याओं के निवारण और समावेशी विकास पर ध्यान केंद्रित करने की आवश्यकता है।" INSA की 90-वर्षीय समीक्षा के संदर्भ में इस कथन का परीक्षण कीजिए।</h3>
+                
+                <div class="answer-box">
+                    <div class="ans-section"><strong class="ans-label">भूमिका (Introduction):</strong><br></div>
+                    <div class="ans-section"><strong class="ans-label">मुख्य भाग (Body & Rajasthan Context):</strong><br>1. वर्तमान पारिस्थितिकी तंत्र की चुनौतियाँ:<br>• 'प्रकाशन बनाम पेटेंट' (Publish vs Patent) की प्रवृत्ति: अनुसंधान का मूल्यांकन गुणवत्ता की बजाय पेपर काउंट से हो रहा है। रमन प्रभाव और जे.सी. बोस की खोजों का व्यावसायिक लाभ भारत को नहीं मिल सका।<br>• शारीरिक श्रम और दैनिक समस्याओं की उपेक्षा: सीवर सफाई, कृषि मजदूरी और मल-कीचड़ प्रबंधन में लगे श्रमिकों का कष्ट (Drudgery) कम करने के लिए तकनीक का अभाव।<br><br>2. समावेशी विज्ञान की राजनीति (Sunita Narain दृष्टिकोन):<br>• अंतरराष्ट्रीय मॉडलों की बजाय स्थानीय सह-लाभ (Co-benefit) एजेंडा बनाना।<br>• विकास नीतियों में पर्यावरणीय क्षति (जैसे 2025 की हिमालयी बाढ़) को जलवायु परिवर्तन के पीछे छिपाने की प्रवृत्ति रोकना।<br>• ग्रॉस नेचर प्रोडक्ट (GNP) को बढ़ावा देना जो प्राकृतिक संसाधनों को जन-आजीविका से जोड़े।<br><br>3. संस्थागत एवं नैतिक सुधार:<br>• विश्वविद्यालयों में प्रशासनिक क्षरण और कुलपति नियुक्तियों का राजनीतिकरण रोकना।<br>• अनुसंधान समितियों में समाजशास्त्रियों और गैर-वैज्ञानिकों को शामिल कर समावेशिता बढ़ाना।<br>• वैज्ञानिक घपलों (Fabrication, Predatory Journals) पर कठोर दंडात्मक कदम।</div>
+                    <div class="ans-section"><strong class="ans-label">निष्कर्ष (Conclusion):</strong><br>भारतीय विज्ञान को 'मानव गरिमा की रक्षा' और 'स्थानीय आजीविका संवर्धन' के साथ व्यावसायिक पेटेंटिंग पर ध्यान केंद्रित करना होगा।</div>
+                </div>
+                
+            </div>
+            
+
+        <div class="section-title">📺 कोचिंग शिक्षक विश्लेषण एवं यूट्यूब लाइव क्लास सार</div>
+            <div class="yt-card">
+                <div class="yt-header">
+                    <span class="badge badge-yt">📺 कोचिंग शिक्षक विश्लेषण</span>
+                    <span class="topic-title">उत्तर प्रदेश एवं राजस्थान पीसीएस हेतु समसामयिक रणनीतिक विश्लेषण (UPPSC/RPSC 2026)</span>
+                </div>
+                <div class="yt-explanation">
+                    <strong>शिक्षक व्याख्यान एवं ट्रिक्स:</strong>
+                    <p>कोचिंग विश्लेषकों ने सिविल सेवा प्रीलिम्स और मेन्स में पर्यावरण नीतियां, विधिक निर्णय और बुनियादी ढांचे से जुड़े समसामयिक विषयों के बहुआयामी दृष्टिकोण को रेखांकित किया। उन्होंने बताया कि किस प्रकार सुप्रीम कोर्ट के 24 घंटे में पेशी संबंधी फैसलों को संविधान के अनुच्छेद 22(2) से जोड़कर मेन्स उत्तर में लिखा जाता है।</p>
+                </div>
+                <div class="key-args">
+                    <strong>क्लास के मुख्य बिंदु (Key Lecture Points):</strong>
+                    <ul>
+                        <li>संविधान अनुच्छेद 22(2) और सुप्रीम कोर्ट का हालिया निर्देश: गिरफ्तारी के 24 घंटे के भीतर मजिस्ट्रेट के समक्ष पेशी अनिवार्य; विलंब होने पर निरूद्ध व्यक्ति को तत्काल रिहा करना होगा।</li><li>ई-20 ईंधन मानक: 20% इथेनॉल सम्मिश्रण का पर्यावरण और ऑटोमोबाइल इंजन सुरक्षा पर प्रभाव।</li><li>राष्ट्रीय राजमार्गों पर बिना बाधा टोलिंग: NHAI की Multi-Lane Free Flow (MLFF) प्रणाली और RFID/GPS आधारित टोल संग्रह का आर्थिक लाभ।</li>
+                    </ul>
+                </div>
+                <div class="exam-tip-box"><strong>💡 परीक्षा टिप (Exam Tip):</strong> पॉलिटी और गवर्नेंस के प्रश्नों में सुप्रीम कोर्ट के ताजा फैसलों और प्रासंगिक संवैधानिक अनुच्छेदों (जैसे Art 21, Art 22) का उल्लेख कर उत्तर का मान बढ़ाएं।</div>
+            </div>
+            
+
+        <div class="section-title">🟣 राजस्थान सुजस, पत्रिका एवं दैनिक भास्कर (Rajasthan Sujas, Patrika & Bhaskar)</div>
+        
+            <div class="sujas-card">
+                <div class="sujas-header">
+                    <span class="badge badge-sujas">राजस्थान सुजस विशेष</span>
+                    <strong>राज्य निर्वाचन आयोग एवं DIPR राजस्थान</strong>
+                </div>
+                <h3>राजस्थान पंचायती राज चुनाव (सरपंच चुनाव नतीजे एवं प्रक्रिया)</h3>
+                <ul>
+                    <li>राज्य के विभिन्न जिलों (जैसे बूंदी, खंडार आदि) में पंचायती राज संस्थाओं के सरपंच एवं उप-सरपंच पदों के चुनाव संपन्न व परिणाम जारी।</li><li>नामांकन प्रक्रिया एवं प्रारूप वोटर लिस्ट से बाहर हुए मतदाताओं के लिए विशेष अपीलीय प्रक्रिया लागू की गई।</li><li>पंचायती राज (संशोधन) नियमों के तहत जमीनी लोकतंत्र के सुदृढ़ीकरण हेतु डिजिटल मॉनिटरिंग।</li>
+                </ul>
+                <div class="relevance-box"><strong>RPSC महत्व:</strong> RAS Mains Paper 3 (राजस्थान में त्रि-स्तरीय पंचायती राज व्यवस्था एवं निर्वाचन प्रक्रिया)।</div>
+            </div>
+            
+            <div class="sujas-card">
+                <div class="sujas-header">
+                    <span class="badge badge-sujas">राजस्थान सुजस विशेष</span>
+                    <strong>राजस्थान राज्य विद्युत उत्पादन निगम लिमिटेड (RVUNL)</strong>
+                </div>
+                <h3>कालीसिंध थर्मल पावर स्टेशन (झालावाड़) 600 MW यूनिट पुनः शुरू</h3>
+                <ul>
+                    <li>दो महीने से तकनीकी खराबी के कारण बंद 600 मेगावाट क्षमता की कालीसिंध थर्मल पावर प्लांट (झालावाड़) की यूनिट को पुनः चालू किया गया।</li><li>दीपावली एवं रबी फसल सत्र के दौरान राज्य में निर्बाध बिजली आपूर्ति बनाए रखने में महत्वपूर्ण भूमिका।</li><li>राज्य में थर्मल और नवीकरणीय ऊर्जा के संतुलन पर बल।</li>
+                </ul>
+                <div class="relevance-box"><strong>RPSC महत्व:</strong> RAS Pre & Mains Paper 1 (राजस्थान की प्रमुख ऊर्जा परियोजनाएं एवं इंफ्रास्ट्रक्चर)।</div>
+            </div>
+            
+            <div class="sujas-card">
+                <div class="sujas-header">
+                    <span class="badge badge-sujas">राजस्थान सुजस विशेष</span>
+                    <strong>सूचना एवं जनसम्पर्क विभाग (DIPR), राजस्थान</strong>
+                </div>
+                <h3>राजस्थान सुजस सुशासन एवं एसीबी जांच प्रकरण</h3>
+                <ul>
+                    <li>जन सम्पर्क विभाग की फ्लैगशिप पत्रिका 'सुजस' के मुद्रण एवं वितरण संबंधी शिकायतों पर भ्रष्टाचार निरोधक ब्यूरो (ACB) द्वारा जांच शुरू।</li><li>सरकारी प्रकाशनों में वित्तीय पारदर्शिता और लेखापरीक्षा (Audit) की महत्ता रेखांकित।</li><li>सुजस ई-बुलेटिन और आवाज राजस्थान के माध्यम से राज्य सरकार की कल्याणकारी योजनाओं का प्रचार-प्रसार।</li>
+                </ul>
+                <div class="relevance-box"><strong>RPSC महत्व:</strong> RAS Mains Paper 3 (प्रशासनिक नैतिकता, पारदर्शिता एवं ACB की भूमिका)।</div>
+            </div>
+            
+
+        <div class="section-title">🔴 सम्पादकीय एवं पत्रिका गहन विश्लेषण (The Hindu, Indian Express, ET, DownToEarth, योजना व कुरुक्षेत्र)</div>
+        
+            <div class="editorial-card">
+                <div class="editorial-header">
+                    <span class="badge badge-ed">The Hindu</span>
+                    <span class="syllabus-tag">GS2 / RAS Paper 3 (भारतीय प्रशासनिक व्यवस्था व सुशासन)</span>
+                </div>
+                <h3>कल्याणकारी योजनाओं के लिए मतदाता सूची का उपयोग: प्रशासनिक त्रुटियां एवं सीमाएं</h3>
+                <p class="context"><strong>समसामयिक संदर्भ:</strong> कर्नाटक में विशेष संक्षिप्त पुनरीक्षण (SIR) के दौरान एक ही व्यक्ति के कई EPIC कार्ड जारी होने और कई विधानसभाओं में नाम दर्ज होने की बात सामने आने पर मतदाता सूची को कल्याणकारी योजनाओं के लिए आधार मानने पर सवाल उठे हैं।</p>
+                <div class="key-args">
+                    <strong>सम्पादकीय का पूरा सार एवं तर्क (Deep Dive Takeaways):</strong>
+                    <ul>
+                        <li>राजनीतिक अधिकार बनाम सामाजिक-आर्थिक पात्रता: मतदाता सूची केवल नागरिक के 18 वर्ष से अधिक होने और निवासी होने का प्रमाण है, यह उसकी गरीबी या कल्याणकारी योजना की पात्रता तय नहीं करती।</li><li>गंभीर निष्कासन त्रुटियाँ (Exclusion Errors): मतदाता सूची में बार-बार अद्यतनीकरण और तकनीकी कमियों के कारण नाम कटने से गरीब नागरिक राशन और स्वास्थ्य बीमा जैसी योजनाओं से वंचित हो सकते हैं।</li><li>डेटा असंगति एवं डुप्लीकेशन: Mahadevapura और अन्य क्षेत्रों के उदाहरण दिखाते हैं कि मतदाता पहचान पत्रों में डुप्लीकेसी है, जिससे कल्याणकारी धन का रिसाव (Leakage) हो सकता है।</li><li>प्रशासनिक जटिलता: एक संवैधानिक निकाय (चुनाव आयोग) के डेटा का उपयोग राज्य सरकारों द्वारा लक्षित सब्सिडी के लिए करना प्रशासनिक जवाबदेही को धूमिल करता है।</li>
+                    </ul>
+                </div>
+                <div class="way-forward"><strong>आगे की राह (Way Forward):</strong> कल्याणकारी योजनाओं के लिए पृथक, अद्यतन और सामाजिक-आर्थिक जनगणना (SECC) आधारित पारदर्शी डेटाबेस का उपयोग किया जाना चाहिए, न कि मतदाता सूची का।</div>
+            </div>
+            
+            <div class="editorial-card">
+                <div class="editorial-header">
+                    <span class="badge badge-ed">Down To Earth</span>
+                    <span class="syllabus-tag">GS3 / RAS Paper 2 (विज्ञान एवं प्रौद्योगिकी नीति, पर्यावरण)</span>
+                </div>
+                <h3>भारतीय वैज्ञानिक उद्यम: 90 वर्षों का लेखा-जोखा और 'शारीरिक श्रम के निवारण' का अधूरा वादा</h3>
+                <p class="context"><strong>समसामयिक संदर्भ:</strong> भारतीय राष्ट्रीय विज्ञान अकादमी (INSA) की 90वीं वर्षगांठ पर प्रकाशित पुस्तक 'The Scientific Enterprise in India' के माध्यम से भारतीय विज्ञान की प्राथमिकताओं का गंभीर विश्लेषण किया गया।</p>
+                <div class="key-args">
+                    <strong>सम्पादकीय का पूरा सार एवं तर्क (Deep Dive Takeaways):</strong>
+                    <ul>
+                        <li>श्रमिकों की बेगारी/कष्ट (Drudgery) बनाम तकनीक: 90 वर्षों के आधुनिक विज्ञान के बावजूद सफाई कर्मचारी को आज भी सेप्टिक टैंक में उतरना पड़ता है। तकनीक ने काम आसान बनाने के बजाय श्रमिक को ही विस्थापित कर दिया है।</li><li>प्रकाशन केंद्रित संस्कृति (Publish or Perish): सीएसआईआर और विश्वविद्यालयों में गुणवत्तापरक शोध की बजाय पेपर्स की संख्या पर अंकुश और पेटेंटिंग की विफलता (जैसे रमन प्रभाव का व्यावसायिक इस्तेमाल न कर पाना)।</li><li>पारंपरिक ज्ञान की उपेक्षा: अनुभवजन्य और पारंपरिक जलवायु ज्ञान को आधुनिक विज्ञान के समकक्ष दर्जा न देकर केवल भूमिका में औपचारिक रूप से स्वीकार किया जाता है।</li><li>संस्थागत क्षरण एवं नैतिकता: सार्वजनिक विश्वविद्यालयों में कुलीनता, पक्षपात और वाइस-चांसलर पदों का राजनीतिकरण विज्ञान के नेतृत्व में संकट पैदा कर रहा है।</li>
+                    </ul>
+                </div>
+                <div class="way-forward"><strong>आगे की राह (Way Forward):</strong> भारत को 'ग्रॉस नेचर प्रोडक्ट' और समावेशी विज्ञान पर ध्यान देना होगा, जहाँ तकनीक स्थानीय संसाधनों और आजीविका की रक्षा करते हुए सामान्य नागरिकों की रोजमर्रा की समस्याओं का हल निकाले।</div>
+            </div>
+            
+            <div class="editorial-card">
+                <div class="editorial-header">
+                    <span class="badge badge-ed">Down To Earth</span>
+                    <span class="syllabus-tag">GS3 / RAS Paper 2 (पर्यावरण संरक्षण, AI और ऊर्जा ढांचा)</span>
+                </div>
+                <h3>डेटा सेंटर अवसंरचना का तेजी से विस्तार: पर्यावरण, जल संकट और औपनिवेशिक गतिकी</h3>
+                <p class="context"><strong>समसामयिक संदर्भ:</strong> आंध्र प्रदेश द्वारा गूगल डेटा सेंटर को 'डीम्ड डिस्कोम' का दर्जा दिए जाने के बीच चिली के सेरिलोस (Cerrillos) में जन-आंदोलन द्वारा गूगल के जल-गहन डेटा सेंटर को रद्द कराने के उदाहरण से वैश्विक सबक।</p>
+                <div class="key-args">
+                    <strong>सम्पादकीय का पूरा सार एवं तर्क (Deep Dive Takeaways):</strong>
+                    <ul>
+                        <li>जल और ऊर्जा का अत्यधिक दोहन: डेटा सेंटरों की वाटर-कूलिंग प्रणालियां गंभीर जलभृतों (Aquifers) और सूखे से प्रभावित क्षेत्रों पर विनाशकारी दबाव डालती हैं।</li><li>डिजिटल औपनिवेशिक गतिकी (Colonial Dynamics): ग्लोबल नॉर्थ की कंपनियों के डेटा और एआई मॉडल के संचय के लिए ग्लोबल साउथ (विकासशील देश) अपने जल, जमीन और पर्यावरण की बलि दे रहे हैं।</li><li>कम रोजगार सृजन का भ्रम: विशाल $200 मिलियन के डेटा सेंटर से मात्र 50-60 प्रत्यक्ष तकनीकी रोजगार मिलते हैं, जबकि पर्यावरणीय क्षति अपरिमित होती है।</li><li>नियामकीय ढील (Regulatory Bypass): कई देश पर्यावरण प्रभाव अध्ययन (EIA) को दरकिनार कर केवल 'घोषणा पत्र' के आधार पर त्वरित अनुमतियाँ दे रहे हैं, जो टिकाऊ नहीं है।</li>
+                    </ul>
+                </div>
+                <div class="way-forward"><strong>आगे की राह (Way Forward):</strong> डेटा सेंटरों के लिए सख्त बाध्यकारी जन-भागीदारी (Community Consultation), एयर-कूलिंग तकनीक की अनिवार्यता और ऊर्जा-जल खपत पर कठोर EIA कानून बनाए जाएं।</div>
+            </div>
+            
+            <div class="editorial-card">
+                <div class="editorial-header">
+                    <span class="badge badge-ed">Economic Times / Down To Earth</span>
+                    <span class="syllabus-tag">GS3 / RAS Paper 2 (पर्यावरण प्रदूषण एवं कृषि)</span>
+                </div>
+                <h3>उत्तर भारत में पराली दहन और वायु प्रदूषण का अंतर-राज्यीय संकट</h3>
+                <p class="context"><strong>समसामयिक संदर्भ:</strong> पंजाब में पराली जलाने के मामले 3,000 पार कर गए हैं (तरनतारन शीर्ष पर), जबकि भारतीय न्याय संहिता (BNS) के तहत 795 प्राथमिकी और ₹54.55 लाख का जुर्माना लगाया गया है।</p>
+                <div class="key-args">
+                    <strong>सम्पादकीय का पूरा सार एवं तर्क (Deep Dive Takeaways):</strong>
+                    <ul>
+                        <li>केवल पंजाब नहीं, क्षेत्रीय समस्या: हरियाणा के पंचगांव का AQI 426 (गंभीर) पहुँचने के साथ यह स्पष्ट है कि पराली की समस्या केवल एक राज्य तक सीमित न होकर पूरे इंडो-गंगेटिक मैदान का संकट है।</li><li>दंडात्मक कार्रवाई की विफलता: एफआईआर और आर्थिक दंड किसानों को पराली जलाने से रोकने में असमर्थ रहे हैं क्योंकि विकल्प महंगे हैं।</li><li>इन-सिटू एवं एक्स-सिटू प्रबंधन में देरी: हैप्पी सीडर और बायो-डीकंपोजर जैसी मशीनरी की समय पर उपलब्धता न होना और पेडी स्ट्रॉ से एथेनॉल बनाने के बुनियादी ढांचे का अभाव।</li><li>फसल विविधीकरण की कमी: न्यूनतम समर्थन मूल्य (MSP) के कारण धान-गेहूं चक्र से बाहर न निकल पाना समस्या की मूल जड़ है।</li>
+                    </ul>
+                </div>
+                <div class="way-forward"><strong>आगे की राह (Way Forward):</strong> कृषकों को पराली प्रबंधन के लिए प्रति एकड़ प्रोत्साहन राशि प्रदान करना, एथेनॉल/बायोगैस इकाइयों के साथ पराली का व्यावसायिक लिंक बनाना और धान की कम जल-गहन किस्मों को अपनाना।</div>
+            </div>
+            
+            <div class="editorial-card">
+                <div class="editorial-header">
+                    <span class="badge badge-ed">Down To Earth / ScienceDaily</span>
+                    <span class="syllabus-tag">GS3 / RAS Paper 2 (नवीन वैज्ञानिक खोजें)</span>
+                </div>
+                <h3>नोबेल पुरस्कार 2026: होमोचिरलिटी और खगोलीय न्यूट्रिनो की दूरगामी खोजें</h3>
+                <p class="context"><strong>समसामयिक संदर्भ:</strong> वर्ष 2026 के रसायन और भौतिकी के नोबेल पुरस्कारों की घोषणा ने जीवन के मूलभूत रसायनों के निर्माण और ब्रह्मांडीय रहस्यों पर से पर्दा उठाया है।</p>
+                <div class="key-args">
+                    <strong>सम्पादकीय का पूरा सार एवं तर्क (Deep Dive Takeaways):</strong>
+                    <ul>
+                        <li>होमोचिरलिटी (Homochirality) की गुत्थी: रसायन नोबेल विजेता हेनरी कागन और केन्सो सोआई ने साबित किया कि जीवन में केवल एक ही प्रकार के दर्पण-छवि अणु (Mirror-image molecules) क्यों बनते हैं, जो फार्मास्यूटिकल दवाओं के सटीक निर्माण हेतु महत्वपूर्ण है।</li><li>आइसक्यूब (IceCube) न्यूट्रिनो ऑब्जर्वेटरी: भौतिकी नोबेल विजेता फ्रांसिस हालजेन ने अंटार्कटिका के 1 घन किमी बर्फ में सेंसर लगाकर अत्यंत दुलर्भ खगोलीय न्यूट्रिनो को पकड़ा।</li><li>ब्रह्मांडीय कण त्वरक: उच्च ऊर्जा वाले न्यूट्रिनो बिना किसी बाधा या दिशा परिवर्तन के पृथ्वी तक पहुँचते हैं, जो ब्रह्मांड के हिंसक क्षेत्रों (ब्लैक होल, सुपरनोवा) का अध्ययन संभव बनाते हैं।</li>
+                    </ul>
+                </div>
+                <div class="way-forward"><strong>आगे की राह (Way Forward):</strong> भारत को भी 'इण्डिया-बेस्ड न्यूट्रिनो ऑब्जर्वेटरी' (INO) जैसे मूलभूत भौतिकी और उन्नत कार्बनिक संश्लेषण अनुसंधान प्रोजेक्ट्स को शीघ्रता से गति देनी चाहिए।</div>
+            </div>
+            
+
+        <div class="section-title">📲 टेलीग्राम चैनल दैनिक प्रश्नोत्तरी व नोट्स (Telegram Daily Quiz & Notes)</div>
+            <div class="mains-card" style="border-left: 8px solid #0284c7; margin-bottom: 25px;">
+                <div class="mains-header">
+                    <span class="badge" style="background:#0284c7; color:white;">5 अंक (~50 शब्द)</span>
+                    <span class="badge" style="background:#1e3a8a; color:white;">@RPSC_RAS_Daily_Quiz</span>
+                    <span class="subject-tag">Paper 3</span>
+                </div>
+                <h3 class="question-text">प्रश्न: गिरफ्तारी के पश्चात किसी व्यक्ति को 24 घंटे के भीतर मजिस्ट्रेट के समक्ष पेश न करने पर सुप्रीम कोर्ट के हालिया निर्देशानुसार क्या विधिक परिणाम होगा?</h3>
+                <div class="answer-box">
+                    <strong class="ans-label">उत्तर ढांचा एवं विस्तृत नोट्स (~50 शब्द):</strong>
+                    <div class="answer-content">1. सही उत्तर एवं मुख्य तथ्य: तत्काल रिहाई - सर्वोच्च न्यायालय ने स्पष्ट किया है कि 24 घंटे के भीतर पेशी न होने पर हिरासत अवैध हो जाती है और व्यक्ति को रिहा करना होगा।<br>2. ऐतिहासिक/भौगोलिक/नीतिगत संदर्भ: यह आदेश भारतीय संविधान के अनुच्छेद 22(2) और दंड प्रक्रिया संहिता (CrPC) / भारतीय नागरिक सुरक्षा संहिता (BNSS) के मौलिक अधिकारों के संरक्षण के तहत दिया गया है।<br>3. RPSC परीक्षा प्रासंगिकता: RAS Mains Paper 3 (भारतीय संविधान, मौलिक अधिकार एवं न्यायिक निर्णय) हेतु अत्यंत महत्वपूर्ण।</div>
+                </div>
+            </div>
+            
+            <div class="mains-card" style="border-left: 8px solid #0284c7; margin-bottom: 25px;">
+                <div class="mains-header">
+                    <span class="badge" style="background:#0284c7; color:white;">5 अंक (~50 शब्द)</span>
+                    <span class="badge" style="background:#1e3a8a; color:white;">@UPSC_Science_Notes</span>
+                    <span class="subject-tag">Paper 2</span>
+                </div>
+                <h3 class="question-text">प्रश्न: अंटार्कटिका स्थित IceCube Neutrino Observatory किस कण की खोज और अध्ययन के लिए प्रसिद्ध है?</h3>
+                <div class="answer-box">
+                    <strong class="ans-label">उत्तर ढांचा एवं विस्तृत नोट्स (~50 शब्द):</strong>
+                    <div class="answer-content">1. सही उत्तर एवं मुख्य तथ्य: उच्च-ऊर्जा खगोलीय न्यूट्रिनो (High-Energy Astrophysical Neutrinos) - इसके संस्थापक फ्रांसिस हालजेन को 2026 का भौतिकी नोबेल पुरस्कार दिया गया।<br>2. ऐतिहासिक/भौगोलिक/नीतिगत संदर्भ: यह अंटार्कटिका के 1 घन किलोमीटर विशाल हिमनद में स्थापित सेंसर नेटवर्क है जो ब्रह्मांडीय particle accelerators द्वारा उत्सर्जित अदृश्य कणों को डिटेक्ट करता है।<br>3. RPSC परीक्षा प्रासंगिकता: RAS Pre एवं Mains Paper 2 (अंतरिक्ष एवं आधुनिक भौतिकी खोजें)।</div>
+                </div>
+            </div>
+            
+            <div class="mains-card" style="border-left: 8px solid #0284c7; margin-bottom: 25px;">
+                <div class="mains-header">
+                    <span class="badge" style="background:#0284c7; color:white;">5 अंक (~50 शब्द)</span>
+                    <span class="badge" style="background:#1e3a8a; color:white;">@Rajasthan_Gk_Special</span>
+                    <span class="subject-tag">Paper 1</span>
+                </div>
+                <h3 class="question-text">प्रश्न: झालावाड़ जिले में स्थित कालीसिंध तापीय विद्युत परियोजना (Kalisindh Thermal Power Plant) की कुल स्थापित क्षमता कितनी है?</h3>
+                <div class="answer-box">
+                    <strong class="ans-label">उत्तर ढांचा एवं विस्तृत नोट्स (~50 शब्द):</strong>
+                    <div class="answer-content">1. सही उत्तर एवं मुख्य तथ्य: 1200 मेगावाट (600 MW की 2 इकाइयाँ) - झालावाड़ के झालावाड़-झालरापाटन क्षेत्र में स्थित यह राज्य की प्रमुख सुपर-क्रिटिकल थर्मल पावर परियोजना है।<br>2. ऐतिहासिक/भौगोलिक/नीतिगत संदर्भ: यह संयंत्र RVUNL द्वारा संचालित है और कालीसिंध नदी के समीप होने से जल आपूर्ति प्राप्त करता है। इसकी बंद 600 MW इकाई हाल ही में पुनः चालू हुई।<br>3. RPSC परीक्षा प्रासंगिकता: RAS Pre (राजस्थान का भूगोल एवं ऊर्जा संसाधन)।</div>
+                </div>
+            </div>
+            
+    </div>
+
+    <script>
+        function setFontSize(size) {
+            document.documentElement.style.setProperty('--base-font-size', size + 'px');
+            localStorage.setItem('ras_notes_font_size', size);
+            document.querySelectorAll('.toolbar-btns .t-btn').forEach(b => {
+                if (b.innerText.includes(size + 'px')) b.classList.add('active');
+                else if (b.innerText.includes('px')) b.classList.remove('active');
+            });
+        }
+
+        function toggleTheme(theme) {
+            document.body.classList.remove('dark-mode', 'sepia-mode');
+            if (theme === 'dark') document.body.classList.add('dark-mode');
+            else if (theme === 'sepia') document.body.classList.add('sepia-mode');
+            localStorage.setItem('ras_notes_theme', theme);
+        }
+
+        // Load saved preferences
+        (function() {
+            const savedSize = localStorage.getItem('ras_notes_font_size') || 26;
+            setFontSize(savedSize);
+            const savedTheme = localStorage.getItem('ras_notes_theme');
+            if (savedTheme) toggleTheme(savedTheme);
+        })();
+    </script>
+</body>
+</html>
