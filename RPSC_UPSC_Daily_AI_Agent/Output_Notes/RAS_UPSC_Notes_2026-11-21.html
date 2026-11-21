@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RAS & UPSC Daily Notes - 2026-11-21</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style id="customStyle">
+        :root {
+            --base-font-size: 24px;
+            --base-line-height: 1.85;
+            --primary: #1e1b4b;
+            --primary-light: #2563eb;
+            --secondary: #0f766e;
+            --accent-gold: #b45309;
+            --accent-purple: #6b21a8;
+            --accent-red: #9f1239;
+            --bg-main: #f8fafc;
+            --card-bg: #ffffff;
+            --text-dark: #020617;
+            --border-color: #cbd5e1;
+            --box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+        }
+
+        body.dark-mode {
+            --bg-main: #090d16;
+            --card-bg: #111827;
+            --text-dark: #f8fafc;
+            --border-color: #374151;
+            --box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+        }
+
+        body.sepia-mode {
+            --bg-main: #fbf0d9;
+            --card-bg: #fffdf7;
+            --text-dark: #2d2215;
+            --border-color: #e2d3b5;
+        }
+
+        body {
+            font-family: 'Noto Sans Devanagari', 'Segoe UI', Tahoma, sans-serif;
+            background-color: var(--bg-main);
+            color: var(--text-dark);
+            margin: 0;
+            padding: 25px;
+            line-height: var(--base-line-height);
+            font-size: var(--base-font-size);
+            transition: background-color 0.2s, font-size 0.15s;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* Eye-Comfort High Definition Typography */
+        p, li, div, span, td, th {
+            font-size: var(--base-font-size);
+            line-height: var(--base-line-height);
+        }
+
+        b, strong {
+            color: #b91c1c;
+            font-weight: 800;
+        }
+        body.dark-mode b, body.dark-mode strong {
+            color: #f87171;
+        }
+
+        .blue-highlight {
+            color: #1e3a8a;
+            font-weight: 800;
+        }
+        body.dark-mode .blue-highlight {
+            color: #60a5fa;
+        }
+
+        .container {
+            max-width: 1300px;
+            margin: 0 auto;
+        }
+
+        /* Sticky Eye-Comfort Controls Toolbar */
+        .reader-toolbar {
+            position: sticky;
+            top: 15px;
+            z-index: 999;
+            background: rgba(15, 23, 42, 0.95);
+            backdrop-filter: blur(10px);
+            color: white;
+            padding: 12px 24px;
+            border-radius: 50px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+            margin-bottom: 25px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 12px;
+            border: 2px solid #334155;
+        }
+
+        .toolbar-title {
+            font-size: 19px;
+            font-weight: 800;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .toolbar-btns {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .t-btn {
+            background: #1e293b;
+            color: white;
+            border: 1px solid #475569;
+            padding: 8px 16px;
+            border-radius: 25px;
+            font-size: 16px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.2s;
+            font-family: inherit;
+        }
+
+        .t-btn:hover, .t-btn.active {
+            background: #2563eb;
+            border-color: #60a5fa;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 10px rgba(37,99,235,0.4);
+        }
+
+        .header {
+            background: linear-gradient(135deg, #09090b 0%, #1e1b4b 50%, #0f766e 100%);
+            color: white;
+            padding: 35px 40px;
+            border-radius: 20px;
+            box-shadow: 0 15px 30px -5px rgba(0,0,0,0.25);
+            margin-bottom: 35px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border: 3px solid #3b82f6;
+        }
+        .header h1 { margin: 0 0 10px 0; font-size: 36px; font-weight: 900; letter-spacing: -0.5px; }
+        .header p { margin: 0; opacity: 0.95; font-size: 22px; font-weight: 600; }
+
+        /* Large Chapter 7 Style Section Headers */
+        .section-title {
+            font-size: 32px;
+            font-weight: 900;
+            margin: 45px 0 25px 0;
+            padding: 18px 26px;
+            background: var(--card-bg);
+            border-radius: 14px;
+            border-left: 14px solid var(--primary-light);
+            box-shadow: var(--box-shadow);
+            color: var(--text-dark);
+            border-top: 1px solid var(--border-color);
+            border-right: 1px solid var(--border-color);
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .badge {
+            padding: 8px 16px;
+            border-radius: 10px;
+            font-size: 17px;
+            font-weight: 800;
+            color: white;
+            display: inline-block;
+        }
+        .badge-pre { background-color: var(--accent-gold); }
+        .badge-raj { background-color: var(--accent-purple); }
+        .badge-5m { background-color: #0284c7; }
+        .badge-10m { background-color: #4338ca; }
+        .badge-sujas { background-color: #0d9488; }
+        .badge-ed { background-color: var(--accent-red); }
+        .badge-yt { background-color: #dc2626; }
+
+        /* Big, Comfortable Eye-Friendly Cards */
+        .fact-card, .mains-card, .sujas-card, .editorial-card, .yt-card {
+            background: var(--card-bg);
+            border-radius: 18px;
+            padding: 32px;
+            margin-bottom: 30px;
+            box-shadow: var(--box-shadow);
+            border: 2px solid var(--border-color);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .fact-card:hover, .mains-card:hover, .sujas-card:hover, .editorial-card:hover, .yt-card:hover {
+            box-shadow: 0 12px 28px rgba(0,0,0,0.1);
+        }
+
+        .fact-card { border-left: 14px solid var(--accent-gold); }
+        .mains-card { border-left: 14px solid #4338ca; }
+        .sujas-card { border-left: 14px solid var(--accent-purple); }
+        .editorial-card { border-left: 14px solid var(--accent-red); }
+        .yt-card { border-left: 14px solid #dc2626; background: var(--card-bg); }
+
+        .card-header, .mains-header, .sujas-header, .editorial-header, .yt-header {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 16px;
+            flex-wrap: wrap;
+        }
+        .topic-title { font-weight: 900; font-size: 26px; color: var(--text-dark); }
+        .fact-text { margin: 0; color: var(--text-dark); font-size: var(--base-font-size); line-height: var(--base-line-height); font-weight: 500; }
+        .question-text { margin: 12px 0 18px 0; color: #1e3a8a; font-size: calc(var(--base-font-size) + 4px); font-weight: 900; line-height: 1.6; }
+        body.dark-mode .question-text { color: #93c5fd; }
+
+        .answer-box {
+            background: #f1f5f9;
+            padding: 26px;
+            border-radius: 14px;
+            font-size: var(--base-font-size);
+            border: 2px solid #cbd5e1;
+            line-height: var(--base-line-height);
+        }
+        body.dark-mode .answer-box {
+            background: #1f2937;
+            border-color: #4b5563;
+        }
+        body.sepia-mode .answer-box {
+            background: #f4ebd0;
+            border-color: #dcd0b1;
+        }
+
+        .ans-label {
+            font-size: calc(var(--base-font-size) + 2px);
+            color: #1e3a8a;
+            display: block;
+            margin-bottom: 10px;
+            font-weight: 800;
+        }
+        body.dark-mode .ans-label { color: #60a5fa; }
+
+        .relevance-box, .way-forward {
+            background: #ecfdf5;
+            color: #065f46;
+            padding: 18px 24px;
+            border-radius: 12px;
+            margin-top: 20px;
+            font-size: calc(var(--base-font-size) - 1px);
+            border-left: 8px solid #10b981;
+            font-weight: 600;
+            border: 1px solid #a7f3d0;
+            border-left-width: 8px;
+        }
+        body.dark-mode .relevance-box, body.dark-mode .way-forward {
+            background: #064e3b;
+            color: #a7f3d0;
+            border-color: #059669;
+        }
+
+        .exam-tip-box {
+            background: #fefce8;
+            color: #854d0e;
+            padding: 18px 24px;
+            border-radius: 12px;
+            margin-top: 20px;
+            font-size: calc(var(--base-font-size) - 1px);
+            border-left: 8px solid #eab308;
+            font-weight: 600;
+            border: 1px solid #fef08a;
+            border-left-width: 8px;
+        }
+        body.dark-mode .exam-tip-box {
+            background: #713f12;
+            color: #fef08a;
+            border-color: #eab308;
+        }
+
+        ul { margin: 12px 0; padding-left: 30px; }
+        li { margin-bottom: 12px; font-size: var(--base-font-size); line-height: var(--base-line-height); }
+
+        @media print {
+            .reader-toolbar, .print-btn { display: none !important; }
+            body { background: white !important; color: black !important; padding: 0 !important; font-size: 16pt !important; }
+            .container { max-width: 100% !important; }
+            .fact-card, .mains-card, .sujas-card, .editorial-card, .yt-card { page-break-inside: avoid; border: 1px solid #999 !important; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Floating Interactive Eye-Comfort Toolbar -->
+        <div class="reader-toolbar">
+            <div class="toolbar-title">
+                <span>👁️ नेत्र-अनुकूल फॉन्ट व पठन मोड</span>
+            </div>
+            <div class="toolbar-btns">
+                <button class="t-btn" onclick="setFontSize(22)">A सामान्य (22px)</button>
+                <button class="t-btn active" id="btn-ch7" onclick="setFontSize(26)">🔠 बड़ा / Ch-7 स्टाइल (26px)</button>
+                <button class="t-btn" onclick="setFontSize(30)">🔍 अल्ट्रा लार्ज (30px)</button>
+                <button class="t-btn" onclick="toggleTheme('light')">☀️ लाइट</button>
+                <button class="t-btn" onclick="toggleTheme('sepia')">📜 सेपिया</button>
+                <button class="t-btn" onclick="toggleTheme('dark')">🌙 डार्क मोड</button>
+                <button class="t-btn" style="background:#059669; border-color:#10b981;" onclick="window.print()">🖨️ PDF प्रिंट</button>
+            </div>
+        </div>
+
+        <div class="header">
+            <div>
+                <h1>RPSC RAS & UPSC दैनिक समसामयिकी एवं सम्पादकीय विश्लेषण</h1>
+                <p>दिनांक: 2026-11-21 | RAS Pre & Mains (5M & 10M) विशेष मास्टर नोट्स</p>
+            </div>
+        </div>
+
+        <div class="section-title">🟡 प्रारंभिक परीक्षा तथ्य (RAS & UPSC Prelims Tracker)</div>
+        
+            <div class="fact-card">
+                <div class="card-header">
+                    <span class="badge badge-pre">UPSC Pre / RAS Pre (Economy)</span>
+                    <span class="topic-title">ई-वे बिल प्रणाली में मेट्रो रेल का एकीकरण</span>
+                </div>
+                <p class="fact-text">GSTN (जीएसटी नेटवर्क) ने ई-वे बिल प्रणाली में परिवहन के 5वें माध्यम के रूप में 'मेट्रो रेल' को शामिल किया है। इससे पूर्व सड़क, रेल, वायु और जल (शिप) 4 माध्यम उपलब्ध थे। 26 अक्टूबर की अधिसूचना के तहत व्यापारियों को मेट्रो रेल का चयन कर परिवहन दस्तावेज़ संख्या दर्ज करना अनिवार्य किया गया है।</p>
+            </div>
+            
+            <div class="fact-card">
+                <div class="card-header">
+                    <span class="badge badge-pre">UPSC Pre / RAS Pre (Sci-Tech & Agri)</span>
+                    <span class="topic-title">भारत का प्रथम स्वदेशी H5N1 एवियन इन्फ्लूएंजा टीका</span>
+                </div>
+                <p class="fact-text">केंद्रीय कृषि मंत्री शिवराज सिंह चौहान ने मुर्गियों को बर्ड फ्लू से बचाने हेतु भारत का पहला स्वदेशी H5N1 वैक्सीन लॉन्च किया। इसे ICAR-नेशनल इंस्टीट्यूट ऑफ हाई सिक्योरिटी एनिमल डिजीज (NIHSAD), भोपाल द्वारा विकसित किया गया है।</p>
+            </div>
+            
+            <div class="fact-card">
+                <div class="card-header">
+                    <span class="badge badge-pre">UPSC Pre (Economy & Policy)</span>
+                    <span class="topic-title">आयकर विभाग: FAST-DS 2026 विदेशी संपत्ति प्रकटीकरण छूट</span>
+                </div>
+                <p class="fact-text">FAST-DS 2026 योजना के तहत ज्ञात एवं घोषित स्रोतों से अर्जित 20 लाख रुपये तक की शेष राशि वाले विदेशी बैंक खातों के लिए अलग से घोषणा दाखिल करने की आवश्यकता नहीं होगी। प्रकटीकरण की अंतिम तिथि 31 दिसंबर 2026 है।</p>
+            </div>
+            
+            <div class="fact-card">
+                <div class="card-header">
+                    <span class="badge badge-pre">UPSC Pre / RAS Pre (Sci-Tech)</span>
+                    <span class="topic-title">रसायन विज्ञान में नोबेल पुरस्कार 2026</span>
+                </div>
+                <p class="fact-text">वर्ष 2026 का रसायन नोबेल पुरस्कार हेनरी बी कागन (यूनिवर्सिटी पेरिस-सुड, फ्रांस) तथा केंसो सोआई (टोक्यो यूनिवर्सिटी ऑफ साइंस, जापान) को 'असममित कार्बनिक संश्लेषण में गैर-रेखीय प्रभावों एवं स्व-उत्प्रेरण (Autocatalytic reactions for homochirality)' की खोज के लिए प्रदान किया गया है।</p>
+            </div>
+            
+            <div class="fact-card">
+                <div class="card-header">
+                    <span class="badge badge-pre">UPSC Pre / RAS Pre (Space Sci)</span>
+                    <span class="topic-title">नासा का वॉयेजर-1 (Voyager-1) ऐतिहासिक मील का पत्थर</span>
+                </div>
+                <p class="fact-text">वर्ष 1977 में प्रक्षेपित नासा का वॉयेजर-1 पृथ्वी से 1 प्रकाश-दिवस (One Light-Day / ~16.1 अरब मील) की दूरी तक पहुँचने वाला पहला मानव निर्मित अंतरिक्ष यान बन गया है। इसमें प्लूटोनियम-238 रेडियोआइसोटोप थर्मोइलेक्ट्रिक जनरेटर (RTGs) ऊर्जा स्रोत के रूप में प्रयुक्त है।</p>
+            </div>
+            
+            <div class="fact-card">
+                <div class="card-header">
+                    <span class="badge badge-pre">UPSC Pre (Environment)</span>
+                    <span class="topic-title">ग्लोबल ओशन एलायंस (Global Ocean Alliance) में भारत की भागीदारी</span>
+                </div>
+                <p class="fact-text">भारत आधिकारिक तौर पर ग्लोबल ओशन एलायंस में शामिल हो गया है और हिंद महासागर क्षेत्र (IOR) में महासागरीय निगरानी, समुद्री पारिस्थितिकी तंत्र संरक्षण एवं डेटा-साझाकरण को दोगुना करने की प्रतिबद्धता जताई है।</p>
+            </div>
+            
+            <div class="fact-card">
+                <div class="card-header">
+                    <span class="badge badge-pre">UPSC Pre / RAS Pre (Economy)</span>
+                    <span class="topic-title">भारत का विदेशी मुद्रा भंडार (Forex Reserve)</span>
+                </div>
+                <p class="fact-text">नवंबर 2026 के मध्य में मूल्यांकन प्रभाव (Revaluation) तथा स्वर्ण भंडार व विदेशी मुद्रा परिसंपत्तियों में गिरावट के कारण भारत का विदेशी मुद्रा भंडार $14.21 अरब घटकर $705.34 अरब रह गया।</p>
+            </div>
+            
+            <div class="fact-card">
+                <div class="card-header">
+                    <span class="badge badge-pre">UPSC Pre / RAS Pre (International Relations)</span>
+                    <span class="topic-title">भारत-फिनलैंड स्टार्टअप सहयोग (Polar Bear Pitching)</span>
+                </div>
+                <p class="fact-text">भारत और फिनलैंड ने द्विपक्षीय आर्थिक संबंधों को मजबूत करने हेतु स्टार्टअप साझेदारी को विस्तारित किया है। पोलर बियर पिचिंग इवेंट के विजेता यश गोलिया 2027 में वैश्विक प्रतिस्पर्धा में भाग लेंगे।</p>
+            </div>
+            
+            <div class="fact-card">
+                <div class="card-header">
+                    <span class="badge badge-pre">UPSC Pre / State PCS (Health Policy)</span>
+                    <span class="topic-title">आंध्र प्रदेश: 95-95-95 एचआईवी/एड्स नियंत्रण लक्ष्य</span>
+                </div>
+                <p class="fact-text">UNAIDS द्वारा निर्धारित '95-95-95' लक्ष्यों (95% निदान, 95% उपचार, 95% वायरल दमन) में उत्कृष्ट प्रदर्शन हेतु आंध्र प्रदेश के 6 जिलों को 'सुरक्षित' तथा 10 जिलों को 'सक्षम' दर्जा दिया गया है।</p>
+            </div>
+            
+            <div class="fact-card">
+                <div class="card-header">
+                    <span class="badge badge-pre">UPSC Pre / RAS Pre (Defense & Tech)</span>
+                    <span class="topic-title">पुणे स्टार्टअप द्वारा परमाण्विक घड़ी (Atomic Clock) प्रोटोटाइप</span>
+                </div>
+                <p class="fact-text">महत्वपूर्ण तकनीकों पर अंतरराष्ट्रीय निर्यात प्रतिबंधों के बीच पुणे के एक दीप-तकनीक (Deep-tech) स्टार्टअप ने उपग्रह नेविगेशन, दूरसंचार और रणनीतिक रक्षा प्रणालियों हेतु स्वदेशी परमाण्विक घड़ी का प्रोटोटाइप विकसित किया।</p>
+            </div>
+            
+            <div class="fact-card">
+                <div class="card-header">
+                    <span class="badge badge-pre">UPSC Pre / RAS Pre (Security)</span>
+                    <span class="topic-title">ऑपरेशन मॉनसून थंडर (Operation Monsoon Thunder)</span>
+                </div>
+                <p class="fact-text">भारत की नारकोटिक्स कंट्रोल ब्यूरो (NCB) और अमेरिका की ड्रग एनफोर्समेंट एडमिनिस्ट्रेशन (US DEA) द्वारा सीमा पार नशीले पदार्थों की तस्करी को रोकने हेतु संयुक्त रूप से चलाया गया एक सफल वैश्विक अभियान।</p>
+            </div>
+            
+            <div class="fact-card">
+                <div class="card-header">
+                    <span class="badge badge-raj">RAS Pre (Rajasthan Polity)</span>
+                    <span class="topic-title">राजस्थान में मतदाता सूची संक्षिप्त पुनरीक्षण (SIR 2026)</span>
+                </div>
+                <p class="fact-text">राजस्थान निर्वाचन आयोग द्वारा 18 वर्ष की आयु पूर्ण करने वाले नव-मतदाताओं को मतदाता सूची में नाम जुड़वाने के लिए फॉर्म-6 भरने का विशेष जागरूकता अभियान चलाया गया।</p>
+            </div>
+            
+            <div class="fact-card">
+                <div class="card-header">
+                    <span class="badge badge-raj">RAS Pre (Internal Security & Cyber)</span>
+                    <span class="topic-title">राजस्थान में डिजिटल अर्रेस्ट व साइबर धोखाधड़ी चेतावनी</span>
+                </div>
+                <p class="fact-text">राजस्थान गृह विभाग एवं साइबर पुलिस ने फर्जी न्यायिक सह-सीबीआई आदेशों द्वारा सेवानिवृत्त अधिकारियों व नागरिकों को 'डिजिटल अरेस्ट' करने वाले अंतरराष्ट्रीय साइबर गिरोहों के विरुद्ध चेतावनी जारी की है।</p>
+            </div>
+            
+            <div class="fact-card">
+                <div class="card-header">
+                    <span class="badge badge-pre">RAS Pre / CGPCS (Sports)</span>
+                    <span class="topic-title">अबूझमाड़ की महिला खिलाड़ी: कविता</span>
+                </div>
+                <p class="fact-text">छत्तीसगढ़ के दूरस्थ वामपंथी उग्रवाद प्रभावित क्षेत्र अबूझमाड़ की राष्ट्रीय वॉलीबॉल खिलाड़ी कविता ने राष्ट्रीय स्तर पर पहचान बनाकर सुदूर जनजातीय प्रतिभा का प्रतिनिधित्व किया है।</p>
+            </div>
+            
+
+        <div class="section-title">🔵 मुख्य परीक्षा उत्तर लेखन मॉडल सेट (RAS Mains - 5M & 10M)</div>
+        
+            <div class="mains-card">
+                <div class="mains-header">
+                    <span class="badge badge-5m">5 अंक (Paper 1)</span>
+                    <span class="subject-tag">अर्थशास्त्र (Economy - Public Finance & State Welfare)</span>
+                </div>
+                <h3 class="question-text">प्रश्न: भारत के विभिन्न राज्यों में प्रत्यक्ष लाभ अंतरण (DBT) योजनाओं के बढ़ते राजकोषीय पदचिह्न और इसके प्रभावों का संक्षिप्त मूल्यांकन कीजिए।</h3>
+                
+                <div class="answer-box">
+                    <strong class="ans-label">उत्तर ढांचा (~50 शब्द):</strong>
+                    <div class="answer-content">• **वर्तमान परिदृश्य:** वित्तीय वर्ष 2027 तक राज्यों का नकद हस्तांतरण (DBT) 4 ट्रिलियन रुपये (जीडीपी का 1%) पहुँचने का अनुमान है (FY23 में 0.6% था)। इसमें पश्चिम बंगाल, कर्नाटक, महाराष्ट्र (महिला कल्याण) तथा तेलंगाना (कृषक सहायता) अग्रणी हैं।<br>• **सकारात्मक प्रभाव:** निर्धनता उन्मूलन, महिला सशक्तिकरण, प्रत्यक्ष आय सहायता से उपभोग व्यय में वृद्धि तथा मध्यस्थों की समाप्ति।<br>• **राजकोषीय चिंताएँ:** राज्यों के पूंजीगत व्यय (सड़क, स्वास्थ्य, शिक्षा) में कटौती का जोखिम, राजकोषीय घाटे में वृद्धि तथा गैर-विकासमूलक रेवड़ी (Freebies) की राजनीति को बढ़ावा।</div>
+                </div>
+                
+            </div>
+            
+            <div class="mains-card">
+                <div class="mains-header">
+                    <span class="badge badge-5m">5 अंक (Paper 3)</span>
+                    <span class="subject-tag">विज्ञान एवं प्रौद्योगिकी (Sci-Tech - Biotechnology)</span>
+                </div>
+                <h3 class="question-text">प्रश्न: रसायन विज्ञान में होमोकाइरैलिटी (Homochirality) की अवधारणा क्या है और औषधि निर्माण में इसके महत्व को स्पष्ट कीजिए।</h3>
+                
+                <div class="answer-box">
+                    <strong class="ans-label">उत्तर ढांचा (~50 शब्द):</strong>
+                    <div class="answer-content">• **अवधारणा:** जीव रसायन में जैविक अणु (जैसे एमीनो एसिड/प्रोटीन) दो दर्पण छवियों (Enantiomers) में मौजूद होते हैं, परंतु प्रकृति में केवल एक ही रूप का उपयोग होता है, जिसे 'होमोकाइरैलिटी' कहते हैं।<br>• **वैज्ञानिक समाधान:** नोबेल पुरस्कार विजेता कागन और सोआई ने असममित कार्बनिक संश्लेषण व स्व-उत्प्रेरण द्वारा केवल एक दर्पण छवि बनाने की विधि खोजी।<br>• **औषधि निर्माण में महत्व:** दवाओं में केवल एक दर्पण छवि ही जैविक रूप से सक्रिय व प्रभावी होती है; दूसरी छवि निष्प्रभावी या हानिकारक हो सकती है (उदा. थैलिडोमाइड त्रासदी)। इससे लक्षित व सुरक्षित दवा निर्माण संभव होता है।</div>
+                </div>
+                
+            </div>
+            
+            <div class="mains-card">
+                <div class="mains-header">
+                    <span class="badge badge-10m">10 अंक (Paper 3)</span>
+                    <span class="subject-tag">पर्यावरण, जलवायु परिवर्तन एवं आपदा प्रबंधन</span>
+                </div>
+                <h3 class="question-text">प्रश्न: COP-31 सम्मेलन के प्रमुख मुद्दों, जीवाश्म ईंधन से मुक्ति पर उत्पन्न गतिरोध और भारत की 'स्थानीय-सह-वैश्विक' (Co-benefit) जलवायु नीति की आवश्यकता का विश्लेषणात्मक परीक्षण कीजिए।</h3>
+                
+                <div class="answer-box">
+                    <div class="ans-section"><strong class="ans-label">भूमिका (Introduction):</strong><br>हाल ही में आयोजित COP-31 सम्मेलन में विकसित और विकासशील देशों के मध्य जीवाश्म ईंधन को चरणबद्ध तरीके से समाप्त करने (Phase-out) तथा जलवायु वित्त पोषण पर गंभीर मतभेद उभरकर सामने आए हैं।</div>
+                    <div class="ans-section"><strong class="ans-label">मुख्य भाग (Body & Rajasthan Context):</strong><br>1. **COP-31 के प्रमुख गतिरोध बिन्दु:**<br>   • विकसित देशों द्वारा ऐतिहासिक उत्तरदायित्व से हटना और वित्तीय व तकनीकी हस्तांतरण में शिथिलता।<br>   • जीवाश्म ईंधन (कोयला, तेल, गैस) के उपयोग को पूरी तरह बंद करने के रोडमैप पर सर्वसम्मति का अभाव।<br>   • अत्यधिक सहभागिता (Overstuffed COPs) के बावजूद उत्सर्जन में वास्तविक कटौती के प्रति राजनीतिक इच्छाशक्ति की कमी।<br><br>2. **विकासशील देशों (भारत) की चुनौतियाँ:**<br>   • गरीबी उन्मूलन और औद्योगीकरण के लिए ऊर्जा सुरक्षा की प्राथमिकता।<br>   • पश्चिमी मॉडल का अंधानुकरण भारतीय अर्थव्यवस्था और रोजगार पर नकारात्मक प्रभाव डाल सकता है (जैसे यूके में इस्पात उद्योग में नौकरियों का ह्रास)।<br><br>3. **भारत हेतु 'सह-लाभ दृष्टिकोण' (Co-benefit Agenda):**<br>   • **सकल प्राकृतिक उत्पाद (Gross Nature Product):** प्राकृतिक संसाधनों के संरक्षण के साथ स्थानीय आजीविका का सृजन।<br>   • **स्थानीय प्रदूषण व वैश्विक उत्सर्जन में एक साथ कमी:** वायु गुणवत्ता में सुधार और औद्योगिक विकार्बनीकरण (Decarbonisation) को एक साथ जोड़ना।<br>   • **पारंपरिक ज्ञान का समावेश:** हिमालयी क्षेत्रों में अनियंत्रित निर्माण रोकने और स्थानीय पारिस्थितिकी-अनुकूल नीतियां लागू करना।</div>
+                    <div class="ans-section"><strong class="ans-label">निष्कर्ष (Conclusion):</strong><br>निष्कर्षतः, भारत को वैश्विक मंचों पर निष्पक्ष उत्सर्जन आवंटन की मांग जारी रखते हुए ऐसी घरेलू नीति अपनानी चाहिए जो पर्यावरण संरक्षण के साथ-साथ आम नागरिकों की आजीविका एवं सतत विकास को सुनिश्चित करे।</div>
+                </div>
+                
+            </div>
+            
+            <div class="mains-card">
+                <div class="mains-header">
+                    <span class="badge badge-10m">10 अंक (Paper 2)</span>
+                    <span class="subject-tag">प्रशासनिक नीतिशास्त्र, सुशासन एवं विज्ञान शासन (Ethics & Governance)</span>
+                </div>
+                <h3 class="question-text">प्रश्न: भारतीय वैज्ञानिक संस्थानों में शासन (Governance), शोध नैतिकता और पारंपरिक ज्ञान के उपेक्षा की समस्याओं का मूल्यांकन कीजिए। इस स्थिति में सुधार हेतु क्या कदम उठाए जाने चाहिए?</h3>
+                
+                <div class="answer-box">
+                    <div class="ans-section"><strong class="ans-label">भूमिका (Introduction):</strong><br>भारतीय राष्ट्रीय विज्ञान अकादमी (INSA) की 90वीं वर्षगांठ पर प्रकाशित रिपोर्ट 'द साइंटिफिक एंटरप्राइज इन इंडिया' भारतीय शोध पारिस्थितिकी तंत्र में गंभीर संस्थागत एवं नैतिक सुधारों की आवश्यकता को रेखांकित करती है।</div>
+                    <div class="ans-section"><strong class="ans-label">मुख्य भाग (Body & Rajasthan Context):</strong><br>1. **भारतीय वैज्ञानिक शासन में मुख्य कमियां:**<br>   • **नागरिकों की दैनिक श्रम-सुविधा (Drudgery) की उपेक्षा:** तकनीकें अक्सर श्रमिकों की शारीरिक पीड़ा घटाने के बजाय उन्हें आजीविका से बेदखल कर देती हैं (उदा. मैनुअल स्कैवेंजिंग या कृषि श्रम)।<br>   • **पारंपरिक ज्ञान का ह्रास:** आधुनिक पाठ्यपुस्तकों और पश्चिमी मॉडलों द्वारा भारत के सदियों पुराने पारंपरिक व अनुभवात्मक ज्ञान को हाशिए पर धकेलना।<br>   • **शोध नैतिकता एवं निष्ठा का संकट:** अकादमिक संस्थानों में प्लेगरिज्म (Plagiarism), प्रेडेटरी जर्नल्स, फर्जी डेटा और 'प्रकाशन की संख्या' को प्राथमिकता देना।<br>   • **संस्थागत नेतृत्व का क्षरण:** कुलपतियों की नियुक्तियों में राजनीतिक हस्तक्षेप तथा फैलोशिप चुनाव में स्व-हितों का टकराव एवं महिलाओं/गैर-महानगरीय शोधकर्ताओं का कम प्रतिनिधित्व।<br>   • **वैज्ञानिक खोजों का व्यवसायीकरण न होना:** 'पेटेंट कराने से पहले प्रकाशित करना' की प्रवृत्ति से खोजों का आर्थिक लाभ विदेशी कंपनियों (जैसे रामन प्रभाव, बोस का कोहेरर) को मिला।<br><br>2. **सुधारात्मक उपाय एवं आगे की राह:**<br>   • **'Publish before Patent' के बजाय 'Patent before Publish'** की नीति को बढ़ावा देना।<br>   • विज्ञान शासन समितियों में समाजशास्त्रियों एवं नीति विश्लेषकों की भागीदारी सुनिश्चित करना।<br>   • शोध मूल्यांकन का आधार 'पत्रिकाओं की संख्या' न होकर 'शोध की सामाजिक उपयोगिता एवं गुणवत्ता' होना चाहिए।</div>
+                    <div class="ans-section"><strong class="ans-label">निष्कर्ष (Conclusion):</strong><br>भारतीय विज्ञान को केवल आंकड़ों तक सीमित न रहकर आम नागरिकों की दैनिक समस्याओं के समाधान और समावेशी सतत विकास (Politics of Inclusion) की दिशा में संरेखित होना होगा।</div>
+                </div>
+                
+            </div>
+            
+
+        <div class="section-title">📺 कोचिंग शिक्षक विश्लेषण एवं यूट्यूब लाइव क्लास सार</div>
+            <div class="yt-card">
+                <div class="yt-header">
+                    <span class="badge badge-yt">📺 कोचिंग शिक्षक विश्लेषण</span>
+                    <span class="topic-title">ई-वे बिल प्रणाली का विस्तार और लॉजिस्टिक्स दक्षता</span>
+                </div>
+                <div class="yt-explanation">
+                    <strong>शिक्षक व्याख्यान एवं ट्रिक्स:</strong>
+                    <p>UPSC Wallah (प्रशांत सर) ने व्याख्या की कि किस प्रकार GSTN द्वारा ई-वे बिल में 'मेट्रो रेल' को शामिल करना शहरी लॉजिस्टिक्स और माल ढुलाई में क्रांति लाएगा। इससे सड़कों पर भीड़भाड़ कम होगी और लास्ट-माइल डिलीवरी तेज होगी।</p>
+                </div>
+                <div class="key-args">
+                    <strong>क्लास के मुख्य बिंदु (Key Lecture Points):</strong>
+                    <ul>
+                        <li>ई-वे बिल प्रणाली में अब 5 माध्यम हैं: सड़क, रेल, वायु, जल और मेट्रो रेल।</li><li>राष्ट्रीय लॉजिस्टिक्स नीति (NLP) के लक्ष्यों को प्राप्त करने में सहायक।</li><li>कर चोरी (Tax Evasion) पर रोक और पारदर्शी माल परिवहन।</li>
+                    </ul>
+                </div>
+                <div class="exam-tip-box"><strong>💡 परीक्षा टिप (Exam Tip):</strong> RAS Mains Paper 1: 'भारत में लॉजिस्टिक्स लागत घटाने हेतु सरकारी पहलों' पर उत्तर लिखते समय ई-वे बिल में मेट्रो रेल एकीकरण का उल्लेख करें।</div>
+            </div>
+            
+            <div class="yt-card">
+                <div class="yt-header">
+                    <span class="badge badge-yt">📺 कोचिंग शिक्षक विश्लेषण</span>
+                    <span class="topic-title">H5N1 स्वदेशी वैक्सीन एवं पशुधन स्वास्थ्य सुरक्षा</span>
+                </div>
+                <div class="yt-explanation">
+                    <strong>शिक्षक व्याख्यान एवं ट्रिक्स:</strong>
+                    <p>निर्माण आईएएस के विश्लेषक ने ICAR-NIHSAD भोपाल द्वारा विकसित भारत के पहले स्वदेशी H5N1 मुर्गियों के टीके के तकनीकी व आर्थिक पहलुओं को समझाया।</p>
+                </div>
+                <div class="key-args">
+                    <strong>क्लास के मुख्य बिंदु (Key Lecture Points):</strong>
+                    <ul>
+                        <li>एवियन इन्फ्लूएंजा (H5N1) पोल्ट्री उद्योग के लिए एक बड़ा जुओनोटिक (Zoonotic) खतरा है।</li><li>स्वदेशी टीके से आयात निर्भरता कम होगी और छोटे किसानों की आजीविका सुरक्षित होगी।</li><li>वन हेल्थ (One Health) दृष्टिकोण के क्रियान्वयन में महत्वपूर्ण कदम।</li>
+                    </ul>
+                </div>
+                <div class="exam-tip-box"><strong>💡 परीक्षा टिप (Exam Tip):</strong> UPSC Pre & RAS Mains Paper 3: पशुधन अर्थव्यवस्था एवं बायो-सिक्योरिटी (Bio-security) से जुड़े प्रश्नों हेतु अति-महत्वपूर्ण।</div>
+            </div>
+            
+            <div class="yt-card">
+                <div class="yt-header">
+                    <span class="badge badge-yt">📺 कोचिंग शिक्षक विश्लेषण</span>
+                    <span class="topic-title">रियामन परिकल्पना (Riemann Hypothesis) और एआई का गणितीय हस्तक्षेप</span>
+                </div>
+                <div class="yt-explanation">
+                    <strong>शिक्षक व्याख्यान एवं ट्रिक्स:</strong>
+                    <p>द हिंदू एनालिसिस में शिक्षक ने चर्चा की कि एंथ्रोपिक के एआई मॉडल 'Claude' और गणितज्ञों द्वारा 160 वर्ष पुरानी 'रियामन परिकल्पना' के प्रमाण के दावों से गणित और कृत्रिम बुद्धिमत्ता के संबंधों में क्या बदलाव आएगा।</p>
+                </div>
+                <div class="key-args">
+                    <strong>क्लास के मुख्य बिंदु (Key Lecture Points):</strong>
+                    <ul>
+                        <li>रियामन परिकल्पना अभाज्य संख्याओं (Prime Numbers) के वितरण से संबंधित गणित की सबसे प्रसिद्ध अनसुलझी समस्या है।</li><li>एआई मॉडल जटिल वैज्ञानिक शोध और गणितीय सिद्धान्तों को सिद्ध करने में इंसानों के सहयोगी बन रहे हैं।</li><li>मानव बुद्धि बनाम एआई की स्वायत्तता पर दार्शनिक प्रश्न।</li>
+                    </ul>
+                </div>
+                <div class="exam-tip-box"><strong>💡 परीक्षा टिप (Exam Tip):</strong> एआई के एथिकल और बौद्धिक प्रभावों पर निबंध (Essay) हेतु एक उत्कृष्ट उदाहरण।</div>
+            </div>
+            
+            <div class="yt-card">
+                <div class="yt-header">
+                    <span class="badge badge-yt">📺 कोचिंग शिक्षक विश्लेषण</span>
+                    <span class="topic-title">वॉयेजर-1 की अंतरतारकीय यात्रा और अंतरिक्ष प्रौद्योगिकी</span>
+                </div>
+                <div class="yt-explanation">
+                    <strong>शिक्षक व्याख्यान एवं ट्रिक्स:</strong>
+                    <p>वैज्ञानिक विश्लेषक ने वॉयेजर-1 द्वारा 1 प्रकाश-दिवस दूरी तय करने और RTG (रेडियोआइसोटोप थर्मोइलेक्ट्रिक जनरेटर) तकनीक पर विस्तृत चर्चा की।</p>
+                </div>
+                <div class="key-args">
+                    <strong>क्लास के मुख्य बिंदु (Key Lecture Points):</strong>
+                    <ul>
+                        <li>RTG जनरेटर प्लूटोनियम-238 के क्षय से उत्पन्न ऊष्मा को बिजली में बदलते हैं।</li><li>डीप स्पेस नेटवर्क (DSN) के माध्यम से पृथ्वी से संकेतों का आदान-प्रदान (160 बिट्स/सेकंड)।</li><li>ऊर्स्ट क्लाउड (Oort Cloud) और सौर मंडल की वैज्ञानिक सीमाएं।</li>
+                    </ul>
+                </div>
+                <div class="exam-tip-box"><strong>💡 परीक्षा टिप (Exam Tip):</strong> RAS Pre/Mains Paper 3: सुदूर अंतरिक्ष मिशनों (Deep Space Probes) और परमाणु ऊर्जा स्रोतों के अनुप्रयोग।</div>
+            </div>
+            
+
+        <div class="section-title">🟣 राजस्थान सुजस, पत्रिका एवं दैनिक भास्कर (Rajasthan Sujas, Patrika & Bhaskar)</div>
+        
+            <div class="sujas-card">
+                <div class="sujas-header">
+                    <span class="badge badge-sujas">राजस्थान सुजस विशेष</span>
+                    <strong>गृह विभाग एवं सूचना प्रौद्योगिकी विभाग, राजस्थान सरकार</strong>
+                </div>
+                <h3>राजस्थान में डिजिटल सुरक्षा एवं साइबर अपराध जागरूकता</h3>
+                <ul>
+                    <li>राज्य में सेवानिवृत्त अधिकारियों एवं वरिष्ठ नागरिकों को निशाना बनाने वाले 'डिजिटल अरेस्ट' मामलों के विरुद्ध विशेष साइबर हेल्पलाइन 1930 का व्यापक प्रचार।</li><li>डिजिटल अरेस्ट के दौरान किसी भी सरकारी एजेंसी (CBI, ED, Cyber Police) द्वारा वीडियो कॉल पर गिरफ्तारी न करने के संबंध में एडवाइजरी।</li><li>साइबर थ्रेट इंटेलिजेंस यूनिट द्वारा वित्तीय साइबर धोखाधड़ी पर त्वरित कार्रवाई।</li>
+                </ul>
+                <div class="relevance-box"><strong>RPSC महत्व:</strong> RAS Mains Paper 3: कानून-व्यवस्था एवं आंतरिक सुरक्षा (साइबर अपराध के नए रूप एवं राज्य की नीतियां)।</div>
+            </div>
+            
+            <div class="sujas-card">
+                <div class="sujas-header">
+                    <span class="badge badge-sujas">राजस्थान सुजस विशेष</span>
+                    <strong>मुख्य निर्वाचन अधिकारी (CEO), राजस्थान</strong>
+                </div>
+                <h3>राजस्थान में मतदाता सूची संक्षिप्त पुनरीक्षण अभियान (SIR 2026)</h3>
+                <ul>
+                    <li>राज्य के सभी जिलों में 18 वर्ष पूर्ण करने वाले युवाओं के नाम जोड़ने के लिए विशेष फॉर्म-6 अभियान।</li><li>वोटर हेल्पलाइन ऐप और डिजिटल माध्यमों से निर्वाचक नामावली का सुदृढ़ीकरण।</li><li>वंचित वर्गों और जनजातीय क्षेत्रों में शत-प्रतिशत मतदाता पंजीकरण का लक्ष्य।</li>
+                </ul>
+                <div class="relevance-box"><strong>RPSC महत्व:</strong> RAS Mains Paper 3: राज्य में राजनीतिक प्रक्रिया एवं लोकतांत्रिक सहभागिता।</div>
+            </div>
+            
+            <div class="sujas-card">
+                <div class="sujas-header">
+                    <span class="badge badge-sujas">राजस्थान सुजस विशेष</span>
+                    <strong>जयपुर मेट्रो रेल कॉर्पोरेशन (JMRC) / स्वायत्त शासन विभाग</strong>
+                </div>
+                <h3>जयपुर मेट्रो का द्वितीय चरण एवं नगरीय परिवहन विकास</h3>
+                <ul>
+                    <li>जयपुर मेट्रो के विस्तार और सुचारू परिवहन हेतु GSTN ई-वे बिल प्रणाली में मेट्रो को शामिल करने का लाभ राजस्थान के व्यापारिक समुदाय को मिलेगा।</li><li>शहरी आवागमन में सतत एवं हरित परिवहन (Green Mobility) को प्रोत्साहन।</li><li>जयपुर मेट्रो में आधुनिक सुरक्षा एवं डिजिटल टिकटिंग का एकीकरण।</li>
+                </ul>
+                <div class="relevance-box"><strong>RPSC महत्व:</strong> RAS Mains Paper 1: राजस्थान की अर्थव्यवस्था (शहरी बुनियादी ढांचा विकास)।</div>
+            </div>
+            
+
+        <div class="section-title">🔴 सम्पादकीय एवं पत्रिका गहन विश्लेषण (The Hindu, Indian Express, ET, DownToEarth, योजना व कुरुक्षेत्र)</div>
+        
+            <div class="editorial-card">
+                <div class="editorial-header">
+                    <span class="badge badge-ed">The Hindu</span>
+                    <span class="syllabus-tag">GS2 / RAS Paper 3 (International Relations & Security)</span>
+                </div>
+                <h3>परमाणु हथियारों पर त्रिपक्षीय संवाद और रणनीतिक स्थिरता</h3>
+                <p class="context"><strong>समसामयिक संदर्भ:</strong> अमेरिका, चीन और रूस के बीच वैश्विक परमाणु हथियारों की नई होड़ को रोकने के लिए त्रिपक्षीय वार्ता का रोडमैप तैयार करने की तत्काल आवश्यकता।</p>
+                <div class="key-args">
+                    <strong>सम्पादकीय का पूरा सार एवं तर्क (Deep Dive Takeaways):</strong>
+                    <ul>
+                        <li>वैश्विक महाशक्तियों (US-China-Russia) के बीच रणनीतिक अविश्वास चरम पर है, जिससे बहुपक्षीय परमाणु नियंत्रण संधियां कमजोर हो रही हैं।</li><li>चीन का तेजी से बढ़ता परमाणु शस्त्रागार और अमेरिका-रूस के बीच 'न्यू स्टार्ट संधिकाल' की अनिश्चितता वैश्विक सुरक्षा ढाँचे को खतरे में डाल रही है।</li><li>याल्टा सम्मेलन के समान एक नई बहुपक्षीय व्यवस्था की आवश्यकता है जो परमाणु प्रसार के जोखिमों को संतुलित कर सके।</li><li>वैश्विक दक्षिण (Global South) के देशों पर परमाणु युद्ध के जोखिम का सबसे गंभीर आर्थिक व पर्यावरणीय प्रभाव पड़ेगा।</li>
+                    </ul>
+                </div>
+                <div class="way-forward"><strong>आगे की राह (Way Forward):</strong> तीनों महाशक्तियों को तत्काल न्यूक्लियर रिस्क रिडक्शन टॉक्स की शुरुआत करनी चाहिए और हाइपरसोनिक व एआई-संचालित हथियार प्रणालियों को भी संधि के दायरे में लाना चाहिए।</div>
+            </div>
+            
+            <div class="editorial-card">
+                <div class="editorial-header">
+                    <span class="badge badge-ed">The Hindu</span>
+                    <span class="syllabus-tag">GS3 / RAS Paper 3 (Sci-Tech & Cyber Security)</span>
+                </div>
+                <h3>कृत्रिम बुद्धिमत्ता (AI) में वैश्विक दौड़ और भारत की रणनीतिक चुप्पी</h3>
+                <p class="context"><strong>समसामयिक संदर्भ:</strong> एंथ्रोपिक (Anthropic) जैसी अग्रणी एआई कंपनियों के आईपीओ (IPO) और बहु-ट्रिलियन डॉलर की एआई रेस में भारत की संप्रभु एआई (Sovereign AI) नीति का अभाव।</p>
+                <div class="key-args">
+                    <strong>सम्पादकीय का पूरा सार एवं तर्क (Deep Dive Takeaways):</strong>
+                    <ul>
+                        <li>वैश्विक स्तर पर जनरेटिव एआई (Generative AI) और फ्रंटियर मॉडल्स (जैसे Claude, GPT, Gemini) पर कुछ पश्चिमी और चीनी टेक दिग्गजों का एकाधिकार हो रहा है।</li><li>भारत तकनीक का सबसे बड़ा उपभोक्ता बाजार होने के बावजूद मूलभूत एआई मॉडल (Base Models) और सेमीकंडक्टर इंफ्रास्ट्रक्चर विकसित करने में पीछे है।</li><li>न्यायिक, अकादमिक और प्रशासनिक व्यवस्था में एआई के बढ़ते इस्तेमाल से डेटा गोपनीयता और राष्ट्रीय सुरक्षा पर जोखिम बढ़ रहे हैं।</li><li>सर्वोच्च न्यायालय (CJI सूर्यकांत का वक्तव्य) ने स्पष्ट किया कि एआई पर प्रतिबंध लगाने के बजाय एक सुदृढ़ नियामक ढाँचा (Regulation over Ban) तैयार करना बेहतर विकल्प है।</li>
+                    </ul>
+                </div>
+                <div class="way-forward"><strong>आगे की राह (Way Forward):</strong> भारत को 'इंडिया एआई मिशन' के तहत स्वदेशी कंप्यूट क्षमता (GPU Infrastructure) बढ़ानी चाहिए और नैतिक एआई नियमों का निर्माण करना चाहिए।</div>
+            </div>
+            
+            <div class="editorial-card">
+                <div class="editorial-header">
+                    <span class="badge badge-ed">Down To Earth</span>
+                    <span class="syllabus-tag">GS3 / RAS Paper 3 (Science Governance & Society)</span>
+                </div>
+                <h3>भारतीय विज्ञान का अधूरा वादा: संस्थागत introspection और समावेशी नीतियां</h3>
+                <p class="context"><strong>समसामयिक संदर्भ:</strong> INSA के 90 वर्षों के सफर पर प्रकाशित पुस्तक 'The Scientific Enterprise in India' के आलोक में भारतीय विज्ञान के दर्शन और प्रशासनिक विफलताओं का मूल्यांकन।</p>
+                <div class="key-args">
+                    <strong>सम्पादकीय का पूरा सार एवं तर्क (Deep Dive Takeaways):</strong>
+                    <ul>
+                        <li>भारतीय विज्ञान का सबसे बड़ा दोष यह रहा है कि इसने आम नागरिकों (सफाईकर्मी, छोटे किसान) के दैनिक कठिन श्रम (Drudgery) को कम करने के स्थान पर या तो उसे अनदेखा किया या तकनीक से मजदूर को ही हटा दिया।</li><li>सुनीता नारायण के अनुसार, भारत की जलवायु नीति को विदेशी मॉडलों के स्थान पर स्थानीय सह-लाभ (Co-benefit agenda) जैसे- स्थानीय वायु सफाई और विकेंद्रीकृत अपशिष्ट प्रबंधन पर केंद्रित होना चाहिए।</li><li>माशेलकर और बालेराम जैसे वैज्ञानिकों ने रेखांकित किया कि 'पेटेंट कराने से पूर्व प्रकाशित' करने की संस्कृति और सार्वजनिक विश्वविद्यालयों के राजनीतिकरण ने भारतीय शोध को आर्थिक लाभ में बदलने से रोका है।</li><li>विज्ञान एवं प्रौद्योगिकी मंडलियों में समाजशास्त्रियों और गैर-वैज्ञानिकों की अनुपस्थिति के कारण नीतिगत निर्णय सामाजिक वास्तविकताओं से कटे हुए हैं।</li>
+                    </ul>
+                </div>
+                <div class="way-forward"><strong>आगे की राह (Way Forward):</strong> भारत को 'सकल प्राकृतिक उत्पाद' (Gross Nature Product) पर आधारित अर्थव्यवस्था का निर्माण करना होगा और शोध मूल्यांकन में मात्रा (Quantity) के बजाय सामाजिक प्रभाव (Impact) को प्राथमिकता देनी होगी।</div>
+            </div>
+            
+            <div class="editorial-card">
+                <div class="editorial-header">
+                    <span class="badge badge-ed">Business Standard / LiveMint</span>
+                    <span class="syllabus-tag">GS3 / RAS Paper 1 (Indian Economy & Fiscal Policy)</span>
+                </div>
+                <h3>राज्य कल्याणकारी योजनाओं में नकद अंतरण (DBT) की बढ़ती प्रवृत्ति</h3>
+                <p class="context"><strong>समसामयिक संदर्भ:</strong> वित्तीय वर्ष 2027 तक भारतीय राज्यों का प्रत्यक्ष लाभ अंतरण व्यय 4 लाख करोड़ रुपये (जीडीपी का 1%) पहुँचने की संभावना।</p>
+                <div class="key-args">
+                    <strong>सम्पादकीय का पूरा सार एवं तर्क (Deep Dive Takeaways):</strong>
+                    <ul>
+                        <li>पश्चिम बंगाल (लक्ष्मी भंडार), कर्नाटक (गृह लक्ष्मी), महाराष्ट्र (माझी लाडकी बहिन) और तेलंगाना (रायथु बंधु) जैसी योजनाएं नकद अंतरण में अग्रणी हैं।</li><li>नकद हस्तांतरण ने ग्रामीण उपभोग, महिला सशक्तिकरण और संकट के समय परिवारों को त्वरित आर्थिक सुरक्षा प्रदान की है।</li><li>हालाँकि, पूंजीगत संपत्ति (स्वास्थ्य, शिक्षा, बुनियादी ढांचा) के निर्माण के लिए नियत बजटीय संसाधनों का इस दिशा में विपथन लंबी अवधि में राज्यों के राजकोषीय स्वास्थ्य को नुकसान पहुँचा रहा है।</li><li>केंद्र और राज्यों के बीच राजकोषीय उत्तरदायित्व एवं बजट प्रबंधन (FRBM) सीमाओं का उल्लंघन होने का जोखिम है।</li>
+                    </ul>
+                </div>
+                <div class="way-forward"><strong>आगे की राह (Way Forward):</strong> राज्यों को प्रत्यक्ष नकद सहायता और परिसंपत्ति-सृजनकारी पूंजीगत व्यय के बीच एक विवेकपूर्ण संतुलन स्थापित करना चाहिए ताकि सतत आर्थिक वृद्धि बाधित न हो।</div>
+            </div>
+            
+
+        <div class="section-title">📲 टेलीग्राम चैनल दैनिक प्रश्नोत्तरी व नोट्स (Telegram Daily Quiz & Notes)</div>
+            <div class="mains-card" style="border-left: 8px solid #0284c7; margin-bottom: 25px;">
+                <div class="mains-header">
+                    <span class="badge" style="background:#0284c7; color:white;">5 अंक (~50 शब्द)</span>
+                    <span class="badge" style="background:#1e3a8a; color:white;">@ras_prep_official</span>
+                    <span class="subject-tag">Paper 3: Law & Cyber Security</span>
+                </div>
+                <h3 class="question-text">प्रश्न: प्रश्न: राजस्थान में 'डिजिटल अरेस्ट' (Digital Arrest) की बढ़ती घटनाओं के संदर्भ में, इसके कार्यप्रणाली (Modus Operandi) और इससे बचाव के प्रशासनिक उपायों की समीक्षा कीजिए।</h3>
+                <div class="answer-box">
+                    <strong class="ans-label">उत्तर ढांचा एवं विस्तृत नोट्स (~50 शब्द):</strong>
+                    <div class="answer-content">1. सही उत्तर एवं मुख्य तथ्य: डिजिटल अरेस्ट साइबर अपराध का एक रूप है जहाँ ठग खुद को CBI/ED/पुलिस बताकर फर्जी वीडियो कॉल के ज़रिए पीड़ित को घर में अरेस्ट रखने का नाटक कर रकम ऐंठते हैं।<br>2. ऐतिहासिक/भौगोलिक/नीतिगत संदर्भ: राजस्थान में हाल ही में सेवानिवृत्त अधिकारियों को निशाना बनाया गया। भारतीय नागरिक सुरक्षा संहिता (BNSS) में ऐसी किसी वीडियो कॉल गिरफ्तारी का प्रावधान नहीं है।<br>3. RPSC परीक्षा प्रासंगिकता: RAS Mains Paper 3 (आंतरिक सुरक्षा) - राजस्थान पुलिस ने हेल्पलाइन 1930, साइबर थ्रेट इंटेलिजेंस और जनजागरूकता अभियान चलाए हैं।</div>
+                </div>
+            </div>
+            
+            <div class="mains-card" style="border-left: 8px solid #0284c7; margin-bottom: 25px;">
+                <div class="mains-header">
+                    <span class="badge" style="background:#0284c7; color:white;">5 अंक (~50 शब्द)</span>
+                    <span class="badge" style="background:#1e3a8a; color:white;">@upsc_science_daily</span>
+                    <span class="subject-tag">Paper 3: Science & Technology</span>
+                </div>
+                <h3 class="question-text">प्रश्न: प्रश्न: रेडियोआइसोटोप थर्मोइलेक्ट्रिक जनरेटर (RTG) क्या है और यह वॉयेजर जैसे दीप-स्पेस मिशनों के लिए क्यों आवश्यक है?</h3>
+                <div class="answer-box">
+                    <strong class="ans-label">उत्तर ढांचा एवं विस्तृत नोट्स (~50 शब्द):</strong>
+                    <div class="answer-content">1. सही उत्तर एवं मुख्य तथ्य: RTG एक परमाणु बैटरी है जो प्लूटोनियम-238 के रेडियोधर्मी क्षय से उत्पन्न ऊष्मा को सीबेक प्रभाव (Seebeck Effect) द्वारा विद्युत ऊर्जा में बदलती है।<br>2. ऐतिहासिक/भौगोलिक/नीतिगत संदर्भ: सूर्य से अत्यधिक दूरी (जैसे वॉयेजर-1 का 1 प्रकाश-दिवस दूर होना) पर सौर पैनल काम नहीं करते, अतः RTG निरंतर बिजली प्रदान करता है।<br>3. RPSC परीक्षा प्रासंगिकता: RAS Pre/Mains Paper 3 (स्पेस टेक) - सुदूर अंतरिक्ष अभियानों की कार्यप्रणाली को समझने हेतु महत्वपूर्ण टॉपिक।</div>
+                </div>
+            </div>
+            
+            <div class="mains-card" style="border-left: 8px solid #0284c7; margin-bottom: 25px;">
+                <div class="mains-header">
+                    <span class="badge" style="background:#0284c7; color:white;">5 अंक (~50 शब्द)</span>
+                    <span class="badge" style="background:#1e3a8a; color:white;">@rajasthan_sujas_gk</span>
+                    <span class="subject-tag">Paper 1: Rajasthan Economy</span>
+                </div>
+                <h3 class="question-text">प्रश्न: प्रश्न: राजस्थान में प्रत्यक्ष लाभ अंतरण (DBT) और सामाजिक सुरक्षा पेंशन योजनाओं के राजकोषीय प्रभाव पर टिप्पणी कीजिए।</h3>
+                <div class="answer-box">
+                    <strong class="ans-label">उत्तर ढांचा एवं विस्तृत नोट्स (~50 शब्द):</strong>
+                    <div class="answer-content">1. सही उत्तर एवं मुख्य तथ्य: राजस्थान में सामाजिक सुरक्षा पेंशन, अन्नपूर्णा रसोई व कृषक योजनाओं के तहत सीधे लाभार्थी खातों में राशि हस्तांतरित की जाती है।<br>2. ऐतिहासिक/भौगोलिक/नीतिगत संदर्भ: राज्य में DBT से पारदर्शिता बढ़ी है, परंतु बजट का बड़ा हिस्सा गैर-विकासमूलक व्यय में जाने से पूंजीगत संपत्तियों के निर्माण पर दबाव पड़ता है।<br>3. RPSC परीक्षा प्रासंगिकता: RAS Mains Paper 1 (राजस्थान अर्थशास्त्र) - राज्य की राजकोषीय स्थिति और लोक कल्याणकारी योजनाओं का संतुलन।</div>
+                </div>
+            </div>
+            
+    </div>
+
+    <script>
+        function setFontSize(size) {
+            document.documentElement.style.setProperty('--base-font-size', size + 'px');
+            localStorage.setItem('ras_notes_font_size', size);
+            document.querySelectorAll('.toolbar-btns .t-btn').forEach(b => {
+                if (b.innerText.includes(size + 'px')) b.classList.add('active');
+                else if (b.innerText.includes('px')) b.classList.remove('active');
+            });
+        }
+
+        function toggleTheme(theme) {
+            document.body.classList.remove('dark-mode', 'sepia-mode');
+            if (theme === 'dark') document.body.classList.add('dark-mode');
+            else if (theme === 'sepia') document.body.classList.add('sepia-mode');
+            localStorage.setItem('ras_notes_theme', theme);
+        }
+
+        // Load saved preferences
+        (function() {
+            const savedSize = localStorage.getItem('ras_notes_font_size') || 26;
+            setFontSize(savedSize);
+            const savedTheme = localStorage.getItem('ras_notes_theme');
+            if (savedTheme) toggleTheme(savedTheme);
+        })();
+    </script>
+</body>
+</html>
