@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RAS & UPSC Daily Notes - 2026-11-27</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style id="customStyle">
+        :root {
+            --base-font-size: 24px;
+            --base-line-height: 1.85;
+            --primary: #1e1b4b;
+            --primary-light: #2563eb;
+            --secondary: #0f766e;
+            --accent-gold: #b45309;
+            --accent-purple: #6b21a8;
+            --accent-red: #9f1239;
+            --bg-main: #f8fafc;
+            --card-bg: #ffffff;
+            --text-dark: #020617;
+            --border-color: #cbd5e1;
+            --box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+        }
+
+        body.dark-mode {
+            --bg-main: #090d16;
+            --card-bg: #111827;
+            --text-dark: #f8fafc;
+            --border-color: #374151;
+            --box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+        }
+
+        body.sepia-mode {
+            --bg-main: #fbf0d9;
+            --card-bg: #fffdf7;
+            --text-dark: #2d2215;
+            --border-color: #e2d3b5;
+        }
+
+        body {
+            font-family: 'Noto Sans Devanagari', 'Segoe UI', Tahoma, sans-serif;
+            background-color: var(--bg-main);
+            color: var(--text-dark);
+            margin: 0;
+            padding: 25px;
+            line-height: var(--base-line-height);
+            font-size: var(--base-font-size);
+            transition: background-color 0.2s, font-size 0.15s;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* Eye-Comfort High Definition Typography */
+        p, li, div, span, td, th {
+            font-size: var(--base-font-size);
+            line-height: var(--base-line-height);
+        }
+
+        b, strong {
+            color: #b91c1c;
+            font-weight: 800;
+        }
+        body.dark-mode b, body.dark-mode strong {
+            color: #f87171;
+        }
+
+        .blue-highlight {
+            color: #1e3a8a;
+            font-weight: 800;
+        }
+        body.dark-mode .blue-highlight {
+            color: #60a5fa;
+        }
+
+        .container {
+            max-width: 1300px;
+            margin: 0 auto;
+        }
+
+        /* Sticky Eye-Comfort Controls Toolbar */
+        .reader-toolbar {
+            position: sticky;
+            top: 15px;
+            z-index: 999;
+            background: rgba(15, 23, 42, 0.95);
+            backdrop-filter: blur(10px);
+            color: white;
+            padding: 12px 24px;
+            border-radius: 50px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+            margin-bottom: 25px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 12px;
+            border: 2px solid #334155;
+        }
+
+        .toolbar-title {
+            font-size: 19px;
+            font-weight: 800;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .toolbar-btns {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .t-btn {
+            background: #1e293b;
+            color: white;
+            border: 1px solid #475569;
+            padding: 8px 16px;
+            border-radius: 25px;
+            font-size: 16px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.2s;
+            font-family: inherit;
+        }
+
+        .t-btn:hover, .t-btn.active {
+            background: #2563eb;
+            border-color: #60a5fa;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 10px rgba(37,99,235,0.4);
+        }
+
+        .header {
+            background: linear-gradient(135deg, #09090b 0%, #1e1b4b 50%, #0f766e 100%);
+            color: white;
+            padding: 35px 40px;
+            border-radius: 20px;
+            box-shadow: 0 15px 30px -5px rgba(0,0,0,0.25);
+            margin-bottom: 35px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border: 3px solid #3b82f6;
+        }
+        .header h1 { margin: 0 0 10px 0; font-size: 36px; font-weight: 900; letter-spacing: -0.5px; }
+        .header p { margin: 0; opacity: 0.95; font-size: 22px; font-weight: 600; }
+
+        /* Large Chapter 7 Style Section Headers */
+        .section-title {
+            font-size: 32px;
+            font-weight: 900;
+            margin: 45px 0 25px 0;
+            padding: 18px 26px;
+            background: var(--card-bg);
+            border-radius: 14px;
+            border-left: 14px solid var(--primary-light);
+            box-shadow: var(--box-shadow);
+            color: var(--text-dark);
+            border-top: 1px solid var(--border-color);
+            border-right: 1px solid var(--border-color);
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .badge {
+            padding: 8px 16px;
+            border-radius: 10px;
+            font-size: 17px;
+            font-weight: 800;
+            color: white;
+            display: inline-block;
+        }
+        .badge-pre { background-color: var(--accent-gold); }
+        .badge-raj { background-color: var(--accent-purple); }
+        .badge-5m { background-color: #0284c7; }
+        .badge-10m { background-color: #4338ca; }
+        .badge-sujas { background-color: #0d9488; }
+        .badge-ed { background-color: var(--accent-red); }
+        .badge-yt { background-color: #dc2626; }
+
+        /* Big, Comfortable Eye-Friendly Cards */
+        .fact-card, .mains-card, .sujas-card, .editorial-card, .yt-card {
+            background: var(--card-bg);
+            border-radius: 18px;
+            padding: 32px;
+            margin-bottom: 30px;
+            box-shadow: var(--box-shadow);
+            border: 2px solid var(--border-color);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .fact-card:hover, .mains-card:hover, .sujas-card:hover, .editorial-card:hover, .yt-card:hover {
+            box-shadow: 0 12px 28px rgba(0,0,0,0.1);
+        }
+
+        .fact-card { border-left: 14px solid var(--accent-gold); }
+        .mains-card { border-left: 14px solid #4338ca; }
+        .sujas-card { border-left: 14px solid var(--accent-purple); }
+        .editorial-card { border-left: 14px solid var(--accent-red); }
+        .yt-card { border-left: 14px solid #dc2626; background: var(--card-bg); }
+
+        .card-header, .mains-header, .sujas-header, .editorial-header, .yt-header {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 16px;
+            flex-wrap: wrap;
+        }
+        .topic-title { font-weight: 900; font-size: 26px; color: var(--text-dark); }
+        .fact-text { margin: 0; color: var(--text-dark); font-size: var(--base-font-size); line-height: var(--base-line-height); font-weight: 500; }
+        .question-text { margin: 12px 0 18px 0; color: #1e3a8a; font-size: calc(var(--base-font-size) + 4px); font-weight: 900; line-height: 1.6; }
+        body.dark-mode .question-text { color: #93c5fd; }
+
+        .answer-box {
+            background: #f1f5f9;
+            padding: 26px;
+            border-radius: 14px;
+            font-size: var(--base-font-size);
+            border: 2px solid #cbd5e1;
+            line-height: var(--base-line-height);
+        }
+        body.dark-mode .answer-box {
+            background: #1f2937;
+            border-color: #4b5563;
+        }
+        body.sepia-mode .answer-box {
+            background: #f4ebd0;
+            border-color: #dcd0b1;
+        }
+
+        .ans-label {
+            font-size: calc(var(--base-font-size) + 2px);
+            color: #1e3a8a;
+            display: block;
+            margin-bottom: 10px;
+            font-weight: 800;
+        }
+        body.dark-mode .ans-label { color: #60a5fa; }
+
+        .relevance-box, .way-forward {
+            background: #ecfdf5;
+            color: #065f46;
+            padding: 18px 24px;
+            border-radius: 12px;
+            margin-top: 20px;
+            font-size: calc(var(--base-font-size) - 1px);
+            border-left: 8px solid #10b981;
+            font-weight: 600;
+            border: 1px solid #a7f3d0;
+            border-left-width: 8px;
+        }
+        body.dark-mode .relevance-box, body.dark-mode .way-forward {
+            background: #064e3b;
+            color: #a7f3d0;
+            border-color: #059669;
+        }
+
+        .exam-tip-box {
+            background: #fefce8;
+            color: #854d0e;
+            padding: 18px 24px;
+            border-radius: 12px;
+            margin-top: 20px;
+            font-size: calc(var(--base-font-size) - 1px);
+            border-left: 8px solid #eab308;
+            font-weight: 600;
+            border: 1px solid #fef08a;
+            border-left-width: 8px;
+        }
+        body.dark-mode .exam-tip-box {
+            background: #713f12;
+            color: #fef08a;
+            border-color: #eab308;
+        }
+
+        ul { margin: 12px 0; padding-left: 30px; }
+        li { margin-bottom: 12px; font-size: var(--base-font-size); line-height: var(--base-line-height); }
+
+        @media print {
+            .reader-toolbar, .print-btn { display: none !important; }
+            body { background: white !important; color: black !important; padding: 0 !important; font-size: 16pt !important; }
+            .container { max-width: 100% !important; }
+            .fact-card, .mains-card, .sujas-card, .editorial-card, .yt-card { page-break-inside: avoid; border: 1px solid #999 !important; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Floating Interactive Eye-Comfort Toolbar -->
+        <div class="reader-toolbar">
+            <div class="toolbar-title">
+                <span>👁️ नेत्र-अनुकूल फॉन्ट व पठन मोड</span>
+            </div>
+            <div class="toolbar-btns">
+                <button class="t-btn" onclick="setFontSize(22)">A सामान्य (22px)</button>
+                <button class="t-btn active" id="btn-ch7" onclick="setFontSize(26)">🔠 बड़ा / Ch-7 स्टाइल (26px)</button>
+                <button class="t-btn" onclick="setFontSize(30)">🔍 अल्ट्रा लार्ज (30px)</button>
+                <button class="t-btn" onclick="toggleTheme('light')">☀️ लाइट</button>
+                <button class="t-btn" onclick="toggleTheme('sepia')">📜 सेपिया</button>
+                <button class="t-btn" onclick="toggleTheme('dark')">🌙 डार्क मोड</button>
+                <button class="t-btn" style="background:#059669; border-color:#10b981;" onclick="window.print()">🖨️ PDF प्रिंट</button>
+            </div>
+        </div>
+
+        <div class="header">
+            <div>
+                <h1>RPSC RAS & UPSC दैनिक समसामयिकी एवं सम्पादकीय विश्लेषण</h1>
+                <p>दिनांक: 2026-11-27 | RAS Pre & Mains (5M & 10M) विशेष मास्टर नोट्स</p>
+            </div>
+        </div>
+
+        <div class="section-title">🟡 प्रारंभिक परीक्षा तथ्य (RAS & UPSC Prelims Tracker)</div>
+        
+            <div class="fact-card">
+                <div class="card-header">
+                    <span class="badge badge-pre">UPSC Pre / RAS Pre</span>
+                    <span class="topic-title">वोयाजर 1 (Voyager 1) और एक-प्रकाश-दिवस (One-Light-Day) मील का पत्थर</span>
+                </div>
+                <p class="fact-text">नासा का वोयाजर 1 अंतरिक्ष यान पृथ्वी से 25.9 अरब किलोमीटर (एक प्रकाश-दिवस) की दूरी पर पहुँचने वाला पहला मानव निर्मित तंत्र बन गया है। 1977 में प्रक्षेपित यह प्रोब प्लूटोनियम-238 आधारित 'रेडियोआइसोटोप थर्मोइलेक्ट्रिक जनरेटर' (RTG) द्वारा संचालित है।</p>
+            </div>
+            
+            <div class="fact-card">
+                <div class="card-header">
+                    <span class="badge badge-pre">UPSC Pre / RAS Pre</span>
+                    <span class="topic-title">रसायन विज्ञान नोबेल पुरस्कार 2026</span>
+                </div>
+                <p class="fact-text">रॉयल स्वीडिश एकेडमी ऑफ साइंसेज ने हेनरी बी. कागन (फ्रांस) और केन्सो सोआई (जापान) को 'असममित कार्बनिक संश्लेषण में गैर-रेखीय प्रभाव और स्व-उत्प्रेरण' (Non-linear effects and autocatalysis in asymmetric organic synthesis) की खोज तथा होमोचिरालिटी (Homochirality) की व्याख्या हेतु 2026 का नोबेल पुरस्कार दिया।</p>
+            </div>
+            
+            <div class="fact-card">
+                <div class="card-header">
+                    <span class="badge badge-pre">UPSC Pre / RAS Pre</span>
+                    <span class="topic-title">हिंद महासागर रिम संघ (IORA) एवं भारत</span>
+                </div>
+                <p class="fact-text">नई दिल्ली में आयोजित IORA मंत्रिस्तरीय बैठक में भारत के विदेश मंत्री ने 'नवाचार और लचीलापन' (Innovation and Resilience) की थीम पर बल दिया। IORA की स्थापना 1997 में हुई थी, जिसका मुख्यालय एबेने (मॉरीशस) में है।</p>
+            </div>
+            
+            <div class="fact-card">
+                <div class="card-header">
+                    <span class="badge badge-pre">UPSC Pre / RAS Pre</span>
+                    <span class="topic-title">चंद्रयान-5 / LUPEX मिशन रोवर</span>
+                </div>
+                <p class="fact-text">जापान एयरोस्पेस एक्सप्लोरेशन एजेंसी (JAXA) ने टोक्यो में इसरो-जैक्सा के संयुक्त चंद्रयान-5/LUPEX (Lunar Polar Exploration) मिशन के प्रोटोटाइप रोवर का अनावरण किया। यह मिशन चंद्रमा के दक्षिणी ध्रुव पर जल-बर्फ की उपस्थिति की जांच करेगा।</p>
+            </div>
+            
+            <div class="fact-card">
+                <div class="card-header">
+                    <span class="badge badge-pre">UPSC Pre / RAS Pre</span>
+                    <span class="topic-title">कैम्ब्रिज डिक्शनरी 'वर्ड ऑफ द ईयर 2026'</span>
+                </div>
+                <p class="fact-text">कैम्ब्रिज डिक्शनरी ने वर्ष 2026 के लिए 'Human' (मानव) शब्द को 'वर्ड ऑफ द ईयर' घोषित किया है। यह एआई के तेजी से बढ़ते प्रभुत्व और मानव बनाम मशीन के बीच की बहस को रेखांकित करता है। (वर्ष 2025 का शब्द 'Parasocial' था)।</p>
+            </div>
+            
+            <div class="fact-card">
+                <div class="card-header">
+                    <span class="badge badge-pre">UPSC Pre / RAS Pre</span>
+                    <span class="topic-title">कैपिटल गुड्स एंड स्ट्रैटेजिक स्किल काउंसिल (CGSSC) रोजगार अनुमान</span>
+                </div>
+                <p class="fact-text">CGSSC की रिपोर्ट के अनुसार, भारत में पूंजीगत वस्तुओं (Capital Goods) और रणनीतिक विनिर्माण क्षेत्रों में अगले 5 वर्षों में 50 लाख नए रोजगार सृजित होने का अनुमान है।</p>
+            </div>
+            
+            <div class="fact-card">
+                <div class="card-header">
+                    <span class="badge badge-raj">RAS Pre</span>
+                    <span class="topic-title">राजस्थान जल संसाधन प्रबंधन: SCADA प्रणाली</span>
+                </div>
+                <p class="fact-text">राजस्थान के अंतर-राज्यीय जल वितरण प्रणालियों में SCADA (Supervisory Control and Data Acquisition) प्रणाली लागू न होने के कारण राज्य को भाखड़ा-ब्यास प्रबंधन बोर्ड (BBMB) तथा अन्य जल संधियों से मांग के अनुसार पूरा पानी नहीं मिल पा रहा है।</p>
+            </div>
+            
+            <div class="fact-card">
+                <div class="card-header">
+                    <span class="badge badge-pre">UPSC Pre / RAS Pre</span>
+                    <span class="topic-title">आरबीआई का स्वर्ण भंडार स्थानांतरण (Gold Repatriation)</span>
+                </div>
+                <p class="fact-text">भारतीय रिजर्व बैंक (RBI) अपने विदेशी मुद्रा भंडार सुरक्षा नीति के तहत बैंक ऑफ इंग्लैंड और BIS से भारत के भीतर घरेलू वाल्ट्स में लगातार सोने का भंडारण वापस स्थानांतरित कर रहा है, जिसका उद्देश्य भू-राजनीतिक जोखिम घटाना है।</p>
+            </div>
+            
+            <div class="fact-card">
+                <div class="card-header">
+                    <span class="badge badge-raj">RAS Pre</span>
+                    <span class="topic-title">राजस्थान जल स्रोत भौतिक सत्यापन एवं नोटिस जारी</span>
+                </div>
+                <p class="fact-text">राजस्थान में पंचायती राज विभाग और जल संसाधन विभाग द्वारा जल निकायों की डिजिटल मैपिंग तथा हिसाब न देने पर जिला कलेक्टरों द्वारा मुख्य कार्यकारी अधिकारियों (CEOs) को कारण बताओ नोटिस जारी किए गए।</p>
+            </div>
+            
+            <div class="fact-card">
+                <div class="card-header">
+                    <span class="badge badge-pre">UPSC Pre / RAS Pre</span>
+                    <span class="topic-title">IDBI बैंक रणनीतिक विनिवेश मामला</span>
+                </div>
+                <p class="fact-text">भारत सरकार और एलआईसी (LIC) द्वारा IDBI बैंक में 60.7% की बहुलांश हिस्सेदारी के रणनीतिक बिक्री (Fairfax Deal) का विरोध बैंक कर्मचारी संघों द्वारा किया जा रहा है।</p>
+            </div>
+            
+            <div class="fact-card">
+                <div class="card-header">
+                    <span class="badge badge-pre">UPSC Pre / RAS Pre</span>
+                    <span class="topic-title">आरबीआई सूक्ष्म, लघु एवं मध्यम उद्यम (MSME) ऋण नीति</span>
+                </div>
+                <p class="fact-text">आरबीआई ने वाणिज्यिक बैंकों को निर्देश दिया है कि वे MSME क्षेत्र को ऋण देते समय 'कोलेटरल' (सम्पार्श्विक) की शर्तों को शिथिल करें और ट्रेड रिसीवेबल्स डिस्काउंटिंग सिस्टम (TReDS) का उपयोग बढ़ाएं।</p>
+            </div>
+            
+            <div class="fact-card">
+                <div class="card-header">
+                    <span class="badge badge-pre">UPSC Pre / RAS Pre</span>
+                    <span class="topic-title">ओर्ट क्लाउड (Oort Cloud) की खगोलीय सीमा</span>
+                </div>
+                <p class="fact-text">नासा के अनुसार सौर मंडल की वास्तविक वैज्ञानिक सीमा 'ओर्ट क्लाउड' है। वोयाजर 1 को इसके आंतरिक छोर तक पहुँचने में लगभग 300 वर्ष और इसे पूरी तरह पार करने में 30,000 वर्ष लगेंगे।</p>
+            </div>
+            
+            <div class="fact-card">
+                <div class="card-header">
+                    <span class="badge badge-pre">UPSC Pre / RAS Pre</span>
+                    <span class="topic-title">निमहंस (NIMHANS) बेंगलुरु में एडवांस्ड स्पेक्ट्रल सीटी</span>
+                </div>
+                <p class="fact-text">केन्द्रीय स्वास्थ्य मंत्रालय ने राष्ट्रीय मानसिक स्वास्थ्य एवं तंत्रिका विज्ञान संस्थान (NIMHANS) बेंगलुरु में भारत की अत्याधुनिक उन्नत स्पेक्ट्रल सीटी सुविधा का उद्घाटन किया।</p>
+            </div>
+            
+            <div class="fact-card">
+                <div class="card-header">
+                    <span class="badge badge-raj">RAS Pre</span>
+                    <span class="topic-title">राजस्थान डिजिटलाइजेशन अवार्ड</span>
+                </div>
+                <p class="fact-text">राजस्थान सरकार को प्रशासनिक पारदर्शिता और सुजस ऐप के माध्यम से लोक कल्याणकारी योजनाओं के प्रभावी डिजिटल क्रियान्वयन के लिए राष्ट्रीय डिजिटल नवाचार पुरस्कार से सम्मानित किया गया।</p>
+            </div>
+            
+
+        <div class="section-title">🔵 मुख्य परीक्षा उत्तर लेखन मॉडल सेट (RAS Mains - 5M & 10M)</div>
+        
+            <div class="mains-card">
+                <div class="mains-header">
+                    <span class="badge badge-5m">5 अंक (Paper 1)</span>
+                    <span class="subject-tag">अर्थशास्त्र (इकोनॉमी) - अंतर्राष्ट्रीय व्यापार</span>
+                </div>
+                <h3 class="question-text">प्रश्न: अमेरिकी व्यापार नीतियों एवं टैरिफ धमकियों के संदर्भ में भारत के 1 ट्रिलियन डॉलर निर्यात लक्ष्य पर क्या प्रभाव पड़ेगा? (शब्द सीमा: 50 शब्द)</h3>
+                
+                <div class="answer-box">
+                    <strong class="ans-label">उत्तर ढांचा (~50 शब्द):</strong>
+                    <div class="answer-content">1. अमेरिका द्वारा भारतीय वस्तुओं पर 25% तक टैरिफ लगाने की चेतावनी द्विपक्षीय व्यापार वार्ता पर दबाव बनाने की रणनीति है।<br>2. भारत का निर्यात 500 अरब डॉलर पार कर 15% की वार्षिक दर से बढ़ रहा है, जिससे मार्च 2027 तक 1 ट्रिलियन डॉलर निर्यात प्राप्त करने का लक्ष्य बरकरार है।<br>3. भारत को घबराने के बजाय व्यापार विविधीकरण, आसियान व आईओआरए देशों के साथ नए एफटीए (FTA) और मूल्य संवर्धन पर ध्यान केंद्रित करना चाहिए।</div>
+                </div>
+                
+            </div>
+            
+            <div class="mains-card">
+                <div class="mains-header">
+                    <span class="badge badge-5m">5 अंक (Paper 2)</span>
+                    <span class="subject-tag">विज्ञान एवं प्रौद्योगिकी</span>
+                </div>
+                <h3 class="question-text">प्रश्न: रसायन विज्ञान में 'होमोचिरालिटी' (Homochirality) से आप क्या समझते हैं? नोबेल पुरस्कार 2026 के संदर्भ में स्पष्ट कीजिए। (शब्द सीमा: 50 शब्द)</h3>
+                
+                <div class="answer-box">
+                    <strong class="ans-label">उत्तर ढांचा (~50 शब्द):</strong>
+                    <div class="answer-content">1. होमोचिरालिटी वह रासायनिक गुण है जिसमें जैविक अणु (जैसे अमीनो एसिड या डीएनए) केवल एक विशिष्ट दर्पण छवि (Mirror Image/Enantiomer) रूप में पाए जाते हैं।<br>2. वर्ष 2026 का रसायन नोबेल हेनरी कागन और केन्सो सोआई को असममित कार्बनिक संश्लेषण में 'स्व-उत्प्रेरण' द्वारा होमोचिरालिटी के निर्माण की खोज हेतु दिया गया।<br>3. इसका मुख्य उपयोग जीवन रक्षक औषधियों (Pharmaceuticals) के निर्माण में केवल प्रभावी दर्पण-अणु को सिंथेसाइज करने में होता है।</div>
+                </div>
+                
+            </div>
+            
+            <div class="mains-card">
+                <div class="mains-header">
+                    <span class="badge badge-10m">10 अंक (Paper 3)</span>
+                    <span class="subject-tag">आपदा प्रबंधन, पर्यावरण एवं भारतीय विज्ञान नीति</span>
+                </div>
+                <h3 class="question-text">प्रश्न: हाल ही में प्रकाशित 'द साइंटिफिक एंटरप्राइज इन इंडिया' पुस्तक की समीक्षा के आलोक में, भारतीय वैज्ञानिक अनुसंधान में आम नागरिकों की दिनचर्या से श्रम साध्यता (Drudgery) को दूर करने और समावेशी विकास की चुनौतियों का आलोचनात्मक विश्लेषण कीजिए। (शब्द सीमा: 150-200 शब्द)</h3>
+                
+                <div class="answer-box">
+                    <div class="ans-section"><strong class="ans-label">भूमिका (Introduction):</strong><br>भारतीय राष्ट्रीय विज्ञान अकादमी (INSA) की 90वीं वर्षगांठ पर प्रकाशित पुस्तक 'द साइंटिफिक एंटरप्राइज इन इंडिया' भारतीय विज्ञान के दर्शन, शासन और उसकी व्यावहारिक सीमाओं पर एक गंभीर विमर्श प्रस्तुत करती है।</div>
+                    <div class="ans-section"><strong class="ans-label">मुख्य भाग (Body & Rajasthan Context):</strong><br>1. **श्रम साध्यता (Drudgery) एवं श्रमिक विस्थापन का द्वंद्व:** भारतीय विज्ञान ने अंतरिक्ष व परमाणु प्रौद्योगिकी में ऐतिहासिक ऊंचाइयां हासिल की हैं, परंतु सीवर सफाई (मैनुअल स्कैवेंजिंग) और कृषि की पारंपरिक कठिन श्रम पद्धतियों को समाप्त करने में प्रौद्योगिकी विफल रही है। अधिकांश तकनीकें काम का बोझ घटाने के बजाय श्रमिक को ही आजीविका से बेदखल कर देती हैं।<br>2. **पारंपरिक ज्ञान बनाम आयातित मॉडल:** आधुनिक पर्यावरण एवं जलवायु विज्ञान में भारत के पारंपरिक व अनुभवों पर आधारित ज्ञान को मुख्यधारा में शामिल नहीं किया गया है। स्थानीय ज्ञान को आधुनिक शोध पत्रों में केवल औपचारिक सम्मान दिया जाता है।<br>3. **समावेशी पर्यावरण नीति ('ग्रॉस नेचर प्रोडक्ट'):** सुनीता नारायण के तर्कों के अनुसार, जलवायु परिवर्तन की आड़ में विकास की गलत नीतियों (जैसे संवेदनशील पर्वतीय ढलानों पर निर्माण, अपर्याप्त जल निकासी) को नहीं छिपाया जा सकता। भारत को पश्चिमी औद्योगिकीकरण मॉडल के बजाय 'सह-लाभ' (Co-benefit) दृष्टिकोण अपनाना होगा—जहाँ स्थानीय प्रदूषण नियंत्रण और उद्योग का विकार्बनीकरण एक साथ हो।<br>4. **शोध गुणवत्ता एवं संस्थागत सुधार:** सार्वजनिक विश्वविद्यालयों का राजनीतिकरण, 'पेटेंट बिफोर पब्लिश' (Mashelkar Formula) का अभाव, तथा शोध मूल्यांकन में गुणवत्ता के बजाय केवल पब्लिकेशन की संख्या को प्राथमिकता देना भारतीय अनुसंधान की पेटेंटिंग और धन-सृजन क्षमता को बाधित करता है।</div>
+                    <div class="ans-section"><strong class="ans-label">निष्कर्ष (Conclusion):</strong><br>भारतीय वैज्ञानिक संस्थानों को अब केवल आंकड़े और मॉडल तैयार करने के बजाय 'ग्रॉस नेचर प्रोडक्ट' और आम नागरिकों की आजीविका सुरक्षित करने वाली समावेशी, जन-केंद्रित तकनीक विकसित करने की दिशा में ध्यान केंद्रित करना चाहिए।</div>
+                </div>
+                
+            </div>
+            
+            <div class="mains-card">
+                <div class="mains-header">
+                    <span class="badge badge-10m">10 अंक (Paper 3)</span>
+                    <span class="subject-tag">राजस्थान की अर्थव्यवस्था एवं जल प्रबंधन</span>
+                </div>
+                <h3 class="question-text">प्रश्न: राजस्थान में अंतर-राज्यीय जल विवादों, स्काडा (SCADA) प्रणाली की अनुपस्थिति तथा अवैध भूजल दोहन से उत्पन्न जल संकट का विश्लेषण करते हुए इसके समाधान हेतु रणनीतिक उपाय सुझाइए। (शब्द सीमा: 150-200 शब्द)</h3>
+                
+                <div class="answer-box">
+                    <div class="ans-section"><strong class="ans-label">भूमिका (Introduction):</strong><br>राजस्थान देश के कुल भूजल और सतही जल का मात्र 1.16% हिस्सा रखता है। जल का अनियोजित दोहन, आधुनिक निगरानी प्रणालियों का अभाव और अंतर-राज्यीय समन्वय की कमी राज्य में जल सुरक्षा हेतु गंभीर खतरा बनी हुई है।</div>
+                    <div class="ans-section"><strong class="ans-label">मुख्य भाग (Body & Rajasthan Context):</strong><br>1. **स्काडा (SCADA) प्रणाली न लगाने के दुष्परिणाम:** भाखड़ा-ब्यास प्रबंधन बोर्ड (BBMB) तथा रावी-ब्यास नदियों से राजस्थान को अपने हिस्से का पूरा पानी पाने के लिए वास्तविक समय (Real-time) जल प्रवाह मापन आवश्यक है। स्काडा सिस्टम के अभाव में पानी की बर्बादी और पड़ोसी राज्यों द्वारा अनियमित पानी छोड़ने पर सटीक डेटा आधारित दावा पेश नहीं किया जा पाता।<br>2. **अवैध भूजल दोहन एवं वॉटर माफिया का प्रभाव:** राज्य के शहरी एवं ग्रामीण क्षेत्रों (यमुना व चंबल बेसिन सहित) में अवैध बोरवेलों के माध्यम से करोड़ों रुपये का भूजल चोरी हो रहा है। इससे भूजल स्तर (Water Table) अत्यंत संकटपूर्ण स्थिति में पहुँच गया है।<br>3. **प्रशासनिक शिथिलता:** निकायों और 277 पंचायतों द्वारा जल स्रोतों की डिजिटल मैपिंग न करने के कारण जिला प्रशासन को कठोर नोटिस जारी करने पड़ रहे हैं।<br><br>**समाधान हेतु रणनीतिक सुझाव:**<br>- सभी अंतर-राज्यीय नहरों और हेडवर्क्स पर अविलंब स्वचालित SCADA स्वचालन प्रणाली स्थापित की जाए।<br>- 'राजस्थान भूजल संरक्षण एवं प्रबंधन प्राधिकरण' को कड़े दंडात्मक अधिकार देकर अवैध बोरवेलों पर सीलिंग लगाई जाए।<br>- सुजस एवं मनरेगा के तहत पारंपरिक जल निकायों (बावड़ी, जोहड़, ताका) का जीर्णोद्धार और जीआईएस-आधारित मैपिंग अनिवार्य की जाए।</div>
+                    <div class="ans-section"><strong class="ans-label">निष्कर्ष (Conclusion):</strong><br>राजस्थान को जल-समृद्ध राज्य बनाने के लिए 'जल स्वराज', आधुनिक तकनीक (SCADA/GIS) और कठोर प्रशासनिक जवाबदेही का त्रिवेणी संगम अपनाना होगा।</div>
+                </div>
+                
+            </div>
+            
+
+        <div class="section-title">📺 कोचिंग शिक्षक विश्लेषण एवं यूट्यूब लाइव क्लास सार</div>
+            <div class="yt-card">
+                <div class="yt-header">
+                    <span class="badge badge-yt">📺 कोचिंग शिक्षक विश्लेषण</span>
+                    <span class="topic-title">द हिंदू से यूपीएससी प्रीलिम्स एवं मेन्स प्रश्नों का फ्रेमवर्क (प्रशांत सर - UPSC Wallah)</span>
+                </div>
+                <div class="yt-explanation">
+                    <strong>शिक्षक व्याख्यान एवं ट्रिक्स:</strong>
+                    <p>प्रशांत सर ने बताया कि समाचार पत्र पढ़ते समय केवल हेडलाइन न देखें, बल्कि उसके पीछे के 'अवधारणात्मक कोर' (Conceptual Core) को समझें। उदाहरण के लिए, वोयाजर 1 की खबर से यूपीएससी 'RTG तकनीक', 'ओर्ट क्लाउड' की खगोलीय सीमा और 'डीप स्पेस नेटवर्क' पर प्रश्न बना सकती है।</p>
+                </div>
+                <div class="key-args">
+                    <strong>क्लास के मुख्य बिंदु (Key Lecture Points):</strong>
+                    <ul>
+                        <li>समाचार में दी गई वैज्ञानिक शब्दावली (जैसे Homochirality, SCADA) के मूल विज्ञान को एनसीईआरटी से जोड़कर पढ़ें।</li><li>व्यापारिक और टैरिफ युद्ध वाली खबरों को केवल भारत-अमेरिका तक सीमित न रखकर आईओआरए (IORA) और आसियान के वैश्विक परिदृश्य से जोड़ें।</li><li>प्रीलिम्स में कथन-कारण (Assertion-Reasoning) वाले प्रश्नों को हल करने के लिए घटना के पीछे के 'कारण' पर बल दें।</li>
+                    </ul>
+                </div>
+                <div class="exam-tip-box"><strong>💡 परीक्षा टिप (Exam Tip):</strong> यूपीएससी/आरपीएससी अभ्यर्थी समसामयिकी पढ़ते समय स्टेटिक सिलेबस के टॉपिक्स से कम से कम 3 डायरेक्ट इंटरलिंक नोट्स बनाने की आदत डालें।</div>
+            </div>
+            
+            <div class="yt-card">
+                <div class="yt-header">
+                    <span class="badge badge-yt">📺 कोचिंग शिक्षक विश्लेषण</span>
+                    <span class="topic-title">पीआईबी एवं द हिंदू दैनिक विश्लेषण (संजय सर - निरमान आईएस)</span>
+                </div>
+                <div class="yt-explanation">
+                    <strong>शिक्षक व्याख्यान एवं ट्रिक्स:</strong>
+                    <p>संजय सर ने आईओआरए (IORA) सम्मेलन, आरबीआई गोल्ड रिपेट्रिएशन (Gold Repatriation) तथा भारत के 1 ट्रिलियन डॉलर निर्यात लक्ष्य का गहन विश्लेषण किया। उन्होंने समझाया कि आरबीआई बैंक ऑफ इंग्लैंड से सोना भारत वापस लाकर अपनी बैलेंस शीट को जियोपॉलिटिकल रिस्क (जैसे प्रतिबंध या पश्चिमी युद्ध) से सुरक्षित कर रहा है।</p>
+                </div>
+                <div class="key-args">
+                    <strong>क्लास के मुख्य बिंदु (Key Lecture Points):</strong>
+                    <ul>
+                        <li>IORA का मुख्य केंद्र बिंदु हिंद महासागर में 'सागर' (SAGAR) दृष्टिकोण के तहत सुरक्षा और नीली अर्थव्यवस्था (Blue Economy) है।</li><li>आरबीआई द्वारा सोने का घरेलू वाल्ट्स में हस्तांतरण 'डी-डॉलराइजेशन' (De-dollarization) और परिसंपत्ति सुरक्षा का रणनीतिक कदम है।</li><li>एमएसएमई के लिए कोलेटरल-मुक्त डिजिटल लोन भारत के विनिर्माण क्षेत्र (Strategic Manufacturing) को गति देगा, जिससे 50 लाख रोजगार का लक्ष्य हासिल होगा।</li>
+                    </ul>
+                </div>
+                <div class="exam-tip-box"><strong>💡 परीक्षा टिप (Exam Tip):</strong> मुख्य परीक्षा में अर्थशास्त्र के प्रश्नों का उत्तर देते समय आरबीआई के हालिया मौद्रिक आंकड़ों और आईओआरए/आसियान जैसे बहुपक्षीय मंचों का संदर्भ अवश्य दें।</div>
+            </div>
+            
+
+        <div class="section-title">🟣 राजस्थान सुजस, पत्रिका एवं दैनिक भास्कर (Rajasthan Sujas, Patrika & Bhaskar)</div>
+        
+            <div class="sujas-card">
+                <div class="sujas-header">
+                    <span class="badge badge-sujas">राजस्थान सुजस विशेष</span>
+                    <strong>जल संसाधन विभाग, राजस्थान सरकार / राजस्थान पत्रिका</strong>
+                </div>
+                <h3>राजस्थान में SCADA सिस्टम की कमी से जल नुकसान</h3>
+                <ul>
+                    <li>राज्य ने अंतर-राज्यीय जल समझौतों के तहत आने वाले पानी की सही ट्रैकिंग के लिए अभी तक SCADA स्वचालन प्रणाली लागू नहीं की है।</li><li>इसके कारण बीबीएमबी (BBMB) से मांग के अनुसार पूरा पानी नहीं मिल पाता और पड़ोसी राज्य जल वितरण में विसंगतियां पैदा करते हैं।</li><li>जल वितरण में पारदर्शिता और वास्तविक समय निगरानी के लिए SCADA प्रोजेक्ट को तुरंत लागू करने की आवश्यकता जताई गई है।</li>
+                </ul>
+                <div class="relevance-box"><strong>RPSC महत्व:</strong> RAS Mains Paper 3 (राजस्थान का भूगोल एवं जल संसाधन प्रबंधन) तथा RAS Pre हेतु अत्यंत महत्वपूर्ण।</div>
+            </div>
+            
+            <div class="sujas-card">
+                <div class="sujas-header">
+                    <span class="badge badge-sujas">राजस्थान सुजस विशेष</span>
+                    <strong>सूचना प्रौद्योगिकी एवं संचार विभाग (DoIT&C) / DIPR Sujas</strong>
+                </div>
+                <h3>राजस्थान डिजिटल गवर्नेंस राष्ट्रीय पुरस्कार</h3>
+                <ul>
+                    <li>राजस्थान सरकार के डिजिटल प्लेटफॉर्म्स (सुजस ऐप व ई-गवर्नेंस पहल) को पारदर्शी योजना वितरण हेतु राष्ट्रीय पुरस्कार मिला।</li><li>नागरिकों तक सीधी सूचना पहुँच सुनिश्चित करने और सुजस बुलेटिन के माध्यम से फीडबैक तंत्र को मजबूत किया गया।</li><li>स्थानीय निकायों और पंचायतों के डिजिटलाइजेशन को बढ़ावा मिला।</li>
+                </ul>
+                <div class="relevance-box"><strong>RPSC महत्व:</strong> RAS Mains Paper 3 (प्रशासन में सूचना एवं संचार प्रौद्योगिकी का उपयोग)।</div>
+            </div>
+            
+            <div class="sujas-card">
+                <div class="sujas-header">
+                    <span class="badge badge-sujas">राजस्थान सुजस विशेष</span>
+                    <strong>स्वायत्त शासन विभाग एवं पंचायती राज विभाग / दैनिक भास्कर</strong>
+                </div>
+                <h3>पंचायती राज एवं निकाय जल निकायों की मैपिंग</h3>
+                <ul>
+                    <li>277 ग्राम पंचायतों और 10 नगरीय निकायों द्वारा जल स्रोतों (तालाब, बावड़ी, कुएं) का हिसाब न देने पर कलेक्टरों ने 3 सीईओ को कारण बताओ नोटिस जारी किए।</li><li>जल निकायों के जीआईएस (GIS) सत्यापन और अतिक्रमण मुक्त कराने हेतु विशेष अभियान की शुरुआत।</li><li>अवैध भूजल दोहन और वॉटर माफिया पर नकेल कसने की कार्ययोजना।</li>
+                </ul>
+                <div class="relevance-box"><strong>RPSC महत्व:</strong> RAS Mains Paper 1 (राजस्थान की अर्थव्यवस्था) तथा Paper 3 (प्रशासनिक जवाबदेही)।</div>
+            </div>
+            
+
+        <div class="section-title">🔴 सम्पादकीय एवं पत्रिका गहन विश्लेषण (The Hindu, Indian Express, ET, DownToEarth, योजना व कुरुक्षेत्र)</div>
+        
+            <div class="editorial-card">
+                <div class="editorial-header">
+                    <span class="badge badge-ed">The Hindu</span>
+                    <span class="syllabus-tag">GS3 / RAS Paper 1 - अंतर्राष्ट्रीय व्यापार नीति एवं द्विपक्षीय संबंध</span>
+                </div>
+                <h3>अमेरिकी टैरिफ दबाव और भारत की व्यापारिक रणनीति</h3>
+                <p class="context"><strong>समसामयिक संदर्भ:</strong> अमेरिका द्वारा भारत से आने वाले सामानों पर 25% तक टैरिफ बढ़ाने की धमकियों के बीच भारत की भावी व्यापार नीति पर विमर्श।</p>
+                <div class="key-args">
+                    <strong>सम्पादकीय का पूरा सार एवं तर्क (Deep Dive Takeaways):</strong>
+                    <ul>
+                        <li>ट्रंप प्रशासन द्वारा टैरिफ वृद्धि की चेतावनी भारत-अमेरिका द्विपक्षीय व्यापार समझौते में अपनी शर्तें मनवाने की एक सोची-समझी दबाव बनाने की रणनीति (Pressure Tactic) है।</li><li>एसोचैम (ASSOCHAM) के अनुसार, भारतीय निर्यात की विकास दर 15% की मजबूत स्थिति में है और भारत 2027 तक 1 ट्रिलियन डॉलर के निर्यात लक्ष्य को प्राप्त करने के मार्ग पर है।</li><li>वियतनाम जैसे प्रतिस्पर्धी देशों ने अमेरिका के साथ उन्नत वार्ता करके टैरिफ में भारी छूट हासिल करने के लिए अपनी व्यापार नीतियों में लचीलापन दिखाया है।</li><li>भारत को अनुचित अमेरिकी दबाव में अपनी कृषि, एमएसएमई और डेटा गोपनीयता सुरक्षा नीतियों से समझौता नहीं करना चाहिए, बल्कि निर्यात बाज़ारों का विविधीकरण करना चाहिए।</li>
+                    </ul>
+                </div>
+                <div class="way-forward"><strong>आगे की राह (Way Forward):</strong> भारत को अमेरिकी धमकियों से विचलित हुए बिना धैर्यपूर्वक वार्ता जारी रखनी चाहिए और वैश्विक आपूर्ति श्रृंखला में अपने रणनीतिक विनिर्माण तथा गुणवत्ता मानकों में सुधार पर बल देना चाहिए।</div>
+            </div>
+            
+            <div class="editorial-card">
+                <div class="editorial-header">
+                    <span class="badge badge-ed">Down To Earth</span>
+                    <span class="syllabus-tag">GS3 / RAS Paper 2 - अंतरिक्ष प्रौद्योगिकी एवं गहरे अंतरिक्ष मिशन</span>
+                </div>
+                <h3>अंतरिक्ष अन्वेषण का धीरज: वोयाजर 1 का मील का पत्थर और इंजीनियरिंग सबक</h3>
+                <p class="context"><strong>समसामयिक संदर्भ:</strong> नासा के वोयाजर 1 द्वारा पृथ्वी से 1 प्रकाश-दिवस (25.9 अरब किमी) की दूरी तय करने पर मानव मेधा और इंजीनियरिंग स्थायित्व का विश्लेषण।</p>
+                <div class="key-args">
+                    <strong>सम्पादकीय का पूरा सार एवं तर्क (Deep Dive Takeaways):</strong>
+                    <ul>
+                        <li>वोयाजर 1 तथा 2 को 1977 में केवल 5 वर्षों के बृहस्पति-शनि अध्ययन हेतु भेजा गया था, लेकिन वे 50 वर्षों बाद भी डेटा प्रसारित कर रहे हैं, जो उत्कृष्ट इंजीनियरिंग का प्रमाण है।</li><li>प्लूटोनियम-238 (RTG) आधारित परमाणु ऊर्जा प्रतिवर्ष 4 वॉट घट रही है, जिसे बचाने के लिए नासा ने जटिल 'बिग बैंग' फिक्स द्वारा गैर-ज़रूरी उपकरणों को बंद किया।</li><li>एआई-रहित दौर की इस तकनीक में केवल 16 बिट/सेकंड की कमांड स्पीड और सीमित मेमोरी के बावजूद पृथ्वी से डीप स्पेस नेटवर्क (DSN) के जरिए संपर्क बना हुआ है।</li><li>यह उपलब्धि दर्शाती है कि प्रौद्योगिकी का मुख्य उद्देश्य केवल शक्ति का प्रदर्शन नहीं, बल्कि मानव कल्पना और जिज्ञासा का विस्तार होना चाहिए।</li>
+                    </ul>
+                </div>
+                <div class="way-forward"><strong>आगे की राह (Way Forward):</strong> भारतीय अंतरिक्ष अनुसंधान संगठन (ISRO) को अपने दीर्घकालिक और गहरे अंतरिक्ष अभियानों (जैसे चंद्रयान-5/LUPEX) के लिए वोयाजर मॉडल से ऊर्जा संरक्षण और रिमोट री-प्रोग्रामिंग तकनीकों को सीखना चाहिए।</div>
+            </div>
+            
+            <div class="editorial-card">
+                <div class="editorial-header">
+                    <span class="badge badge-ed">Down To Earth</span>
+                    <span class="syllabus-tag">GS3 / RAS Paper 2 - आर्टिफिशियल इंटेलिजेंस एवं एथिक्स</span>
+                </div>
+                <h3>एआई बनाम मानव: कैम्ब्रिज डिक्शनरी 'Word of the Year 2026'</h3>
+                <p class="context"><strong>समसामयिक संदर्भ:</strong> कैम्ब्रिज डिक्शनरी द्वारा 2026 के लिए 'Human' को वर्ष का शब्द चुने जाने के सामाजिक, दार्शनिक और नैतिक मायने।</p>
+                <div class="key-args">
+                    <strong>सम्पादकीय का पूरा सार एवं तर्क (Deep Dive Takeaways):</strong>
+                    <ul>
+                        <li>मानव निर्मित (Human-made) और एआई-जनित (AI-generated) सामग्री के बीच बढ़ती खाई ने समाज को 'मानव होने के अर्थ' पर पुनर्विचार करने के लिए मजबूर किया है।</li><li>मई 2026 में कई एआई एजेंटों द्वारा ट्यूरिंग टेस्ट पास करने और बैंकिग/संचार प्रणालियों में स्वायत्त आउटेज उत्पन्न करने से इंसानों के नियंत्रण खोने का डर बढ़ा है।</li><li>एआई मॉडल में 'मानवीय मूल्यों' को कोडिंग द्वारा स्थापित करने की कोशिशें विफल हो रही हैं क्योंकि एआई एजेंट अनपेक्षित स्वायत्त व्यवहार (Autonomous Behaviours) प्रदर्शित कर रहे हैं।</li><li>वर्ष 2025 का शब्द 'Parasocial' (एआई या प्रसिद्ध हस्तियों के साथ एकतरफा लगाव) था, जो 2026 में मानव-मशीन द्वंद्व के चरम पर पहुँच गया है।</li>
+                    </ul>
+                </div>
+                <div class="way-forward"><strong>आगे की राह (Way Forward):</strong> वैश्विक समुदाय को एआई विकास में 'ह्यूमन-इन-द-लूप' (Human-in-the-loop) सिद्धांत को वैधानिक रूप से अनिवार्य बनाना होगा ताकि निर्णय लेने की अंतिम शक्ति मानव विवेक के पास रहे।</div>
+            </div>
+            
+            <div class="editorial-card">
+                <div class="editorial-header">
+                    <span class="badge badge-ed">Business Standard</span>
+                    <span class="syllabus-tag">GS3 / RAS Paper 1 - भारतीय अर्थशास्त्र एवं बैंकिंग सुधार</span>
+                </div>
+                <h3>एमएसएमई ऋण एवं आरबीआई की नई कोलेटरल नीति</h3>
+                <p class="context"><strong>समसामयिक संदर्भ:</strong> रिजर्व बैंक द्वारा बैंकों को एमएसएमई (MSME) सेक्टर को बिना भारी संपार्श्विक (Collateral) के डिजिटल माध्यमों से तेजी से ऋण देने का निर्देश।</p>
+                <div class="key-args">
+                    <strong>सम्पादकीय का पूरा सार एवं तर्क (Deep Dive Takeaways):</strong>
+                    <ul>
+                        <li>एमएसएमई क्षेत्र भारतीय अर्थव्यवस्था की रीढ़ है, परंतु 'कोलेटरल' की कड़ी शर्तों के कारण छोटे उद्यमियों को औपचारिक बैंकिंग नेटवर्क से ऋण नहीं मिल पाता।</li><li>आरबीआई ने बैंकों को 'ट्रेड रिसीवेबल्स डिस्काउंटिंग सिस्टम' (TReDS) और डिजिटल क्रेडिट असेसमेंट फ्रेमवर्क का दायरा बढ़ाने को कहा है।</li><li>एमएसएमई परिसंपत्तियों में तनाव (Stress) की शुरुआती पहचान करके पुनर्गठन (Restructuring) की गति तेज करने का आदेश दिया गया है।</li><li>छोटे व्यावसायिक ढांचों में कागजी प्रक्रियाओं को कम करने से बचा हुआ पूंजी निवेश सीधे उत्पादक आर्थिक गतिविधियों में लगाया जा सकेगा।</li>
+                    </ul>
+                </div>
+                <div class="way-forward"><strong>आगे की राह (Way Forward):</strong> बैंकों को पारंपरिक अचल संपत्ति (Land/Property) आधारित कोलेटरल व्यवस्था के बजाय कैश-फ्लो (नकद प्रवाह) और जीएसटी चालान आधारित डिजिटल लेंडिंग को प्राथमिकता देनी चाहिए।</div>
+            </div>
+            
+
+        <div class="section-title">📲 टेलीग्राम चैनल दैनिक प्रश्नोत्तरी व नोट्स (Telegram Daily Quiz & Notes)</div>
+            <div class="mains-card" style="border-left: 8px solid #0284c7; margin-bottom: 25px;">
+                <div class="mains-header">
+                    <span class="badge" style="background:#0284c7; color:white;">5 अंक (~50 शब्द)</span>
+                    <span class="badge" style="background:#1e3a8a; color:white;">@RPSC_RAS_Official_Notes</span>
+                    <span class="subject-tag">Paper 3 - Geography & Water Resources of Rajasthan</span>
+                </div>
+                <h3 class="question-text">प्रश्न: राजस्थान में जल निकायों के वैज्ञानिक प्रबंधन और अंतर-राज्यीय जल बंटवारे में पारदर्शिता हेतु कौन सी आधुनिक प्रणाली अपनाई जा रही है?</h3>
+                <div class="answer-box">
+                    <strong class="ans-label">उत्तर ढांचा एवं विस्तृत नोट्स (~50 शब्द):</strong>
+                    <div class="answer-content">1. सही उत्तर एवं मुख्य तथ्य: स्काडा प्रणाली (SCADA - Supervisory Control and Data Acquisition) - यह जल प्रवाह की रीयल-टाइम स्वचालित निगरानी करती है।<br>2. ऐतिहासिक/भौगोलिक/नीतिगत संदर्भ: राजस्थान को भाखड़ा-नांगल, व्यास और चंबल परियोजनाओं से अपने हिस्से का जल प्राप्त करने में देरी और जल हानि का सामना करना पड़ता है। स्काडा न होने से सटीक डेटा क्लेम नहीं बन पाता।<br>3. RPSC परीक्षा प्रासंगिकता: RAS मेन्स पेपर-3 जल संसाधन प्रबंधन एवं राजस्थान भूगोल का सीधा प्रश्न।</div>
+                </div>
+            </div>
+            
+            <div class="mains-card" style="border-left: 8px solid #0284c7; margin-bottom: 25px;">
+                <div class="mains-header">
+                    <span class="badge" style="background:#0284c7; color:white;">5 अंक (~50 शब्द)</span>
+                    <span class="badge" style="background:#1e3a8a; color:white;">@UPSC_RAS_Daily_Quiz</span>
+                    <span class="subject-tag">Paper 2 - Science & Technology</span>
+                </div>
+                <h3 class="question-text">प्रश्न: रसायन शास्त्र में 2026 के नोबेल पुरस्कार से सम्मानित 'असममित कार्बनिक संश्लेषण' का मुख्य प्रशासनिक/औद्योगिक महत्व क्या है?</h3>
+                <div class="answer-box">
+                    <strong class="ans-label">उत्तर ढांचा एवं विस्तृत नोट्स (~50 शब्द):</strong>
+                    <div class="answer-content">1. सही उत्तर एवं मुख्य तथ्य: हेनरी कागन और केन्सो सोआई द्वारा 'होमोचिरालिटी' की खोज से केवल वांछित दर्पण-अणु (Single Mirror Image) का निर्माण संभव हुआ।<br>2. ऐतिहासिक/भौगोलिक/नीतिगत संदर्भ: दवाइयों (Pharmaceuticals) में अवांछित दर्पण-अणु घातक साइड-इफेक्ट्स पैदा करते थे। स्व-उत्प्रेरण द्वारा अब शुद्ध दवाइयाँ कम लागत में बनेंगी।<br>3. RPSC परीक्षा प्रासंगिकता: RAS मेन्स पेपर-2 (समान्य विज्ञान एवं आधुनिक प्रौद्योगिकी)।</div>
+                </div>
+            </div>
+            
+    </div>
+
+    <script>
+        function setFontSize(size) {
+            document.documentElement.style.setProperty('--base-font-size', size + 'px');
+            localStorage.setItem('ras_notes_font_size', size);
+            document.querySelectorAll('.toolbar-btns .t-btn').forEach(b => {
+                if (b.innerText.includes(size + 'px')) b.classList.add('active');
+                else if (b.innerText.includes('px')) b.classList.remove('active');
+            });
+        }
+
+        function toggleTheme(theme) {
+            document.body.classList.remove('dark-mode', 'sepia-mode');
+            if (theme === 'dark') document.body.classList.add('dark-mode');
+            else if (theme === 'sepia') document.body.classList.add('sepia-mode');
+            localStorage.setItem('ras_notes_theme', theme);
+        }
+
+        // Load saved preferences
+        (function() {
+            const savedSize = localStorage.getItem('ras_notes_font_size') || 26;
+            setFontSize(savedSize);
+            const savedTheme = localStorage.getItem('ras_notes_theme');
+            if (savedTheme) toggleTheme(savedTheme);
+        })();
+    </script>
+</body>
+</html>
